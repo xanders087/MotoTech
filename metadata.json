@@ -1,0 +1,6 @@
+{
+  "name": "MotoTech",
+  "description": "Aplicación para el control y diagnóstico de mantenimiento preventivo de motocicletas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
