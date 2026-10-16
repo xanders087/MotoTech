@@ -67,3 +67,60 @@ data class PlanMantenimiento(
     val intervalo_km: Int,
     val accion: String
 )
+
+// UI and Business Models
+data class RepuestoAfiliado(
+    val nombre: String,
+    val categoria: String,
+    val marcaRecomendada: String,
+    val descuentoPct: String,
+    val precioEstimado: String,
+    val cupon: String,
+    val tiendaAliada: String
+)
+
+data class MaintenanceLogItem(
+    val id: String,
+    val fecha: String,
+    val kilometraje: Int,
+    val titulo: String,
+    val taller: String,
+    val costo: String,
+    val facturaNumero: String,
+    val categoria: String,
+    val tieneComprobante: Boolean
+)
+
+data class WorkshopItem(
+    val id: String,
+    val nombre: String,
+    val direccion: String,
+    val distancia: String,
+    val calificacion: Double,
+    val totalResenas: Int,
+    val especialidades: List<String>,
+    val descuentoConvenio: String,
+    val telefono: String,
+    val horario: String,
+    val latitud: Double = 4.6097,
+    val longitud: Double = -74.0817
+)
+
+data class FleetBike(
+    val id: String,
+    val codigo: String,
+    val placa: String,
+    val conductor: String,
+    val modelo: String,
+    val anio: Int,
+    val kilometraje: Int,
+    val estado: FleetHealthStatus,
+    val alertaPrincipal: String,
+    val diasUltimoService: Int
+)
+
+enum class FleetHealthStatus {
+    OPTIMO,
+    REVISION_PROXIMA,
+    ATENCION_URGENTE
+}

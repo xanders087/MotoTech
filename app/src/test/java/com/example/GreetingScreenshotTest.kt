@@ -20,9 +20,32 @@ class GreetingScreenshotTest {
   @get:Rule val composeTestRule = createComposeRule()
 
   @Test
-  fun greeting_screenshot() {
-    composeTestRule.setContent { MyApplicationTheme { Greeting("Robolectric") } }
+  fun workshop_card_screenshot() {
+    val sampleWorkshop = WorkshopItem(
+        id = "W-TEST",
+        nombre = "Taller MotoTech Express",
+        direccion = "Av. Circunvalar # 45-21",
+        distancia = "2.1 km • 6 min en moto",
+        calificacion = 4.9,
+        totalResenas = 184,
+        especialidades = listOf("Ajuste Válvulas", "Sincronización"),
+        descuentoConvenio = "15% OFF en mano de obra",
+        telefono = "+57 312 450 8921",
+        horario = "Abierto Hoy: 8:00 AM - 6:30 PM",
+        latitud = 4.6025,
+        longitud = -74.0720
+    )
 
-    composeTestRule.onRoot().captureRoboImage(filePath = "src/test/screenshots/greeting.png")
+    composeTestRule.setContent {
+      MyApplicationTheme {
+        WorkshopCard(
+            workshop = sampleWorkshop,
+            onNavigateMaps = {},
+            onBook = {}
+        )
+      }
+    }
+
+    composeTestRule.onRoot().captureRoboImage(filePath = "src/test/screenshots/workshop_card.png")
   }
 }

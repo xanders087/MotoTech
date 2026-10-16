@@ -1,0 +1,6 @@
+{
+  "summary": "Plan de integración de Google Maps y geolocalización GPS en la sección de talleres de MotoTech. Incluye permisos de ubicación en AndroidManifest, detección de GPS con FusedLocationProviderClient para calcular distancias en vivo, visualización de estado de ubicación en el radar de talleres, botón de acción directa 'Buscar talleres cercanos en Google Maps' (abriendo la app o navegador con consulta geo-posicionada), y navegación 'Cómo llegar' hacia cada taller específico con un solo toque.",
+  "updatedAt": "2026-10-16T14:04:41.768312346Z",
+  "requestFeedback": true,
+  "userFacing": true
+}
