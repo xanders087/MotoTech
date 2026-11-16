@@ -1,0 +1,33 @@
+{
+  "marca": "",
+  "modelo": "",
+  "cilindraje_cc": 0,
+  "anio_desde": 0,
+  "anio_hasta": 0,
+  "manual": {
+    "titulo": "",
+    "edicion": "",
+    "url": null
+  },
+  "revision": {
+    "revisado_por": "",
+    "fecha": ""
+  },
+  "ficha_tecnica": {
+    "capacidad_aceite": { "valor": "", "pagina": 0 },
+    "viscosidad_aceite": { "valor": "", "pagina": 0 },
+    "presion_llanta_delantera": { "valor": "", "pagina": 0 },
+    "presion_llanta_trasera": { "valor": "", "pagina": 0 },
+    "holgura_cadena": { "valor": "", "pagina": 0 },
+    "liquido_frenos": { "valor": "", "pagina": 0 }
+  },
+  "plan_mantenimiento": [
+    {
+      "componente": "",
+      "accion": "",
+      "intervalo_km": null,
+      "intervalo_meses": null,
+      "pagina": 0
+    }
+  ]
+}

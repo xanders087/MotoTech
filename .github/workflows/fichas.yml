@@ -1,0 +1,50 @@
+name: Fichas técnicas
+
+on:
+  pull_request:
+    paths: ["fichas/**", "herramientas/fichas/**", ".github/workflows/fichas.yml"]
+  push:
+    branches: [main]
+    paths: ["fichas/**", "herramientas/fichas/**", ".github/workflows/fichas.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Pruebas del validador
+        working-directory: herramientas/fichas
+        run: python -m unittest -v
+      - name: Validar fichas
+        run: python herramientas/fichas/validar.py
+
+  publicar:
+    # Solo al fusionar en main, y solo si el secreto de Firebase está configurado.
+    needs: validar
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    env:
+      FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+    steps:
+      - uses: actions/checkout@v4
+        if: env.FIREBASE_SERVICE_ACCOUNT != ''
+      - uses: actions/setup-python@v5
+        if: env.FIREBASE_SERVICE_ACCOUNT != ''
+        with:
+          python-version: "3.12"
+      - name: Publicar en Firestore
+        if: env.FIREBASE_SERVICE_ACCOUNT != ''
+        run: |
+          pip install --quiet firebase-admin
+          printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$RUNNER_TEMP/cuenta.json"
+          GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/cuenta.json" python herramientas/fichas/subir.py
+          rm -f "$RUNNER_TEMP/cuenta.json"
+      - name: Sin secreto de Firebase
+        if: env.FIREBASE_SERVICE_ACCOUNT == ''
+        run: echo "FIREBASE_SERVICE_ACCOUNT no está configurado; no se publica."
