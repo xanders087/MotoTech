@@ -22,4 +22,11 @@ class DiagnosticRepository(private val diagnosticDao: DiagnosticDao) {
     suspend fun addServiceRecord(record: ServiceRecordEntity) {
         diagnosticDao.insertServiceRecord(record)
     }
+
+    suspend fun findBrandCatalog(marcaKey: String): BrandCatalogEntity? =
+        diagnosticDao.findBrandCatalog(marcaKey)
+
+    suspend fun saveBrandCatalog(entity: BrandCatalogEntity) {
+        diagnosticDao.insertBrandCatalog(entity)
+    }
 }
