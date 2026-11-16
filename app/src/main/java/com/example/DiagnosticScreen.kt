@@ -1,5 +1,6 @@
 package com.example
 
+import android.webkit.WebView
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -27,6 +28,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.window.Dialog
 import com.example.ui.theme.*
 import java.text.NumberFormat
@@ -350,6 +352,7 @@ fun MotoTechCockpit(
                     item {
                         SourcesBanner(
                             fuentes = fuentes,
+                            sugerenciasHtml = resp.sugerencias_busqueda_html,
                             consultadoEl = state.consultadoEl,
                             aviso = state.aviso,
                             onRefresh = { submit(forceRefresh = true) }
@@ -593,6 +596,7 @@ private fun MessageCard(
 @Composable
 private fun SourcesBanner(
     fuentes: List<FuenteConsultada>,
+    sugerenciasHtml: String?,
     consultadoEl: Long,
     aviso: String?,
     onRefresh: () -> Unit
@@ -654,6 +658,18 @@ private fun SourcesBanner(
                             .padding(vertical = 6.dp)
                     )
                 }
+            }
+
+            // Sugerencias de búsqueda de Google: mostrarlas es condición de uso de la búsqueda.
+            if (!sugerenciasHtml.isNullOrBlank()) {
+                Spacer(modifier = Modifier.height(8.dp))
+                AndroidView(
+                    modifier = Modifier.fillMaxWidth().height(56.dp),
+                    factory = { context ->
+                        WebView(context).apply { setBackgroundColor(android.graphics.Color.TRANSPARENT) }
+                    },
+                    update = { it.loadDataWithBaseURL(null, sugerenciasHtml, "text/html", "UTF-8", null) }
+                )
             }
 
             Spacer(modifier = Modifier.height(6.dp))

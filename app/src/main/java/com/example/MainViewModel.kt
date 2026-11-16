@@ -8,6 +8,14 @@ import androidx.lifecycle.viewModelScope
 import com.example.data.DiagnosticEntity
 import com.example.data.DiagnosticRepository
 import com.example.data.ServiceRecordEntity
+import com.google.firebase.ai.type.APINotConfiguredException
+import com.google.firebase.ai.type.FirebaseAIException
+import com.google.firebase.ai.type.InvalidAPIKeyException
+import com.google.firebase.ai.type.QuotaExceededException
+import com.google.firebase.ai.type.RequestTimeoutException
+import com.google.firebase.ai.type.ServerException
+import com.google.firebase.ai.type.ServiceDisabledException
+import com.google.firebase.ai.type.UnsupportedUserLocationException
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -18,7 +26,6 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import retrofit2.HttpException
 import java.io.IOException
 
 sealed class DiagnosticState {
@@ -264,17 +271,8 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
 
                 if (!forceRefresh && showCached(null)) return@launch
 
-                val apiKey = BuildConfig.GEMINI_API_KEY
-                if (apiKey.isBlank() || apiKey == "MY_GEMINI_API_KEY") {
-                    val msg = "La consulta de fuentes no está configurada (falta la clave de Gemini)."
-                    if (!showCached("$msg Se muestra la ficha guardada.")) {
-                        _uiState.value = DiagnosticState.Error("$msg No se muestran datos porque no se pudieron consultar las fuentes.")
-                    }
-                    return@launch
-                }
-
                 val fetched = try {
-                    fetchFromSources(apiKey, cleanMarca, cleanModelo, cleanCc, cleanAnio)
+                    fetchFromSources(cleanMarca, cleanModelo, cleanCc, cleanAnio)
                 } catch (e: Exception) {
                     val msg = describeError(e)
                     if (!showCached("$msg Se muestra la ficha guardada.")) {
@@ -322,43 +320,19 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
     }
 
     private suspend fun fetchFromSources(
-        apiKey: String,
         marca: String,
         modelo: String,
         cilindraje: String,
         anio: String
     ): DiagnosticResponse {
-        fun request(jsonMode: Boolean) = GenerateContentRequest(
-            contents = listOf(Content(parts = listOf(Part(text = DiagnosticPrompts.user(marca, modelo, cilindraje, anio))))),
-            generationConfig = GenerationConfig(
-                responseMimeType = if (jsonMode) "application/json" else null,
-                temperature = 0.0
-            ),
-            systemInstruction = Content(parts = listOf(Part(text = DiagnosticPrompts.SYSTEM))),
-            tools = listOf(Tool())
+        val result = GeminiSourceClient.lookup(
+            systemPrompt = DiagnosticPrompts.SYSTEM,
+            userPrompt = DiagnosticPrompts.user(marca, modelo, cilindraje, anio)
         )
-
-        val apiResponse = try {
-            RetrofitClient.service.generateContent(apiKey, request(jsonMode = true))
-        } catch (e: HttpException) {
-            // Algunos modelos no aceptan salida JSON forzada junto con la búsqueda:
-            // se reintenta pidiendo el JSON solo por instrucciones.
-            if (e.code() != 400) throw e
-            RetrofitClient.service.generateContent(apiKey, request(jsonMode = false))
-        }
-
-        val candidate = apiResponse.candidates?.firstOrNull()
-        val text = candidate?.content?.parts.orEmpty().mapNotNull { it.text }.joinToString("")
-        val parsed = DiagnosticParser.parse(text, jsonAdapter)
+        val parsed = DiagnosticParser.parse(result.text, jsonAdapter)
             ?: throw IllegalStateException("La respuesta de la consulta no se pudo leer.")
-
-        val fuentes = candidate?.groundingMetadata?.groundingChunks.orEmpty()
-            .mapNotNull { it.web }
-            .filter { !it.uri.isNullOrBlank() }
-            .map { FuenteConsultada(titulo = it.title, url = it.uri) }
-            .distinctBy { it.url }
         // Las fuentes vienen de la búsqueda, no de lo que el modelo escribió.
-        return parsed.copy(fuentes = fuentes)
+        return parsed.copy(fuentes = result.fuentes, sugerencias_busqueda_html = result.sugerenciasHtml)
     }
 
     private fun hasAnyData(r: DiagnosticResponse): Boolean {
@@ -371,12 +345,16 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
     }
 
     private fun describeError(e: Exception): String = when (e) {
-        is HttpException -> when (e.code()) {
-            401, 403 -> "La clave de Gemini no es válida o no tiene permiso."
-            429 -> "Se alcanzó el límite de consultas. Intenta de nuevo en unos minutos."
-            else -> "El servicio de consulta respondió con un error (${e.code()})."
-        }
+        is FirebaseNotConfiguredException ->
+            "La app no está conectada a Firebase (falta google-services.json)."
+        is QuotaExceededException -> "Se alcanzó el límite de consultas. Intenta de nuevo en unos minutos."
+        is APINotConfiguredException, is ServiceDisabledException, is InvalidAPIKeyException ->
+            "La consulta de fuentes no está habilitada en el proyecto de Firebase."
+        is RequestTimeoutException -> "La consulta tardó demasiado. Revisa tu conexión e intenta de nuevo."
+        is UnsupportedUserLocationException -> "La consulta de fuentes no está disponible en tu región."
+        is ServerException -> "El servicio de consulta rechazó la solicitud."
         is IOException -> "No hay conexión para consultar las fuentes."
+        is FirebaseAIException -> "No se pudo consultar las fuentes. Revisa tu conexión e intenta de nuevo."
         else -> e.localizedMessage ?: "No se pudo consultar las fuentes."
     }
 }
