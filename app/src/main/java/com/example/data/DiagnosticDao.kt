@@ -25,4 +25,10 @@ interface DiagnosticDao {
 
     @Insert
     suspend fun insertServiceRecord(record: ServiceRecordEntity)
+
+    @Query("SELECT * FROM brand_catalogs WHERE marcaKey = :marcaKey LIMIT 1")
+    suspend fun findBrandCatalog(marcaKey: String): BrandCatalogEntity?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertBrandCatalog(entity: BrandCatalogEntity)
 }

@@ -1,15 +1,24 @@
 package com.example
 
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.data.BrandCatalogEntity
 import com.example.data.DiagnosticEntity
 import com.example.data.DiagnosticRepository
 import com.example.data.ServiceRecordEntity
+import com.google.firebase.Firebase
+import com.google.firebase.ai.ai
+import com.google.firebase.ai.type.content
+import com.google.firebase.ai.type.generationConfig
 import com.squareup.moshi.Moshi
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -18,8 +27,11 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withTimeout
 import retrofit2.HttpException
 import java.io.IOException
+
+private const val TAG = "MainViewModel"
 
 sealed class DiagnosticState {
     object Idle : DiagnosticState()
@@ -52,6 +64,20 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
     var formCilindraje by mutableStateOf("")
     var formAnio by mutableStateOf("")
     var formKilometraje by mutableStateOf("")
+
+    // Catálogo real de Marcas y Modelos (con cilindrada oficial automática)
+    val marcasDisponibles: List<String> = MotorcycleCatalog.MARCAS
+
+    private val _modelosDeMarca = MutableStateFlow<List<MotoModelSpec>>(emptyList())
+    val modelosDeMarca: StateFlow<List<MotoModelSpec>> = _modelosDeMarca.asStateFlow()
+
+    private val _isLoadingModels = MutableStateFlow(false)
+    val isLoadingModels: StateFlow<Boolean> = _isLoadingModels.asStateFlow()
+
+    private val _catalogStatusLabel = MutableStateFlow<String?>(null)
+    val catalogStatusLabel: StateFlow<String?> = _catalogStatusLabel.asStateFlow()
+
+    private var catalogLoadJob: Job? = null
 
     // B2B Fleet Mode Toggle
     private val _isFleetMode = MutableStateFlow(false)
@@ -162,6 +188,228 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
 
     private val moshi = Moshi.Builder().build()
     private val jsonAdapter = moshi.adapter(DiagnosticResponse::class.java)
+    private val brandCatalogAdapter = moshi.adapter(BrandCatalogResponse::class.java)
+
+    private val datoTecnicoSchema by lazy {
+        com.google.firebase.ai.type.Schema.obj(
+            properties = mapOf(
+                "valor" to com.google.firebase.ai.type.Schema.string(nullable = true),
+                "fuente_titulo" to com.google.firebase.ai.type.Schema.string(nullable = true),
+                "fuente_dominio" to com.google.firebase.ai.type.Schema.string(nullable = true),
+                "tipo_fuente" to com.google.firebase.ai.type.Schema.string(nullable = true)
+            ),
+            optionalProperties = listOf("valor", "fuente_titulo", "fuente_dominio", "tipo_fuente"),
+            nullable = true
+        )
+    }
+
+    private val diagnosticSchema by lazy {
+        com.google.firebase.ai.type.Schema.obj(
+            properties = mapOf(
+                "status" to com.google.firebase.ai.type.Schema.enumeration(values = listOf("success", "needs_info")),
+                "mensaje" to com.google.firebase.ai.type.Schema.string(nullable = true),
+                "campos_faltantes" to com.google.firebase.ai.type.Schema.array(
+                    items = com.google.firebase.ai.type.Schema.string(),
+                    nullable = true
+                ),
+                "moto_info" to com.google.firebase.ai.type.Schema.obj(
+                    properties = mapOf(
+                        "marca" to com.google.firebase.ai.type.Schema.string(nullable = true),
+                        "modelo" to com.google.firebase.ai.type.Schema.string(nullable = true),
+                        "cilindraje" to com.google.firebase.ai.type.Schema.string(nullable = true),
+                        "anio" to com.google.firebase.ai.type.Schema.integer(nullable = true)
+                    ),
+                    optionalProperties = listOf("marca", "modelo", "cilindraje", "anio"),
+                    nullable = true
+                ),
+                "ficha_tecnica" to com.google.firebase.ai.type.Schema.obj(
+                    properties = mapOf(
+                        "capacidad_aceite" to datoTecnicoSchema,
+                        "viscosidad_aceite" to datoTecnicoSchema,
+                        "presion_llanta_delantera" to datoTecnicoSchema,
+                        "presion_llanta_trasera" to datoTecnicoSchema,
+                        "holgura_cadena" to datoTecnicoSchema,
+                        "liquido_frenos" to datoTecnicoSchema
+                    ),
+                    optionalProperties = listOf(
+                        "capacidad_aceite",
+                        "viscosidad_aceite",
+                        "presion_llanta_delantera",
+                        "presion_llanta_trasera",
+                        "holgura_cadena",
+                        "liquido_frenos"
+                    ),
+                    nullable = true
+                ),
+                "plan_mantenimiento_periodico" to com.google.firebase.ai.type.Schema.array(
+                    items = com.google.firebase.ai.type.Schema.obj(
+                        properties = mapOf(
+                            "componente" to com.google.firebase.ai.type.Schema.string(nullable = true),
+                            "intervalo_km" to com.google.firebase.ai.type.Schema.integer(nullable = true),
+                            "intervalo_meses" to com.google.firebase.ai.type.Schema.integer(nullable = true),
+                            "accion" to com.google.firebase.ai.type.Schema.string(nullable = true),
+                            "fuente_titulo" to com.google.firebase.ai.type.Schema.string(nullable = true),
+                            "fuente_dominio" to com.google.firebase.ai.type.Schema.string(nullable = true),
+                            "tipo_fuente" to com.google.firebase.ai.type.Schema.string(nullable = true)
+                        ),
+                        optionalProperties = listOf(
+                            "componente",
+                            "intervalo_km",
+                            "intervalo_meses",
+                            "accion",
+                            "fuente_titulo",
+                            "fuente_dominio",
+                            "tipo_fuente"
+                        )
+                    ),
+                    nullable = true
+                )
+            ),
+            optionalProperties = listOf(
+                "mensaje",
+                "campos_faltantes",
+                "moto_info",
+                "ficha_tecnica",
+                "plan_mantenimiento_periodico"
+            )
+        )
+    }
+
+    private val aiConfig by lazy {
+        generationConfig {
+            responseMimeType = "application/json"
+            responseSchema = diagnosticSchema
+            temperature = 0.0f
+        }
+    }
+
+    private val primaryModel by lazy {
+        Firebase.ai.generativeModel(
+            modelName = "gemini-3.8-flash",
+            generationConfig = aiConfig,
+            systemInstruction = content { text(DiagnosticPrompts.SYSTEM) }
+        )
+    }
+
+    private val fallbackModel by lazy {
+        Firebase.ai.generativeModel(
+            modelName = "gemini-3.5-flash-lite",
+            generationConfig = aiConfig,
+            systemInstruction = content { text(DiagnosticPrompts.SYSTEM) }
+        )
+    }
+
+    /**
+     * Selecciona una marca del listado oficial, limpia el modelo y cilindrada previos,
+     * carga los modelos verificados de esa marca y sincroniza en tiempo real nuevos modelos.
+     */
+    fun selectMarca(nuevaMarca: String, forceRefreshOnline: Boolean = false) {
+        val cleanMarca = nuevaMarca.trim()
+        val changed = !formMarca.equals(cleanMarca, ignoreCase = true)
+        formMarca = cleanMarca
+        if (changed) {
+            formModelo = ""
+            formCilindraje = ""
+        }
+        loadModelsForBrand(cleanMarca, forceRefreshOnline)
+    }
+
+    /**
+     * Selecciona un modelo perteneciente a la marca actual y asigna automáticamente su cilindrada oficial.
+     */
+    fun selectModelo(spec: MotoModelSpec) {
+        formModelo = spec.modelo
+        formCilindraje = MotorcycleCatalog.normalizeCilindraje(spec.cilindraje)
+    }
+
+    /**
+     * Selecciona una moto de los botones de ejemplo rápido, cargando los modelos de su marca
+     * y asignando automáticamente la cilindrada oficial.
+     */
+    fun selectExampleBike(marca: String, modelo: String, cilindraje: String, anio: String) {
+        formMarca = marca
+        formModelo = modelo
+        formCilindraje = MotorcycleCatalog.normalizeCilindraje(cilindraje)
+        formAnio = anio
+        loadModelsForBrand(marca, forceRefreshOnline = false)
+    }
+
+    private fun loadModelsForBrand(marca: String, forceRefreshOnline: Boolean) {
+        val cleanMarca = marca.trim()
+        if (cleanMarca.isEmpty()) {
+            _modelosDeMarca.value = emptyList()
+            _catalogStatusLabel.value = null
+            return
+        }
+
+        val baseModels = MotorcycleCatalog.baseModelsForBrand(cleanMarca)
+        _modelosDeMarca.value = baseModels
+        _catalogStatusLabel.value = "${baseModels.size} modelos base de $cleanMarca • Sincronizando API…"
+
+        catalogLoadJob?.cancel()
+        catalogLoadJob = viewModelScope.launch {
+            val marcaKey = cleanMarca.lowercase()
+            try {
+                val cached = repository.findBrandCatalog(marcaKey)
+                val cachedList = cached?.let {
+                    MotorcycleCatalog.parseBrandCatalogJson(it.jsonModels, brandCatalogAdapter)
+                }.orEmpty()
+
+                if (cachedList.isNotEmpty()) {
+                    val merged = MotorcycleCatalog.mergeModels(baseModels, cachedList)
+                    _modelosDeMarca.value = merged
+                    _catalogStatusLabel.value = "${merged.size} modelos de $cleanMarca (Caché Room + API)"
+                    if (formModelo.isNotBlank() && formCilindraje.isBlank()) {
+                        MotorcycleCatalog.findDisplacement(cleanMarca, formModelo, merged)?.let {
+                            formCilindraje = it
+                        }
+                    }
+                    if (!forceRefreshOnline) return@launch
+                }
+
+                _isLoadingModels.value = true
+                _catalogStatusLabel.value = "Consultando API y Web Scraping de $cleanMarca con Retrofit…"
+
+                // Consulta en tiempo real exclusivamente vía Retrofit (NHTSA vPIC API + MediaWiki API + Web Scraping)
+                // sin consumir cuota de Gemini al seleccionar la marca.
+                val retrofitResult = MotorcycleCatalogClient.fetchBrandCatalogRealTime(cleanMarca)
+
+                if (retrofitResult.modelos.isNotEmpty()) {
+                    val merged = MotorcycleCatalog.mergeModels(baseModels, retrofitResult.modelos)
+                    _modelosDeMarca.value = merged
+                    val responseJson = brandCatalogAdapter.toJson(
+                        BrandCatalogResponse(marca = cleanMarca, modelos = merged)
+                    )
+                    repository.saveBrandCatalog(
+                        BrandCatalogEntity(
+                            marcaKey = marcaKey,
+                            marca = cleanMarca,
+                            jsonModels = responseJson
+                        )
+                    )
+                    val fuenteDesc = if (retrofitResult.fuentesExitosas.isNotEmpty()) {
+                        retrofitResult.fuentesExitosas.joinToString(" + ")
+                    } else {
+                        "API Retrofit"
+                    }
+                    _catalogStatusLabel.value = "${merged.size} modelos de $cleanMarca ($fuenteDesc)"
+                    if (formModelo.isNotBlank()) {
+                        MotorcycleCatalog.findDisplacement(cleanMarca, formModelo, merged)?.let {
+                            formCilindraje = it
+                        }
+                    }
+                } else {
+                    _catalogStatusLabel.value = "${_modelosDeMarca.value.size} modelos oficiales de $cleanMarca"
+                }
+            } catch (e: CancellationException) {
+                throw e
+            } catch (_: Exception) {
+                _catalogStatusLabel.value = "${_modelosDeMarca.value.size} modelos oficiales de $cleanMarca"
+            } finally {
+                _isLoadingModels.value = false
+            }
+        }
+    }
 
     fun toggleFleetMode() {
         _isFleetMode.value = !_isFleetMode.value
@@ -222,8 +470,8 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
     }
 
     /**
-     * Busca la ficha de la moto. Nunca genera datos por su cuenta: si no hay ficha guardada
-     * y la consulta falla, el resultado es un error.
+     * Busca la ficha de la moto mediante Firebase AI Logic (Firebase.ai).
+     * Nunca genera datos por su cuenta: si no hay ficha guardada y la consulta falla, el resultado es un error.
      */
     fun diagnose(
         marca: String,
@@ -264,18 +512,19 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
 
                 if (!forceRefresh && showCached(null)) return@launch
 
-                val apiKey = BuildConfig.GEMINI_API_KEY
-                if (apiKey.isBlank() || apiKey == "MY_GEMINI_API_KEY") {
-                    val msg = "La consulta de fuentes no está configurada (falta la clave de Gemini)."
+                val fetched = try {
+                    fetchFromSources(cleanMarca, cleanModelo, cleanCc, cleanAnio)
+                } catch (e: TimeoutCancellationException) {
+                    Log.e(TAG, "Diagnostic generation timed out", e)
+                    val msg = "La consulta tardó más de 60 segundos. Intenta nuevamente."
                     if (!showCached("$msg Se muestra la ficha guardada.")) {
-                        _uiState.value = DiagnosticState.Error("$msg No se muestran datos porque no se pudieron consultar las fuentes.")
+                        _uiState.value = DiagnosticState.Error(msg)
                     }
                     return@launch
-                }
-
-                val fetched = try {
-                    fetchFromSources(apiKey, cleanMarca, cleanModelo, cleanCc, cleanAnio)
+                } catch (e: CancellationException) {
+                    throw e
                 } catch (e: Exception) {
+                    Log.e(TAG, "Firebase AI diagnostic failed", e)
                     val msg = describeError(e)
                     if (!showCached("$msg Se muestra la ficha guardada.")) {
                         _uiState.value = DiagnosticState.Error("$msg No se muestran datos porque no se pudieron consultar las fuentes.")
@@ -315,50 +564,80 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
                     consultadoEl = now,
                     isFromCache = false
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
+                Log.e(TAG, "Error completing diagnostic query", e)
                 _uiState.value = DiagnosticState.Error("No se pudo completar la consulta: ${e.localizedMessage ?: "error desconocido"}")
             }
         }
     }
 
     private suspend fun fetchFromSources(
-        apiKey: String,
         marca: String,
         modelo: String,
         cilindraje: String,
         anio: String
     ): DiagnosticResponse {
-        fun request(jsonMode: Boolean) = GenerateContentRequest(
-            contents = listOf(Content(parts = listOf(Part(text = DiagnosticPrompts.user(marca, modelo, cilindraje, anio))))),
-            generationConfig = GenerationConfig(
-                responseMimeType = if (jsonMode) "application/json" else null,
-                temperature = 0.0
-            ),
-            systemInstruction = Content(parts = listOf(Part(text = DiagnosticPrompts.SYSTEM))),
-            tools = listOf(Tool())
-        )
+        val userPrompt = DiagnosticPrompts.user(marca, modelo, cilindraje, anio)
 
-        val apiResponse = try {
-            RetrofitClient.service.generateContent(apiKey, request(jsonMode = true))
-        } catch (e: HttpException) {
-            // Algunos modelos no aceptan salida JSON forzada junto con la búsqueda:
-            // se reintenta pidiendo el JSON solo por instrucciones.
-            if (e.code() != 400) throw e
-            RetrofitClient.service.generateContent(apiKey, request(jsonMode = false))
+        val rawJsonText = try {
+            val response = withTimeout(60_000L) {
+                primaryModel.generateContent(userPrompt)
+            }
+            response.text?.takeIf { it.isNotBlank() }
+                ?: throw IllegalStateException("El modelo principal devolvió una respuesta vacía.")
+        } catch (e: CancellationException) {
+            if (e !is TimeoutCancellationException) throw e
+            Log.w(TAG, "gemini-3.8-flash timed out, switching to gemini-3.5-flash-lite", e)
+            val fallbackResponse = withTimeout(60_000L) {
+                fallbackModel.generateContent(userPrompt)
+            }
+            fallbackResponse.text?.takeIf { it.isNotBlank() }
+                ?: throw IllegalStateException("El modelo de respaldo devolvió una respuesta vacía.")
+        } catch (primaryError: Exception) {
+            Log.w(TAG, "gemini-3.8-flash failed, switching automatically to gemini-3.5-flash-lite", primaryError)
+            val fallbackResponse = withTimeout(60_000L) {
+                fallbackModel.generateContent(userPrompt)
+            }
+            fallbackResponse.text?.takeIf { it.isNotBlank() }
+                ?: throw primaryError
         }
 
-        val candidate = apiResponse.candidates?.firstOrNull()
-        val text = candidate?.content?.parts.orEmpty().mapNotNull { it.text }.joinToString("")
-        val parsed = DiagnosticParser.parse(text, jsonAdapter)
+        // Parse directly with Moshi since responseSchema guarantees clean JSON
+        val parsed = runCatching { jsonAdapter.fromJson(rawJsonText) }.getOrNull()
+            ?: DiagnosticParser.parse(rawJsonText, jsonAdapter)
             ?: throw IllegalStateException("La respuesta de la consulta no se pudo leer.")
 
-        val fuentes = candidate?.groundingMetadata?.groundingChunks.orEmpty()
-            .mapNotNull { it.web }
-            .filter { !it.uri.isNullOrBlank() }
-            .map { FuenteConsultada(titulo = it.title, url = it.uri) }
-            .distinctBy { it.url }
-        // Las fuentes vienen de la búsqueda, no de lo que el modelo escribió.
-        return parsed.copy(fuentes = fuentes)
+        val citedSources = extractCitedSources(parsed)
+        return parsed.copy(fuentes = citedSources)
+    }
+
+    private fun extractCitedSources(response: DiagnosticResponse): List<FuenteConsultada> {
+        val ft = response.ficha_tecnica
+        val technicalEntries = listOfNotNull(
+            ft?.capacidad_aceite,
+            ft?.viscosidad_aceite,
+            ft?.presion_llanta_delantera,
+            ft?.presion_llanta_trasera,
+            ft?.holgura_cadena,
+            ft?.liquido_frenos
+        ).map { it.fuente_dominio to it.fuente_titulo }
+
+        val maintenanceEntries = response.plan_mantenimiento_periodico.orEmpty()
+            .map { it.fuente_dominio to it.fuente_titulo }
+
+        return (technicalEntries + maintenanceEntries)
+            .mapNotNull { (rawDomain, rawTitle) ->
+                val domain = SourceValidator.normalizarDominio(rawDomain)
+                if (domain.isEmpty()) return@mapNotNull null
+                val title = rawTitle?.trim()?.takeIf { it.isNotEmpty() } ?: domain
+                FuenteConsultada(
+                    titulo = title,
+                    url = "https://$domain"
+                )
+            }
+            .distinctBy { SourceValidator.normalizarDominio(it.url) }
     }
 
     private fun hasAnyData(r: DiagnosticResponse): Boolean {
@@ -372,8 +651,8 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
 
     private fun describeError(e: Exception): String = when (e) {
         is HttpException -> when (e.code()) {
-            401, 403 -> "La clave de Gemini no es válida o no tiene permiso."
-            429 -> "Se alcanzó el límite de consultas. Intenta de nuevo en unos minutos."
+            401, 403 -> "Error de autenticación con el servicio de IA (${e.code()})."
+            429 -> "Se alcanzó el límite de consultas en todos los modelos disponibles. Intenta de nuevo en un minuto."
             else -> "El servicio de consulta respondió con un error (${e.code()})."
         }
         is IOException -> "No hay conexión para consultar las fuentes."
