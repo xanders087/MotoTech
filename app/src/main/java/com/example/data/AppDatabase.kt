@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [DiagnosticEntity::class, ServiceRecordEntity::class, BrandCatalogEntity::class], version = 4, exportSchema = false)
+@Database(entities = [DiagnosticEntity::class, ServiceRecordEntity::class, BrandCatalogEntity::class], version = 5, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun diagnosticDao(): DiagnosticDao
 
@@ -15,6 +15,14 @@ abstract class AppDatabase : RoomDatabase() {
         // Las fichas guardadas con la versión 3 se generaron sin búsqueda y con fuentes
         // no comprobadas: se borran. El historial de servicios y los catálogos se conservan.
         private val MIGRATION_3_4 = object : Migration(3, 4) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("DELETE FROM diagnostics")
+            }
+        }
+
+        // Desde la versión 5 las fichas salen de la biblioteca de manuales oficiales:
+        // se borran las que se habían guardado a partir de consultas con IA.
+        private val MIGRATION_4_5 = object : Migration(4, 5) {
             override fun migrate(db: SupportSQLiteDatabase) {
                 db.execSQL("DELETE FROM diagnostics")
             }
@@ -32,7 +40,7 @@ abstract class AppDatabase : RoomDatabase() {
                 )
                     // La versión 1 solo guardaba fichas en caché, y podían contener datos
                     // generados sin fuente: se descartan en vez de migrarlas.
-                    .addMigrations(MIGRATION_3_4)
+                    .addMigrations(MIGRATION_3_4, MIGRATION_4_5)
                     .fallbackToDestructiveMigration(dropAllTables = true)
                     .build()
                 INSTANCE = instance

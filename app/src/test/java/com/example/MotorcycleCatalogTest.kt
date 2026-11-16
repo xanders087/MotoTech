@@ -162,17 +162,4 @@ class MotorcycleCatalogTest {
         assertTrue(result.modelos.any { it.modelo == "CBR600RR" && it.cilindraje == "600cc" })
         assertEquals(3, result.fuentesExitosas.size)
     }
-
-    @Test
-    fun `descubrimiento dinamico de modelos Gemini prioriza gemini-3_8-flash y excluye modelos no textuales`() {
-        val rawModels = listOf(
-            GeminiModelInfo("models/text-embedding-004", listOf("embedContent")),
-            GeminiModelInfo("models/gemini-3.5-flash-lite", listOf("generateContent")),
-            GeminiModelInfo("models/gemini-3.8-flash", listOf("generateContent", "countTokens")),
-            GeminiModelInfo("models/imagen-3.0-generate-002", listOf("predict"))
-        )
-
-        val prioritized = RetrofitClient.filterAndPrioritizeModels(rawModels)
-        assertEquals(listOf("gemini-3.8-flash", "gemini-3.5-flash-lite"), prioritized)
-    }
 }

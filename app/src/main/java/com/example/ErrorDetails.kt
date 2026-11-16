@@ -1,20 +1,8 @@
 package com.example
 
-/** Interpreta los mensajes de error del servicio de consulta. */
+/** Prepara el detalle técnico de un error para mostrarlo en pantalla. */
 object ErrorDetails {
     private const val MAX_DETALLE = 700
-
-    /**
-     * El SDK reporta como "cuota" cualquier respuesta que mencione la palabra. Aquí se distingue
-     * el caso en que el proyecto no tiene cuota asignada (límite 0 o solo plan de pago), donde
-     * esperar y reintentar no sirve.
-     */
-    fun esCuotaCero(mensaje: String?): Boolean {
-        val m = mensaje?.lowercase() ?: return false
-        return Regex("limit:\\s*0(?![0-9.])").containsMatchIn(m) ||
-            m.contains("free_tier") || m.contains("free tier") ||
-            m.contains("billing")
-    }
 
     /** Mensaje original del servidor, recortado, para mostrarlo como detalle técnico. */
     fun detalle(e: Throwable): String? {

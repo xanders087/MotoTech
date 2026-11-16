@@ -16,29 +16,6 @@ data class BrandCatalogResponse(
     val modelos: List<MotoModelSpec>? = null
 )
 
-object BrandCatalogPrompts {
-    val SYSTEM = """
-        Eres un especialista en catálogos oficiales de motocicletas comercializadas en Colombia y Latinoamérica.
-        Usa la búsqueda de Google para consultar los modelos reales de la marca solicitada y su cilindrada exacta de ficha técnica.
-
-        Reglas obligatorias:
-        1. Incluye únicamente motocicletas reales que pertenezcan exclusivamente a la marca consultada.
-        2. Para cada modelo indica el nombre comercial exacto en "modelo", su cilindrada oficial en "cilindraje" terminada en "cc" (por ejemplo "155cc", "199cc", "689cc") y su categoría en "categoria" (por ejemplo "Urbana / Trabajo", "Naked / Street", "Scooter", "Enduro / Doble Propósito", "Adventure / Touring", "Deportiva").
-        3. No inventes modelos ni mezcles modelos de otras marcas.
-        4. Responde ÚNICAMENTE con un objeto JSON válido, sin bloques de código ni texto adicional:
-        {
-          "marca": "string",
-          "modelos": [
-            { "modelo": "string", "cilindraje": "string", "categoria": "string" }
-          ]
-        }
-    """.trimIndent()
-
-    fun user(marca: String): String = """
-        Lista los modelos de motocicletas de la marca $marca comercializados en Colombia y Latinoamérica con su cilindrada exacta en cc.
-    """.trimIndent()
-}
-
 object MotorcycleCatalog {
 
     val MARCAS: List<String> = listOf(

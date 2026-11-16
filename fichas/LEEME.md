@@ -51,4 +51,12 @@ Para un dato que el manual no trae, reemplaza todo el dato por `null`:
 
 ## Publicar en la app
 
-`herramientas/fichas/subir.py` publica las fichas válidas en Firestore (colección `fichas`). Necesita la clave de una cuenta de servicio del proyecto de Firebase; en GitHub se configura como el secreto `FIREBASE_SERVICE_ACCOUNT` y la publicación ocurre sola al fusionar en `main`. Mientras ese secreto no exista, GitHub solo valida.
+La app lee las fichas de Firestore (colección `fichas`). Para que funcione hay que hacer esto una vez en la consola de Firebase del proyecto:
+
+1. **Activar Firestore** (Compilación → Firestore Database → Crear base de datos).
+2. **Publicar las reglas** de `firestore.rules` (pestaña Reglas de Firestore: pegar el contenido y publicar). Permiten leer solo fichas publicadas y no permiten escribir desde la app.
+3. **Crear una cuenta de servicio** (Configuración del proyecto → Cuentas de servicio → Generar nueva clave privada) y guardar el contenido del archivo como el secreto `FIREBASE_SERVICE_ACCOUNT` del repositorio en GitHub. Ese archivo da permiso de escritura: no se sube al repositorio ni se comparte.
+
+Con el secreto configurado, al fusionar en `main` GitHub ejecuta `herramientas/fichas/subir.py` y publica las fichas válidas. Mientras no exista, GitHub solo valida.
+
+Hasta completar estos pasos, la app responde "La biblioteca de fichas no permite la lectura". Con la biblioteca activa pero sin la ficha de una moto, responde "Aún no tenemos la ficha oficial de esta moto".

@@ -4,58 +4,43 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test
 
+/** Los valores son ficticios a propósito: no describen ninguna moto real. */
 class SourceValidatorTest {
-  // Así llegan los resultados de búsqueda: el título es el dominio y la URL es una redirección.
-  private val fuentes = listOf(
-      FuenteConsultada("yamaha-motor.com", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/abc"),
-      FuenteConsultada("motoforo.example.com", "https://vertexaisearch.cloud.google.com/grounding-api-redirect/def"))
-
-  private fun dato(valor: String?, dominio: String?) =
-      DatoTecnico(valor = valor, fuente_titulo = "Manual", fuente_dominio = dominio, tipo_fuente = "manual_fabricante")
+  private val manual = ManualInfo(titulo = "Manual de prueba", url = "https://ejemplo.com/m.pdf")
 
   @Test
-  fun `dominio del fabricante devuelto por la busqueda es fuente oficial`() {
-    val r = SourceValidator.verificar(dato("3.0 L", "www.yamaha-motor.com"), fuentes, "Yamaha")
-    assertEquals(NivelFuente.OFICIAL, r.nivel)
-    assertEquals("3.0 L", r.valor)
-    assertEquals(fuentes[0].url, r.fuenteUrl)
+  fun `dato con pagina es de manual oficial y enlaza al manual`() {
+    val r = SourceValidator.verificarConManual("valor de prueba", 10, manual)
+    assertEquals(NivelFuente.MANUAL, r.nivel)
+    assertEquals("valor de prueba", r.valor)
+    assertEquals("Manual de prueba, pág. 10", r.fuenteTitulo)
+    assertEquals("https://ejemplo.com/m.pdf", r.fuenteUrl)
   }
 
   @Test
-  fun `otro sitio devuelto por la busqueda es fuente web aunque el modelo diga manual`() {
-    val r = SourceValidator.verificar(dato("3.0 L", "motoforo.example.com"), fuentes, "Yamaha")
-    assertEquals(NivelFuente.WEB, r.nivel)
-  }
-
-  @Test
-  fun `fuente citada que la busqueda no devolvio no se da por verificada`() {
-    val r = SourceValidator.verificar(dato("3.0 L", "honda.com"), fuentes, "Honda")
-    assertEquals(NivelFuente.SIN_FUENTE, r.nivel)
+  fun `manual sin enlace conserva la referencia a la pagina`() {
+    val r = SourceValidator.verificarConManual("valor de prueba", 3, ManualInfo(titulo = "Manual de prueba"))
+    assertEquals(NivelFuente.MANUAL, r.nivel)
+    assertEquals("Manual de prueba, pág. 3", r.fuenteTitulo)
     assertNull(r.fuenteUrl)
   }
 
   @Test
-  fun `valor sin dominio citado no se da por verificado`() {
-    assertEquals(NivelFuente.SIN_FUENTE, SourceValidator.verificar(dato("3.0 L", null), fuentes, "Yamaha").nivel)
+  fun `dato sin pagina o sin manual no se da por oficial`() {
+    assertEquals(NivelFuente.SIN_FUENTE, SourceValidator.verificarConManual("valor de prueba", null, manual).nivel)
+    assertEquals(NivelFuente.SIN_FUENTE, SourceValidator.verificarConManual("valor de prueba", 0, manual).nivel)
+    assertEquals(NivelFuente.SIN_FUENTE, SourceValidator.verificarConManual("valor de prueba", 10, null).nivel)
   }
 
   @Test
   fun `valor nulo o vacio es sin dato`() {
-    assertEquals(NivelFuente.SIN_DATO, SourceValidator.verificar(dato(null, "yamaha-motor.com"), fuentes, "Yamaha").nivel)
-    assertEquals(NivelFuente.SIN_DATO, SourceValidator.verificar(dato("  ", "yamaha-motor.com"), fuentes, "Yamaha").nivel)
-    assertEquals(NivelFuente.SIN_DATO, SourceValidator.verificar(null, fuentes, "Yamaha").nivel)
+    assertEquals(NivelFuente.SIN_DATO, SourceValidator.verificarConManual(null, 10, manual).nivel)
+    assertEquals(NivelFuente.SIN_DATO, SourceValidator.verificarConManual("  ", 10, manual).nivel)
   }
 
   @Test
-  fun `marca con espacios coincide con su dominio`() {
-    val f = listOf(FuenteConsultada("royalenfield.com", "https://example.com/r"))
-    assertEquals(NivelFuente.OFICIAL, SourceValidator.verificar(dato("15W-50", "royalenfield.com"), f, "Royal Enfield").nivel)
-  }
-
-  @Test
-  fun `normaliza dominios`() {
-    assertEquals("yamaha-motor.com", SourceValidator.normalizarDominio("https://www.Yamaha-Motor.com/co/manual.pdf"))
-    assertEquals("", SourceValidator.normalizarDominio("Manual del propietario"))
-    assertEquals("", SourceValidator.normalizarDominio(null))
+  fun `manual sin titulo usa un nombre generico`() {
+    val r = SourceValidator.verificarConManual("valor de prueba", 7, ManualInfo())
+    assertEquals("Manual del fabricante, pág. 7", r.fuenteTitulo)
   }
 }

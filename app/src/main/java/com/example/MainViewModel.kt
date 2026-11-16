@@ -10,20 +10,7 @@ import com.example.data.BrandCatalogEntity
 import com.example.data.DiagnosticEntity
 import com.example.data.DiagnosticRepository
 import com.example.data.ServiceRecordEntity
-import com.google.firebase.Firebase
-import com.google.firebase.ai.ai
-import com.google.firebase.ai.type.APINotConfiguredException
-import com.google.firebase.ai.type.FirebaseAIException
-import com.google.firebase.ai.type.GenerateContentResponse
-import com.google.firebase.ai.type.InvalidAPIKeyException
-import com.google.firebase.ai.type.QuotaExceededException
-import com.google.firebase.ai.type.RequestTimeoutException
-import com.google.firebase.ai.type.ServerException
-import com.google.firebase.ai.type.ServiceDisabledException
-import com.google.firebase.ai.type.Tool
-import com.google.firebase.ai.type.UnsupportedUserLocationException
-import com.google.firebase.ai.type.content
-import com.google.firebase.ai.type.generationConfig
+import com.google.firebase.firestore.FirebaseFirestoreException
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -37,7 +24,6 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withTimeout
 import java.io.IOException
 
 private const val TAG = "MainViewModel"
@@ -50,14 +36,15 @@ sealed class DiagnosticState {
         val vehicleKey: String,
         val marca: String,
         val kmActual: Int,
-        /** Cuándo se consultaron las fuentes. */
+        /** Cuándo se leyó la ficha de la biblioteca. */
         val consultadoEl: Long,
         val isFromCache: Boolean,
         /** Se llena cuando se intentó actualizar y no se pudo, y se muestra la ficha guardada. */
         val aviso: String? = null
     ) : DiagnosticState()
     /** La moto no se pudo identificar o no se encontró ninguna fuente. */
-    data class NeedsInfo(val mensaje: String, val camposFaltantes: List<String>) : DiagnosticState()
+    /** La biblioteca todavía no tiene la ficha oficial de esa moto y año. */
+    data class SinFicha(val marca: String, val modelo: String, val anio: String) : DiagnosticState()
     data class Error(
         val message: String,
         /** Mensaje original del servicio, para poder diagnosticar la causa. */
@@ -203,114 +190,6 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
     private val jsonAdapter = moshi.adapter(DiagnosticResponse::class.java)
     private val brandCatalogAdapter = moshi.adapter(BrandCatalogResponse::class.java)
 
-    private val datoTecnicoSchema by lazy {
-        com.google.firebase.ai.type.Schema.obj(
-            properties = mapOf(
-                "valor" to com.google.firebase.ai.type.Schema.string(nullable = true),
-                "fuente_titulo" to com.google.firebase.ai.type.Schema.string(nullable = true),
-                "fuente_dominio" to com.google.firebase.ai.type.Schema.string(nullable = true),
-                "tipo_fuente" to com.google.firebase.ai.type.Schema.string(nullable = true)
-            ),
-            optionalProperties = listOf("valor", "fuente_titulo", "fuente_dominio", "tipo_fuente"),
-            nullable = true
-        )
-    }
-
-    private val diagnosticSchema by lazy {
-        com.google.firebase.ai.type.Schema.obj(
-            properties = mapOf(
-                "status" to com.google.firebase.ai.type.Schema.enumeration(values = listOf("success", "needs_info")),
-                "mensaje" to com.google.firebase.ai.type.Schema.string(nullable = true),
-                "campos_faltantes" to com.google.firebase.ai.type.Schema.array(
-                    items = com.google.firebase.ai.type.Schema.string(),
-                    nullable = true
-                ),
-                "moto_info" to com.google.firebase.ai.type.Schema.obj(
-                    properties = mapOf(
-                        "marca" to com.google.firebase.ai.type.Schema.string(nullable = true),
-                        "modelo" to com.google.firebase.ai.type.Schema.string(nullable = true),
-                        "cilindraje" to com.google.firebase.ai.type.Schema.string(nullable = true),
-                        "anio" to com.google.firebase.ai.type.Schema.integer(nullable = true)
-                    ),
-                    optionalProperties = listOf("marca", "modelo", "cilindraje", "anio"),
-                    nullable = true
-                ),
-                "ficha_tecnica" to com.google.firebase.ai.type.Schema.obj(
-                    properties = mapOf(
-                        "capacidad_aceite" to datoTecnicoSchema,
-                        "viscosidad_aceite" to datoTecnicoSchema,
-                        "presion_llanta_delantera" to datoTecnicoSchema,
-                        "presion_llanta_trasera" to datoTecnicoSchema,
-                        "holgura_cadena" to datoTecnicoSchema,
-                        "liquido_frenos" to datoTecnicoSchema
-                    ),
-                    optionalProperties = listOf(
-                        "capacidad_aceite",
-                        "viscosidad_aceite",
-                        "presion_llanta_delantera",
-                        "presion_llanta_trasera",
-                        "holgura_cadena",
-                        "liquido_frenos"
-                    ),
-                    nullable = true
-                ),
-                "plan_mantenimiento_periodico" to com.google.firebase.ai.type.Schema.array(
-                    items = com.google.firebase.ai.type.Schema.obj(
-                        properties = mapOf(
-                            "componente" to com.google.firebase.ai.type.Schema.string(nullable = true),
-                            "intervalo_km" to com.google.firebase.ai.type.Schema.integer(nullable = true),
-                            "intervalo_meses" to com.google.firebase.ai.type.Schema.integer(nullable = true),
-                            "accion" to com.google.firebase.ai.type.Schema.string(nullable = true),
-                            "fuente_titulo" to com.google.firebase.ai.type.Schema.string(nullable = true),
-                            "fuente_dominio" to com.google.firebase.ai.type.Schema.string(nullable = true),
-                            "tipo_fuente" to com.google.firebase.ai.type.Schema.string(nullable = true)
-                        ),
-                        optionalProperties = listOf(
-                            "componente",
-                            "intervalo_km",
-                            "intervalo_meses",
-                            "accion",
-                            "fuente_titulo",
-                            "fuente_dominio",
-                            "tipo_fuente"
-                        )
-                    ),
-                    nullable = true
-                )
-            ),
-            optionalProperties = listOf(
-                "mensaje",
-                "campos_faltantes",
-                "moto_info",
-                "ficha_tecnica",
-                "plan_mantenimiento_periodico"
-            )
-        )
-    }
-
-    /** Un intento de consulta: qué modelo y si se fuerza la salida JSON con esquema. */
-    private data class Intento(val modelo: String, val salidaJson: Boolean)
-
-    // Todos los intentos usan la búsqueda de Google: sin búsqueda el modelo respondería de memoria.
-    // El segundo existe por si el modelo no admite salida JSON forzada junto con la búsqueda.
-    private val intentos = listOf(
-        Intento("gemini-3.8-flash", salidaJson = true),
-        Intento("gemini-3.8-flash", salidaJson = false),
-        Intento("gemini-3.5-flash-lite", salidaJson = false)
-    )
-
-    private fun modelFor(intento: Intento) = Firebase.ai.generativeModel(
-        modelName = intento.modelo,
-        generationConfig = if (intento.salidaJson) {
-            generationConfig {
-                responseMimeType = "application/json"
-                responseSchema = diagnosticSchema
-            }
-        } else null,
-        tools = listOf(Tool.googleSearch()),
-        systemInstruction = content { text(DiagnosticPrompts.SYSTEM) }
-    )
-
     /**
      * Selecciona una marca del listado oficial, limpia el modelo y cilindrada previos,
      * carga los modelos verificados de esa marca y sincroniza en tiempo real nuevos modelos.
@@ -383,7 +262,6 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
                 _catalogStatusLabel.value = "Consultando API y Web Scraping de $cleanMarca con Retrofit…"
 
                 // Consulta en tiempo real exclusivamente vía Retrofit (NHTSA vPIC API + MediaWiki API + Web Scraping)
-                // sin consumir cuota de Gemini al seleccionar la marca.
                 val retrofitResult = MotorcycleCatalogClient.fetchBrandCatalogRealTime(cleanMarca)
 
                 if (retrofitResult.modelos.isNotEmpty()) {
@@ -482,16 +360,15 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
     }
 
     /**
-     * Busca la ficha de la moto mediante Firebase AI Logic (Firebase.ai).
-     * Nunca genera datos por su cuenta: si no hay ficha guardada y la consulta falla, el resultado es un error.
+     * Busca la ficha de la moto en la biblioteca de manuales oficiales.
+     * Nunca genera datos: si la moto no está en la biblioteca, el resultado es "sin ficha".
      */
     fun diagnose(
         marca: String,
         modelo: String,
         cilindraje: String,
         anio: String,
-        kilometraje: String,
-        forceRefresh: Boolean = false
+        kilometraje: String
     ) {
         _uiState.value = DiagnosticState.Loading
 
@@ -522,37 +399,32 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
                     return true
                 }
 
-                if (!forceRefresh && showCached(null)) return@launch
-
+                // Siempre se consulta la biblioteca, para que una ficha corregida llegue al usuario.
+                // La copia guardada en el teléfono solo se usa si la biblioteca no responde.
                 val fetched = try {
-                    fetchFromSources(cleanMarca, cleanModelo, cleanCc, cleanAnio)
+                    FichaLibraryClient.buscar(cleanMarca, cleanModelo, cleanCc, cleanAnio.toIntOrNull() ?: 0)
                 } catch (e: TimeoutCancellationException) {
-                    Log.e(TAG, "Diagnostic generation timed out", e)
-                    val msg = "La consulta tardó demasiado. Intenta nuevamente."
-                    if (!showCached("$msg Se muestra la ficha guardada.")) {
-                        _uiState.value = DiagnosticState.Error(msg)
+                    Log.e(TAG, "Ficha library timed out", e)
+                    val msg = "La biblioteca de fichas tardó demasiado en responder."
+                    if (!showCached("$msg Se muestra la ficha guardada en este teléfono.")) {
+                        _uiState.value = DiagnosticState.Error("$msg Revisa tu conexión e intenta de nuevo.")
                     }
                     return@launch
                 } catch (e: CancellationException) {
                     throw e
                 } catch (e: Exception) {
-                    Log.e(TAG, "Firebase AI diagnostic failed", e)
-                    val msg = describeError(e)
-                    if (!showCached("$msg Se muestra la ficha guardada.")) {
-                        _uiState.value = DiagnosticState.Error(
-                            message = "$msg No se muestran datos porque no se pudieron consultar las fuentes.",
-                            detalle = ErrorDetails.detalle(e)
-                        )
+                    Log.e(TAG, "Ficha library lookup failed", e)
+                    val msg = describeLibraryError(e)
+                    if (!showCached("$msg Se muestra la ficha guardada en este teléfono.")) {
+                        _uiState.value = DiagnosticState.Error(message = msg, detalle = ErrorDetails.detalle(e))
                     }
                     return@launch
                 }
 
-                if (fetched.status == "needs_info" || !hasAnyData(fetched)) {
-                    _uiState.value = DiagnosticState.NeedsInfo(
-                        mensaje = fetched.mensaje?.takeIf { it.isNotBlank() }
-                            ?: "No se encontraron fuentes con datos para esta motocicleta. Revisa la marca, el modelo, el cilindraje y el año.",
-                        camposFaltantes = fetched.campos_faltantes.orEmpty()
-                    )
+                if (fetched == null) {
+                    // Si la ficha se retiró de la biblioteca, tampoco se muestra la copia guardada.
+                    cached?.let { repository.deleteById(it.id) }
+                    _uiState.value = DiagnosticState.SinFicha(cleanMarca, cleanModelo, cleanAnio)
                     return@launch
                 }
 
@@ -591,93 +463,12 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
         }
     }
 
-    private suspend fun fetchFromSources(
-        marca: String,
-        modelo: String,
-        cilindraje: String,
-        anio: String
-    ): DiagnosticResponse {
-        val userPrompt = DiagnosticPrompts.user(marca, modelo, cilindraje, anio)
-
-        var response: GenerateContentResponse? = null
-        var lastError: Exception? = null
-        var quotaError: QuotaExceededException? = null
-        val modelosSinCuota = mutableSetOf<String>()
-        for (intento in intentos) {
-            // La cuota es por modelo: repetir el mismo modelo solo gastaría otra consulta.
-            if (intento.modelo in modelosSinCuota) continue
-            try {
-                val r = withTimeout(60_000L) { modelFor(intento).generateContent(userPrompt) }
-                if (r.text.isNullOrBlank()) throw IllegalStateException("El modelo devolvió una respuesta vacía.")
-                response = r
-                break
-            } catch (e: TimeoutCancellationException) {
-                Log.w(TAG, "${intento.modelo} timed out", e)
-                lastError = e
-            } catch (e: CancellationException) {
-                throw e
-            } catch (e: QuotaExceededException) {
-                Log.w(TAG, "${intento.modelo} sin cuota: ${e.message}", e)
-                modelosSinCuota += intento.modelo
-                if (quotaError == null) quotaError = e
-                lastError = e
-            } catch (e: Exception) {
-                Log.w(TAG, "${intento.modelo} (json=${intento.salidaJson}) failed", e)
-                lastError = e
-            }
-        }
-        // Si algún modelo falló por cuota, ese es el error que más ayuda a entender qué pasó.
-        val ok = response
-            ?: throw (quotaError ?: lastError ?: IllegalStateException("No se pudo consultar las fuentes."))
-
-        val parsed = DiagnosticParser.parse(ok.text.orEmpty(), jsonAdapter)
-            ?: throw IllegalStateException("La respuesta de la consulta no se pudo leer.")
-
-        // Las fuentes son las páginas que la búsqueda devolvió, nunca las que el modelo dice haber usado.
-        val grounding = ok.candidates.firstOrNull()?.groundingMetadata
-        val fuentes = grounding?.groundingChunks.orEmpty()
-            .mapNotNull { it.web }
-            .filter { !it.uri.isNullOrBlank() }
-            .map { FuenteConsultada(titulo = it.title ?: it.domain, url = it.uri) }
-            .distinctBy { it.url }
-
-        // Sin páginas de respaldo la respuesta salió de la memoria del modelo: no se muestra.
-        if (fuentes.isEmpty() && parsed.status != "needs_info") throw SinFuentesException()
-
-        return parsed.copy(
-            fuentes = fuentes,
-            sugerencias_busqueda_html = grounding?.searchEntryPoint?.renderedContent
-        )
-    }
-
-    private fun hasAnyData(r: DiagnosticResponse): Boolean {
-        val ft = r.ficha_tecnica
-        val datos = listOfNotNull(
-            ft?.capacidad_aceite, ft?.viscosidad_aceite, ft?.presion_llanta_delantera,
-            ft?.presion_llanta_trasera, ft?.holgura_cadena, ft?.liquido_frenos
-        )
-        return datos.any { !it.valor.isNullOrBlank() } || !r.plan_mantenimiento_periodico.isNullOrEmpty()
-    }
-
-    private fun describeError(e: Exception): String = when (e) {
-        is SinFuentesException -> "La búsqueda no devolvió ninguna página de respaldo para esta moto."
-        is QuotaExceededException ->
-            if (ErrorDetails.esCuotaCero(e.message)) {
-                "El modelo o la búsqueda de Google no están incluidos en el plan actual del proyecto de Firebase. " +
-                    "Esperar no lo resuelve: hay que revisar el plan o la cuota del proyecto."
-            } else {
-                "Se alcanzó el límite de consultas en todos los modelos. Intenta de nuevo en unos minutos."
-            }
-        is APINotConfiguredException, is ServiceDisabledException, is InvalidAPIKeyException ->
-            "La consulta de fuentes no está habilitada en el proyecto de Firebase."
-        is RequestTimeoutException -> "La consulta tardó demasiado. Revisa tu conexión e intenta de nuevo."
-        is UnsupportedUserLocationException -> "La consulta de fuentes no está disponible en tu región."
-        is ServerException -> "El servicio de consulta rechazó la solicitud."
-        is IOException -> "No hay conexión para consultar las fuentes."
-        is FirebaseAIException -> "No se pudo consultar las fuentes. Revisa tu conexión e intenta de nuevo."
-        else -> e.localizedMessage ?: "No se pudo consultar las fuentes."
+    private fun describeLibraryError(e: Exception): String = when {
+        e is FirebaseFirestoreException && e.code == FirebaseFirestoreException.Code.PERMISSION_DENIED ->
+            "La biblioteca de fichas no permite la lectura. Hay que activar Firestore y publicar sus reglas."
+        e is FirebaseFirestoreException && e.code == FirebaseFirestoreException.Code.UNAVAILABLE ->
+            "No hay conexión con la biblioteca de fichas."
+        e is IOException -> "No hay conexión con la biblioteca de fichas."
+        else -> "No se pudo leer la biblioteca de fichas."
     }
 }
-
-/** El modelo respondió sin apoyarse en ninguna página de la búsqueda. */
-class SinFuentesException : Exception()

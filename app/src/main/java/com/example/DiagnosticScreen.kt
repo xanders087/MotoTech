@@ -1,6 +1,5 @@
 package com.example
 
-import android.webkit.WebView
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -29,7 +28,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.window.Dialog
 import com.example.ui.theme.*
 import java.text.NumberFormat
@@ -90,7 +88,7 @@ fun MotoTechCockpit(
         )
     }
 
-    fun submit(forceRefresh: Boolean) {
+    fun submit() {
         val anioNum = viewModel.formAnio.trim().toIntOrNull()
         val kmNum = viewModel.formKilometraje.trim().toIntOrNull()
         marcaError = viewModel.formMarca.isBlank()
@@ -103,8 +101,7 @@ fun MotoTechCockpit(
                 viewModel.formModelo,
                 viewModel.formCilindraje,
                 viewModel.formAnio,
-                viewModel.formKilometraje,
-                forceRefresh
+                viewModel.formKilometraje
             )
         }
     }
@@ -147,7 +144,7 @@ fun MotoTechCockpit(
                         }
                         Column {
                             Text("MotoTech", fontSize = 17.sp, fontWeight = FontWeight.Bold, color = MotoTextPrimary)
-                            Text("Datos de tu moto, con su fuente", fontSize = 11.sp, color = MotoTextSecondary)
+                            Text("Datos del manual oficial de tu moto", fontSize = 11.sp, color = MotoTextSecondary)
                         }
                     }
                 },
@@ -410,7 +407,7 @@ fun MotoTechCockpit(
                         Spacer(modifier = Modifier.height(4.dp))
 
                         Button(
-                            onClick = { submit(forceRefresh = false) },
+                            onClick = { submit() },
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .height(54.dp)
@@ -422,7 +419,7 @@ fun MotoTechCockpit(
                             if (uiState is DiagnosticState.Loading) {
                                 CircularProgressIndicator(color = Color.White, modifier = Modifier.size(22.dp), strokeWidth = 2.dp)
                                 Spacer(modifier = Modifier.width(12.dp))
-                                Text("Buscando en fuentes del fabricante…", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                                Text("Buscando la ficha…", fontWeight = FontWeight.Bold, fontSize = 14.sp)
                             } else {
                                 Icon(Icons.Default.Search, contentDescription = null, modifier = Modifier.size(20.dp))
                                 Spacer(modifier = Modifier.width(8.dp))
@@ -444,17 +441,17 @@ fun MotoTechCockpit(
                         message = state.message,
                         bg = UrgentBg, border = UrgentBorder, textColor = UrgentText,
                         actionLabel = "Reintentar",
-                        onAction = { submit(forceRefresh = false) },
+                        onAction = { submit() },
                         detalle = state.detalle
                     )
                 }
 
-                is DiagnosticState.NeedsInfo -> item {
+                is DiagnosticState.SinFicha -> item {
                     MessageCard(
                         icon = Icons.Default.Info,
-                        title = "No encontramos datos confiables para esta moto",
-                        message = state.mensaje + if (state.camposFaltantes.isNotEmpty())
-                            "\n\nRevisa: " + state.camposFaltantes.joinToString(", ") else "",
+                        title = "Aún no tenemos la ficha oficial de esta moto",
+                        message = "${state.marca} ${state.modelo} ${state.anio} todavía no está en la biblioteca de manuales. " +
+                            "No mostramos datos que no vengan del manual del fabricante.",
                         bg = WarningBg, border = WarningBorder, textColor = WarningText,
                         actionLabel = null,
                         onAction = {}
@@ -463,25 +460,16 @@ fun MotoTechCockpit(
 
                 is DiagnosticState.Success -> {
                     val resp = state.response
-                    val fuentes = resp.fuentes.orEmpty()
+                    val manual = resp.manual
 
-                    item {
-                        SourcesBanner(
-                            fuentes = fuentes,
-                            sugerenciasHtml = resp.sugerencias_busqueda_html,
-                            consultadoEl = state.consultadoEl,
-                            aviso = state.aviso,
-                            onRefresh = { submit(forceRefresh = true) }
-                        )
-                    }
+                    item { ManualBanner(manual = manual, aviso = state.aviso) }
 
-                    item { TechnicalSpecsCard(resp.ficha_tecnica, fuentes, state.marca) }
+                    item { TechnicalSpecsCard(resp.ficha_tecnica, manual) }
 
                     item {
                         MaintenanceSection(
                             items = maintenanceItems,
-                            fuentes = fuentes,
-                            marca = state.marca,
+                            manual = manual,
                             kmActual = state.kmActual,
                             onRegister = { itemToRegister = it },
                             onFindWorkshop = onNavigateToWorkshops
@@ -490,8 +478,8 @@ fun MotoTechCockpit(
 
                     item {
                         Text(
-                            "Los datos provienen de las fuentes enlazadas y se muestran tal como aparecen en ellas. " +
-                                "Confírmalos con el manual de tu moto o con un taller antes de intervenirla.",
+                            "Los datos se transcribieron del manual indicado y se muestran tal como aparecen en él. " +
+                                "Ante cualquier duda, prevalece el manual de tu moto.",
                             fontSize = 11.sp,
                             color = MotoTextMuted,
                             textAlign = TextAlign.Center,
@@ -1231,7 +1219,7 @@ private fun VehicleSummaryCard(
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     CockpitHudItem("Odómetro", "${formatKm(success.kmActual)} km", Icons.Default.Speed, MotoTextPrimary, Modifier.weight(1f))
                     CockpitHudItem("Próximo servicio", proximoTexto, Icons.Default.Build, proximoColor, Modifier.weight(1f))
-                    CockpitHudItem("Fuentes", "${success.response.fuentes.orEmpty().size}", Icons.Default.MenuBook, MotoAccentBlue, Modifier.weight(1f))
+                    CockpitHudItem("Fuente", "Manual", Icons.Default.MenuBook, MotoAccentBlue, Modifier.weight(1f))
                 }
             }
         }
@@ -1321,16 +1309,9 @@ private fun MessageCard(
     }
 }
 
-// Banner: de dónde salen los datos y cuándo se consultaron
+// Banner: de qué manual salen los datos y quién lo revisó
 @Composable
-private fun SourcesBanner(
-    fuentes: List<FuenteConsultada>,
-    sugerenciasHtml: String?,
-    consultadoEl: Long,
-    aviso: String?,
-    onRefresh: () -> Unit
-) {
-    var expanded by remember { mutableStateOf(false) }
+private fun ManualBanner(manual: ManualInfo?, aviso: String?) {
     val uriHandler = LocalUriHandler.current
 
     Card(
@@ -1339,73 +1320,45 @@ private fun SourcesBanner(
             .border(1.dp, InfoBorder, RoundedCornerShape(14.dp)),
         colors = CardDefaults.cardColors(containerColor = InfoBg)
     ) {
-        Column(modifier = Modifier.padding(14.dp)) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable(enabled = fuentes.isNotEmpty()) { expanded = !expanded },
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(10.dp)
-            ) {
-                Icon(Icons.Default.MenuBook, contentDescription = null, tint = InfoText, modifier = Modifier.size(22.dp))
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        when (fuentes.size) {
-                            0 -> "Sin fuentes verificables"
-                            1 -> "1 fuente consultada"
-                            else -> "${fuentes.size} fuentes consultadas"
-                        },
-                        fontSize = 13.sp, fontWeight = FontWeight.Bold, color = InfoText
-                    )
-                    Text("Consultado el ${formatFecha(consultadoEl)}", fontSize = 11.sp, color = InfoText.copy(alpha = 0.8f))
+        Row(
+            modifier = Modifier.padding(14.dp),
+            verticalAlignment = Alignment.Top,
+            horizontalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            Icon(Icons.Default.MenuBook, contentDescription = null, tint = InfoText, modifier = Modifier.size(22.dp))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    manual?.titulo ?: "Manual del fabricante",
+                    fontSize = 13.sp, fontWeight = FontWeight.Bold, color = InfoText
+                )
+                val detalle = listOfNotNull(
+                    manual?.edicion?.let { "Edición $it" },
+                    if (manual?.anio_desde != null && manual.anio_hasta != null) {
+                        if (manual.anio_desde == manual.anio_hasta) "Modelo ${manual.anio_desde}"
+                        else "Modelos ${manual.anio_desde}-${manual.anio_hasta}"
+                    } else null,
+                    manual?.fecha_revision?.let { fecha ->
+                        "Revisado el $fecha" + (manual.revisado_por?.let { " por $it" } ?: "")
+                    }
+                ).joinToString(" · ")
+                if (detalle.isNotEmpty()) {
+                    Text(detalle, fontSize = 11.sp, color = InfoText.copy(alpha = 0.8f))
                 }
-                if (fuentes.isNotEmpty()) {
-                    Icon(
-                        if (expanded) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
-                        contentDescription = if (expanded) "Ocultar fuentes" else "Ver fuentes",
-                        tint = InfoText
-                    )
-                }
-            }
-
-            if (aviso != null) {
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(aviso, fontSize = 12.sp, color = WarningText)
-            }
-
-            if (expanded) {
-                Spacer(modifier = Modifier.height(10.dp))
-                fuentes.forEachIndexed { index, fuente ->
+                manual?.url?.let { url ->
                     Text(
-                        "${index + 1}. ${fuente.titulo?.takeIf { it.isNotBlank() } ?: fuente.url.orEmpty()}",
+                        "Abrir el manual oficial",
                         fontSize = 12.sp,
                         color = MotoAccentBlue,
                         textDecoration = TextDecoration.Underline,
                         modifier = Modifier
-                            .fillMaxWidth()
-                            .clickable { fuente.url?.let { url -> runCatching { uriHandler.openUri(url) } } }
-                            .padding(vertical = 6.dp)
+                            .clickable { runCatching { uriHandler.openUri(url) } }
+                            .padding(vertical = 4.dp)
                     )
                 }
-            }
-
-            // Sugerencias de búsqueda de Google: mostrarlas es condición de uso de la búsqueda.
-            if (!sugerenciasHtml.isNullOrBlank()) {
-                Spacer(modifier = Modifier.height(8.dp))
-                AndroidView(
-                    modifier = Modifier.fillMaxWidth().height(56.dp),
-                    factory = { context ->
-                        WebView(context).apply { setBackgroundColor(android.graphics.Color.TRANSPARENT) }
-                    },
-                    update = { it.loadDataWithBaseURL(null, sugerenciasHtml, "text/html", "UTF-8", null) }
-                )
-            }
-
-            Spacer(modifier = Modifier.height(6.dp))
-            TextButton(onClick = onRefresh, contentPadding = PaddingValues(horizontal = 0.dp)) {
-                Icon(Icons.Default.Refresh, contentDescription = null, tint = InfoText, modifier = Modifier.size(16.dp))
-                Spacer(modifier = Modifier.width(6.dp))
-                Text("Actualizar ficha", color = InfoText, fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                if (aviso != null) {
+                    Spacer(modifier = Modifier.height(6.dp))
+                    Text(aviso, fontSize = 12.sp, color = WarningText)
+                }
             }
         }
     }
@@ -1414,9 +1367,8 @@ private fun SourcesBanner(
 @Composable
 private fun FuenteBadge(nivel: NivelFuente) {
     val (texto, bg, fg) = when (nivel) {
-        NivelFuente.OFICIAL -> Triple("Fuente oficial", RoutineIconBg, Color.White)
-        NivelFuente.WEB -> Triple("Fuente web", InfoIconBg, Color.White)
-        NivelFuente.SIN_FUENTE -> Triple("Sin fuente verificable", WarningIconBg, Color.White)
+        NivelFuente.MANUAL -> Triple("Manual oficial", RoutineIconBg, Color.White)
+        NivelFuente.SIN_FUENTE -> Triple("Sin página del manual", WarningIconBg, Color.White)
         NivelFuente.SIN_DATO -> Triple("Sin dato", MotoSurfaceVariant, MotoTextSecondary)
     }
     Box(
@@ -1432,7 +1384,10 @@ private fun FuenteBadge(nivel: NivelFuente) {
 private fun FuenteLink(dato: DatoVerificado) {
     val uriHandler = LocalUriHandler.current
     val url = dato.fuenteUrl
-    if (dato.fuenteTitulo != null && url != null) {
+    if (dato.fuenteTitulo != null && url == null) {
+        // Manual sin enlace público: se muestra la referencia para buscarla en el manual impreso.
+        Text(dato.fuenteTitulo, fontSize = 11.sp, color = MotoTextSecondary, modifier = Modifier.padding(vertical = 4.dp))
+    } else if (dato.fuenteTitulo != null && url != null) {
         Text(
             "Ver fuente: ${dato.fuenteTitulo}",
             fontSize = 11.sp,
@@ -1446,7 +1401,7 @@ private fun FuenteLink(dato: DatoVerificado) {
 }
 
 @Composable
-fun TechnicalSpecsCard(ficha: FichaTecnica?, fuentes: List<FuenteConsultada>, marca: String) {
+fun TechnicalSpecsCard(ficha: FichaTecnica?, manual: ManualInfo?) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -1465,7 +1420,7 @@ fun TechnicalSpecsCard(ficha: FichaTecnica?, fuentes: List<FuenteConsultada>, ma
                 "Líquido de frenos" to ficha?.liquido_frenos
             )
             filas.forEachIndexed { index, (label, dato) ->
-                SpecItem(label, SourceValidator.verificar(dato, fuentes, marca))
+                SpecItem(label, SourceValidator.verificarConManual(dato?.valor, dato?.pagina, manual))
                 if (index < filas.size - 1) {
                     HorizontalDivider(color = MotoBorder, thickness = 0.5.dp, modifier = Modifier.padding(vertical = 8.dp))
                 }
@@ -1488,7 +1443,7 @@ fun SpecItem(label: String, dato: DatoVerificado, modifier: Modifier = Modifier)
         Spacer(modifier = Modifier.height(2.dp))
         if (dato.valor == null) {
             Text(
-                "Sin dato confiable. Consulta tu manual o concesionario.",
+                "El manual no trae este dato.",
                 fontSize = 13.sp,
                 color = MotoTextMuted
             )
@@ -1496,7 +1451,7 @@ fun SpecItem(label: String, dato: DatoVerificado, modifier: Modifier = Modifier)
             Text(dato.valor, fontSize = 15.sp, fontWeight = FontWeight.SemiBold, color = MotoTextPrimary)
             if (dato.nivel == NivelFuente.SIN_FUENTE) {
                 Text(
-                    "No pudimos enlazar este valor a una fuente. Confírmalo antes de usarlo.",
+                    "La ficha no indica en qué página del manual está este valor. Confírmalo antes de usarlo.",
                     fontSize = 11.sp,
                     color = WarningText
                 )
@@ -1550,8 +1505,7 @@ private fun estadoTexto(item: ItemMantenimiento): String {
 @Composable
 private fun MaintenanceSection(
     items: List<ItemMantenimiento>,
-    fuentes: List<FuenteConsultada>,
-    marca: String,
+    manual: ManualInfo?,
     kmActual: Int,
     onRegister: (ItemMantenimiento) -> Unit,
     onFindWorkshop: () -> Unit
@@ -1565,7 +1519,7 @@ private fun MaintenanceSection(
                 colors = CardDefaults.cardColors(containerColor = MotoSurface)
             ) {
                 Text(
-                    "No encontramos en las fuentes un plan de mantenimiento con intervalos para esta moto. " +
+                    "La ficha de esta moto no incluye un plan de mantenimiento con intervalos. " +
                         "Consulta la tabla de mantenimiento de tu manual.",
                     fontSize = 13.sp,
                     color = MotoTextSecondary,
@@ -1591,12 +1545,10 @@ private fun MaintenanceSection(
                     Spacer(modifier = Modifier.height(12.dp))
 
                     grupo.forEachIndexed { index, item ->
-                        val fuente = SourceValidator.verificar(
+                        val fuente = SourceValidator.verificarConManual(
                             valor = intervaloTexto(item.plan),
-                            dominioCitado = item.plan.fuente_dominio,
-                            tituloCitado = item.plan.fuente_titulo,
-                            fuentes = fuentes,
-                            marca = marca
+                            pagina = item.plan.pagina,
+                            manual = manual
                         )
                         Row(
                             modifier = Modifier.fillMaxWidth(),
