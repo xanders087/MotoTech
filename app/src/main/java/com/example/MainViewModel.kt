@@ -58,7 +58,11 @@ sealed class DiagnosticState {
     ) : DiagnosticState()
     /** La moto no se pudo identificar o no se encontró ninguna fuente. */
     data class NeedsInfo(val mensaje: String, val camposFaltantes: List<String>) : DiagnosticState()
-    data class Error(val message: String) : DiagnosticState()
+    data class Error(
+        val message: String,
+        /** Mensaje original del servicio, para poder diagnosticar la causa. */
+        val detalle: String? = null
+    ) : DiagnosticState()
 }
 
 class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() {
@@ -535,7 +539,10 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
                     Log.e(TAG, "Firebase AI diagnostic failed", e)
                     val msg = describeError(e)
                     if (!showCached("$msg Se muestra la ficha guardada.")) {
-                        _uiState.value = DiagnosticState.Error("$msg No se muestran datos porque no se pudieron consultar las fuentes.")
+                        _uiState.value = DiagnosticState.Error(
+                            message = "$msg No se muestran datos porque no se pudieron consultar las fuentes.",
+                            detalle = ErrorDetails.detalle(e)
+                        )
                     }
                     return@launch
                 }
@@ -576,7 +583,10 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
                 throw e
             } catch (e: Exception) {
                 Log.e(TAG, "Error completing diagnostic query", e)
-                _uiState.value = DiagnosticState.Error("No se pudo completar la consulta: ${e.localizedMessage ?: "error desconocido"}")
+                _uiState.value = DiagnosticState.Error(
+                    message = "No se pudo completar la consulta.",
+                    detalle = ErrorDetails.detalle(e)
+                )
             }
         }
     }
@@ -591,7 +601,11 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
 
         var response: GenerateContentResponse? = null
         var lastError: Exception? = null
+        var quotaError: QuotaExceededException? = null
+        val modelosSinCuota = mutableSetOf<String>()
         for (intento in intentos) {
+            // La cuota es por modelo: repetir el mismo modelo solo gastaría otra consulta.
+            if (intento.modelo in modelosSinCuota) continue
             try {
                 val r = withTimeout(60_000L) { modelFor(intento).generateContent(userPrompt) }
                 if (r.text.isNullOrBlank()) throw IllegalStateException("El modelo devolvió una respuesta vacía.")
@@ -603,14 +617,18 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
             } catch (e: CancellationException) {
                 throw e
             } catch (e: QuotaExceededException) {
-                // Reintentar no ayuda y gasta más cuota.
-                throw e
+                Log.w(TAG, "${intento.modelo} sin cuota: ${e.message}", e)
+                modelosSinCuota += intento.modelo
+                if (quotaError == null) quotaError = e
+                lastError = e
             } catch (e: Exception) {
                 Log.w(TAG, "${intento.modelo} (json=${intento.salidaJson}) failed", e)
                 lastError = e
             }
         }
-        val ok = response ?: throw (lastError ?: IllegalStateException("No se pudo consultar las fuentes."))
+        // Si algún modelo falló por cuota, ese es el error que más ayuda a entender qué pasó.
+        val ok = response
+            ?: throw (quotaError ?: lastError ?: IllegalStateException("No se pudo consultar las fuentes."))
 
         val parsed = DiagnosticParser.parse(ok.text.orEmpty(), jsonAdapter)
             ?: throw IllegalStateException("La respuesta de la consulta no se pudo leer.")
@@ -643,7 +661,13 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
 
     private fun describeError(e: Exception): String = when (e) {
         is SinFuentesException -> "La búsqueda no devolvió ninguna página de respaldo para esta moto."
-        is QuotaExceededException -> "Se alcanzó el límite de consultas. Intenta de nuevo en unos minutos."
+        is QuotaExceededException ->
+            if (ErrorDetails.esCuotaCero(e.message)) {
+                "El modelo o la búsqueda de Google no están incluidos en el plan actual del proyecto de Firebase. " +
+                    "Esperar no lo resuelve: hay que revisar el plan o la cuota del proyecto."
+            } else {
+                "Se alcanzó el límite de consultas en todos los modelos. Intenta de nuevo en unos minutos."
+            }
         is APINotConfiguredException, is ServiceDisabledException, is InvalidAPIKeyException ->
             "La consulta de fuentes no está habilitada en el proyecto de Firebase."
         is RequestTimeoutException -> "La consulta tardó demasiado. Revisa tu conexión e intenta de nuevo."

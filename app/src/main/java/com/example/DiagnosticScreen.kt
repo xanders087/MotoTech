@@ -11,6 +11,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
@@ -443,7 +444,8 @@ fun MotoTechCockpit(
                         message = state.message,
                         bg = UrgentBg, border = UrgentBorder, textColor = UrgentText,
                         actionLabel = "Reintentar",
-                        onAction = { submit(forceRefresh = false) }
+                        onAction = { submit(forceRefresh = false) },
+                        detalle = state.detalle
                     )
                 }
 
@@ -1268,8 +1270,10 @@ private fun MessageCard(
     border: Color,
     textColor: Color,
     actionLabel: String?,
-    onAction: () -> Unit
+    onAction: () -> Unit,
+    detalle: String? = null
 ) {
+    var showDetalle by remember(detalle) { mutableStateOf(false) }
     Card(
         colors = CardDefaults.cardColors(containerColor = bg),
         modifier = Modifier.fillMaxWidth().border(1.dp, border, RoundedCornerShape(16.dp))
@@ -1287,6 +1291,30 @@ private fun MessageCard(
                     Icon(Icons.Default.Refresh, contentDescription = null, tint = textColor, modifier = Modifier.size(16.dp))
                     Spacer(modifier = Modifier.width(6.dp))
                     Text(actionLabel, color = textColor, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                }
+            }
+            if (detalle != null) {
+                Text(
+                    if (showDetalle) "Ocultar detalle técnico" else "Ver detalle técnico",
+                    color = textColor,
+                    fontSize = 12.sp,
+                    textDecoration = TextDecoration.Underline,
+                    modifier = Modifier
+                        .clickable { showDetalle = !showDetalle }
+                        .padding(vertical = 8.dp)
+                        .testTag("error_detalle_toggle")
+                )
+                if (showDetalle) {
+                    // Seleccionable para poder copiarlo y compartirlo.
+                    SelectionContainer {
+                        Text(
+                            detalle,
+                            color = textColor.copy(alpha = 0.8f),
+                            fontSize = 11.sp,
+                            lineHeight = 15.sp,
+                            fontFamily = FontFamily.Monospace
+                        )
+                    }
                 }
             }
         }
