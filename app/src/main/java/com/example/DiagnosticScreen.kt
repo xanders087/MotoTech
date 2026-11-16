@@ -55,6 +55,7 @@ fun MotoTechCockpit(
     val uiState by viewModel.uiState.collectAsState()
     val isPremium by viewModel.isPremium.collectAsState()
     val serviceRecords by viewModel.serviceRecords.collectAsState()
+    val solicitud by viewModel.solicitud.collectAsState()
     val modelosDeMarca by viewModel.modelosDeMarca.collectAsState()
     val isLoadingModels by viewModel.isLoadingModels.collectAsState()
     val catalogStatusLabel by viewModel.catalogStatusLabel.collectAsState()
@@ -447,14 +448,10 @@ fun MotoTechCockpit(
                 }
 
                 is DiagnosticState.SinFicha -> item {
-                    MessageCard(
-                        icon = Icons.Default.Info,
-                        title = "Aún no tenemos la ficha oficial de esta moto",
-                        message = "${state.marca} ${state.modelo} ${state.anio} todavía no está en la biblioteca de manuales. " +
-                            "No mostramos datos que no vengan del manual del fabricante.",
-                        bg = WarningBg, border = WarningBorder, textColor = WarningText,
-                        actionLabel = null,
-                        onAction = {}
+                    SinFichaCard(
+                        moto = state,
+                        solicitud = solicitud,
+                        onSolicitar = { viewModel.solicitarFicha(state) }
                     )
                 }
 
@@ -1245,6 +1242,70 @@ fun CockpitHudItem(
             Spacer(modifier = Modifier.height(4.dp))
             Text(value, fontSize = 12.sp, fontWeight = FontWeight.Bold, color = accentColor, fontFamily = FontFamily.Monospace)
             Text(title, fontSize = 9.sp, color = MotoTextSecondary)
+        }
+    }
+}
+
+// La moto no está en la biblioteca: se dice claramente y se ofrece pedirla.
+@Composable
+private fun SinFichaCard(
+    moto: DiagnosticState.SinFicha,
+    solicitud: SolicitudEstado,
+    onSolicitar: () -> Unit
+) {
+    Card(
+        colors = CardDefaults.cardColors(containerColor = WarningBg),
+        modifier = Modifier.fillMaxWidth().border(1.dp, WarningBorder, RoundedCornerShape(16.dp))
+    ) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                Icon(Icons.Default.Info, contentDescription = null, tint = WarningText)
+                Text(
+                    "Aún no tenemos la ficha oficial de esta moto",
+                    color = WarningText, fontSize = 14.sp, fontWeight = FontWeight.Bold
+                )
+            }
+            Spacer(modifier = Modifier.height(6.dp))
+            Text(
+                "${moto.marca} ${moto.modelo} ${moto.anio} todavía no está en la biblioteca de manuales. " +
+                    "No mostramos datos que no vengan del manual del fabricante.",
+                color = WarningText.copy(alpha = 0.9f), fontSize = 13.sp, lineHeight = 18.sp
+            )
+            Spacer(modifier = Modifier.height(12.dp))
+
+            when (solicitud) {
+                SolicitudEstado.ENVIADA, SolicitudEstado.EN_COLA -> {
+                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Icon(Icons.Default.CheckCircle, contentDescription = null, tint = RoutineText, modifier = Modifier.size(18.dp))
+                        Text(
+                            if (solicitud == SolicitudEstado.ENVIADA) "Ya solicitaste esta ficha. Gracias: nos ayuda a saber cuáles cargar primero."
+                            else "Solicitud guardada. Se enviará cuando tengas conexión.",
+                            color = WarningText, fontSize = 13.sp
+                        )
+                    }
+                }
+                else -> {
+                    Button(
+                        onClick = onSolicitar,
+                        enabled = solicitud != SolicitudEstado.ENVIANDO,
+                        colors = ButtonDefaults.buttonColors(containerColor = MotoPrimary),
+                        shape = RoundedCornerShape(10.dp),
+                        modifier = Modifier.fillMaxWidth().height(46.dp).testTag("solicitar_ficha_button")
+                    ) {
+                        if (solicitud == SolicitudEstado.ENVIANDO) {
+                            CircularProgressIndicator(color = Color.White, modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
+                            Spacer(modifier = Modifier.width(10.dp))
+                            Text("Enviando…", fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                        } else {
+                            Text("Solicitar esta ficha", fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                        }
+                    }
+                    if (solicitud == SolicitudEstado.ERROR) {
+                        Spacer(modifier = Modifier.height(6.dp))
+                        Text("No se pudo enviar la solicitud. Intenta de nuevo.", color = UrgentText, fontSize = 12.sp)
+                    }
+                }
+            }
         }
     }
 }

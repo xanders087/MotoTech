@@ -29,4 +29,11 @@ class DiagnosticRepository(private val diagnosticDao: DiagnosticDao) {
     suspend fun saveBrandCatalog(entity: BrandCatalogEntity) {
         diagnosticDao.insertBrandCatalog(entity)
     }
+
+    suspend fun wasFichaRequested(requestId: String): Boolean =
+        diagnosticDao.countFichaRequests(requestId) > 0
+
+    suspend fun markFichaRequested(requestId: String) {
+        diagnosticDao.insertFichaRequest(FichaRequestEntity(requestId = requestId))
+    }
 }

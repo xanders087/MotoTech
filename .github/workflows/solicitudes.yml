@@ -1,0 +1,33 @@
+name: Fichas más solicitadas
+
+# Se ejecuta a mano desde la pestaña Actions: muestra qué motos piden los usuarios.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  listar:
+    runs-on: ubuntu-latest
+    env:
+      FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Listar solicitudes
+        if: env.FIREBASE_SERVICE_ACCOUNT != ''
+        run: |
+          pip install --quiet firebase-admin
+          printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$RUNNER_TEMP/cuenta.json"
+          {
+            echo '```'
+            GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/cuenta.json" python herramientas/fichas/solicitudes.py 50
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          rm -f "$RUNNER_TEMP/cuenta.json"
+      - name: Sin secreto de Firebase
+        if: env.FIREBASE_SERVICE_ACCOUNT == ''
+        run: echo "FIREBASE_SERVICE_ACCOUNT no está configurado." >> "$GITHUB_STEP_SUMMARY"

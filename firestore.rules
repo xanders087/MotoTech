@@ -7,6 +7,30 @@ service cloud.firestore {
       allow read: if resource.data.estado == "publicada";
       allow write: if false;
     }
+
+    // Solicitudes de fichas: la app solo puede crear una o sumarle 1 al contador.
+    // Nadie las lee ni las borra desde la app; se consultan con herramientas/fichas/solicitudes.py.
+    match /solicitudes/{solicitudId} {
+      function datosValidos() {
+        let d = request.resource.data;
+        return d.keys().hasOnly(["marca", "modelo", "cilindraje_cc", "anio", "clave", "total", "ultima"])
+          && d.keys().hasAll(["marca", "modelo", "cilindraje_cc", "anio", "clave", "total", "ultima"])
+          && d.marca is string && d.marca.size() > 0 && d.marca.size() <= 60
+          && d.modelo is string && d.modelo.size() > 0 && d.modelo.size() <= 80
+          && d.clave is string && d.clave.size() <= 200
+          && d.cilindraje_cc is int && d.cilindraje_cc >= 0 && d.cilindraje_cc <= 2600
+          && d.anio is int && d.anio >= 1950 && d.anio <= 2100
+          && d.total is int
+          && d.ultima == request.time;
+      }
+      allow create: if datosValidos() && request.resource.data.total == 1;
+      allow update: if datosValidos()
+        && request.resource.data.total == resource.data.total + 1
+        && request.resource.data.clave == resource.data.clave
+        && request.resource.data.anio == resource.data.anio;
+      allow read, delete: if false;
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

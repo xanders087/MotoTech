@@ -60,3 +60,11 @@ La app lee las fichas de Firestore (colección `fichas`). Para que funcione hay 
 Con el secreto configurado, al fusionar en `main` GitHub ejecuta `herramientas/fichas/subir.py` y publica las fichas válidas. Mientras no exista, GitHub solo valida.
 
 Hasta completar estos pasos, la app responde "La biblioteca de fichas no permite la lectura". Con la biblioteca activa pero sin la ficha de una moto, responde "Aún no tenemos la ficha oficial de esta moto".
+
+## Fichas que piden los usuarios
+
+Cuando una moto no está en la biblioteca, la app muestra el botón "Solicitar esta ficha". Cada solicitud suma 1 al contador de esa moto y año en la colección `solicitudes` de Firestore; un mismo teléfono solo cuenta una vez por moto.
+
+Para ver cuáles son las más pedidas: en GitHub, pestaña **Actions → Fichas más solicitadas → Run workflow**. El resultado aparece en el resumen de la ejecución. Usa el mismo secreto `FIREBASE_SERVICE_ACCOUNT`. También se puede ejecutar `python3 herramientas/fichas/solicitudes.py`.
+
+Las reglas de `firestore.rules` incluyen esta colección: si ya las habías publicado antes, hay que volver a publicarlas.
