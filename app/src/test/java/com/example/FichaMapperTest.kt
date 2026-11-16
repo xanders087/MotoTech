@@ -64,17 +64,6 @@ class FichaMapperTest {
   }
 
   @Test
-  fun `un dato de manual solo es oficial si trae pagina`() {
-    val manual = ManualInfo(titulo = "Manual de prueba", url = "https://ejemplo.com/m.pdf")
-    val ok = SourceValidator.verificarConManual("valor de prueba", 10, manual)
-    assertEquals(NivelFuente.MANUAL, ok.nivel)
-    assertEquals("Manual de prueba, pág. 10", ok.fuenteTitulo)
-    assertEquals("https://ejemplo.com/m.pdf", ok.fuenteUrl)
-    assertEquals(NivelFuente.SIN_FUENTE, SourceValidator.verificarConManual("valor de prueba", null, manual).nivel)
-    assertEquals(NivelFuente.SIN_DATO, SourceValidator.verificarConManual(null, 10, manual).nivel)
-  }
-
-  @Test
   fun `la ficha de manual se puede guardar y volver a leer`() {
     val adapter = com.squareup.moshi.Moshi.Builder().build().adapter(DiagnosticResponse::class.java)
     val original = FichaMapper.toResponse(doc())

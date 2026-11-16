@@ -3,8 +3,8 @@ package com.example
 import com.squareup.moshi.JsonClass
 
 /**
- * Respuesta del diagnóstico. Todos los campos son anulables a propósito:
- * si no hay una fuente para un dato, el dato queda en null y la app muestra "Sin dato".
+ * Ficha de una moto tal como la muestra la app. Todos los campos son anulables a propósito:
+ * si el manual no trae un dato, queda en null y la app muestra "Sin dato".
  */
 @JsonClass(generateAdapter = true)
 data class DiagnosticResponse(
@@ -12,13 +12,7 @@ data class DiagnosticResponse(
     val moto_info: MotoInfo? = null,
     val ficha_tecnica: FichaTecnica? = null,
     val plan_mantenimiento_periodico: List<PlanMantenimiento>? = null,
-    val mensaje: String? = null,
-    val campos_faltantes: List<String>? = null,
-    // Lo llena la app con los resultados reales de la búsqueda, nunca el modelo.
-    val fuentes: List<FuenteConsultada>? = null,
-    // HTML de sugerencias de búsqueda que Google exige mostrar junto a un resultado con búsqueda.
-    val sugerencias_busqueda_html: String? = null,
-    // Manual oficial del que se transcribió la ficha, cuando viene de la biblioteca de fichas.
+    // Manual oficial del que se transcribió la ficha.
     val manual: ManualInfo? = null
 )
 
@@ -41,15 +35,10 @@ data class MotoInfo(
     val anio: Int? = null
 )
 
-/** Un dato técnico con la fuente de la que salió. */
+/** Un dato técnico con la página del manual de la que salió. */
 @JsonClass(generateAdapter = true)
 data class DatoTecnico(
     val valor: String? = null,
-    val fuente_titulo: String? = null,
-    val fuente_dominio: String? = null,
-    // manual_fabricante | sitio_oficial | otro
-    val tipo_fuente: String? = null,
-    // Página del manual, cuando el dato viene de la biblioteca de fichas.
     val pagina: Int? = null
 )
 
@@ -69,17 +58,7 @@ data class PlanMantenimiento(
     val intervalo_km: Int? = null,
     val intervalo_meses: Int? = null,
     val accion: String? = null,
-    val fuente_titulo: String? = null,
-    val fuente_dominio: String? = null,
-    val tipo_fuente: String? = null,
     val pagina: Int? = null
-)
-
-/** Página que la búsqueda realmente devolvió. */
-@JsonClass(generateAdapter = true)
-data class FuenteConsultada(
-    val titulo: String? = null,
-    val url: String? = null
 )
 
 // UI and Business Models
