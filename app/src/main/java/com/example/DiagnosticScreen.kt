@@ -422,7 +422,7 @@ fun MotoTechCockpit(
                             if (uiState is DiagnosticState.Loading) {
                                 CircularProgressIndicator(color = Color.White, modifier = Modifier.size(22.dp), strokeWidth = 2.dp)
                                 Spacer(modifier = Modifier.width(12.dp))
-                                Text("Buscando en fuentes del fabricante…", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                                Text("Buscando la ficha…", fontWeight = FontWeight.Bold, fontSize = 14.sp)
                             } else {
                                 Icon(Icons.Default.Search, contentDescription = null, modifier = Modifier.size(20.dp))
                                 Spacer(modifier = Modifier.width(8.dp))
@@ -461,13 +461,27 @@ fun MotoTechCockpit(
                     )
                 }
 
+                is DiagnosticState.SinFicha -> item {
+                    MessageCard(
+                        icon = Icons.Default.Info,
+                        title = "Aún no tenemos la ficha oficial de esta moto",
+                        message = "${state.marca} ${state.modelo} ${state.anio} todavía no está en la biblioteca de manuales. " +
+                            "No mostramos datos que no vengan del manual del fabricante.",
+                        bg = WarningBg, border = WarningBorder, textColor = WarningText,
+                        actionLabel = null,
+                        onAction = {}
+                    )
+                }
+
                 is DiagnosticState.Success -> {
                     val resp = state.response
                     val fuentes = resp.fuentes.orEmpty()
+                    val manual = resp.manual
 
                     item {
                         SourcesBanner(
                             fuentes = fuentes,
+                            manual = manual,
                             sugerenciasHtml = resp.sugerencias_busqueda_html,
                             consultadoEl = state.consultadoEl,
                             aviso = state.aviso,
@@ -475,12 +489,13 @@ fun MotoTechCockpit(
                         )
                     }
 
-                    item { TechnicalSpecsCard(resp.ficha_tecnica, fuentes, state.marca) }
+                    item { TechnicalSpecsCard(resp.ficha_tecnica, fuentes, state.marca, manual) }
 
                     item {
                         MaintenanceSection(
                             items = maintenanceItems,
                             fuentes = fuentes,
+                            manual = manual,
                             marca = state.marca,
                             kmActual = state.kmActual,
                             onRegister = { itemToRegister = it },
@@ -490,8 +505,13 @@ fun MotoTechCockpit(
 
                     item {
                         Text(
-                            "Los datos provienen de las fuentes enlazadas y se muestran tal como aparecen en ellas. " +
-                                "Confírmalos con el manual de tu moto o con un taller antes de intervenirla.",
+                            if (manual != null) {
+                                "Los datos se transcribieron del manual indicado y se muestran tal como aparecen en él. " +
+                                    "Ante cualquier duda, prevalece el manual de tu moto."
+                            } else {
+                                "Los datos provienen de las fuentes enlazadas y se muestran tal como aparecen en ellas. " +
+                                    "Confírmalos con el manual de tu moto o con un taller antes de intervenirla."
+                            },
                             fontSize = 11.sp,
                             color = MotoTextMuted,
                             textAlign = TextAlign.Center,
@@ -1231,7 +1251,7 @@ private fun VehicleSummaryCard(
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     CockpitHudItem("Odómetro", "${formatKm(success.kmActual)} km", Icons.Default.Speed, MotoTextPrimary, Modifier.weight(1f))
                     CockpitHudItem("Próximo servicio", proximoTexto, Icons.Default.Build, proximoColor, Modifier.weight(1f))
-                    CockpitHudItem("Fuentes", "${success.response.fuentes.orEmpty().size}", Icons.Default.MenuBook, MotoAccentBlue, Modifier.weight(1f))
+                    CockpitHudItem("Fuente", if (success.response.manual != null) "Manual" else "${success.response.fuentes.orEmpty().size}", Icons.Default.MenuBook, MotoAccentBlue, Modifier.weight(1f))
                 }
             }
         }
@@ -1325,6 +1345,7 @@ private fun MessageCard(
 @Composable
 private fun SourcesBanner(
     fuentes: List<FuenteConsultada>,
+    manual: ManualInfo?,
     sugerenciasHtml: String?,
     consultadoEl: Long,
     aviso: String?,
@@ -1349,15 +1370,46 @@ private fun SourcesBanner(
             ) {
                 Icon(Icons.Default.MenuBook, contentDescription = null, tint = InfoText, modifier = Modifier.size(22.dp))
                 Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        when (fuentes.size) {
-                            0 -> "Sin fuentes verificables"
-                            1 -> "1 fuente consultada"
-                            else -> "${fuentes.size} fuentes consultadas"
-                        },
-                        fontSize = 13.sp, fontWeight = FontWeight.Bold, color = InfoText
-                    )
-                    Text("Consultado el ${formatFecha(consultadoEl)}", fontSize = 11.sp, color = InfoText.copy(alpha = 0.8f))
+                    if (manual != null) {
+                        Text(
+                            manual.titulo ?: "Manual del fabricante",
+                            fontSize = 13.sp, fontWeight = FontWeight.Bold, color = InfoText
+                        )
+                        val detalle = listOfNotNull(
+                            manual.edicion?.let { "Edición $it" },
+                            if (manual.anio_desde != null && manual.anio_hasta != null) {
+                                if (manual.anio_desde == manual.anio_hasta) "Modelo ${manual.anio_desde}"
+                                else "Modelos ${manual.anio_desde}-${manual.anio_hasta}"
+                            } else null,
+                            manual.fecha_revision?.let { fecha ->
+                                "Revisado el $fecha" + (manual.revisado_por?.let { " por $it" } ?: "")
+                            }
+                        ).joinToString(" · ")
+                        if (detalle.isNotEmpty()) {
+                            Text(detalle, fontSize = 11.sp, color = InfoText.copy(alpha = 0.8f))
+                        }
+                        manual.url?.let { url ->
+                            Text(
+                                "Abrir el manual oficial",
+                                fontSize = 12.sp,
+                                color = MotoAccentBlue,
+                                textDecoration = TextDecoration.Underline,
+                                modifier = Modifier
+                                    .clickable { runCatching { uriHandler.openUri(url) } }
+                                    .padding(vertical = 4.dp)
+                            )
+                        }
+                    } else {
+                        Text(
+                            when (fuentes.size) {
+                                0 -> "Sin fuentes verificables"
+                                1 -> "1 fuente consultada"
+                                else -> "${fuentes.size} fuentes consultadas"
+                            },
+                            fontSize = 13.sp, fontWeight = FontWeight.Bold, color = InfoText
+                        )
+                        Text("Consultado el ${formatFecha(consultadoEl)}", fontSize = 11.sp, color = InfoText.copy(alpha = 0.8f))
+                    }
                 }
                 if (fuentes.isNotEmpty()) {
                     Icon(
@@ -1414,6 +1466,7 @@ private fun SourcesBanner(
 @Composable
 private fun FuenteBadge(nivel: NivelFuente) {
     val (texto, bg, fg) = when (nivel) {
+        NivelFuente.MANUAL -> Triple("Manual oficial", RoutineIconBg, Color.White)
         NivelFuente.OFICIAL -> Triple("Fuente oficial", RoutineIconBg, Color.White)
         NivelFuente.WEB -> Triple("Fuente web", InfoIconBg, Color.White)
         NivelFuente.SIN_FUENTE -> Triple("Sin fuente verificable", WarningIconBg, Color.White)
@@ -1432,7 +1485,10 @@ private fun FuenteBadge(nivel: NivelFuente) {
 private fun FuenteLink(dato: DatoVerificado) {
     val uriHandler = LocalUriHandler.current
     val url = dato.fuenteUrl
-    if (dato.fuenteTitulo != null && url != null) {
+    if (dato.fuenteTitulo != null && url == null) {
+        // Manual sin enlace público: se muestra la referencia para buscarla en el manual impreso.
+        Text(dato.fuenteTitulo, fontSize = 11.sp, color = MotoTextSecondary, modifier = Modifier.padding(vertical = 4.dp))
+    } else if (dato.fuenteTitulo != null && url != null) {
         Text(
             "Ver fuente: ${dato.fuenteTitulo}",
             fontSize = 11.sp,
@@ -1446,7 +1502,7 @@ private fun FuenteLink(dato: DatoVerificado) {
 }
 
 @Composable
-fun TechnicalSpecsCard(ficha: FichaTecnica?, fuentes: List<FuenteConsultada>, marca: String) {
+fun TechnicalSpecsCard(ficha: FichaTecnica?, fuentes: List<FuenteConsultada>, marca: String, manual: ManualInfo? = null) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -1465,7 +1521,11 @@ fun TechnicalSpecsCard(ficha: FichaTecnica?, fuentes: List<FuenteConsultada>, ma
                 "Líquido de frenos" to ficha?.liquido_frenos
             )
             filas.forEachIndexed { index, (label, dato) ->
-                SpecItem(label, SourceValidator.verificar(dato, fuentes, marca))
+                SpecItem(
+                    label,
+                    if (manual != null) SourceValidator.verificarConManual(dato?.valor, dato?.pagina, manual)
+                    else SourceValidator.verificar(dato, fuentes, marca)
+                )
                 if (index < filas.size - 1) {
                     HorizontalDivider(color = MotoBorder, thickness = 0.5.dp, modifier = Modifier.padding(vertical = 8.dp))
                 }
@@ -1551,6 +1611,7 @@ private fun estadoTexto(item: ItemMantenimiento): String {
 private fun MaintenanceSection(
     items: List<ItemMantenimiento>,
     fuentes: List<FuenteConsultada>,
+    manual: ManualInfo?,
     marca: String,
     kmActual: Int,
     onRegister: (ItemMantenimiento) -> Unit,
@@ -1591,7 +1652,11 @@ private fun MaintenanceSection(
                     Spacer(modifier = Modifier.height(12.dp))
 
                     grupo.forEachIndexed { index, item ->
-                        val fuente = SourceValidator.verificar(
+                        val fuente = if (manual != null) SourceValidator.verificarConManual(
+                            valor = intervaloTexto(item.plan),
+                            pagina = item.plan.pagina,
+                            manual = manual
+                        ) else SourceValidator.verificar(
                             valor = intervaloTexto(item.plan),
                             dominioCitado = item.plan.fuente_dominio,
                             tituloCitado = item.plan.fuente_titulo,

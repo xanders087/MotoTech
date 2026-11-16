@@ -24,6 +24,7 @@ import com.google.firebase.ai.type.Tool
 import com.google.firebase.ai.type.UnsupportedUserLocationException
 import com.google.firebase.ai.type.content
 import com.google.firebase.ai.type.generationConfig
+import com.google.firebase.firestore.FirebaseFirestoreException
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -57,6 +58,8 @@ sealed class DiagnosticState {
         val aviso: String? = null
     ) : DiagnosticState()
     /** La moto no se pudo identificar o no se encontró ninguna fuente. */
+    /** La biblioteca todavía no tiene la ficha oficial de esa moto y año. */
+    data class SinFicha(val marca: String, val modelo: String, val anio: String) : DiagnosticState()
     data class NeedsInfo(val mensaje: String, val camposFaltantes: List<String>) : DiagnosticState()
     data class Error(
         val message: String,
@@ -522,37 +525,32 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
                     return true
                 }
 
-                if (!forceRefresh && showCached(null)) return@launch
-
+                // Siempre se consulta la biblioteca, para que una ficha corregida llegue al usuario.
+                // La copia guardada en el teléfono solo se usa si la biblioteca no responde.
                 val fetched = try {
-                    fetchFromSources(cleanMarca, cleanModelo, cleanCc, cleanAnio)
+                    FichaLibraryClient.buscar(cleanMarca, cleanModelo, cleanCc, cleanAnio.toIntOrNull() ?: 0)
                 } catch (e: TimeoutCancellationException) {
-                    Log.e(TAG, "Diagnostic generation timed out", e)
-                    val msg = "La consulta tardó demasiado. Intenta nuevamente."
-                    if (!showCached("$msg Se muestra la ficha guardada.")) {
-                        _uiState.value = DiagnosticState.Error(msg)
+                    Log.e(TAG, "Ficha library timed out", e)
+                    val msg = "La biblioteca de fichas tardó demasiado en responder."
+                    if (!showCached("$msg Se muestra la ficha guardada en este teléfono.")) {
+                        _uiState.value = DiagnosticState.Error("$msg Revisa tu conexión e intenta de nuevo.")
                     }
                     return@launch
                 } catch (e: CancellationException) {
                     throw e
                 } catch (e: Exception) {
-                    Log.e(TAG, "Firebase AI diagnostic failed", e)
-                    val msg = describeError(e)
-                    if (!showCached("$msg Se muestra la ficha guardada.")) {
-                        _uiState.value = DiagnosticState.Error(
-                            message = "$msg No se muestran datos porque no se pudieron consultar las fuentes.",
-                            detalle = ErrorDetails.detalle(e)
-                        )
+                    Log.e(TAG, "Ficha library lookup failed", e)
+                    val msg = describeLibraryError(e)
+                    if (!showCached("$msg Se muestra la ficha guardada en este teléfono.")) {
+                        _uiState.value = DiagnosticState.Error(message = msg, detalle = ErrorDetails.detalle(e))
                     }
                     return@launch
                 }
 
-                if (fetched.status == "needs_info" || !hasAnyData(fetched)) {
-                    _uiState.value = DiagnosticState.NeedsInfo(
-                        mensaje = fetched.mensaje?.takeIf { it.isNotBlank() }
-                            ?: "No se encontraron fuentes con datos para esta motocicleta. Revisa la marca, el modelo, el cilindraje y el año.",
-                        camposFaltantes = fetched.campos_faltantes.orEmpty()
-                    )
+                if (fetched == null) {
+                    // Si la ficha se retiró de la biblioteca, tampoco se muestra la copia guardada.
+                    cached?.let { repository.deleteById(it.id) }
+                    _uiState.value = DiagnosticState.SinFicha(cleanMarca, cleanModelo, cleanAnio)
                     return@launch
                 }
 
@@ -657,6 +655,15 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
             ft?.presion_llanta_trasera, ft?.holgura_cadena, ft?.liquido_frenos
         )
         return datos.any { !it.valor.isNullOrBlank() } || !r.plan_mantenimiento_periodico.isNullOrEmpty()
+    }
+
+    private fun describeLibraryError(e: Exception): String = when {
+        e is FirebaseFirestoreException && e.code == FirebaseFirestoreException.Code.PERMISSION_DENIED ->
+            "La biblioteca de fichas no permite la lectura. Hay que activar Firestore y publicar sus reglas."
+        e is FirebaseFirestoreException && e.code == FirebaseFirestoreException.Code.UNAVAILABLE ->
+            "No hay conexión con la biblioteca de fichas."
+        e is IOException -> "No hay conexión con la biblioteca de fichas."
+        else -> "No se pudo leer la biblioteca de fichas."
     }
 
     private fun describeError(e: Exception): String = when (e) {

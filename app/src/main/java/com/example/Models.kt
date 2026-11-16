@@ -17,7 +17,20 @@ data class DiagnosticResponse(
     // Lo llena la app con los resultados reales de la búsqueda, nunca el modelo.
     val fuentes: List<FuenteConsultada>? = null,
     // HTML de sugerencias de búsqueda que Google exige mostrar junto a un resultado con búsqueda.
-    val sugerencias_busqueda_html: String? = null
+    val sugerencias_busqueda_html: String? = null,
+    // Manual oficial del que se transcribió la ficha, cuando viene de la biblioteca de fichas.
+    val manual: ManualInfo? = null
+)
+
+@JsonClass(generateAdapter = true)
+data class ManualInfo(
+    val titulo: String? = null,
+    val edicion: String? = null,
+    val url: String? = null,
+    val revisado_por: String? = null,
+    val fecha_revision: String? = null,
+    val anio_desde: Int? = null,
+    val anio_hasta: Int? = null
 )
 
 @JsonClass(generateAdapter = true)
@@ -35,7 +48,9 @@ data class DatoTecnico(
     val fuente_titulo: String? = null,
     val fuente_dominio: String? = null,
     // manual_fabricante | sitio_oficial | otro
-    val tipo_fuente: String? = null
+    val tipo_fuente: String? = null,
+    // Página del manual, cuando el dato viene de la biblioteca de fichas.
+    val pagina: Int? = null
 )
 
 @JsonClass(generateAdapter = true)
@@ -56,7 +71,8 @@ data class PlanMantenimiento(
     val accion: String? = null,
     val fuente_titulo: String? = null,
     val fuente_dominio: String? = null,
-    val tipo_fuente: String? = null
+    val tipo_fuente: String? = null,
+    val pagina: Int? = null
 )
 
 /** Página que la búsqueda realmente devolvió. */

@@ -1,6 +1,8 @@
 package com.example
 
 enum class NivelFuente {
+    /** Transcrito del manual oficial, con su página. */
+    MANUAL,
     /** La búsqueda devolvió esa página y pertenece al fabricante. */
     OFICIAL,
     /** La búsqueda devolvió esa página, pero no es del fabricante. */
@@ -23,6 +25,15 @@ data class DatoVerificado(
  * realmente devolvió. Un dato cuya fuente no aparece ahí no se presenta como verificado.
  */
 object SourceValidator {
+
+    /** Dato de la biblioteca de fichas: vale como oficial solo si indica la página del manual. */
+    fun verificarConManual(valor: String?, pagina: Int?, manual: ManualInfo): DatoVerificado {
+        val limpio = valor?.trim().orEmpty()
+        if (limpio.isEmpty()) return DatoVerificado(null, NivelFuente.SIN_DATO, null, null)
+        if (pagina == null || pagina < 1) return DatoVerificado(limpio, NivelFuente.SIN_FUENTE, null, null)
+        val titulo = manual.titulo?.takeIf { it.isNotBlank() } ?: "Manual del fabricante"
+        return DatoVerificado(limpio, NivelFuente.MANUAL, "$titulo, pág. $pagina", manual.url)
+    }
 
     fun verificar(dato: DatoTecnico?, fuentes: List<FuenteConsultada>, marca: String): DatoVerificado =
         verificar(dato?.valor, dato?.fuente_dominio, dato?.fuente_titulo, fuentes, marca)
