@@ -15,7 +15,9 @@ data class DiagnosticResponse(
     val mensaje: String? = null,
     val campos_faltantes: List<String>? = null,
     // Lo llena la app con los resultados reales de la búsqueda, nunca el modelo.
-    val fuentes: List<FuenteConsultada>? = null
+    val fuentes: List<FuenteConsultada>? = null,
+    // HTML de sugerencias de búsqueda que Google exige mostrar junto a un resultado con búsqueda.
+    val sugerencias_busqueda_html: String? = null
 )
 
 @JsonClass(generateAdapter = true)

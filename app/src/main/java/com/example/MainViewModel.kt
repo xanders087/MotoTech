@@ -12,6 +12,16 @@ import com.example.data.DiagnosticRepository
 import com.example.data.ServiceRecordEntity
 import com.google.firebase.Firebase
 import com.google.firebase.ai.ai
+import com.google.firebase.ai.type.APINotConfiguredException
+import com.google.firebase.ai.type.FirebaseAIException
+import com.google.firebase.ai.type.GenerateContentResponse
+import com.google.firebase.ai.type.InvalidAPIKeyException
+import com.google.firebase.ai.type.QuotaExceededException
+import com.google.firebase.ai.type.RequestTimeoutException
+import com.google.firebase.ai.type.ServerException
+import com.google.firebase.ai.type.ServiceDisabledException
+import com.google.firebase.ai.type.Tool
+import com.google.firebase.ai.type.UnsupportedUserLocationException
 import com.google.firebase.ai.type.content
 import com.google.firebase.ai.type.generationConfig
 import com.squareup.moshi.Moshi
@@ -28,7 +38,6 @@ import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withTimeout
-import retrofit2.HttpException
 import java.io.IOException
 
 private const val TAG = "MainViewModel"
@@ -275,29 +284,28 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
         )
     }
 
-    private val aiConfig by lazy {
-        generationConfig {
-            responseMimeType = "application/json"
-            responseSchema = diagnosticSchema
-            temperature = 0.0f
-        }
-    }
+    /** Un intento de consulta: qué modelo y si se fuerza la salida JSON con esquema. */
+    private data class Intento(val modelo: String, val salidaJson: Boolean)
 
-    private val primaryModel by lazy {
-        Firebase.ai.generativeModel(
-            modelName = "gemini-3.8-flash",
-            generationConfig = aiConfig,
-            systemInstruction = content { text(DiagnosticPrompts.SYSTEM) }
-        )
-    }
+    // Todos los intentos usan la búsqueda de Google: sin búsqueda el modelo respondería de memoria.
+    // El segundo existe por si el modelo no admite salida JSON forzada junto con la búsqueda.
+    private val intentos = listOf(
+        Intento("gemini-3.8-flash", salidaJson = true),
+        Intento("gemini-3.8-flash", salidaJson = false),
+        Intento("gemini-3.5-flash-lite", salidaJson = false)
+    )
 
-    private val fallbackModel by lazy {
-        Firebase.ai.generativeModel(
-            modelName = "gemini-3.5-flash-lite",
-            generationConfig = aiConfig,
-            systemInstruction = content { text(DiagnosticPrompts.SYSTEM) }
-        )
-    }
+    private fun modelFor(intento: Intento) = Firebase.ai.generativeModel(
+        modelName = intento.modelo,
+        generationConfig = if (intento.salidaJson) {
+            generationConfig {
+                responseMimeType = "application/json"
+                responseSchema = diagnosticSchema
+            }
+        } else null,
+        tools = listOf(Tool.googleSearch()),
+        systemInstruction = content { text(DiagnosticPrompts.SYSTEM) }
+    )
 
     /**
      * Selecciona una marca del listado oficial, limpia el modelo y cilindrada previos,
@@ -516,7 +524,7 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
                     fetchFromSources(cleanMarca, cleanModelo, cleanCc, cleanAnio)
                 } catch (e: TimeoutCancellationException) {
                     Log.e(TAG, "Diagnostic generation timed out", e)
-                    val msg = "La consulta tardó más de 60 segundos. Intenta nuevamente."
+                    val msg = "La consulta tardó demasiado. Intenta nuevamente."
                     if (!showCached("$msg Se muestra la ficha guardada.")) {
                         _uiState.value = DiagnosticState.Error(msg)
                     }
@@ -581,63 +589,47 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
     ): DiagnosticResponse {
         val userPrompt = DiagnosticPrompts.user(marca, modelo, cilindraje, anio)
 
-        val rawJsonText = try {
-            val response = withTimeout(60_000L) {
-                primaryModel.generateContent(userPrompt)
+        var response: GenerateContentResponse? = null
+        var lastError: Exception? = null
+        for (intento in intentos) {
+            try {
+                val r = withTimeout(60_000L) { modelFor(intento).generateContent(userPrompt) }
+                if (r.text.isNullOrBlank()) throw IllegalStateException("El modelo devolvió una respuesta vacía.")
+                response = r
+                break
+            } catch (e: TimeoutCancellationException) {
+                Log.w(TAG, "${intento.modelo} timed out", e)
+                lastError = e
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: QuotaExceededException) {
+                // Reintentar no ayuda y gasta más cuota.
+                throw e
+            } catch (e: Exception) {
+                Log.w(TAG, "${intento.modelo} (json=${intento.salidaJson}) failed", e)
+                lastError = e
             }
-            response.text?.takeIf { it.isNotBlank() }
-                ?: throw IllegalStateException("El modelo principal devolvió una respuesta vacía.")
-        } catch (e: CancellationException) {
-            if (e !is TimeoutCancellationException) throw e
-            Log.w(TAG, "gemini-3.8-flash timed out, switching to gemini-3.5-flash-lite", e)
-            val fallbackResponse = withTimeout(60_000L) {
-                fallbackModel.generateContent(userPrompt)
-            }
-            fallbackResponse.text?.takeIf { it.isNotBlank() }
-                ?: throw IllegalStateException("El modelo de respaldo devolvió una respuesta vacía.")
-        } catch (primaryError: Exception) {
-            Log.w(TAG, "gemini-3.8-flash failed, switching automatically to gemini-3.5-flash-lite", primaryError)
-            val fallbackResponse = withTimeout(60_000L) {
-                fallbackModel.generateContent(userPrompt)
-            }
-            fallbackResponse.text?.takeIf { it.isNotBlank() }
-                ?: throw primaryError
         }
+        val ok = response ?: throw (lastError ?: IllegalStateException("No se pudo consultar las fuentes."))
 
-        // Parse directly with Moshi since responseSchema guarantees clean JSON
-        val parsed = runCatching { jsonAdapter.fromJson(rawJsonText) }.getOrNull()
-            ?: DiagnosticParser.parse(rawJsonText, jsonAdapter)
+        val parsed = DiagnosticParser.parse(ok.text.orEmpty(), jsonAdapter)
             ?: throw IllegalStateException("La respuesta de la consulta no se pudo leer.")
 
-        val citedSources = extractCitedSources(parsed)
-        return parsed.copy(fuentes = citedSources)
-    }
+        // Las fuentes son las páginas que la búsqueda devolvió, nunca las que el modelo dice haber usado.
+        val grounding = ok.candidates.firstOrNull()?.groundingMetadata
+        val fuentes = grounding?.groundingChunks.orEmpty()
+            .mapNotNull { it.web }
+            .filter { !it.uri.isNullOrBlank() }
+            .map { FuenteConsultada(titulo = it.title ?: it.domain, url = it.uri) }
+            .distinctBy { it.url }
 
-    private fun extractCitedSources(response: DiagnosticResponse): List<FuenteConsultada> {
-        val ft = response.ficha_tecnica
-        val technicalEntries = listOfNotNull(
-            ft?.capacidad_aceite,
-            ft?.viscosidad_aceite,
-            ft?.presion_llanta_delantera,
-            ft?.presion_llanta_trasera,
-            ft?.holgura_cadena,
-            ft?.liquido_frenos
-        ).map { it.fuente_dominio to it.fuente_titulo }
+        // Sin páginas de respaldo la respuesta salió de la memoria del modelo: no se muestra.
+        if (fuentes.isEmpty() && parsed.status != "needs_info") throw SinFuentesException()
 
-        val maintenanceEntries = response.plan_mantenimiento_periodico.orEmpty()
-            .map { it.fuente_dominio to it.fuente_titulo }
-
-        return (technicalEntries + maintenanceEntries)
-            .mapNotNull { (rawDomain, rawTitle) ->
-                val domain = SourceValidator.normalizarDominio(rawDomain)
-                if (domain.isEmpty()) return@mapNotNull null
-                val title = rawTitle?.trim()?.takeIf { it.isNotEmpty() } ?: domain
-                FuenteConsultada(
-                    titulo = title,
-                    url = "https://$domain"
-                )
-            }
-            .distinctBy { SourceValidator.normalizarDominio(it.url) }
+        return parsed.copy(
+            fuentes = fuentes,
+            sugerencias_busqueda_html = grounding?.searchEntryPoint?.renderedContent
+        )
     }
 
     private fun hasAnyData(r: DiagnosticResponse): Boolean {
@@ -650,12 +642,18 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
     }
 
     private fun describeError(e: Exception): String = when (e) {
-        is HttpException -> when (e.code()) {
-            401, 403 -> "Error de autenticación con el servicio de IA (${e.code()})."
-            429 -> "Se alcanzó el límite de consultas en todos los modelos disponibles. Intenta de nuevo en un minuto."
-            else -> "El servicio de consulta respondió con un error (${e.code()})."
-        }
+        is SinFuentesException -> "La búsqueda no devolvió ninguna página de respaldo para esta moto."
+        is QuotaExceededException -> "Se alcanzó el límite de consultas. Intenta de nuevo en unos minutos."
+        is APINotConfiguredException, is ServiceDisabledException, is InvalidAPIKeyException ->
+            "La consulta de fuentes no está habilitada en el proyecto de Firebase."
+        is RequestTimeoutException -> "La consulta tardó demasiado. Revisa tu conexión e intenta de nuevo."
+        is UnsupportedUserLocationException -> "La consulta de fuentes no está disponible en tu región."
+        is ServerException -> "El servicio de consulta rechazó la solicitud."
         is IOException -> "No hay conexión para consultar las fuentes."
+        is FirebaseAIException -> "No se pudo consultar las fuentes. Revisa tu conexión e intenta de nuevo."
         else -> e.localizedMessage ?: "No se pudo consultar las fuentes."
     }
 }
+
+/** El modelo respondió sin apoyarse en ninguna página de la búsqueda. */
+class SinFuentesException : Exception()
