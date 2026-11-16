@@ -2,83 +2,69 @@ package com.example
 
 import com.squareup.moshi.JsonClass
 
+/**
+ * Respuesta del diagnóstico. Todos los campos son anulables a propósito:
+ * si no hay una fuente para un dato, el dato queda en null y la app muestra "Sin dato".
+ */
 @JsonClass(generateAdapter = true)
 data class DiagnosticResponse(
-    val status: String,
+    val status: String? = null,
     val moto_info: MotoInfo? = null,
     val ficha_tecnica: FichaTecnica? = null,
-    val diagnostico_kilometraje: DiagnosticoKilometraje? = null,
     val plan_mantenimiento_periodico: List<PlanMantenimiento>? = null,
-    val recomendaciones_clave: List<String>? = null,
     val mensaje: String? = null,
-    val campos_faltantes: List<String>? = null
+    val campos_faltantes: List<String>? = null,
+    // Lo llena la app con los resultados reales de la búsqueda, nunca el modelo.
+    val fuentes: List<FuenteConsultada>? = null
 )
 
 @JsonClass(generateAdapter = true)
 data class MotoInfo(
-    val marca: String,
-    val modelo: String,
-    val cilindraje: String,
-    val anio: Int,
-    val kilometraje_actual: Int
+    val marca: String? = null,
+    val modelo: String? = null,
+    val cilindraje: String? = null,
+    val anio: Int? = null
+)
+
+/** Un dato técnico con la fuente de la que salió. */
+@JsonClass(generateAdapter = true)
+data class DatoTecnico(
+    val valor: String? = null,
+    val fuente_titulo: String? = null,
+    val fuente_dominio: String? = null,
+    // manual_fabricante | sitio_oficial | otro
+    val tipo_fuente: String? = null
 )
 
 @JsonClass(generateAdapter = true)
 data class FichaTecnica(
-    val capacidad_aceite_litros: String,
-    val viscosidad_aceite_recomendada: String,
-    val presion_llantas_psi: PresionLlantas,
-    val holgura_cadena_mm: String,
-    val tipo_liquido_frenos: String
-)
-
-@JsonClass(generateAdapter = true)
-data class PresionLlantas(
-    val delantera_solo: Int,
-    val delantera_acompanante: Int,
-    val trasera_solo: Int,
-    val trasera_acompanante: Int
-)
-
-@JsonClass(generateAdapter = true)
-data class DiagnosticoKilometraje(
-    val atencion_inmediata: List<AtencionInmediata> = emptyList(),
-    val proxima_revision: List<ProximaRevision> = emptyList(),
-    val rutina_habitual: List<String> = emptyList()
-)
-
-@JsonClass(generateAdapter = true)
-data class AtencionInmediata(
-    val componente: String,
-    val motivo: String,
-    val prioridad: String
-)
-
-@JsonClass(generateAdapter = true)
-data class ProximaRevision(
-    val componente: String,
-    val kilometros_restantes: Int,
-    val prioridad: String
+    val capacidad_aceite: DatoTecnico? = null,
+    val viscosidad_aceite: DatoTecnico? = null,
+    val presion_llanta_delantera: DatoTecnico? = null,
+    val presion_llanta_trasera: DatoTecnico? = null,
+    val holgura_cadena: DatoTecnico? = null,
+    val liquido_frenos: DatoTecnico? = null
 )
 
 @JsonClass(generateAdapter = true)
 data class PlanMantenimiento(
-    val componente: String,
-    val intervalo_km: Int,
-    val accion: String
+    val componente: String? = null,
+    val intervalo_km: Int? = null,
+    val intervalo_meses: Int? = null,
+    val accion: String? = null,
+    val fuente_titulo: String? = null,
+    val fuente_dominio: String? = null,
+    val tipo_fuente: String? = null
+)
+
+/** Página que la búsqueda realmente devolvió. */
+@JsonClass(generateAdapter = true)
+data class FuenteConsultada(
+    val titulo: String? = null,
+    val url: String? = null
 )
 
 // UI and Business Models
-data class RepuestoAfiliado(
-    val nombre: String,
-    val categoria: String,
-    val marcaRecomendada: String,
-    val descuentoPct: String,
-    val precioEstimado: String,
-    val cupon: String,
-    val tiendaAliada: String
-)
-
 data class MaintenanceLogItem(
     val id: String,
     val fecha: String,
