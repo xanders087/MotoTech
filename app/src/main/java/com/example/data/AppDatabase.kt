@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [DiagnosticEntity::class, ServiceRecordEntity::class, BrandCatalogEntity::class], version = 5, exportSchema = false)
+@Database(entities = [DiagnosticEntity::class, ServiceRecordEntity::class, BrandCatalogEntity::class, FichaRequestEntity::class], version = 6, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun diagnosticDao(): DiagnosticDao
 
@@ -28,6 +28,16 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
+        // Versión 6: tabla de fichas solicitadas. El resto de los datos no cambia.
+        private val MIGRATION_5_6 = object : Migration(5, 6) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL(
+                    "CREATE TABLE IF NOT EXISTS `ficha_requests` " +
+                        "(`requestId` TEXT NOT NULL, `fecha` INTEGER NOT NULL, PRIMARY KEY(`requestId`))"
+                )
+            }
+        }
+
         @Volatile
         private var INSTANCE: AppDatabase? = null
 
@@ -40,7 +50,7 @@ abstract class AppDatabase : RoomDatabase() {
                 )
                     // La versión 1 solo guardaba fichas en caché, y podían contener datos
                     // generados sin fuente: se descartan en vez de migrarlas.
-                    .addMigrations(MIGRATION_3_4, MIGRATION_4_5)
+                    .addMigrations(MIGRATION_3_4, MIGRATION_4_5, MIGRATION_5_6)
                     .fallbackToDestructiveMigration(dropAllTables = true)
                     .build()
                 INSTANCE = instance

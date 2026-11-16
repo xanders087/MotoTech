@@ -32,6 +32,21 @@ class FichaMapperTest {
   }
 
   @Test
+  fun `el id de solicitud es unico por moto y anio y valido para Firestore`() {
+    val id = FichaMapper.idSolicitud("  Marca   Prueba ", "MODELO X/1", "123cc", 2021)
+    assertEquals("marca-prueba-modelo-x-1-123-2021", id)
+    assertEquals(id, FichaMapper.idSolicitud("marca prueba", "modelo x/1", "123 CC", 2021))
+    assertEquals("marca-prueba-modelo-x-1-123-2022", FichaMapper.idSolicitud("Marca Prueba", "Modelo X/1", "123cc", 2022))
+  }
+
+  @Test
+  fun `extrae el cilindraje en cc`() {
+    assertEquals(123, FichaMapper.cilindrajeCc("123cc"))
+    assertEquals(123, FichaMapper.cilindrajeCc(" 123 CC "))
+    assertNull(FichaMapper.cilindrajeCc("sin dato"))
+  }
+
+  @Test
   fun `elige la ficha cuyo rango incluye el anio`() {
     val docs = listOf(doc(2020, 2022), doc(2023, 2024))
     assertEquals(2020, (FichaMapper.seleccionar(docs, 2022)!!["anio_desde"] as Number).toInt())

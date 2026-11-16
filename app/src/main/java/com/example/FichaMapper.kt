@@ -13,6 +13,19 @@ object FichaMapper {
         return "${normalizar(marca)}|${normalizar(modelo)}|$cc"
     }
 
+    /**
+     * Id del documento de una solicitud de ficha: una por moto y año, para sumar las repetidas.
+     * Solo letras, números y guiones, porque un id de Firestore no admite "/".
+     */
+    fun idSolicitud(marca: String, modelo: String, cilindraje: String, anio: Int): String =
+        "${clave(marca, modelo, cilindraje)}|$anio"
+            .replace(Regex("[^a-z0-9]+"), "-")
+            .trim('-')
+            .take(200)
+
+    /** Solo dígitos del cilindraje ("149cc" -> 149). Null si no hay número. */
+    fun cilindrajeCc(cilindraje: String): Int? = cilindraje.filter { it.isDigit() }.toIntOrNull()
+
     private fun normalizar(texto: String): String =
         texto.trim().lowercase().replace(Regex("\\s+"), " ")
 

@@ -44,7 +44,12 @@ sealed class DiagnosticState {
     ) : DiagnosticState()
     /** La moto no se pudo identificar o no se encontró ninguna fuente. */
     /** La biblioteca todavía no tiene la ficha oficial de esa moto y año. */
-    data class SinFicha(val marca: String, val modelo: String, val anio: String) : DiagnosticState()
+    data class SinFicha(
+        val marca: String,
+        val modelo: String,
+        val cilindraje: String,
+        val anio: String
+    ) : DiagnosticState()
     data class Error(
         val message: String,
         /** Mensaje original del servicio, para poder diagnosticar la causa. */
@@ -52,7 +57,13 @@ sealed class DiagnosticState {
     ) : DiagnosticState()
 }
 
+/** Estado del botón "Solicitar esta ficha". */
+enum class SolicitudEstado { DISPONIBLE, ENVIANDO, ENVIADA, EN_COLA, ERROR }
+
 class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() {
+    private val _solicitud = MutableStateFlow(SolicitudEstado.DISPONIBLE)
+    val solicitud: StateFlow<SolicitudEstado> = _solicitud.asStateFlow()
+
     private val _uiState = MutableStateFlow<DiagnosticState>(DiagnosticState.Idle)
     val uiState: StateFlow<DiagnosticState> = _uiState.asStateFlow()
 
@@ -333,6 +344,25 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
         _maintenanceLogs.value = listOf(newRecord) + _maintenanceLogs.value
     }
 
+    /** Pide que se cargue la ficha de la moto consultada. Solo cuenta una vez por teléfono. */
+    fun solicitarFicha(moto: DiagnosticState.SinFicha) {
+        if (_solicitud.value == SolicitudEstado.ENVIANDO || _solicitud.value == SolicitudEstado.ENVIADA) return
+        val anio = moto.anio.toIntOrNull() ?: return
+        _solicitud.value = SolicitudEstado.ENVIANDO
+        viewModelScope.launch {
+            try {
+                val confirmada = FichaLibraryClient.solicitar(moto.marca, moto.modelo, moto.cilindraje, anio)
+                repository.markFichaRequested(FichaMapper.idSolicitud(moto.marca, moto.modelo, moto.cilindraje, anio))
+                _solicitud.value = if (confirmada) SolicitudEstado.ENVIADA else SolicitudEstado.EN_COLA
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                Log.e(TAG, "Ficha request failed", e)
+                _solicitud.value = SolicitudEstado.ERROR
+            }
+        }
+    }
+
     fun reset() {
         _uiState.value = DiagnosticState.Idle
         _vehicleKey.value = null
@@ -424,7 +454,10 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
                 if (fetched == null) {
                     // Si la ficha se retiró de la biblioteca, tampoco se muestra la copia guardada.
                     cached?.let { repository.deleteById(it.id) }
-                    _uiState.value = DiagnosticState.SinFicha(cleanMarca, cleanModelo, cleanAnio)
+                    val requestId = FichaMapper.idSolicitud(cleanMarca, cleanModelo, cleanCc, cleanAnio.toIntOrNull() ?: 0)
+                    _solicitud.value =
+                        if (repository.wasFichaRequested(requestId)) SolicitudEstado.ENVIADA else SolicitudEstado.DISPONIBLE
+                    _uiState.value = DiagnosticState.SinFicha(cleanMarca, cleanModelo, cleanCc, cleanAnio)
                     return@launch
                 }
 
