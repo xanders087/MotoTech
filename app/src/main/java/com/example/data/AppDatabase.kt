@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [DiagnosticEntity::class], version = 1, exportSchema = false)
+@Database(entities = [DiagnosticEntity::class, ServiceRecordEntity::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun diagnosticDao(): DiagnosticDao
 
@@ -19,7 +19,11 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "mototech_database"
-                ).build()
+                )
+                    // La versión 1 solo guardaba fichas en caché, y podían contener datos
+                    // generados sin fuente: se descartan en vez de migrarlas.
+                    .fallbackToDestructiveMigration(dropAllTables = true)
+                    .build()
                 INSTANCE = instance
                 instance
             }

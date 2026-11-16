@@ -11,12 +11,18 @@ interface DiagnosticDao {
     @Query("SELECT * FROM diagnostics ORDER BY timestamp DESC")
     fun getAllDiagnostics(): Flow<List<DiagnosticEntity>>
 
-    @Query("SELECT * FROM diagnostics WHERE marca = :marca AND modelo = :modelo AND anio = :anio AND kilometraje = :kilometraje LIMIT 1")
-    suspend fun findDiagnostic(marca: String, modelo: String, anio: String, kilometraje: String): DiagnosticEntity?
+    @Query("SELECT * FROM diagnostics WHERE vehicleKey = :vehicleKey LIMIT 1")
+    suspend fun findDiagnostic(vehicleKey: String): DiagnosticEntity?
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertDiagnostic(diagnostic: DiagnosticEntity)
 
     @Query("DELETE FROM diagnostics WHERE id = :id")
     suspend fun deleteDiagnosticById(id: Int)
+
+    @Query("SELECT * FROM service_records WHERE vehicleKey = :vehicleKey ORDER BY kilometraje DESC, fecha DESC")
+    fun getServiceRecords(vehicleKey: String): Flow<List<ServiceRecordEntity>>
+
+    @Insert
+    suspend fun insertServiceRecord(record: ServiceRecordEntity)
 }
