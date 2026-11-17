@@ -26,6 +26,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
@@ -803,6 +805,84 @@ private fun FixedDisplacementDisplay(
 }
 
 @Composable
+private fun CatalogPickerDialog(
+    title: String,
+    subtitle: String,
+    subtitleFontSize: TextUnit = 12.sp,
+    maxHeight: Dp = 540.dp,
+    searchQuery: String,
+    onSearchQueryChange: (String) -> Unit,
+    searchPlaceholder: String,
+    searchTestTag: String,
+    onDismiss: () -> Unit,
+    content: @Composable ColumnScope.() -> Unit
+) {
+    Dialog(onDismissRequest = onDismiss) {
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(max = maxHeight)
+                .border(1.dp, MotoBorder, RoundedCornerShape(20.dp)),
+            colors = CardDefaults.cardColors(containerColor = MotoSurface)
+        ) {
+            Column(modifier = Modifier.padding(18.dp)) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = title,
+                            fontSize = 17.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = MotoTextPrimary
+                        )
+                        Text(
+                            text = subtitle,
+                            fontSize = subtitleFontSize,
+                            color = MotoTextSecondary
+                        )
+                    }
+                    IconButton(onClick = onDismiss) {
+                        Icon(Icons.Default.Close, contentDescription = "Cerrar", tint = MotoTextSecondary)
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(10.dp))
+
+                OutlinedTextField(
+                    value = searchQuery,
+                    onValueChange = onSearchQueryChange,
+                    placeholder = { Text(searchPlaceholder) },
+                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = null, tint = MotoTextSecondary) },
+                    trailingIcon = if (searchQuery.isNotEmpty()) {
+                        {
+                            IconButton(onClick = { onSearchQueryChange("") }) {
+                                Icon(Icons.Default.Clear, contentDescription = "Limpiar búsqueda", tint = MotoTextSecondary)
+                            }
+                        }
+                    } else null,
+                    singleLine = true,
+                    shape = RoundedCornerShape(12.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .testTag(searchTestTag),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedTextColor = MotoTextPrimary,
+                        unfocusedTextColor = MotoTextPrimary,
+                        focusedBorderColor = MotoPrimary,
+                        unfocusedBorderColor = MotoBorder
+                    )
+                )
+
+                content()
+            }
+        }
+    }
+}
+
+@Composable
 private fun BrandPickerDialog(
     brands: List<String>,
     selectedBrand: String,
@@ -816,130 +896,80 @@ private fun BrandPickerDialog(
         else brands.filter { it.contains(q, ignoreCase = true) }
     }
 
-    Dialog(onDismissRequest = onDismiss) {
-        Card(
-            modifier = Modifier
-                .fillMaxWidth()
-                .heightIn(max = 540.dp)
-                .border(1.dp, MotoBorder, RoundedCornerShape(20.dp)),
-            colors = CardDefaults.cardColors(containerColor = MotoSurface)
+    CatalogPickerDialog(
+        title = "Selecciona la Marca",
+        subtitle = "Catálogo oficial de motocicletas",
+        subtitleFontSize = 12.sp,
+        maxHeight = 540.dp,
+        searchQuery = searchQuery,
+        onSearchQueryChange = { searchQuery = it },
+        searchPlaceholder = "Buscar marca (ej. Yamaha, Bajaj, AKT…)",
+        searchTestTag = "marca_search_input",
+        onDismiss = onDismiss
+    ) {
+        Spacer(modifier = Modifier.height(12.dp))
+
+        LazyColumn(
+            modifier = Modifier.weight(1f, fill = false),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            Column(modifier = Modifier.padding(18.dp)) {
+            items(filteredBrands) { brand ->
+                val isSelected = brand.equals(selectedBrand, ignoreCase = true)
+                val count = MotorcycleCatalog.baseModelsForBrand(brand).size
                 Row(
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(
+                            if (isSelected) MotoPrimary.copy(alpha = 0.18f) else MotoSurfaceVariant,
+                            RoundedCornerShape(12.dp)
+                        )
+                        .border(
+                            1.dp,
+                            if (isSelected) MotoPrimary else MotoBorder,
+                            RoundedCornerShape(12.dp)
+                        )
+                        .clickable { onSelectBrand(brand) }
+                        .padding(horizontal = 14.dp, vertical = 12.dp),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Column {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    ) {
+                        Icon(
+                            imageVector = if (isSelected) Icons.Default.CheckCircle else Icons.Default.TwoWheeler,
+                            contentDescription = null,
+                            tint = if (isSelected) MotoPrimary else MotoTextSecondary,
+                            modifier = Modifier.size(18.dp)
+                        )
                         Text(
-                            text = "Selecciona la Marca",
-                            fontSize = 17.sp,
+                            text = brand,
+                            fontSize = 15.sp,
                             fontWeight = FontWeight.Bold,
                             color = MotoTextPrimary
                         )
-                        Text(
-                            text = "Catálogo oficial de motocicletas",
-                            fontSize = 12.sp,
-                            color = MotoTextSecondary
-                        )
                     }
-                    IconButton(onClick = onDismiss) {
-                        Icon(Icons.Default.Close, contentDescription = "Cerrar", tint = MotoTextSecondary)
-                    }
-                }
-
-                Spacer(modifier = Modifier.height(10.dp))
-
-                OutlinedTextField(
-                    value = searchQuery,
-                    onValueChange = { searchQuery = it },
-                    placeholder = { Text("Buscar marca (ej. Yamaha, Bajaj, AKT…)") },
-                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = null, tint = MotoTextSecondary) },
-                    trailingIcon = if (searchQuery.isNotEmpty()) {
-                        {
-                            IconButton(onClick = { searchQuery = "" }) {
-                                Icon(Icons.Default.Clear, contentDescription = "Limpiar búsqueda", tint = MotoTextSecondary)
-                            }
-                        }
-                    } else null,
-                    singleLine = true,
-                    shape = RoundedCornerShape(12.dp),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .testTag("marca_search_input"),
-                    colors = OutlinedTextFieldDefaults.colors(
-                        focusedTextColor = MotoTextPrimary,
-                        unfocusedTextColor = MotoTextPrimary,
-                        focusedBorderColor = MotoPrimary,
-                        unfocusedBorderColor = MotoBorder
+                    Text(
+                        text = "$count modelos",
+                        fontSize = 11.sp,
+                        fontFamily = FontFamily.Monospace,
+                        color = MotoAccentBlue
                     )
-                )
+                }
+            }
 
-                Spacer(modifier = Modifier.height(12.dp))
-
-                LazyColumn(
-                    modifier = Modifier.weight(1f, fill = false),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    items(filteredBrands) { brand ->
-                        val isSelected = brand.equals(selectedBrand, ignoreCase = true)
-                        val count = MotorcycleCatalog.baseModelsForBrand(brand).size
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .background(
-                                    if (isSelected) MotoPrimary.copy(alpha = 0.18f) else MotoSurfaceVariant,
-                                    RoundedCornerShape(12.dp)
-                                )
-                                .border(
-                                    1.dp,
-                                    if (isSelected) MotoPrimary else MotoBorder,
-                                    RoundedCornerShape(12.dp)
-                                )
-                                .clickable { onSelectBrand(brand) }
-                                .padding(horizontal = 14.dp, vertical = 12.dp),
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(10.dp)
-                            ) {
-                                Icon(
-                                    imageVector = if (isSelected) Icons.Default.CheckCircle else Icons.Default.TwoWheeler,
-                                    contentDescription = null,
-                                    tint = if (isSelected) MotoPrimary else MotoTextSecondary,
-                                    modifier = Modifier.size(18.dp)
-                                )
-                                Text(
-                                    text = brand,
-                                    fontSize = 15.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = MotoTextPrimary
-                                )
-                            }
-                            Text(
-                                text = "$count modelos",
-                                fontSize = 11.sp,
-                                fontFamily = FontFamily.Monospace,
-                                color = MotoAccentBlue
-                            )
-                        }
-                    }
-
-                    if (filteredBrands.isEmpty()) {
-                        item {
-                            Text(
-                                text = "No se encontraron marcas que coincidan con \"$searchQuery\".",
-                                fontSize = 13.sp,
-                                color = MotoTextSecondary,
-                                textAlign = TextAlign.Center,
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(vertical = 20.dp)
-                            )
-                        }
-                    }
+            if (filteredBrands.isEmpty()) {
+                item {
+                    Text(
+                        text = "No se encontraron marcas que coincidan con \"$searchQuery\".",
+                        fontSize = 13.sp,
+                        color = MotoTextSecondary,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 20.dp)
+                    )
                 }
             }
         }
@@ -967,72 +997,24 @@ private fun ModelPickerDialog(
         }
     }
 
-    Dialog(onDismissRequest = onDismiss) {
-        Card(
-            modifier = Modifier
-                .fillMaxWidth()
-                .heightIn(max = 580.dp)
-                .border(1.dp, MotoBorder, RoundedCornerShape(20.dp)),
-            colors = CardDefaults.cardColors(containerColor = MotoSurface)
+    CatalogPickerDialog(
+        title = "Modelos de $marca",
+        subtitle = "Al elegir el modelo se fija automáticamente su cilindrada",
+        subtitleFontSize = 11.sp,
+        maxHeight = 580.dp,
+        searchQuery = searchQuery,
+        onSearchQueryChange = { searchQuery = it },
+        searchPlaceholder = "Buscar modelo o cilindrada de $marca…",
+        searchTestTag = "modelo_search_input",
+        onDismiss = onDismiss
+    ) {
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            Column(modifier = Modifier.padding(18.dp)) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Column(modifier = Modifier.weight(1f)) {
-                        Text(
-                            text = "Modelos de $marca",
-                            fontSize = 17.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = MotoTextPrimary
-                        )
-                        Text(
-                            text = "Al elegir el modelo se fija automáticamente su cilindrada",
-                            fontSize = 11.sp,
-                            color = MotoTextSecondary
-                        )
-                    }
-                    IconButton(onClick = onDismiss) {
-                        Icon(Icons.Default.Close, contentDescription = "Cerrar", tint = MotoTextSecondary)
-                    }
-                }
-
-                Spacer(modifier = Modifier.height(10.dp))
-
-                OutlinedTextField(
-                    value = searchQuery,
-                    onValueChange = { searchQuery = it },
-                    placeholder = { Text("Buscar modelo o cilindrada de $marca…") },
-                    leadingIcon = { Icon(Icons.Default.Search, contentDescription = null, tint = MotoTextSecondary) },
-                    trailingIcon = if (searchQuery.isNotEmpty()) {
-                        {
-                            IconButton(onClick = { searchQuery = "" }) {
-                                Icon(Icons.Default.Clear, contentDescription = "Limpiar búsqueda", tint = MotoTextSecondary)
-                            }
-                        }
-                    } else null,
-                    singleLine = true,
-                    shape = RoundedCornerShape(12.dp),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .testTag("modelo_search_input"),
-                    colors = OutlinedTextFieldDefaults.colors(
-                        focusedTextColor = MotoTextPrimary,
-                        unfocusedTextColor = MotoTextPrimary,
-                        focusedBorderColor = MotoPrimary,
-                        unfocusedBorderColor = MotoBorder
-                    )
-                )
-
-                Spacer(modifier = Modifier.height(8.dp))
-
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
                     Text(
                         text = "${filteredModels.size} modelos de $marca",
                         fontSize = 11.sp,
@@ -1137,8 +1119,6 @@ private fun ModelPickerDialog(
                 }
             }
         }
-    }
-}
 
 @Composable
 private fun FormField(
