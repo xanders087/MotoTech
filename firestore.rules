@@ -1,6 +1,118 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: fichas
+    // Document ID: {marca}_{modelo}_{cc}_{anioDesde}-{anioHasta}
+    // Fields (publicadas por herramientas/fichas/subir.py con cuenta de servicio):
+    //   - marca: string (required)
+    //   - modelo: string (required)
+    //   - cilindraje_cc: int (required)
+    //   - anio_desde: int (required)
+    //   - anio_hasta: int (required)
+    //   - clave: string (required)
+    //   - estado: string (required, "publicada" para lectura cliente)
+    //
+    // Collection: solicitudes
+    // Document ID: {marca-modelo-cc-anio}
+    // Fields:
+    //   - marca: string (required, 1..60, immutable)
+    //   - modelo: string (required, 1..80, immutable)
+    //   - cilindraje_cc: int (required, 0..2600, immutable)
+    //   - anio: int (required, 1950..2100, immutable)
+    //   - clave: string (required, 0..200, immutable)
+    //   - total: int (required, 1 on create, resource.data.total + 1 on update)
+    //   - ultima: timestamp (required, recent <= request.time)
+    //
+    // Collection: reportes
+    // Document ID: {fichaId_slug}__{campo_slug}
+    // Fields:
+    //   - ficha_id: string (required, 1..200, immutable)
+    //   - clave: string (required, 0..200, immutable)
+    //   - marca: string (required, 1..60, immutable)
+    //   - modelo: string (required, 1..80, immutable)
+    //   - cilindraje_cc: int (required, 0..2600, immutable)
+    //   - campo: string (required, 1..120, immutable)
+    //   - valor_reportado: string (required, 1..200, immutable)
+    //   - motivo: string (required, 1..120)
+    //   - total: int (required, 1 on create, resource.data.total + 1 on update)
+    //   - ultima: timestamp (required, recent <= request.time)
+    //
+    // ===============================================================
+
+    // ===============================================================
+    // Helper Functions
+    // ===============================================================
+
+    function hasRequiredFields(fields) {
+      return request.resource.data.keys().hasAll(fields);
+    }
+
+    function hasOnlyAllowedFields(fields) {
+      return request.resource.data.keys().hasOnly(fields);
+    }
+
+    function validStringLength(field, minLen, maxLen) {
+      return request.resource.data[field] is string &&
+        request.resource.data[field].size() >= minLen &&
+        request.resource.data[field].size() <= maxLen;
+    }
+
+    function areImmutableFieldsUnchanged(fields) {
+      return !request.resource.data.diff(resource.data).affectedKeys().hasAny(fields);
+    }
+
+    function isRecent(time) {
+      return time is timestamp &&
+        time > request.time - duration.value(5, 'm') &&
+        time <= request.time;
+    }
+
+    // ===============================================================
+    // Domain Validators
+    // ===============================================================
+
+    function esSolicitudValida() {
+      let allowed = ["marca", "modelo", "cilindraje_cc", "anio", "clave", "total", "ultima"];
+      let d = request.resource.data;
+      return hasOnlyAllowedFields(allowed)
+        && hasRequiredFields(allowed)
+        && validStringLength("marca", 1, 60)
+        && validStringLength("modelo", 1, 80)
+        && validStringLength("clave", 0, 200)
+        && d.cilindraje_cc is int && d.cilindraje_cc >= 0 && d.cilindraje_cc <= 2600
+        && d.anio is int && d.anio >= 1950 && d.anio <= 2100
+        && d.total is int
+        && isRecent(d.ultima);
+    }
+
+    function esReporteValido() {
+      let allowed = [
+        "ficha_id", "clave", "marca", "modelo", "cilindraje_cc",
+        "campo", "valor_reportado", "motivo", "total", "ultima"
+      ];
+      let d = request.resource.data;
+      return hasOnlyAllowedFields(allowed)
+        && hasRequiredFields(allowed)
+        && validStringLength("ficha_id", 1, 200)
+        && validStringLength("clave", 0, 200)
+        && validStringLength("marca", 1, 60)
+        && validStringLength("modelo", 1, 80)
+        && d.cilindraje_cc is int && d.cilindraje_cc >= 0 && d.cilindraje_cc <= 2600
+        && validStringLength("campo", 1, 120)
+        && validStringLength("valor_reportado", 1, 200)
+        && validStringLength("motivo", 1, 120)
+        && d.total is int
+        && isRecent(d.ultima);
+    }
+
+    // ===============================================================
+    // Collection Rules
+    // ===============================================================
+
     // Biblioteca de fichas: cualquiera lee las publicadas; nadie escribe desde la app.
     // Las fichas se publican con herramientas/fichas/subir.py, que usa una cuenta de servicio.
     match /fichas/{fichaId} {
@@ -11,23 +123,22 @@ service cloud.firestore {
     // Solicitudes de fichas: la app solo puede crear una o sumarle 1 al contador.
     // Nadie las lee ni las borra desde la app; se consultan con herramientas/fichas/solicitudes.py.
     match /solicitudes/{solicitudId} {
-      function datosValidos() {
-        let d = request.resource.data;
-        return d.keys().hasOnly(["marca", "modelo", "cilindraje_cc", "anio", "clave", "total", "ultima"])
-          && d.keys().hasAll(["marca", "modelo", "cilindraje_cc", "anio", "clave", "total", "ultima"])
-          && d.marca is string && d.marca.size() > 0 && d.marca.size() <= 60
-          && d.modelo is string && d.modelo.size() > 0 && d.modelo.size() <= 80
-          && d.clave is string && d.clave.size() <= 200
-          && d.cilindraje_cc is int && d.cilindraje_cc >= 0 && d.cilindraje_cc <= 2600
-          && d.anio is int && d.anio >= 1950 && d.anio <= 2100
-          && d.total is int
-          && d.ultima is timestamp && d.ultima <= request.time;
-      }
-      allow create: if datosValidos() && request.resource.data.total == 1;
-      allow update: if datosValidos()
+      allow create: if esSolicitudValida() && request.resource.data.total == 1;
+      allow update: if esSolicitudValida()
         && request.resource.data.total == resource.data.total + 1
-        && request.resource.data.clave == resource.data.clave
-        && request.resource.data.anio == resource.data.anio;
+        && areImmutableFieldsUnchanged(["marca", "modelo", "cilindraje_cc", "anio", "clave"]);
+      allow read, delete: if false;
+    }
+
+    // Reportes de datos incorrectos en fichas publicadas: contador de solo escritura para la app.
+    match /reportes/{reporteId} {
+      allow create: if esReporteValido() && request.resource.data.total == 1;
+      allow update: if esReporteValido()
+        && request.resource.data.total == resource.data.total + 1
+        && areImmutableFieldsUnchanged([
+          "ficha_id", "clave", "marca", "modelo",
+          "cilindraje_cc", "campo", "valor_reportado"
+        ]);
       allow read, delete: if false;
     }
 

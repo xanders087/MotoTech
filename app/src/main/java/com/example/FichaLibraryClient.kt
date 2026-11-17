@@ -18,13 +18,14 @@ enum class OperationType {
 }
 
 /**
- * Lee la biblioteca de fichas de manuales oficiales (Firestore, colección "fichas").
- * No genera nada: devuelve la ficha publicada o null si esa moto aún no está cargada.
+ * Lee la biblioteca de fichas de manuales oficiales (Firestore, colección "fichas")
+ * y registra solicitudes y reportes de datos incorrectos.
  */
 object FichaLibraryClient {
     private const val TAG = "FichaLibraryClient"
     private const val COLECCION = "fichas"
     private const val SOLICITUDES = "solicitudes"
+    private const val REPORTES = "reportes"
     private const val TIMEOUT_MS = 20_000L
     private const val TIMEOUT_SOLICITUD_MS = 12_000L
     const val DEFAULT_DATABASE_ID = "ai-studio-android-mototech-364d3daf-8123-4de3-b899-775d66bdcdfb"
@@ -96,6 +97,54 @@ object FichaLibraryClient {
         }
     }
 
+    /**
+     * Reporta un dato técnico o tarea de mantenimiento sospechoso en una ficha publicada.
+     * Suma 1 al contador en "reportes/{fichaId__campo}". Devuelve false si quedó en cola sin red.
+     */
+    suspend fun reportar(
+        fichaId: String,
+        marca: String,
+        modelo: String,
+        cilindraje: String,
+        campo: String,
+        valorReportado: String,
+        motivo: String,
+        databaseId: String = configuredDatabaseId
+    ): Boolean {
+        val cleanFichaId = fichaId.trim().take(200)
+        val cleanCampo = campo.trim().take(120)
+        val datos = mapOf(
+            "ficha_id" to cleanFichaId,
+            "clave" to FichaMapper.clave(marca, modelo, cilindraje).take(200),
+            "marca" to marca.trim().take(60),
+            "modelo" to modelo.trim().take(80),
+            "cilindraje_cc" to (FichaMapper.cilindrajeCc(cilindraje) ?: 0),
+            "campo" to cleanCampo,
+            "valor_reportado" to valorReportado.trim().take(200),
+            "motivo" to motivo.trim().take(120),
+            "total" to FieldValue.increment(1),
+            "ultima" to FieldValue.serverTimestamp()
+        )
+        val id = FichaMapper.idReporte(cleanFichaId, cleanCampo)
+        val path = "$REPORTES/$id"
+        return try {
+            withTimeout(TIMEOUT_SOLICITUD_MS) {
+                suspendCancellableCoroutine<Unit> { cont ->
+                    firestore(databaseId).collection(REPORTES).document(id)
+                        .set(datos, SetOptions.merge())
+                        .addOnSuccessListener { cont.resume(Unit) }
+                        .addOnFailureListener { error ->
+                            logFirestoreError(error, OperationType.WRITE, path)
+                            cont.resumeWithException(error)
+                        }
+                }
+            }
+            true
+        } catch (e: TimeoutCancellationException) {
+            false
+        }
+    }
+
     suspend fun buscar(
         marca: String,
         modelo: String,
@@ -106,11 +155,17 @@ object FichaLibraryClient {
         val clave = FichaMapper.clave(marca, modelo, cilindraje)
         val (documentos, desdeCache) = withTimeout(TIMEOUT_MS) { consultar(clave, databaseId) }
 
-        val ficha = FichaMapper.seleccionar(documentos, anio)
+        val seleccion = FichaMapper.seleccionarConCercania(documentos, anio)
         // Sin conexión Firestore responde con lo que tenga guardado; si no tiene nada,
         // no se puede afirmar que la ficha no exista.
-        if (ficha == null && desdeCache) throw IOException("Sin conexión con la biblioteca de fichas.")
-        return ficha?.let { FichaMapper.toResponse(it) }
+        if (seleccion == null && desdeCache) throw IOException("Sin conexión con la biblioteca de fichas.")
+        return seleccion?.let {
+            FichaMapper.toResponse(
+                doc = it.documento,
+                aproximada = !it.exacta,
+                anioConsultado = anio
+            )
+        }
     }
 
     private suspend fun consultar(
@@ -123,7 +178,9 @@ object FichaLibraryClient {
                 .whereEqualTo("estado", FichaMapper.ESTADO_PUBLICADA)
                 .get()
                 .addOnSuccessListener { snapshot ->
-                    val docs = snapshot.documents.mapNotNull { it.data }
+                    val docs = snapshot.documents.mapNotNull { doc ->
+                        doc.data?.plus("_docId" to doc.id)
+                    }
                     cont.resume(docs to snapshot.metadata.isFromCache)
                 }
                 .addOnFailureListener { error ->

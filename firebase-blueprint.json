@@ -29,6 +29,35 @@
         "ultima": { "type": "string", "format": "date-time" }
       },
       "required": ["marca", "modelo", "cilindraje_cc", "anio", "clave", "total", "ultima"]
+    },
+    "Reporte": {
+      "title": "Reporte",
+      "description": "Reporte de dato técnico o tarea de mantenimiento incorrecta en una ficha publicada.",
+      "type": "object",
+      "properties": {
+        "ficha_id": { "type": "string" },
+        "clave": { "type": "string" },
+        "marca": { "type": "string" },
+        "modelo": { "type": "string" },
+        "cilindraje_cc": { "type": "integer" },
+        "campo": { "type": "string" },
+        "valor_reportado": { "type": "string" },
+        "motivo": { "type": "string" },
+        "total": { "type": "integer" },
+        "ultima": { "type": "string", "format": "date-time" }
+      },
+      "required": [
+        "ficha_id",
+        "clave",
+        "marca",
+        "modelo",
+        "cilindraje_cc",
+        "campo",
+        "valor_reportado",
+        "motivo",
+        "total",
+        "ultima"
+      ]
     }
   },
   "firestore": {
@@ -39,6 +68,10 @@
     "/solicitudes/{solicitudId}": {
       "schema": { "$ref": "#/entities/Solicitud" },
       "description": "Contador de solicitudes de fichas pendientes por motocicleta y año."
+    },
+    "/reportes/{reporteId}": {
+      "schema": { "$ref": "#/entities/Reporte" },
+      "description": "Contador de reportes de datos incorrectos por ficha y campo."
     }
   }
 }

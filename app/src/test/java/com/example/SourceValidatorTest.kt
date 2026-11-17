@@ -43,4 +43,25 @@ class SourceValidatorTest {
     val r = SourceValidator.verificarConManual("valor de prueba", 7, ManualInfo())
     assertEquals("Manual del fabricante, pág. 7", r.fuenteTitulo)
   }
+
+  @Test
+  fun `manual aproximado devuelve nivel MANUAL_OTRO_ANIO e incluye rango`() {
+    val manualOtroAnio = ManualInfo(
+        titulo = "Manual de prueba",
+        url = "https://ejemplo.com/m.pdf",
+        anio_desde = 2020,
+        anio_hasta = 2022,
+        aproximada = true,
+        anio_consultado = 2024
+    )
+    val r = SourceValidator.verificarConManual("valor de prueba", 12, manualOtroAnio)
+    assertEquals(NivelFuente.MANUAL_OTRO_ANIO, r.nivel)
+    assertEquals("Manual de prueba (2020-2022), pág. 12", r.fuenteTitulo)
+    assertEquals("https://ejemplo.com/m.pdf", r.fuenteUrl)
+
+    val mismoAnioRango = manualOtroAnio.copy(anio_desde = 2021, anio_hasta = 2021)
+    val r2 = SourceValidator.verificarConManual("valor de prueba", 5, mismoAnioRango)
+    assertEquals(NivelFuente.MANUAL_OTRO_ANIO, r2.nivel)
+    assertEquals("Manual de prueba (2021), pág. 5", r2.fuenteTitulo)
+  }
 }

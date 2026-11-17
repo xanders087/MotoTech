@@ -41,4 +41,13 @@ class DiagnosticRepository(private val diagnosticDao: DiagnosticDao) {
     suspend fun markFichaRequested(requestId: String) {
         diagnosticDao.insertFichaRequest(FichaRequestEntity(requestId = requestId))
     }
+
+    val allReportedIds: Flow<List<String>> = diagnosticDao.observeAllReportedIds()
+
+    suspend fun wasFieldReported(reportId: String): Boolean =
+        diagnosticDao.countFichaReports(reportId) > 0
+
+    suspend fun markFieldReported(reportId: String) {
+        diagnosticDao.insertFichaReport(FichaReportEntity(reportId = reportId))
+    }
 }

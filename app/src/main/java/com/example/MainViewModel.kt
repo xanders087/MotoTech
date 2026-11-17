@@ -6,7 +6,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.data.BrandCatalogEntity
 import com.example.data.DiagnosticEntity
 import com.example.data.DiagnosticRepository
 import com.example.data.ServiceRecordEntity
@@ -14,7 +13,6 @@ import com.google.firebase.firestore.FirebaseFirestoreException
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -22,6 +20,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import java.io.IOException
@@ -76,19 +75,21 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
     var formAnio by mutableStateOf("")
     var formKilometraje by mutableStateOf("")
 
-    // Catálogo real de Marcas y Modelos (con cilindrada oficial automática)
+    // Catálogo de Marcas y Modelos (con cilindrada fija por modelo)
     val marcasDisponibles: List<String> = MotorcycleCatalog.MARCAS
 
     private val _modelosDeMarca = MutableStateFlow<List<MotoModelSpec>>(emptyList())
     val modelosDeMarca: StateFlow<List<MotoModelSpec>> = _modelosDeMarca.asStateFlow()
 
-    private val _isLoadingModels = MutableStateFlow(false)
-    val isLoadingModels: StateFlow<Boolean> = _isLoadingModels.asStateFlow()
+    val reportedIds: StateFlow<Set<String>> = repository.allReportedIds
+        .map { it.toSet() }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptySet())
 
-    private val _catalogStatusLabel = MutableStateFlow<String?>(null)
-    val catalogStatusLabel: StateFlow<String?> = _catalogStatusLabel.asStateFlow()
+    private val _reportandoCampo = MutableStateFlow<String?>(null)
+    val reportandoCampo: StateFlow<String?> = _reportandoCampo.asStateFlow()
 
-    private var catalogLoadJob: Job? = null
+    private val _reporteMensaje = MutableStateFlow<String?>(null)
+    val reporteMensaje: StateFlow<String?> = _reporteMensaje.asStateFlow()
 
     // B2B Fleet Mode Toggle
     private val _isFleetMode = MutableStateFlow(false)
@@ -239,13 +240,12 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
 
     private val moshi = Moshi.Builder().build()
     private val jsonAdapter = moshi.adapter(DiagnosticResponse::class.java)
-    private val brandCatalogAdapter = moshi.adapter(BrandCatalogResponse::class.java)
 
     /**
-     * Selecciona una marca del listado oficial, limpia el modelo y cilindrada previos,
-     * carga los modelos verificados de esa marca y sincroniza en tiempo real nuevos modelos.
+     * Selecciona una marca del catálogo, limpia el modelo y cilindrada previos si cambió la marca
+     * y carga los modelos disponibles.
      */
-    fun selectMarca(nuevaMarca: String, forceRefreshOnline: Boolean = false) {
+    fun selectMarca(nuevaMarca: String) {
         val cleanMarca = nuevaMarca.trim()
         val changed = !formMarca.equals(cleanMarca, ignoreCase = true)
         formMarca = cleanMarca
@@ -253,11 +253,11 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
             formModelo = ""
             formCilindraje = ""
         }
-        loadModelsForBrand(cleanMarca, forceRefreshOnline)
+        loadModelsForBrand(cleanMarca)
     }
 
     /**
-     * Selecciona un modelo perteneciente a la marca actual y asigna automáticamente su cilindrada oficial.
+     * Selecciona un modelo perteneciente a la marca actual y asigna su cilindrada fija.
      */
     fun selectModelo(spec: MotoModelSpec) {
         formModelo = spec.modelo
@@ -266,88 +266,28 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
 
     /**
      * Selecciona una moto de los botones de ejemplo rápido, cargando los modelos de su marca
-     * y asignando automáticamente la cilindrada oficial.
+     * y asignando su cilindrada.
      */
     fun selectExampleBike(marca: String, modelo: String, cilindraje: String, anio: String) {
         formMarca = marca
         formModelo = modelo
         formCilindraje = MotorcycleCatalog.normalizeCilindraje(cilindraje)
         formAnio = anio
-        loadModelsForBrand(marca, forceRefreshOnline = false)
+        loadModelsForBrand(marca)
     }
 
-    private fun loadModelsForBrand(marca: String, forceRefreshOnline: Boolean) {
+    private fun loadModelsForBrand(marca: String) {
         val cleanMarca = marca.trim()
         if (cleanMarca.isEmpty()) {
             _modelosDeMarca.value = emptyList()
-            _catalogStatusLabel.value = null
             return
         }
 
-        val baseModels = MotorcycleCatalog.baseModelsForBrand(cleanMarca)
-        _modelosDeMarca.value = baseModels
-        _catalogStatusLabel.value = "${baseModels.size} modelos base de $cleanMarca • Sincronizando API…"
-
-        catalogLoadJob?.cancel()
-        catalogLoadJob = viewModelScope.launch {
-            val marcaKey = cleanMarca.lowercase()
-            try {
-                val cached = repository.findBrandCatalog(marcaKey)
-                val cachedList = cached?.let {
-                    MotorcycleCatalog.parseBrandCatalogJson(it.jsonModels, brandCatalogAdapter)
-                }.orEmpty()
-
-                if (cachedList.isNotEmpty()) {
-                    val merged = MotorcycleCatalog.mergeModels(baseModels, cachedList)
-                    _modelosDeMarca.value = merged
-                    _catalogStatusLabel.value = "${merged.size} modelos de $cleanMarca (Caché Room + API)"
-                    if (formModelo.isNotBlank() && formCilindraje.isBlank()) {
-                        MotorcycleCatalog.findDisplacement(cleanMarca, formModelo, merged)?.let {
-                            formCilindraje = it
-                        }
-                    }
-                    if (!forceRefreshOnline) return@launch
-                }
-
-                _isLoadingModels.value = true
-                _catalogStatusLabel.value = "Consultando API y Web Scraping de $cleanMarca con Retrofit…"
-
-                // Consulta en tiempo real exclusivamente vía Retrofit (NHTSA vPIC API + MediaWiki API + Web Scraping)
-                val retrofitResult = MotorcycleCatalogClient.fetchBrandCatalogRealTime(cleanMarca)
-
-                if (retrofitResult.modelos.isNotEmpty()) {
-                    val merged = MotorcycleCatalog.mergeModels(baseModels, retrofitResult.modelos)
-                    _modelosDeMarca.value = merged
-                    val responseJson = brandCatalogAdapter.toJson(
-                        BrandCatalogResponse(marca = cleanMarca, modelos = merged)
-                    )
-                    repository.saveBrandCatalog(
-                        BrandCatalogEntity(
-                            marcaKey = marcaKey,
-                            marca = cleanMarca,
-                            jsonModels = responseJson
-                        )
-                    )
-                    val fuenteDesc = if (retrofitResult.fuentesExitosas.isNotEmpty()) {
-                        retrofitResult.fuentesExitosas.joinToString(" + ")
-                    } else {
-                        "API Retrofit"
-                    }
-                    _catalogStatusLabel.value = "${merged.size} modelos de $cleanMarca ($fuenteDesc)"
-                    if (formModelo.isNotBlank()) {
-                        MotorcycleCatalog.findDisplacement(cleanMarca, formModelo, merged)?.let {
-                            formCilindraje = it
-                        }
-                    }
-                } else {
-                    _catalogStatusLabel.value = "${_modelosDeMarca.value.size} modelos oficiales de $cleanMarca"
-                }
-            } catch (e: CancellationException) {
-                throw e
-            } catch (_: Exception) {
-                _catalogStatusLabel.value = "${_modelosDeMarca.value.size} modelos oficiales de $cleanMarca"
-            } finally {
-                _isLoadingModels.value = false
+        val models = MotorcycleCatalog.baseModelsForBrand(cleanMarca)
+        _modelosDeMarca.value = models
+        if (formModelo.isNotBlank() && formCilindraje.isBlank()) {
+            MotorcycleCatalog.findDisplacement(cleanMarca, formModelo, models)?.let {
+                formCilindraje = it
             }
         }
     }
@@ -409,19 +349,79 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
 
     /** Pide que se cargue la ficha de la moto consultada. Solo cuenta una vez por teléfono. */
     fun solicitarFicha(moto: DiagnosticState.SinFicha) {
-        if (_solicitud.value == SolicitudEstado.ENVIANDO || _solicitud.value == SolicitudEstado.ENVIADA) return
         val anio = moto.anio.toIntOrNull() ?: return
+        solicitarAnio(moto.marca, moto.modelo, moto.cilindraje, anio)
+    }
+
+    /** Pide que se cargue la ficha de un año específico (p. ej. cuando se mostró un año aproximado). */
+    fun solicitarAnio(marca: String, modelo: String, cilindraje: String, anio: Int) {
+        if (anio <= 0) return
+        if (_solicitud.value == SolicitudEstado.ENVIANDO || _solicitud.value == SolicitudEstado.ENVIADA) return
         _solicitud.value = SolicitudEstado.ENVIANDO
         viewModelScope.launch {
             try {
-                val confirmada = FichaLibraryClient.solicitar(moto.marca, moto.modelo, moto.cilindraje, anio)
-                repository.markFichaRequested(FichaMapper.idSolicitud(moto.marca, moto.modelo, moto.cilindraje, anio))
+                val requestId = FichaMapper.idSolicitud(marca, modelo, cilindraje, anio)
+                if (repository.wasFichaRequested(requestId)) {
+                    _solicitud.value = SolicitudEstado.ENVIADA
+                    return@launch
+                }
+                val confirmada = FichaLibraryClient.solicitar(marca, modelo, cilindraje, anio)
+                repository.markFichaRequested(requestId)
                 _solicitud.value = if (confirmada) SolicitudEstado.ENVIADA else SolicitudEstado.EN_COLA
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
                 Log.e(TAG, "Ficha request failed", e)
                 _solicitud.value = SolicitudEstado.ERROR
+            }
+        }
+    }
+
+    fun clearReporteMensaje() {
+        _reporteMensaje.value = null
+    }
+
+    /** Reporta un dato técnico o tarea de mantenimiento sospechoso. Cuenta una vez por teléfono. */
+    fun reportarDato(
+        fichaId: String,
+        marca: String,
+        modelo: String,
+        cilindraje: String,
+        campo: String,
+        valorReportado: String,
+        motivo: String
+    ) {
+        val reportId = FichaMapper.idReporte(fichaId, campo)
+        if (_reportandoCampo.value != null) return
+        _reportandoCampo.value = campo
+        viewModelScope.launch {
+            try {
+                if (repository.wasFieldReported(reportId)) {
+                    _reporteMensaje.value = "Ya habías reportado este dato desde este teléfono."
+                    return@launch
+                }
+                val confirmada = FichaLibraryClient.reportar(
+                    fichaId = fichaId,
+                    marca = marca,
+                    modelo = modelo,
+                    cilindraje = cilindraje,
+                    campo = campo,
+                    valorReportado = valorReportado,
+                    motivo = motivo
+                )
+                repository.markFieldReported(reportId)
+                _reporteMensaje.value = if (confirmada) {
+                    "Reporte enviado. Gracias por ayudarnos a mantener los datos fieles."
+                } else {
+                    "Reporte guardado. Se enviará automáticamente cuando recuperes la conexión."
+                }
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                Log.e(TAG, "Dato report failed", e)
+                _reporteMensaje.value = "No se pudo enviar el reporte. Intenta de nuevo."
+            } finally {
+                _reportandoCampo.value = null
             }
         }
     }
@@ -518,6 +518,7 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
             val cleanModelo = modelo.trim()
             val cleanCc = cilindraje.trim()
             val cleanAnio = anio.trim()
+            val anioNum = cleanAnio.toIntOrNull() ?: 0
             val km = kilometraje.trim().toIntOrNull() ?: 0
             val key = VehicleKey.of(cleanMarca, cleanModelo, cleanCc, cleanAnio)
 
@@ -525,8 +526,28 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
                 val cached = repository.findDiagnostic(key)
                 val cachedResponse = cached?.let { runCatching { jsonAdapter.fromJson(it.jsonResponse) }.getOrNull() }
 
-                fun showCached(aviso: String?): Boolean {
+                suspend fun syncSolicitudEstadoSiAproximada(resp: DiagnosticResponse, registrarSiFalta: Boolean) {
+                    if (resp.manual?.aproximada != true || anioNum <= 0) return
+                    val requestId = FichaMapper.idSolicitud(cleanMarca, cleanModelo, cleanCc, anioNum)
+                    if (repository.wasFichaRequested(requestId)) {
+                        _solicitud.value = SolicitudEstado.ENVIADA
+                    } else if (registrarSiFalta) {
+                        _solicitud.value = SolicitudEstado.ENVIANDO
+                        runCatching {
+                            val confirmada = FichaLibraryClient.solicitar(cleanMarca, cleanModelo, cleanCc, anioNum)
+                            repository.markFichaRequested(requestId)
+                            _solicitud.value = if (confirmada) SolicitudEstado.ENVIADA else SolicitudEstado.EN_COLA
+                        }.onFailure {
+                            _solicitud.value = SolicitudEstado.DISPONIBLE
+                        }
+                    } else {
+                        _solicitud.value = SolicitudEstado.DISPONIBLE
+                    }
+                }
+
+                suspend fun showCached(aviso: String?): Boolean {
                     if (cached == null || cachedResponse == null) return false
+                    syncSolicitudEstadoSiAproximada(cachedResponse, registrarSiFalta = false)
                     _vehicleKey.value = key
                     _uiState.value = DiagnosticState.Success(
                         response = cachedResponse,
@@ -543,7 +564,7 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
                 // Siempre se consulta la biblioteca, para que una ficha corregida llegue al usuario.
                 // La copia guardada en el teléfono solo se usa si la biblioteca no responde.
                 val fetched = try {
-                    FichaLibraryClient.buscar(cleanMarca, cleanModelo, cleanCc, cleanAnio.toIntOrNull() ?: 0)
+                    FichaLibraryClient.buscar(cleanMarca, cleanModelo, cleanCc, anioNum)
                 } catch (e: TimeoutCancellationException) {
                     Log.e(TAG, "Ficha library timed out", e)
                     val msg = "La biblioteca de fichas tardó demasiado en responder."
@@ -565,7 +586,7 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
                 if (fetched == null) {
                     // Si la ficha se retiró de la biblioteca, tampoco se muestra la copia guardada.
                     cached?.let { repository.deleteById(it.id) }
-                    val requestId = FichaMapper.idSolicitud(cleanMarca, cleanModelo, cleanCc, cleanAnio.toIntOrNull() ?: 0)
+                    val requestId = FichaMapper.idSolicitud(cleanMarca, cleanModelo, cleanCc, anioNum)
                     _solicitud.value =
                         if (repository.wasFichaRequested(requestId)) SolicitudEstado.ENVIADA else SolicitudEstado.DISPONIBLE
                     _uiState.value = DiagnosticState.SinFicha(cleanMarca, cleanModelo, cleanCc, cleanAnio)
@@ -595,6 +616,8 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
                     consultadoEl = now,
                     isFromCache = false
                 )
+                // Al mostrar una ficha aproximada, se registra automáticamente la solicitud de ese año.
+                syncSolicitudEstadoSiAproximada(fetched, registrarSiFalta = true)
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {

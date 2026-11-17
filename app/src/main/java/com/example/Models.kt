@@ -24,7 +24,10 @@ data class ManualInfo(
     val revisado_por: String? = null,
     val fecha_revision: String? = null,
     val anio_desde: Int? = null,
-    val anio_hasta: Int? = null
+    val anio_hasta: Int? = null,
+    val aproximada: Boolean = false,
+    val anio_consultado: Int? = null,
+    val ficha_id: String? = null
 )
 
 @JsonClass(generateAdapter = true)

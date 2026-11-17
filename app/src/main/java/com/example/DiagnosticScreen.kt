@@ -61,9 +61,11 @@ fun MotoTechCockpit(
     val serviceRecords by viewModel.serviceRecords.collectAsState()
     val solicitud by viewModel.solicitud.collectAsState()
     val modelosDeMarca by viewModel.modelosDeMarca.collectAsState()
-    val isLoadingModels by viewModel.isLoadingModels.collectAsState()
-    val catalogStatusLabel by viewModel.catalogStatusLabel.collectAsState()
+    val reportedIds by viewModel.reportedIds.collectAsState()
+    val reportandoCampo by viewModel.reportandoCampo.collectAsState()
+    val reporteMensaje by viewModel.reporteMensaje.collectAsState()
     val currentThemeMode = MotoThemeState.themeMode
+    val snackbarHostState = remember { SnackbarHostState() }
 
     var marcaError by remember { mutableStateOf(false) }
     var modeloError by remember { mutableStateOf(false) }
@@ -74,11 +76,18 @@ fun MotoTechCockpit(
     var showModelPicker by remember { mutableStateOf(false) }
     var showGarageLimitDialog by remember { mutableStateOf(false) }
     var itemToRegister by remember { mutableStateOf<ItemMantenimiento?>(null) }
+    var reportTarget by remember { mutableStateOf<ReportTarget?>(null) }
+
+    LaunchedEffect(reporteMensaje) {
+        val msg = reporteMensaje ?: return@LaunchedEffect
+        snackbarHostState.showSnackbar(msg)
+        viewModel.clearReporteMensaje()
+    }
 
     // Si ya había una marca seleccionada al entrar a la pantalla, asegura que su lista esté cargada
     LaunchedEffect(viewModel.formMarca) {
         if (viewModel.formMarca.isNotBlank() && modelosDeMarca.isEmpty()) {
-            viewModel.selectMarca(viewModel.formMarca, forceRefreshOnline = false)
+            viewModel.selectMarca(viewModel.formMarca)
         }
     }
 
@@ -133,6 +142,7 @@ fun MotoTechCockpit(
 
     Scaffold(
         containerColor = MotoBg,
+        snackbarHost = { SnackbarHost(hostState = snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = {
@@ -322,8 +332,7 @@ fun MotoTechCockpit(
                             error = if (modeloError) "Selecciona un modelo de ${viewModel.formMarca.ifBlank { "la marca" }}" else null,
                             leadingIcon = Icons.Default.FormatListBulleted,
                             badgeText = when {
-                                isLoadingModels -> "SINCRONIZANDO…"
-                                viewModel.formModelo.isNotBlank() -> "VERIFICADO"
+                                viewModel.formModelo.isNotBlank() -> "SELECCIONADO"
                                 viewModel.formMarca.isNotBlank() -> "${modelosDeMarca.size} MODELOS"
                                 else -> null
                             },
@@ -337,53 +346,13 @@ fun MotoTechCockpit(
                             }
                         )
 
-                        // Barra de estado de sincronización en tiempo real de modelos de la marca
                         if (viewModel.formMarca.isNotBlank()) {
-                            Row(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(horizontal = 4.dp),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Row(
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    horizontalArrangement = Arrangement.spacedBy(6.dp),
-                                    modifier = Modifier.weight(1f)
-                                ) {
-                                    if (isLoadingModels) {
-                                        CircularProgressIndicator(
-                                            modifier = Modifier.size(12.dp),
-                                            strokeWidth = 1.5.dp,
-                                            color = MotoAccentBlue
-                                        )
-                                    } else {
-                                        Icon(
-                                            Icons.Default.Verified,
-                                            contentDescription = null,
-                                            tint = MotoAccentBlue,
-                                            modifier = Modifier.size(13.dp)
-                                        )
-                                    }
-                                    Text(
-                                        text = catalogStatusLabel ?: "${modelosDeMarca.size} modelos disponibles",
-                                        fontSize = 11.sp,
-                                        color = MotoTextSecondary
-                                    )
-                                }
-                                Text(
-                                    text = "Actualizar lista en línea",
-                                    fontSize = 11.sp,
-                                    fontWeight = FontWeight.SemiBold,
-                                    color = MotoAccentBlue,
-                                    textDecoration = TextDecoration.Underline,
-                                    modifier = Modifier
-                                        .clickable(enabled = !isLoadingModels) {
-                                            viewModel.selectMarca(viewModel.formMarca, forceRefreshOnline = true)
-                                        }
-                                        .padding(vertical = 2.dp)
-                                )
-                            }
+                            Text(
+                                text = "${modelosDeMarca.size} modelos disponibles de ${viewModel.formMarca}",
+                                fontSize = 11.sp,
+                                color = MotoTextSecondary,
+                                modifier = Modifier.padding(horizontal = 4.dp)
+                            )
                         }
 
                         // 3. Cilindrada Fija Automática (Sin caja de texto editable)
@@ -469,18 +438,75 @@ fun MotoTechCockpit(
                 is DiagnosticState.Success -> {
                     val resp = state.response
                     val manual = resp.manual
+                    val fichaId = manual?.ficha_id ?: FichaMapper.idFichaFallback(
+                        marca = resp.moto_info?.marca ?: state.marca,
+                        modelo = resp.moto_info?.modelo ?: viewModel.formModelo,
+                        cilindraje = resp.moto_info?.cilindraje ?: viewModel.formCilindraje,
+                        anioDesde = manual?.anio_desde,
+                        anioHasta = manual?.anio_hasta
+                    )
 
-                    item { ManualBanner(manual = manual, aviso = state.aviso) }
+                    item {
+                        ManualBanner(
+                            manual = manual,
+                            aviso = state.aviso,
+                            solicitud = solicitud,
+                            onSolicitarAnio = {
+                                val anioSolicitado = manual?.anio_consultado ?: resp.moto_info?.anio
+                                if (anioSolicitado != null && anioSolicitado > 0) {
+                                    viewModel.solicitarAnio(
+                                        marca = resp.moto_info?.marca ?: state.marca,
+                                        modelo = resp.moto_info?.modelo ?: viewModel.formModelo,
+                                        cilindraje = resp.moto_info?.cilindraje ?: viewModel.formCilindraje,
+                                        anio = anioSolicitado
+                                    )
+                                }
+                            }
+                        )
+                    }
 
-                    item { TechnicalSpecsCard(resp.ficha_tecnica, manual) }
+                    item {
+                        TechnicalSpecsCard(
+                            ficha = resp.ficha_tecnica,
+                            manual = manual,
+                            fichaId = fichaId,
+                            reportedIds = reportedIds,
+                            reportandoCampo = reportandoCampo,
+                            onReportar = { campo, etiqueta, valor ->
+                                reportTarget = ReportTarget(
+                                    fichaId = fichaId,
+                                    marca = resp.moto_info?.marca ?: state.marca,
+                                    modelo = resp.moto_info?.modelo ?: viewModel.formModelo,
+                                    cilindraje = resp.moto_info?.cilindraje ?: viewModel.formCilindraje,
+                                    campo = campo,
+                                    etiqueta = etiqueta,
+                                    valorReportado = valor
+                                )
+                            }
+                        )
+                    }
 
                     item {
                         MaintenanceSection(
                             items = maintenanceItems,
                             manual = manual,
                             kmActual = state.kmActual,
+                            fichaId = fichaId,
+                            reportedIds = reportedIds,
+                            reportandoCampo = reportandoCampo,
                             onRegister = { itemToRegister = it },
-                            onFindWorkshop = onNavigateToWorkshops
+                            onFindWorkshop = onNavigateToWorkshops,
+                            onReportar = { campo, etiqueta, valor ->
+                                reportTarget = ReportTarget(
+                                    fichaId = fichaId,
+                                    marca = resp.moto_info?.marca ?: state.marca,
+                                    modelo = resp.moto_info?.modelo ?: viewModel.formModelo,
+                                    cilindraje = resp.moto_info?.cilindraje ?: viewModel.formCilindraje,
+                                    campo = campo,
+                                    etiqueta = etiqueta,
+                                    valorReportado = valor
+                                )
+                            }
                         )
                     }
 
@@ -508,7 +534,7 @@ fun MotoTechCockpit(
             selectedBrand = viewModel.formMarca,
             onDismiss = { showBrandPicker = false },
             onSelectBrand = { chosenBrand ->
-                viewModel.selectMarca(chosenBrand, forceRefreshOnline = false)
+                viewModel.selectMarca(chosenBrand)
                 marcaError = false
                 modeloError = false
                 showBrandPicker = false
@@ -522,15 +548,31 @@ fun MotoTechCockpit(
             marca = viewModel.formMarca,
             models = modelosDeMarca,
             selectedModel = viewModel.formModelo,
-            isLoadingOnline = isLoadingModels,
-            onRefreshOnline = {
-                viewModel.selectMarca(viewModel.formMarca, forceRefreshOnline = true)
-            },
             onDismiss = { showModelPicker = false },
             onSelectModel = { spec ->
                 viewModel.selectModelo(spec)
                 modeloError = false
                 showModelPicker = false
+            }
+        )
+    }
+
+    val pendingReport = reportTarget
+    if (pendingReport != null) {
+        ReportDatoDialog(
+            target = pendingReport,
+            onDismiss = { reportTarget = null },
+            onConfirm = { motivo ->
+                viewModel.reportarDato(
+                    fichaId = pendingReport.fichaId,
+                    marca = pendingReport.marca,
+                    modelo = pendingReport.modelo,
+                    cilindraje = pendingReport.cilindraje,
+                    campo = pendingReport.campo,
+                    valorReportado = pendingReport.valorReportado,
+                    motivo = motivo
+                )
+                reportTarget = null
             }
         )
     }
@@ -990,8 +1032,6 @@ private fun ModelPickerDialog(
     marca: String,
     models: List<MotoModelSpec>,
     selectedModel: String,
-    isLoadingOnline: Boolean,
-    onRefreshOnline: () -> Unit,
     onDismiss: () -> Unit,
     onSelectModel: (MotoModelSpec) -> Unit
 ) {
@@ -1019,43 +1059,13 @@ private fun ModelPickerDialog(
     ) {
         Spacer(modifier = Modifier.height(8.dp))
 
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-                    Text(
-                        text = "${filteredModels.size} modelos de $marca",
-                        fontSize = 11.sp,
-                        color = MotoTextSecondary
-                    )
-                    TextButton(
-                        onClick = onRefreshOnline,
-                        enabled = !isLoadingOnline,
-                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 2.dp)
-                    ) {
-                        if (isLoadingOnline) {
-                            CircularProgressIndicator(
-                                modifier = Modifier.size(12.dp),
-                                strokeWidth = 1.5.dp,
-                                color = MotoAccentBlue
-                            )
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text("Consultando web…", fontSize = 11.sp, color = MotoAccentBlue)
-                        } else {
-                            Icon(
-                                Icons.Default.Refresh,
-                                contentDescription = null,
-                                tint = MotoAccentBlue,
-                                modifier = Modifier.size(14.dp)
-                            )
-                            Spacer(modifier = Modifier.width(4.dp))
-                            Text("Sincronizar en línea", fontSize = 11.sp, color = MotoAccentBlue)
-                        }
-                    }
-                }
+        Text(
+            text = "${filteredModels.size} modelos de $marca",
+            fontSize = 11.sp,
+            color = MotoTextSecondary
+        )
 
-                Spacer(modifier = Modifier.height(6.dp))
+        Spacer(modifier = Modifier.height(6.dp))
 
                 LazyColumn(
                     modifier = Modifier.weight(1f, fill = false),
@@ -1381,55 +1391,130 @@ private fun MessageCard(
     }
 }
 
-// Banner: de qué manual salen los datos y quién lo revisó
-@Composable
-private fun ManualBanner(manual: ManualInfo?, aviso: String?) {
-    val uriHandler = LocalUriHandler.current
+private data class ReportTarget(
+    val fichaId: String,
+    val marca: String,
+    val modelo: String,
+    val cilindraje: String,
+    val campo: String,
+    val etiqueta: String,
+    val valorReportado: String
+)
 
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .border(1.dp, InfoBorder, RoundedCornerShape(14.dp)),
-        colors = CardDefaults.cardColors(containerColor = InfoBg)
-    ) {
-        Row(
-            modifier = Modifier.padding(14.dp),
-            verticalAlignment = Alignment.Top,
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            Icon(Icons.Default.MenuBook, contentDescription = null, tint = InfoText, modifier = Modifier.size(22.dp))
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    manual?.titulo ?: "Manual del fabricante",
-                    fontSize = 13.sp, fontWeight = FontWeight.Bold, color = InfoText
-                )
-                val detalle = listOfNotNull(
-                    manual?.edicion?.let { "Edición $it" },
-                    if (manual?.anio_desde != null && manual.anio_hasta != null) {
-                        if (manual.anio_desde == manual.anio_hasta) "Modelo ${manual.anio_desde}"
-                        else "Modelos ${manual.anio_desde}-${manual.anio_hasta}"
-                    } else null,
-                    manual?.fecha_revision?.let { fecha ->
-                        "Revisado el $fecha" + (manual.revisado_por?.let { " por $it" } ?: "")
+// Banner: de qué manual salen los datos y aviso si corresponde a otro año
+@Composable
+private fun ManualBanner(
+    manual: ManualInfo?,
+    aviso: String?,
+    solicitud: SolicitudEstado = SolicitudEstado.DISPONIBLE,
+    onSolicitarAnio: () -> Unit = {}
+) {
+    val uriHandler = LocalUriHandler.current
+    val rangoTexto = if (manual?.anio_desde != null && manual.anio_hasta != null) {
+        if (manual.anio_desde == manual.anio_hasta) "${manual.anio_desde}"
+        else "${manual.anio_desde}–${manual.anio_hasta}"
+    } else null
+
+    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        if (manual?.aproximada == true) {
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .border(1.dp, WarningBorder, RoundedCornerShape(14.dp))
+                    .testTag("manual_otro_anio_banner"),
+                colors = CardDefaults.cardColors(containerColor = WarningBg)
+            ) {
+                Column(modifier = Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Icon(Icons.Default.Warning, contentDescription = null, tint = WarningText, modifier = Modifier.size(20.dp))
+                        Text(
+                            "Manual de otro año como referencia",
+                            fontSize = 13.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = WarningText
+                        )
                     }
-                ).joinToString(" · ")
-                if (detalle.isNotEmpty()) {
-                    Text(detalle, fontSize = 11.sp, color = InfoText.copy(alpha = 0.8f))
-                }
-                manual?.url?.let { url ->
+                    val modeloManual = rangoTexto ?: "otro año"
+                    val anioConsultado = manual.anio_consultado?.toString() ?: "tu modelo"
                     Text(
-                        "Abrir el manual oficial",
+                        "Estos datos son del manual de los modelos $modeloManual. Aún no tenemos el manual de tu moto ($anioConsultado); algunos valores pueden variar.",
                         fontSize = 12.sp,
-                        color = MotoAccentBlue,
-                        textDecoration = TextDecoration.Underline,
-                        modifier = Modifier
-                            .clickable { runCatching { uriHandler.openUri(url) } }
-                            .padding(vertical = 4.dp)
+                        color = WarningText.copy(alpha = 0.92f),
+                        lineHeight = 17.sp
                     )
+                    when (solicitud) {
+                        SolicitudEstado.ENVIADA -> Text(
+                            "Registramos la solicitud para tu año ($anioConsultado). Gracias.",
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = RoutineText
+                        )
+                        SolicitudEstado.EN_COLA -> Text(
+                            "Solicitud para tu año ($anioConsultado) guardada. Se enviará al recuperar la conexión.",
+                            fontSize = 11.sp,
+                            color = WarningText
+                        )
+                        else -> OutlinedButton(
+                            onClick = onSolicitarAnio,
+                            enabled = solicitud != SolicitudEstado.ENVIANDO,
+                            shape = RoundedCornerShape(10.dp),
+                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
+                            modifier = Modifier.testTag("solicitar_anio_aproximado_button")
+                        ) {
+                            Text(
+                                if (solicitud == SolicitudEstado.ENVIANDO) "Enviando solicitud…" else "Solicitar ficha de mi año",
+                                fontSize = 12.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = WarningText
+                            )
+                        }
+                    }
                 }
-                if (aviso != null) {
-                    Spacer(modifier = Modifier.height(6.dp))
-                    Text(aviso, fontSize = 12.sp, color = WarningText)
+            }
+        }
+
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .border(1.dp, InfoBorder, RoundedCornerShape(14.dp)),
+            colors = CardDefaults.cardColors(containerColor = InfoBg)
+        ) {
+            Row(
+                modifier = Modifier.padding(14.dp),
+                verticalAlignment = Alignment.Top,
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                Icon(Icons.Default.MenuBook, contentDescription = null, tint = InfoText, modifier = Modifier.size(22.dp))
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        manual?.titulo ?: "Manual del fabricante",
+                        fontSize = 13.sp, fontWeight = FontWeight.Bold, color = InfoText
+                    )
+                    val detalle = listOfNotNull(
+                        manual?.edicion?.let { "Edición $it" },
+                        rangoTexto?.let { "Modelos $it" },
+                        manual?.fecha_revision?.let { fecha ->
+                            "Revisado el $fecha" + (manual.revisado_por?.let { " por $it" } ?: "")
+                        }
+                    ).joinToString(" · ")
+                    if (detalle.isNotEmpty()) {
+                        Text(detalle, fontSize = 11.sp, color = InfoText.copy(alpha = 0.8f))
+                    }
+                    manual?.url?.let { url ->
+                        Text(
+                            "Abrir el manual oficial",
+                            fontSize = 12.sp,
+                            color = MotoAccentBlue,
+                            textDecoration = TextDecoration.Underline,
+                            modifier = Modifier
+                                .clickable { runCatching { uriHandler.openUri(url) } }
+                                .padding(vertical = 4.dp)
+                        )
+                    }
+                    if (aviso != null) {
+                        Spacer(modifier = Modifier.height(6.dp))
+                        Text(aviso, fontSize = 12.sp, color = WarningText)
+                    }
                 }
             }
         }
@@ -1440,6 +1525,7 @@ private fun ManualBanner(manual: ManualInfo?, aviso: String?) {
 private fun FuenteBadge(nivel: NivelFuente) {
     val (texto, bg, fg) = when (nivel) {
         NivelFuente.MANUAL -> Triple("Manual oficial", RoutineIconBg, Color.White)
+        NivelFuente.MANUAL_OTRO_ANIO -> Triple("Manual otro año", WarningIconBg, Color.White)
         NivelFuente.SIN_FUENTE -> Triple("Sin página del manual", WarningIconBg, Color.White)
         NivelFuente.SIN_DATO -> Triple("Sin dato", MotoSurfaceVariant, MotoTextSecondary)
     }
@@ -1473,7 +1559,14 @@ private fun FuenteLink(dato: DatoVerificado) {
 }
 
 @Composable
-fun TechnicalSpecsCard(ficha: FichaTecnica?, manual: ManualInfo?) {
+fun TechnicalSpecsCard(
+    ficha: FichaTecnica?,
+    manual: ManualInfo?,
+    fichaId: String = "",
+    reportedIds: Set<String> = emptySet(),
+    reportandoCampo: String? = null,
+    onReportar: ((campo: String, etiqueta: String, valor: String) -> Unit)? = null
+) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -1484,15 +1577,26 @@ fun TechnicalSpecsCard(ficha: FichaTecnica?, manual: ManualInfo?) {
             Text("FICHA TÉCNICA", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = MotoTextPrimary, letterSpacing = 1.sp)
             Spacer(modifier = Modifier.height(10.dp))
             val filas = listOf(
-                "Capacidad de aceite" to ficha?.capacidad_aceite,
-                "Viscosidad de aceite" to ficha?.viscosidad_aceite,
-                "Presión llanta delantera" to ficha?.presion_llanta_delantera,
-                "Presión llanta trasera" to ficha?.presion_llanta_trasera,
-                "Holgura de cadena" to ficha?.holgura_cadena,
-                "Líquido de frenos" to ficha?.liquido_frenos
+                Triple("ficha_tecnica.capacidad_aceite", "Capacidad de aceite", ficha?.capacidad_aceite),
+                Triple("ficha_tecnica.viscosidad_aceite", "Viscosidad de aceite", ficha?.viscosidad_aceite),
+                Triple("ficha_tecnica.presion_llanta_delantera", "Presión llanta delantera", ficha?.presion_llanta_delantera),
+                Triple("ficha_tecnica.presion_llanta_trasera", "Presión llanta trasera", ficha?.presion_llanta_trasera),
+                Triple("ficha_tecnica.holgura_cadena", "Holgura de cadena", ficha?.holgura_cadena),
+                Triple("ficha_tecnica.liquido_frenos", "Líquido de frenos", ficha?.liquido_frenos)
             )
-            filas.forEachIndexed { index, (label, dato) ->
-                SpecItem(label, SourceValidator.verificarConManual(dato?.valor, dato?.pagina, manual))
+            filas.forEachIndexed { index, (campo, label, dato) ->
+                val verificado = SourceValidator.verificarConManual(dato?.valor, dato?.pagina, manual)
+                val reportId = if (fichaId.isNotBlank()) FichaMapper.idReporte(fichaId, campo) else ""
+                val yaReportado = reportId.isNotEmpty() && reportId in reportedIds
+                SpecItem(
+                    label = label,
+                    dato = verificado,
+                    yaReportado = yaReportado,
+                    reportando = reportandoCampo == campo,
+                    onReportar = if (onReportar != null && verificado.valor != null && fichaId.isNotBlank()) {
+                        { onReportar(campo, label, verificado.valor) }
+                    } else null
+                )
                 if (index < filas.size - 1) {
                     HorizontalDivider(color = MotoBorder, thickness = 0.5.dp, modifier = Modifier.padding(vertical = 8.dp))
                 }
@@ -1502,7 +1606,14 @@ fun TechnicalSpecsCard(ficha: FichaTecnica?, manual: ManualInfo?) {
 }
 
 @Composable
-fun SpecItem(label: String, dato: DatoVerificado, modifier: Modifier = Modifier) {
+fun SpecItem(
+    label: String,
+    dato: DatoVerificado,
+    modifier: Modifier = Modifier,
+    yaReportado: Boolean = false,
+    reportando: Boolean = false,
+    onReportar: (() -> Unit)? = null
+) {
     Column(modifier = modifier.fillMaxWidth()) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -1529,6 +1640,48 @@ fun SpecItem(label: String, dato: DatoVerificado, modifier: Modifier = Modifier)
                 )
             }
             FuenteLink(dato)
+            if (onReportar != null) {
+                ReportActionLink(
+                    yaReportado = yaReportado,
+                    reportando = reportando,
+                    onReportar = onReportar
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun ReportActionLink(
+    yaReportado: Boolean,
+    reportando: Boolean,
+    onReportar: () -> Unit,
+    tint: Color = MotoTextSecondary
+) {
+    if (yaReportado) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(4.dp),
+            modifier = Modifier.padding(top = 2.dp)
+        ) {
+            Icon(Icons.Default.CheckCircle, contentDescription = null, tint = RoutineText, modifier = Modifier.size(13.dp))
+            Text("Dato reportado", fontSize = 11.sp, color = RoutineText, fontWeight = FontWeight.Medium)
+        }
+    } else {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(4.dp),
+            modifier = Modifier
+                .clickable(enabled = !reportando) { onReportar() }
+                .padding(vertical = 4.dp)
+        ) {
+            Icon(Icons.Default.Flag, contentDescription = null, tint = tint, modifier = Modifier.size(13.dp))
+            Text(
+                if (reportando) "Enviando reporte…" else "Reportar dato incorrecto",
+                fontSize = 11.sp,
+                color = tint,
+                textDecoration = TextDecoration.Underline
+            )
         }
     }
 }
@@ -1579,8 +1732,12 @@ private fun MaintenanceSection(
     items: List<ItemMantenimiento>,
     manual: ManualInfo?,
     kmActual: Int,
+    fichaId: String,
+    reportedIds: Set<String>,
+    reportandoCampo: String?,
     onRegister: (ItemMantenimiento) -> Unit,
-    onFindWorkshop: () -> Unit
+    onFindWorkshop: () -> Unit,
+    onReportar: (campo: String, etiqueta: String, valor: String) -> Unit
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text("MANTENIMIENTO A ${formatKm(kmActual)} KM", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = MotoTextPrimary, letterSpacing = 1.sp)
@@ -1622,6 +1779,9 @@ private fun MaintenanceSection(
                             pagina = item.plan.pagina,
                             manual = manual
                         )
+                        val campoPlan = "plan_mantenimiento.${MaintenanceCalculator.claveComponente(item.componente)}"
+                        val reportId = if (fichaId.isNotBlank()) FichaMapper.idReporte(fichaId, campoPlan) else ""
+                        val yaReportado = reportId.isNotEmpty() && reportId in reportedIds
                         Row(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.SpaceBetween,
@@ -1653,15 +1813,30 @@ private fun MaintenanceSection(
                         }
                         FuenteLink(fuente)
 
-                        OutlinedButton(
-                            onClick = { onRegister(item) },
-                            shape = RoundedCornerShape(10.dp),
-                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
-                            modifier = Modifier.padding(top = 4.dp)
+                        Row(
+                            modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Icon(Icons.Default.Build, contentDescription = null, tint = style.text, modifier = Modifier.size(14.dp))
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text("Registrar servicio hecho", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = style.text)
+                            OutlinedButton(
+                                onClick = { onRegister(item) },
+                                shape = RoundedCornerShape(10.dp),
+                                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp)
+                            ) {
+                                Icon(Icons.Default.Build, contentDescription = null, tint = style.text, modifier = Modifier.size(14.dp))
+                                Spacer(modifier = Modifier.width(6.dp))
+                                Text("Registrar servicio hecho", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = style.text)
+                            }
+                            if (fichaId.isNotBlank()) {
+                                ReportActionLink(
+                                    yaReportado = yaReportado,
+                                    reportando = reportandoCampo == campoPlan,
+                                    onReportar = {
+                                        onReportar(campoPlan, item.componente, intervaloTexto(item.plan))
+                                    },
+                                    tint = style.text.copy(alpha = 0.85f)
+                                )
+                            }
                         }
 
                         if (index < grupo.size - 1) {
@@ -1681,6 +1856,84 @@ private fun MaintenanceSection(
                             Spacer(modifier = Modifier.width(6.dp))
                             Text("Buscar taller", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = Color.White)
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun ReportDatoDialog(
+    target: ReportTarget,
+    onDismiss: () -> Unit,
+    onConfirm: (motivo: String) -> Unit
+) {
+    val motivos = remember {
+        listOf(
+            "El valor no coincide con mi manual",
+            "La página citada no corresponde",
+            "No aplica a esta motocicleta"
+        )
+    }
+    var motivoSeleccionado by remember { mutableStateOf(motivos.first()) }
+
+    Dialog(onDismissRequest = onDismiss) {
+        Card(
+            modifier = Modifier.fillMaxWidth().border(1.dp, MotoBorder, RoundedCornerShape(20.dp)),
+            colors = CardDefaults.cardColors(containerColor = MotoSurface)
+        ) {
+            Column(modifier = Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                Text("Reportar dato incorrecto", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = MotoTextPrimary)
+                Text(
+                    "${target.etiqueta}: ${target.valorReportado}",
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = MotoAccentBlue
+                )
+                Text(
+                    "Si varios usuarios reportan este dato, se retirará automáticamente para volver a verificarlo contra el manual.",
+                    fontSize = 12.sp,
+                    color = MotoTextSecondary,
+                    lineHeight = 16.sp
+                )
+
+                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    motivos.forEach { opcion ->
+                        val selected = opcion == motivoSeleccionado
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .background(
+                                    if (selected) MotoPrimary.copy(alpha = 0.14f) else MotoSurfaceVariant,
+                                    RoundedCornerShape(10.dp)
+                                )
+                                .border(
+                                    1.dp,
+                                    if (selected) MotoPrimary else MotoBorder,
+                                    RoundedCornerShape(10.dp)
+                                )
+                                .clickable { motivoSeleccionado = opcion }
+                                .padding(horizontal = 12.dp, vertical = 10.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            RadioButton(selected = selected, onClick = { motivoSeleccionado = opcion })
+                            Text(opcion, fontSize = 13.sp, color = MotoTextPrimary)
+                        }
+                    }
+                }
+
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
+                    TextButton(onClick = onDismiss) { Text("Cancelar", color = MotoTextSecondary) }
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Button(
+                        onClick = { onConfirm(motivoSeleccionado) },
+                        colors = ButtonDefaults.buttonColors(containerColor = MotoPrimary),
+                        shape = RoundedCornerShape(10.dp),
+                        modifier = Modifier.testTag("reporte_enviar_button")
+                    ) {
+                        Text("Enviar reporte", fontWeight = FontWeight.Bold)
                     }
                 }
             }

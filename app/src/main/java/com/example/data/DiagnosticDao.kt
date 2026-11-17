@@ -43,4 +43,13 @@ interface DiagnosticDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertFichaRequest(entity: FichaRequestEntity)
+
+    @Query("SELECT reportId FROM ficha_reports")
+    fun observeAllReportedIds(): Flow<List<String>>
+
+    @Query("SELECT COUNT(*) FROM ficha_reports WHERE reportId = :reportId")
+    suspend fun countFichaReports(reportId: String): Int
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertFichaReport(entity: FichaReportEntity)
 }

@@ -12,12 +12,10 @@ data class MotoModelSpec(
     val categoria: String? = null
 )
 
-@JsonClass(generateAdapter = true)
-data class BrandCatalogResponse(
-    val marca: String? = null,
-    val modelos: List<MotoModelSpec>? = null
-)
-
+/**
+ * Catálogo local de marcas y modelos para el selector mientras se activa el catálogo
+ * oficial en Firestore (Fase 2). No realiza scraping ni infiere cilindradas.
+ */
 object MotorcycleCatalog {
 
     private val VERIFIED_CATALOG: Map<String, List<MotoModelSpec>> by lazy {
@@ -51,29 +49,6 @@ object MotorcycleCatalog {
         return if (digits.isNotEmpty()) "${digits}cc" else raw.trim()
     }
 
-    fun mergeModels(base: List<MotoModelSpec>, dynamic: List<MotoModelSpec>): List<MotoModelSpec> {
-        val map = LinkedHashMap<String, MotoModelSpec>()
-        for (item in base) {
-            val key = item.modelo.trim().lowercase().replace(Regex("\\s+"), " ")
-            if (key.isNotEmpty() && item.cilindraje.isNotBlank()) {
-                map[key] = item.copy(cilindraje = normalizeCilindraje(item.cilindraje))
-            }
-        }
-        for (item in dynamic) {
-            val cleanModel = item.modelo.trim()
-            val cleanCc = normalizeCilindraje(item.cilindraje)
-            val key = cleanModel.lowercase().replace(Regex("\\s+"), " ")
-            if (key.isNotEmpty() && cleanCc.any { it.isDigit() } && !map.containsKey(key)) {
-                map[key] = MotoModelSpec(
-                    modelo = cleanModel,
-                    cilindraje = cleanCc,
-                    categoria = item.categoria?.trim()?.takeIf { it.isNotEmpty() }
-                )
-            }
-        }
-        return map.values.toList()
-    }
-
     fun findDisplacement(marca: String, modelo: String, currentModels: List<MotoModelSpec> = emptyList()): String? {
         val normModel = modelo.trim().lowercase().replace(Regex("\\s+"), " ")
         if (normModel.isEmpty()) return null
@@ -86,21 +61,5 @@ object MotorcycleCatalog {
             it.modelo.trim().lowercase().replace(Regex("\\s+"), " ") == normModel
         }
         return base?.let { normalizeCilindraje(it.cilindraje) }
-    }
-
-    fun parseBrandCatalogJson(
-        text: String,
-        adapter: JsonAdapter<BrandCatalogResponse>
-    ): List<MotoModelSpec> {
-        val start = text.indexOf('{')
-        val end = text.lastIndexOf('}')
-        if (start < 0 || end <= start) return emptyList()
-        val parsed = runCatching { adapter.fromJson(text.substring(start, end + 1)) }.getOrNull()
-        return parsed?.modelos.orEmpty().mapNotNull { spec ->
-            val mod = spec.modelo.trim()
-            val cc = normalizeCilindraje(spec.cilindraje)
-            if (mod.isEmpty() || !cc.any { it.isDigit() }) null
-            else MotoModelSpec(mod, cc, spec.categoria?.trim()?.takeIf { it.isNotEmpty() })
-        }
     }
 }

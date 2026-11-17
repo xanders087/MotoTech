@@ -119,3 +119,73 @@ test('solicitudes: client can create with total=1 and increment by 1, cannot rea
   await assertFails(getDoc(solicitudRef));
   await assertFails(deleteDoc(solicitudRef));
 });
+
+test('reportes: client can create with total=1, increment by 1, cannot tamper immutable fields or read/delete', async () => {
+  const clientDb = testEnv.unauthenticatedContext().firestore(DATABASE_ID);
+  const reporteRef = doc(clientDb, 'reportes', 'yamaha-fz-25-249-2022-2025__capacidad-aceite');
+
+  const payload = {
+    ficha_id: 'yamaha_fz-25_249_2022-2025',
+    clave: 'yamaha|fz-25|249',
+    marca: 'Yamaha',
+    modelo: 'FZ-25',
+    cilindraje_cc: 249,
+    campo: 'Capacidad de aceite',
+    valor_reportado: '1.0 L',
+    motivo: 'Valor diferente al manual',
+    total: increment(1),
+    ultima: serverTimestamp(),
+  };
+
+  // First report creates document with total == 1
+  await assertSucceeds(setDoc(reporteRef, payload, { merge: true }));
+
+  // Second report increments total by 1 (motivo can vary)
+  await assertSucceeds(
+    setDoc(
+      reporteRef,
+      { ...payload, motivo: 'Otra versión/año' },
+      { merge: true }
+    )
+  );
+
+  // Incrementing by more than 1 fails
+  await assertFails(
+    setDoc(
+      reporteRef,
+      { ...payload, total: increment(3) },
+      { merge: true }
+    )
+  );
+
+  // Modifying immutable fields fails
+  await assertFails(
+    setDoc(
+      reporteRef,
+      { ...payload, campo: 'Otro campo' },
+      { merge: true }
+    )
+  );
+
+  // Extra fields fail strict schema check
+  await assertFails(
+    setDoc(
+      doc(clientDb, 'reportes', 'extra_field_test'),
+      { ...payload, extra: 'malicious' },
+      { merge: true }
+    )
+  );
+
+  // Oversized string fails length check
+  await assertFails(
+    setDoc(
+      doc(clientDb, 'reportes', 'oversized_test'),
+      { ...payload, motivo: 'a'.repeat(121) },
+      { merge: true }
+    )
+  );
+
+  // Reading or deleting reportes from client fails
+  await assertFails(getDoc(reporteRef));
+  await assertFails(deleteDoc(reporteRef));
+});

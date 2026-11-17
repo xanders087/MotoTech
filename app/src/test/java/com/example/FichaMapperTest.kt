@@ -1,28 +1,37 @@
 package com.example
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 /** Los valores son ficticios a propósito: no describen ninguna moto real. */
 class FichaMapperTest {
   // Firestore entrega los números como Long.
-  private fun doc(desde: Long = 2020, hasta: Long = 2022, estado: String = "publicada"): Map<String, Any?> = mapOf(
-      "marca" to "Marca Prueba",
-      "modelo" to "Modelo X 1",
-      "cilindraje_cc" to 123L,
-      "anio_desde" to desde,
-      "anio_hasta" to hasta,
-      "estado" to estado,
-      "clave" to "marca prueba|modelo x 1|123",
-      "manual" to mapOf("titulo" to "Manual de prueba", "edicion" to "1a", "url" to null),
-      "revision" to mapOf("revisado_por" to "Persona de prueba", "fecha" to "2026-11-01"),
-      "ficha_tecnica" to mapOf(
-          "capacidad_aceite" to mapOf("valor" to "valor de prueba", "pagina" to 10L),
-          "holgura_cadena" to null),
-      "plan_mantenimiento" to listOf(
-          mapOf("componente" to "Tarea A", "accion" to "Revisar", "intervalo_km" to 1000L,
-              "intervalo_meses" to null, "pagina" to 20L)))
+  private fun doc(
+      desde: Long = 2020,
+      hasta: Long = 2022,
+      estado: String = "publicada",
+      docId: String? = null
+  ): Map<String, Any?> = buildMap {
+    put("marca", "Marca Prueba")
+    put("modelo", "Modelo X 1")
+    put("cilindraje_cc", 123L)
+    put("anio_desde", desde)
+    put("anio_hasta", hasta)
+    put("estado", estado)
+    put("clave", "marca prueba|modelo x 1|123")
+    put("manual", mapOf("titulo" to "Manual de prueba", "edicion" to "1a", "url" to null))
+    put("revision", mapOf("revisado_por" to "Persona de prueba", "fecha" to "2026-11-01"))
+    put("ficha_tecnica", mapOf(
+        "capacidad_aceite" to mapOf("valor" to "valor de prueba", "pagina" to 10L),
+        "holgura_cadena" to null))
+    put("plan_mantenimiento", listOf(
+        mapOf("componente" to "Tarea A", "accion" to "Revisar", "intervalo_km" to 1000L,
+            "intervalo_meses" to null, "pagina" to 20L)))
+    if (docId != null) put("_docId", docId)
+  }
 
   @Test
   fun `la clave coincide con la del validador de fichas`() {
@@ -40,6 +49,14 @@ class FichaMapperTest {
   }
 
   @Test
+  fun `el id de reporte es determinista por ficha y campo y valido para Firestore`() {
+    val id1 = FichaMapper.idReporte("marca_modelo_123_2020-2022", "Capacidad de aceite")
+    val id2 = FichaMapper.idReporte("marca_modelo_123_2020-2022", "  capacidad de aceite ")
+    assertEquals("marca-modelo-123-2020-2022__capacidad-de-aceite", id1)
+    assertEquals(id1, id2)
+  }
+
+  @Test
   fun `extrae el cilindraje en cc`() {
     assertEquals(123, FichaMapper.cilindrajeCc("123cc"))
     assertEquals(123, FichaMapper.cilindrajeCc(" 123 CC "))
@@ -47,12 +64,24 @@ class FichaMapperTest {
   }
 
   @Test
-  fun `elige la ficha cuyo rango incluye el anio`() {
-    val docs = listOf(doc(2020, 2022), doc(2023, 2024))
-    assertEquals(2020, (FichaMapper.seleccionar(docs, 2022)!!["anio_desde"] as Number).toInt())
-    assertEquals(2023, (FichaMapper.seleccionar(docs, 2023)!!["anio_desde"] as Number).toInt())
-    assertNull(FichaMapper.seleccionar(docs, 2019))
-    assertNull(FichaMapper.seleccionar(emptyList(), 2021))
+  fun `elige la ficha cuyo rango incluye el anio y sino la del rango mas cercano`() {
+    val docs = listOf(doc(2020, 2022), doc(2024, 2025))
+
+    val exacta = FichaMapper.seleccionarConCercania(docs, 2022)!!
+    assertTrue(exacta.exacta)
+    assertEquals(2020, (exacta.documento["anio_desde"] as Number).toInt())
+
+    val cercanaAnterior = FichaMapper.seleccionarConCercania(docs, 2019)!!
+    assertFalse(cercanaAnterior.exacta)
+    assertEquals(2020, (cercanaAnterior.documento["anio_desde"] as Number).toInt())
+
+    // Empate a distancia 1 entre 2022 y 2024: debe ganar la más reciente (2024-2025).
+    val empate = FichaMapper.seleccionarConCercania(docs, 2023)!!
+    assertFalse(empate.exacta)
+    assertEquals(2024, (empate.documento["anio_desde"] as Number).toInt())
+
+    assertNull(FichaMapper.seleccionarConCercania(emptyList(), 2021))
+    assertNull(FichaMapper.seleccionarConCercania(docs, 0))
   }
 
   @Test
@@ -61,8 +90,12 @@ class FichaMapperTest {
   }
 
   @Test
-  fun `convierte la ficha conservando la pagina de cada dato`() {
-    val r = FichaMapper.toResponse(doc())
+  fun `convierte la ficha conservando la pagina de cada dato y metadatos de aproximacion`() {
+    val r = FichaMapper.toResponse(
+        doc(docId = "marca-prueba_modelo-x-1_123_2020-2022"),
+        aproximada = true,
+        anioConsultado = 2023
+    )
     assertEquals("valor de prueba", r.ficha_tecnica?.capacidad_aceite?.valor)
     assertEquals(10, r.ficha_tecnica?.capacidad_aceite?.pagina)
     assertNull(r.ficha_tecnica?.holgura_cadena)
@@ -76,12 +109,16 @@ class FichaMapperTest {
     assertNull(r.manual?.url)
     assertEquals("2026-11-01", r.manual?.fecha_revision)
     assertEquals("123cc", r.moto_info?.cilindraje)
+    assertEquals(2023, r.moto_info?.anio)
+    assertTrue(r.manual?.aproximada == true)
+    assertEquals(2023, r.manual?.anio_consultado)
+    assertEquals("marca-prueba_modelo-x-1_123_2020-2022", r.manual?.ficha_id)
   }
 
   @Test
   fun `la ficha de manual se puede guardar y volver a leer`() {
     val adapter = com.squareup.moshi.Moshi.Builder().build().adapter(DiagnosticResponse::class.java)
-    val original = FichaMapper.toResponse(doc())
+    val original = FichaMapper.toResponse(doc(), aproximada = true, anioConsultado = 2024)
     assertEquals(original, adapter.fromJson(adapter.toJson(original)))
   }
 }

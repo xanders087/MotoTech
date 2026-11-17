@@ -12,9 +12,10 @@ import androidx.sqlite.db.SupportSQLiteDatabase
         DiagnosticEntity::class,
         ServiceRecordEntity::class,
         BrandCatalogEntity::class,
-        FichaRequestEntity::class
+        FichaRequestEntity::class,
+        FichaReportEntity::class
     ],
-    version = 7,
+    version = 8,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -56,6 +57,17 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
+        // Versión 8: limpia cachés de catálogos obtenidos por scraping y agrega tabla de reportes.
+        private val MIGRATION_7_8 = object : Migration(7, 8) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("DELETE FROM brand_catalogs")
+                db.execSQL(
+                    "CREATE TABLE IF NOT EXISTS `ficha_reports` " +
+                        "(`reportId` TEXT NOT NULL, `fecha` INTEGER NOT NULL, PRIMARY KEY(`reportId`))"
+                )
+            }
+        }
+
         @Volatile
         private var INSTANCE: AppDatabase? = null
 
@@ -68,7 +80,7 @@ abstract class AppDatabase : RoomDatabase() {
                 )
                     // La versión 1 solo guardaba fichas en caché, y podían contener datos
                     // generados sin fuente: se descartan en vez de migrarlas.
-                    .addMigrations(MIGRATION_3_4, MIGRATION_4_5, MIGRATION_5_6, MIGRATION_6_7)
+                    .addMigrations(MIGRATION_3_4, MIGRATION_4_5, MIGRATION_5_6, MIGRATION_6_7, MIGRATION_7_8)
                     .fallbackToDestructiveMigration(dropAllTables = true)
                     .build()
                 INSTANCE = instance
