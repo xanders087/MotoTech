@@ -16,6 +16,15 @@ service cloud.firestore {
     //   - clave: string (required)
     //   - estado: string (required, "publicada" para lectura cliente)
     //
+    // Collection: catalogo
+    // Document ID: {marcaSlug}
+    // Fields (publicadas por herramientas/recolector/recolectar.py con cuenta de servicio):
+    //   - marca: string (required)
+    //   - fuentes: list (required)
+    //   - modelos: list (required)
+    //   - actualizado_en: string (required)
+    //   - estado: string (required, "publicada" para lectura cliente)
+    //
     // Collection: solicitudes
     // Document ID: {marca-modelo-cc-anio}
     // Fields:
@@ -116,6 +125,13 @@ service cloud.firestore {
     // Biblioteca de fichas: cualquiera lee las publicadas; nadie escribe desde la app.
     // Las fichas se publican con herramientas/fichas/subir.py, que usa una cuenta de servicio.
     match /fichas/{fichaId} {
+      allow read: if resource.data.estado == "publicada";
+      allow write: if false;
+    }
+
+    // Catálogo oficial por marca: cualquiera lee las marcas publicadas; nadie escribe desde la app.
+    // Se actualiza semanalmente con herramientas/recolector/recolectar.py con cuenta de servicio.
+    match /catalogo/{marcaId} {
       allow read: if resource.data.estado == "publicada";
       allow write: if false;
     }

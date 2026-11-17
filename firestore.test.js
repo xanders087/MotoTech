@@ -189,3 +189,45 @@ test('reportes: client can create with total=1, increment by 1, cannot tamper im
   await assertFails(getDoc(reporteRef));
   await assertFails(deleteDoc(reporteRef));
 });
+
+test('catalogo: client can read published brand catalogs, cannot read unpublished or write', async () => {
+  await testEnv.withSecurityRulesDisabled(async (context) => {
+    const adminDb = context.firestore(DATABASE_ID);
+    await setDoc(doc(adminDb, 'catalogo', 'yamaha'), {
+      marca: 'Yamaha',
+      fuentes: ['https://www.incolmotos-yamaha.com.co/vehiculos/'],
+      modelos: [{ modelo: 'FZ25 ABS', cilindraje_cc: 249, tiene_ficha: false, vigente: true }],
+      actualizado_en: '2026-11-17',
+      estado: 'publicada',
+    });
+    await setDoc(doc(adminDb, 'catalogo', 'borrador'), {
+      marca: 'Borrador',
+      fuentes: [],
+      modelos: [],
+      actualizado_en: '2026-11-17',
+      estado: 'borrador',
+    });
+  });
+
+  const clientDb = testEnv.unauthenticatedContext().firestore(DATABASE_ID);
+
+  // Filtered query and direct get on published catalog succeed
+  const q = query(collection(clientDb, 'catalogo'), where('estado', '==', 'publicada'));
+  await assertSucceeds(getDocs(q));
+  await assertSucceeds(getDoc(doc(clientDb, 'catalogo', 'yamaha')));
+
+  // Unfiltered query or unpublished doc fails
+  await assertFails(getDocs(collection(clientDb, 'catalogo')));
+  await assertFails(getDoc(doc(clientDb, 'catalogo', 'borrador')));
+
+  // Client write fails
+  await assertFails(
+    setDoc(doc(clientDb, 'catalogo', 'yamaha'), {
+      marca: 'Yamaha',
+      fuentes: [],
+      modelos: [],
+      actualizado_en: '2026-11-17',
+      estado: 'publicada',
+    })
+  );
+});

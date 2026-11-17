@@ -1,0 +1,43 @@
+{
+  "Yamaha": {
+    "dominios": ["incolmotos-yamaha.com.co"],
+    "catalogo": [
+      "https://www.incolmotos-yamaha.com.co/vehiculos/",
+      "https://www.incolmotos-yamaha.com.co/vehiculo-sitemap.xml"
+    ],
+    "manuales": [
+      "https://www.incolmotos-yamaha.com.co/manuales/"
+    ],
+    "adaptador": "yamaha"
+  },
+  "Bajaj": {
+    "dominios": ["grupouma.com", "colombia.globalbajaj.com"],
+    "catalogo": [
+      "https://grupouma.com/colombia/motos/"
+    ],
+    "manuales": [
+      "https://grupouma.com/colombia/"
+    ],
+    "adaptador": "bajaj"
+  },
+  "AKT": {
+    "dominios": ["aktmotos.com"],
+    "catalogo": [
+      "https://aktmotos.com/motos-akt/"
+    ],
+    "manuales": [
+      "https://aktmotos.com/manuales/"
+    ],
+    "adaptador": "akt"
+  },
+  "Honda": {
+    "dominios": ["motos.honda.com.co", "d3lewjhzzgclom.cloudfront.net"],
+    "catalogo": [
+      "https://motos.honda.com.co/motos-honda"
+    ],
+    "manuales": [
+      "https://motos.honda.com.co/motos-honda"
+    ],
+    "adaptador": "honda"
+  }
+}

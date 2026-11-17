@@ -24,9 +24,11 @@ enum class OperationType {
 object FichaLibraryClient {
     private const val TAG = "FichaLibraryClient"
     private const val COLECCION = "fichas"
+    private const val CATALOGO = "catalogo"
     private const val SOLICITUDES = "solicitudes"
     private const val REPORTES = "reportes"
     private const val TIMEOUT_MS = 20_000L
+    private const val TIMEOUT_CATALOGO_MS = 8_000L
     private const val TIMEOUT_SOLICITUD_MS = 12_000L
     const val DEFAULT_DATABASE_ID = "ai-studio-android-mototech-364d3daf-8123-4de3-b899-775d66bdcdfb"
 
@@ -188,4 +190,40 @@ object FichaLibraryClient {
                     cont.resumeWithException(error)
                 }
         }
+
+    /**
+     * Lee el catálogo oficial publicado en Firestore (`catalogo`). Si no hay conexión,
+     * expira el tiempo de espera o Firebase aún no está inicializado, devuelve un mapa vacío
+     * para usar sin bloqueos la instantánea local `/motorcycle_catalog.json`.
+     */
+    suspend fun cargarCatalogo(
+        databaseId: String = configuredDatabaseId
+    ): Map<String, List<MotoModelSpec>> = try {
+        withTimeout(TIMEOUT_CATALOGO_MS) {
+            val docs = suspendCancellableCoroutine<List<Map<String, Any?>>> { cont ->
+                firestore(databaseId).collection(CATALOGO)
+                    .whereEqualTo("estado", FichaMapper.ESTADO_PUBLICADA)
+                    .get()
+                    .addOnSuccessListener { snapshot ->
+                        val items = snapshot.documents.mapNotNull { it.data }
+                        cont.resume(items)
+                    }
+                    .addOnFailureListener { error ->
+                        logFirestoreError(error, OperationType.LIST, CATALOGO)
+                        cont.resumeWithException(error)
+                    }
+            }
+            MotorcycleCatalog.parseCatalogDocuments(docs)
+        }
+    } catch (e: kotlinx.coroutines.CancellationException) {
+        if (e is TimeoutCancellationException) {
+            Log.w(TAG, "Tiempo de espera agotado al leer catalogo; usando respaldo local")
+            emptyMap()
+        } else {
+            throw e
+        }
+    } catch (e: Exception) {
+        Log.w(TAG, "No se pudo actualizar catalogo desde Firestore; usando respaldo local: ${e.message}")
+        emptyMap()
+    }
 }

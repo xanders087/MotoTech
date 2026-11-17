@@ -1,337 +1,2766 @@
 {
   "Yamaha": [
-    { "modelo": "Crypton FI", "cilindraje": "114cc", "categoria": "Urbana / Semiautomática" },
-    { "modelo": "YC-Z 110", "cilindraje": "110cc", "categoria": "Urbana / Trabajo" },
-    { "modelo": "YBR 125Z", "cilindraje": "124cc", "categoria": "Urbana / Trabajo" },
-    { "modelo": "SZ-RR 150", "cilindraje": "149cc", "categoria": "Urbana / Street" },
-    { "modelo": "FZ Version 2.0", "cilindraje": "149cc", "categoria": "Naked / Street" },
-    { "modelo": "FZ-S FI 3.0 ABS", "cilindraje": "149cc", "categoria": "Naked / Street" },
-    { "modelo": "FZ25 ABS", "cilindraje": "249cc", "categoria": "Naked / Street" },
-    { "modelo": "XTZ 125", "cilindraje": "124cc", "categoria": "Doble Propósito" },
-    { "modelo": "XTZ 150 FI", "cilindraje": "149cc", "categoria": "Doble Propósito" },
-    { "modelo": "XTZ 250 ABS", "cilindraje": "249cc", "categoria": "Doble Propósito" },
-    { "modelo": "NMAX Connected", "cilindraje": "155cc", "categoria": "Scooter" },
-    { "modelo": "Aerox 155", "cilindraje": "155cc", "categoria": "Scooter" },
-    { "modelo": "XMAX 300", "cilindraje": "292cc", "categoria": "Maxi Scooter" },
-    { "modelo": "TMAX 560", "cilindraje": "562cc", "categoria": "Maxi Scooter" },
-    { "modelo": "MT-15", "cilindraje": "155cc", "categoria": "Hyper Naked" },
-    { "modelo": "MT-03 ABS", "cilindraje": "321cc", "categoria": "Hyper Naked" },
-    { "modelo": "MT-07", "cilindraje": "689cc", "categoria": "Hyper Naked" },
-    { "modelo": "MT-09", "cilindraje": "890cc", "categoria": "Hyper Naked" },
-    { "modelo": "MT-09 SP", "cilindraje": "890cc", "categoria": "Hyper Naked" },
-    { "modelo": "MT-10", "cilindraje": "998cc", "categoria": "Hyper Naked" },
-    { "modelo": "YZF-R15 V4", "cilindraje": "155cc", "categoria": "Supersport" },
-    { "modelo": "YZF-R3", "cilindraje": "321cc", "categoria": "Supersport" },
-    { "modelo": "YZF-R7", "cilindraje": "689cc", "categoria": "Supersport" },
-    { "modelo": "YZF-R1", "cilindraje": "998cc", "categoria": "Supersport" },
-    { "modelo": "Ténéré 700", "cilindraje": "689cc", "categoria": "Adventure" },
-    { "modelo": "Tracer 9 GT", "cilindraje": "890cc", "categoria": "Sport Touring" },
-    { "modelo": "Super Ténéré 1200ZE", "cilindraje": "1199cc", "categoria": "Adventure" }
+    {
+      "modelo": "PW50",
+      "cilindraje": "49cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "TTR50",
+      "cilindraje": "49cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "YZ65",
+      "cilindraje": "65cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz65-2/6166/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "YZ85LW",
+      "cilindraje": "85cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "TTR110",
+      "cilindraje": "110cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CRYPTON FINN",
+      "cilindraje": "114cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "LIBERO",
+      "cilindraje": "124cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/libero125/2136/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "YZ125",
+      "cilindraje": "125cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz125/2558/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "FAZER",
+      "cilindraje": "149cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "FZ VERSIÓN 3.0",
+      "cilindraje": "149cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15v3/25294/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XTZ150",
+      "cilindraje": "149cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Aerox 155",
+      "cilindraje": "155cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/aerox-155/24621/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "MT15",
+      "cilindraje": "155cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt152024/23334/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NMAX",
+      "cilindraje": "155cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "R15v4",
+      "cilindraje": "155cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yzfr15v4/26805/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "FZ25 ABS",
+      "cilindraje": "249cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XTZ250",
+      "cilindraje": "249cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "YZ250",
+      "cilindraje": "249cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "YZ250X",
+      "cilindraje": "249cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250x/7527/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "WR250F",
+      "cilindraje": "250cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "YZ250F",
+      "cilindraje": "250cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Xmax 300",
+      "cilindraje": "292cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xmax300/9603/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "R3",
+      "cilindraje": "320cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yzf-r3a/31939/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "MT03",
+      "cilindraje": "321cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt03a/2349/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "WR450F",
+      "cilindraje": "450cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr450f/8418/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "YZ450F",
+      "cilindraje": "450cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Tmax",
+      "cilindraje": "562cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/tmax/22567/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "MT07",
+      "cilindraje": "689cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt07a/8225/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "R7",
+      "cilindraje": "689cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yzf-r7/31949/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Ténéré 700",
+      "cilindraje": "689cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "MT09",
+      "cilindraje": "890cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "MT09 SP",
+      "cilindraje": "890cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a-sp/20329/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "MT09 Y-AMT",
+      "cilindraje": "890cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a-yamt/29615/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "TRACER 9 GT",
+      "cilindraje": "890cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/tracer9-gt/7412/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "TRACER 9 GT Y-AMT",
+      "cilindraje": "890cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/tracer9-gt-yamt/29242/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XSR900",
+      "cilindraje": "890cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xsr900/11127/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "YZFR9",
+      "cilindraje": "890cc",
+      "url_fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yzfr9/31694/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "YC-Z 110",
+      "cilindraje": "110cc",
+      "categoria": "Urbana / Trabajo",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Crypton FI",
+      "cilindraje": "114cc",
+      "categoria": "Urbana / Semiautomática",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XTZ 125",
+      "cilindraje": "124cc",
+      "categoria": "Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "YBR 125Z",
+      "cilindraje": "124cc",
+      "categoria": "Urbana / Trabajo",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "FZ Version 2.0",
+      "cilindraje": "149cc",
+      "categoria": "Naked / Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "FZ-S FI 3.0 ABS",
+      "cilindraje": "149cc",
+      "categoria": "Naked / Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "SZ-RR 150",
+      "cilindraje": "149cc",
+      "categoria": "Urbana / Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XTZ 150 FI",
+      "cilindraje": "149cc",
+      "categoria": "Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "MT-15",
+      "cilindraje": "155cc",
+      "categoria": "Hyper Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NMAX Connected",
+      "cilindraje": "155cc",
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "YZF-R15 V4",
+      "cilindraje": "155cc",
+      "categoria": "Supersport",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XTZ 250 ABS",
+      "cilindraje": "249cc",
+      "categoria": "Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "MT-03 ABS",
+      "cilindraje": "321cc",
+      "categoria": "Hyper Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "YZF-R3",
+      "cilindraje": "321cc",
+      "categoria": "Supersport",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "TMAX 560",
+      "cilindraje": "562cc",
+      "categoria": "Maxi Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "MT-07",
+      "cilindraje": "689cc",
+      "categoria": "Hyper Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "YZF-R7",
+      "cilindraje": "689cc",
+      "categoria": "Supersport",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "MT-09",
+      "cilindraje": "890cc",
+      "categoria": "Hyper Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "MT-09 SP",
+      "cilindraje": "890cc",
+      "categoria": "Hyper Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "MT-10",
+      "cilindraje": "998cc",
+      "categoria": "Hyper Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "YZF-R1",
+      "cilindraje": "998cc",
+      "categoria": "Supersport",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Super Ténéré 1200ZE",
+      "cilindraje": "1199cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    }
   ],
   "Bajaj": [
-    { "modelo": "Boxer CT 100 KS", "cilindraje": "102cc", "categoria": "Trabajo" },
-    { "modelo": "Boxer CT 100 ES", "cilindraje": "102cc", "categoria": "Trabajo" },
-    { "modelo": "Boxer S", "cilindraje": "102cc", "categoria": "Trabajo" },
-    { "modelo": "Boxer CT 125", "cilindraje": "124cc", "categoria": "Trabajo" },
-    { "modelo": "Boxer 150X", "cilindraje": "144cc", "categoria": "Trabajo / Doble Propósito" },
-    { "modelo": "Platino 100", "cilindraje": "102cc", "categoria": "Urbana" },
-    { "modelo": "Platino 125", "cilindraje": "124cc", "categoria": "Urbana" },
-    { "modelo": "Discover 125 ST-R", "cilindraje": "124cc", "categoria": "Urbana" },
-    { "modelo": "Pulsar NS 125", "cilindraje": "124cc", "categoria": "Naked / Street" },
-    { "modelo": "Pulsar 150 Neon", "cilindraje": "149cc", "categoria": "Street" },
-    { "modelo": "Pulsar NS 160 FI ABS", "cilindraje": "160cc", "categoria": "Naked / Street" },
-    { "modelo": "Pulsar N160", "cilindraje": "164cc", "categoria": "Naked / Street" },
-    { "modelo": "Pulsar 180 Fi Neon", "cilindraje": "178cc", "categoria": "Street" },
-    { "modelo": "Pulsar NS200", "cilindraje": "199cc", "categoria": "Naked / Street" },
-    { "modelo": "Pulsar NS 200 FI ABS", "cilindraje": "199cc", "categoria": "Naked / Street" },
-    { "modelo": "Pulsar RS 200", "cilindraje": "199cc", "categoria": "Deportiva" },
-    { "modelo": "Pulsar N250", "cilindraje": "249cc", "categoria": "Naked / Street" },
-    { "modelo": "Dominar 250", "cilindraje": "248cc", "categoria": "Sport Touring" },
-    { "modelo": "Dominar 400 Touring", "cilindraje": "373cc", "categoria": "Sport Touring" },
-    { "modelo": "Avenger 220 Cruise", "cilindraje": "220cc", "categoria": "Cruiser" }
+    {
+      "modelo": "Boxer CT100 ES",
+      "cilindraje": "102cc",
+      "categoria": "Boxer",
+      "url_fuente": "https://grupouma.com/colombia/motos/boxer/boxer-ct100-es/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Boxer CT100 ES Boxer Racing",
+      "cilindraje": "102cc",
+      "categoria": "Boxer",
+      "url_fuente": "https://grupouma.com/colombia/motos/boxer/boxer-ct100-es-boxer-racing/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Boxer CT100 KS",
+      "cilindraje": "102cc",
+      "categoria": "Boxer",
+      "url_fuente": "https://grupouma.com/colombia/motos/boxer/boxer-ct100-ks/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Boxer CT100 KS Boxer Racing",
+      "cilindraje": "102cc",
+      "categoria": "Boxer",
+      "url_fuente": "https://grupouma.com/colombia/motos/boxer/boxer-ct100-ks-boxer-racing/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Boxer CT125 Sport",
+      "cilindraje": "124cc",
+      "categoria": "Boxer",
+      "url_fuente": "https://grupouma.com/colombia/motos/boxer/boxer-ct-125/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Discover 125 SPORT",
+      "cilindraje": "124cc",
+      "categoria": "Discover",
+      "url_fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar N125 Carburada",
+      "cilindraje": "124cc",
+      "categoria": "Pulsar",
+      "url_fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n125-carburada/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar N125 FI",
+      "cilindraje": "124cc",
+      "categoria": "Pulsar",
+      "url_fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n125-fi/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar NS 125",
+      "cilindraje": "124cc",
+      "categoria": "Pulsar",
+      "url_fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns-125/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Boxer 150X",
+      "cilindraje": "144cc",
+      "categoria": "Boxer",
+      "url_fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar P150",
+      "cilindraje": "149cc",
+      "categoria": "Pulsar",
+      "url_fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-p150/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar NS 160 Fi ABS",
+      "cilindraje": "160cc",
+      "categoria": "Pulsar",
+      "url_fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns-160-fi-abs-2027/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar N160 Pro",
+      "cilindraje": "164cc",
+      "categoria": "Pulsar",
+      "url_fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n160-pro/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar NS200 FI ABS DC",
+      "cilindraje": "199cc",
+      "categoria": "Pulsar",
+      "url_fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns200-fi-abs/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar NS200 FI ABS SC",
+      "cilindraje": "199cc",
+      "categoria": "Pulsar",
+      "url_fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns200-fi-abs-sc/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar RS 200 FI ABS",
+      "cilindraje": "199cc",
+      "categoria": "Pulsar",
+      "url_fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Dominar 400 Touring",
+      "cilindraje": "373cc",
+      "categoria": "Dominar",
+      "url_fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar NS400Z",
+      "cilindraje": "373cc",
+      "categoria": "Pulsar",
+      "url_fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Boxer CT 100 ES",
+      "cilindraje": "102cc",
+      "categoria": "Trabajo",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Boxer CT 100 KS",
+      "cilindraje": "102cc",
+      "categoria": "Trabajo",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Boxer S",
+      "cilindraje": "102cc",
+      "categoria": "Trabajo",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Platino 100",
+      "cilindraje": "102cc",
+      "categoria": "Urbana",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Boxer CT 125",
+      "cilindraje": "124cc",
+      "categoria": "Trabajo",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Discover 125 ST-R",
+      "cilindraje": "124cc",
+      "categoria": "Urbana",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Platino 125",
+      "cilindraje": "124cc",
+      "categoria": "Urbana",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar 150 Neon",
+      "cilindraje": "149cc",
+      "categoria": "Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar N160",
+      "cilindraje": "164cc",
+      "categoria": "Naked / Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar 180 Fi Neon",
+      "cilindraje": "178cc",
+      "categoria": "Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar NS 200 FI ABS",
+      "cilindraje": "199cc",
+      "categoria": "Naked / Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar NS200",
+      "cilindraje": "199cc",
+      "categoria": "Naked / Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar RS 200",
+      "cilindraje": "199cc",
+      "categoria": "Deportiva",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Avenger 220 Cruise",
+      "cilindraje": "220cc",
+      "categoria": "Cruiser",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Dominar 250",
+      "cilindraje": "248cc",
+      "categoria": "Sport Touring",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Pulsar N250",
+      "cilindraje": "249cc",
+      "categoria": "Naked / Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    }
   ],
   "AKT": [
-    { "modelo": "Special 110 X", "cilindraje": "107cc", "categoria": "Semiautomática" },
-    { "modelo": "Flex 125", "cilindraje": "124cc", "categoria": "Semiautomática" },
-    { "modelo": "NKD 125", "cilindraje": "124cc", "categoria": "Urbana / Clásica" },
-    { "modelo": "NKD 125 Mastech", "cilindraje": "124cc", "categoria": "Urbana / Clásica" },
-    { "modelo": "CR4 125", "cilindraje": "124cc", "categoria": "Street" },
-    { "modelo": "CR4 162", "cilindraje": "162cc", "categoria": "Street" },
-    { "modelo": "CR4 200 Pro", "cilindraje": "197cc", "categoria": "Street" },
-    { "modelo": "TTR 125", "cilindraje": "124cc", "categoria": "Enduro / Doble Propósito" },
-    { "modelo": "TTR 200", "cilindraje": "197cc", "categoria": "Enduro / Doble Propósito" },
-    { "modelo": "TT Dual Sport 200", "cilindraje": "197cc", "categoria": "Doble Propósito" },
-    { "modelo": "TT 250 Adventour", "cilindraje": "250cc", "categoria": "Adventure" },
-    { "modelo": "Dynamic Pro 125", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "Dynamic R 125", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "Jet 125", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "Voge 300 DS", "cilindraje": "292cc", "categoria": "Adventure" },
-    { "modelo": "Voge 300 Rally", "cilindraje": "292cc", "categoria": "Enduro / Rally" },
-    { "modelo": "Voge 500 DS", "cilindraje": "471cc", "categoria": "Adventure" }
+    {
+      "modelo": "Nueva Special 110",
+      "cilindraje": "107cc",
+      "categoria": "Semi Automaticas",
+      "url_fuente": "https://aktmotos.com/motos-akt/semi-automaticas/nueva-special-110/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Special 110 X",
+      "cilindraje": "107cc",
+      "categoria": "Semi Automaticas",
+      "url_fuente": "https://aktmotos.com/motos-akt/semi-automaticas/special-110-x/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Flex 125",
+      "cilindraje": "123cc",
+      "categoria": "Semi Automaticas",
+      "url_fuente": "https://aktmotos.com/motos-akt/semi-automaticas/flex-125/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CHR 125",
+      "cilindraje": "124cc",
+      "categoria": "Calle",
+      "url_fuente": "https://aktmotos.com/motos-akt/calle/chr-125/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CR4 125",
+      "cilindraje": "124cc",
+      "categoria": "Calle",
+      "url_fuente": "https://aktmotos.com/motos-akt/calle/cr4-125/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Dynamic Pro CBS",
+      "cilindraje": "124cc",
+      "categoria": "Automaticas",
+      "url_fuente": "https://aktmotos.com/motos-akt/automaticas/dynamic-pro-cbs/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NKD 125",
+      "cilindraje": "124cc",
+      "categoria": "Calle",
+      "url_fuente": "https://aktmotos.com/motos-akt/calle/nkd-125/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NKD 125 Classic",
+      "cilindraje": "124cc",
+      "categoria": "Calle",
+      "url_fuente": "https://aktmotos.com/motos-akt/calle/nkd-125-classic/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NKD 125 FP",
+      "cilindraje": "124cc",
+      "categoria": "Calle",
+      "url_fuente": "https://aktmotos.com/motos-akt/calle/nkd-125-fp/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NUEVA NKD 125",
+      "cilindraje": "124cc",
+      "categoria": "Calle",
+      "url_fuente": "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "TTR 125",
+      "cilindraje": "124cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://aktmotos.com/motos-akt/enduro/ttr-125/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "TTR 125 Verde militar",
+      "cilindraje": "125cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://aktmotos.com/motos-akt/enduro/ttr125-verde-militar/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CR4 150",
+      "cilindraje": "149cc",
+      "categoria": "Calle",
+      "url_fuente": "https://aktmotos.com/motos-akt/calle/cr4-150/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Dynamic RX Fi",
+      "cilindraje": "149cc",
+      "categoria": "Automaticas",
+      "url_fuente": "https://aktmotos.com/motos-akt/automaticas/dynamic-rx-fi/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Jet Evo",
+      "cilindraje": "149cc",
+      "categoria": "Automaticas",
+      "url_fuente": "https://aktmotos.com/motos-akt/automaticas/jet-evo/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XRS 180",
+      "cilindraje": "174cc",
+      "categoria": "Akt Voge",
+      "url_fuente": "https://aktmotos.com/motos-akt/akt-voge/180-xrs/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CR4 200 Pro",
+      "cilindraje": "197cc",
+      "categoria": "Calle",
+      "url_fuente": "https://aktmotos.com/motos-akt/calle/cr4-200-pro/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "TT200 con ABS",
+      "cilindraje": "197cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://aktmotos.com/motos-akt/aventura/tt200/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "TT200 Rally",
+      "cilindraje": "197cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://aktmotos.com/motos-akt/aventura/tt200-rally/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "TTR 200",
+      "cilindraje": "197cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://aktmotos.com/motos-akt/enduro/ttr-200/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "TTR 200 ABS",
+      "cilindraje": "197cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://aktmotos.com/motos-akt/enduro/ttr-200-abs/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "250 R",
+      "cilindraje": "249cc",
+      "categoria": "Calle",
+      "url_fuente": "https://aktmotos.com/motos-akt/calle/250-r/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "DS 300",
+      "cilindraje": "292cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://aktmotos.com/motos-akt/aventura/ds-300/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Rally 300",
+      "cilindraje": "292cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://aktmotos.com/motos-akt/aventura/rally-300/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "DS525X",
+      "cilindraje": "494cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://aktmotos.com/motos-akt/aventura/ds525x/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "DS800X Rally",
+      "cilindraje": "798cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://aktmotos.com/motos-akt/aventura/ds800x-rally/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "DS900X",
+      "cilindraje": "895cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://aktmotos.com/motos-akt/aventura/ds900x/",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Dynamic Pro 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Dynamic R 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Flex 125",
+      "cilindraje": "124cc",
+      "categoria": "Semiautomática",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Jet 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NKD 125 Mastech",
+      "cilindraje": "124cc",
+      "categoria": "Urbana / Clásica",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CR4 162",
+      "cilindraje": "162cc",
+      "categoria": "Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "TT Dual Sport 200",
+      "cilindraje": "197cc",
+      "categoria": "Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "TT 250 Adventour",
+      "cilindraje": "250cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Voge 300 DS",
+      "cilindraje": "292cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Voge 300 Rally",
+      "cilindraje": "292cc",
+      "categoria": "Enduro / Rally",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Voge 500 DS",
+      "cilindraje": "471cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    }
   ],
   "Suzuki": [
-    { "modelo": "AX4 115", "cilindraje": "113cc", "categoria": "Trabajo" },
-    { "modelo": "GN 125", "cilindraje": "124cc", "categoria": "Urbana / Custom" },
-    { "modelo": "GSX 125R", "cilindraje": "124cc", "categoria": "Urbana / Street" },
-    { "modelo": "Address 115 FI", "cilindraje": "113cc", "categoria": "Scooter" },
-    { "modelo": "Avenis 125", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "Burgman Street 125", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "Gixxer 150 FI ABS", "cilindraje": "155cc", "categoria": "Naked / Street" },
-    { "modelo": "Gixxer SF 150 FI", "cilindraje": "155cc", "categoria": "Deportiva" },
-    { "modelo": "GSX-R150", "cilindraje": "147cc", "categoria": "Supersport" },
-    { "modelo": "GSX-S150", "cilindraje": "147cc", "categoria": "Naked" },
-    { "modelo": "Gixxer 250", "cilindraje": "249cc", "categoria": "Naked" },
-    { "modelo": "Gixxer SF 250", "cilindraje": "249cc", "categoria": "Deportiva" },
-    { "modelo": "DR 150 FI ABS", "cilindraje": "149cc", "categoria": "Doble Propósito" },
-    { "modelo": "DR-Z400S", "cilindraje": "398cc", "categoria": "Doble Propósito" },
-    { "modelo": "DR 650 SE", "cilindraje": "644cc", "categoria": "Doble Propósito" },
-    { "modelo": "V-Strom 160", "cilindraje": "160cc", "categoria": "Adventure" },
-    { "modelo": "V-Strom 250 SX", "cilindraje": "249cc", "categoria": "Adventure" },
-    { "modelo": "V-Strom 650 XT", "cilindraje": "645cc", "categoria": "Adventure" },
-    { "modelo": "V-Strom 800DE", "cilindraje": "776cc", "categoria": "Adventure" },
-    { "modelo": "V-Strom 1050DE", "cilindraje": "1037cc", "categoria": "Adventure" },
-    { "modelo": "GSX-8S", "cilindraje": "776cc", "categoria": "Naked" },
-    { "modelo": "Hayabusa GSX1300R", "cilindraje": "1340cc", "categoria": "Hyperbike" }
+    {
+      "modelo": "AX4 115",
+      "cilindraje": "113cc",
+      "categoria": "Trabajo"
+    },
+    {
+      "modelo": "GN 125",
+      "cilindraje": "124cc",
+      "categoria": "Urbana / Custom"
+    },
+    {
+      "modelo": "GSX 125R",
+      "cilindraje": "124cc",
+      "categoria": "Urbana / Street"
+    },
+    {
+      "modelo": "Address 115 FI",
+      "cilindraje": "113cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "Avenis 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "Burgman Street 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "Gixxer 150 FI ABS",
+      "cilindraje": "155cc",
+      "categoria": "Naked / Street"
+    },
+    {
+      "modelo": "Gixxer SF 150 FI",
+      "cilindraje": "155cc",
+      "categoria": "Deportiva"
+    },
+    {
+      "modelo": "GSX-R150",
+      "cilindraje": "147cc",
+      "categoria": "Supersport"
+    },
+    {
+      "modelo": "GSX-S150",
+      "cilindraje": "147cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "Gixxer 250",
+      "cilindraje": "249cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "Gixxer SF 250",
+      "cilindraje": "249cc",
+      "categoria": "Deportiva"
+    },
+    {
+      "modelo": "DR 150 FI ABS",
+      "cilindraje": "149cc",
+      "categoria": "Doble Propósito"
+    },
+    {
+      "modelo": "DR-Z400S",
+      "cilindraje": "398cc",
+      "categoria": "Doble Propósito"
+    },
+    {
+      "modelo": "DR 650 SE",
+      "cilindraje": "644cc",
+      "categoria": "Doble Propósito"
+    },
+    {
+      "modelo": "V-Strom 160",
+      "cilindraje": "160cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "V-Strom 250 SX",
+      "cilindraje": "249cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "V-Strom 650 XT",
+      "cilindraje": "645cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "V-Strom 800DE",
+      "cilindraje": "776cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "V-Strom 1050DE",
+      "cilindraje": "1037cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "GSX-8S",
+      "cilindraje": "776cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "Hayabusa GSX1300R",
+      "cilindraje": "1340cc",
+      "categoria": "Hyperbike"
+    }
   ],
   "Honda": [
-    { "modelo": "Navi", "cilindraje": "109cc", "categoria": "Urbana / Automática" },
-    { "modelo": "Wave 110S", "cilindraje": "109cc", "categoria": "Semiautomática" },
-    { "modelo": "Dio 110", "cilindraje": "109cc", "categoria": "Scooter" },
-    { "modelo": "PCX 160 ABS", "cilindraje": "156cc", "categoria": "Scooter" },
-    { "modelo": "ADV 350", "cilindraje": "330cc", "categoria": "Maxi Scooter" },
-    { "modelo": "X-ADV 750", "cilindraje": "745cc", "categoria": "Adventure Scooter" },
-    { "modelo": "CB 100", "cilindraje": "99cc", "categoria": "Trabajo" },
-    { "modelo": "CB 125F Twister", "cilindraje": "124cc", "categoria": "Urbana" },
-    { "modelo": "CB 160F", "cilindraje": "162cc", "categoria": "Street" },
-    { "modelo": "CB190R", "cilindraje": "184cc", "categoria": "Naked / Street" },
-    { "modelo": "CB 300F Twister", "cilindraje": "293cc", "categoria": "Naked" },
-    { "modelo": "CB 500F", "cilindraje": "471cc", "categoria": "Naked" },
-    { "modelo": "CB 650R", "cilindraje": "649cc", "categoria": "Neo Sports Café" },
-    { "modelo": "CB 1000R", "cilindraje": "998cc", "categoria": "Neo Sports Café" },
-    { "modelo": "XR 150L", "cilindraje": "149cc", "categoria": "Doble Propósito" },
-    { "modelo": "XR 190L", "cilindraje": "184cc", "categoria": "Doble Propósito" },
-    { "modelo": "XR 250 Tornado", "cilindraje": "249cc", "categoria": "Doble Propósito" },
-    { "modelo": "XRE 190 ABS", "cilindraje": "184cc", "categoria": "Doble Propósito" },
-    { "modelo": "XRE 300 ABS", "cilindraje": "291cc", "categoria": "Doble Propósito" },
-    { "modelo": "Sahara 300", "cilindraje": "293cc", "categoria": "Adventure / Trail" },
-    { "modelo": "CB 500X", "cilindraje": "471cc", "categoria": "Adventure" },
-    { "modelo": "NX 500", "cilindraje": "471cc", "categoria": "Adventure" },
-    { "modelo": "XL 750 Transalp", "cilindraje": "755cc", "categoria": "Adventure" },
-    { "modelo": "CRF 1100L Africa Twin", "cilindraje": "1084cc", "categoria": "Adventure" }
+    {
+      "modelo": "CB 100 2027",
+      "cilindraje": "98cc",
+      "categoria": "Sport",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Biz 110",
+      "cilindraje": "109cc",
+      "categoria": "Scooter y semiautomática",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CRF 110F Modelo 2026",
+      "cilindraje": "109cc",
+      "categoria": "Enduro y motocross",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "DIO LED DLX 2027",
+      "cilindraje": "109cc",
+      "categoria": "Scooter y semiautomática",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NAVI 2027",
+      "cilindraje": "109cc",
+      "categoria": "Navi",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/NAVI/moto-navi",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NAVI ADVENTURE 2027",
+      "cilindraje": "109cc",
+      "categoria": "Navi",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/NAVI/NAVI-ADVENTURE",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NAVI MIX 2027",
+      "cilindraje": "109cc",
+      "categoria": "Navi",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NAVI RALLY 2027",
+      "cilindraje": "109cc",
+      "categoria": "Navi",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/NAVI/NAVI-RALLY",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "WAVE 110S 2027",
+      "cilindraje": "109cc",
+      "categoria": "Scooter y semiautomática",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 125 Hornet 2027",
+      "cilindraje": "123cc",
+      "categoria": "Sport",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125-Hornet",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 125F DLX 2027",
+      "cilindraje": "124cc",
+      "categoria": "Sport",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 125F STD 2027",
+      "cilindraje": "124cc",
+      "categoria": "Sport",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-STD-20",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XR 150L 2.0 2027",
+      "cilindraje": "149cc",
+      "categoria": "Todo terreno",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "PCX 160 ABS 2027",
+      "cilindraje": "156cc",
+      "categoria": "Scooter y semiautomática",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "X-Blade 160 2027",
+      "cilindraje": "162cc",
+      "categoria": "Sport",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/motos-sport/XBLADE-160",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 190R 2.0 2027",
+      "cilindraje": "184cc",
+      "categoria": "Sport",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-190-R-20",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NX 190 2027",
+      "cilindraje": "184cc",
+      "categoria": "Sport",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XR 190L 2.0 2027",
+      "cilindraje": "184cc",
+      "categoria": "Todo terreno",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-190L-20",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CRF 250R Modelo 2026",
+      "cilindraje": "249cc",
+      "categoria": "Enduro y motocross",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CRF 250RX Modelo 2026",
+      "cilindraje": "249cc",
+      "categoria": "Enduro y motocross",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250RX",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 300F 2027",
+      "cilindraje": "293cc",
+      "categoria": "Sport",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CRF 300F Modelo 2026",
+      "cilindraje": "293cc",
+      "categoria": "Enduro y motocross",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-300F",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XR 300L 2027",
+      "cilindraje": "293cc",
+      "categoria": "Todo terreno",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XRE 300 SAHARA DLX Modelo 2026",
+      "cilindraje": "300cc",
+      "categoria": "Todo terreno",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-dlx",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XRE 300 SAHARA STD Modelo 2026",
+      "cilindraje": "300cc",
+      "categoria": "Todo terreno",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-std",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "ADV 350 Modelo 2026",
+      "cilindraje": "330cc",
+      "categoria": "Scooter y semiautomática",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 350D Modelo 2026",
+      "cilindraje": "348cc",
+      "categoria": "Scrambler",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CRF 450R Modelo 2026",
+      "cilindraje": "449cc",
+      "categoria": "Enduro y motocross",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/450-R",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CMX 500 Rebel 2025",
+      "cilindraje": "471cc",
+      "categoria": "Custom",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/custom/CMX-500",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NX 500 E-Clutch",
+      "cilindraje": "471cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NX 500 STD",
+      "cilindraje": "471cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-std",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 650R E-clutch Modelo 2026",
+      "cilindraje": "649cc",
+      "categoria": "Sport",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CBR 650R Modelo 2026",
+      "cilindraje": "649cc",
+      "categoria": "Super sport",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-650R",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NC 750XD Modelo 2026",
+      "cilindraje": "745cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/aventura/NC-750XD",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "X-ADV Modelo 2026",
+      "cilindraje": "745cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/aventura/x-adv",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Transalp E-clutch modelo 2026",
+      "cilindraje": "755cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Transalp Modelo 2025",
+      "cilindraje": "755cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 1000R Modelo 2025",
+      "cilindraje": "1000cc",
+      "categoria": "Sport",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-1000R",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CBR 1000 RRR Modelo 2025",
+      "cilindraje": "1000cc",
+      "categoria": "Super sport",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "AFRICA TWIN CRF 1100 ADVENTURE SPORTS DCT SE Modelo 2026",
+      "cilindraje": "1084cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/aventura/AFRICA-TWIN-ADVENTURE-SPORTS-SE",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "AFRICA TWIN CRF 1100L DCT Modelo 2026",
+      "cilindraje": "1084cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/aventura/AFRICA-TWIN-CRF-1100-LD",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "AFRICA TWIN CRF 1100L Modelo 2026",
+      "cilindraje": "1084cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/aventura/AFRICA-TWIN-CRF-1100L",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NT 1100 Modelo 2025",
+      "cilindraje": "1084cc",
+      "categoria": "Touring",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/touring/NT-1100",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "GOLDWING Modelo 2025 Edicion 50 años",
+      "cilindraje": "1833cc",
+      "categoria": "Touring",
+      "url_fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "tiene_ficha": false,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 100",
+      "cilindraje": "99cc",
+      "categoria": "Trabajo",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Dio 110",
+      "cilindraje": "109cc",
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Navi",
+      "cilindraje": "109cc",
+      "categoria": "Urbana / Automática",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Wave 110S",
+      "cilindraje": "109cc",
+      "categoria": "Semiautomática",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 125F Twister",
+      "cilindraje": "124cc",
+      "categoria": "Urbana",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XR 150L",
+      "cilindraje": "149cc",
+      "categoria": "Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "PCX 160 ABS",
+      "cilindraje": "156cc",
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 160F",
+      "cilindraje": "162cc",
+      "categoria": "Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB190R",
+      "cilindraje": "184cc",
+      "categoria": "Naked / Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XR 190L",
+      "cilindraje": "184cc",
+      "categoria": "Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XRE 190 ABS",
+      "cilindraje": "184cc",
+      "categoria": "Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XR 250 Tornado",
+      "cilindraje": "249cc",
+      "categoria": "Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XRE 300 ABS",
+      "cilindraje": "291cc",
+      "categoria": "Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 300F Twister",
+      "cilindraje": "293cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "Sahara 300",
+      "cilindraje": "293cc",
+      "categoria": "Adventure / Trail",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "ADV 350",
+      "cilindraje": "330cc",
+      "categoria": "Maxi Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 500F",
+      "cilindraje": "471cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 500X",
+      "cilindraje": "471cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "NX 500",
+      "cilindraje": "471cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 650R",
+      "cilindraje": "649cc",
+      "categoria": "Neo Sports Café",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "X-ADV 750",
+      "cilindraje": "745cc",
+      "categoria": "Adventure Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "XL 750 Transalp",
+      "cilindraje": "755cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CB 1000R",
+      "cilindraje": "998cc",
+      "categoria": "Neo Sports Café",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    },
+    {
+      "modelo": "CRF 1100L Africa Twin",
+      "cilindraje": "1084cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-17"
+    }
   ],
   "KTM": [
-    { "modelo": "Duke 200", "cilindraje": "199cc", "categoria": "Naked" },
-    { "modelo": "Duke 200 NG ABS", "cilindraje": "199cc", "categoria": "Naked" },
-    { "modelo": "Duke 250", "cilindraje": "249cc", "categoria": "Naked" },
-    { "modelo": "Duke 390", "cilindraje": "373cc", "categoria": "Naked" },
-    { "modelo": "Duke 390 Gen 3", "cilindraje": "399cc", "categoria": "Naked" },
-    { "modelo": "RC 200", "cilindraje": "199cc", "categoria": "Supersport" },
-    { "modelo": "RC 390", "cilindraje": "373cc", "categoria": "Supersport" },
-    { "modelo": "250 Adventure", "cilindraje": "248cc", "categoria": "Adventure" },
-    { "modelo": "390 Adventure", "cilindraje": "373cc", "categoria": "Adventure" },
-    { "modelo": "690 Enduro R", "cilindraje": "693cc", "categoria": "Enduro" },
-    { "modelo": "790 Duke", "cilindraje": "799cc", "categoria": "Naked" },
-    { "modelo": "790 Adventure", "cilindraje": "799cc", "categoria": "Adventure" },
-    { "modelo": "890 Duke R", "cilindraje": "889cc", "categoria": "Naked" },
-    { "modelo": "890 Adventure R", "cilindraje": "889cc", "categoria": "Adventure" },
-    { "modelo": "1290 Super Adventure S", "cilindraje": "1301cc", "categoria": "Adventure" },
-    { "modelo": "1390 Super Duke R", "cilindraje": "1350cc", "categoria": "Hyper Naked" }
+    {
+      "modelo": "Duke 200",
+      "cilindraje": "199cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "Duke 200 NG ABS",
+      "cilindraje": "199cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "Duke 250",
+      "cilindraje": "249cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "Duke 390",
+      "cilindraje": "373cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "Duke 390 Gen 3",
+      "cilindraje": "399cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "RC 200",
+      "cilindraje": "199cc",
+      "categoria": "Supersport"
+    },
+    {
+      "modelo": "RC 390",
+      "cilindraje": "373cc",
+      "categoria": "Supersport"
+    },
+    {
+      "modelo": "250 Adventure",
+      "cilindraje": "248cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "390 Adventure",
+      "cilindraje": "373cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "690 Enduro R",
+      "cilindraje": "693cc",
+      "categoria": "Enduro"
+    },
+    {
+      "modelo": "790 Duke",
+      "cilindraje": "799cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "790 Adventure",
+      "cilindraje": "799cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "890 Duke R",
+      "cilindraje": "889cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "890 Adventure R",
+      "cilindraje": "889cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "1290 Super Adventure S",
+      "cilindraje": "1301cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "1390 Super Duke R",
+      "cilindraje": "1350cc",
+      "categoria": "Hyper Naked"
+    }
   ],
   "TVS": [
-    { "modelo": "Sport 100 ELS", "cilindraje": "99cc", "categoria": "Trabajo" },
-    { "modelo": "Stryker 125", "cilindraje": "124cc", "categoria": "Urbana" },
-    { "modelo": "Raider 125", "cilindraje": "124cc", "categoria": "Street" },
-    { "modelo": "Raider 125 FI", "cilindraje": "124cc", "categoria": "Street" },
-    { "modelo": "Ntorq 125 Race Edition", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "Apache RTR 160 2V", "cilindraje": "159cc", "categoria": "Street" },
-    { "modelo": "Apache RTR 160 4V FI ABS", "cilindraje": "159cc", "categoria": "Naked / Street" },
-    { "modelo": "Apache RTR 200 4V FI ABS", "cilindraje": "197cc", "categoria": "Naked / Street" },
-    { "modelo": "Apache RR 310", "cilindraje": "312cc", "categoria": "Supersport" },
-    { "modelo": "Apache RTR 310", "cilindraje": "312cc", "categoria": "Hyper Naked" },
-    { "modelo": "Ronin 225", "cilindraje": "225cc", "categoria": "Neo-Retro" }
+    {
+      "modelo": "Sport 100 ELS",
+      "cilindraje": "99cc",
+      "categoria": "Trabajo"
+    },
+    {
+      "modelo": "Stryker 125",
+      "cilindraje": "124cc",
+      "categoria": "Urbana"
+    },
+    {
+      "modelo": "Raider 125",
+      "cilindraje": "124cc",
+      "categoria": "Street"
+    },
+    {
+      "modelo": "Raider 125 FI",
+      "cilindraje": "124cc",
+      "categoria": "Street"
+    },
+    {
+      "modelo": "Ntorq 125 Race Edition",
+      "cilindraje": "124cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "Apache RTR 160 2V",
+      "cilindraje": "159cc",
+      "categoria": "Street"
+    },
+    {
+      "modelo": "Apache RTR 160 4V FI ABS",
+      "cilindraje": "159cc",
+      "categoria": "Naked / Street"
+    },
+    {
+      "modelo": "Apache RTR 200 4V FI ABS",
+      "cilindraje": "197cc",
+      "categoria": "Naked / Street"
+    },
+    {
+      "modelo": "Apache RR 310",
+      "cilindraje": "312cc",
+      "categoria": "Supersport"
+    },
+    {
+      "modelo": "Apache RTR 310",
+      "cilindraje": "312cc",
+      "categoria": "Hyper Naked"
+    },
+    {
+      "modelo": "Ronin 225",
+      "cilindraje": "225cc",
+      "categoria": "Neo-Retro"
+    }
   ],
   "Hero": [
-    { "modelo": "Eco 100", "cilindraje": "97cc", "categoria": "Trabajo" },
-    { "modelo": "Eco Deluxe", "cilindraje": "97cc", "categoria": "Trabajo" },
-    { "modelo": "Eco 150 Cargo", "cilindraje": "149cc", "categoria": "Trabajo" },
-    { "modelo": "Splendor XPro", "cilindraje": "109cc", "categoria": "Urbana" },
-    { "modelo": "Ignitor 125", "cilindraje": "124cc", "categoria": "Urbana" },
-    { "modelo": "Dash 125 FI", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "Thriller Pro 150", "cilindraje": "149cc", "categoria": "Street" },
-    { "modelo": "Hunk 150", "cilindraje": "149cc", "categoria": "Street" },
-    { "modelo": "Hunk 160R", "cilindraje": "163cc", "categoria": "Naked / Street" },
-    { "modelo": "Hunk 160R 4V", "cilindraje": "163cc", "categoria": "Naked / Street" },
-    { "modelo": "Xpulse 200", "cilindraje": "199cc", "categoria": "Doble Propósito" },
-    { "modelo": "Xpulse 200 4V", "cilindraje": "199cc", "categoria": "Doble Propósito" },
-    { "modelo": "Xpulse 200T", "cilindraje": "199cc", "categoria": "Touring" }
+    {
+      "modelo": "Eco 100",
+      "cilindraje": "97cc",
+      "categoria": "Trabajo"
+    },
+    {
+      "modelo": "Eco Deluxe",
+      "cilindraje": "97cc",
+      "categoria": "Trabajo"
+    },
+    {
+      "modelo": "Eco 150 Cargo",
+      "cilindraje": "149cc",
+      "categoria": "Trabajo"
+    },
+    {
+      "modelo": "Splendor XPro",
+      "cilindraje": "109cc",
+      "categoria": "Urbana"
+    },
+    {
+      "modelo": "Ignitor 125",
+      "cilindraje": "124cc",
+      "categoria": "Urbana"
+    },
+    {
+      "modelo": "Dash 125 FI",
+      "cilindraje": "124cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "Thriller Pro 150",
+      "cilindraje": "149cc",
+      "categoria": "Street"
+    },
+    {
+      "modelo": "Hunk 150",
+      "cilindraje": "149cc",
+      "categoria": "Street"
+    },
+    {
+      "modelo": "Hunk 160R",
+      "cilindraje": "163cc",
+      "categoria": "Naked / Street"
+    },
+    {
+      "modelo": "Hunk 160R 4V",
+      "cilindraje": "163cc",
+      "categoria": "Naked / Street"
+    },
+    {
+      "modelo": "Xpulse 200",
+      "cilindraje": "199cc",
+      "categoria": "Doble Propósito"
+    },
+    {
+      "modelo": "Xpulse 200 4V",
+      "cilindraje": "199cc",
+      "categoria": "Doble Propósito"
+    },
+    {
+      "modelo": "Xpulse 200T",
+      "cilindraje": "199cc",
+      "categoria": "Touring"
+    }
   ],
   "Victory": [
-    { "modelo": "One ST 100", "cilindraje": "97cc", "categoria": "Semiautomática" },
-    { "modelo": "Shock 115", "cilindraje": "113cc", "categoria": "Semiautomática" },
-    { "modelo": "Life 125", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "ZS 125", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "Black", "cilindraje": "171cc", "categoria": "Maxi Scooter" },
-    { "modelo": "Bet ABS 150", "cilindraje": "149cc", "categoria": "Maxi Scooter" },
-    { "modelo": "Nitro 125", "cilindraje": "124cc", "categoria": "Urbana" },
-    { "modelo": "Switch 150", "cilindraje": "149cc", "categoria": "Street" },
-    { "modelo": "Bomber 125", "cilindraje": "124cc", "categoria": "Café Racer / Clásica" },
-    { "modelo": "Bomber 150", "cilindraje": "149cc", "categoria": "Café Racer / Clásica" },
-    { "modelo": "Bomber 250", "cilindraje": "249cc", "categoria": "Café Racer / Clásica" },
-    { "modelo": "Venom 14", "cilindraje": "149cc", "categoria": "Naked" },
-    { "modelo": "Venom 18", "cilindraje": "177cc", "categoria": "Naked" },
-    { "modelo": "Venom 250", "cilindraje": "249cc", "categoria": "Naked" },
-    { "modelo": "Venom 400", "cilindraje": "378cc", "categoria": "Naked" },
-    { "modelo": "MRX 125", "cilindraje": "124cc", "categoria": "Enduro / Doble Propósito" },
-    { "modelo": "MRX 150", "cilindraje": "149cc", "categoria": "Enduro / Doble Propósito" },
-    { "modelo": "MRX 200", "cilindraje": "199cc", "categoria": "Enduro / Doble Propósito" },
-    { "modelo": "MRX Arizona 200", "cilindraje": "199cc", "categoria": "Adventure" }
+    {
+      "modelo": "One ST 100",
+      "cilindraje": "97cc",
+      "categoria": "Semiautomática"
+    },
+    {
+      "modelo": "Shock 115",
+      "cilindraje": "113cc",
+      "categoria": "Semiautomática"
+    },
+    {
+      "modelo": "Life 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "ZS 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "Black",
+      "cilindraje": "171cc",
+      "categoria": "Maxi Scooter"
+    },
+    {
+      "modelo": "Bet ABS 150",
+      "cilindraje": "149cc",
+      "categoria": "Maxi Scooter"
+    },
+    {
+      "modelo": "Nitro 125",
+      "cilindraje": "124cc",
+      "categoria": "Urbana"
+    },
+    {
+      "modelo": "Switch 150",
+      "cilindraje": "149cc",
+      "categoria": "Street"
+    },
+    {
+      "modelo": "Bomber 125",
+      "cilindraje": "124cc",
+      "categoria": "Café Racer / Clásica"
+    },
+    {
+      "modelo": "Bomber 150",
+      "cilindraje": "149cc",
+      "categoria": "Café Racer / Clásica"
+    },
+    {
+      "modelo": "Bomber 250",
+      "cilindraje": "249cc",
+      "categoria": "Café Racer / Clásica"
+    },
+    {
+      "modelo": "Venom 14",
+      "cilindraje": "149cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "Venom 18",
+      "cilindraje": "177cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "Venom 250",
+      "cilindraje": "249cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "Venom 400",
+      "cilindraje": "378cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "MRX 125",
+      "cilindraje": "124cc",
+      "categoria": "Enduro / Doble Propósito"
+    },
+    {
+      "modelo": "MRX 150",
+      "cilindraje": "149cc",
+      "categoria": "Enduro / Doble Propósito"
+    },
+    {
+      "modelo": "MRX 200",
+      "cilindraje": "199cc",
+      "categoria": "Enduro / Doble Propósito"
+    },
+    {
+      "modelo": "MRX Arizona 200",
+      "cilindraje": "199cc",
+      "categoria": "Adventure"
+    }
   ],
   "Kawasaki": [
-    { "modelo": "KLX 150", "cilindraje": "144cc", "categoria": "Enduro / Doble Propósito" },
-    { "modelo": "KLX 230", "cilindraje": "233cc", "categoria": "Enduro / Doble Propósito" },
-    { "modelo": "KLX 300", "cilindraje": "292cc", "categoria": "Enduro / Doble Propósito" },
-    { "modelo": "Z400", "cilindraje": "399cc", "categoria": "Supernaked" },
-    { "modelo": "Z500", "cilindraje": "451cc", "categoria": "Supernaked" },
-    { "modelo": "Z650", "cilindraje": "649cc", "categoria": "Supernaked" },
-    { "modelo": "Z900", "cilindraje": "948cc", "categoria": "Supernaked" },
-    { "modelo": "Z H2", "cilindraje": "998cc", "categoria": "Hypernaked" },
-    { "modelo": "Ninja 400", "cilindraje": "399cc", "categoria": "Supersport" },
-    { "modelo": "Ninja 500", "cilindraje": "451cc", "categoria": "Supersport" },
-    { "modelo": "Ninja 650", "cilindraje": "649cc", "categoria": "Sport" },
-    { "modelo": "Ninja ZX-4RR", "cilindraje": "399cc", "categoria": "Supersport" },
-    { "modelo": "Ninja ZX-6R", "cilindraje": "636cc", "categoria": "Supersport" },
-    { "modelo": "Ninja ZX-10R", "cilindraje": "998cc", "categoria": "Superbike" },
-    { "modelo": "Versys-X 300", "cilindraje": "296cc", "categoria": "Adventure" },
-    { "modelo": "Versys 650", "cilindraje": "649cc", "categoria": "Adventure Touring" },
-    { "modelo": "Versys 1000 SE", "cilindraje": "1043cc", "categoria": "Adventure Touring" },
-    { "modelo": "KLR 650", "cilindraje": "652cc", "categoria": "Adventure" },
-    { "modelo": "Vulcan S 650", "cilindraje": "649cc", "categoria": "Cruiser" }
+    {
+      "modelo": "KLX 150",
+      "cilindraje": "144cc",
+      "categoria": "Enduro / Doble Propósito"
+    },
+    {
+      "modelo": "KLX 230",
+      "cilindraje": "233cc",
+      "categoria": "Enduro / Doble Propósito"
+    },
+    {
+      "modelo": "KLX 300",
+      "cilindraje": "292cc",
+      "categoria": "Enduro / Doble Propósito"
+    },
+    {
+      "modelo": "Z400",
+      "cilindraje": "399cc",
+      "categoria": "Supernaked"
+    },
+    {
+      "modelo": "Z500",
+      "cilindraje": "451cc",
+      "categoria": "Supernaked"
+    },
+    {
+      "modelo": "Z650",
+      "cilindraje": "649cc",
+      "categoria": "Supernaked"
+    },
+    {
+      "modelo": "Z900",
+      "cilindraje": "948cc",
+      "categoria": "Supernaked"
+    },
+    {
+      "modelo": "Z H2",
+      "cilindraje": "998cc",
+      "categoria": "Hypernaked"
+    },
+    {
+      "modelo": "Ninja 400",
+      "cilindraje": "399cc",
+      "categoria": "Supersport"
+    },
+    {
+      "modelo": "Ninja 500",
+      "cilindraje": "451cc",
+      "categoria": "Supersport"
+    },
+    {
+      "modelo": "Ninja 650",
+      "cilindraje": "649cc",
+      "categoria": "Sport"
+    },
+    {
+      "modelo": "Ninja ZX-4RR",
+      "cilindraje": "399cc",
+      "categoria": "Supersport"
+    },
+    {
+      "modelo": "Ninja ZX-6R",
+      "cilindraje": "636cc",
+      "categoria": "Supersport"
+    },
+    {
+      "modelo": "Ninja ZX-10R",
+      "cilindraje": "998cc",
+      "categoria": "Superbike"
+    },
+    {
+      "modelo": "Versys-X 300",
+      "cilindraje": "296cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "Versys 650",
+      "cilindraje": "649cc",
+      "categoria": "Adventure Touring"
+    },
+    {
+      "modelo": "Versys 1000 SE",
+      "cilindraje": "1043cc",
+      "categoria": "Adventure Touring"
+    },
+    {
+      "modelo": "KLR 650",
+      "cilindraje": "652cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "Vulcan S 650",
+      "cilindraje": "649cc",
+      "categoria": "Cruiser"
+    }
   ],
   "Royal Enfield": [
-    { "modelo": "Hunter 350", "cilindraje": "349cc", "categoria": "Roadster" },
-    { "modelo": "Classic 350", "cilindraje": "349cc", "categoria": "Clásica" },
-    { "modelo": "Meteor 350", "cilindraje": "349cc", "categoria": "Cruiser" },
-    { "modelo": "Bullet 350", "cilindraje": "349cc", "categoria": "Clásica" },
-    { "modelo": "Scram 411", "cilindraje": "411cc", "categoria": "Scrambler / Crossover" },
-    { "modelo": "Himalayan 411", "cilindraje": "411cc", "categoria": "Adventure" },
-    { "modelo": "Himalayan 450", "cilindraje": "452cc", "categoria": "Adventure" },
-    { "modelo": "Guerrilla 450", "cilindraje": "452cc", "categoria": "Roadster" },
-    { "modelo": "Interceptor 650", "cilindraje": "648cc", "categoria": "Twin Roadster" },
-    { "modelo": "Continental GT 650", "cilindraje": "648cc", "categoria": "Café Racer" },
-    { "modelo": "Super Meteor 650", "cilindraje": "648cc", "categoria": "Cruiser" },
-    { "modelo": "Shotgun 650", "cilindraje": "648cc", "categoria": "Custom Bobber" }
+    {
+      "modelo": "Hunter 350",
+      "cilindraje": "349cc",
+      "categoria": "Roadster"
+    },
+    {
+      "modelo": "Classic 350",
+      "cilindraje": "349cc",
+      "categoria": "Clásica"
+    },
+    {
+      "modelo": "Meteor 350",
+      "cilindraje": "349cc",
+      "categoria": "Cruiser"
+    },
+    {
+      "modelo": "Bullet 350",
+      "cilindraje": "349cc",
+      "categoria": "Clásica"
+    },
+    {
+      "modelo": "Scram 411",
+      "cilindraje": "411cc",
+      "categoria": "Scrambler / Crossover"
+    },
+    {
+      "modelo": "Himalayan 411",
+      "cilindraje": "411cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "Himalayan 450",
+      "cilindraje": "452cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "Guerrilla 450",
+      "cilindraje": "452cc",
+      "categoria": "Roadster"
+    },
+    {
+      "modelo": "Interceptor 650",
+      "cilindraje": "648cc",
+      "categoria": "Twin Roadster"
+    },
+    {
+      "modelo": "Continental GT 650",
+      "cilindraje": "648cc",
+      "categoria": "Café Racer"
+    },
+    {
+      "modelo": "Super Meteor 650",
+      "cilindraje": "648cc",
+      "categoria": "Cruiser"
+    },
+    {
+      "modelo": "Shotgun 650",
+      "cilindraje": "648cc",
+      "categoria": "Custom Bobber"
+    }
   ],
   "BMW": [
-    { "modelo": "G 310 R", "cilindraje": "313cc", "categoria": "Roadster" },
-    { "modelo": "G 310 GS", "cilindraje": "313cc", "categoria": "Adventure" },
-    { "modelo": "C 400 X", "cilindraje": "350cc", "categoria": "Maxi Scooter" },
-    { "modelo": "C 400 GT", "cilindraje": "350cc", "categoria": "Maxi Scooter" },
-    { "modelo": "F 750 GS", "cilindraje": "853cc", "categoria": "Adventure" },
-    { "modelo": "F 800 GS", "cilindraje": "895cc", "categoria": "Adventure" },
-    { "modelo": "F 850 GS", "cilindraje": "853cc", "categoria": "Adventure" },
-    { "modelo": "F 900 R", "cilindraje": "895cc", "categoria": "Roadster" },
-    { "modelo": "F 900 XR", "cilindraje": "895cc", "categoria": "Sport Touring" },
-    { "modelo": "F 900 GS", "cilindraje": "895cc", "categoria": "Adventure" },
-    { "modelo": "S 1000 R", "cilindraje": "999cc", "categoria": "Hyper Naked" },
-    { "modelo": "S 1000 RR", "cilindraje": "999cc", "categoria": "Superbike" },
-    { "modelo": "S 1000 XR", "cilindraje": "999cc", "categoria": "Sport Touring" },
-    { "modelo": "R 1250 GS", "cilindraje": "1254cc", "categoria": "Adventure" },
-    { "modelo": "R 1250 GS Adventure", "cilindraje": "1254cc", "categoria": "Adventure" },
-    { "modelo": "R 1300 GS", "cilindraje": "1300cc", "categoria": "Adventure" },
-    { "modelo": "R 18", "cilindraje": "1802cc", "categoria": "Heritage Cruiser" }
+    {
+      "modelo": "G 310 R",
+      "cilindraje": "313cc",
+      "categoria": "Roadster"
+    },
+    {
+      "modelo": "G 310 GS",
+      "cilindraje": "313cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "C 400 X",
+      "cilindraje": "350cc",
+      "categoria": "Maxi Scooter"
+    },
+    {
+      "modelo": "C 400 GT",
+      "cilindraje": "350cc",
+      "categoria": "Maxi Scooter"
+    },
+    {
+      "modelo": "F 750 GS",
+      "cilindraje": "853cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "F 800 GS",
+      "cilindraje": "895cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "F 850 GS",
+      "cilindraje": "853cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "F 900 R",
+      "cilindraje": "895cc",
+      "categoria": "Roadster"
+    },
+    {
+      "modelo": "F 900 XR",
+      "cilindraje": "895cc",
+      "categoria": "Sport Touring"
+    },
+    {
+      "modelo": "F 900 GS",
+      "cilindraje": "895cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "S 1000 R",
+      "cilindraje": "999cc",
+      "categoria": "Hyper Naked"
+    },
+    {
+      "modelo": "S 1000 RR",
+      "cilindraje": "999cc",
+      "categoria": "Superbike"
+    },
+    {
+      "modelo": "S 1000 XR",
+      "cilindraje": "999cc",
+      "categoria": "Sport Touring"
+    },
+    {
+      "modelo": "R 1250 GS",
+      "cilindraje": "1254cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "R 1250 GS Adventure",
+      "cilindraje": "1254cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "R 1300 GS",
+      "cilindraje": "1300cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "R 18",
+      "cilindraje": "1802cc",
+      "categoria": "Heritage Cruiser"
+    }
   ],
   "Benelli": [
-    { "modelo": "TNT 135", "cilindraje": "135cc", "categoria": "Mini Naked" },
-    { "modelo": "TNT 150i", "cilindraje": "149cc", "categoria": "Street" },
-    { "modelo": "180S", "cilindraje": "175cc", "categoria": "Naked" },
-    { "modelo": "TNT 25N", "cilindraje": "249cc", "categoria": "Naked" },
-    { "modelo": "BN 302S", "cilindraje": "300cc", "categoria": "Naked" },
-    { "modelo": "Leoncino 250", "cilindraje": "249cc", "categoria": "Scrambler" },
-    { "modelo": "Leoncino 500", "cilindraje": "500cc", "categoria": "Scrambler" },
-    { "modelo": "Leoncino 800", "cilindraje": "754cc", "categoria": "Scrambler" },
-    { "modelo": "TRK 251", "cilindraje": "249cc", "categoria": "Adventure" },
-    { "modelo": "TRK 502", "cilindraje": "500cc", "categoria": "Adventure" },
-    { "modelo": "TRK 502X", "cilindraje": "500cc", "categoria": "Adventure" },
-    { "modelo": "TRK 702X", "cilindraje": "698cc", "categoria": "Adventure" },
-    { "modelo": "502C", "cilindraje": "500cc", "categoria": "Cruiser" },
-    { "modelo": "752S", "cilindraje": "754cc", "categoria": "Naked" }
+    {
+      "modelo": "TNT 135",
+      "cilindraje": "135cc",
+      "categoria": "Mini Naked"
+    },
+    {
+      "modelo": "TNT 150i",
+      "cilindraje": "149cc",
+      "categoria": "Street"
+    },
+    {
+      "modelo": "180S",
+      "cilindraje": "175cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "TNT 25N",
+      "cilindraje": "249cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "BN 302S",
+      "cilindraje": "300cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "Leoncino 250",
+      "cilindraje": "249cc",
+      "categoria": "Scrambler"
+    },
+    {
+      "modelo": "Leoncino 500",
+      "cilindraje": "500cc",
+      "categoria": "Scrambler"
+    },
+    {
+      "modelo": "Leoncino 800",
+      "cilindraje": "754cc",
+      "categoria": "Scrambler"
+    },
+    {
+      "modelo": "TRK 251",
+      "cilindraje": "249cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "TRK 502",
+      "cilindraje": "500cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "TRK 502X",
+      "cilindraje": "500cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "TRK 702X",
+      "cilindraje": "698cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "502C",
+      "cilindraje": "500cc",
+      "categoria": "Cruiser"
+    },
+    {
+      "modelo": "752S",
+      "cilindraje": "754cc",
+      "categoria": "Naked"
+    }
   ],
   "Husqvarna": [
-    { "modelo": "Svartpilen 200", "cilindraje": "199cc", "categoria": "Urban Explorer" },
-    { "modelo": "Svartpilen 250", "cilindraje": "248cc", "categoria": "Urban Explorer" },
-    { "modelo": "Svartpilen 401", "cilindraje": "373cc", "categoria": "Urban Explorer" },
-    { "modelo": "Svartpilen 401 Gen 2", "cilindraje": "399cc", "categoria": "Urban Explorer" },
-    { "modelo": "Vitpilen 401", "cilindraje": "373cc", "categoria": "Café Racer" },
-    { "modelo": "701 Enduro", "cilindraje": "693cc", "categoria": "Enduro" },
-    { "modelo": "701 Supermoto", "cilindraje": "693cc", "categoria": "Supermoto" },
-    { "modelo": "Norden 901", "cilindraje": "889cc", "categoria": "Adventure" }
+    {
+      "modelo": "Svartpilen 200",
+      "cilindraje": "199cc",
+      "categoria": "Urban Explorer"
+    },
+    {
+      "modelo": "Svartpilen 250",
+      "cilindraje": "248cc",
+      "categoria": "Urban Explorer"
+    },
+    {
+      "modelo": "Svartpilen 401",
+      "cilindraje": "373cc",
+      "categoria": "Urban Explorer"
+    },
+    {
+      "modelo": "Svartpilen 401 Gen 2",
+      "cilindraje": "399cc",
+      "categoria": "Urban Explorer"
+    },
+    {
+      "modelo": "Vitpilen 401",
+      "cilindraje": "373cc",
+      "categoria": "Café Racer"
+    },
+    {
+      "modelo": "701 Enduro",
+      "cilindraje": "693cc",
+      "categoria": "Enduro"
+    },
+    {
+      "modelo": "701 Supermoto",
+      "cilindraje": "693cc",
+      "categoria": "Supermoto"
+    },
+    {
+      "modelo": "Norden 901",
+      "cilindraje": "889cc",
+      "categoria": "Adventure"
+    }
   ],
   "CFMoto": [
-    { "modelo": "250 NK", "cilindraje": "249cc", "categoria": "Naked" },
-    { "modelo": "300 NK", "cilindraje": "292cc", "categoria": "Naked" },
-    { "modelo": "450 NK", "cilindraje": "449cc", "categoria": "Naked" },
-    { "modelo": "650 NK", "cilindraje": "649cc", "categoria": "Naked" },
-    { "modelo": "800 NK", "cilindraje": "799cc", "categoria": "Naked" },
-    { "modelo": "250 SR", "cilindraje": "249cc", "categoria": "Supersport" },
-    { "modelo": "300 SR", "cilindraje": "292cc", "categoria": "Supersport" },
-    { "modelo": "450 SR", "cilindraje": "449cc", "categoria": "Supersport" },
-    { "modelo": "450 MT", "cilindraje": "449cc", "categoria": "Adventure" },
-    { "modelo": "650 MT", "cilindraje": "649cc", "categoria": "Adventure Touring" },
-    { "modelo": "700 MT", "cilindraje": "693cc", "categoria": "Adventure Touring" },
-    { "modelo": "800 MT Explore", "cilindraje": "799cc", "categoria": "Adventure" },
-    { "modelo": "700 CL-X Heritage", "cilindraje": "693cc", "categoria": "Neo-Retro" }
+    {
+      "modelo": "250 NK",
+      "cilindraje": "249cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "300 NK",
+      "cilindraje": "292cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "450 NK",
+      "cilindraje": "449cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "650 NK",
+      "cilindraje": "649cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "800 NK",
+      "cilindraje": "799cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "250 SR",
+      "cilindraje": "249cc",
+      "categoria": "Supersport"
+    },
+    {
+      "modelo": "300 SR",
+      "cilindraje": "292cc",
+      "categoria": "Supersport"
+    },
+    {
+      "modelo": "450 SR",
+      "cilindraje": "449cc",
+      "categoria": "Supersport"
+    },
+    {
+      "modelo": "450 MT",
+      "cilindraje": "449cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "650 MT",
+      "cilindraje": "649cc",
+      "categoria": "Adventure Touring"
+    },
+    {
+      "modelo": "700 MT",
+      "cilindraje": "693cc",
+      "categoria": "Adventure Touring"
+    },
+    {
+      "modelo": "800 MT Explore",
+      "cilindraje": "799cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "700 CL-X Heritage",
+      "cilindraje": "693cc",
+      "categoria": "Neo-Retro"
+    }
   ],
   "Ducati": [
-    { "modelo": "Scrambler Icon 800", "cilindraje": "803cc", "categoria": "Scrambler" },
-    { "modelo": "Monster 937", "cilindraje": "937cc", "categoria": "Naked" },
-    { "modelo": "Hypermotard 698 Mono", "cilindraje": "659cc", "categoria": "Supermotard" },
-    { "modelo": "Hypermotard 950", "cilindraje": "937cc", "categoria": "Supermotard" },
-    { "modelo": "Multistrada V2", "cilindraje": "937cc", "categoria": "Adventure Touring" },
-    { "modelo": "Multistrada V4", "cilindraje": "1158cc", "categoria": "Adventure Touring" },
-    { "modelo": "DesertX", "cilindraje": "937cc", "categoria": "Adventure Rally" },
-    { "modelo": "Panigale V2", "cilindraje": "955cc", "categoria": "Superbike" },
-    { "modelo": "Panigale V4", "cilindraje": "1103cc", "categoria": "Superbike" },
-    { "modelo": "Streetfighter V2", "cilindraje": "955cc", "categoria": "Hyper Naked" },
-    { "modelo": "Streetfighter V4", "cilindraje": "1103cc", "categoria": "Hyper Naked" },
-    { "modelo": "Diavel V4", "cilindraje": "1158cc", "categoria": "Power Cruiser" }
+    {
+      "modelo": "Scrambler Icon 800",
+      "cilindraje": "803cc",
+      "categoria": "Scrambler"
+    },
+    {
+      "modelo": "Monster 937",
+      "cilindraje": "937cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "Hypermotard 698 Mono",
+      "cilindraje": "659cc",
+      "categoria": "Supermotard"
+    },
+    {
+      "modelo": "Hypermotard 950",
+      "cilindraje": "937cc",
+      "categoria": "Supermotard"
+    },
+    {
+      "modelo": "Multistrada V2",
+      "cilindraje": "937cc",
+      "categoria": "Adventure Touring"
+    },
+    {
+      "modelo": "Multistrada V4",
+      "cilindraje": "1158cc",
+      "categoria": "Adventure Touring"
+    },
+    {
+      "modelo": "DesertX",
+      "cilindraje": "937cc",
+      "categoria": "Adventure Rally"
+    },
+    {
+      "modelo": "Panigale V2",
+      "cilindraje": "955cc",
+      "categoria": "Superbike"
+    },
+    {
+      "modelo": "Panigale V4",
+      "cilindraje": "1103cc",
+      "categoria": "Superbike"
+    },
+    {
+      "modelo": "Streetfighter V2",
+      "cilindraje": "955cc",
+      "categoria": "Hyper Naked"
+    },
+    {
+      "modelo": "Streetfighter V4",
+      "cilindraje": "1103cc",
+      "categoria": "Hyper Naked"
+    },
+    {
+      "modelo": "Diavel V4",
+      "cilindraje": "1158cc",
+      "categoria": "Power Cruiser"
+    }
   ],
   "Triumph": [
-    { "modelo": "Speed 400", "cilindraje": "398cc", "categoria": "Roadster" },
-    { "modelo": "Scrambler 400 X", "cilindraje": "398cc", "categoria": "Scrambler" },
-    { "modelo": "Trident 660", "cilindraje": "660cc", "categoria": "Roadster" },
-    { "modelo": "Tiger Sport 660", "cilindraje": "660cc", "categoria": "Adventure Sport" },
-    { "modelo": "Street Triple 765 R", "cilindraje": "765cc", "categoria": "Roadster" },
-    { "modelo": "Street Triple 765 RS", "cilindraje": "765cc", "categoria": "Roadster" },
-    { "modelo": "Tiger 850 Sport", "cilindraje": "888cc", "categoria": "Adventure" },
-    { "modelo": "Tiger 900 GT Pro", "cilindraje": "888cc", "categoria": "Adventure" },
-    { "modelo": "Tiger 900 Rally Pro", "cilindraje": "888cc", "categoria": "Adventure" },
-    { "modelo": "Tiger 1200 Rally Explorer", "cilindraje": "1160cc", "categoria": "Adventure" },
-    { "modelo": "Bonneville T100", "cilindraje": "900cc", "categoria": "Modern Classic" },
-    { "modelo": "Bonneville T120", "cilindraje": "1200cc", "categoria": "Modern Classic" },
-    { "modelo": "Scrambler 900", "cilindraje": "900cc", "categoria": "Scrambler" },
-    { "modelo": "Scrambler 1200 XE", "cilindraje": "1200cc", "categoria": "Scrambler" },
-    { "modelo": "Rocket 3 R", "cilindraje": "2458cc", "categoria": "Power Roadster" }
+    {
+      "modelo": "Speed 400",
+      "cilindraje": "398cc",
+      "categoria": "Roadster"
+    },
+    {
+      "modelo": "Scrambler 400 X",
+      "cilindraje": "398cc",
+      "categoria": "Scrambler"
+    },
+    {
+      "modelo": "Trident 660",
+      "cilindraje": "660cc",
+      "categoria": "Roadster"
+    },
+    {
+      "modelo": "Tiger Sport 660",
+      "cilindraje": "660cc",
+      "categoria": "Adventure Sport"
+    },
+    {
+      "modelo": "Street Triple 765 R",
+      "cilindraje": "765cc",
+      "categoria": "Roadster"
+    },
+    {
+      "modelo": "Street Triple 765 RS",
+      "cilindraje": "765cc",
+      "categoria": "Roadster"
+    },
+    {
+      "modelo": "Tiger 850 Sport",
+      "cilindraje": "888cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "Tiger 900 GT Pro",
+      "cilindraje": "888cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "Tiger 900 Rally Pro",
+      "cilindraje": "888cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "Tiger 1200 Rally Explorer",
+      "cilindraje": "1160cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "Bonneville T100",
+      "cilindraje": "900cc",
+      "categoria": "Modern Classic"
+    },
+    {
+      "modelo": "Bonneville T120",
+      "cilindraje": "1200cc",
+      "categoria": "Modern Classic"
+    },
+    {
+      "modelo": "Scrambler 900",
+      "cilindraje": "900cc",
+      "categoria": "Scrambler"
+    },
+    {
+      "modelo": "Scrambler 1200 XE",
+      "cilindraje": "1200cc",
+      "categoria": "Scrambler"
+    },
+    {
+      "modelo": "Rocket 3 R",
+      "cilindraje": "2458cc",
+      "categoria": "Power Roadster"
+    }
   ],
   "Kymco": [
-    { "modelo": "Agility 125 Digital 3.0", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "Agility Go 125", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "Twist 125", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "Fly 125", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "Like 125", "cilindraje": "124cc", "categoria": "Scooter Clásico" },
-    { "modelo": "Super 8 150", "cilindraje": "149cc", "categoria": "Scooter" },
-    { "modelo": "Downtown 350i", "cilindraje": "321cc", "categoria": "Maxi Scooter" },
-    { "modelo": "Xciting S 400", "cilindraje": "400cc", "categoria": "Maxi Scooter" },
-    { "modelo": "AK 550", "cilindraje": "550cc", "categoria": "Maxi Scooter" }
+    {
+      "modelo": "Agility 125 Digital 3.0",
+      "cilindraje": "124cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "Agility Go 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "Twist 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "Fly 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "Like 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter Clásico"
+    },
+    {
+      "modelo": "Super 8 150",
+      "cilindraje": "149cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "Downtown 350i",
+      "cilindraje": "321cc",
+      "categoria": "Maxi Scooter"
+    },
+    {
+      "modelo": "Xciting S 400",
+      "cilindraje": "400cc",
+      "categoria": "Maxi Scooter"
+    },
+    {
+      "modelo": "AK 550",
+      "cilindraje": "550cc",
+      "categoria": "Maxi Scooter"
+    }
   ],
   "SYM": [
-    { "modelo": "Crox 125", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "CroxR 150", "cilindraje": "149cc", "categoria": "Scooter" },
-    { "modelo": "Orbit 125", "cilindraje": "124cc", "categoria": "Scooter" },
-    { "modelo": "Jet 14 200i ABS", "cilindraje": "169cc", "categoria": "Scooter" },
-    { "modelo": "NHX 190i", "cilindraje": "183cc", "categoria": "Naked" },
-    { "modelo": "NHT 200", "cilindraje": "183cc", "categoria": "Adventure" },
-    { "modelo": "Citycom S 300i", "cilindraje": "278cc", "categoria": "Maxi Scooter" },
-    { "modelo": "Joymax Z+ 300", "cilindraje": "278cc", "categoria": "Maxi Scooter" },
-    { "modelo": "Maxsym TL 508", "cilindraje": "508cc", "categoria": "Maxi Scooter" }
+    {
+      "modelo": "Crox 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "CroxR 150",
+      "cilindraje": "149cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "Orbit 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "Jet 14 200i ABS",
+      "cilindraje": "169cc",
+      "categoria": "Scooter"
+    },
+    {
+      "modelo": "NHX 190i",
+      "cilindraje": "183cc",
+      "categoria": "Naked"
+    },
+    {
+      "modelo": "NHT 200",
+      "cilindraje": "183cc",
+      "categoria": "Adventure"
+    },
+    {
+      "modelo": "Citycom S 300i",
+      "cilindraje": "278cc",
+      "categoria": "Maxi Scooter"
+    },
+    {
+      "modelo": "Joymax Z+ 300",
+      "cilindraje": "278cc",
+      "categoria": "Maxi Scooter"
+    },
+    {
+      "modelo": "Maxsym TL 508",
+      "cilindraje": "508cc",
+      "categoria": "Maxi Scooter"
+    }
   ]
 }

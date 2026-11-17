@@ -75,11 +75,19 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
     var formAnio by mutableStateOf("")
     var formKilometraje by mutableStateOf("")
 
-    // Catálogo de Marcas y Modelos (con cilindrada fija por modelo)
-    val marcasDisponibles: List<String> = MotorcycleCatalog.MARCAS
+    // Catálogo de Marcas y Modelos (en línea desde Firestore con respaldo local)
+    private val _catalogo = MutableStateFlow(MotorcycleCatalog.snapshot())
+    val catalogo: StateFlow<Map<String, List<MotoModelSpec>>> = _catalogo.asStateFlow()
+
+    val marcasDisponibles: List<String>
+        get() = _catalogo.value.keys.toList()
 
     private val _modelosDeMarca = MutableStateFlow<List<MotoModelSpec>>(emptyList())
     val modelosDeMarca: StateFlow<List<MotoModelSpec>> = _modelosDeMarca.asStateFlow()
+
+    init {
+        refrescarCatalogoRemoto()
+    }
 
     val reportedIds: StateFlow<Set<String>> = repository.allReportedIds
         .map { it.toSet() }
@@ -276,6 +284,18 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
         loadModelsForBrand(marca)
     }
 
+    private fun refrescarCatalogoRemoto() {
+        viewModelScope.launch {
+            val remoto = FichaLibraryClient.cargarCatalogo()
+            if (remoto.isNotEmpty()) {
+                _catalogo.value = MotorcycleCatalog.mergeWithOfflineCatalog(remoto)
+                if (formMarca.isNotBlank()) {
+                    loadModelsForBrand(formMarca)
+                }
+            }
+        }
+    }
+
     private fun loadModelsForBrand(marca: String) {
         val cleanMarca = marca.trim()
         if (cleanMarca.isEmpty()) {
@@ -283,7 +303,7 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
             return
         }
 
-        val models = MotorcycleCatalog.baseModelsForBrand(cleanMarca)
+        val models = MotorcycleCatalog.modelsForBrand(cleanMarca, _catalogo.value)
         _modelosDeMarca.value = models
         if (formModelo.isNotBlank() && formCilindraje.isBlank()) {
             MotorcycleCatalog.findDisplacement(cleanMarca, formModelo, models)?.let {

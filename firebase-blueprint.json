@@ -15,6 +15,27 @@
       },
       "required": ["marca", "modelo", "cilindraje_cc", "anio_desde", "anio_hasta", "clave", "estado"]
     },
+    "Catalogo": {
+      "title": "Catalogo",
+      "description": "Catálogo oficial de modelos y cilindrajes recolectado por marca.",
+      "type": "object",
+      "properties": {
+        "marca": { "type": "string", "description": "Nombre oficial de la marca" },
+        "fuentes": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "URLs oficiales consultadas"
+        },
+        "modelos": {
+          "type": "array",
+          "items": { "type": "object" },
+          "description": "Lista de modelos con cilindraje_cc, categoria, url_fuente, tiene_ficha, vigente y visto_por_ultima_vez"
+        },
+        "actualizado_en": { "type": "string", "description": "Fecha de actualización ISO AAAA-MM-DD" },
+        "estado": { "type": "string", "enum": ["publicada"], "description": "Estado de publicación" }
+      },
+      "required": ["marca", "fuentes", "modelos", "actualizado_en", "estado"]
+    },
     "Solicitud": {
       "title": "Solicitud",
       "description": "Solicitud de publicación de una ficha técnica oficial por parte de usuarios.",
@@ -64,6 +85,10 @@
     "/fichas/{fichaId}": {
       "schema": { "$ref": "#/entities/Ficha" },
       "description": "Colección de fichas técnicas publicadas (solo lectura para clientes cuando estado == publicada)."
+    },
+    "/catalogo/{marcaId}": {
+      "schema": { "$ref": "#/entities/Catalogo" },
+      "description": "Catálogo oficial de motocicletas por marca (solo lectura para clientes cuando estado == publicada)."
     },
     "/solicitudes/{solicitudId}": {
       "schema": { "$ref": "#/entities/Solicitud" },

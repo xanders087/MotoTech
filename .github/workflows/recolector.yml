@@ -1,0 +1,89 @@
+name: Recolector de catálogo oficial
+
+on:
+  pull_request:
+    paths: ["herramientas/recolector/**", ".github/workflows/recolector.yml"]
+  push:
+    branches: [main]
+    paths: ["herramientas/recolector/**", ".github/workflows/recolector.yml"]
+  schedule:
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pruebas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar dependencias de pruebas
+        run: pip install --quiet beautifulsoup4
+      - name: Pruebas unitarias del recolector
+        run: python -m unittest discover -s herramientas/recolector -v
+
+  recolectar:
+    needs: pruebas
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar dependencias y Chromium
+        run: |
+          pip install --quiet beautifulsoup4 playwright playwright-stealth firebase-admin
+          playwright install chromium --with-deps
+      - name: Ejecutar recolector oficial
+        id: recolector
+        run: |
+          set +e
+          if [ -n "$FIREBASE_SERVICE_ACCOUNT" ]; then
+            printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$RUNNER_TEMP/cuenta.json"
+            GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/cuenta.json" python herramientas/recolector/recolectar.py
+            STATUS=$?
+            rm -f "$RUNNER_TEMP/cuenta.json"
+          else
+            echo "FIREBASE_SERVICE_ACCOUNT no configurado; ejecutando en modo --simular."
+            python herramientas/recolector/recolectar.py --simular
+            STATUS=$?
+          fi
+          echo "exit_code=$STATUS" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Crear PR si cambió la instantánea offline
+        if: always()
+        run: |
+          if git diff --quiet app/src/main/resources/motorcycle_catalog.json; then
+            echo "Sin cambios en motorcycle_catalog.json."
+            exit 0
+          fi
+          BRANCH="chore/catalogo-oficial-$(date -u +%Y%m%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add app/src/main/resources/motorcycle_catalog.json
+          git commit -m "chore(catalogo): actualizar instantanea oficial"
+          git push --force origin "$BRANCH"
+          if ! gh pr list --head "$BRANCH" --state open --json number --jq 'length' | grep -q '^[1-9]'; then
+            gh pr create \
+              --title "chore(catalogo): actualizar instantánea oficial" \
+              --body "Actualización automática semanal generada por el recolector oficial." \
+              --base main \
+              --head "$BRANCH"
+          fi
+      - name: Verificar alertas del recolector
+        if: steps.recolector.outputs.exit_code != '0'
+        run: |
+          echo "::error::Una o más marcas devolvieron errores o 0 modelos; se conservó su catálogo previo."
+          exit 1

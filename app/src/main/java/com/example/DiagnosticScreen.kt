@@ -60,6 +60,7 @@ fun MotoTechCockpit(
     val isPremium by viewModel.isPremium.collectAsState()
     val serviceRecords by viewModel.serviceRecords.collectAsState()
     val solicitud by viewModel.solicitud.collectAsState()
+    val catalogo by viewModel.catalogo.collectAsState()
     val modelosDeMarca by viewModel.modelosDeMarca.collectAsState()
     val reportedIds by viewModel.reportedIds.collectAsState()
     val reportandoCampo by viewModel.reportandoCampo.collectAsState()
@@ -530,8 +531,9 @@ fun MotoTechCockpit(
     // Modal desplegable con buscador para seleccionar la Marca
     if (showBrandPicker) {
         BrandPickerDialog(
-            brands = viewModel.marcasDisponibles,
+            brands = catalogo.keys.toList(),
             selectedBrand = viewModel.formMarca,
+            modelCountForBrand = { brand -> MotorcycleCatalog.modelsForBrand(brand, catalogo).size },
             onDismiss = { showBrandPicker = false },
             onSelectBrand = { chosenBrand ->
                 viewModel.selectMarca(chosenBrand)
@@ -937,6 +939,7 @@ private fun CatalogPickerDialog(
 private fun BrandPickerDialog(
     brands: List<String>,
     selectedBrand: String,
+    modelCountForBrand: (String) -> Int = { MotorcycleCatalog.baseModelsForBrand(it).size },
     onDismiss: () -> Unit,
     onSelectBrand: (String) -> Unit
 ) {
@@ -966,7 +969,7 @@ private fun BrandPickerDialog(
         ) {
             items(filteredBrands) { brand ->
                 val isSelected = brand.equals(selectedBrand, ignoreCase = true)
-                val count = MotorcycleCatalog.baseModelsForBrand(brand).size
+                val count = modelCountForBrand(brand)
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -1097,11 +1100,16 @@ private fun ModelPickerDialog(
                                     fontWeight = FontWeight.Bold,
                                     color = MotoTextPrimary
                                 )
-                                if (!spec.categoria.isNullOrBlank()) {
+                                val subtitulo = buildList {
+                                    spec.categoria?.takeIf { it.isNotBlank() }?.let { add(it) }
+                                    if (!spec.vigente) add("Descontinuado")
+                                    if (spec.tiene_ficha) add("Con ficha oficial")
+                                }.joinToString(" · ")
+                                if (subtitulo.isNotEmpty()) {
                                     Text(
-                                        text = spec.categoria,
+                                        text = subtitulo,
                                         fontSize = 11.sp,
-                                        color = MotoTextSecondary
+                                        color = if (spec.tiene_ficha) RoutineText else MotoTextSecondary
                                     )
                                 }
                             }
