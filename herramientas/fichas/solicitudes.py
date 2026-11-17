@@ -26,11 +26,16 @@ def formatear(solicitudes: list[dict], limite: int = 30) -> str:
 
 def main(argv: list[str]) -> int:
     limite = int(argv[1]) if len(argv) > 1 else 30
+    import os
     import firebase_admin
     from firebase_admin import firestore
 
     firebase_admin.initialize_app()
-    docs = firestore.client().collection("solicitudes").stream()
+    db_id = os.environ.get(
+        "FIRESTORE_DATABASE_ID",
+        "ai-studio-android-mototech-364d3daf-8123-4de3-b899-775d66bdcdfb",
+    )
+    docs = firestore.client(database_id=db_id).collection("solicitudes").stream()
     print(formatear([d.to_dict() for d in docs], limite))
     return 0
 

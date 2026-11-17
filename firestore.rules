@@ -21,7 +21,7 @@ service cloud.firestore {
           && d.cilindraje_cc is int && d.cilindraje_cc >= 0 && d.cilindraje_cc <= 2600
           && d.anio is int && d.anio >= 1950 && d.anio <= 2100
           && d.total is int
-          && d.ultima == request.time;
+          && d.ultima is timestamp && d.ultima <= request.time;
       }
       allow create: if datosValidos() && request.resource.data.total == 1;
       allow update: if datosValidos()

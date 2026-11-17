@@ -45,11 +45,16 @@ def main(argv: list[str]) -> int:
 
     db = None
     if not simular:
+        import os
         import firebase_admin
         from firebase_admin import firestore
 
         firebase_admin.initialize_app()
-        db = firestore.client()
+        db_id = os.environ.get(
+            "FIRESTORE_DATABASE_ID",
+            "ai-studio-android-mototech-364d3daf-8123-4de3-b899-775d66bdcdfb",
+        )
+        db = firestore.client(database_id=db_id)
 
     for ficha in fichas.values():
         doc_id = validar.id_ficha(ficha)

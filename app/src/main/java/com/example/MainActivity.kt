@@ -49,9 +49,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         configureAppCheck(this, intent)
+        FichaLibraryClient.configure(this)
+        MaintenanceNotificationHelper.createNotificationChannel(this)
+        ThemePreferences.loadThemeMode(this)
+        val initialRoute = intent?.getStringExtra(MaintenanceNotificationHelper.EXTRA_OPEN_ROUTE)
+            ?.takeIf { it.isNotBlank() } ?: "dashboard"
         enableEdgeToEdge()
         setContent {
-            MyApplicationTheme {
+            val activeThemeMode = MotoThemeState.themeMode
+            MyApplicationTheme(themeMode = activeThemeMode) {
                 val context = LocalContext.current
                 val database = AppDatabase.getDatabase(context)
                 val repository = DiagnosticRepository(database.diagnosticDao())
@@ -60,6 +66,13 @@ class MainActivity : ComponentActivity() {
                 )
 
                 val navController = rememberNavController()
+                LaunchedEffect(initialRoute) {
+                    if (initialRoute != "dashboard") {
+                        navController.navigate(initialRoute) {
+                            launchSingleTop = true
+                        }
+                    }
+                }
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentRoute = navBackStackEntry?.destination?.route ?: "dashboard"
 
@@ -83,9 +96,29 @@ class MainActivity : ComponentActivity() {
                                 label = {
                                     Text(
                                         "Cockpit",
-                                        fontSize = 11.sp,
+                                        fontSize = 10.sp,
                                         fontWeight = if (currentRoute == "dashboard") FontWeight.Bold else FontWeight.Normal,
                                         color = if (currentRoute == "dashboard") MotoPrimary else MotoTextSecondary
+                                    )
+                                }
+                            )
+                            NavigationBarItem(
+                                selected = currentRoute == "summary",
+                                onClick = { navController.navigate("summary") },
+                                modifier = Modifier.testTag("nav_summary_tab"),
+                                icon = {
+                                    Icon(
+                                        Icons.Default.BuildCircle,
+                                        contentDescription = "Resumen Preventivo",
+                                        tint = if (currentRoute == "summary") MotoPrimary else MotoTextSecondary
+                                    )
+                                },
+                                label = {
+                                    Text(
+                                        "Resumen KM",
+                                        fontSize = 10.sp,
+                                        fontWeight = if (currentRoute == "summary") FontWeight.Bold else FontWeight.Normal,
+                                        color = if (currentRoute == "summary") MotoPrimary else MotoTextSecondary
                                     )
                                 }
                             )
@@ -102,7 +135,7 @@ class MainActivity : ComponentActivity() {
                                 label = {
                                     Text(
                                         "Hoja Vida",
-                                        fontSize = 11.sp,
+                                        fontSize = 10.sp,
                                         fontWeight = if (currentRoute == "history") FontWeight.Bold else FontWeight.Normal,
                                         color = if (currentRoute == "history") MotoPrimary else MotoTextSecondary
                                     )
@@ -121,7 +154,7 @@ class MainActivity : ComponentActivity() {
                                 label = {
                                     Text(
                                         "Talleres",
-                                        fontSize = 11.sp,
+                                        fontSize = 10.sp,
                                         fontWeight = if (currentRoute == "workshops") FontWeight.Bold else FontWeight.Normal,
                                         color = if (currentRoute == "workshops") MotoPrimary else MotoTextSecondary
                                     )
@@ -140,7 +173,7 @@ class MainActivity : ComponentActivity() {
                                 label = {
                                     Text(
                                         "Flotas/SaaS",
-                                        fontSize = 11.sp,
+                                        fontSize = 10.sp,
                                         fontWeight = if (currentRoute == "premium") FontWeight.Bold else FontWeight.Normal,
                                         color = if (currentRoute == "premium") MotoPrimary else MotoTextSecondary
                                     )
@@ -155,11 +188,29 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.padding(innerPadding)
                     ) {
                         composable("dashboard") {
-                            MotoTechCockpit(viewModel, onNavigateToWorkshops = {
-                                navController.navigate("workshops")
-                            }, onNavigateToPremium = {
-                                navController.navigate("premium")
-                            })
+                            MotoTechCockpit(
+                                viewModel = viewModel,
+                                onNavigateToWorkshops = {
+                                    navController.navigate("workshops")
+                                },
+                                onNavigateToPremium = {
+                                    navController.navigate("premium")
+                                },
+                                onNavigateToSummary = {
+                                    navController.navigate("summary")
+                                }
+                            )
+                        }
+                        composable("summary") {
+                            MaintenanceSummaryScreen(
+                                viewModel = viewModel,
+                                onNavigateToCockpit = {
+                                    navController.navigate("dashboard")
+                                },
+                                onNavigateToWorkshops = {
+                                    navController.navigate("workshops")
+                                }
+                            )
                         }
                         composable("history") {
                             HistoryScreen(viewModel)

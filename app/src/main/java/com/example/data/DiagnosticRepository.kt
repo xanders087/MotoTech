@@ -4,6 +4,7 @@ import kotlinx.coroutines.flow.Flow
 
 class DiagnosticRepository(private val diagnosticDao: DiagnosticDao) {
     val allDiagnostics: Flow<List<DiagnosticEntity>> = diagnosticDao.getAllDiagnostics()
+    val allServiceRecords: Flow<List<ServiceRecordEntity>> = diagnosticDao.getAllServiceRecords()
 
     suspend fun findDiagnostic(vehicleKey: String): DiagnosticEntity? =
         diagnosticDao.findDiagnostic(vehicleKey)
@@ -21,6 +22,10 @@ class DiagnosticRepository(private val diagnosticDao: DiagnosticDao) {
 
     suspend fun addServiceRecord(record: ServiceRecordEntity) {
         diagnosticDao.insertServiceRecord(record)
+    }
+
+    suspend fun deleteServiceRecord(id: Int) {
+        diagnosticDao.deleteServiceRecordById(id)
     }
 
     suspend fun findBrandCatalog(marcaKey: String): BrandCatalogEntity? =

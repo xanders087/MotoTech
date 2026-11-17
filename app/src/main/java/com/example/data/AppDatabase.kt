@@ -7,7 +7,16 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [DiagnosticEntity::class, ServiceRecordEntity::class, BrandCatalogEntity::class, FichaRequestEntity::class], version = 6, exportSchema = false)
+@Database(
+    entities = [
+        DiagnosticEntity::class,
+        ServiceRecordEntity::class,
+        BrandCatalogEntity::class,
+        FichaRequestEntity::class
+    ],
+    version = 7,
+    exportSchema = false
+)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun diagnosticDao(): DiagnosticDao
 
@@ -38,6 +47,15 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
+        // Versión 7: notas, taller y costo en cada registro de mantenimiento realizado.
+        private val MIGRATION_6_7 = object : Migration(6, 7) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE `service_records` ADD COLUMN `notas` TEXT NOT NULL DEFAULT ''")
+                db.execSQL("ALTER TABLE `service_records` ADD COLUMN `taller` TEXT NOT NULL DEFAULT ''")
+                db.execSQL("ALTER TABLE `service_records` ADD COLUMN `costo` TEXT NOT NULL DEFAULT ''")
+            }
+        }
+
         @Volatile
         private var INSTANCE: AppDatabase? = null
 
@@ -50,7 +68,7 @@ abstract class AppDatabase : RoomDatabase() {
                 )
                     // La versión 1 solo guardaba fichas en caché, y podían contener datos
                     // generados sin fuente: se descartan en vez de migrarlas.
-                    .addMigrations(MIGRATION_3_4, MIGRATION_4_5, MIGRATION_5_6)
+                    .addMigrations(MIGRATION_3_4, MIGRATION_4_5, MIGRATION_5_6, MIGRATION_6_7)
                     .fallbackToDestructiveMigration(dropAllTables = true)
                     .build()
                 INSTANCE = instance

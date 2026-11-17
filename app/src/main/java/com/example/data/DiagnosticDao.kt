@@ -20,11 +20,17 @@ interface DiagnosticDao {
     @Query("DELETE FROM diagnostics WHERE id = :id")
     suspend fun deleteDiagnosticById(id: Int)
 
-    @Query("SELECT * FROM service_records WHERE vehicleKey = :vehicleKey ORDER BY kilometraje DESC, fecha DESC")
+    @Query("SELECT * FROM service_records WHERE vehicleKey = :vehicleKey ORDER BY fecha DESC, kilometraje DESC")
     fun getServiceRecords(vehicleKey: String): Flow<List<ServiceRecordEntity>>
+
+    @Query("SELECT * FROM service_records ORDER BY fecha DESC, kilometraje DESC")
+    fun getAllServiceRecords(): Flow<List<ServiceRecordEntity>>
 
     @Insert
     suspend fun insertServiceRecord(record: ServiceRecordEntity)
+
+    @Query("DELETE FROM service_records WHERE id = :id")
+    suspend fun deleteServiceRecordById(id: Int)
 
     @Query("SELECT * FROM brand_catalogs WHERE marcaKey = :marcaKey LIMIT 1")
     suspend fun findBrandCatalog(marcaKey: String): BrandCatalogEntity?

@@ -52,8 +52,10 @@ private fun parseFecha(text: String): Long? = runCatching {
 fun MotoTechCockpit(
     viewModel: MainViewModel,
     onNavigateToWorkshops: () -> Unit,
-    onNavigateToPremium: () -> Unit
+    onNavigateToPremium: () -> Unit,
+    onNavigateToSummary: () -> Unit = {}
 ) {
+    val context = androidx.compose.ui.platform.LocalContext.current
     val uiState by viewModel.uiState.collectAsState()
     val isPremium by viewModel.isPremium.collectAsState()
     val serviceRecords by viewModel.serviceRecords.collectAsState()
@@ -61,6 +63,7 @@ fun MotoTechCockpit(
     val modelosDeMarca by viewModel.modelosDeMarca.collectAsState()
     val isLoadingModels by viewModel.isLoadingModels.collectAsState()
     val catalogStatusLabel by viewModel.catalogStatusLabel.collectAsState()
+    val currentThemeMode = MotoThemeState.themeMode
 
     var marcaError by remember { mutableStateOf(false) }
     var modeloError by remember { mutableStateOf(false) }
@@ -117,7 +120,7 @@ fun MotoTechCockpit(
                 .groupBy { it.componente }
                 .mapValues { (_, list) ->
                     val last = list.maxWith(compareBy({ it.kilometraje }, { it.fecha }))
-                    UltimoServicio(last.kilometraje, last.fecha)
+                    UltimoServicio(last.kilometraje, last.fecha, last.notas)
                 }
             MaintenanceCalculator.calcular(
                 plan = success.response.plan_mantenimiento_periodico.orEmpty(),
@@ -153,6 +156,11 @@ fun MotoTechCockpit(
                 },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = MotoBg),
                 actions = {
+                    ThemeModeTopBarButton(
+                        currentMode = currentThemeMode,
+                        onSelectMode = { chosen -> viewModel.setThemeMode(chosen, context) },
+                        modifier = Modifier.padding(end = 6.dp)
+                    )
                     FilledTonalButton(
                         onClick = {
                             if (!isPremium) showGarageLimitDialog = true else onNavigateToPremium()
@@ -195,7 +203,8 @@ fun MotoTechCockpit(
                     cilindraje = viewModel.formCilindraje,
                     anio = viewModel.formAnio,
                     success = success,
-                    items = maintenanceItems
+                    items = maintenanceItems,
+                    onOpenSummary = onNavigateToSummary
                 )
             }
 
@@ -533,8 +542,8 @@ fun MotoTechCockpit(
             componente = registering.componente,
             kmActual = success.kmActual,
             onDismiss = { itemToRegister = null },
-            onConfirm = { km, fecha ->
-                viewModel.registerService(success.vehicleKey, registering.componente, km, fecha)
+            onConfirm = { km, fecha, notas ->
+                viewModel.registerService(success.vehicleKey, registering.componente, km, fecha, notas)
                 itemToRegister = null
             }
         )
@@ -1159,7 +1168,8 @@ private fun VehicleSummaryCard(
     cilindraje: String,
     anio: String,
     success: DiagnosticState.Success?,
-    items: List<ItemMantenimiento>
+    items: List<ItemMantenimiento>,
+    onOpenSummary: () -> Unit = {}
 ) {
     Card(
         modifier = Modifier
@@ -1198,6 +1208,27 @@ private fun VehicleSummaryCard(
                     CockpitHudItem("Próximo servicio", proximoTexto, Icons.Default.Build, proximoColor, Modifier.weight(1f))
                     CockpitHudItem("Fuente", "Manual", Icons.Default.MenuBook, MotoAccentBlue, Modifier.weight(1f))
                 }
+            }
+
+            Spacer(modifier = Modifier.height(12.dp))
+            FilledTonalButton(
+                onClick = onOpenSummary,
+                colors = ButtonDefaults.filledTonalButtonColors(
+                    containerColor = MotoSurfaceVariant,
+                    contentColor = MotoAccentBlue
+                ),
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .testTag("ver_resumen_mantenimiento_button")
+            ) {
+                Icon(Icons.Default.BuildCircle, contentDescription = null, modifier = Modifier.size(18.dp))
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    "Ver Resumen de Próximos Mantenimientos por KM",
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Bold
+                )
             }
         }
     }
@@ -1612,6 +1643,13 @@ private fun MaintenanceSection(
                                 fontSize = 11.sp,
                                 color = style.text.copy(alpha = 0.7f)
                             )
+                            if (it.notas.isNotBlank()) {
+                                Text(
+                                    "Nota: ${it.notas}",
+                                    fontSize = 11.sp,
+                                    color = style.text.copy(alpha = 0.85f)
+                                )
+                            }
                         }
                         FuenteLink(fuente)
 
@@ -1655,10 +1693,11 @@ private fun RegisterServiceDialog(
     componente: String,
     kmActual: Int,
     onDismiss: () -> Unit,
-    onConfirm: (km: Int, fechaMillis: Long) -> Unit
+    onConfirm: (km: Int, fechaMillis: Long, notas: String) -> Unit
 ) {
     var kmText by remember { mutableStateOf(kmActual.toString()) }
     var fechaText by remember { mutableStateOf(formatFecha(System.currentTimeMillis())) }
+    var notasText by remember { mutableStateOf("") }
     var kmError by remember { mutableStateOf<String?>(null) }
     var fechaError by remember { mutableStateOf<String?>(null) }
 
@@ -1682,9 +1721,16 @@ private fun RegisterServiceDialog(
                 FormField(
                     value = fechaText,
                     onValueChange = { fechaText = it; fechaError = null },
-                    label = "Fecha (dd/mm/aaaa)",
+                    label = "Fecha de servicio (dd/mm/aaaa)",
                     error = fechaError,
                     tag = "servicio_fecha_input"
+                )
+                FormField(
+                    value = notasText,
+                    onValueChange = { notasText = it },
+                    label = "Notas del servicio (opcional: marca de aceite, repuestos, etc.)",
+                    error = null,
+                    tag = "servicio_notas_input"
                 )
 
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
@@ -1705,7 +1751,7 @@ private fun RegisterServiceDialog(
                                 else -> null
                             }
                             if (kmError == null && fechaError == null && km != null && fecha != null) {
-                                onConfirm(km, fecha)
+                                onConfirm(km, fecha, notasText.trim())
                             }
                         },
                         colors = ButtonDefaults.buttonColors(containerColor = MotoPrimary),

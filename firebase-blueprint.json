@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "Ficha": {
+      "title": "Ficha",
+      "description": "Ficha técnica oficial de manual de motocicleta publicada en la biblioteca.",
+      "type": "object",
+      "properties": {
+        "marca": { "type": "string", "description": "Marca oficial de la motocicleta" },
+        "modelo": { "type": "string", "description": "Modelo oficial de la motocicleta" },
+        "cilindraje_cc": { "type": "integer", "description": "Cilindrada en cc" },
+        "anio_desde": { "type": "integer", "description": "Año inicial de vigencia del manual" },
+        "anio_hasta": { "type": "integer", "description": "Año final de vigencia del manual" },
+        "clave": { "type": "string", "description": "Clave normalizada marca|modelo|cc" },
+        "estado": { "type": "string", "enum": ["publicada"], "description": "Estado de publicación" }
+      },
+      "required": ["marca", "modelo", "cilindraje_cc", "anio_desde", "anio_hasta", "clave", "estado"]
+    },
+    "Solicitud": {
+      "title": "Solicitud",
+      "description": "Solicitud de publicación de una ficha técnica oficial por parte de usuarios.",
+      "type": "object",
+      "properties": {
+        "marca": { "type": "string" },
+        "modelo": { "type": "string" },
+        "cilindraje_cc": { "type": "integer" },
+        "anio": { "type": "integer" },
+        "clave": { "type": "string" },
+        "total": { "type": "integer" },
+        "ultima": { "type": "string", "format": "date-time" }
+      },
+      "required": ["marca", "modelo", "cilindraje_cc", "anio", "clave", "total", "ultima"]
+    }
+  },
+  "firestore": {
+    "/fichas/{fichaId}": {
+      "schema": { "$ref": "#/entities/Ficha" },
+      "description": "Colección de fichas técnicas publicadas (solo lectura para clientes cuando estado == publicada)."
+    },
+    "/solicitudes/{solicitudId}": {
+      "schema": { "$ref": "#/entities/Solicitud" },
+      "description": "Contador de solicitudes de fichas pendientes por motocicleta y año."
+    }
+  }
+}

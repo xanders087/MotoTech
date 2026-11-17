@@ -98,6 +98,46 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
     private val _isPremium = MutableStateFlow(false)
     val isPremium: StateFlow<Boolean> = _isPremium.asStateFlow()
 
+    // Configuración de Apariencia (Claro, Oscuro, Predeterminado según sistema)
+    private val _themeMode = MutableStateFlow(com.example.ui.theme.MotoThemeState.themeMode)
+    val themeMode: StateFlow<com.example.ui.theme.AppThemeMode> = _themeMode.asStateFlow()
+
+    fun setThemeMode(mode: com.example.ui.theme.AppThemeMode, context: android.content.Context? = null) {
+        _themeMode.value = mode
+        com.example.ui.theme.MotoThemeState.themeMode = mode
+        if (context != null) {
+            ThemePreferences.saveThemeMode(context, mode)
+        }
+    }
+
+    // Configuración de Notificaciones Locales Preventivas por Kilometraje
+    private val _notificacionesActivas = MutableStateFlow(true)
+    val notificacionesActivas: StateFlow<Boolean> = _notificacionesActivas.asStateFlow()
+
+    private val _umbralAlertaKm = MutableStateFlow(500)
+    val umbralAlertaKm: StateFlow<Int> = _umbralAlertaKm.asStateFlow()
+
+    private val _ultimaNotificacionResumen = MutableStateFlow<String?>(null)
+    val ultimaNotificacionResumen: StateFlow<String?> = _ultimaNotificacionResumen.asStateFlow()
+
+    var ultimoEstadoNotificadoKey: String? = null
+        private set
+
+    fun setNotificacionesActivas(activas: Boolean) {
+        _notificacionesActivas.value = activas
+    }
+
+    fun setUmbralAlertaKm(nuevoUmbralKm: Int) {
+        _umbralAlertaKm.value = nuevoUmbralKm.coerceAtLeast(100)
+    }
+
+    fun registrarNotificacionEnviada(resumen: String, claveEstado: String?) {
+        _ultimaNotificacionResumen.value = resumen
+        if (claveEstado != null) {
+            ultimoEstadoNotificadoKey = claveEstado
+        }
+    }
+
     // Digital Logbook (Hoja de Vida) Records
     private val _maintenanceLogs = MutableStateFlow<List<MaintenanceLogItem>>(
         listOf(
@@ -329,19 +369,42 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
         _bookingConfirmation.value = "¡Cita Confirmada con Éxito!\nCódigo: $code\nTaller: $tallerNombre\nServicio: $servicio\nHorario: $fecha a las $hora"
     }
 
-    fun addMaintenanceRecord(titulo: String, kilometraje: Int, taller: String, costo: String, categoria: String) {
+    fun addMaintenanceRecord(
+        titulo: String,
+        kilometraje: Int,
+        taller: String,
+        costo: String,
+        categoria: String,
+        fechaMillis: Long = System.currentTimeMillis(),
+        notas: String = ""
+    ) {
+        val formattedDate = java.text.SimpleDateFormat("dd MMM yyyy", java.util.Locale("es", "CO"))
+            .format(java.util.Date(fechaMillis))
         val newRecord = MaintenanceLogItem(
             id = "LOG-${System.currentTimeMillis() % 10000}",
-            fecha = "Hoy, ${java.text.SimpleDateFormat("dd MMM yyyy", java.util.Locale.getDefault()).format(java.util.Date())}",
+            fecha = formattedDate,
             kilometraje = kilometraje,
             titulo = titulo,
             taller = taller,
             costo = costo,
             facturaNumero = "FAC-${(1000..9999).random()}",
             categoria = categoria,
-            tieneComprobante = true
+            tieneComprobante = true,
+            notas = notas.trim()
         )
         _maintenanceLogs.value = listOf(newRecord) + _maintenanceLogs.value
+
+        // También persiste el servicio realizado en la base de datos Room (service_records)
+        val key = ensureActiveVehicleKey()
+        registerService(
+            vehicleKey = key,
+            componente = titulo,
+            kilometraje = kilometraje,
+            fechaMillis = fechaMillis,
+            notas = notas,
+            taller = taller,
+            costo = costo
+        )
     }
 
     /** Pide que se cargue la ficha de la moto consultada. Solo cuenta una vez por teléfono. */
@@ -368,6 +431,32 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
         _vehicleKey.value = null
     }
 
+    /**
+     * Actualiza el kilometraje actual desde la pantalla de resumen o el formulario,
+     * recalculando en tiempo real los próximos mantenimientos preventivos.
+     */
+    fun updateCurrentKilometraje(nuevoKm: Int) {
+        val safeKm = nuevoKm.coerceAtLeast(0)
+        formKilometraje = safeKm.toString()
+        val current = _uiState.value
+        if (current is DiagnosticState.Success) {
+            _uiState.value = current.copy(kmActual = safeKm)
+        }
+    }
+
+    /** Devuelve la clave del vehículo activo para asociar registros de servicio. */
+    fun ensureActiveVehicleKey(): String {
+        val currentKey = _vehicleKey.value
+        if (!currentKey.isNullOrBlank()) return currentKey
+        val marca = formMarca.ifBlank { "Yamaha" }
+        val modelo = formModelo.ifBlank { "MT-07" }
+        val cc = formCilindraje.ifBlank { "689cc" }
+        val anio = formAnio.ifBlank { "2023" }
+        val computed = VehicleKey.of(marca, modelo, cc, anio)
+        _vehicleKey.value = computed
+        return computed
+    }
+
     /** Servicios registrados por el usuario para la moto que se está viendo. */
     private val _vehicleKey = MutableStateFlow<String?>(null)
 
@@ -376,16 +465,38 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
         .flatMapLatest { key -> if (key == null) flowOf(emptyList()) else repository.serviceRecords(key) }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())
 
-    fun registerService(vehicleKey: String, componente: String, kilometraje: Int, fechaMillis: Long) {
+    /** Todos los mantenimientos registrados en Room (con fecha y notas). */
+    val allServiceRecords: StateFlow<List<ServiceRecordEntity>> = repository.allServiceRecords
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())
+
+    fun registerService(
+        vehicleKey: String,
+        componente: String,
+        kilometraje: Int,
+        fechaMillis: Long,
+        notas: String = "",
+        taller: String = "",
+        costo: String = ""
+    ) {
+        _vehicleKey.value = vehicleKey
         viewModelScope.launch {
             repository.addServiceRecord(
                 ServiceRecordEntity(
                     vehicleKey = vehicleKey,
                     componente = MaintenanceCalculator.claveComponente(componente),
                     kilometraje = kilometraje,
-                    fecha = fechaMillis
+                    fecha = fechaMillis,
+                    notas = notas.trim(),
+                    taller = taller.trim(),
+                    costo = costo.trim()
                 )
             )
+        }
+    }
+
+    fun deleteServiceRecord(id: Int) {
+        viewModelScope.launch {
+            repository.deleteServiceRecord(id)
         }
     }
 

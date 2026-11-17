@@ -71,7 +71,8 @@ data class MaintenanceLogItem(
     val costo: String,
     val facturaNumero: String,
     val categoria: String,
-    val tieneComprobante: Boolean
+    val tieneComprobante: Boolean,
+    val notas: String = ""
 )
 
 data class WorkshopItem(
