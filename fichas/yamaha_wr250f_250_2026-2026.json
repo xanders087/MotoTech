@@ -1,0 +1,100 @@
+{
+  "marca": "Yamaha",
+  "modelo": "WR250F",
+  "cilindraje_cc": 250,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "955mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "955 mm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1480mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1480 mm"
+    },
+    "peso": {
+      "texto_original": "115kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "115 kg"
+    },
+    "tipo_motor": {
+      "texto_original": "DOHC, 4 válvulas, refrigerado por líquido",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "250cm3",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "250 cc"
+    },
+    "relacion_compresion": {
+      "texto_original": "13.8:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Fuel injection",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "7.9L/2.1usgal/1.7Imp.gal",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "7.9 L"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 6 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90-21 54M Tube type",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/90-18 M/C 69M M+S Tube type",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Hydraulic single disc brake",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Hydraulic single disc brake",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Swingarm (link suspension)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/wr250f/8380/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2019/05/WR250F-BAKJ.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

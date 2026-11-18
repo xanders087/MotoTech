@@ -1,0 +1,78 @@
+{
+  "marca": "Honda",
+  "modelo": "CMX 500 Rebel 2025",
+  "cilindraje_cc": 471,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "471 cc DOHC Bicilindrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/custom/CMX-500",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "471 cc"
+    },
+    "tipo_motor": {
+      "texto_original": "DOHC 8 válvulas refrigerado por líquido",
+      "fuente": "https://motos.honda.com.co/motos-honda/custom/CMX-500",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "46HP / 8.500 rpm​",
+      "fuente": "https://motos.honda.com.co/motos-honda/custom/CMX-500",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "10.7:1​",
+      "fuente": "https://motos.honda.com.co/motos-honda/custom/CMX-500",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "6 velocidades​​​",
+      "fuente": "https://motos.honda.com.co/motos-honda/custom/CMX-500",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco- 296mm​​​​ ABS con mordaza de dos pistones Nissin",
+      "fuente": "https://motos.honda.com.co/motos-honda/custom/CMX-500",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco- 240mm​​​​ ABS con mordaza de un pistón Nissin",
+      "fuente": "https://motos.honda.com.co/motos-honda/custom/CMX-500",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica de 41 mm​​​",
+      "fuente": "https://motos.honda.com.co/motos-honda/custom/CMX-500",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Doble amortiguador Showa​​​",
+      "fuente": "https://motos.honda.com.co/motos-honda/custom/CMX-500",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/custom/CMX-500",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1490 mm​​​",
+      "fuente": "https://motos.honda.com.co/motos-honda/custom/CMX-500",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1490 mm"
+    },
+    "peso": {
+      "texto_original": "191 kg​​​ (en orden de marcha)",
+      "fuente": "https://motos.honda.com.co/motos-honda/custom/CMX-500",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "191 kg"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

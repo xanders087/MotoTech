@@ -1,0 +1,96 @@
+{
+  "marca": "Honda",
+  "modelo": "NX 500 E-Clutch",
+  "cilindraje_cc": 471,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "471 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "Bicilíndrico en paralelo, 4 tiempos, DOHC Unicam, 8 válvulas",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "46,3 HP @ 8500 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "43 Nm @ 6500 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "10.7:1",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Liquida",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Manual, 6 velocidades, Cadena",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica PGM-FI",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla invertida, 41mm de diametro, 150mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguador Pro-Link, 135mm de recorrido, ajuste precarga 5 posiciones",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Doble Disco de 296mm x 4mm, con pinza de 2 pistones - anclaje axial",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco 240mm x 5mm, con pinza mono-pistón",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "110/80 - 19 M/C 59H (Tubeless)",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "160/60 - 17 M/C 69H (Tubeless)",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1.445 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1445 mm"
+    },
+    "peso": {
+      "texto_original": "199 kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-eclutch",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

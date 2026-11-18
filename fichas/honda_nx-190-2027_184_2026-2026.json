@@ -1,0 +1,92 @@
+{
+  "marca": "Honda",
+  "modelo": "NX 190 2027",
+  "cilindraje_cc": 184,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "184.4 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "184 cc"
+    },
+    "tipo_motor": {
+      "texto_original": "4T - OHC - Refrigerado por aire",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "16,4 HP / 8.500 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "15,5 Nm / 6.000 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9,5 : 1",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "5 Velocidades",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco - ABS",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco - ABS",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica invertida",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono suspensión",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "110/70 - R 17",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "140/70 - R 17",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1.355 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1355 mm"
+    },
+    "peso": {
+      "texto_original": "146 kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/NX-190",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

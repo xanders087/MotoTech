@@ -1,0 +1,88 @@
+{
+  "marca": "Honda",
+  "modelo": "DIO LED DLX 2027",
+  "cilindraje_cc": 109,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "109.2 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "109 cc"
+    },
+    "tipo_motor": {
+      "texto_original": "4T OHC - Refrigerado por aire",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "7.9 Hp @ 7500 Rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "8.9 Nm @ 5000 Rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Automatica V-Matic",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Tambor 130 mm – Combinado",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor 130 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Doble brazo articulado",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Brazo Oscilante",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y Pedal",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/100 – 10",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "90/100 – 10",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1.238 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1238 mm"
+    },
+    "peso": {
+      "texto_original": "Neto 104 Kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/DIO-LED-DLX",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "104 kg"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

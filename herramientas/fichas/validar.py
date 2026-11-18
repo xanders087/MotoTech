@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """Valida las fichas técnicas de la carpeta fichas/.
 
-Una ficha solo es válida si cada dato indica el manual y la página de donde salió.
+Soporta:
+- Fichas v3 generadas por el recolector oficial (`verificacion`, `ficha_tecnica` con fuente HTTPS,
+  opcionalmente `datos_servicio` y `plan_mantenimiento` con PDF + sha256 + página).
+- Fichas manuales clásicas (`manual`, `revision`, `ficha_tecnica` con `valor` y `pagina`).
+
 Uso:  python3 herramientas/fichas/validar.py [carpeta]
 Sale con código 1 si alguna ficha tiene errores.
 """
@@ -14,7 +18,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
-CAMPOS_FICHA = (
+CAMPOS_SERVICIO = (
     "capacidad_aceite",
     "viscosidad_aceite",
     "presion_llanta_delantera",
@@ -22,17 +26,52 @@ CAMPOS_FICHA = (
     "holgura_cadena",
     "liquido_frenos",
 )
+
+CAMPOS_ESPECIFICACION = (
+    "cilindraje",
+    "tipo_motor",
+    "potencia_maxima",
+    "torque_maximo",
+    "alimentacion",
+    "refrigeracion",
+    "arranque",
+    "relacion_compresion",
+    "tipo_transmision",
+    "numero_velocidades",
+    "transmision_final",
+    "freno_delantero",
+    "freno_trasero",
+    "abs",
+    "suspension_delantera",
+    "suspension_trasera",
+    "llanta_delantera",
+    "llanta_trasera",
+    "capacidad_tanque",
+    "peso",
+    "altura_asiento",
+    "distancia_ejes",
+)
+
+CAMPOS_FICHA = CAMPOS_SERVICIO + CAMPOS_ESPECIFICACION
+
 CAMPOS_RAIZ = {
     "marca", "modelo", "cilindraje_cc", "anio_desde", "anio_hasta",
-    "manual", "revision", "ficha_tecnica", "plan_mantenimiento",
+    "anio_origen", "url_manual", "manual", "revision", "verificacion",
+    "ficha_tecnica", "datos_servicio", "plan_mantenimiento",
 }
 CAMPOS_MANUAL = {"titulo", "edicion", "url"}
 CAMPOS_REVISION = {"revisado_por", "fecha"}
-CAMPOS_DATO = {"valor", "pagina"}
-CAMPOS_PLAN = {"componente", "accion", "intervalo_km", "intervalo_meses", "pagina"}
+CAMPOS_VERIFICACION = {"metodo", "fecha"}
+CAMPOS_DATO_MANUAL = {"valor", "pagina"}
+CAMPOS_DATO_WEB = {"texto_original", "valor_normalizado", "fuente", "capturado"}
+CAMPOS_PLAN_TAREA = {"componente", "accion", "intervalo_km", "intervalo_meses", "pagina"}
+CAMPOS_PLAN_TAREA_V3 = {"componente", "accion", "intervalo_km", "intervalo_meses"}
+CAMPOS_FUENTE_PDF = {"url", "sha256", "pagina", "titulo"}
+ORIGENES_ANIO = {"deteccion", "fuente"}
 
 # Textos de relleno que no son un dato real.
-RELLENO = re.compile(r"^(todo|tbd|pendiente|por definir|n/?a|\?+|x+|-+|\.+)$", re.IGNORECASE)
+RELLENO = re.compile(r"^(todo|tbd|pendiente|por definir|n/?a|\?+|x+|-+|—+|\.+)$", re.IGNORECASE)
+_RE_SHA256 = re.compile(r"^[0-9a-f]{64}$")
 
 
 def normalizar(texto: str) -> str:
@@ -66,9 +105,83 @@ def _texto_real(valor) -> bool:
     return isinstance(valor, str) and valor.strip() != "" and not RELLENO.match(valor.strip())
 
 
+def _fecha_iso_valida(valor, hoy: datetime.date) -> tuple[bool, str | None]:
+    if not isinstance(valor, str):
+        return False, "debe tener el formato AAAA-MM-DD"
+    try:
+        fecha = datetime.date.fromisoformat(valor)
+        if fecha > hoy:
+            return False, "no puede ser una fecha futura"
+        return True, None
+    except ValueError:
+        return False, "debe tener el formato AAAA-MM-DD"
+
+
 def _sobrantes(objeto: dict, permitidos: set, donde: str, errores: list) -> None:
     for campo in sorted(set(objeto) - permitidos):
         errores.append(f"{donde}: campo desconocido \"{campo}\" (¿error de escritura?)")
+
+
+def _validar_dato_manual(dato: dict, donde: str, errores: list) -> int:
+    _sobrantes(dato, CAMPOS_DATO_MANUAL, donde, errores)
+    if not _texto_real(dato.get("valor")):
+        errores.append(f"{donde}.valor: falta el valor (si el manual no lo trae, usa null en todo el dato)")
+    if not _es_entero(dato.get("pagina")) or dato["pagina"] < 1:
+        errores.append(f"{donde}.pagina: falta la página del manual")
+    return 1
+
+
+def _validar_dato_web(dato: dict, donde: str, hoy: datetime.date, errores: list) -> int:
+    _sobrantes(dato, CAMPOS_DATO_WEB, donde, errores)
+    if not _texto_real(dato.get("texto_original")):
+        errores.append(f"{donde}.texto_original: falta el texto literal de la fuente oficial")
+    norm = dato.get("valor_normalizado")
+    if norm is not None and not _texto_real(norm):
+        errores.append(f"{donde}.valor_normalizado: debe ser texto real o null")
+    fuente = dato.get("fuente")
+    if not isinstance(fuente, str) or not fuente.startswith("https://"):
+        errores.append(f"{donde}.fuente: debe empezar por https://")
+    ok_fecha, msg_fecha = _fecha_iso_valida(dato.get("capturado"), hoy)
+    if not ok_fecha:
+        errores.append(f"{donde}.capturado: {msg_fecha}")
+    return 1
+
+
+def _validar_tarea_plan(
+    tarea: dict,
+    donde: str,
+    vistos: set[str],
+    requiere_pagina_propia: bool,
+    errores: list,
+) -> int:
+    permitidos = CAMPOS_PLAN_TAREA if requiere_pagina_propia else CAMPOS_PLAN_TAREA_V3
+    _sobrantes(tarea, permitidos, donde, errores)
+    componente = tarea.get("componente")
+    if not _texto_real(componente):
+        errores.append(f"{donde}.componente: falta")
+    else:
+        nombre = normalizar(componente)
+        if nombre in vistos:
+            errores.append(f"{donde}.componente: \"{componente}\" está repetido")
+        vistos.add(nombre)
+    accion = tarea.get("accion")
+    if accion is not None and not _texto_real(accion):
+        errores.append(f"{donde}.accion: debe decir qué se hace (cambiar, revisar, ajustar…) o ser null")
+    intervalos = 0
+    for campo in ("intervalo_km", "intervalo_meses"):
+        valor = tarea.get(campo)
+        if valor is None:
+            continue
+        if not _es_entero(valor) or valor <= 0:
+            errores.append(f"{donde}.{campo}: debe ser un número entero mayor que 0 o null")
+        else:
+            intervalos += 1
+    if intervalos == 0:
+        errores.append(f"{donde}: necesita intervalo_km o intervalo_meses")
+    if requiere_pagina_propia:
+        if not _es_entero(tarea.get("pagina")) or tarea["pagina"] < 1:
+            errores.append(f"{donde}.pagina: falta la página del manual")
+    return 1
 
 
 def validar_ficha(ficha, hoy: datetime.date | None = None) -> list[str]:
@@ -96,91 +209,131 @@ def validar_ficha(ficha, hoy: datetime.date | None = None) -> list[str]:
     if anios_ok and desde > hasta:
         errores.append("anio_desde no puede ser mayor que anio_hasta")
 
-    manual = ficha.get("manual")
-    if not isinstance(manual, dict):
-        errores.append("manual: falta el manual del que salen los datos")
-    else:
-        _sobrantes(manual, CAMPOS_MANUAL, "manual", errores)
-        if not _texto_real(manual.get("titulo")):
-            errores.append("manual.titulo: falta el título del manual")
-        edicion = manual.get("edicion")
-        if edicion is not None and not isinstance(edicion, str):
-            errores.append("manual.edicion: debe ser texto o null")
-        url = manual.get("url")
-        if url is not None and not (isinstance(url, str) and url.startswith("https://")):
-            errores.append("manual.url: debe empezar por https:// o ser null")
+    if "anio_origen" in ficha and ficha["anio_origen"] is not None:
+        if ficha["anio_origen"] not in ORIGENES_ANIO:
+            errores.append("anio_origen: debe ser 'deteccion' o 'fuente'")
 
-    revision = ficha.get("revision")
-    if not isinstance(revision, dict):
-        errores.append("revision: falta quién revisó la ficha y cuándo")
+    if "url_manual" in ficha and ficha["url_manual"] is not None:
+        if not (isinstance(ficha["url_manual"], str) and ficha["url_manual"].startswith("https://")):
+            errores.append("url_manual: debe empezar por https:// o ser null")
+
+    es_v3 = "verificacion" in ficha
+
+    if es_v3:
+        verif = ficha.get("verificacion")
+        if not isinstance(verif, dict):
+            errores.append("verificacion: debe ser un objeto con metodo y fecha")
+        else:
+            _sobrantes(verif, CAMPOS_VERIFICACION, "verificacion", errores)
+            if not _texto_real(verif.get("metodo")):
+                errores.append("verificacion.metodo: falta el método de verificación")
+            ok_f, msg_f = _fecha_iso_valida(verif.get("fecha"), hoy)
+            if not ok_f:
+                errores.append(f"verificacion.fecha: {msg_f}")
     else:
-        _sobrantes(revision, CAMPOS_REVISION, "revision", errores)
-        if not _texto_real(revision.get("revisado_por")):
-            errores.append("revision.revisado_por: falta el nombre de quien cotejó la ficha con el manual")
-        try:
-            fecha = datetime.date.fromisoformat(revision.get("fecha") or "")
-            if fecha > hoy:
-                errores.append("revision.fecha: no puede ser una fecha futura")
-        except (TypeError, ValueError):
-            errores.append("revision.fecha: debe tener el formato AAAA-MM-DD")
+        manual = ficha.get("manual")
+        if not isinstance(manual, dict):
+            errores.append("manual: falta el manual del que salen los datos")
+        else:
+            _sobrantes(manual, CAMPOS_MANUAL, "manual", errores)
+            if not _texto_real(manual.get("titulo")):
+                errores.append("manual.titulo: falta el título del manual")
+            edicion = manual.get("edicion")
+            if edicion is not None and not isinstance(edicion, str):
+                errores.append("manual.edicion: debe ser texto o null")
+            url = manual.get("url")
+            if url is not None and not (isinstance(url, str) and url.startswith("https://")):
+                errores.append("manual.url: debe empezar por https:// o ser null")
+
+        revision = ficha.get("revision")
+        if not isinstance(revision, dict):
+            errores.append("revision: falta quién revisó la ficha y cuándo")
+        else:
+            _sobrantes(revision, CAMPOS_REVISION, "revision", errores)
+            if not _texto_real(revision.get("revisado_por")):
+                errores.append("revision.revisado_por: falta el nombre de quien cotejó la ficha con el manual")
+            ok_f, msg_f = _fecha_iso_valida(revision.get("fecha"), hoy)
+            if not ok_f:
+                errores.append(f"revision.fecha: {msg_f}")
 
     datos = 0
     tecnica = ficha.get("ficha_tecnica", {})
     if not isinstance(tecnica, dict):
         errores.append("ficha_tecnica: debe ser un objeto")
     else:
-        _sobrantes(tecnica, set(CAMPOS_FICHA), "ficha_tecnica", errores)
-        for campo in CAMPOS_FICHA:
+        permitidos_tecnica = set(CAMPOS_ESPECIFICACION) if es_v3 else set(CAMPOS_FICHA)
+        _sobrantes(tecnica, permitidos_tecnica, "ficha_tecnica", errores)
+        for campo in sorted(permitidos_tecnica):
             dato = tecnica.get(campo)
             if dato is None:
-                continue  # El manual no trae ese dato: se deja en null, no se inventa.
+                continue
             donde = f"ficha_tecnica.{campo}"
             if not isinstance(dato, dict):
-                errores.append(f"{donde}: debe ser null o un objeto con valor y pagina")
+                errores.append(f"{donde}: debe ser null o un objeto válido")
                 continue
-            _sobrantes(dato, CAMPOS_DATO, donde, errores)
-            if not _texto_real(dato.get("valor")):
-                errores.append(f"{donde}.valor: falta el valor (si el manual no lo trae, usa null en todo el dato)")
-            if not _es_entero(dato.get("pagina")) or dato["pagina"] < 1:
-                errores.append(f"{donde}.pagina: falta la página del manual")
-            datos += 1
-
-    plan = ficha.get("plan_mantenimiento", [])
-    if not isinstance(plan, list):
-        errores.append("plan_mantenimiento: debe ser una lista")
-        plan = []
-    vistos: set[str] = set()
-    for i, tarea in enumerate(plan, start=1):
-        donde = f"plan_mantenimiento[{i}]"
-        if not isinstance(tarea, dict):
-            errores.append(f"{donde}: debe ser un objeto")
-            continue
-        _sobrantes(tarea, CAMPOS_PLAN, donde, errores)
-        componente = tarea.get("componente")
-        if not _texto_real(componente):
-            errores.append(f"{donde}.componente: falta")
-        else:
-            nombre = normalizar(componente)
-            if nombre in vistos:
-                errores.append(f"{donde}.componente: \"{componente}\" está repetido")
-            vistos.add(nombre)
-        accion = tarea.get("accion")
-        if accion is not None and not _texto_real(accion):
-            errores.append(f"{donde}.accion: debe decir qué se hace (cambiar, revisar, ajustar…) o ser null")
-        intervalos = 0
-        for campo in ("intervalo_km", "intervalo_meses"):
-            valor = tarea.get(campo)
-            if valor is None:
-                continue
-            if not _es_entero(valor) or valor <= 0:
-                errores.append(f"{donde}.{campo}: debe ser un número entero mayor que 0 o null")
+            if "texto_original" in dato or es_v3:
+                datos += _validar_dato_web(dato, donde, hoy, errores)
             else:
-                intervalos += 1
-        if intervalos == 0:
-            errores.append(f"{donde}: necesita intervalo_km o intervalo_meses")
-        if not _es_entero(tarea.get("pagina")) or tarea["pagina"] < 1:
-            errores.append(f"{donde}.pagina: falta la página del manual")
-        datos += 1
+                datos += _validar_dato_manual(dato, donde, errores)
+
+    datos_servicio = ficha.get("datos_servicio")
+    if datos_servicio is not None:
+        if not isinstance(datos_servicio, dict):
+            errores.append("datos_servicio: debe ser un objeto")
+        else:
+            _sobrantes(datos_servicio, set(CAMPOS_SERVICIO), "datos_servicio", errores)
+            for campo in CAMPOS_SERVICIO:
+                dato = datos_servicio.get(campo)
+                if dato is None:
+                    continue
+                donde = f"datos_servicio.{campo}"
+                if not isinstance(dato, dict):
+                    errores.append(f"{donde}: debe ser null o un objeto con valor y pagina")
+                    continue
+                datos += _validar_dato_manual(dato, donde, errores)
+
+    plan = ficha.get("plan_mantenimiento")
+    if plan is None:
+        pass
+    elif isinstance(plan, list):
+        vistos: set[str] = set()
+        for i, tarea in enumerate(plan, start=1):
+            donde = f"plan_mantenimiento[{i}]"
+            if not isinstance(tarea, dict):
+                errores.append(f"{donde}: debe ser un objeto")
+                continue
+            datos += _validar_tarea_plan(tarea, donde, vistos, requiere_pagina_propia=True, errores=errores)
+    elif isinstance(plan, dict):
+        _sobrantes(plan, {"fuente", "tareas"}, "plan_mantenimiento", errores)
+        fuente_pdf = plan.get("fuente")
+        if not isinstance(fuente_pdf, dict):
+            errores.append("plan_mantenimiento.fuente: falta el origen PDF del plan")
+        else:
+            _sobrantes(fuente_pdf, CAMPOS_FUENTE_PDF, "plan_mantenimiento.fuente", errores)
+            url_pdf = fuente_pdf.get("url")
+            if not isinstance(url_pdf, str) or not url_pdf.startswith("https://"):
+                errores.append("plan_mantenimiento.fuente.url: debe empezar por https://")
+            sha = fuente_pdf.get("sha256")
+            if not isinstance(sha, str) or not _RE_SHA256.match(sha.lower()):
+                errores.append("plan_mantenimiento.fuente.sha256: debe ser un hash SHA-256 hexadecimal de 64 caracteres")
+            if not _es_entero(fuente_pdf.get("pagina")) or fuente_pdf["pagina"] < 1:
+                errores.append("plan_mantenimiento.fuente.pagina: falta la página del PDF")
+            if not _texto_real(fuente_pdf.get("titulo")):
+                errores.append("plan_mantenimiento.fuente.titulo: falta el título del documento")
+
+        tareas = plan.get("tareas")
+        if not isinstance(tareas, list) or not tareas:
+            errores.append("plan_mantenimiento.tareas: debe ser una lista no vacía")
+        else:
+            vistos_v3: set[str] = set()
+            for i, tarea in enumerate(tareas, start=1):
+                donde = f"plan_mantenimiento.tareas[{i}]"
+                if not isinstance(tarea, dict):
+                    errores.append(f"{donde}: debe ser un objeto")
+                    continue
+                datos += _validar_tarea_plan(tarea, donde, vistos_v3, requiere_pagina_propia=False, errores=errores)
+    else:
+        errores.append("plan_mantenimiento: debe ser una lista, un objeto o null")
 
     if datos == 0 and not errores:
         errores.append("la ficha no tiene ningún dato técnico ni tarea de mantenimiento")

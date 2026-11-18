@@ -1,0 +1,57 @@
+{
+  "marca": "AKT",
+  "modelo": "DS800X Rally",
+  "cilindraje_cc": 798,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "798 cc",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds800x-rally/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "93.8/9.000",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds800x-rally/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "93.8 HP"
+    },
+    "torque_maximo": {
+      "texto_original": "81/6.500",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds800x-rally/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "81 Nm"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90-21",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds800x-rally/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "150/70R18",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds800x-rally/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1575 mm",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds800x-rally/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco hidráulico",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds800x-rally/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco hidráulico",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds800x-rally/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://aktmotos.com/docs/manuales/manual-ds-rally-800.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

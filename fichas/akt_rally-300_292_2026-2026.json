@@ -1,0 +1,58 @@
+{
+  "marca": "AKT",
+  "modelo": "Rally 300",
+  "cilindraje_cc": 292,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "292 cc",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/rally-300/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "28.1/9.000",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/rally-300/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "28.1 HP"
+    },
+    "capacidad_tanque": {
+      "texto_original": "11",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/rally-300/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "11 L"
+    },
+    "torque_maximo": {
+      "texto_original": "25/6.500",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/rally-300/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "25 Nm"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco 265MM, ABS",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/rally-300/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco 220MM, ABS desconectable",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/rally-300/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Invertida de 41MM-206MM recorrido",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/rally-300/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Amortiguador con bieleta",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/rally-300/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://aktmotos.com/wp-content/uploads/2026/09/Manual-Voge-300-Rally-2026-sept-BAJA.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
-"""Recolector semanal de catálogo oficial de motocicletas.
+"""Recolector semanal de catálogo oficial y fichas técnicas de motocicletas.
 
 Uso:
-  python herramientas/recolector/recolectar.py [--simular] [--sin-snapshot] [--marca Yamaha]
+  python herramientas/recolector/recolectar.py [--simular] [--sin-snapshot] [--solo-catalogo] [--marca Yamaha]
 
 - Lee herramientas/recolector/fuentes_oficiales.json
 - Valida cada URL con lista blanca HTTPS + robots.txt + rate limit
+- Extrae especificaciones técnicas oficiales sin IA y las versiona por año en fichas/
 - Conserva modelos descontinuados como vigente=false
 - Nunca borra una marca si el adaptador devuelve 0 modelos (mantiene snapshot previo y alerta)
 - Cruza tiene_ficha con las fichas válidas de fichas/
-- Actualiza app/src/main/resources/motorcycle_catalog.json y publica catalogo/{marca} en Firestore
+- Actualiza app/src/main/resources/motorcycle_catalog.json y publica catalogo/{marca} y fichas/{id} en Firestore
 """
 from __future__ import annotations
 
@@ -30,13 +31,16 @@ for p in (str(CARPETA_RECOLECTOR), str(CARPETA_FICHAS_TOOLS)):
     if p not in sys.path:
         sys.path.insert(0, p)
 
+import subir  # noqa: E402
 import validar  # noqa: E402
 from adaptadores import ADAPTADORES, ModeloOficial  # noqa: E402
+from ficha_tecnica import sincronizar_ficha_en_carpeta  # noqa: E402
 from robots_guard import OficialHttpClient, RobotsGuard  # noqa: E402
 
 logger = logging.getLogger("recolector")
 
 COLECCION_CATALOGO = "catalogo"
+COLECCION_FICHAS = "fichas"
 RUTA_FUENTES_DEFECTO = CARPETA_RECOLECTOR / "fuentes_oficiales.json"
 RUTA_SNAPSHOT_DEFECTO = RAIZ_REPO / "app" / "src" / "main" / "resources" / "motorcycle_catalog.json"
 RUTA_FICHAS_DEFECTO = RAIZ_REPO / "fichas"
@@ -144,6 +148,13 @@ def documento_catalogo(marca: str, config: dict[str, Any], modelos: list[dict[st
     }
 
 
+def _instanciar_adaptador(cls_adaptador: Any, marca: str, cfg: dict[str, Any], client: OficialHttpClient, hoy: str, incluir_fichas: bool) -> Any:
+    try:
+        return cls_adaptador(marca, cfg, client, hoy=hoy, incluir_fichas=incluir_fichas)
+    except TypeError:
+        return cls_adaptador(marca, cfg, client)
+
+
 def ejecutar_recoleccion(
     ruta_fuentes: Path = RUTA_FUENTES_DEFECTO,
     ruta_snapshot: Path = RUTA_SNAPSHOT_DEFECTO,
@@ -151,24 +162,26 @@ def ejecutar_recoleccion(
     marcas_filtro: list[str] | None = None,
     simular: bool = True,
     escribir_snapshot: bool = True,
+    incluir_fichas: bool = True,
     hoy: str | None = None,
     adaptadores_registry: dict[str, Any] | None = None,
     robots_guard: RobotsGuard | None = None,
 ) -> tuple[dict[str, dict[str, Any]], list[str]]:
-    """Ejecuta la recolección de las marcas configuradas y devuelve (docs_firestore, alertas)."""
-    hoy_str = hoy or datetime.date.today().isoformat()
+    """Ejecuta la recolección de las marcas configuradas y devuelve (docs_catalogo, alertas)."""
+    hoy_date = datetime.date.fromisoformat(hoy) if hoy else datetime.date.today()
+    hoy_str = hoy_date.isoformat()
     fuentes = json.loads(ruta_fuentes.read_text(encoding="utf-8"))
     snapshot_actual: dict[str, list[dict[str, Any]]] = (
         json.loads(ruta_snapshot.read_text(encoding="utf-8"))
         if ruta_snapshot.is_file()
         else {}
     )
-    fichas_claves = claves_con_ficha(ruta_fichas)
     registry = adaptadores_registry or ADAPTADORES
     guard = robots_guard or RobotsGuard()
 
     filtro_norm = {m.strip().lower() for m in marcas_filtro} if marcas_filtro else None
-    docs_publicar: dict[str, dict[str, Any]] = {}
+    resultados_marca: dict[str, tuple[dict[str, Any], list[ModeloOficial]]] = {}
+    fichas_cambiadas: dict[str, dict[str, Any]] = {}
     alertas: list[str] = []
 
     for marca, cfg in fuentes.items():
@@ -184,7 +197,7 @@ def ejecutar_recoleccion(
         modelos_nuevos: list[ModeloOficial] = []
         try:
             with OficialHttpClient(dominios_permitidos=dominios, robots_guard=guard) as client:
-                adaptador = cls_adaptador(marca, cfg, client)
+                adaptador = _instanciar_adaptador(cls_adaptador, marca, cfg, client, hoy_str, incluir_fichas)
                 modelos_nuevos = adaptador.recolectar()
         except Exception as e:
             alertas.append(f"{marca}: error del recolector ({e}); se conserva catálogo anterior")
@@ -197,6 +210,33 @@ def ejecutar_recoleccion(
             logger.error(alerta)
             continue
 
+        if incluir_fichas:
+            nuevas_o_act = 0
+            for m in modelos_nuevos:
+                if not m.ficha_tecnica:
+                    continue
+                modificadas = sincronizar_ficha_en_carpeta(
+                    carpeta_fichas=ruta_fichas,
+                    marca=marca,
+                    modelo=m.modelo,
+                    cilindraje_cc=m.cilindraje_cc,
+                    ficha_tecnica=m.ficha_tecnica,
+                    url_manual=m.url_manual,
+                    anio_fuente=m.anio_fuente,
+                    hoy=hoy_date,
+                )
+                for doc_f in modificadas:
+                    fichas_cambiadas[validar.id_ficha(doc_f)] = doc_f
+                    nuevas_o_act += 1
+            con_ficha_modelo = sum(1 for m in modelos_nuevos if m.ficha_tecnica)
+            logger.info("%s: %d modelos con ficha técnica (%d archivos creados/actualizados)", marca, con_ficha_modelo, nuevas_o_act)
+
+        resultados_marca[marca] = (cfg, modelos_nuevos)
+
+    fichas_claves = claves_con_ficha(ruta_fichas)
+    docs_publicar: dict[str, dict[str, Any]] = {}
+
+    for marca, (cfg, modelos_nuevos) in resultados_marca.items():
         previos = snapshot_actual.get(marca, [])
         combinados = combinar_modelos(marca, modelos_nuevos, previos, fichas_claves, hoy_str)
         snapshot_actual[marca] = [a_modelo_snapshot(item) for item in combinados]
@@ -208,13 +248,19 @@ def ejecutar_recoleccion(
             marca, vigentes, len(combinados), con_manual,
         )
 
+    if incluir_fichas and ruta_fichas.is_dir():
+        errores_fichas = validar.validar_carpeta(ruta_fichas, hoy_date)
+        if errores_fichas:
+            for ruta_err, lista_err in errores_fichas.items():
+                alertas.append(f"ficha inválida {ruta_err.name}: {'; '.join(lista_err)}")
+
     if escribir_snapshot and docs_publicar:
         ruta_snapshot.write_text(
             json.dumps(snapshot_actual, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
 
-    if not simular and docs_publicar:
+    if not simular and (docs_publicar or fichas_cambiadas):
         import firebase_admin
         from firebase_admin import firestore
 
@@ -230,14 +276,24 @@ def ejecutar_recoleccion(
             db.collection(COLECCION_CATALOGO).document(doc_id).set(payload)
             print(f"publicado {COLECCION_CATALOGO}/{doc_id} ({len(doc['modelos'])} modelos)")
 
+        errores_carpeta = validar.validar_carpeta(ruta_fichas, hoy_date) if ruta_fichas.is_dir() else {}
+        if not errores_carpeta:
+            for doc_id, ficha in fichas_cambiadas.items():
+                payload_f = {**subir.documento(ficha), "actualizado": firestore.SERVER_TIMESTAMP}
+                db.collection(COLECCION_FICHAS).document(doc_id).set(payload_f)
+                print(f"publicada {COLECCION_FICHAS}/{doc_id}")
+        else:
+            logger.error("No se publicaron fichas en Firestore porque hay errores de validación.")
+
     return docs_publicar, alertas
 
 
 def main(argv: list[str] | None = None) -> int:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
-    parser = argparse.ArgumentParser(description="Recolector oficial de catálogo MotoTech")
+    parser = argparse.ArgumentParser(description="Recolector oficial de catálogo y fichas MotoTech")
     parser.add_argument("--simular", action="store_true", help="No publica en Firestore")
     parser.add_argument("--sin-snapshot", action="store_true", help="No modifica motorcycle_catalog.json")
+    parser.add_argument("--solo-catalogo", action="store_true", help="No genera ni actualiza fichas técnicas")
     parser.add_argument("--marca", action="append", help="Filtrar por marca (repetible)")
     args = parser.parse_args(argv)
 
@@ -245,6 +301,7 @@ def main(argv: list[str] | None = None) -> int:
         marcas_filtro=args.marca,
         simular=args.simular,
         escribir_snapshot=not args.sin_snapshot,
+        incluir_fichas=not args.solo_catalogo,
     )
     for doc_id, doc in docs.items():
         vigentes = sum(1 for m in doc["modelos"] if m["vigente"])

@@ -1,0 +1,74 @@
+{
+  "marca": "AKT",
+  "modelo": "NUEVA NKD 125",
+  "cilindraje_cc": 124,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "124 cc",
+      "fuente": "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "10.34/8.000",
+      "fuente": "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "10.34 HP"
+    },
+    "capacidad_tanque": {
+      "texto_original": "2.6",
+      "fuente": "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "9.8 L"
+    },
+    "torque_maximo": {
+      "texto_original": "9.3/7.000",
+      "fuente": "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "9.3 Nm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1270",
+      "fuente": "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1270 mm"
+    },
+    "llanta_delantera": {
+      "texto_original": "2.75-18",
+      "fuente": "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "3.00-18",
+      "fuente": "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco",
+      "fuente": "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor",
+      "fuente": "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica Hidráulica",
+      "fuente": "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Doble amortiguador regulable DS",
+      "fuente": "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://aktmotos.com/wp-content/uploads/2026/09/Manual-de-usuario-NKD-Baja2026-1.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

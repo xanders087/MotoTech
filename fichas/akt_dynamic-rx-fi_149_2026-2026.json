@@ -1,0 +1,70 @@
+{
+  "marca": "AKT",
+  "modelo": "Dynamic RX Fi",
+  "cilindraje_cc": 149,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "149.6 cc",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/dynamic-rx-fi/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "149 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "11.13/8.000",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/dynamic-rx-fi/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "11.13 HP"
+    },
+    "capacidad_tanque": {
+      "texto_original": "1.7",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/dynamic-rx-fi/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "6.4 L"
+    },
+    "torque_maximo": {
+      "texto_original": "11.5/6.000",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/dynamic-rx-fi/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "11.5 Nm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1350",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/dynamic-rx-fi/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1350 mm"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70-12",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/dynamic-rx-fi/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70-12",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/dynamic-rx-fi/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco accionado por CBS",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/dynamic-rx-fi/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco accionado por CBS",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/dynamic-rx-fi/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Doble amortiguador",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/dynamic-rx-fi/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://aktmotos.com/docs/manuales/manual-usuario-DYNAMIC-RX.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

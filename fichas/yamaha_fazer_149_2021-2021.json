@@ -1,0 +1,114 @@
+{
+  "marca": "Yamaha",
+  "modelo": "FAZER",
+  "cilindraje_cc": 149,
+  "anio_desde": 2021,
+  "anio_hasta": 2021,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "790mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "790 mm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1330mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1330 mm"
+    },
+    "peso": {
+      "texto_original": "137kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "137 kg"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos SOHC, refrigerado por aire",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "149 cc",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.5:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "13 Hp a 8000 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "12.8 Nm a 6000 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección de combustible",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "12 L (3.17 Gls)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "12 L"
+    },
+    "transmision_final": {
+      "texto_original": "Cadena",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 5 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "100/80- R17",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "140/60-R17",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Basculante",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15s/2176/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

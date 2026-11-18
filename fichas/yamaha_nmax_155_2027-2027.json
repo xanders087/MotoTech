@@ -1,0 +1,114 @@
+{
+  "marca": "Yamaha",
+  "modelo": "NMAX",
+  "cilindraje_cc": 155,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "770mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "770 mm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1340mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1340 mm"
+    },
+    "peso": {
+      "texto_original": "131kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "131 kg"
+    },
+    "tipo_motor": {
+      "texto_original": "Refrigeración líquida,4-tiempos, SOHC, 4 válvulas",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "155 cc",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "11.6 : 1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "15.15 HP a 8000 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "14.2 Nm @ 6500 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección de combustible",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "7.1L",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "7.1 L"
+    },
+    "transmision_final": {
+      "texto_original": "Correa en V",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "CVT",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "110/70-13M/C 48P Tubeless",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70-13M/C 63P Tubeless",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco (ABS)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco (ABS)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Unidad oscilante",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/gpd155a/15956/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2021/03/BUB1.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

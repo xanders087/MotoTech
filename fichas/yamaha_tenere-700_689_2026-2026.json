@@ -1,0 +1,117 @@
+{
+  "marca": "Yamaha",
+  "modelo": "Ténéré 700",
+  "cilindraje_cc": 689,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "875mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "875 mm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1595 mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "205 kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos DOHC, 4 válvulas, refrigerado por líquido",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "689 cc",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "11.5:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "72.4 Hp a 9000 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "67.0Nm a 6500 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección de combustible",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "16L",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "16 L"
+    },
+    "transmision_final": {
+      "texto_original": "Cadena",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 6 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90-21 M/C 54V",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "150/70 R18 M/C 70V",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Doble disco (ABS)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco (ABS)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Basculante (Por bieletas)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    },
+    "abs": {
+      "texto_original": "Si",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz690/20500/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2022/04/Tenere-700.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

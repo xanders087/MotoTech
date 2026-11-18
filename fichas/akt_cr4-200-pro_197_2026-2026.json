@@ -1,0 +1,74 @@
+{
+  "marca": "AKT",
+  "modelo": "CR4 200 Pro",
+  "cilindraje_cc": 197,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "197 cc",
+      "fuente": "https://aktmotos.com/motos-akt/calle/cr4-200-pro/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "16.5/8.000",
+      "fuente": "https://aktmotos.com/motos-akt/calle/cr4-200-pro/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "16.5 HP"
+    },
+    "capacidad_tanque": {
+      "texto_original": "3.96",
+      "fuente": "https://aktmotos.com/motos-akt/calle/cr4-200-pro/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "15 L"
+    },
+    "torque_maximo": {
+      "texto_original": "15.5/7.500",
+      "fuente": "https://aktmotos.com/motos-akt/calle/cr4-200-pro/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "15.5 Nm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1350",
+      "fuente": "https://aktmotos.com/motos-akt/calle/cr4-200-pro/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1350 mm"
+    },
+    "llanta_delantera": {
+      "texto_original": "80/ 90 – 17",
+      "fuente": "https://aktmotos.com/motos-akt/calle/cr4-200-pro/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "120/70 – 17",
+      "fuente": "https://aktmotos.com/motos-akt/calle/cr4-200-pro/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco 272 mm, pinza 2 pistones",
+      "fuente": "https://aktmotos.com/motos-akt/calle/cr4-200-pro/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco 230 mm",
+      "fuente": "https://aktmotos.com/motos-akt/calle/cr4-200-pro/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica Hidráulica",
+      "fuente": "https://aktmotos.com/motos-akt/calle/cr4-200-pro/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Unishock con precarga graduable",
+      "fuente": "https://aktmotos.com/motos-akt/calle/cr4-200-pro/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://aktmotos.com/wp-content/uploads/2026/09/Manual-Usuario-200CR4-ABS-Tacometro-Curvas.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

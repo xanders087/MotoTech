@@ -1,0 +1,88 @@
+{
+  "marca": "Honda",
+  "modelo": "CB 125F DLX 2027",
+  "cilindraje_cc": 124,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "124.7 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "124 cc"
+    },
+    "tipo_motor": {
+      "texto_original": "4T - OHC Refrigerado por aire",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "8,41 HP @ 7.500 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "9,65 Nm @ 5.000 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco CBS",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor 130 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla Telescópica",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Brazo Oscilante",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y de pedal",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "80/100 - 18 M 47 P",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "90/90 - 18 M 51 P",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1.310 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1310 mm"
+    },
+    "peso": {
+      "texto_original": "117 Kilogramos",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-125F-DLX-20",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "117 kg"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

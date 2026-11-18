@@ -1,0 +1,85 @@
+{
+  "marca": "Honda",
+  "modelo": "Transalp E-clutch modelo 2026",
+  "cilindraje_cc": 755,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "755 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "Bicilíndrico en paralelo, 4 tiempos, SOHC Unicam, 8 válvulas",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "90,5 HP @ 9500 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "75 Nm @ 7250 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "11.0:1",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Liquida",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Manual, 6 velocidades, Cadena",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica PGM-FI",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Doble Disco de 310mm x 4,5mm, con pinza de 2 pistones - anclaje axial",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco 256mm x 6mm, con pinza mono-pistón / ABS desconectable",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla invertida, 43mm de diametro, 178mm de recorrido - Ajustable compresión, rebote, precarga",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguador Pro-Link, 190mm de recorrido, ajuste precarga 5 posiciones",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90 - 21 M/C 54H",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "90/90 - 21 M/C 54H",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "marca": "Yamaha",
+  "modelo": "YZ450F",
+  "cilindraje_cc": 450,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "965mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "965 mm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1485mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1485 mm"
+    },
+    "peso": {
+      "texto_original": "111kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "111 kg"
+    },
+    "tipo_motor": {
+      "texto_original": "Refrigerado por líquido, Un cilindro inclinado hacia atrás, 4 tiempos, 4 válvulas, DOHC",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "450cm3",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "450 cc"
+    },
+    "relacion_compresion": {
+      "texto_original": "13.0:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Fuel injection",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "6,2 L",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "6.2 L"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 5 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "80/100-21 51M con cámara",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "120/80-19 63M con cámara",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco hidráulico, Ø 270 mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco hidráulico, Ø 240 mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica invertida",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Brazo basculante, (Por bieletas)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz450f/25031/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2018/03/YZF450F-BHR.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

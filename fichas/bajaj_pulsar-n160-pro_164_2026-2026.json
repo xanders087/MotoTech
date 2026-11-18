@@ -1,0 +1,81 @@
+{
+  "marca": "Bajaj",
+  "modelo": "Pulsar N160 Pro",
+  "cilindraje_cc": 164,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "tipo_motor": {
+      "texto_original": "4 Tiempos, SOHC Cilindro unico",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n160-pro/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "164,82 cc",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n160-pro/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "164 cc"
+    },
+    "torque_maximo": {
+      "texto_original": "14,65N.M @ 6750 RPM",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n160-pro/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "5 Velocidades 1 hacia abajo, 4 hacia arriba",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n160-pro/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n160-pro/",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n160-pro/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Hidraúlica, Suspensión Invertido",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n160-pro/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "ABS, Disco de 300 mm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n160-pro/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "100/80-17, Tubeless",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n160-pro/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono Suspensión",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n160-pro/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "ABS, Disco de 230 mm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n160-pro/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70-17, Tubeless",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n160-pro/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1348 mm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-n160-pro/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

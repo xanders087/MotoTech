@@ -1,0 +1,87 @@
+{
+  "marca": "Honda",
+  "modelo": "WAVE 110S 2027",
+  "cilindraje_cc": 109,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "109.1 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "109 cc"
+    },
+    "tipo_motor": {
+      "texto_original": "OHC, Monocilíndrico, 4 tiempos, refrigerado por aire",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "8,11 Hp @ 7.500 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "8.45 Nm @ 6.000 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "4 velocidades",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco CBS",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Doble Amortiguador",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y de Pedal",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "70/90-17",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "80/90-17",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1.227 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1227 mm"
+    },
+    "peso": {
+      "texto_original": "101 kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/WAVE-110S",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

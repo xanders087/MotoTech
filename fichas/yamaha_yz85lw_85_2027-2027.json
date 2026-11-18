@@ -1,0 +1,100 @@
+{
+  "marca": "Yamaha",
+  "modelo": "YZ85LW",
+  "cilindraje_cc": 85,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "870mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "870 mm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1285mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1285 mm"
+    },
+    "peso": {
+      "texto_original": "75kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "75 kg"
+    },
+    "tipo_motor": {
+      "texto_original": "refrigerado por líquido, 2 cambios",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "85cm3",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "85 cc"
+    },
+    "relacion_compresion": {
+      "texto_original": "8.2-9.6:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Pedal",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "5.0L/1.3usgal/1.1Imp.gal",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "5 L"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 6 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "70/100-19 42M Tube type",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "90/100-16 52M Tube type",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Hydraulic single disc brake",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Hydraulic single disc brake",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Swingarm (link suspension)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz85lw/2565/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2018/03/YZ250LW-B0GG.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

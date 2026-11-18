@@ -1,0 +1,91 @@
+{
+  "marca": "Yamaha",
+  "modelo": "YZ250",
+  "cilindraje_cc": 249,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "975 mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1485 mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "103 kg.",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "103 kg"
+    },
+    "tipo_motor": {
+      "texto_original": "2 tiempos, refrigeración líquida.",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "249 cc",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "8.9~10.6:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "7 L",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Constante de 5 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "80/100-21 Dunlop® Geomax MX33F",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "110/90-19 Dunlop® Geomax MX33",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco hidráulico de 270 mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco hidráulico de 240 mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica invertida, totalmente ajustable KYB® Speed-Sensitive System",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Basculante (por bieletas), totalmente ajustable KYB®",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250/2539/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2018/03/YZ250-BCR.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

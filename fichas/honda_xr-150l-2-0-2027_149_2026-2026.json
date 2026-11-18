@@ -1,0 +1,92 @@
+{
+  "marca": "Honda",
+  "modelo": "XR 150L 2.0 2027",
+  "cilindraje_cc": 149,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "149.1 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "149 cc"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos OHC, Refrigerado por aire",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "11.7 Hp @ 8000 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "12.1 NM @ 6000 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.5 : 1",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguador PRO ARM",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y de pedal",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90-19",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "110/90-17",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1.358 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1358 mm"
+    },
+    "peso": {
+      "texto_original": "129 Kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-150L-20",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

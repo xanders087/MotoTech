@@ -1,0 +1,104 @@
+{
+  "marca": "Yamaha",
+  "modelo": "YZ250F",
+  "cilindraje_cc": 250,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "965mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "965 mm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1480mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1480 mm"
+    },
+    "peso": {
+      "texto_original": "106kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "106 kg"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos DOHC, 4 válvulas, refrigerado por líquido",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "250 cc",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "14.1 : 1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección de combustible",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "6.2L (Aprox. 1.64 gal)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "6.2 L"
+    },
+    "transmision_final": {
+      "texto_original": "Cadena",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 5 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "80/100-21 51M",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "110/90-19 62M",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Hidráulicos con disco",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Hidráulicos con disco",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Basculante (Por bieletas)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250f/2527/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2018/03/YZ250F-BSB.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

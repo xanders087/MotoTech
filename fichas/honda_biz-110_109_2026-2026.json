@@ -1,0 +1,102 @@
+{
+  "marca": "Honda",
+  "modelo": "Biz 110",
+  "cilindraje_cc": 109,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "109,1 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "109 cc"
+    },
+    "tipo_motor": {
+      "texto_original": "Monocilíndrico, 4 tiempos, SOHC, 2 válvulas, enfriado por aire",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "8,23 Hp @ 7500 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "8,59 Nm @ 5750 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "10.0:1",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Semiautomatico, 4 velocidades - Cadena",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica PGM-FI",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco de 220mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor 130 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica, 89 mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Doble amortiguador hidráulico, 86 mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "60/100/17M/C 33P",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "80/100/14M/C",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1.258 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1258 mm"
+    },
+    "peso": {
+      "texto_original": "97 kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/biz",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

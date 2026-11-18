@@ -1,0 +1,81 @@
+{
+  "marca": "Honda",
+  "modelo": "XRE 300 SAHARA STD Modelo 2026",
+  "cilindraje_cc": 300,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "300 CC Comercial",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-std",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "300 cc"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos SOHC, Refrigerado por aire y aceite",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-std",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "25 HP @ 7.500 rpm comercial",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-std",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "27 NM @ 6000 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-std",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "6 Velocidades",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-std",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco con ABS",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-std",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla Telescópica",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-std",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "PRO-LINK",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-std",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-std",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90 – 21",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-std",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "120/80 – 18",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-std",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1425 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-std",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "159 Kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/xre-300-sahara-std",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "marca": "AKT",
+  "modelo": "DS 300",
+  "cilindraje_cc": 292,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "292 cc",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds-300/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "25.5/8.500",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds-300/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "25.5 HP"
+    },
+    "capacidad_tanque": {
+      "texto_original": "16",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds-300/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "16 L"
+    },
+    "torque_maximo": {
+      "texto_original": "23.5/7.000",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds-300/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "23.5 Nm"
+    },
+    "llanta_delantera": {
+      "texto_original": "110/80-17",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds-300/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "150/60-17",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds-300/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco 300MM, 2 pistones ABS",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds-300/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco 200MM, 1 pistón ABS",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds-300/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Invertida de 35MM-134MM recorrido",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds-300/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Amortiguador con bieleta",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds-300/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://aktmotos.com/docs/manuales/manual-de-usuario-garantia-Voge-300-DS.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

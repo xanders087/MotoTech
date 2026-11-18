@@ -1,0 +1,100 @@
+{
+  "marca": "Yamaha",
+  "modelo": "TTR50",
+  "cilindraje_cc": 49,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "555mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "555 mm"
+    },
+    "distancia_ejes": {
+      "texto_original": "925mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "925 mm"
+    },
+    "peso": {
+      "texto_original": "58kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "58 kg"
+    },
+    "tipo_motor": {
+      "texto_original": "SOHC, 2 válvulas, refrigerado por aire, 4 cambios",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "49cm3",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "49 cc"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.5:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "3.1L/0.8usgal/0.7Imp.gal",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "3.1 L"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 3 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "2.50-10 4PR Tube type",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "2.50-10 4PR Tube type",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Mechanical leading trailing drum brake",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Mechanical leading trailing drum brake",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescopic fork",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Swingarm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr50e/8374/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2019/05/TTR50-BEGJ.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

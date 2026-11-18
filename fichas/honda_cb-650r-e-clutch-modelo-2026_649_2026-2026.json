@@ -1,0 +1,91 @@
+{
+  "marca": "Honda",
+  "modelo": "CB 650R E-clutch Modelo 2026",
+  "cilindraje_cc": 649,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "649 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Cilindros en línea 4 Val DOHC Refrigeración liquida",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "94 HP @ 12000 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "64 Nm @ 9500 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "11,6:1",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica de 6 velocidades con embrague anti-rebote",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Dos discos diámetro 310 mm con pinzas de 4 pistones y anclaje radial",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco de diámetro 240 mm con pinza de 1 pistón",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica invertida de 41 mm y 120 mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Amortiguador con ajuste de precarga de 10 etapas de 128 mm de recorrido con tijera de aluminio",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120 / 70ZR-17",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "180 / 55ZR-17",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1450 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "207 Kg (En orden de marcha)",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-650-R",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "207 kg"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

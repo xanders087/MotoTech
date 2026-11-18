@@ -1,0 +1,92 @@
+{
+  "marca": "Honda",
+  "modelo": "PCX 160 ABS 2027",
+  "cilindraje_cc": 156,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "156.9 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "156 cc"
+    },
+    "tipo_motor": {
+      "texto_original": "Monocilindro, 4 tiempos, OHC, 4 válvulas, refrigeración liquida",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "15.8 HP a 8.500 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "14.7Nm a 6.500 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "12.0: 1",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Automática, tipo CVT",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Hidráulico, Disco único de 220 mm Sistema ABS",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Hidráulico, Disco único de 220 mm.",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescopica, 31 mm diametro, 89 mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Twin, 95 mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "110/70 - 14 M/C 50P (tubeless)",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70 - 13 M/C 63P (tubeless)",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1.313 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1313 mm"
+    },
+    "peso": {
+      "texto_original": "126 Kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/PCX-160-2026",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

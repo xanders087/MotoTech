@@ -1,0 +1,114 @@
+{
+  "marca": "Yamaha",
+  "modelo": "XTZ250",
+  "cilindraje_cc": 249,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "875mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "875 mm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1385mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1385 mm"
+    },
+    "peso": {
+      "texto_original": "151kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "151 kg"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos SOHC, refrigerado por aire y aceite",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "249 cc",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.8:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "20.4 Hp a 8000 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "20.5 Nm a 6500 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "inyección de combustible",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "14L",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "14 L"
+    },
+    "transmision_final": {
+      "texto_original": "cadena",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 5 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "80/90- 21 M/C 48S",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "120/80- 18 M/C 62S",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco (ABS)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Basculante (Por bieletas)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz250a/2266/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2024/03/XTZ250ABS-B9L1.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "marca": "AKT",
+  "modelo": "TT200 Rally",
+  "cilindraje_cc": 197,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "197 cc",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/tt200-rally/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "16.5/8.500",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/tt200-rally/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "16.5 HP"
+    },
+    "capacidad_tanque": {
+      "texto_original": "3.17",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/tt200-rally/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "12 L"
+    },
+    "torque_maximo": {
+      "texto_original": "15.5/6.500",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/tt200-rally/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "15.5 Nm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1370",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/tt200-rally/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1370 mm"
+    },
+    "llanta_trasera": {
+      "texto_original": "110/90-17 doble propósito",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/tt200-rally/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90-19 doble propósito",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/tt200-rally/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco lobulado",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/tt200-rally/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco lobulado",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/tt200-rally/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica hidráulica",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/tt200-rally/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Unishock",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/tt200-rally/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://aktmotos.com/docs/manuales/manual-usuario-garantia-200DS.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

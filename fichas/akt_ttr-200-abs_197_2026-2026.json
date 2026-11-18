@@ -1,0 +1,64 @@
+{
+  "marca": "AKT",
+  "modelo": "TTR 200 ABS",
+  "cilindraje_cc": 197,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "197 cc",
+      "fuente": "https://aktmotos.com/motos-akt/enduro/ttr-200-abs/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "16.5/8.500",
+      "fuente": "https://aktmotos.com/motos-akt/enduro/ttr-200-abs/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "16.5 HP"
+    },
+    "capacidad_tanque": {
+      "texto_original": "2.9",
+      "fuente": "https://aktmotos.com/motos-akt/enduro/ttr-200-abs/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "11 L"
+    },
+    "torque_maximo": {
+      "texto_original": "15.5/6.500",
+      "fuente": "https://aktmotos.com/motos-akt/enduro/ttr-200-abs/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "15.5 Nm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1370",
+      "fuente": "https://aktmotos.com/motos-akt/enduro/ttr-200-abs/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1370 mm"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco lobulado",
+      "fuente": "https://aktmotos.com/motos-akt/enduro/ttr-200-abs/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco lobulado",
+      "fuente": "https://aktmotos.com/motos-akt/enduro/ttr-200-abs/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica Hidráulica",
+      "fuente": "https://aktmotos.com/motos-akt/enduro/ttr-200-abs/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Unishock",
+      "fuente": "https://aktmotos.com/motos-akt/enduro/ttr-200-abs/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://aktmotos.com/docs/manuales/manual-usuario-TTR200.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

@@ -153,5 +153,74 @@ class ValidarCarpetaTest(unittest.TestCase):
         self.assertEqual({}, validar.validar_carpeta(tmp, HOY))
 
 
+class ValidarFichaV3Test(unittest.TestCase):
+    def ficha_v3_valida(self) -> dict:
+        return {
+            "marca": "Yamaha",
+            "modelo": "FZ 2.0",
+            "cilindraje_cc": 149,
+            "anio_desde": 2024,
+            "anio_hasta": 2026,
+            "anio_origen": "deteccion",
+            "ficha_tecnica": {
+                "potencia_maxima": {
+                    "texto_original": "12,2 HP @ 7.500 rpm",
+                    "valor_normalizado": "12.2 HP @ 7500 rpm",
+                    "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15v3/25294/",
+                    "capturado": "2026-11-16",
+                },
+                "peso": {
+                    "texto_original": "136 kg",
+                    "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fz15v3/25294/",
+                    "capturado": "2026-11-16",
+                },
+            },
+            "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/manual.pdf",
+            "verificacion": {"metodo": "extraccion determinista v1", "fecha": "2026-11-16"},
+        }
+
+    def test_ficha_v3_solo_ficha_tecnica_es_valida(self):
+        self.assertEqual([], validar.validar_ficha(self.ficha_v3_valida(), HOY))
+
+    def test_ficha_v3_exige_fuente_https_y_texto_original(self):
+        ficha = self.ficha_v3_valida()
+        ficha["ficha_tecnica"]["peso"]["fuente"] = "http://insegura.com/moto"
+        e = validar.validar_ficha(ficha, HOY)
+        self.assertTrue(any("peso.fuente" in x for x in e))
+
+        ficha2 = self.ficha_v3_valida()
+        ficha2["ficha_tecnica"]["peso"]["texto_original"] = "N/A"
+        e2 = validar.validar_ficha(ficha2, HOY)
+        self.assertTrue(any("peso.texto_original" in x for x in e2))
+
+    def test_ficha_v3_con_plan_y_datos_servicio_pdf(self):
+        ficha = self.ficha_v3_valida()
+        ficha["datos_servicio"] = {"capacidad_aceite": {"valor": "1,0 L", "pagina": 78}}
+        ficha["plan_mantenimiento"] = {
+            "fuente": {
+                "url": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/manual.pdf",
+                "sha256": "a" * 64,
+                "pagina": 42,
+                "titulo": "Manual del propietario FZ 2.0",
+            },
+            "tareas": [
+                {"componente": "Aceite de motor", "accion": "Cambiar", "intervalo_km": 3000, "intervalo_meses": None}
+            ],
+        }
+        self.assertEqual([], validar.validar_ficha(ficha, HOY))
+
+        ficha["plan_mantenimiento"]["fuente"]["sha256"] = "invalido"
+        e = validar.validar_ficha(ficha, HOY)
+        self.assertTrue(any("sha256" in x for x in e))
+
+    def test_ficha_v3_anio_origen_y_url_manual(self):
+        ficha = self.ficha_v3_valida()
+        ficha["anio_origen"] = "inventado"
+        ficha["url_manual"] = "http://no-https.com/m.pdf"
+        e = validar.validar_ficha(ficha, HOY)
+        self.assertTrue(any("anio_origen" in x for x in e))
+        self.assertTrue(any("url_manual" in x for x in e))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,91 @@
+{
+  "marca": "Bajaj",
+  "modelo": "Pulsar RS 200 FI ABS",
+  "cilindraje_cc": 199,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "tipo_motor": {
+      "texto_original": "4 Tiempos, Monocilíndrico, SOHC, DTSi, 4 Válvulas",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "199.5 CC",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "199 cc"
+    },
+    "torque_maximo": {
+      "texto_original": "18.6 N.m @ 8000 rpm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "6 Velocidades",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Hidráulica, Telescópica Vertical 120 mm recorrido",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "ABS, Disco de 320 mm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "100/80-17 , 52P Tubeless",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono Suspensión con Nitrox, 110 mm recorrido",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "ABS, Disco de 230 mm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70-17 , 61P Tubeless",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1345 mm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "164 Kg",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "13 L",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-rs-200/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://grupouma.com/colombia/wp-content/uploads/sites/2/2022/06/MU-Pulsar-RS200-FI-2022.2.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

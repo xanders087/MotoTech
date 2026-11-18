@@ -1,0 +1,95 @@
+{
+  "marca": "Yamaha",
+  "modelo": "TTR110",
+  "cilindraje_cc": 110,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "670mm/26.4in",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "670 mm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1080mm/42.5in",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1080 mm"
+    },
+    "peso": {
+      "texto_original": "72kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "72 kg"
+    },
+    "tipo_motor": {
+      "texto_original": "refrigerado por aire, 4 cambios, SOHC, 2 válvulas",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "110cm3",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "110 cc"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.3:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y pedal",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "3.8L/1.0usgal/0.8Imp.gal",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "3.8 L"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 4 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "2.50-14 4PR Tube type",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "3.00-12 4PR Tube type",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Mechanical leading trailing drum brake",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Mechanical leading trailing drum brake",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Basculante",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/ttr110e/2572/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2018/03/TT110E-BMAB.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

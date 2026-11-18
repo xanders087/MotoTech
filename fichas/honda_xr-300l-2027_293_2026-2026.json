@@ -1,0 +1,91 @@
+{
+  "marca": "Honda",
+  "modelo": "XR 300L 2027",
+  "cilindraje_cc": 293,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "293 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, 4 válvulas, monocilíndrico, OHC y refrigerado por aire y aceite",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "24,3 HP a 7.500 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "26,5 Nm a 5.750 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.3 : 1",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco; sistema ABS delantero",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco; sistema ABS trasero",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica convencional Showa 221 mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoshock Pro-Link Showa ajuste en precarga 7 posiciones",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90 / 90-21",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "120 / 80-18",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1.429 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1429 mm"
+    },
+    "peso": {
+      "texto_original": "143 Kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/todo-terreno/XR-300-tornado",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "marca": "Honda",
+  "modelo": "CB 350D Modelo 2026",
+  "cilindraje_cc": 348,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "348 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "Motor 4T, 1 cilindro, OHC, 4 Válvulas, Refrigerado por aire",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "20,7 HP @ 5.500 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "30 NM @ 3.000 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.5 : 1",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Manual de 5 velocidades",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco de 310 mm de diametro",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco de 240 mm de diametro",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica 130 mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Brazo basculante con doble amortiguador y ajuste de precarga 120 mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "100/90M/C - 19",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70M/C - 18",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1.390 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1390 mm"
+    },
+    "peso": {
+      "texto_original": "181 Kg (En orden de marcha)",
+      "fuente": "https://motos.honda.com.co/motos-honda/scrambler/CB-350D",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "181 kg"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

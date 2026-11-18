@@ -1,0 +1,86 @@
+{
+  "marca": "Bajaj",
+  "modelo": "Discover 125 SPORT",
+  "cilindraje_cc": 124,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "tipo_motor": {
+      "texto_original": "4 Tiempos, Monocilíndrico, SOHC, DTSi, 4 Válvulas",
+      "fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "124.6 cc",
+      "fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "124 cc"
+    },
+    "torque_maximo": {
+      "texto_original": "10.79 N.m @ 6500 rpm",
+      "fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "5 Velocidades",
+      "fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y Pedal",
+      "fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Recorrido",
+      "fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco de 200 mm con CBS",
+      "fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "2.75-17, 41P Tubetype",
+      "fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Brazo oscilante, Mono-Nitrox, 110 mm recorrido.",
+      "fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor 130 mm con CBS",
+      "fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "3.00-17, 50P Tube Type",
+      "fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1300 mm",
+      "fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "10 L",
+      "fuente": "https://grupouma.com/colombia/motos/discover/discover-125-sport/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://grupouma.com/colombia/wp-content/uploads/sites/2/2026/04/MU-DISCOVER-2026.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

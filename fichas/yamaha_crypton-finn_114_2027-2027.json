@@ -1,0 +1,112 @@
+{
+  "marca": "Yamaha",
+  "modelo": "CRYPTON FINN",
+  "cilindraje_cc": 114,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "775 mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1235 mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "100kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "100 kg"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos SOHC, refrigerado por aire",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "114 cc",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.3:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "8.85 Hp a 7000 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "9.2 Nm a 5500 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y a pedal",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Fuel injection",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "3.9L (Aprox 1.05 gal)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "3.9 L"
+    },
+    "transmision_final": {
+      "texto_original": "Cadena",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 4 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "70/90-17 M/C 38P",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "80/90-17 M/C 44P",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor (UBS)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Basculante",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/t115finn/29453/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2025/10/D24-Crypton-FI-Garantia-2025.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

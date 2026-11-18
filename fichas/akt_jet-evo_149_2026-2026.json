@@ -1,0 +1,69 @@
+{
+  "marca": "AKT",
+  "modelo": "Jet Evo",
+  "cilindraje_cc": 149,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "149.6 cc",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/jet-evo/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "149 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "14 / 8.500",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/jet-evo/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "14 HP"
+    },
+    "capacidad_tanque": {
+      "texto_original": "3.2",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/jet-evo/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "12.1 L"
+    },
+    "torque_maximo": {
+      "texto_original": "13.5 / 6.500",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/jet-evo/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "13.5 Nm"
+    },
+    "llanta_delantera": {
+      "texto_original": "100 / 90 – 14",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/jet-evo/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "120 / 80 – 14",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/jet-evo/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco ABS doble canal",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/jet-evo/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco ABS doble canal",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/jet-evo/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica hidráulica",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/jet-evo/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Doble amortiguador",
+      "fuente": "https://aktmotos.com/motos-akt/automaticas/jet-evo/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://aktmotos.com/wp-content/uploads/2026/09/manual-usuario-jet-evo-dic-2025.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

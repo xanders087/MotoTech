@@ -1,0 +1,113 @@
+{
+  "marca": "Yamaha",
+  "modelo": "XTZ150",
+  "cilindraje_cc": 149,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "855mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "855 mm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1350 mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "136 Kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos SOHC , refrigerado por aire",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "149CC",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "149 cc"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.6 : 1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "12.3 Hp a 7500 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "13.1 Nm a 6000 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Electrico",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "lnyección electrónica",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "11L",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "11 L"
+    },
+    "transmision_final": {
+      "texto_original": "Cadena",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 5 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90-19 M/C(52P) Tube type",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "110/90-17M/C 60P",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco (ABS)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Basculante (Por bieletas)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/xtz150-abs/9869/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2019/09/BBL3-XTZ150-A-Garantia-2026.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

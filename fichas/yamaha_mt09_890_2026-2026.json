@@ -1,0 +1,111 @@
+{
+  "marca": "Yamaha",
+  "modelo": "MT09",
+  "cilindraje_cc": 890,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "825 mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1430 mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "193 kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos DOHC, refrigerado por líquido",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "890 cc",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "11.5:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "117,3 Hp a 10000 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "93.0 Nm a 7000 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección de combustible",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "14L",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "14 L"
+    },
+    "transmision_final": {
+      "texto_original": "Cadena",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 6 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70ZR17 M/C 58W",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "180/55ZR17 M/C 73W",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Doble disco (ABS)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco (ABS)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Basculante (Por bieletas)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/mt09a/2317/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2018/03/MT09.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

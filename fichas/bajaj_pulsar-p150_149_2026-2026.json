@@ -1,0 +1,71 @@
+{
+  "marca": "Bajaj",
+  "modelo": "Pulsar P150",
+  "cilindraje_cc": 149,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "tipo_motor": {
+      "texto_original": "4 Tiempos, Monocilíndrico, 2 Válvulas",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-p150/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "149.68 cc",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-p150/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "149 cc"
+    },
+    "torque_maximo": {
+      "texto_original": "13.5 N.m @ 6000 rpm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-p150/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "5 Velocidades",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-p150/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-p150/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Hidraúlica, Telescópica vertical 31 mm.",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-p150/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco de 260 mm, ABS un solo canal",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-p150/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono Suspensión",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-p150/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco de 230 mm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-p150/",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "140 Kg",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-p150/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "14 L",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-p150/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://grupouma.com/docs/fichastecnicas/2025/pulsar-p150.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

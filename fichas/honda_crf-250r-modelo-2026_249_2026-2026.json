@@ -1,0 +1,92 @@
+{
+  "marca": "Honda",
+  "modelo": "CRF 250R Modelo 2026",
+  "cilindraje_cc": 249,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "249,0 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "249 cc"
+    },
+    "tipo_motor": {
+      "texto_original": "Monocilíndrico, 4 tiempos",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "39,0 Hp @ 11.500 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "18.8 Nm @ 6.500 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9,0:1",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Cadena",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco hidráulico",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco hidráulico",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla invertida Showa",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguador Showa",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Encendido Eléctrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "80/100-21 Dunlop MX52f",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "100/90-19 59R MX52",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1489 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "105,6 Kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-250R",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "105.6 kg"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

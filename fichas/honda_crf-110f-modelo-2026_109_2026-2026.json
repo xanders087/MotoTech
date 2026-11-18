@@ -1,0 +1,91 @@
+{
+  "marca": "Honda",
+  "modelo": "CRF 110F Modelo 2026",
+  "cilindraje_cc": 109,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "109 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4T, monocilíndrico, SOHC, 2 válvulas, refrigeración aire.",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "7.17 Hp @ 7.500 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "8.85 Nm @ 3.500 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9,0 : 1",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "4 Velocidad",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Tambor",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla de 31mm, 100mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguador, 59mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "70/100-14",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "80/100-12",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1.064 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1064 mm"
+    },
+    "peso": {
+      "texto_original": "74 Kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/enduro-motocross/CRF-110F",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

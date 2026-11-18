@@ -1,0 +1,69 @@
+{
+  "marca": "AKT",
+  "modelo": "DS525X",
+  "cilindraje_cc": 494,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "494 cc",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds525x/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "Bíclindrico – DOHC",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds525x/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "47/8.500",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds525x/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "47 HP"
+    },
+    "capacidad_tanque": {
+      "texto_original": "4.4",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds525x/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "16.7 L"
+    },
+    "torque_maximo": {
+      "texto_original": "44.5/7.000",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds525x/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "44.5 Nm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1450",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds525x/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1450 mm"
+    },
+    "freno_delantero": {
+      "texto_original": "Doble disco ABS Nissin",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds525x/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco ABS Nissin",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds525x/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Invertida KYB",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds525x/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguador regulable KYB",
+      "fuente": "https://aktmotos.com/motos-akt/aventura/ds525x/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://aktmotos.com/wp-content/uploads/2026/09/Manual-DS525X-1.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

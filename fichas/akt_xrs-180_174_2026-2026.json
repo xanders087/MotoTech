@@ -1,0 +1,55 @@
+{
+  "marca": "AKT",
+  "modelo": "XRS 180",
+  "cilindraje_cc": 174,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "174.1 cc",
+      "fuente": "https://aktmotos.com/motos-akt/akt-voge/180-xrs/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "174 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "17.4/8.500",
+      "fuente": "https://aktmotos.com/motos-akt/akt-voge/180-xrs/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "17.4 HP"
+    },
+    "capacidad_tanque": {
+      "texto_original": "2.4",
+      "fuente": "https://aktmotos.com/motos-akt/akt-voge/180-xrs/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "9.1 L"
+    },
+    "torque_maximo": {
+      "texto_original": "16/6.500",
+      "fuente": "https://aktmotos.com/motos-akt/akt-voge/180-xrs/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "16 Nm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1330",
+      "fuente": "https://aktmotos.com/motos-akt/akt-voge/180-xrs/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1330 mm"
+    },
+    "llanta_delantera": {
+      "texto_original": "110/80-14",
+      "fuente": "https://aktmotos.com/motos-akt/akt-voge/180-xrs/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70-13",
+      "fuente": "https://aktmotos.com/motos-akt/akt-voge/180-xrs/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://aktmotos.com/wp-content/uploads/2026/09/manual-xrs180.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

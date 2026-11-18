@@ -2,10 +2,10 @@ name: Recolector de catálogo oficial
 
 on:
   pull_request:
-    paths: ["herramientas/recolector/**", ".github/workflows/recolector.yml"]
+    paths: ["herramientas/recolector/**", "herramientas/fichas/**", "fichas/**", ".github/workflows/recolector.yml"]
   push:
     branches: [main]
-    paths: ["herramientas/recolector/**", ".github/workflows/recolector.yml"]
+    paths: ["herramientas/recolector/**", "herramientas/fichas/**", "fichas/**", ".github/workflows/recolector.yml"]
   schedule:
     - cron: "0 7 * * 1"
   workflow_dispatch:
@@ -23,8 +23,11 @@ jobs:
           python-version: "3.12"
       - name: Instalar dependencias de pruebas
         run: pip install --quiet beautifulsoup4
-      - name: Pruebas unitarias del recolector
-        run: python -m unittest discover -s herramientas/recolector -v
+      - name: Pruebas unitarias y validación de fichas
+        run: |
+          python -m unittest discover -s herramientas/fichas -v
+          python -m unittest discover -s herramientas/recolector -v
+          python herramientas/fichas/validar.py
 
   recolectar:
     needs: pruebas
@@ -61,23 +64,23 @@ jobs:
           fi
           echo "exit_code=$STATUS" >> "$GITHUB_OUTPUT"
           exit 0
-      - name: Crear PR si cambió la instantánea offline
+      - name: Crear PR si cambió la instantánea o fichas
         if: always()
         run: |
-          if git diff --quiet app/src/main/resources/motorcycle_catalog.json; then
-            echo "Sin cambios en motorcycle_catalog.json."
+          if git diff --quiet app/src/main/resources/motorcycle_catalog.json fichas/ && [ -z "$(git ls-files --others --exclude-standard fichas/)" ]; then
+            echo "Sin cambios en motorcycle_catalog.json ni fichas/."
             exit 0
           fi
           BRANCH="chore/catalogo-oficial-$(date -u +%Y%m%d)"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B "$BRANCH"
-          git add app/src/main/resources/motorcycle_catalog.json
-          git commit -m "chore(catalogo): actualizar instantanea oficial"
+          git add app/src/main/resources/motorcycle_catalog.json fichas/
+          git commit -m "chore(catalogo): actualizar catalogo y fichas oficiales"
           git push --force origin "$BRANCH"
           if ! gh pr list --head "$BRANCH" --state open --json number --jq 'length' | grep -q '^[1-9]'; then
             gh pr create \
-              --title "chore(catalogo): actualizar instantánea oficial" \
+              --title "chore(catalogo): actualizar catálogo y fichas oficiales" \
               --body "Actualización automática semanal generada por el recolector oficial." \
               --base main \
               --head "$BRANCH"

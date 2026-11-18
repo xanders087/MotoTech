@@ -1,0 +1,90 @@
+{
+  "marca": "Honda",
+  "modelo": "ADV 350 Modelo 2026",
+  "cilindraje_cc": 330,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "330 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "Monocilindrico :4 tiempos, SOHC, enfiramiento liquido",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "28.8 Hp / 7500 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "31.5 Nm/ 5250 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "10,7:1",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "CVT, transmisión continua variable, Transmisión final: banda V-Belt",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco de 256 mm de diámetro, pinza de 2 pistones hidráulicos, ABS",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco de 240 mm de diámetro, pinza hidráulica de 1 pistón, ABS",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica invertida de 37 mm de diámetro, 125 mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Doble amortiguador, 130 mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70-15 M/C",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "140/70-14 M/C",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1520 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "186 Kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/scooter-y-semiautomatica/adv-350",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

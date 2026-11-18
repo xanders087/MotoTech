@@ -1,0 +1,91 @@
+{
+  "marca": "Bajaj",
+  "modelo": "Boxer 150X",
+  "cilindraje_cc": 144,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "tipo_motor": {
+      "texto_original": "4 tiempos, Monocilíndrico, SOHC",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "144.8 cc",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "144 cc"
+    },
+    "torque_maximo": {
+      "texto_original": "12.55 N.m @ 5000 rpm",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "5 Velocidades",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y pedal",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Hidráulica, Telescópica Vertical, 125 mm recorrido",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco de 240mm",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "3.00-17, 46P Tubetype",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Brazo oscilante, Tecnología SNS y 100 mm de recorrido",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor 130 mm",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "100/90-17, 55P Tubetype",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1285 mm",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "128 Kg",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "11 L",
+      "fuente": "https://grupouma.com/colombia/motos/boxer/boxer-150x/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://grupouma.com/colombia/wp-content/uploads/sites/2/2026/04/MU-BOXER-150X-CBS-2026.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

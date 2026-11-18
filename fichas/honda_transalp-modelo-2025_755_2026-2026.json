@@ -1,0 +1,90 @@
+{
+  "marca": "Honda",
+  "modelo": "Transalp Modelo 2025",
+  "cilindraje_cc": 755,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "755 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos OHC​ Bicilíndrico, 8V",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "90.5 HP @ 9.500 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "75 Nm @ 7.250 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "11,0:1",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión de 6 velocidades",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "2 discos, 310mm x 4.5mm, pinzas de 2 pistones de anclaje axial.​ ABS",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "1 disco de 256mm x 6.0mm con pinza de 1 pistón.​ ABS",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla Showa invertida de 43mm SFF-CA, 200mm de recorrido​",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Sistema Pro-Link con 190mm de recorrido​",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90-21M/C 54H – Tube Type​",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "150/70R18M/C 70H – Tube Type​",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1560 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "210 Kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

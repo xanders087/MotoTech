@@ -1,0 +1,87 @@
+{
+  "marca": "Honda",
+  "modelo": "CB 300F 2027",
+  "cilindraje_cc": 293,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "293.52cc​",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "293 cc"
+    },
+    "tipo_motor": {
+      "texto_original": "4T SOHC 4 Válvulas​, monocilíndrico, SI, refrigerado por aceite​​",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "24,1 hp @ 7500rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9,3:1​​",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Embrague multidisco en baño de aceite​​​​",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco- 276mm​​​​ ABS",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco- 220mm​​​​ ABS",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica (USD)​​​​ SHOWA",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguador​​​​",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Arranque automático​​",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "110/70R-17M/C 54H​​​​",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "150/60R-17M/C 66H​​​​",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1390 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "153 Kg (vacio)",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-300F",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "153 kg"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

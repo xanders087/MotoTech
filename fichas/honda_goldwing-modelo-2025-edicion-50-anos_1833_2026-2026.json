@@ -1,0 +1,91 @@
+{
+  "marca": "Honda",
+  "modelo": "GOLDWING Modelo 2025 Edicion 50 años",
+  "cilindraje_cc": 1833,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "1833 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "cilindros horizontales 24 valvulas SOHC refrigerado por liquido",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "125 HP @ 5500 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "170 Nm @ 4500 RPM",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "10,5:1",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión de doble embrague DCT de 7 velocidades, velocidad crucero y reversa eléctrica",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Dos discos flotantes de 320 mm con pinzas de 6 pistones de accionamiento hidráulico y 2 pastillas de metal sinterizado",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco ventilado de 316 mm de diámetro con pinza de accionamiento hidráulico y pastillas de metal sinterizado/incluye freno de estacionamiento.",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Tipo doble trapecio de aluminio, amortiguador ajustable electrónicamente con 110 mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Amortiguador con ajuste de precarga electrónica accionada por bieletas PRO-LINK(R), tijera de aluminio y 105 mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "130 / 70R-18",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "200 / 55R-16",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1695 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "383 Kg (En orden de marcha)",
+      "fuente": "https://motos.honda.com.co/motos-honda/touring/GOLDWING",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "383 kg"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "marca": "AKT",
+  "modelo": "250 R",
+  "cilindraje_cc": 249,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "249.4 cc",
+      "fuente": "https://aktmotos.com/motos-akt/calle/250-r/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "249 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "24.1/7.500",
+      "fuente": "https://aktmotos.com/motos-akt/calle/250-r/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "24.1 HP"
+    },
+    "capacidad_tanque": {
+      "texto_original": "3.17",
+      "fuente": "https://aktmotos.com/motos-akt/calle/250-r/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "12 L"
+    },
+    "torque_maximo": {
+      "texto_original": "23/6.000",
+      "fuente": "https://aktmotos.com/motos-akt/calle/250-r/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "23 Nm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1350",
+      "fuente": "https://aktmotos.com/motos-akt/calle/250-r/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1350 mm"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://aktmotos.com/motos-akt/calle/250-r/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco",
+      "fuente": "https://aktmotos.com/motos-akt/calle/250-r/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://aktmotos.com/docs/manuales/manual-usuario-garantia-Ak-250R.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

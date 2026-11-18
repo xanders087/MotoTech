@@ -1,0 +1,80 @@
+{
+  "marca": "Yamaha",
+  "modelo": "YZ250X",
+  "cilindraje_cc": 249,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "970mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250x/7527/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "970 mm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1480mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250x/7527/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1480 mm"
+    },
+    "tipo_motor": {
+      "texto_original": "2 Tiempos, refrigerado por liquido",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250x/7527/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "249cm3",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250x/7527/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "249 cc"
+    },
+    "relacion_compresion": {
+      "texto_original": "7.9-9.4:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250x/7527/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "8.0 L",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250x/7527/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "8 L"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 5 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250x/7527/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90-21 54M con neumático",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250x/7527/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "110/100-18 64M con neumático",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250x/7527/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco – 270mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250x/7527/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco – 245mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250x/7527/",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "104kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz250x/7527/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "104 kg"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2020/09/YZ250X-BRY.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

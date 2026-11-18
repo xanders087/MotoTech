@@ -1,0 +1,71 @@
+{
+  "marca": "Bajaj",
+  "modelo": "Pulsar NS 125",
+  "cilindraje_cc": 124,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "tipo_motor": {
+      "texto_original": "4 Tiempos, Monocilíndrico",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns-125/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "124.45 cc",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns-125/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "124 cc"
+    },
+    "torque_maximo": {
+      "texto_original": "11 N.m @ 7000 rpm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns-125/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "5 Velocidades",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns-125/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns-125/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla Telescópica",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns-125/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco de 240 mm con CBS",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns-125/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono Suspensión con Nitrox",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns-125/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor de 130 mm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns-125/",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "141 Kg",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns-125/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "12 L",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns-125/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://grupouma.com/colombia/wp-content/uploads/sites/2/2026/04/MU-PULSAR-NS-125-2026.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

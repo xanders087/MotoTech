@@ -1,0 +1,100 @@
+{
+  "marca": "Yamaha",
+  "modelo": "PW50",
+  "cilindraje_cc": 49,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "475mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "475 mm"
+    },
+    "distancia_ejes": {
+      "texto_original": "855mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "855 mm"
+    },
+    "peso": {
+      "texto_original": "41kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "41 kg"
+    },
+    "tipo_motor": {
+      "texto_original": "Air cooled, 2-stroke – 2 Tiempos, refrigerado por aire",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "49cm3",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "49 cc"
+    },
+    "relacion_compresion": {
+      "texto_original": "6,0:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Kickstarter – Pedal",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "2.0L",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "2 L"
+    },
+    "tipo_transmision": {
+      "texto_original": "Húmedo, automático centrífugo",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "2.50-10 4PR",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "2.50-10 4PR",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Tambor",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Unidad oscilante",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/pw50/14793/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

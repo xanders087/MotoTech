@@ -1,0 +1,88 @@
+{
+  "marca": "Honda",
+  "modelo": "CB 100 2027",
+  "cilindraje_cc": 98,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "98.98 cc",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "98 cc"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "6,9 HP @ 7.500 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "7,5 Nm @ 4.500 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Tambor, sistema CBS",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor, sistema CBS",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Basculante de doble amortiguador",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y de pedal",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "2.75 - 17 M 41 P",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "3.00 - 17 M 50 P",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1.245 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1245 mm"
+    },
+    "peso": {
+      "texto_original": "97 Kilogramos",
+      "fuente": "https://motos.honda.com.co/motos-honda/motos-sport/CB-100",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "97 kg"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

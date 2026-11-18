@@ -1,0 +1,91 @@
+{
+  "marca": "Honda",
+  "modelo": "CBR 1000 RRR Modelo 2025",
+  "cilindraje_cc": 1000,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "1000 CC",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4T, 4 cilindros en línea, DOHC, 16 V. Refrigeración liquida",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "214 Hp @ 14,000 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "113.0 Nm @ 12,000 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "13.6 : 1",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "6 velocidades",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "BREMBO Hidráulico, 2 discos flotantes de 330 mm, mordazas de 4 pistones montados radialmente",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "BREMBO Hidráulico, 1 disco 220 mm, mordaza de 2 pistones",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquillas telescópicas invertidas Ölins NPX S-EC con 43 mm de diametro con ajuste de precarga, compresion y extensión, 125 mm de recorrido, control electrónico",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Unidad Pro-link Monoamortiguada (Ölins) TTX36 S-EC con ajuste de precarga y amortiguación en compresión y extensión, 143 mm de recorrido",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70 ZR-17 M/C (58W)",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "200/55 ZR-17 M/C (73W)",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1.455 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1455 mm"
+    },
+    "peso": {
+      "texto_original": "201 kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/super-sport/CBR-1000-RRR",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

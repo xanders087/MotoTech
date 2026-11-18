@@ -1,0 +1,91 @@
+{
+  "marca": "Bajaj",
+  "modelo": "Dominar 400 Touring",
+  "cilindraje_cc": 373,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "tipo_motor": {
+      "texto_original": "4 tiempos, Monocilíndrico, DOHC",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "373.27 cc",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "373 cc"
+    },
+    "torque_maximo": {
+      "texto_original": "35 N.m @ 7000 rpm",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "6 Velocidades",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Hidráulica, Telescópica Invertida",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "ABS, Disco de 320 mm",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "110/70R17, 54S Tubeless",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono Suspensión con Nitrox",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "ABS, Disco de 230 mm",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "150/60R17, 66S Tubeless",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1453 mm",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "192 Kg",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "13 L",
+      "fuente": "https://grupouma.com/colombia/motos/dominar/dominar-400-touring/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://grupouma.com/docs/manual/manual-dominar-400-2026.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

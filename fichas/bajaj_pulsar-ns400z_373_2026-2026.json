@@ -1,0 +1,91 @@
+{
+  "marca": "Bajaj",
+  "modelo": "Pulsar NS400Z",
+  "cilindraje_cc": 373,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "tipo_motor": {
+      "texto_original": "4 Tiempos, DOHC cilindro único",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "373,27 cc",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "373 cc"
+    },
+    "torque_maximo": {
+      "texto_original": "35 N.m @ 7000 rpm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "6 Velocidades (1 hacia abajo, 5 hacia arriba",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Hidráulica , Suspensión Invertida",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "ABS, Disco de 320 mm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "150/60-ZR17 Tubeless",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "110/70-ZR17 Tubeless",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono Suspensión Nitrox",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "ABS, Disco 230 mm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1344 mm",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "174 Kg",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "12 L",
+      "fuente": "https://grupouma.com/colombia/motos/pulsar/pulsar-ns400z/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://grupouma.com/docs/manual/manual-pulsar-ns400z-2026.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

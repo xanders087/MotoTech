@@ -1,0 +1,92 @@
+{
+  "marca": "Honda",
+  "modelo": "NAVI MIX 2027",
+  "cilindraje_cc": 109,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "109,19 cm³",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "109 cc"
+    },
+    "tipo_motor": {
+      "texto_original": "Monocilíndrico, 4 tiempos, 2 válvulas, OHC refrigerado por aire",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "7,9 Hp @ 7.500 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "8.91 Nm @ 5.000 rpm",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.5 : 1",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Automática (V-Matic)",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Tambor 130 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor 130 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Telescópica/ Unidad mono-amortiguada",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico / Pedal",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90-12",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "90/100-10",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1,286 mm",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1286 mm"
+    },
+    "peso": {
+      "texto_original": "101 kg",
+      "fuente": "https://motos.honda.com.co/motos-honda/NAVI/navi-mix",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

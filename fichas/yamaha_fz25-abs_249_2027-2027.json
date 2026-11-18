@@ -1,0 +1,111 @@
+{
+  "marca": "Yamaha",
+  "modelo": "FZ25 ABS",
+  "cilindraje_cc": 249,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "795 mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1360 mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "149 kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos SOHC, refrigerado por aire y aceite",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "249 cc",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.8:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "20.6 Hp a 8000 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "20.0 Nm a 6000 rpm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Electrico",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección de combustible",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "14L",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "14 L"
+    },
+    "transmision_final": {
+      "texto_original": "Cadena",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 5 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "100/80-17M/C 52P",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "140/70-17 MC 66S",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco (ABS)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco (ABS)",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Brazo basculante",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/fzn250a/9260/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2019/08/B8V2-FZ-250A.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

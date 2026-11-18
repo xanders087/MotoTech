@@ -1,0 +1,83 @@
+{
+  "marca": "Yamaha",
+  "modelo": "YZ125",
+  "cilindraje_cc": 125,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "975mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz125/2558/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "975 mm"
+    },
+    "distancia_ejes": {
+      "texto_original": "1445mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz125/2558/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1445 mm"
+    },
+    "tipo_motor": {
+      "texto_original": "2 Tiempos, refrigerado por liquido",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz125/2558/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "125 cc",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz125/2558/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "8.6 – 10.7:1",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz125/2558/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "8 L",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz125/2558/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz125/2558/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión constante de 6 velocidades",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz125/2558/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "80/100-21 51M con neumático",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz125/2558/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "100/90-19 57M con neumático",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz125/2558/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco – 270mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz125/2558/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco – 245mm",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz125/2558/",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "94kg",
+      "fuente": "https://www.incolmotos-yamaha.com.co/vehiculo/yz125/2558/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "94 kg"
+    }
+  },
+  "url_manual": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2020/09/YZ125-B4XA.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}
