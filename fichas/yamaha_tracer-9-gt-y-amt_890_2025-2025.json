@@ -109,5 +109,71 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2025/09/18648.pdf",
+      "sha256": "f61379ed1cb2168929fe29a150a11a79797f645b7dbc53a8e8aca65ecba6cd90",
+      "pagina": 145,
+      "titulo": "Manual oficial Yamaha TRACER 9 GT Y-AMT"
+    },
+    "tareas": [
+      {
+        "componente": "Holgura de la válvula",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 40000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de aire",
+        "accion": "Cambiar",
+        "intervalo_km": 40000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Tubos de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 48
+      },
+      {
+        "componente": "Líquido de frenos",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 24
+      },
+      {
+        "componente": "Cojinetes del eje del basculante",
+        "accion": "Lubricar",
+        "intervalo_km": 50000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cadena de transmisión",
+        "accion": "Ajustar y lubricar",
+        "intervalo_km": 1000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Sistema de refrigeración",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 36
+      }
+    ]
+  },
+  "datos_servicio": {
+    "capacidad_aceite": {
+      "valor": "2.8 L",
+      "pagina": 152
+    },
+    "liquido_frenos": {
+      "valor": "DOT 4",
+      "pagina": 161
+    },
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-40",
+      "pagina": 185
+    }
   }
 }

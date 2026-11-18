@@ -109,5 +109,241 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2019/09/BBL3-XTZ150-A-Garantia-2026.pdf",
+      "sha256": "8233dd44f591f6fb4e9b62f264a57a3b422bf6e4d5745ed6263149d16171f810",
+      "pagina": 41,
+      "titulo": "Manual oficial Yamaha XTZ150"
+    },
+    "tareas": [
+      {
+        "componente": "Línea de combustible",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Bujía",
+        "accion": "Cambiar",
+        "intervalo_km": 6000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Válvulas",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Inyección de gasolina",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Silenciador y tubo de escape",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Comprobación del sistema de diagnóstico",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de aire",
+        "accion": "Cambiar",
+        "intervalo_km": 6000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Tubo de drenaje del filtro de aire",
+        "accion": "Limpiar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Batería",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Embrague",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Freno delantero",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Freno trasero",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Tubo de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 48
+      },
+      {
+        "componente": "Líquido de freno (freno de disco)",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 24
+      },
+      {
+        "componente": "Ruedas",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Llantas",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cojinetes de rueda",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Basculante",
+        "accion": "Lubricar",
+        "intervalo_km": 24000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cadena de transmisión",
+        "accion": "Ajustar y lubricar",
+        "intervalo_km": 500,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cojinetes de dirección",
+        "accion": "Lubricar",
+        "intervalo_km": 12000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Fijaciones del bastidor",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Eje pivote de la manigueta de freno",
+        "accion": "Lubricar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Eje pivote del pedal de freno",
+        "accion": "Lubricar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Eje pivote de la manigueta de embrague",
+        "accion": "Lubricar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Soporte lateral",
+        "accion": "Lubricar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Horquilla delantera",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Conjunto amortiguador",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Puntos de pivote del brazo de acoplamiento y del brazo de relé de la suspensión trasera",
+        "accion": "Lubricar",
+        "intervalo_km": 6000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Aceite de motor",
+        "accion": "Cambiar aceite",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de aceite del motor",
+        "accion": "Cambiar",
+        "intervalo_km": 6000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Interruptores de freno delantero y trasero",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Piezas móviles y cables",
+        "accion": "Lubricar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Puño del acelerador",
+        "accion": "Ajustar y lubricar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Luces, señales e interruptores",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      }
+    ]
+  },
+  "datos_servicio": {
+    "capacidad_aceite": {
+      "valor": "1 L",
+      "pagina": 50
+    },
+    "presion_llanta_delantera": {
+      "valor": "22 psi",
+      "pagina": 54
+    },
+    "presion_llanta_trasera": {
+      "valor": "22 psi",
+      "pagina": 54
+    },
+    "liquido_frenos": {
+      "valor": "DOT 4",
+      "pagina": 60
+    },
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-40",
+      "pagina": 83
+    }
   }
 }

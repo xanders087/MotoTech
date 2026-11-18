@@ -387,6 +387,8 @@ def sincronizar_ficha_en_carpeta(
     ficha_tecnica: dict[str, dict[str, Any]],
     url_manual: str | None = None,
     anio_fuente: int | None = None,
+    plan_mantenimiento: dict[str, Any] | None = None,
+    datos_servicio: dict[str, Any] | None = None,
     hoy: datetime.date | None = None,
 ) -> list[dict[str, Any]]:
     """Aplica las reglas de versionado por año (§4.1) en `fichas/` y devuelve las fichas nuevas o cambiadas."""
@@ -414,7 +416,13 @@ def sincronizar_ficha_en_carpeta(
             existentes.append((ruta, f))
     existentes.sort(key=lambda par: (par[1].get("anio_hasta", 0), par[1].get("anio_desde", 0)))
 
-    def _construir_doc(desde: int, hasta: int, origen: str) -> dict[str, Any]:
+    def _construir_doc(
+        desde: int,
+        hasta: int,
+        origen: str,
+        plan: dict[str, Any] | None = plan_mantenimiento,
+        servicio: dict[str, Any] | None = datos_servicio,
+    ) -> dict[str, Any]:
         doc: dict[str, Any] = {
             "marca": marca,
             "modelo": modelo,
@@ -426,6 +434,10 @@ def sincronizar_ficha_en_carpeta(
             "url_manual": url_manual,
             "verificacion": {"metodo": METODO_VERIFICACION, "fecha": hoy_str},
         }
+        if plan is not None:
+            doc["plan_mantenimiento"] = plan
+        if servicio is not None:
+            doc["datos_servicio"] = servicio
         return doc
 
     def _guardar(doc: dict[str, Any], ruta_anterior: Path | None = None) -> dict[str, Any] | None:
@@ -450,9 +462,9 @@ def sincronizar_ficha_en_carpeta(
     firma_ult = _firma_especificaciones(ult)
     cambio_specs = firma_nueva != firma_ult
     cambio_manual = (url_manual is not None and url_manual != ult.get("url_manual"))
+    cambio_plan = (plan_mantenimiento is not None and plan_mantenimiento != ult.get("plan_mantenimiento"))
+    cambio_servicio = (datos_servicio is not None and datos_servicio != ult.get("datos_servicio"))
 
-    # Fichas manuales o con plan_mantenimiento preservado no se pisan si solo cambia metadata menor;
-    # si es ficha v3 automática sin cambios de specs, solo extendemos anio_hasta o url_manual.
     if not cambio_specs:
         necesita_guardar = False
         actualizada = json.loads(json.dumps(ult))
@@ -463,6 +475,12 @@ def sincronizar_ficha_en_carpeta(
             necesita_guardar = True
         if cambio_manual:
             actualizada["url_manual"] = url_manual
+            necesita_guardar = True
+        if cambio_plan:
+            actualizada["plan_mantenimiento"] = plan_mantenimiento
+            necesita_guardar = True
+        if cambio_servicio:
+            actualizada["datos_servicio"] = datos_servicio
             necesita_guardar = True
         if not necesita_guardar:
             return []
@@ -475,6 +493,8 @@ def sincronizar_ficha_en_carpeta(
     ult_desde = int(ult["anio_desde"])
     ult_hasta = int(ult["anio_hasta"])
     modificadas: list[dict[str, Any]] = []
+    plan_heredado = plan_mantenimiento if plan_mantenimiento is not None else ult.get("plan_mantenimiento")
+    servicio_heredado = datos_servicio if datos_servicio is not None else ult.get("datos_servicio")
     if ult_desde < anio_objetivo:
         nuevo_hasta_anterior = min(ult_hasta, anio_objetivo - 1)
         if nuevo_hasta_anterior != ult_hasta:
@@ -483,17 +503,19 @@ def sincronizar_ficha_en_carpeta(
             guardada_cerrada = _guardar(cerrada, ruta_anterior=ruta_ult)
             if guardada_cerrada:
                 modificadas.append(guardada_cerrada)
-        nueva = _construir_doc(anio_objetivo, anio_objetivo, anio_origen)
+        nueva = _construir_doc(anio_objetivo, anio_objetivo, anio_origen, plan=plan_heredado, servicio=servicio_heredado)
         guardada_nueva = _guardar(nueva)
         if guardada_nueva:
             modificadas.append(guardada_nueva)
         return modificadas
 
     # Cambio dentro del mismo año (ult_desde >= anio_objetivo): actualizar la versión de ese año.
-    reemplazo = _construir_doc(ult_desde, max(ult_hasta, anio_objetivo), anio_origen)
-    if ult.get("plan_mantenimiento") is not None:
-        reemplazo["plan_mantenimiento"] = ult["plan_mantenimiento"]
-    if ult.get("datos_servicio") is not None:
-        reemplazo["datos_servicio"] = ult["datos_servicio"]
+    reemplazo = _construir_doc(
+        ult_desde,
+        max(ult_hasta, anio_objetivo),
+        anio_origen,
+        plan=plan_heredado,
+        servicio=servicio_heredado,
+    )
     guardada = _guardar(reemplazo, ruta_anterior=ruta_ult)
     return [guardada] if guardada else []

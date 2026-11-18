@@ -91,5 +91,19 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "datos_servicio": {
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-30",
+      "pagina": 69
+    },
+    "presion_llanta_delantera": {
+      "valor": "15 psi",
+      "pagina": 70
+    },
+    "presion_llanta_trasera": {
+      "valor": "15 psi",
+      "pagina": 70
+    }
   }
 }

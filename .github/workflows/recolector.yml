@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Instalar dependencias de pruebas
-        run: pip install --quiet beautifulsoup4
+        run: pip install --quiet beautifulsoup4 pdfplumber
       - name: Pruebas unitarias y validación de fichas
         run: |
           python -m unittest discover -s herramientas/fichas -v
@@ -46,7 +46,7 @@ jobs:
           python-version: "3.12"
       - name: Instalar dependencias y Chromium
         run: |
-          pip install --quiet beautifulsoup4 playwright playwright-stealth firebase-admin
+          pip install --quiet beautifulsoup4 pdfplumber playwright playwright-stealth firebase-admin
           playwright install chromium --with-deps
       - name: Ejecutar recolector oficial
         id: recolector

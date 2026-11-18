@@ -110,5 +110,213 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2021/03/BUB1.pdf",
+      "sha256": "3f8758bdc8f4d846123156384488a9e79b2066fc62d9de15001c2bba5a9e754a",
+      "pagina": 68,
+      "titulo": "untitled"
+    },
+    "tareas": [
+      {
+        "componente": "Línea de combustible",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Bujías",
+        "accion": "Cambiar",
+        "intervalo_km": 10000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Holgura de la válvula",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Inyección de gasolina",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Sistema de escape",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Comprobación del sistema de diagnóstico",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de aire",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Tubo colector del filtro de aire",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de aire de la caja de la correa trapezoidal",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Freno delantero",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Freno trasero",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Tubo de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 48
+      },
+      {
+        "componente": "Líquido de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 24
+      },
+      {
+        "componente": "Ruedas",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Llantas",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cojinetes de rueda",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cojinetes de dirección",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Fijaciones del bastidor",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Eje pivote de las maniguetas de freno delantero y trasero",
+        "accion": "Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Soporte lateral, soporte central",
+        "accion": "Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Interruptor del soporte lateral",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Horquilla delantera",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Conjuntos amortiguadores",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Aceite de motor",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Sistema de refrigeración",
+        "accion": "Cambiar refrigerante",
+        "intervalo_km": null,
+        "intervalo_meses": 36
+      },
+      {
+        "componente": "Aceite de la transmisión final",
+        "accion": "Cambiar",
+        "intervalo_km": 10000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Interruptores de freno delantero y trasero",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Piezas móviles y cables",
+        "accion": "Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Caja y cable del puño del acelerador",
+        "accion": "Ajustar y lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Luces, señales e interruptores",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      }
+    ]
+  },
+  "datos_servicio": {
+    "presion_llanta_delantera": {
+      "valor": "22 psi",
+      "pagina": 85
+    },
+    "liquido_frenos": {
+      "valor": "DOT 4",
+      "pagina": 88
+    },
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-40",
+      "pagina": 108
+    },
+    "capacidad_aceite": {
+      "valor": "0.9 L",
+      "pagina": 108
+    }
   }
 }

@@ -110,5 +110,77 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2019/09/XMAX.pdf",
+      "sha256": "a813b79a31e0e1fa3c53e92cee7157f010a396a4996faeb86ca93eba7453e1c5",
+      "pagina": 85,
+      "titulo": "untitled"
+    },
+    "tareas": [
+      {
+        "componente": "Bujía",
+        "accion": "Cambiar",
+        "intervalo_km": 10000,
+        "intervalo_meses": 12
+      },
+      {
+        "componente": "Holgura de la válvula",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 20000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de aire",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Tubos de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 48
+      },
+      {
+        "componente": "Líquido de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 24
+      },
+      {
+        "componente": "Aceite de motor",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Sistema de refrigeración",
+        "accion": "Cambiar refrigerante",
+        "intervalo_km": null,
+        "intervalo_meses": 36
+      },
+      {
+        "componente": "Correa trapezoidal",
+        "accion": "Revisar",
+        "intervalo_km": 20000,
+        "intervalo_meses": null
+      }
+    ]
+  },
+  "datos_servicio": {
+    "capacidad_aceite": {
+      "valor": "1.5 L",
+      "pagina": 95
+    },
+    "liquido_frenos": {
+      "valor": "DOT 4",
+      "pagina": 106
+    },
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-40",
+      "pagina": 126
+    }
   }
 }

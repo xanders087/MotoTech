@@ -96,5 +96,19 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "datos_servicio": {
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-40",
+      "pagina": 55
+    },
+    "capacidad_aceite": {
+      "valor": "0.63 L",
+      "pagina": 55
+    },
+    "liquido_frenos": {
+      "valor": "DOT 4",
+      "pagina": 59
+    }
   }
 }

@@ -113,5 +113,65 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2022/04/Tenere-700.pdf",
+      "sha256": "0e7f15cdbf81a13adbd8526025f462f5f29ca7a68d4bd39d79166b1bdea77bcd",
+      "pagina": 53,
+      "titulo": "Manual oficial Yamaha Ténéré 700"
+    },
+    "tareas": [
+      {
+        "componente": "Holgura de la válvula",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 40000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Tubos de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 48
+      },
+      {
+        "componente": "Líquido de frenos",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 24
+      },
+      {
+        "componente": "Cojinetes del eje del basculante",
+        "accion": "Lubricar",
+        "intervalo_km": 50000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cadena de transmisión",
+        "accion": "Ajustar y lubricar",
+        "intervalo_km": 1000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Sistema de refrigeración",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 36
+      }
+    ]
+  },
+  "datos_servicio": {
+    "capacidad_aceite": {
+      "valor": "2.3 L",
+      "pagina": 63
+    },
+    "liquido_frenos": {
+      "valor": "DOT 4",
+      "pagina": 73
+    },
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-40",
+      "pagina": 94
+    }
   }
 }

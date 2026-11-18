@@ -1,0 +1,763 @@
+{
+  "marca": "Yamaha",
+  "modelo": "Aerox 155",
+  "url": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2023/09/BVT1-Aerox.pdf",
+  "sha256": "c9dee06d2dcf15be2f2fd96a5314f8dcb033d86542f58c9d07a6487e6d08d21e",
+  "paginas_mant": [
+    [
+      67,
+      "UBJGE0E0.book Page 2 Friday, January 15,2021 10:42 AM Mantenimiento y ajustes periódicos EAU46882 NOTA  Las revisiones anuales deben hacerse cada año sin falta, a no ser que se realice un mantenimiento con base en el kilometraje de la motocicleta.  A partir de los 16.000 km, repita los intervalos de mantenimiento que se deben realizar a partir de los 4.000 km.  Las operaciones relacionadas con los elementos marcados con un asterisco (*) se deben realizar en un concesionario Yamaha ya que necesitan herramientas, información y habilidades técnicas especiales. EAUP0211 Tabla de mantenimiento periódico del sistema de control de emisiones LECTURA DEL ODÓMETRO COMPRO- TRABAJO DE COMPROBACIÓN No. ELEMENTO BACIÓN O MANTENIMIENTO 1.000 km 4.000 km 7.000 km 10.000 km 13.000 km ANUAL Línea de combusti- •Verifique si las mangueras de 1 * ble (mangueras y combustible tienen grietas o √ √ √ √ √ conductos) daños. •Revise la condición en la que se Filtro de 2 * encuentra. A los 13.000 km y cada 12.000 km en adelante. combustible •Cámbielo si es necesario. •Revise la condición en la que se encuentra. √ √ •Limpie la bujía y sus alrededores, 3 Bujía y reajuste la separación de los √ 10 electrodos. • Cámbiela.. √ √ •Revise la holgura de las válvulas. 4 * Válvulas √ √ •Ajústelas si es necesario. 5 * Sistema de inyección •Revise la velocidad de ralentí del √ √ √ √ √ de combustible motor. •Revise si hay alguna fuga. 6 * Sistema de escape •Apriete si es necesario. √ √ √ √√ √√ •Cambie el o los empaques si es necesario. 10-2 No. ELEMENTO TRABAJO DE COMPROBACIÓN\nO MANTENIMIENTO LECTURA DEL ODÓMETRO COMPRO-\nBACIÓN\nANUAL 1.000 km 4.000 km 7.000 km 10.000 km 13.000 km 1 * Línea de combusti-\nble (mangueras y\nconductos) •Verifique si las mangueras de\ncombustible tienen grietas o\ndaños. √ √ √ √ √ 2 * Filtro de\ncombustible •Revise la condición en la que se\nencuentra.\n•Cámbielo si es necesario. A los 13.000 km y cada 12.000 km en adelante. 3 Bujía •Revise la condición en la que se\nencuentra.\n•Limpie la bujía y sus alrededores,\ny reajuste la separación de los\nelectrodos. √ √ √ • Cámbiela.. √ √ 4 * Válvulas •Revise la holgura de las válvulas.\n•Ajústelas si es necesario. √ √ 5 * Sistema de inyección\nde combustible •Revise la velocidad de ralentí del\nmotor. √ √ √ √ √ 6 * Sistema de escape •Revise si hay alguna fuga.\n•Apriete si es necesario.\n•Cambie el o los empaques si es\nnecesario. √ √ √ √√ √√",
+      [
+        [
+          [
+            "No.",
+            null,
+            "ELEMENTO",
+            "TRABAJO DE COMPROBACIÓN\nO MANTENIMIENTO",
+            "LECTURA DEL ODÓMETRO",
+            null,
+            null,
+            null,
+            null,
+            "COMPRO-\nBACIÓN\nANUAL"
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "1.000 km",
+            "4.000 km",
+            "7.000 km",
+            "10.000 km",
+            "13.000 km",
+            null
+          ],
+          [
+            "1",
+            "*",
+            "Línea de combusti-\nble (mangueras y\nconductos)",
+            "•Verifique si las mangueras de\ncombustible tienen grietas o\ndaños.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "2",
+            "*",
+            "Filtro de\ncombustible",
+            "•Revise la condición en la que se\nencuentra.\n•Cámbielo si es necesario.",
+            "A los 13.000 km y cada 12.000 km en adelante.",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "3",
+            "",
+            "Bujía",
+            "•Revise la condición en la que se\nencuentra.\n•Limpie la bujía y sus alrededores,\ny reajuste la separación de los\nelectrodos.",
+            "",
+            "√",
+            "",
+            "√",
+            "√",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            "• Cámbiela..",
+            "",
+            "",
+            "√",
+            "",
+            "√",
+            ""
+          ],
+          [
+            "4",
+            "*",
+            "Válvulas",
+            "•Revise la holgura de las válvulas.\n•Ajústelas si es necesario.",
+            "",
+            "",
+            "√",
+            "",
+            "√",
+            ""
+          ],
+          [
+            "5",
+            "*",
+            "Sistema de inyección\nde combustible",
+            "•Revise la velocidad de ralentí del\nmotor.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "6",
+            "*",
+            "Sistema de escape",
+            "•Revise si hay alguna fuga.\n•Apriete si es necesario.\n•Cambie el o los empaques si es\nnecesario.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√√",
+            "√√"
+          ]
+        ]
+      ]
+    ],
+    [
+      68,
+      "UBJGE0E0.book Page 3 Friday, January 15,2021 10:42 AM Mantenimiento y ajustes periódicos EAUP0270 Tabla de lubricación y mantenimiento general LECTURA DEL ODÓMETRO COMPRO- TRABAJO DE COMPROBACIÓN No. ELEMENTO BACIÓN O MANTENIMIENTO 1.000 km 4.000 km 7.000 km 10.000 km 13.000 km ANUAL •Haga una comprobación dinámica Comprobación del utilizando un diagnosticador 1 * sistema de √ √ √ √ √ √ Yamaha. diagnóstico •Revise los códigos de error. 2 Filtro de aire •Cámbielo. A los 13.000 km y cada 12.000 km en adelante. 3 Manguera de purga •Límpiela. √ √ √ √ √ del filtro de aire Filtro de aire de la •Límpielo. 4 * caja de la correa √ √ √ √ •Cámbielo si es necesario. trapezoidal •Revise el voltaje. 5 * Batería •Cárguela si es necesario. √ √ √ √ √ √ •Revise su funcionamiento y el ni- vel del líquido de frenos, y veri- √ √ √ √ √ √ fique si la motocicleta tiene 6 * Freno delantero alguna fuga del líquido. •Cambie las pastas de freno. Cuando su desgaste haya llegado al límite. •Revise su funcionamiento y el juego de la manigueta. 7 * Freno trasero √ √ √ √ √ √ 10 •Cambie las Bandas de freno. Cuando su desgaste haya llegado al límite. •Verifique si tienen grietas o daños. •Confirme que estén instaladas por √ √ √ √ √ Manguera de donde se especifica y que estén 8 * freno bien sujetadas. •Cámbielas. Cada 4 años. 9 * Líquido de frenos •Cámbielo. Cada 2 años. •Verifique si están descentrados y si tienen 10 * Rines √ √ √ √ algún daño. 10-3 No. ELEMENTO TRABAJO DE COMPROBACIÓN\nO MANTENIMIENTO LECTURA DEL ODÓMETRO COMPRO-\nBACIÓN\nANUAL 1.000 km 4.000 km 7.000 km 10.000 km 13.000 km 1 * Comprobación del\nsistema de\ndiagnóstico •Haga una comprobación dinámica\nutilizando un diagnosticador\nYamaha.\n•Revise los códigos de error. √ √ √ √ √ √ 2 Filtro de aire •Cámbielo. A los 13.000 km y cada 12.000 km en adelante. 3 Manguera de purga\ndel filtro de aire •Límpiela. √ √ √ √ √ 4 * Filtro de aire de la\ncaja de la correa\ntrapezoidal •Límpielo.\n•Cámbielo si es necesario. √ √ √ √ 5 * Batería •Revise el voltaje.\n•Cárguela si es necesario. √ √ √ √ √ √ 6 * Freno delantero •Revise su funcionamiento y el ni-\nvel del líquido de frenos, y veri-\nfique si la motocicleta tiene\nalguna fuga del líquido. √ √ √ √ √ √ •Cambie las pastas de freno. Cuando su desgaste haya llegado al límite. 7 * Freno trasero •Revise su funcionamiento y el\njuego de la manigueta. √ √ √ √ √ √ •Cambie las Bandas de freno. Cuando su desgaste haya llegado al límite. 8 * Manguera de\nfreno •Verifique si tienen grietas o daños.\n•Confirme que estén instaladas por\ndonde se especifica y que estén\nbien sujetadas. √ √ √ √ √ •Cámbielas. Cada 4 años. 9 * Líquido de frenos •Cámbielo. Cada 2 años. 10 * Rines •Verifique si están descentrados y s\nalgún daño. i tienen √ √ √ √",
+      [
+        [
+          [
+            "No.",
+            null,
+            "ELEMENTO",
+            "TRABAJO DE COMPROBACIÓN\nO MANTENIMIENTO",
+            "LECTURA DEL ODÓMETRO",
+            null,
+            null,
+            null,
+            null,
+            "COMPRO-\nBACIÓN\nANUAL"
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "1.000 km",
+            "4.000 km",
+            "7.000 km",
+            "10.000 km",
+            "13.000 km",
+            null
+          ],
+          [
+            "1",
+            "*",
+            "Comprobación del\nsistema de\ndiagnóstico",
+            "•Haga una comprobación dinámica\nutilizando un diagnosticador\nYamaha.\n•Revise los códigos de error.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "2",
+            "",
+            "Filtro de aire",
+            "•Cámbielo.",
+            "A los 13.000 km y cada 12.000 km en adelante.",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "3",
+            "",
+            "Manguera de purga\ndel filtro de aire",
+            "•Límpiela.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            ""
+          ],
+          [
+            "4",
+            "*",
+            "Filtro de aire de la\ncaja de la correa\ntrapezoidal",
+            "•Límpielo.\n•Cámbielo si es necesario.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            ""
+          ],
+          [
+            "5",
+            "*",
+            "Batería",
+            "•Revise el voltaje.\n•Cárguela si es necesario.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "6",
+            "*",
+            "Freno delantero",
+            "•Revise su funcionamiento y el ni-\nvel del líquido de frenos, y veri-\nfique si la motocicleta tiene\nalguna fuga del líquido.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            null,
+            null,
+            null,
+            "•Cambie las pastas de freno.",
+            "Cuando su desgaste haya llegado al límite.",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "7",
+            "*",
+            "Freno trasero",
+            "•Revise su funcionamiento y el\njuego de la manigueta.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            null,
+            null,
+            null,
+            "•Cambie las Bandas de freno.",
+            "Cuando su desgaste haya llegado al límite.",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "8",
+            "*",
+            "Manguera de\nfreno",
+            "•Verifique si tienen grietas o daños.\n•Confirme que estén instaladas por\ndonde se especifica y que estén\nbien sujetadas.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            null,
+            null,
+            null,
+            "•Cámbielas.",
+            "Cada 4 años.",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "9",
+            "*",
+            "Líquido de frenos",
+            "•Cámbielo.",
+            "Cada 2 años.",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "10",
+            "*",
+            "Rines",
+            "•Verifique si están descentrados y s\nalgún daño.",
+            "i tienen",
+            "√",
+            "√",
+            "√",
+            "√",
+            ""
+          ]
+        ]
+      ]
+    ],
+    [
+      69,
+      "UBJGE0E0.book Page 4 Friday, January 15,2021 10:42 AM Mantenimiento y ajustes periódicos LECTURA DEL ODÓMETRO COMPRO- TRABAJO DE COMPROBACIÓN No. ELEMENTO BACIÓN O MANTENIMIENTO 1.000 km 4.000 km 7.000 km 10.000 km 13.000 km ANUAL •Revise la profundidad de los surcos del labrado y verifique si tienen algún daño. 11 * Llantas •Cámbielo si es necesario. √ √ √ √ √ •Revise la presión del aire de las llantas. •Haga los ajustes que sean necesarios. 12 * Rodamientos de las •Verifique si los rodamientos es- √ √ √ √ ruedas tán sueltos o si tienen algún daño. •Verifique si tienen juego libre y si √ √ √ √ √ Rodamientos de la la dirección está dura. 13 * dirección •Lubríquelos con grasa a A los 13.000 km y cada 12.000 km en adelante. base de jabón de litio. •Confirme que todas las tuercas, Elementos de fijación 14 * pernos y tornillos estén √ √ √ √ √ del chasis apretados de manera adecuada. Eje pivotante de la 15 manigueta del freno •Lubríquelo con grasa de silicona. √ √ √ √ √ delantero Eje pivotante de la 16 manigueta del freno •Lubríquelo con grasa de silicona. √ √ √ √ √ 10 trasero •Compruebe su funcionamiento. Soporte lateral y 17 •Lubríquelos con grasa a base de √ √ √ √ √ soporte central jabón de litio. Interruptor del 18 * •Compruebe su funcionamiento. √ √ √ √ √ √ soporte lateral •Compruebe su funcionamiento y 19 * Horquilla delantera √ √ √ √ verifique si hay fugas de aceite. •Compruebe su funcionamiento y 20 * Amortiguadores √ √ √ √ verifique si tienen fugas de aceite. 10-4 No. ELEMENTO TRABAJO DE COMPROBACIÓN\nO MANTENIMIENTO LECTURA DEL ODÓMETRO COMPRO-\nBACIÓN\nANUAL 1.000 km 4.000 km 7.000 km 10.000 km 13.000 km 11 * Llantas •Revise la profundidad de los\nsurcos del labrado y verifique si\ntienen algún daño.\n•Cámbielo si es necesario.\n•Revise la presión del aire de las\nllantas.\n•Haga los ajustes que sean\nnecesarios. √ √ √ √ √ 12 * Rodamientos de las\nruedas •Verifique si los rodamientos es-\ntán sueltos o si tienen algún daño. √ √ √ √ 13 * Rodamientos de la\ndirección •Verifique si tienen juego libre y si\nla dirección está dura. √ √ √ √ √ •Lubríquelos con grasa a\nbase de jabón de litio. A los 13.000 km y cada 12.000 km en adelante. 14 * Elementos de fijación\ndel chasis •Confirme que todas las tuercas,\npernos y tornillos estén\napretados de manera adecuada. √ √ √ √ √ 15 Eje pivotante de la\nmanigueta del freno\ndelantero •Lubríquelo con grasa de silicona. √ √ √ √ √ 16 Eje pivotante de la\nmanigueta del freno\ntrasero •Lubríquelo con grasa de silicona. √ √ √ √ √ 17 Soporte lateral y\nsoporte central •Compruebe su funcionamiento.\n•Lubríquelos con grasa a base de\njabón de litio. √ √ √ √ √ 18 * Interruptor del\nsoporte lateral •Compruebe su funcionamiento. √ √ √ √ √ √ 19 * Horquilla delantera •Compruebe su funcionamiento y\nverifique si hay fugas de aceite. √ √ √ √ 20 * Amortiguadores •Compruebe su funcionamiento y\nverifique si tienen fugas de aceite. √ √ √ √",
+      [
+        [
+          [
+            "No.",
+            null,
+            "ELEMENTO",
+            "TRABAJO DE COMPROBACIÓN\nO MANTENIMIENTO",
+            "LECTURA DEL ODÓMETRO",
+            null,
+            null,
+            null,
+            null,
+            "COMPRO-\nBACIÓN\nANUAL"
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "1.000 km",
+            "4.000 km",
+            "7.000 km",
+            "10.000 km",
+            "13.000 km",
+            null
+          ],
+          [
+            "11",
+            "*",
+            "Llantas",
+            "•Revise la profundidad de los\nsurcos del labrado y verifique si\ntienen algún daño.\n•Cámbielo si es necesario.\n•Revise la presión del aire de las\nllantas.\n•Haga los ajustes que sean\nnecesarios.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "12",
+            "*",
+            "Rodamientos de las\nruedas",
+            "•Verifique si los rodamientos es-\ntán sueltos o si tienen algún daño.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            ""
+          ],
+          [
+            "13",
+            "*",
+            "Rodamientos de la\ndirección",
+            "•Verifique si tienen juego libre y si\nla dirección está dura.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            "•Lubríquelos con grasa a\nbase de jabón de litio.",
+            "A los 13.000 km y cada 12.000 km en adelante.",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "14",
+            "*",
+            "Elementos de fijación\ndel chasis",
+            "•Confirme que todas las tuercas,\npernos y tornillos estén\napretados de manera adecuada.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "15",
+            "",
+            "Eje pivotante de la\nmanigueta del freno\ndelantero",
+            "•Lubríquelo con grasa de silicona.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "16",
+            "",
+            "Eje pivotante de la\nmanigueta del freno\ntrasero",
+            "•Lubríquelo con grasa de silicona.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "17",
+            "",
+            "Soporte lateral y\nsoporte central",
+            "•Compruebe su funcionamiento.\n•Lubríquelos con grasa a base de\njabón de litio.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "18",
+            "*",
+            "Interruptor del\nsoporte lateral",
+            "•Compruebe su funcionamiento.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "19",
+            "*",
+            "Horquilla delantera",
+            "•Compruebe su funcionamiento y\nverifique si hay fugas de aceite.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            ""
+          ],
+          [
+            "20",
+            "*",
+            "Amortiguadores",
+            "•Compruebe su funcionamiento y\nverifique si tienen fugas de aceite.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            ""
+          ]
+        ]
+      ]
+    ],
+    [
+      70,
+      "UBJGE0E0.book Page 5 Friday, January 15,2021 10:42 AM Mantenimiento y ajustes periódicos TRABAJO DE COMPROBACIÓN O LECTURA DEL ODÓMETRO COMPRO- No. ELEMENTO BACIÓN MANTENIMIENTO 1.000 km 4.000 km 7.000 km 10.000 km 13.000 km ANUAL •Cámbielo. √ Cuando el indicador de cambio de aceite «OIL» empiece a destellar 21 Aceite del motor •Revise el nivel y verifique si la √ √ √ √ √ motocicleta tiene fugas. Depurador del aceite 22 * •Límpielo. √ √ del motor •Revise el nivel y verifique si hay √ √ √ √ √ Sistema de fugas de líquido refrigerante. 23 * refrigeración •Cambie el líquido refrigerante. A los 13.000 km y cada 12.000 km en adelante. •Verifique si la motocicleta tiene √ √ √ √ √ Aceite de la fugas de aceite. 24 transmisión final •Cámbielo. √ Cada 12.000 km (7.500 millas). •Revise si está dañada o desgastada. √ √ √ 25 * Correa trapezoidal Cuando el indicador de cambio de la correa trapezoidal destelle [cada •Cámbiela. 25.000 km (15.500 millas)] Polea secundaria de 26 * •Lubríquela. A los 13.000 km y cada 12.000 km en adelante. la correa trapezoidal Interruptores de los 27 * frenos trasero y •Compruebe su funcionamiento. √ √ √ √ √ √ delantero 10 Partes móviles y 28 •Lubríquelas. √ √ √ √ √ cables •Compruebe su funcionamiento. •Verifique si tiene juego libre y 29 * Puño del acelerador ajuste si es necesario. √ √ √ √ √ •Lubrique el cable y la base del puño. Luces, indicadores •Compruebe su funcionamiento. 30 * √ √ √ √ √ √ e interruptores •Ajuste el haz de la luz delantera. 10-5 No. ELEMENTO TRABAJO DE COMPROBACIÓN O\nMANTENIMIENTO LECTURA DEL ODÓMETRO\n1.000 km 4.000 km 7.000 km 10.000 km 13.000 km COMPRO-\nBACIÓN\nANUAL 4.000 km 7.000 km 10.000 km 13.000 km 21 Aceite del motor •Cámbielo. √ Cuando el indicador de cambio de aceite «OIL» empiece a destellar •Revise el nivel y verifique si la\nmotocicleta tiene fugas. √ √ √ √ √ 22 * Depurador del aceite\ndel motor •Límpielo. √ √ 23 * Sistema de\nrefrigeración •Revise el nivel y verifique si hay\nfugas de líquido refrigerante. √ √ √ √ √ •Cambie el líquido refrigerante. A los 13.000 km y cada 12.000 km en adelante. 24 Aceite de la\ntransmisión final •Verifique si la motocicleta tiene\nfugas de aceite. √ √ √ √ √ •Cámbielo. √ Cada 12.000 km (7.500 millas). 25 * Correa trapezoidal •Revise si está dañada o desgastada. √ √ √ •Cámbiela. Cuando el indicador de cambio de la correa trapezoidal destelle [cada\n25.000 km (15.500 millas)] 26 * Polea secundaria de\nla correa trapezoidal •Lubríquela. A los 13.000 km y cada 12.000 km en adelante. 27 * Interruptores de los\nfrenos trasero y\ndelantero •Compruebe su funcionamiento. √ √ √ √ √ √ 28 Partes móviles y\ncables •Lubríquelas. √ √ √ √ √ 29 * Puño del acelerador •Compruebe su funcionamiento.\n•Verifique si tiene juego libre y\najuste si es necesario.\n•Lubrique el cable y la base del\npuño. √ √ √ √ √ 30 * Luces, indicadores\ne interruptores •Compruebe su funcionamiento.\n•Ajuste el haz de la luz delantera. √ √ √ √ √ √",
+      [
+        [
+          [
+            "No.",
+            null,
+            "ELEMENTO",
+            "TRABAJO DE COMPROBACIÓN O\nMANTENIMIENTO",
+            "LECTURA DEL ODÓMETRO\n1.000 km 4.000 km 7.000 km 10.000 km 13.000 km",
+            null,
+            null,
+            null,
+            null,
+            "COMPRO-\nBACIÓN\nANUAL"
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            "4.000 km",
+            "7.000 km",
+            "10.000 km",
+            "13.000 km",
+            null
+          ],
+          [
+            "21",
+            "",
+            "Aceite del motor",
+            "•Cámbielo.",
+            "√",
+            "Cuando el indicador de cambio de aceite «OIL» empiece a destellar",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            "•Revise el nivel y verifique si la\nmotocicleta tiene fugas.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "22",
+            "*",
+            "Depurador del aceite\ndel motor",
+            "•Límpielo.",
+            "√",
+            "",
+            "",
+            "",
+            "",
+            "√"
+          ],
+          [
+            "23",
+            "*",
+            "Sistema de\nrefrigeración",
+            "•Revise el nivel y verifique si hay\nfugas de líquido refrigerante.",
+            "",
+            "√ √ √ √ √",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            "•Cambie el líquido refrigerante.",
+            "A los 13.000 km y cada 12.000 km en adelante.",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "24",
+            "",
+            "Aceite de la\ntransmisión final",
+            "•Verifique si la motocicleta tiene\nfugas de aceite.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            "•Cámbielo.",
+            "√",
+            "Cada 12.000 km (7.500 millas).",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "25",
+            "*",
+            "Correa trapezoidal",
+            "•Revise si está dañada o desgastada.",
+            "",
+            "",
+            "√",
+            "√",
+            "√",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            "•Cámbiela.",
+            "Cuando el indicador de cambio de la correa trapezoidal destelle [cada\n25.000 km (15.500 millas)]",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "26",
+            "*",
+            "Polea secundaria de\nla correa trapezoidal",
+            "•Lubríquela.",
+            "A los 13.000 km y cada 12.000 km en adelante.",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "27",
+            "*",
+            "Interruptores de los\nfrenos trasero y\ndelantero",
+            "•Compruebe su funcionamiento.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "28",
+            "",
+            "Partes móviles y\ncables",
+            "•Lubríquelas.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "29",
+            "*",
+            "Puño del acelerador",
+            "•Compruebe su funcionamiento.\n•Verifique si tiene juego libre y\najuste si es necesario.\n•Lubrique el cable y la base del\npuño.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "30",
+            "*",
+            "Luces, indicadores\ne interruptores",
+            "•Compruebe su funcionamiento.\n•Ajuste el haz de la luz delantera.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ]
+        ]
+      ]
+    ],
+    [
+      122,
+      "INFORMACIÓN SOBRE LA GARANTIA Exclusiones de la Garantía Los siguientes defectos, daños o servicios no están cubiertos por la garantía: a) No se otorgará Garantía cuando se evidencia que la motocicleta y sus componentes han estado expuestos de manera prolongada al Sol, o almacenamiento inadecuado durante periodos prolongados de tiempo, toda vez que ello supone la aparición de defectos tales como cristalización de cauchos y plásticos, envejecimiento prematuro de la pintura o resequedad y pérdida de lubricación de elementos mecánicos. b) Daños del motor por entrada de agua a la cámara de combustión, por fenómenos / situaciones no asociadas a la calidad del producto. c) Daños o fallas causadas por uso de combustible inapropiado, contaminado sea intencional o no. d) Daños o fallas que sean resultado de efectuar modificaciones a la motocicleta, incluyendo, pero sin limitarse a, la instalación de componentes eléctricos/ electrónicos, accesorios como sliders o defensas no aprobados por Incolmotos Yamaha para el mercado colombiano Daños o fallas causadas por el uso de la motocicleta en eventos deportivos, sobrecargas o fallas ocasionadas por accidentes o fenómenos naturales (incendios, terremotos, inundaciones, etc). e) Si en el vehículo se han ocasionado fallas por falta de aceite, líquido refrigerante, líquido de frenos u otro fluido por negligencia, descuido u omisión del propietario o conductor a las recomendaciones descritas en el manual de propietario (ver chequeos diarios de la motocicleta) f) Si el vehículo es lavado a alta presión, afectando radiadores, o fallas eléctricas en conectores, luces o cableados y pintura en general. g) Daños sobre el catalizador y/o sonda lambda por el uso de gasolina con plomo o aditivos que lo contengan. h) Esta Garantía no cubre daños causados por contaminación industrial transportada por el aire (por ejemplo, lluvia que contenga ácido), excremento de pájaros, savia de árboles, piedras, agua salada, inundaciones, tormentas, (granizadas, cambios bruscos de temperatura, etc.) actos delictivos, vandalismo y daños producidos indirectamente por estas causas. i) Esta Garantía no cubre reparaciones a motocicletas cuyo verdadero kilometraje haya sido efecto de alteración a través del odómetro y no sea posible tener certeza del kilometraje recorrido. j) Sonidos normales, vibraciones y deterioro: No están cubiertos el sonido normal, propio del funcionamiento del vehículo, las 15 vibraciones normales, desgaste o deterioros tales como decoloración de superficies pintadas, desvanecimiento del color original, deformación, manchas o excoriaciones, producidas por el transcurso del tiempo y factores ambientales ordinarios. 15-6 ",
+      []
+    ]
+  ],
+  "paginas_espec": [
+    [
+      4,
+      "ALISTAMIENTO\nVerificar partes pintadas y cromadas\nVerificar Ajuste Tornillería (Elementos de seguridad)\nVerificar los niveles de aceite de motor, transmisión o cardan según sea el caso\nVerificar las mangueras del sistema de lubricación\nVerificar nivel de liquido de freno y ajustar si es necesario\nVerificar la tensión de la cadena de transmisión y la posición de los tensores\nCargar la batería\nVerificar que no hayan fugas de aceite y colocar siempre la manguera de desfogue si se requiere\nVerificar el ajuste de los cables de acelerador, frenos, embrague y las mangueras de los frenos\nVerificar la presión de los neumáticos y ajuste de los radios\nInstalar y verificar los accesorios (Espejos, Herramientas y llaves)\nVerificar juego libre del embrague de acuerdo al modelo\nVerificar juego libre freno trasero de acuerdo al modelo\nEncender y ajustar revoluciones mínimas de motor de acuerdo al modelo\nVerificar el funcionamiento de luz de farola, direccionales, stop y demás indicadores del tablero o velocímetro.\nIndicaciones sobre el despegue adecuado del motor\nIndicaciones sobre el mantenimiento adecuado de la motocicleta\nIndicaciones Sobre el cubrimiento de la garantía\nInformación sobre Peticiones, quejas y reclamos PQR\nIndicaciones sobre la revisiones de kilometraje\nEntrega de Manual de propietario y de garantía\nIndicaciones sobre utilización de los sistemas de luces frontales y direccionales\nComo medir el nivel de aceite del motor\nInformar sobre el juego libre de manigueta freno delantero y de embrague\nInformar sobre el juego libre pedal de freno trasero\nInformación sobre indicadores del tablero o velocímetro\nIndicaciones sobre el cuidado y tensión de la cadena\nInformar sobre la presión de aire adecuada en cada una de las llantas\nInformar Sobre la limpieza y lubricación del filtro de aire (Depende del modelo)\nLISTA DE CHEQUEO ENTREGA DE MOTOCICLETA\nFirma Distribuidor Firma Cliente\nATENCIÓN\nTODA LA INFORMACION REFERENTE A LOS CUIDADOS QUE DEBE TENER CON SU MOTOCICLETA ASI COMO TODAS LAS CONDICIONES PARA ACCEDER A LA GARANTIA, SE\nENCUENTRAN ESPECIFICADAS EN EL MANUAL DE PROPIETARIOS Y DE GARANTIA.\nADVERTENCIA\nEL NO CUMPLIMIENTO DE CADA UNA DE LAS RECOMENDACIONES A LAS QUE HACE REFERENCIA EL MANUAL DE GARANTIA Y DE PROPIETARIO, PUEDE GENERA DAÑOS QUE\nAFECTEN EL FUNCIONAMIENTO ADECUADO DE SU MOTOCICLETA Y EN CONSECUENCIA LA NO ACEPTACION DE LA RECLAMACION DE LA GARANTÍA POR EL NO CUMPLIMIENTO\nDE ESTAS RECOMENDACIONES."
+    ],
+    [
+      7,
+      "EAU10134\nEn este manual, la información que es particularmente importante se resalta por medio de las siguientes indicaciones:\n*Los productos y sus especificaciones están sujetos a cambios sin previo aviso.\nEste es el símbolo de alerta de seguridad. Se usa para alertar sobre peligros de\nlesiones personales potenciales. Siga al pie de la letra todos los mensajes de\nseguridad que están encabezados por este símbolo para evitar posibles lesiones o\nincluso un accidente mortal.\nUna ADVERTENCIA indica una situación peligrosa que, si no se evita, puede dar\ncomo resultado lesiones graves o incluso un accidente mortal.\nUn aviso de ATENCIÓN indica las precauciones especiales que se deben tomar para\nevitar daños al vehículo o a otras propiedades.\nCada NOTA proporciona información clave para facilitar o clarificar los procedimientos.\nADVERTENCIA\nATENCIÓN\nNOTA\nUBJGE0E0.book Page 1 Friday, January 15,2021 10:42 AM\nInformación importante sobre el manual"
+    ],
+    [
+      10,
+      "Comprobación y engrase de los\nsoportes central y lateral .........10-25\nComprobación de la horquilla\ndelantera ..................................10-26\nComprobación de la dirección ....10-26\nComprobación de los\nrodamientos de las ruedas ..........10-27\nBatería ........................................10-27\nCambio de los fusibles ...............10-28\nLuces de la motocicleta ..............10-30\nCambio del bombillo de las luces\nde dirección delanteras ...........10-30\nCambio del bombillo de las luces\nde dirección traseras ...............10-31\nCambio del bombillo de la luz de\nla placa/licencia .......................10-32\nIdentificación de problemas ........10-32\nDiagrama de flujo para la\nidentificación de problemas .......10-35\nModo de emergencia .................10-37\nCuidado y almacenamiento de la\nmotocicleta ....................................11-1\nPrecauciones con la pintura color\nmate ............................................11-1\nCuidados generales ......................11-1\nAlmacenamiento ...........................11-4\nEspecificaciones ..............................12-1\nInformación para el consumidor .......13-1\nNúmeros de identificación ............13-1\nInformación registrada por la\nmotocicleta ................................... 13-2\nÍndice en orden\nalfabético ....................................... 14-1\nUBJGE0E0.book Page 2 Friday, January 15,2021 10:42 AM\nInstrucciones para revisar el\njuego libre de la manigueta del\nfreno delantero ........................ 10-20\nAjuste el juego libre de la\nmanigueta del freno trasero ..... 10-21\nInstrucciones para revisar las\npastas del freno delantero y\nlas bandas del freno trasero.. 10-21\nComprobación del nivel del\nlíquido de frenos .................... 10-22\nCambio del líquido de frenos ..... 10-23\nComprobación de la correa\ntrapezoidal ............................... 10-23\nComprobación y engrase de\nlos cables ................................ 10-24\nAceite de la transmisión final ....... 10-12\nLíquido refrigerante ..................... 10-13\nFiltro de aire del motor y filtro de\naire de la caja de la correa\ntrapezoidal .............................. 10-15\nComprobación del juego libre del\npuño del acelerador ................. 10-17\nHolgura de las válvulas ............... 10-18\nLlantas ........................................ 10-18\nRines ........................................... 10-20\nInstrucciones para revisar y\nengrasar el puño y el cable\ndel acelerador ........................10-24\nEngrase de las maniguetas de\nlos frenos delantero y\ntrasero ....................................10-24\nÍndice\nINFORMACIÓN SOBRE LA\nGARANTÍA.....................................................15-1\nMEDIO AMBIENTE: PLAN\nPOSCONSUMO DE BATERÍAS ...................16-1\nGARANTÍA EXTENDIDA ...........................17-1"
+    ],
+    [
+      17,
+      "UBJGE0E0.book Page 5 Friday, January 15,2021 10:42 AM\nLlantas y rines no originales\nLas llantas y los rines con los que viene\nsu motocicleta fueron diseñados de\nacuerdo a las capacidades de\nrendimiento del vehículo, y para\nsuministrar la mejor combinación de\ncontrol, frenado y comodidad. Es\nposible que otras llantas, rines,\ntamaños y combinaciones diferentes\nno sean adecuadas. Vaya a la página\n10-18 para consultar las\nespecificaciones de las llantas y mayor\ninformación sobre cómo cambiarlas.\nInstrucciones para transportar la\nmotocicleta\nAsegúrese de seguir las siguientes\ninstrucciones antes de transportar la\nmotocicleta en otro vehículo.\n Desmonte y/o retire todos los\nelementos de la motocicleta que\nno estén fijados\npermanentemente.\n Nunca instale accesorios ni\ntransporte carga que pueda\nafectar el funcionamiento de su\nmotocicleta. Revise detenida-\nmente el accesorio antes de\nusarlo para asegurarse de que\nno reduzca de ninguna manera\nla altura sobre el suelo o la\ncapacidad de inclinación en las\ncurvas, que no limite el reco-\nrrido de la suspensión o de la\ndirección, que no disminuya el\ncontrol del vehículo durante la\nconducción, y que no oscurezca\nlas luces y los reflectores.\n• Los accesorios acoplados en el\nárea del manilar o de la\nhorquilla delantera pueden\ngenerar inestabilidad debido a\nuna distribución de peso\ninadecuada o a cambios\naerodinámicos. Si se incorporan\n Sea muy precavido si va a usar\naccesorios eléctricos. Si los\naccesorios eléctricos exceden la\n• Accesorios voluminosos o\ngrandes pueden afectar signi-\nficativamente la estabilidad de\nla motocicleta por sus efectos\naerodinámicos. El viento po-\ndría intentar levantar la moto-\ncicleta o ésta podría volverse\ninestable al recibir vientos cru-\nzados. Estos accesorios tam-\nbién podrían generar inestabili-\ndad al momento de adelantar o\nser adelantado por vehículos\ngrandes.\n• Ciertos accesorios pueden ha-\ncer mover al conductor de su\nposición de conducción nor-\nmal. Esta posición inadecuada\nlimita la libertad de movimiento\ndel conductor y puede llegar a\nlimitar su habilidad de control.\nPor lo tanto, se recomienda no\nusar este tipo de accesorios.\ncapacidad del sistema eléctrico de\nla motocicleta, podría ocurrir una\nfalla eléctrica, generando peligro al\ncausar pérdida de las luces o de la\npotencia del motor.\n2-5\naccesorios en el área del\nmanilar o de la horquilla\ndelantera, estos deben ser tan\npocos y tan livianos como sea\nposible.\nTenga en cuenta las siguientes\nindicaciones, así como las\nmencionadas en la sección\n«Accesorios y carga», cuando vaya a\ninstalarle accesorios a su\nmotocicleta.\nInformación relativa a la seguridad\n2"
+    ],
+    [
+      60,
+      "Revisiones previas para su seguridad\n8-1\n8\nEAU1559B\nRevise su motocicleta cada vez que vaya a usarla para asegurarse de que está en condiciones de conducción segura.\nSiga siempre los procedimientos y los calendarios de revisión y mantenimiento descritos en el manual de propietario.\nADVERTENCIA\nEWA11152\nLas posibilidades de accidentes o daños aumentan si no revisa o mantiene su motocicleta de manera adecuada.\nNo use su motocicleta si detecta algún problema. Si no puede solucionar el problema por medio de los procedi-\nmientos suministrados en este manual, lleve su motocicleta a algún concesionario Yamaha para que la revisen.\nRevise los siguientes aspectos antes de usar su motocicleta:\nELEMENTO REVISIONES PÁGINA\nCombustible\n•Revise el nivel de la gasolina en el tanque de combustible.\n•Reabastezca gasolina si es necesario.\n•Verifique si la línea de combustible (mangueras y conductos) tiene fugas.\n•Verifique que la manguera de rebose del tanque de combustible no tenga\nobstrucciones, grietas o daños, y revise la conexión de la manguera.\n7-14, 7-15\nAceite del motor\n•Revise el nivel del aceite del motor.\n•Si es necesario, añada aceite recomendado hasta alcanzar el nivel especificado.\n•Verifique si la motocicleta tiene fugas de aceite.\n10-10\nAceite de la transmisión final •Verifique si la motocicleta tiene fugas de aceite. 10-12\nLíquido refrigerante\n•Revise el nivel del líquido refrigerante en el depósito.\n•Si es necesario, añada líquido refrigerante recomendado hasta alcanzar el nivel\nespecificado.\n•Verifique si el sistema de refrigeración tiene fugas.\n10-13\nFreno delantero\n•Compruebe su funcionamiento.\n•Si el freno se siente blando o «esponjoso», lleve su motocicleta a un concesio-\nnario Yamaha para que purguen el sistema hidráulico.\n•Verifique el desgaste de las pastas del freno.\n•Cámbielas si es necesario.\n•Revise el nivel del líquido de frenos en el depósito.\n•Si es necesario, añada líquido de frenos recomendado hasta alcanzar el nivel\nespecificado.\n•Verifique si el sistema hidráulico tiene fugas.\n10-21, 10-22\nUBJGE0E0.book Page 1 Friday, January 15,2021 10:42 AM"
+    ],
+    [
+      67,
+      "Mantenimiento y ajustes periódicos\n10-2\n10\nEAU46882\nNOTA\n Las revisiones anuales deben hacerse cada año sin falta, a no ser que se realice un mantenimiento con\nbase en el kilometraje de la motocicleta.\n A partir de los 16.000 km, repita los intervalos de mantenimiento que se deben realizar a partir de los 4.000 km.\n Las operaciones relacionadas con los elementos marcados con un asterisco (*) se deben realizar en un\nconcesionario Yamaha ya que necesitan herramientas, información y habilidades técnicas especiales.\nEAUP0211\nTabla de mantenimiento periódico del sistema de control de emisiones\nNo. ELEMENTO\nTRABAJO DE COMPROBACIÓN\nO MANTENIMIENTO\nLECTURA DEL ODÓMETRO COMPRO-\nBACIÓN\nANUAL 1.000 km 4.000 km 7.000 km 10.000 km 13.000 km\n1 *\nLínea de combusti-\nble (mangueras y\nconductos)\n•Verifique si las mangueras de\ncombustible tienen grietas o\ndaños.\n√ √ √ √ √\n2 *\nFiltro de\ncombustible\n•Revise la condición en la que se\nencuentra.\n•Cámbielo si es necesario.\nA los 13.000 km y cada 12.000 km en adelante.\n3 Bujía\n•Revise la condición en la que se\nencuentra.\n•Limpie la bujía y sus alrededores,\ny reajuste la separación de los\nelectrodos.\n√\n• Cámbiela.. √\n√\n4 * Válvulas •Revise la holgura de las válvulas.\n•Ajústelas si es necesario.\n√\n5 * Sistema de inyección\nde combustible\n•Revise la velocidad de ralentí del\nmotor.\n√ √ √ √ √\n6 * Sistema de escape\n•Revise si hay alguna fuga.\n•Apriete si es necesario.\n•Cambie el o los empaques si es\nnecesario.\n√ √ √ √ √\nUBJGE0E0.book Page 2 Friday, January 15,2021 10:42 AM\n√ √\n√\n√\n√"
+    ],
+    [
+      68,
+      "Mantenimiento y ajustes periódicos\n10-3\n10\nEAUP0270\nTabla de lubricación y mantenimiento general\nNo. ELEMENTO\nTRABAJO DE COMPROBACIÓN\nO MANTENIMIENTO\nLECTURA DEL ODÓMETRO COMPRO-\nBACIÓN\nANUAL 1.000 km 4.000 km 7.000 km 10.000 km 13.000 km\n1 *\nComprobación del\nsistema de\ndiagnóstico\n•Haga una comprobación dinámica\nutilizando un diagnosticador\nYamaha.\n•Revise los códigos de error.\n√ √ √ √ √ √\n2 Filtro de aire •Cámbielo. A los 13.000 km y cada 12.000 km en adelante.\n3 Manguera de purga\ndel filtro de aire\n•Límpiela. √ √ √ √ √\n4 *\nFiltro de aire de la\ncaja de la correa\ntrapezoidal\n•Límpielo.\n•Cámbielo si es necesario.\n√ √ √ √\n5 * Batería\n•Revise el voltaje.\n•Cárguela si es necesario. √ √ √ √ √ √\n6 * Freno delantero\n•Revise su funcionamiento y el ni-\nvel del líquido de frenos, y veri-\nfique si la motocicleta tiene\nalguna fuga del líquido.\n√ √ √ √ √ √\n•Cambie las pastas de freno. Cuando su desgaste haya llegado al límite.\n7 * Freno trasero\n•Revise su funcionamiento y el\njuego de la manigueta. √ √ √ √ √ √\n•Cambie las Bandas de freno. Cuando su desgaste haya llegado al límite.\n8 * Manguera de\nfreno\n•\n•\nVerifique si tienen grietas o daños.\nConfirme que estén instaladas por\ndonde se especifica y que estén\nbien sujetadas.\n√ √ √ √ √\n•Cámbielas. Cada 4 años.\n9 * Líquido de frenos •Cámbielo. Cada 2 años.\n10 * Rines\n•Verifique si están descentrados y si tienen\nalgún daño.\n√ √ √ √\nUBJGE0E0.book Page 3 Friday, January 15,2021 10:42 AM"
+    ],
+    [
+      71,
+      "10-6\n10\nEAUP0290\nNOTA\n Filtro de aire\n• El sistema de filtrado de aire de este modelo de motocicleta está equipado con un filtro de aire de papel con\nrecubrimiento de aceite, el cual no se debe limpiar con aire comprimido para evitar dañarlo.\n• El filtro de aire se debe cambiar con mayor frecuencia si conduce constantemente la motocicleta en terrenos\nconsiderablemente mojados, húmedos o polvorientos.\n Filtro de aire de la caja de la correa trapezoidal\n• El filtro de aire necesita mantenimientos más frecuentes si usa el vehículo en terrenos considerablemente\nmojados, húmedos o polvorientos constantemente.\n Correa trapezoidal\n• La correa trapezoidal se debe revisar a los primeros 7.000 km y luego cada 3.000 km. Cambie la correa\ntrapezoidal si encuentra daños o desgaste excesivo. La correa trapezoidal se debe cambiar cada 25.000 km\nincluso si no tiene desgaste excesivo ni daños.\n Mantenimiento del sistema hidráulico de los frenos\n• El nivel del líquido de frenos se debe revisar regularmente y, si es necesario, se debe ajustar.\n• Cambie cada dos años los componentes internos de las bombas y las mordazas de los frenos, y cambie el líquido\nde frenos.\n• Cambie las mangueras cada cuatro años o antes si se agrietan o dañan.\n Mantenimiento del sistema de combustible\n• Utilice únicamente gasolina sin plomo. El uso de gasolina con plomo causará daños graves en los componentes\ninternos del motor como las válvulas y los anillos del pistón, así como también en el sistema de escape.\n• Cambie la cubierta de la entrada del tanque de combustible cada dos años o si tiene grietas o daños.\n• Verifique si el filtro de combustible tiene obstrucciones o daños cada 12.000 km.\n Mantenimiento de la batería\n• Revise el estado de la batería y realice el mantenimiento correspondiente cada 3 meses.\n• Recargue la batería inmediatamente si su voltaje es menor que 12,4 V.\n• Si la batería tiende a descargarse, cámbiela inmediatamente.\nUBJGE0E0.book Page 6 Friday, January 15,2021 10:42 AM\nMantenimiento y ajustes periódicos"
+    ],
+    [
+      74,
+      "Mantenimiento y ajustes periódicos\n10-9\n10\n2. Revise si la bujía tiene los elec-\ntrodos desgastados o si tiene\nacumulación excesiva de hollín\node otro tipo de partículas, y\ncámbiela si es necesario.\n3. Mida la separación entre los elec-\ntrodos de la bujía con un medidor\nde espesores y, si es necesario,\najuste la separación de acuerdo a\nlas especificaciones.\nInstrucciones para instalar la bujía:\n1. Limpie la superficie del empaque\nde la bujía y su superficie de con-\ntacto, y luego remueva toda la\nsuciedad de la rosca de la bujía.\n2. Instale la bujía utilizando la llave\npara bujías y luego apriétela\naplicándole la fuerza de torque\nespecificada.\nNOTA\nSi no dispone de un torquímetro al\nmomento de instalar la bujía, un buen\ncálculo de la fuerza de torque con la\nque debe apretarla es entre un cuarto\ny media vuelta después de haberla\napretado lo máximo posible con la\nmano. Sin embargo, se debe apretar\nla bujía aplicándole la fuerza de\ntorque especificada lo antes posible.\n3. Instale el capuchón de la bujía.\nNOTA\nInstale el capuchón de la bujía de tal\nforma que quede como se muestra\nen la ilustración y que el cable de la\nbujía no haga contacto con ninguno\nde los elementos cercanos.\nBujía especificada:\nNGK/CPR8EA-9\n1. Separación entre los electrodos de la bujía\nSeparación entre los electrodos de\nla bujía:\n0,8–0,9 mm (0,031–0,035 pulgadas)\nFuerza de torque para apretar:\nBujía:\n13 N·m (1,3 kgf·m; 9,6 lb·ft) 1. Capuchón de la bujía\n2. Cable de la bujía\n4. Instale los paneles.\n1\n2\nUBJGE0E0.book Page 9 Friday, January 15,2021 10:42 AM\nNOTA\nSi la bujía tiene un color claramente\ndiferente, es posible que el motor no\nesté funcionando correctamente. No\nintente diagnosticar el problema del\nmotor usted solo. Lleve su\nmotocicleta a un concesionario\nYamaha para que la revisen.\nInstrucciones para revisar la bujía:\n1. Verifique que el aislante de por-\ncelana que cubre el electrodo\ncentral tenga un color canela de\ntono entre medio y claro (el color\nideal cuando la motocicleta se\nusa normalmente)."
+    ],
+    [
+      76,
+      "10-11\n10\n4.\n5.\nLimpie el depurador del aceite\ndel motor con disolvente, y lue-\ngo verifique que no tenga daños\ny cámbielo si es necesario.\nInstale el depurador de aceite, el\nresorte de compresión, el O-ring\ny el tornillo B del orificio de\ndrenaje de aceite de motor.\nNOTA\nAsegúrese de que el O-ring esté bien\nasentado.\n6. Instale el tornillo A del orificio de\ndrenaje del aceite del motor jun-\nto con su empaque nuevo, y lue-\ngo apriete ambos tornillos del\norificio de drenaje aplicándoles\nlas fuerzas de torque especifica-\ndas.\n7. Reabastezca con la cantidad es-\npecificada del aceite de motor\nrecomendado, y luego instale y\napriete la tapa del orificio de lle-\nnado de aceite.\nNOTA\nAsegúrese de limpiar el aceite que se\nhaya regado sobre cualquier pieza\ndespués de que el motor y el sistema\nde escape se hayan enfriado.\nATENCIÓN\nECA24060\nAsegúrese de que ningún material\nextraño entre al cárter.\n8.\n9.\n10.\nArranque el motor y déjelo en-\ncendido, sin acelerar, durante\nvarios minutos mientras revisa\nque no haya fugas de aceite. Si\ndescubre alguna fuga de aceite,\napague el motor inmediatamen-\nte y busque cuál es la causa.\nApague el motor y proceda a re-\nvisar el nivel del aceite del mo-\ntor, ajústelo si es necesario.\nReestablezca el cuentakilóme-\ntros para el cambio de aceite y\nel indicador de cambio de aceite\n«OIL» (vaya a la página 7-7 para\nconsultar el procedimiento de\nrestablecimiento).\n1. Tornillo A del orificio de drenaje del aceite\ndel motor\n2. Empaque\n3. Depurador de aceite\n4. Resorte de compresión\n5. O-ring\n6. Tornillo B del orificio de drenaje del aceite\ndel motor\n2\n3\n4\n5\n6 1\nFuerza de torque para apretar:\nTornillo A del orificio de drenaje del\naceite del motor:\n20 N·m (2,0 kgf·m; 15 lb·ft)\nTornillo B del orificio de drenaje del\naceite del motor:\n20 N·m (2,0 kgf·m; 15 lb·ft)\nAceite de motor recomendado:\nConsulte la página 12-1.\nCantidad de aceite:\n0,90 L (0,95 US qt; 0,79 Imp.qt)\nUBJGE0E0.book Page 11 Friday, January 15, 2021 10:42 AM\nMantenimiento y ajustes periódicos"
+    ],
+    [
+      78,
+      "10-13\n10\n6. Ponga el tornillo del orificio de\ndrenaje del aceite de la transmi-\nsión final y el empaque nuevo\ncorrespondiente, y luego apriete\nel tornillo aplicándole la fuerza\nde torque especificada.\nNOTA\n\n\nAntes de instalar el tornillo del o-\nrificio de drenaje del aceite de la\ntransmisión final el empaque co-\nrrespondiente, aplíqueles aceite.\nLuego, limpie el exceso de\naceite.\n7. Reabastezca con la cantidad es-\npecificada de aceite recomenda-\ndo para transmisión final.\n¡ADVERTENCIA! Asegúrese de\nque ningún material extraño\nentre a la caja de la transmisión\nfinal. Asegúrese de que no les\nhaya caído aceite ni a las llantas\nni a los rines.\n[EWA11312]\n8.\n9.\nInstale la tapa del orificio de lle-\nnado de aceite y el O-ring nuevo\ncorrespondiente, y luego apriete\nla tapa del orificio de llenado de\naceite.\nVerifique que la caja de la trans-\nmisión final no tenga fugas de a-\nceite. Si descubre alguna fuga de\naceite, busque cuál es la causa.\nEAU20071\nLíquido refrigerante\nEl nivel del líquido refrigerante se de-\nbe revisar siempre antes de usar la\nmotocicleta. Además, se debe cam-\nbiar el líquido refrigerante según los\nintervalos especificados en la tabla\nde lubricación y mantenimiento ge-\nneral.\nEAUN2930\nInstrucciones para revisar el nivel del\nlíquido refrigerante:\n1. Monte la motocicleta en el so-\nporte central.\nNOTA\n El nivel del líquido refrigerante se\ndebe revisar con el motor frío ya\nque el nivel varía de acuerdo a la\ntemperatura del motor.\n Asegúrese de que su motocicle-\nta esté en posición completa-\nmente vertical cuando vaya a re-\nvisar el nivel del líquido refrige-\nrante. Una leve inclinación hacia\ncualquier lado podría causar una\nlectura incorrecta.\n2. Revise el nivel del líquido refrige-\nrante en el depósito.\nNOTA\nEl líquido refrigerante debe estar\nentre la marca del nivel mínimo y la\ndel nivel máximo.\nFuerza de torque para apretar:\nTornillo del orificio de drenaje de\naceite de la transmisión final\n20 N·m (2,0 kgf·m; 15 lb·ft)\nAceite recomendado para\ntransmisión final:\nConsulte la página 12-1.\nCantidad de aceite:\n0,10 L (0,11 US qt; 0,09 Imp.qt)\nUBJGE0E0.book Page 13 Friday, January 15, 2021 10:42 AM\nMantenimiento y ajustes periódicos\n1. Tornillo del orificio de drenaje de aceite\nde la transmisión final\n2. Empaque\n2 1"
+    ],
+    [
+      83,
+      "10\nEAU21403\nHolgura de las válvulas\nLas válvulas son componentes\nimportantes del motor y como la\nholgura de las válvulas cambia con el\nuso del vehículo, éstas se deben\nrevisar y ajustar según los intervalos\nespecificados en la tabla de\nlubricación y mantenimiento general.\nUnas válvulas desajustadas pueden\ncausar problemas con la mezcla de\naire y combustible, ruido en el motor e\nincluso daños en el mismo. Para evitar\nque esto ocurra, lleve su motocicleta a\nun concesionario Yamaha en\nintervalos de tiempo regulares para\nque revisen y ajusten la holgura de las\nválvulas.\nNOTA\nEsta labor de mantenimiento debe\nrealizarse cuando el motor esté frío.\nEAU82721\nLlantas\nLas llantas son el único contacto entre\nla motocicleta y la vía. La seguridad en\ntodas las condiciones de conducción\ndepende de un área de contacto\nrelativamente pequeña con la vía. Por\nlo tanto, es fundamental mantener las\nllantas en buen estado en todo\nmomento y cambiarlas por las llantas\nespecificadas en el momento\nadecuado.\nPresión del aire de las llantas\nLa presión del aire de las llantas debe\nrevisarse y, si es necesario, ajustarse\nantes de cada uso de la motocicleta.\nADVERTENCIA\nEWA10504\nEl uso de esta motocicleta con las\nllantas infladas a presiones\ninadecuadas puede causar lesiones\ngraves o accidentes mortales por\npérdida del control.\n La presión del aire de las llantas\nse debe revisar y ajustar con las\nllantas frías (es decir, cuando la\ntemperatura de las llantas es\nigual a la temperatura ambiente).\n La presión del aire de las llantas\nse debe ajustar de acuerdo con\nla velocidad de conducción y\ncon el peso total del conductor,\nel pasajero, la carga y los\naccesorios aprobados para este\nmodelo de motocicleta.\nADVERTENCIA\nEWA10512\nNunca sobrecargue su motocicleta.\nConducir una motocicleta sobrecar-\ngada podría causar un accidente.\nPresión del aire de las llantas (cuando\nestán frías):\nUna persona:\nPara la llanta delantera:\n200 kPa (2,00 kgf/cm2, 29 psi)\nPara la llanta trasera:\n225 kPa (2,25 kgf/cm2, 33 psi)\nDos personas:\nPara la llanta delantera:\n200 kPa (2,00 kgf/cm2, 29 psi)\nPara la llanta trasera:\n225 kPa (2,25 kgf/cm2, 33 psi)\nLímite máximo de carga:\nMotocicleta:\n153 kg (337 lb)\nEl límite máximo de carga de la mo-\ntocicleta es el peso combinado del\nconductor, el pasajero, la carga y\nlos accesorios.\nUBJGE0E0.book Page 18 Friday, January 15, 2021 10:42 AM\nMantenimiento y ajustes periódicos\n10-18"
+    ],
+    [
+      87,
+      "10-22\n10\nEAU22541\nBandas del freno trasero\nEl freno trasero tiene un indicador\nque permite verificar el desgaste de\nlas bandas sin tener que desmontar\nel freno completo. Para verificar el\ndesgaste de las bandas de freno, re-\nvise la posición del indicador de des-\ngaste mientras acciona el freno tra-\nsero. Si una banda de freno está tan\ndesgastada que el indicador\nalcanzó la línea del límite de\ndesgaste, lleve su motocicleta a\nun concesionario Yamaha para que\ncambien el juego de bandas de\nfreno completo.\nEAU78790\nInstrucciones para revisar el\nnivel del líquido de frenos:\nAntes de comenzar a conducir su\nmotocicleta, confirme que el líquido\nde frenos esté por encima de la\nmarca de nivel mínimo (acomode el\nmanilar de tal forma que el líquido de\nfrenos contenido en el depósito\nquede nivelado con el suelo). Añada\nlíquido de frenos si es necesario.\nADVERTENCIA\nEWA16011\nUn mantenimiento inadecuado puede\ncausar pérdida de la capacidad de\nfrenado. Preste atención a las si-\nguientes precauciones:\n\n\nUna cantidad insuficiente de lí-\nquido de frenos puede permitir\nque entre aire al sistema de los\nfrenos, lo cual reducirá su rendi-\nmiento.\nLimpie la tapa del depósito antes\nde quitarla. Use únicamente lí-\nquido de frenos DOT 4 nuevo de\nun recipiente sellado.\nUtilice únicamente el líquido de\nfrenos especificado; de otra ma-\nnera, los retenedores de caucho\npodrían deteriorarse, lo que cau-\nsaría fugas.\nNunca se deben mezclar dos ti-\npos diferentes de líquido de fre-\nnos. Mezclar el líquido de frenos\nDOT 4 con otro líquido diferente\npodría provocar una reacción\nquímica perjudicial.\nTenga cuidado de no permitir\nque entre agua o polvo al depó-\nsito del líquido de frenos cuando\nlo esté llenando. El agua reduci-\nría significativamente el punto de\nebullición del fluido y esto podría\n1. Indicador de desgaste de las bandas del\nfreno\n2. Línea del límite de desgaste de la banda\ndel freno\n1\n2\n1. Marca de nivel mínimo\nLíquido de frenos recomendado:\nLÍQUIDO DE FRENOS DOT 4\nYAMAHA ORIGINAL\n1\nUBJGE0E0.book Page 22 Friday, January 15, 2021 10:42 AM\nMantenimiento y ajustes periódicos\n\n\n"
+    ],
+    [
+      88,
+      "10-23\n10\nA medida que las pastas de freno se\nvan desgastando, es normal que el\nnivel del líquido de frenos disminuya\ngradualmente. Un nivel bajo de\nlíquido de frenos puede indicar que\nlas pastas de freno están desgasta-\ndas o que hay una fuga en el siste-\nma. Por lo tanto, asegúrese de revi-\nsar el desgaste de las pastas de fre-\nno y confirmar que no haya fugas en\nel sistema. Si el nivel del líquido de\nfrenos disminuye repentinamente,\nlleve su motocicleta a un concesio-\nnario Yamaha para que la revisen an-\ntes de conducirla más.\nEAU22734\nInstrucciones para cambiar el\nlíquido de frenos:\nLleve su motocicleta a un\nconcesionario Yamaha para que\nle cambien el líquido de frenos ca-\nda 2 años. Además, haga\ncambiar también los retenedores\nde las bombas y de las mordazas,\nasí como también las mangueras de\nlos frenos según los intervalos\ndescritos a continuación o antes\nsi presentan daños o fugas.\n Retenedores de los frenos: cada\n2 años\n Mangueras de los frenos: cada\n4 años\nEAUU0311\nInstrucciones para revisar la\ncorrea trapezoidal:\nLa correa trapezoidal se debe revisar\ny cambiar en un concesionario\nYamaha según los intervalos especi-\nficados en la tabla de lubricación y\nmantenimiento general.\nUBJGE0E0.book Page 23 Friday, January 15, 2021 10:42 AM\nMantenimiento y ajustes periódicos\nATENCIÓN\nECA17641\nEl líquido de frenos puede causar\ndaños en las superficies pintadas o\nlas partes plásticas. Si llega a\nsalpicar o derramar líquido de frenos,\nlímpielo inmediatamente.\nprovocar un bloqueo por vapor, y\nel polvo podría obstruir las válvu-\nlas de la unidad hidráulica del\nABS."
+    ],
+    [
+      105,
+      "Cuidado y almacenamiento de la motocicleta\n11\nLavado\n2. Lave la motocicleta con un deter-\ngente especial para automóviles\nde alta calidad mezclado con agua\nfresca y una toalla o esponja\nsuave y limpia. Use un cepillo de\ndientes viejo o un cepillo de cer-\ndas plásticas para limpiar lugares\nde difícil acceso. ATENCIÓN:\nUse agua fría si la motocicleta ha\nestado expuesta a ambientes sa-\nlubres o si ha estado en contacto\ndirecto con sal. El agua caliente o\ntibia incrementará las propieda-\ndes corrosivas de la sal.\n[ECA26301]\n3. En el caso de motocicletas equi-\npadas con visores: Limpie el visor\ncon una toalla o esponja suave\nmojada con agua y un detergente\ncon pH neutro. Si es necesario,\nuse un producto de limpieza es-\npecial para visores de alta calidad\noun producto para brillar motoci-\ncletas. ATENCIÓN: Nunca use\nproductos químicos fuertes para\nlimpiar el visor de la motocicleta.\nAdicionalmente, algunos com-\npuestos para limpiar elementos\nplásticos podrían rayar el visor, así\nUBJGE0E0.book Page 2 Friday, January 15,2021 10:42 AM\nIndicaciones para antes de lavar la\nmotocicleta:\n1. Estacione la motocicleta donde\nno reciba luz directa del sol y\npermita que se enfríe. Esto ayu-\ndará a evitar machas por agua.\n1. Enjuague para quitar el producto\ndesengrasante rociándole agua a\nla motocicleta con una manguera\nde jardín. Enjuague usando úni-\ncamente la presión necesaria pa-\nra el trabajo específico. Evite ro-\nciar agua directamente o cerca\ndel mofle, el panel de instrumen-\ntos, la toma de aire u otras áreas\ninternas como los compartimen-\ntos de almacenamiento que están\ndebajo del asiento.\n toallas, esponjas o cepillos con-\ntaminados con productos de lim-\npieza abrasivos o químicos fuer-\ntes, como por ejemplo disolven-\ntes, gasolina, removedores de\nóxido, líquido de frenos, anticon-\ngelante, etc.\n2. Asegúrese de que todas las\ntapas, cubiertas, acopladores\neléctricos y conectores estén\ninstalados y asegurados\ncorrectamente.\n3. Cubra la boca del mofle con una\nbolsa plástica y un elástico de\ncaucho fuerte.\n4. Remoje primero las manchas\ndifíciles como las de insectos o\nlas de excrementos de pájaros\ncon una toalla mojada durante\nunos minutos.\n5. Remueva la suciedad de carre-\ntera y las manchas de aceite\ncon un producto desengrasan-\nte de alta calidad y un cepillo\nde cerdas plásticas o una es-\nponja. ATENCIÓN: No use pro-\nductos desengrasantes en áre-\nas que requieren lubricación,\ncomo por ejemplo los retene-\ndores, empaques y ejes de las\nruedas. Siga las instrucciones\ndel producto.\n[ECA26290]\n11-2"
+    ],
+    [
+      109,
+      "Especificaciones\n12-1\n12\nDimensiones:\nLongitud total:\n1980 mm (78,0 pulgadas)\nAncho total:\n700 mm (27,6 pulgadas)\nAltura total:\n1150 mm (45,3 pulgadas)\nAltura al asiento:\n790 mm (31,1 pulgadas)\nDistancia entre ejes:\n1350 mm (53,1 pulgadas)\nAltura sobre el suelo:\n145 mm (5,71 pulgadas)\nRadio mínimo de giro:\n2,0 m (6,56 ft)\nPeso:\nPeso en vacío:\n121 kg (267 lb)\nMotor:\nCiclo de combustión:\n4 tiempos\nSistema de refrigeración:\nEnfriado por líquido\nTren de válvulas:\nUn sólo árbol de levas en la\nculata (SOHC)\nNúmero de cilindros:\nUn solo cilindro\nCilindrada:\n155 cm3\nDiámetro y carrera:\n58,0 y 58,7 mm (2,28 x 2,31\npulgadas)\nSistema de arranque:\nArranque eléctrico\nAceite del motor:\nMarca recomendada:\nGrados de viscosidad SAE:\n10W-40\nGrado de aceite de motor\nrecomendado:\nAPI servicio tipo SG o superior,\nnorma JASO MA o MB\nCantidad de aceite de motor:\nCambio de aceite:\n0,90 L (0,95 US qt;\n0,79 Imp.qt)\nAceite de la transmisión final:\nTipo:\nAceite de motor SAE 10W-40\ntipo SG o superior\nCantidad:\n0,10 L (0,11 US qt; 0,09 Imp.qt)\nCantidad de líquido refrigerante:\nDepósito del líquido refrigerante\n(hasta la marca de nivel máximo):\n0,13 L (0,14 US qt; 0,11 Imp.qt)\nRadiador (incluyendo todos los\nconductos):\n0,46 L (0,49 US qt; 0,40 Imp.qt)\nCombustible:\nCombustible recomendado:\nGasolina sin plomo (la gasolina\ntipo E10 es aceptable)\nNúmero de octano (RON):\n90\nCapacidad del tanque de gasolina:\n1,5 L (1,5 US gal; 1,2 Imp.gal)\nCantidad de combustible de la reserva:\n1,1 L (0,29 US gal; 0,24 Imp.gal)\nInyección de combustible:\nCuerpo de aceleración:\nMarca de identificación:\nB651\nSistema de transmisión:\nLlanta delantera:\nTipo:\nSin neumático/cámara\nTamaño:\n110/80-14M/C 53P\nFabricante/referencia:\nIRC/SCT-005F\nLlanta trasera:\nTipo:\nSin neumático/cámara\nTamaño:\n140/70-14M/C 62P\nFabricante/referencia:\nIRC/SCT-005R\nCapacidad de carga:\nLímite máximo de carga:\n154 kg (340 lb)\n(Peso total del conductor, pasajero,\ncarga y accesorios)\nUBJGE0E0.book Page 1 Friday, January 15,2021 10:42 AM"
+    ],
+    [
+      110,
+      "Especificaciones\n12-2\n12\nFreno trasero:\nTipo:\nFreno mecánico de tambor\nSuspensión delantera:\nTipo:\nHorquilla telescópica\nSuspensión trasera:\nTipo:\nSuspensión de unidad basculante\nSistema eléctrico:\nVoltaje del sistema:\n12 V\nBatería:\nReferencia:\nYTZ7V\nVoltaje, capacidad:\n12 V; 6,0 Ah (10 HR)\nPotencia de los bombillos:\nLuz delantera:\nLED\nLuz del freno/trasera:\nLED\nLuces de dirección delanteras:\n10,0 W\nLuces de dirección traseras:\n10,0 W\nLuz auxiliar:\nLED\nLuz de la placa/licencia:\n5,0 W\nUBJGE0E0.book Page 2 Friday, January 15,2021 10:42 AM"
+    ],
+    [
+      113,
+      "14-1\n14\nÍndice en orden alfabético\nA\nAceite de la transmisión final\nAceite de motor y depurador\nde aceite\nAceleración y desaceleración\nActivación del sistema de\ndetención y arranque\nAlmacenamiento\nArranque del motor\nAsentamiento del motor\nAsiento\nB\nBatería\nBatería de la llave inteligente,\ncambio\nBombillo de la luz de la placa/\nlicencia, cambio\nBombillo de las luces de\ndirección (delanteras), cambio\nBombillos de las luces de\ndirección traseras, cambio\nBujía, comprobación\nC\nCables, comprobación y\nengrase/lubricación\nCaracterísticas especiales\nCCU (unidad de control de\ncomunicaciones)\nCombustible\nCompartimentos de\nalmacenamiento\nConsumo de combustible,\nrecomendaciones para\nreducirlo\nConvertidor catalítico\nCorrea trapezoidal,\ncomprobación\nCuidados generales\nD\nDiagrama de flujo para la\nidentificación de problemas\nDirección, comprobación\nE\nEspecificaciones\nEstacionamiento\nEtiquetas, ubicación\nF\nFiltro de aire del motor y filtro\nde aire de la caja de la correa trapezoidal\nFrenado\nFuncionamiento del sistema\nde detención y arranque\nFusibles, cambio\nH\nHolgura de las válvulas\nHorquilla delantera,\ncomprobación\nI\nÍcono de la aplicación\nYamaha Motorcycle Connect\nIdentificación de problemas\nIndicaciones para comenzar a\nconducir\nIndicador del accionamiento\nvariable de las válvulas (VVA)\nIndicador del nivel de carga\nde la batería del teléfono\ninteligente\nIndicador del nivel de la\ngasolina\nIndicador multifunción\nInformación de seguridad\nInterruptor de arranque\nInterruptor de cambio de\nluces\nInterruptor de la bocina\nInterruptor de las luces de\ndirección\nInterruptor de las luces\nindicadoras de peligro\nInterruptor del menú\nInterruptor del sistema de\ndetención y arranque\nInterruptores del manilar\nInterruptor principal\nJ\nJuego libre de la manigueta\ndel freno delantero,\ncomprobación\nJuego libre de la manigueta\ndel freno trasero, ajuste\nJuego libre del puño del\nacelerador, comprobación\nK\nKit de herramientas\nL\nLíquido de frenos, cambio\nLíquido refrigerante\nLlantas\nLlave inteligente\nLlave, manejo de la llave\ninteligente y de la llave\nmecánica\nLuces de la motocicleta\nLuces indicadoras de las\nluces de dirección\nUBJGE0E0.book Page 1 Friday, January 15,2021 10:42 AM\n........10-12\n...........................................10-10\n...........9-3\n.........................5-1\n................................11-4\n.............................9-2\n....................9-1\n.................................................7-15\n...............................................10-27\n.................................................4-6\n.............................10-32\n....10-30\n..........10-31\n........................10-8\n......................10-24\n................6-1\n...............................6-1\n.......................................7-14\n..............................7-17\n..............................................9-4\n.......................7-15\n..............................10-23\n........................11-1\n......10-35\n.............10-26\n..............................12-1\n................................9-4\n.........................1-1\n.......................10-15\n...............................................9-3\n................5-1\n............................10-28\n.................10-18\n...............................10-26\n.......7-3\n.........10-32\n............................................9-3\n........7-5\n.........................................7-3\n...........................................7-4\n.......................7-6\n.................2-1\n...................7-10\n.................................................7-10\n..................7-10\n..........................................7-10\n..................7-10\n........................7-10\n....................7-10\n.................7-9\n...........................4-7\n..............................10-20\n..............10-21\n........10-17\n.........................10-1\n...........10-23\n.......................10-13\n.............................................10-18\n.................................4-4\n..........................................4-3\n...............10-30\n...........................7-1"
+    ],
+    [
+      114,
+      "Índice en orden alfabético\n14-2\n14\nLuces indicadoras y luces de\nadvertencia\nLuz de advertencia del ABS\nLuz de advertencia de la\ntemperatura del líquido\nrefrigerante\nLuz de advertencia de\nproblema en el motor\nLuz indicadora de la luz alta\nLuz indicadora de llamada\nentrante\nLuz indicadora del sistema de\ndetención y arranque\nLuz indicadora del sistema de\nla llave inteligente\nLuz indicadora de\nnotificaciones entrantes\nM\nManguera de rebose del\ntanque de combustible\nManigueta del freno delantero\nManigueta del freno trasero\nManiguetas de los frenos,\nengrase\nMantenimiento y engrase de\ncomponentes, frecuencia\nModo de emergencia\nN\nNivel del líquido de frenos,\ncomprobación\nNúmero de identificación de la\nmotocicleta\nNúmeros de identificación\nNúmero serial del motor\nP\nPaneles, desmonte e\ninstalación\nPastas y bandas de los\nfrenos, comprobación\nPintura color mate,\nprecauciones\nPrecauciones para tener en\ncuenta cuando se use el\nsistema de detención y\narranque\nPuño y cable del acelerador,\ncomprobación y engrase\nR\nRango de distancia de\nfuncionamiento del sistema\nde llave inteligente\nRecalentamiento del motor\nRecomendaciones para una\nconducción segura\nRegistro de información de la\nmotocicleta\nReloj\nRines\nRodamientos de las ruedas,\ncomprobación\nS\nSeguro de la manigueta del\nfreno trasero\nSistema de control de\nemisiones, mantenimiento\nSistema de corte del circuito\nde encendido\nSistema de detención y\narranque\nUBJGE0E0.book Page 2 Friday, January 15,2021 10:42 AM\nV-\nSistema de detención y\narranque, identificación de\nproblemas\nSistema de frenos\nantibloqueo (ABS)\nSistema de la llave\ninteligente\nSistema de la llave\ninteligente, identificación de\nproblemas\nSoporte central y soporte\nlateral, revisión y engrase/\nlubricación\nSoporte lateral\nSoportes sujetadores de los\ncascos\nT\nTablero multifunción\nTacómetro\nTapa del tanque de\ncombustible\nToma de electricidad\nU\nUbicación de componentes\nUnidades de distancia,\ncambio\nV\nVelocímetro\nY\nYamalube\n......................................7-1\n.............7-1\n.......................................7-1\n......................7-1\n............7-1\n............................................7-2\n......................7-2\n...........................7-2\n..................7-2\n................7-15\n......7-11\n...........7-11\n.........................................10-24\n............10-3\n....................10-37\n..............................10-22\n.....................................13-1\n..............13-1\n.................13-1\n.........................................10-7\n..................10-21\n....................................11-1\n..............................................5-3\n............10-24\n............................4-2\n...........10-36\n...........................2-6\n.......................................13-2\n.......................................................7-5\n...................................................10-20\n...............................10-27\n.....................................7-11\n............10-2\n....................................7-20\n..............................................5-1\n......................................10-33\n...........................7-12\n...........................................4-1\n......................................10-33\n.....................................10-25\n...................................7-19\n..............................................7-16\n...........................7-3\n............................................7-4\n.....................................7-13\n........................7-18\n..............3-1\n................................................7-4\n..........................................7-4\n.........................................10-12"
+    ],
+    [
+      122,
+      "15\nExclusiones de la Garantía\nLos siguientes defectos, daños o servicios no están cubiertos por la garantía:\nINFORMACIÓN SOBRE LA GARANTIA\na) No se otorgará Garantía cuando se evidencia que la motocicleta y sus componentes han estado expuestos de\nmanera prolongada al Sol, o almacenamiento inadecuado durante periodos prolongados de tiempo, toda vez que ello supone\nla aparición de defectos tales como cristalización de cauchos y plásticos, envejecimiento prematuro de la pintura o\nresequedad y pérdida de lubricación de elementos mecánicos.\nb) Daños del motor por entrada de agua a la cámara de combustión, por fenómenos / situaciones no asociadas a la\ncalidad del producto.\nc) Daños o fallas causadas por uso de combustible inapropiado, contaminado sea intencional o no.\nd) Daños o fallas que sean resultado de efectuar modificaciones a la motocicleta, incluyendo, pero sin limitarse a,\nla instalación de componentes eléctricos/ electrónicos, accesorios como sliders o defensas no aprobados por Incolmotos Yamaha\npara el mercado colombiano\nDaños o fallas causadas por el uso de la motocicleta en eventos deportivos, sobrecargas o fallas ocasionadas por\naccidentes o fenómenos naturales (incendios, terremotos, inundaciones, etc).\ne) Si en el vehículo se han ocasionado fallas por falta de aceite, líquido refrigerante, líquido de frenos u otro fluido por\nnegligencia, descuido u omisión del propietario o conductor a las recomendaciones descritas en el manual de propietario (ver\nchequeos diarios de la motocicleta)\nf) Si el vehículo es lavado a alta presión, afectando radiadores, o fallas eléctricas en conectores, luces o cableados y pintura\nen general.\ng) Daños sobre el catalizador y/o sonda lambda por el uso de gasolina con plomo o aditivos que lo contengan.\nh) Esta Garantía no cubre daños causados por contaminación industrial transportada por el aire (por ejemplo, lluvia que\ncontenga ácido), excremento de pájaros, savia de árboles, piedras, agua salada, inundaciones, tormentas, (granizadas, cambios\nbruscos de temperatura, etc.) actos delictivos, vandalismo y daños producidos indirectamente por estas causas.\ni) Esta Garantía no cubre reparaciones a motocicletas cuyo verdadero kilometraje haya sido efecto de alteración a través del\nodómetro y no sea posible tener certeza del kilometraje recorrido.\nj) Sonidos normales, vibraciones y deterioro: No están cubiertos el sonido normal, propio del funcionamiento del vehículo, las\nvibraciones normales, desgaste o deterioros tales como decoloración de superficies pintadas, desvanecimiento del color original,\ndeformación, manchas o excoriaciones, producidas por el transcurso del tiempo y factores ambientales ordinarios.\n15-6"
+    ]
+  ]
+}

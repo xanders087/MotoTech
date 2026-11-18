@@ -92,5 +92,293 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://grupouma.com/colombia/wp-content/uploads/sites/2/2025/03/MU-Pulsar-200-NS-FI-ABS-2026.pdf",
+      "sha256": "bbc169e54f0cfe0459016bd71a70019190ae6934040f4cde55e836599b42f259",
+      "pagina": 49,
+      "titulo": "MU Pulsar 200 NS FI ABS UG2 2025"
+    },
+    "tareas": [
+      {
+        "componente": "Lavado y secado completo del vehículo",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Aceite de motor",
+        "accion": "Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Filtro de aceite de motor",
+        "accion": "Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Filtro Tamiz (CEDAZO)",
+        "accion": "Limpiar",
+        "intervalo_km": 10000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Filtro de aire y o-ring de la cubierta del filtro",
+        "accion": "Cambiar",
+        "intervalo_km": 20000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro Gasolina en linea",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Mangueras de nailon para filtro de combustible en línea con conector rápido",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 20000,
+        "intervalo_meses": 12
+      },
+      {
+        "componente": "Limpieza de bujías y verificación de espacio entre ellas",
+        "accion": "Cambiar",
+        "intervalo_km": 30000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Conducto de goma del cuerpo del acelerador (manguito) para endurecimiento resultante",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Tubo de respiración del motor para detectar grietas",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Mangueras del sistema EVAP: comprobar si tienen grietas",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Aletas del radiador de aceite",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Verificar el nivel de refrigerante en el tanque de expansión / Ajuste de la abrazadera de la manguera",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Mangueras de refrigerante y radiador",
+        "accion": "Revisar",
+        "intervalo_km": null,
+        "intervalo_meses": 36
+      },
+      {
+        "componente": "Casquillos silenciosos de la base del motor para detectar grietas",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 10000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Limpieza del orificio de drenaje del silenciador",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Conexiones del arnés de cableado, inspección de rutina y conductos/ mangas de PVC",
+        "accion": "Revisar, Ajustar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Batería, conexión y estado de carga. Estado de tapa de terminal positiva",
+        "accion": "Revisar, Lubricar, Ajustar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Limpieza de los contactos del interruptor de encendido",
+        "accion": "Revisar y Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Conexiones de la bobina HT (primaria y secundaria)",
+        "accion": "Revisar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Conexiones del motor de arranque y del relé de arranque",
+        "accion": "Revisar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Comprobación del indicador de presión de aceite en la consola después del encendido",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Verifique el código de falla, borre el historial de fallas, actualice el archivo hexadecimal más reciente si corresponde",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Cadena de transmisión sellada desgastada: limpiar, lubricar y ajustar",
+        "accion": "Limpiar, Lubricar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Pasadores de soporte y lateral",
+        "accion": "Limpiar y Lubricar",
+        "intervalo_km": 20000,
+        "intervalo_meses": 12
+      },
+      {
+        "componente": "Juego de dirección",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Cojinete del vástago de dirección y tapa del cojinete de dirección (plástico)",
+        "accion": "Revisar, Limpiar y Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Aceite y sello de la horquilla delantera",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Posapiés traseros izquierdo LH y derecho RH (bola y plato)",
+        "accion": "Limpiar y Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Brazo oscilante NRB para mayor juego",
+        "accion": "Lubricar",
+        "intervalo_km": 40000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Pastillas de freno para límite de desgaste",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Verifique la fuente de las fugas, si las hay, en el sistema de frenos. Verifique el estado de las mangueras de freno delanteras y traseras. Verifique el nivel de líquido de frenos y rellénelo si es necesario",
+        "accion": "Revisar, Ajustar y Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Juego excesivo en gomas porta sprocket",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 10000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Revisar grietas en tuercas antivibrantes de caucho de carenado y farola",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Ajuste del juego libre del cable del embrague y del acelerador",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Ajuste del enfoque del faro",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Verifique y confirme que todas las bombillas/interruptores funcionan",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Lubricación general – Palanca de embrague",
+        "accion": "Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Presión de aire de los neumáticos",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Puerto USB para Mobil",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Posición del espejo y firmeza articular",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Todos los sujetadores están apretados, pocos son, Eje delantero y trasero, eje de brazo oscilante,Reposapiés del piloto, tirante del pasajero",
+        "accion": "Revisar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 3
+      }
+    ]
+  },
+  "datos_servicio": {
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-50",
+      "pagina": 3
+    },
+    "presion_llanta_delantera": {
+      "valor": "25 psi",
+      "pagina": 11
+    },
+    "presion_llanta_trasera": {
+      "valor": "28.5 psi",
+      "pagina": 11
+    },
+    "holgura_cadena": {
+      "valor": "25-35 mm",
+      "pagina": 38
+    },
+    "capacidad_aceite": {
+      "valor": "1.2 L",
+      "pagina": 39
+    },
+    "liquido_frenos": {
+      "valor": "DOT 4",
+      "pagina": 52
+    }
   }
 }

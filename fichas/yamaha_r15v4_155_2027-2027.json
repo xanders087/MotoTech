@@ -108,5 +108,97 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2024/11/21158-1.pdf",
+      "sha256": "7795456416cad0b2f4ae57caaac9e833e79dcf9ef6caeadc0922dc9deaf20790",
+      "pagina": 62,
+      "titulo": "untitled"
+    },
+    "tareas": [
+      {
+        "componente": "Filtro de gasolina",
+        "accion": "Revisar",
+        "intervalo_km": 9000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de aire",
+        "accion": "Cambiar",
+        "intervalo_km": 17000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Tubo de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 48
+      },
+      {
+        "componente": "Líquido de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 24
+      },
+      {
+        "componente": "Cojinetes de la rueda",
+        "accion": "Lubricar",
+        "intervalo_km": 13000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Basculante",
+        "accion": "Lubricar",
+        "intervalo_km": 13000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cadena de transmisión",
+        "accion": "Ajustar y lubricar",
+        "intervalo_km": 500,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cojinetes de dirección",
+        "accion": "Lubricar",
+        "intervalo_km": 13000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Horquilla delantera",
+        "accion": "Cambiar aceite",
+        "intervalo_km": 13000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Sistema de refrigeración",
+        "accion": "Cambiar refrigerante",
+        "intervalo_km": null,
+        "intervalo_meses": 24
+      }
+    ]
+  },
+  "datos_servicio": {
+    "capacidad_aceite": {
+      "valor": "0.85 L",
+      "pagina": 73
+    },
+    "presion_llanta_delantera": {
+      "valor": "29 psi",
+      "pagina": 77
+    },
+    "presion_llanta_trasera": {
+      "valor": "33 psi",
+      "pagina": 77
+    },
+    "liquido_frenos": {
+      "valor": "DOT 4",
+      "pagina": 81
+    },
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-40",
+      "pagina": 100
+    }
   }
 }

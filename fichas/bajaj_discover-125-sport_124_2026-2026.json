@@ -82,5 +82,147 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "datos_servicio": {
+    "viscosidad_aceite": {
+      "valor": "SAE 20W-50",
+      "pagina": 3
+    },
+    "presion_llanta_delantera": {
+      "valor": "25 psi",
+      "pagina": 10
+    },
+    "presion_llanta_trasera": {
+      "valor": "28 psi",
+      "pagina": 10
+    },
+    "capacidad_aceite": {
+      "valor": "1 L",
+      "pagina": 23
+    }
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://grupouma.com/colombia/wp-content/uploads/sites/2/2026/04/MU-DISCOVER-2026.pdf",
+      "sha256": "1bf871638ae6fa28bfd55394279f5d038904a6b83f1234f2af76eda188589184",
+      "pagina": 31,
+      "titulo": "MANUAL_AJUSTADO_DISCOVER (1-1)"
+    },
+    "tareas": [
+      {
+        "componente": "Ajuste Válvulas",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Cadena",
+        "accion": "Revisar, Limpiar, Lubricar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Respirador Motor",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Interruptor Freno",
+        "accion": "Revisar y Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Holgura Acelerador / Embrague",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Holgura Pedal Freno",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Zapatas / Pastillas de Frenos",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cunas Dirección",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Bujes Soporte Motor",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Llantas",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Bujes Tijera",
+        "accion": "Revisar y Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Aceite Suspensión delantera",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Retenes Telescópicos",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Amortiguadores Caseros",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Compresión Motor",
+        "accion": "Revisar",
+        "intervalo_km": 15000,
+        "intervalo_meses": 12
+      },
+      {
+        "componente": "Rodamientos Ruedas",
+        "accion": "Revisar, Lubricar y Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Cauchos Porta Sprocket",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Ajuste Tornillos",
+        "accion": "Ajustar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Lubricación Partes Móviles",
+        "accion": "Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      }
+    ]
   }
 }

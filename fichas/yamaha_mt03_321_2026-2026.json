@@ -108,5 +108,251 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2018/03/MT03.pdf",
+      "sha256": "ae099a8412ebd1669fc47c6f45b4a369a58f2ca69dbf09537d30be6021b1e59d",
+      "pagina": 47,
+      "titulo": "untitled"
+    },
+    "tareas": [
+      {
+        "componente": "Línea de combustible",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Bujías",
+        "accion": "Cambiar",
+        "intervalo_km": 10000,
+        "intervalo_meses": 12
+      },
+      {
+        "componente": "Holgura de la válvula",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 21000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Respiradero del cárter",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Inyección de gasolina",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Sistema de escape",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Sistema de inducción de aire",
+        "accion": "Cambiar",
+        "intervalo_km": 10000,
+        "intervalo_meses": 12
+      },
+      {
+        "componente": "Comprobación del sistema de diagnóstico",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Filtro de aire",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Tubo de drenaje del filtro de aire",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Embrague",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Freno delantero",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Freno trasero",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Tubo de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 48
+      },
+      {
+        "componente": "Líquido de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 24
+      },
+      {
+        "componente": "Ruedas",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Neumáticos",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Cojinetes de rueda",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Cojinetes del eje del basculante",
+        "accion": "Revisar",
+        "intervalo_km": 11000,
+        "intervalo_meses": 12
+      },
+      {
+        "componente": "Cadena de transmisión",
+        "accion": "Ajustar y lubricar",
+        "intervalo_km": 800,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cojinetes de dirección",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Fijaciones del bastidor",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Eje pivote de la maneta de freno",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Eje pivote del pedal de freno",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Eje pivote de la maneta de embrague",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Eje pivote del pedal de cambio",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Eje del caballete lateral",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Interruptor del caballete lateral",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Horquilla delantera",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Conjunto amortiguador",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Aceite de motor",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Cartucho del filtro de aceite del motor",
+        "accion": "Cambiar",
+        "intervalo_km": 10000,
+        "intervalo_meses": 12
+      },
+      {
+        "componente": "Sistema de refrigeración",
+        "accion": "Cambiar refrigerante",
+        "intervalo_km": 21000,
+        "intervalo_meses": 24
+      },
+      {
+        "componente": "Interruptores de freno delantero y trasero",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Cables de mando",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Puño del acelerador",
+        "accion": "Ajustar y lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      },
+      {
+        "componente": "Luces, señales e interruptores",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 6
+      }
+    ]
+  },
+  "datos_servicio": {
+    "capacidad_aceite": {
+      "valor": "1.8 L",
+      "pagina": 54
+    },
+    "liquido_frenos": {
+      "valor": "DOT 4",
+      "pagina": 65
+    },
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-40",
+      "pagina": 87
+    }
   }
 }

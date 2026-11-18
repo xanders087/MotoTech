@@ -108,5 +108,113 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "datos_servicio": {
+    "capacidad_aceite": {
+      "valor": "1 L",
+      "pagina": 49
+    },
+    "liquido_frenos": {
+      "valor": "DOT 3 o DOT 4",
+      "pagina": 57
+    },
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-40",
+      "pagina": 76
+    }
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2025/10/D24-Crypton-FI-Garantia-2025.pdf",
+      "sha256": "0550440d24ffdda9c7e4d3fb5e96e3cbc726d46059fc2418589f9d82e14ed9ba",
+      "pagina": 40,
+      "titulo": "BF2 Ferney.cdr"
+    },
+    "tareas": [
+      {
+        "componente": "Inyección de gasolina",
+        "accion": "Revisar",
+        "intervalo_km": 2000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Sistema de escape",
+        "accion": "Revisar",
+        "intervalo_km": 2000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Tubo de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 48
+      },
+      {
+        "componente": "Líquido de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 24
+      },
+      {
+        "componente": "Cadena de transmisión",
+        "accion": "Ajustar y lubricar",
+        "intervalo_km": 500,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cojinetes de dirección",
+        "accion": "Lubricar",
+        "intervalo_km": 12000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Fijaciones del bastidor",
+        "accion": "Revisar",
+        "intervalo_km": 2000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Eje pivotede la maniguetade freno",
+        "accion": "Lubricar",
+        "intervalo_km": 2000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Eje pivote del pedal de freno",
+        "accion": "Lubricar",
+        "intervalo_km": 2000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Conjuntos amortiguadores",
+        "accion": "Revisar",
+        "intervalo_km": 2000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Aceite de motor",
+        "accion": "Cambiar aceite",
+        "intervalo_km": 2000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Interruptores de freno delantero y trasero",
+        "accion": "Revisar",
+        "intervalo_km": 2000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Piezas móviles y cables",
+        "accion": "Lubricar",
+        "intervalo_km": 2000,
+        "intervalo_meses": 3
+      },
+      {
+        "componente": "Puño del acelerador",
+        "accion": "Ajustar y lubricar",
+        "intervalo_km": 2000,
+        "intervalo_meses": 3
+      }
+    ]
   }
 }

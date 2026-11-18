@@ -110,5 +110,71 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2020/01/XSR-900-2025.pdf",
+      "sha256": "9c9858d23936e787189c3f0a294f2535d65238f2bfebc082eeee919c45fce2a6",
+      "pagina": 67,
+      "titulo": "Manual oficial Yamaha XSR900"
+    },
+    "tareas": [
+      {
+        "componente": "Holgura de la válvula",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 40000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de aire",
+        "accion": "Cambiar",
+        "intervalo_km": 40000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Tubos de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 48
+      },
+      {
+        "componente": "Líquido de frenos",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 24
+      },
+      {
+        "componente": "Cojinetes del eje del basculante",
+        "accion": "Lubricar",
+        "intervalo_km": 50000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cadena de transmisión",
+        "accion": "Ajustar y lubricar",
+        "intervalo_km": 1000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Sistema de refrigeración",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 36
+      }
+    ]
+  },
+  "datos_servicio": {
+    "capacidad_aceite": {
+      "valor": "2.8 L",
+      "pagina": 77
+    },
+    "liquido_frenos": {
+      "valor": "DOT 4",
+      "pagina": 86
+    },
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-40",
+      "pagina": 108
+    }
   }
 }

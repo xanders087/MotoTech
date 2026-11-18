@@ -31,11 +31,12 @@ for p in (str(CARPETA_RECOLECTOR), str(CARPETA_FICHAS_TOOLS)):
     if p not in sys.path:
         sys.path.insert(0, p)
 
+import plan_mantenimiento  # noqa: E402
 import subir  # noqa: E402
 import validar  # noqa: E402
 from adaptadores import ADAPTADORES, ModeloOficial  # noqa: E402
 from ficha_tecnica import sincronizar_ficha_en_carpeta  # noqa: E402
-from robots_guard import OficialHttpClient, RobotsGuard  # noqa: E402
+from robots_guard import OficialHttpClient, RateLimiter, RobotsGuard  # noqa: E402
 
 logger = logging.getLogger("recolector")
 
@@ -56,6 +57,29 @@ def claves_con_ficha(carpeta_fichas: Path) -> set[str]:
         if not validar.validar_ficha(ficha):
             claves.add(validar.clave(ficha["marca"], ficha["modelo"], ficha["cilindraje_cc"]))
     return claves
+
+
+def _ultimas_fichas_por_clave(carpeta_fichas: Path) -> dict[str, dict[str, Any]]:
+    """Devuelve la ficha más reciente por clave marca|modelo|cc en la carpeta."""
+    if not carpeta_fichas.is_dir():
+        return {}
+    fichas, _ = validar.cargar_fichas(carpeta_fichas)
+    por_clave: dict[str, dict[str, Any]] = {}
+    for f in fichas.values():
+        if not (
+            isinstance(f.get("marca"), str)
+            and isinstance(f.get("modelo"), str)
+            and isinstance(f.get("cilindraje_cc"), int)
+        ):
+            continue
+        cl = validar.clave(f["marca"], f["modelo"], f["cilindraje_cc"])
+        prev = por_clave.get(cl)
+        if prev is None or (f.get("anio_hasta", 0), f.get("anio_desde", 0)) > (
+            prev.get("anio_hasta", 0),
+            prev.get("anio_desde", 0),
+        ):
+            por_clave[cl] = f
+    return por_clave
 
 
 def _parsear_cc_snapshot(valor: Any) -> int | None:
@@ -163,9 +187,13 @@ def ejecutar_recoleccion(
     simular: bool = True,
     escribir_snapshot: bool = True,
     incluir_fichas: bool = True,
+    incluir_planes: bool = True,
+    refrescar_pdfs: bool = False,
+    carpeta_cache_pdfs: Path = plan_mantenimiento.CARPETA_CACHE_DEFECTO,
     hoy: str | None = None,
     adaptadores_registry: dict[str, Any] | None = None,
     robots_guard: RobotsGuard | None = None,
+    plan_extractor: Any | None = None,
 ) -> tuple[dict[str, dict[str, Any]], list[str]]:
     """Ejecuta la recolección de las marcas configuradas y devuelve (docs_catalogo, alertas)."""
     hoy_date = datetime.date.fromisoformat(hoy) if hoy else datetime.date.today()
@@ -178,6 +206,9 @@ def ejecutar_recoleccion(
     )
     registry = adaptadores_registry or ADAPTADORES
     guard = robots_guard or RobotsGuard()
+    rate_limiter = RateLimiter()
+    extractor_pdf = plan_extractor or plan_mantenimiento.extraer_desde_pdf
+    fichas_por_clave = _ultimas_fichas_por_clave(ruta_fichas) if incluir_fichas else {}
 
     filtro_norm = {m.strip().lower() for m in marcas_filtro} if marcas_filtro else None
     resultados_marca: dict[str, tuple[dict[str, Any], list[ModeloOficial]]] = {}
@@ -212,9 +243,37 @@ def ejecutar_recoleccion(
 
         if incluir_fichas:
             nuevas_o_act = 0
+            planes_nuevos = 0
+            planes_omitidos = 0
             for m in modelos_nuevos:
                 if not m.ficha_tecnica:
                     continue
+                plan_doc: dict[str, Any] | None = None
+                servicio_doc: dict[str, Any] | None = None
+                if incluir_planes and m.url_manual:
+                    clave_m = validar.clave(marca, m.modelo, m.cilindraje_cc)
+                    ult_ficha = fichas_por_clave.get(clave_m)
+                    plan_ult = ult_ficha.get("plan_mantenimiento") if ult_ficha else None
+                    url_ult = (plan_ult.get("fuente") or {}).get("url") if isinstance(plan_ult, dict) else None
+                    if not refrescar_pdfs and isinstance(plan_ult, dict) and url_ult == m.url_manual:
+                        plan_doc = plan_ult
+                        servicio_doc = ult_ficha.get("datos_servicio")
+                    else:
+                        plan_doc, servicio_doc, motivo = extractor_pdf(
+                            marca,
+                            m.modelo,
+                            m.url_manual,
+                            dominios,
+                            carpeta_cache=carpeta_cache_pdfs,
+                            robots_guard=guard,
+                            rate_limiter=rate_limiter,
+                        )
+                        if plan_doc:
+                            planes_nuevos += 1
+                        elif motivo:
+                            planes_omitidos += 1
+                            logger.info("%s %s: plan PDF omitido (%s)", marca, m.modelo, motivo)
+
                 modificadas = sincronizar_ficha_en_carpeta(
                     carpeta_fichas=ruta_fichas,
                     marca=marca,
@@ -223,13 +282,18 @@ def ejecutar_recoleccion(
                     ficha_tecnica=m.ficha_tecnica,
                     url_manual=m.url_manual,
                     anio_fuente=m.anio_fuente,
+                    plan_mantenimiento=plan_doc,
+                    datos_servicio=servicio_doc,
                     hoy=hoy_date,
                 )
                 for doc_f in modificadas:
                     fichas_cambiadas[validar.id_ficha(doc_f)] = doc_f
                     nuevas_o_act += 1
             con_ficha_modelo = sum(1 for m in modelos_nuevos if m.ficha_tecnica)
-            logger.info("%s: %d modelos con ficha técnica (%d archivos creados/actualizados)", marca, con_ficha_modelo, nuevas_o_act)
+            logger.info(
+                "%s: %d modelos con ficha técnica (%d archivos creados/actualizados, %d planes extraídos, %d PDFs omitidos)",
+                marca, con_ficha_modelo, nuevas_o_act, planes_nuevos, planes_omitidos,
+            )
 
         resultados_marca[marca] = (cfg, modelos_nuevos)
 
@@ -294,6 +358,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--simular", action="store_true", help="No publica en Firestore")
     parser.add_argument("--sin-snapshot", action="store_true", help="No modifica motorcycle_catalog.json")
     parser.add_argument("--solo-catalogo", action="store_true", help="No genera ni actualiza fichas técnicas")
+    parser.add_argument("--sin-planes", action="store_true", help="No descarga ni extrae planes de mantenimiento desde PDFs")
+    parser.add_argument("--refrescar-pdfs", action="store_true", help="Re-extrae planes PDF aunque la URL no haya cambiado")
     parser.add_argument("--marca", action="append", help="Filtrar por marca (repetible)")
     args = parser.parse_args(argv)
 
@@ -302,6 +368,8 @@ def main(argv: list[str] | None = None) -> int:
         simular=args.simular,
         escribir_snapshot=not args.sin_snapshot,
         incluir_fichas=not args.solo_catalogo,
+        incluir_planes=not args.sin_planes,
+        refrescar_pdfs=args.refrescar_pdfs,
     )
     for doc_id, doc in docs.items():
         vigentes = sum(1 for m in doc["modelos"] if m["vigente"])

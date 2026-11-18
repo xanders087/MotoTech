@@ -1,0 +1,944 @@
+{
+  "marca": "Bajaj",
+  "modelo": "Pulsar NS200 FI ABS DC",
+  "url": "https://grupouma.com/colombia/wp-content/uploads/sites/2/2025/03/MU-Pulsar-200-NS-FI-ABS-2026.pdf",
+  "sha256": "bbc169e54f0cfe0459016bd71a70019190ae6934040f4cde55e836599b42f259",
+  "paginas_mant": [
+    [
+      49,
+      "El mantenimiento periódico es una labor muy importante que debe realizarse para Mantenimiento Periódico mantener en óptimas condiciones de funcionamiento la motocicleta, además garantiza su seguridad al conducir su motocicleta. FRECUENCIA RECOMENDADA Rev 1ra 2da 3ra 4ta 5ta 6ta 7ma Cada 5.000 500 5.000 10.000 15.000 20.000 25.000 30.000 - Kms - - - - - - - 5.500 750 5.500 10.500 15.500 20.500 25.500 30.500 Item Operación Tiempo 15 d - ías 3 meses 6 meses 9 meses 12 meses 15 meses 18 meses 3 C m a e d s a es Notas 1 mes Asegurese de prevenir la entrada de agua en el 1 Lavado y secado CL CL CL CL CL CL CL CL tanque de combustible, partes electricas y completo del vehículo silenciador. Use detergentes libres de cáusticos. Use BGO 10W50, Limpiar visor de aceite cada 10,000kms mediante spray de gasolina y cepillo 2 Aceite de motor R R R R R R R R de naylon. Reemplazar cada 5,000 km, rellene cada 2,500 km. 3 Filtro de aceite de motor R R R R R R R R R ca e d e a m 5 p 0 la 0 z 0 a k r m en . la primer revision y luego Limpiar filtro tamiz (cedazo) en cada cambio 4 Filtro Tamiz (CEDAZO)** CL CL CL CL CL de aceite. 5 Filtro de aire** y o-ring R Reemplazar cada 20.000 km aprox o antes si de la cubierta del filtro se requiere. 6 Filtro Gasolina en linea R Reemplazar cada 15.000 km. Mangueras de nailon para 7 filtro de combustible en C,R Reemplazar si se requiere. línea con conector rápido A: Ajustar CL: Limpiar Limpieza de bujías y 8 verificación de espacio CL,A CL,A R Reemplazar cada 30.000 km. C: Revisar entre ellas L: Lubricar T: Apretar 9 Holgura del taqué de válvula C,A C,A R: Reemplazar * Es fuertemente recomendado usar unicamente el grado de aceite recomendado. PRECAUCION: ** De acuerdo al modelo • Es muy importante utilizar el grado de aceite y frecuencia de cambio recomendado para una larga *** Una limpieza mas frecuente es recomendada si se transita en entornos con polvo. duracion de los componentes criticos del motor. • No reutilizar aceite drenado. Disponga del aceite usado de forma amigable con el medio ambiente. . 49 . Rev 1ra 2da 3ra 4ta 5ta 6ta 7ma Cada\n5.000\n-\n5.500 Kms 500\n-\n750 5.000\n-\n5.500 10.000\n-\n10.500 15.000\n-\n15.500 20.000\n-\n20.500 25.000\n-\n25.500 30.000\n-\n30.500 Item Operación Tiempo 15 días\n-\n1 mes 3 meses 6 meses 9 meses 12 meses 15 meses 18 meses Cada\n3 meses Notas 1 Lavado y secado\ncompleto del vehículo CL CL CL CL CL CL CL CL Asegurese de prevenir la entrada de agua en el\ntanque de combustible, partes electricas y\nsilenciador. Use detergentes libres de cáusticos. 2 Aceite de motor R R R R R R R R Use BGO 10W50, Limpiar visor de aceite cada\n10,000kms mediante spray de gasolina y cepillo\nde naylon. Reemplazar cada 5,000 km, rellene\ncada 2,500 km. 3 Filtro de aceite de motor R R R R R R R R Reemplazar en la primer revision y luego\ncada 5000 km. 4 Filtro Tamiz (CEDAZO)** CL CL CL CL CL Limpiar filtro tamiz (cedazo) en cada cambio\nde aceite. 5 Filtro de aire** y o-ring\nde la cubierta del filtro R Reemplazar cada 20.000 km aprox o antes si\nse requiere. 6 Filtro Gasolina en linea R Reemplazar cada 15.000 km. 7 Mangueras de nailon para\nfiltro de combustible en\nlínea con conector rápido C,R Reemplazar si se requiere. 8 Limpieza de bujías y\nverificación de espacio\nentre ellas CL,A CL,A R Reemplazar cada 30.000 km.",
+      [
+        [
+          [
+            null,
+            null,
+            "Rev",
+            "1ra",
+            "2da",
+            "3ra",
+            "4ta",
+            "5ta",
+            "6ta",
+            "7ma",
+            "Cada\n5.000\n-\n5.500",
+            null
+          ],
+          [
+            null,
+            null,
+            "Kms",
+            "500\n-\n750",
+            "5.000\n-\n5.500",
+            "10.000\n-\n10.500",
+            "15.000\n-\n15.500",
+            "20.000\n-\n20.500",
+            "25.000\n-\n25.500",
+            "30.000\n-\n30.500",
+            null,
+            null
+          ],
+          [
+            "Item",
+            "Operación",
+            "Tiempo",
+            "15 días\n-\n1 mes",
+            "3 meses",
+            "6 meses",
+            "9 meses",
+            "12 meses",
+            "15 meses",
+            "18 meses",
+            "Cada\n3 meses",
+            "Notas"
+          ],
+          [
+            "1",
+            "Lavado y secado\ncompleto del vehículo",
+            null,
+            "CL",
+            "CL",
+            "CL",
+            "CL",
+            "CL",
+            "CL",
+            "CL",
+            "CL",
+            "Asegurese de prevenir la entrada de agua en el\ntanque de combustible, partes electricas y\nsilenciador. Use detergentes libres de cáusticos."
+          ],
+          [
+            "2",
+            "Aceite de motor",
+            null,
+            "R",
+            "R",
+            "R",
+            "R",
+            "R",
+            "R",
+            "R",
+            "R",
+            "Use BGO 10W50, Limpiar visor de aceite cada\n10,000kms mediante spray de gasolina y cepillo\nde naylon. Reemplazar cada 5,000 km, rellene\ncada 2,500 km."
+          ],
+          [
+            "3",
+            "Filtro de aceite de motor",
+            null,
+            "R",
+            "R",
+            "R",
+            "R",
+            "R",
+            "R",
+            "R",
+            "R",
+            "Reemplazar en la primer revision y luego\ncada 5000 km."
+          ],
+          [
+            "4",
+            "Filtro Tamiz (CEDAZO)**",
+            null,
+            "CL",
+            "",
+            "CL",
+            "",
+            "CL",
+            "",
+            "CL",
+            "CL",
+            "Limpiar filtro tamiz (cedazo) en cada cambio\nde aceite."
+          ],
+          [
+            "5",
+            "Filtro de aire** y o-ring\nde la cubierta del filtro",
+            null,
+            "",
+            "",
+            "",
+            "",
+            "R",
+            "",
+            "",
+            "",
+            "Reemplazar cada 20.000 km aprox o antes si\nse requiere."
+          ],
+          [
+            "6",
+            "Filtro Gasolina en linea",
+            null,
+            "",
+            "",
+            "",
+            "R",
+            "",
+            "",
+            "",
+            "",
+            "Reemplazar cada 15.000 km."
+          ],
+          [
+            "7",
+            "Mangueras de nailon para\nfiltro de combustible en\nlínea con conector rápido",
+            null,
+            "",
+            "",
+            "",
+            "",
+            "C,R",
+            "",
+            "",
+            "",
+            "Reemplazar si se requiere."
+          ],
+          [
+            "8",
+            "Limpieza de bujías y\nverificación de espacio\nentre ellas",
+            null,
+            "",
+            "",
+            "CL,A",
+            "",
+            "CL,A",
+            "",
+            "R",
+            "",
+            "Reemplazar cada 30.000 km."
+          ]
+        ]
+      ]
+    ],
+    [
+      50,
+      "FRECUENCIA RECOMENDADA Rev 1ra 2da 3ra 4ta 5ta 6ta 7ma Cada 5.000 500 5.000 10.000 15.000 20.000 25.000 30.000 - Kms - - - - - - - 5.500 750 5.500 10.500 15.500 20.500 25.500 30.500 Item Operación Tiempo 15 d - ías 3 meses 6 meses 9 meses 12 meses 15 meses 18 meses 3 C m a e d s a es Notas 1 mes Conducto de goma del 10 cuerpo del acelerador C,R C,R C,R Reemplazar si se requiere. (manguito) para endurecimiento resultante Tubo de respiración del 11 C,R C,R C,R C,R C,R C,R Reemplazar si se requiere. motor para detectar grietas Mangueras del sistema EVAP: Drene el tubo de drenaje de la conexión \"Y\" de 12 C,R C,R C,R C,R C,R C,R comprobar si tienen grietas EVAP. Reemplace si está cortado o dañado. 13 Aletas del radiador de aceite C,R C,R C,R C,R C,R C,R C,R Si se encuentra dañado, reemplacelo. Verificar el nivel de refrigerante en el tanque de 14 CL CL CL CL CL CL CL expansión / Ajuste de la abrazadera de la manguera Mangueras de refrigerante 15 Reemplazar cada 30.000 km o 3 años (lo que ocurra primero) y radiador Casquillos silenciosos de la 16 base del motor para detectar C,R C,R C,R Reemplazar si se requiere. grietas A: Ajustar CL: Limpiar Limpieza del orificio de C: Revisar 17 CL CL CL CL CL CL CL drenaje del silenciador L: Lubricar T: Apretar 18 Sellos de la bomba de agua Revisar cada 40,000kms. R: Reemplazar * Es fuertemente recomendado usar unicamente el grado de aceite recomendado. PRECAUCION: ** De acuerdo al modelo • Es muy importante utilizar el grado de aceite y frecuencia de cambio recomendado para una larga *** Una limpieza mas frecuente es recomendada si se transita en entornos con polvo. duracion de los componentes criticos del motor. • No reutilizar aceite drenado. Disponga del aceite usado de forma amigable con el medio ambiente. . 50 . Rev 1ra 2da 3ra 4ta 5ta 6ta 7ma Cada\n5.000\n-\n5.500 Kms 500\n-\n750 5.000\n-\n5.500 10.000\n-\n10.500 15.000\n-\n15.500 20.000\n-\n20.500 25.000\n-\n25.500 30.000\n-\n30.500 Item Operación Tiempo 15 días\n-\n1 mes 3 meses 6 meses 9 meses 12 meses 15 meses 18 meses Cada\n3 meses Notas 10 Conducto de goma del\ncuerpo del acelerador\n(manguito) para\nendurecimiento resultante C,R C,R C,R Reemplazar si se requiere. 11 Tubo de respiración del\nmotor para detectar grietas C,R C,R C,R C,R C,R C,R Reemplazar si se requiere. 12 Mangueras del sistema EVAP:\ncomprobar si tienen grietas C,R C,R C,R C,R C,R C,R Drene el tubo de drenaje de la conexión \"Y\" de\nEVAP. Reemplace si está cortado o dañado. 13 Aletas del radiador de aceite C,R C,R C,R C,R C,R C,R C,R Si se encuentra dañado, reemplacelo. 14 Verificar el nivel de\nrefrigerante en el tanque de\nexpansión / Ajuste de la\nabrazadera de la manguera CL CL CL CL CL CL CL 15 Mangueras de refrigerante\ny radiador Reempla zar cada 3 0.000 km o 3 años (lo que ocurra primero) 16 Casquillos silenciosos de la\nbase del motor para detectar\ngrietas C,R C,R C,R Reemplazar si se requiere. 17 Limpieza del orificio de\ndrenaje del silenciador CL CL CL CL CL CL CL",
+      [
+        [
+          [
+            null,
+            null,
+            "Rev",
+            "1ra",
+            "2da",
+            "3ra",
+            "4ta",
+            "5ta",
+            "6ta",
+            "7ma",
+            "Cada\n5.000\n-\n5.500",
+            null
+          ],
+          [
+            null,
+            null,
+            "Kms",
+            "500\n-\n750",
+            "5.000\n-\n5.500",
+            "10.000\n-\n10.500",
+            "15.000\n-\n15.500",
+            "20.000\n-\n20.500",
+            "25.000\n-\n25.500",
+            "30.000\n-\n30.500",
+            null,
+            null
+          ],
+          [
+            "Item",
+            "Operación",
+            "Tiempo",
+            "15 días\n-\n1 mes",
+            "3 meses",
+            "6 meses",
+            "9 meses",
+            "12 meses",
+            "15 meses",
+            "18 meses",
+            "Cada\n3 meses",
+            "Notas"
+          ],
+          [
+            "10",
+            "Conducto de goma del\ncuerpo del acelerador\n(manguito) para\nendurecimiento resultante",
+            null,
+            "",
+            "",
+            "",
+            "C,R",
+            "C,R",
+            "",
+            "",
+            "C,R",
+            "Reemplazar si se requiere."
+          ],
+          [
+            "11",
+            "Tubo de respiración del\nmotor para detectar grietas",
+            null,
+            "",
+            "",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "Reemplazar si se requiere."
+          ],
+          [
+            "12",
+            "Mangueras del sistema EVAP:\ncomprobar si tienen grietas",
+            null,
+            "",
+            "",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "Drene el tubo de drenaje de la conexión \"Y\" de\nEVAP. Reemplace si está cortado o dañado."
+          ],
+          [
+            "13",
+            "Aletas del radiador de aceite",
+            null,
+            "",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "Si se encuentra dañado, reemplacelo."
+          ],
+          [
+            "14",
+            "Verificar el nivel de\nrefrigerante en el tanque de\nexpansión / Ajuste de la\nabrazadera de la manguera",
+            null,
+            "",
+            "CL",
+            "CL",
+            "CL",
+            "CL",
+            "CL",
+            "CL",
+            "CL",
+            ""
+          ],
+          [
+            "15",
+            "Mangueras de refrigerante\ny radiador",
+            null,
+            "",
+            "Reempla",
+            "zar cada 3",
+            "0.000 km o",
+            "3 años (lo",
+            "que ocurra",
+            "primero)",
+            "",
+            ""
+          ],
+          [
+            "16",
+            "Casquillos silenciosos de la\nbase del motor para detectar\ngrietas",
+            null,
+            "",
+            "",
+            "C,R",
+            "",
+            "C,R",
+            "",
+            "C,R",
+            "",
+            "Reemplazar si se requiere."
+          ],
+          [
+            "17",
+            "Limpieza del orificio de\ndrenaje del silenciador",
+            null,
+            "",
+            "CL",
+            "CL",
+            "CL",
+            "CL",
+            "CL",
+            "CL",
+            "CL",
+            ""
+          ]
+        ]
+      ]
+    ],
+    [
+      51,
+      "FRECUENCIA RECOMENDADA Rev 1ra 2da 3ra 4ta 5ta 6ta 7ma Cada 5.000 500 5.000 10.000 15.000 20.000 25.000 30.000 - Kms - - - - - - - 5.500 750 5.500 10.500 15.500 20.500 25.500 30.500 Item Operación Tiempo 15 d - ías 3 meses 6 meses 9 meses 12 meses 15 meses 18 meses 3 C m a e d s a es Notas 1 mes Conexiones del arnés de Protección de conductos dañados / fundas de 19 cableado, inspección de rutina y C,A,T C,A,T C,A,T C,A,T C,A,T C,A,T C,A,T C,A,T PVC mediante la aplicación de una película de conductos/ mangas de PVC cinta aisladora. Batería, conexión y estado de C,A, C,A, C,A, C,A, C,A, C,A, C,A, C,A, 20 carga. Estado de tapa de Aplique vaselina en los terminales de la batería. L,T L,T L,T L,T L,T L,T L,T L,T Utilice el comprobador de baterías de Midtronics. terminal positiva 21 Limpieza de los contactos del C,CL C,CL C,CL C,CL C,CL C,CL C,CL C,CL Use spray recomendado WD40. interruptor de encendido 22 Conexiones de la bobina HT C,T C,T C,T C,T C,T C,T C,T (primaria y secundaria) 23 Conexiones del motor de C,T C,T C,T C,T . C,T C,T C,T arranque y del relé de arranque Comprobación del indicador de El testigo debería desaparecer después de 24 presión de aceite en la consola C,R C,R C,R C,R C,R C,R C,R C,R encender el motor. Después de 4000 rpm, no después del encendido debe aparecer ningún ícono. Verifique el código de falla, borre el historial de fallas, 25 actualice el archivo C C C C C C C C hexadecimal más reciente si corresponde A: Ajustar El cliente debe aplicar lubricante para cadenas Cadena de transmisión sellada en spray o uno equivalente cada 500 km . La CL: Limpiar 26 desgastada: limpiar, lubricar y CL,L,A CL,L,A CL,L,A CL,L,A CL,L,A CL,L,A CL,L,A CL,L,A cadena debe ser limpiada con aceite SAE90 o C: Revisar ajustar limpiador de cadenas recomendado por BAL cada 2500 - 3000 km rotando la llanta trasera. L: Lubricar T: Apretar 27 Pasadores de soporte y lateral CL,L Usar grasa recomendada AP. R: Reemplazar * Es fuertemente recomendado usar unicamente el grado de aceite recomendado. PRECAUCION: ** De acuerdo al modelo • Es muy importante utilizar el grado de aceite y frecuencia de cambio recomendado para una larga *** Una limpieza mas frecuente es recomendada si se transita en entornos con polvo. duracion de los componentes criticos del motor. • No reutilizar aceite drenado. Disponga del aceite usado de forma amigable con el medio ambiente. . 51 . Rev 1ra 2da 3ra 4ta 5ta 6ta 7ma Cada\n5.000\n-\n5.500 Kms 500\n-\n750 5.000\n-\n5.500 10.000\n-\n10.500 15.000\n-\n15.500 20.000\n-\n20.500 25.000\n-\n25.500 30.000\n-\n30.500 Item Operación Tiempo 15 días\n-\n1 mes 3 meses 6 meses 9 meses 12 meses 15 meses 18 meses Cada\n3 meses Notas 19 Conexiones del arnés de\ncableado, inspección de rutina y\nconductos/ mangas de PVC C,A,T C,A,T C,A,T C,A,T C,A,T C,A,T C,A,T C,A,T Protección de conductos dañados / fundas de\nPVC mediante la aplicación de una película de\ncinta aisladora. 20 Batería, conexión y estado de\ncarga. Estado de tapa de\nterminal positiva C,A,\nL,T C,A,\nL,T C,A,\nL,T C,A,\nL,T C,A,\nL,T C,A,\nL,T C,A,\nL,T C,A,\nL,T Aplique vaselina en los terminales de la batería.\nUtilice el comprobador de baterías de Midtronics. 21 Limpieza de los contactos del\ninterruptor de encendido C,CL C,CL C,CL C,CL C,CL C,CL C,CL C,CL Use spray recomendado WD40. 22 Conexiones de la bobina HT\n(primaria y secundaria) C,T C,T C,T C,T C,T C,T C,T 23 Conexiones del motor de\narranque y del relé de arranque C,T C,T C,T C,T . C,T C,T C,T 24 Comprobación del indicador de\npresión de aceite en la consola\ndespués del encendido C,R C,R C,R C,R C,R C,R C,R C,R El testigo debería desaparecer después de\nencender el motor. Después de 4000 rpm, no\ndebe aparecer ningún ícono. 25 Verifique el código de falla,\nborre el historial de fallas,\nactualice el archivo\nhexadecimal más reciente si\ncorresponde C C C C C C C C 26 Cadena de transmisión sellada\ndesgastada: limpiar, lubricar y\najustar CL,L,A CL,L,A CL,L,A CL,L,A CL,L,A CL,L,A CL,L,A CL,L,A El cliente debe aplicar lubricante para cadenas\nen spray o uno equivalente cada 500 km . La\ncadena debe ser limpiada con aceite SAE90 o\nlimpiador de cadenas recomendado por BAL\ncada 2500 - 3000 km rotando la llanta trasera. 27 Pasadores de soporte y lateral CL,L Usar grasa recomendada AP.",
+      [
+        [
+          [
+            null,
+            null,
+            "Rev",
+            "1ra",
+            "2da",
+            "3ra",
+            "4ta",
+            "5ta",
+            "6ta",
+            "7ma",
+            "Cada\n5.000\n-\n5.500",
+            null
+          ],
+          [
+            null,
+            null,
+            "Kms",
+            "500\n-\n750",
+            "5.000\n-\n5.500",
+            "10.000\n-\n10.500",
+            "15.000\n-\n15.500",
+            "20.000\n-\n20.500",
+            "25.000\n-\n25.500",
+            "30.000\n-\n30.500",
+            null,
+            null
+          ],
+          [
+            "Item",
+            "Operación",
+            "Tiempo",
+            "15 días\n-\n1 mes",
+            "3 meses",
+            "6 meses",
+            "9 meses",
+            "12 meses",
+            "15 meses",
+            "18 meses",
+            "Cada\n3 meses",
+            "Notas"
+          ],
+          [
+            "19",
+            "Conexiones del arnés de\ncableado, inspección de rutina y\nconductos/ mangas de PVC",
+            null,
+            "C,A,T",
+            "C,A,T",
+            "C,A,T",
+            "C,A,T",
+            "C,A,T",
+            "C,A,T",
+            "C,A,T",
+            "C,A,T",
+            "Protección de conductos dañados / fundas de\nPVC mediante la aplicación de una película de\ncinta aisladora."
+          ],
+          [
+            "20",
+            "Batería, conexión y estado de\ncarga. Estado de tapa de\nterminal positiva",
+            null,
+            "C,A,\nL,T",
+            "C,A,\nL,T",
+            "C,A,\nL,T",
+            "C,A,\nL,T",
+            "C,A,\nL,T",
+            "C,A,\nL,T",
+            "C,A,\nL,T",
+            "C,A,\nL,T",
+            "Aplique vaselina en los terminales de la batería.\nUtilice el comprobador de baterías de Midtronics."
+          ],
+          [
+            "21",
+            "Limpieza de los contactos del\ninterruptor de encendido",
+            null,
+            "C,CL",
+            "C,CL",
+            "C,CL",
+            "C,CL",
+            "C,CL",
+            "C,CL",
+            "C,CL",
+            "C,CL",
+            "Use spray recomendado WD40."
+          ],
+          [
+            "22",
+            "Conexiones de la bobina HT\n(primaria y secundaria)",
+            null,
+            "",
+            "C,T",
+            "C,T",
+            "C,T",
+            "C,T",
+            "C,T",
+            "C,T",
+            "C,T",
+            ""
+          ],
+          [
+            "23",
+            "Conexiones del motor de\narranque y del relé de arranque",
+            null,
+            "",
+            "C,T",
+            "C,T",
+            "C,T",
+            "C,T",
+            ". C,T",
+            "C,T",
+            "C,T",
+            ""
+          ],
+          [
+            "24",
+            "Comprobación del indicador de\npresión de aceite en la consola\ndespués del encendido",
+            null,
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "El testigo debería desaparecer después de\nencender el motor. Después de 4000 rpm, no\ndebe aparecer ningún ícono."
+          ],
+          [
+            "25",
+            "Verifique el código de falla,\nborre el historial de fallas,\nactualice el archivo\nhexadecimal más reciente si\ncorresponde",
+            null,
+            "C",
+            "C",
+            "C",
+            "C",
+            "C",
+            "C",
+            "C",
+            "C",
+            ""
+          ],
+          [
+            "26",
+            "Cadena de transmisión sellada\ndesgastada: limpiar, lubricar y\najustar",
+            null,
+            "CL,L,A",
+            "CL,L,A",
+            "CL,L,A",
+            "CL,L,A",
+            "CL,L,A",
+            "CL,L,A",
+            "CL,L,A",
+            "CL,L,A",
+            "El cliente debe aplicar lubricante para cadenas\nen spray o uno equivalente cada 500 km . La\ncadena debe ser limpiada con aceite SAE90 o\nlimpiador de cadenas recomendado por BAL\ncada 2500 - 3000 km rotando la llanta trasera."
+          ],
+          [
+            "27",
+            "Pasadores de soporte y lateral",
+            null,
+            "",
+            "",
+            "",
+            "",
+            "CL,L",
+            "",
+            "",
+            "",
+            "Usar grasa recomendada AP."
+          ]
+        ]
+      ]
+    ],
+    [
+      52,
+      "FRECUENCIA RECOMENDADA Rev 1ra 2da 3ra 4ta 5ta 6ta 7ma Cada 5.000 500 5.000 10.000 15.000 20.000 25.000 30.000 - Kms - - - - - - - 5.500 750 5.500 10.500 15.500 20.500 25.500 30.500 Item Operación Tiempo 15 d - ías 3 meses 6 meses 9 meses 12 meses 15 meses 18 meses 3 C m a e d s a es Notas 1 mes 28 Juego de dirección C C C C C C C C Cojinete del vástago de 29 dirección y tapa del cojinete C,CL,L C,CL,L C,CL,L C,CL,L C,CL,L C,CL,L C,CL,L Reemplace si es necesario. Utilice grasa Limaplex para lubricación. de dirección (plástico)** Desmontar guardapolvo de barras frontales y limpiar reten y barras con agua. Montar 30 Aceite y sello de la horquilla C,R C,R C,R C,R C,R C,R C,R C,R nuevamente en su posicion original despues de delantera limpiar. Reemplazar aceite, sello de aceite y guardapolvo en conjunto cada 30.000 km. Posapiés traseros izquierdo 31 CL,L CL,L CL,L CL,L CL,L CL,L CL,L Reemplazar bola y plato si se requiere. LH y derecho RH (bola y plato) 32 Brazo oscilante NRB para Lubricar cada 40.000 km. mayor juego Pastillas de freno para límite 33 C,R C,R C,R R C,R C,R C,R C,R Reemplazar cada 15000 Kms. de desgaste Verifique la fuente de las fugas, si las hay, en el sistema de frenos. Verifique el estado Revise y recargue el aceite de freno DOT 4 en 34 de las mangueras de freno cada servicio. Reemplace aceite de freno DOT 4 y C,A,R C,A,R C,A,R C,A,R C,A,R C,A,R C,A,R C,A,R sellos maestros/de pinza cada 30,000kms. delanteras y traseras. A: Ajustar Verifique el nivel de líquido de CL: Limpiar frenos y rellénelo si es C: Revisar necesario L: Lubricar Compruebe si los sujetadores 35 de la rueda dentada trasera C C C C Utilice valores de torque según el modelo. T: Apretar están flojos R: Reemplazar * Es fuertemente recomendado usar unicamente el grado de aceite recomendado. PRECAUCION: ** De acuerdo al modelo • Es muy importante utilizar el grado de aceite y frecuencia de cambio recomendado para una larga *** Una limpieza mas frecuente es recomendada si se transita en entornos con polvo. duracion de los componentes criticos del motor. • No reutilizar aceite drenado. Disponga del aceite usado de forma amigable con el medio ambiente. . 52 . Rev 1ra 2da 3ra 4ta 5ta 6ta 7ma Cada\n5.000\n-\n5.500 Kms 500\n-\n750 5.000\n-\n5.500 10.000\n-\n10.500 15.000\n-\n15.500 20.000\n-\n20.500 25.000\n-\n25.500 30.000\n-\n30.500 Item Operación Tiempo 15 días\n-\n1 mes 3 meses 6 meses 9 meses 12 meses 15 meses 18 meses Cada\n3 meses Notas 28 Juego de dirección C C C C C C C C 29 Cojinete del vástago de\ndirección y tapa del cojinete\nde dirección (plástico)** C,CL,L C,CL,L C,CL,L C,CL,L C,CL,L C,CL,L C,CL,L Reemplace si es necesario. Utilice grasa\nLimaplex para lubricación. 30 Aceite y sello de la horquilla\ndelantera C,R C,R C,R C,R C,R C,R C,R C,R Desmontar guardapolvo de barras frontales y\nlimpiar reten y barras con agua. Montar\nnuevamente en su posicion original despues de\nlimpiar. Reemplazar aceite, sello de aceite y\nguardapolvo en conjunto cada 30.000 km. 31 Posapiés traseros izquierdo\nLH y derecho RH (bola y plato) CL,L CL,L CL,L CL,L CL,L CL,L CL,L Reemplazar bola y plato si se requiere. 32 Brazo oscilante NRB para\nmayor juego Lubricar cada 40.000 km. 33 Pastillas de freno para límite\nde desgaste C,R C,R C,R R C,R C,R C,R C,R Reemplazar cada 15000 Kms. 34 Verifique la fuente de las\nfugas, si las hay, en el sistema\nde frenos. Verifique el estado\nde las mangueras de freno\ndelanteras y traseras.\nVerifique el nivel de líquido de\nfrenos y rellénelo si es\nnecesario C,A,R C,A,R C,A,R C,A,R C,A,R C,A,R C,A,R C,A,R Revise y recargue el aceite de freno DOT 4 en\ncada servicio. Reemplace aceite de freno DOT 4 y\nsellos maestros/de pinza cada 30,000kms.",
+      [
+        [
+          [
+            null,
+            null,
+            "Rev",
+            "1ra",
+            "2da",
+            "3ra",
+            "4ta",
+            "5ta",
+            "6ta",
+            "7ma",
+            "Cada\n5.000\n-\n5.500",
+            null
+          ],
+          [
+            null,
+            null,
+            "Kms",
+            "500\n-\n750",
+            "5.000\n-\n5.500",
+            "10.000\n-\n10.500",
+            "15.000\n-\n15.500",
+            "20.000\n-\n20.500",
+            "25.000\n-\n25.500",
+            "30.000\n-\n30.500",
+            null,
+            null
+          ],
+          [
+            "Item",
+            "Operación",
+            "Tiempo",
+            "15 días\n-\n1 mes",
+            "3 meses",
+            "6 meses",
+            "9 meses",
+            "12 meses",
+            "15 meses",
+            "18 meses",
+            "Cada\n3 meses",
+            "Notas"
+          ],
+          [
+            "28",
+            "Juego de dirección",
+            null,
+            "C",
+            "C",
+            "C",
+            "C",
+            "C",
+            "C",
+            "C",
+            "C",
+            ""
+          ],
+          [
+            "29",
+            "Cojinete del vástago de\ndirección y tapa del cojinete\nde dirección (plástico)**",
+            null,
+            "",
+            "C,CL,L",
+            "C,CL,L",
+            "C,CL,L",
+            "C,CL,L",
+            "C,CL,L",
+            "C,CL,L",
+            "C,CL,L",
+            "Reemplace si es necesario. Utilice grasa\nLimaplex para lubricación."
+          ],
+          [
+            "30",
+            "Aceite y sello de la horquilla\ndelantera",
+            null,
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "Desmontar guardapolvo de barras frontales y\nlimpiar reten y barras con agua. Montar\nnuevamente en su posicion original despues de\nlimpiar. Reemplazar aceite, sello de aceite y\nguardapolvo en conjunto cada 30.000 km."
+          ],
+          [
+            "31",
+            "Posapiés traseros izquierdo\nLH y derecho RH (bola y plato)",
+            null,
+            "",
+            "CL,L",
+            "CL,L",
+            "CL,L",
+            "CL,L",
+            "CL,L",
+            "CL,L",
+            "CL,L",
+            "Reemplazar bola y plato si se requiere."
+          ],
+          [
+            "32",
+            "Brazo oscilante NRB para\nmayor juego",
+            null,
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Lubricar cada 40.000 km."
+          ],
+          [
+            "33",
+            "Pastillas de freno para límite\nde desgaste",
+            null,
+            "C,R",
+            "C,R",
+            "C,R",
+            "R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "Reemplazar cada 15000 Kms."
+          ],
+          [
+            "34",
+            "Verifique la fuente de las\nfugas, si las hay, en el sistema\nde frenos. Verifique el estado\nde las mangueras de freno\ndelanteras y traseras.\nVerifique el nivel de líquido de\nfrenos y rellénelo si es\nnecesario",
+            null,
+            "C,A,R",
+            "C,A,R",
+            "C,A,R",
+            "C,A,R",
+            "C,A,R",
+            "C,A,R",
+            "C,A,R",
+            "C,A,R",
+            "Revise y recargue el aceite de freno DOT 4 en\ncada servicio. Reemplace aceite de freno DOT 4 y\nsellos maestros/de pinza cada 30,000kms."
+          ]
+        ]
+      ]
+    ],
+    [
+      53,
+      "FRECUENCIA RECOMENDADA Rev 1ra 2da 3ra 4ta 5ta 6ta 7ma Cada 5.000 500 5.000 10.000 15.000 20.000 25.000 30.000 - Kms - - - - - - - 5.500 750 5.500 10.500 15.500 20.500 25.500 30.500 Item Operación Tiempo 15 d - ías 3 meses 6 meses 9 meses 12 meses 15 meses 18 meses 3 C m a e d s a es Notas 1 mes 36 Juego excesivo en gomas C,R C,R C,R Reemplace las gomas porta sprocket si es porta sprocket necesario. Revisar grietas en tuercas 37 antivibrantes de caucho de C,R C,R C,R C,R C,R C,R Reemplazar si es necesario. carenado y farola 38 Ajuste del juego libre del cable C,A C,A C,A C,A C,A C,A C,A C,A Reemplace los cables si operan de manera del embrague y del acelerador dificil. 39 Ajuste del enfoque del faro C,A C,A C,A C,A C,A C,A C,A C,A Verifique y confirme que todas 40 las bombillas/interruptores C,A C,A C,A C,A C,A . C,A C,A C,A Si los interruptores de tipo contacto están pegajosos, utilice el aerosol WD40 recomendado. funcionan 41 Lubricación general – Palanca L L L L L L L L Utilice grasa AP recomendada. de embrague 42 Presión de aire de los C,A C,A C,A C,A C,A C,A C,A C,A Asegúrese de que la presión de los neumáticos neumáticos coincida con el modelo. La carga se puede comprobar en 43 Puerto USB para Mobil C,R C,R C,R C,R C,R C,R C,R C,R Condición de arranque del motor utilizando la Luz del LED USB. A: Ajustar 44 Posición del espejo y firmeza C,A C,A C,A C,A C,A C,A C,A C,A articular CL: Limpiar Todos los sujetadores están C: Revisar apretados, pocos son, Eje L: Lubricar 45 delantero y trasero, eje de C,T C,T C,T C,T C,T C,T C,T C,T Utilice valores de torque según el modelo. T: Apretar brazo oscilante,Reposapiés del piloto, tirante del pasajero R: Reemplazar * Es fuertemente recomendado usar unicamente el grado de aceite recomendado. PRECAUCION: ** De acuerdo al modelo • Es muy importante utilizar el grado de aceite y frecuencia de cambio recomendado para una larga *** Una limpieza mas frecuente es recomendada si se transita en entornos con polvo. duracion de los componentes criticos del motor. • No reutilizar aceite drenado. Disponga del aceite usado de forma amigable con el medio ambiente. . 53 . Rev 1ra 2da 3ra 4ta 5ta 6ta 7ma Cada\n5.000\n-\n5.500 Kms 500\n-\n750 5.000\n-\n5.500 10.000\n-\n10.500 15.000\n-\n15.500 20.000\n-\n20.500 25.000\n-\n25.500 30.000\n-\n30.500 Item Operación Tiempo 15 días\n-\n1 mes 3 meses 6 meses 9 meses 12 meses 15 meses 18 meses Cada\n3 meses Notas 36 Juego excesivo en gomas\nporta sprocket C,R C,R C,R Reemplace las gomas porta sprocket si es\nnecesario. 37 Revisar grietas en tuercas\nantivibrantes de caucho de\ncarenado y farola C,R C,R C,R C,R C,R C,R Reemplazar si es necesario. 38 Ajuste del juego libre del cable\ndel embrague y del acelerador C,A C,A C,A C,A C,A C,A C,A C,A Reemplace los cables si operan de manera\ndificil. 39 Ajuste del enfoque del faro C,A C,A C,A C,A C,A C,A C,A C,A 40 Verifique y confirme que todas\nlas bombillas/interruptores\nfuncionan C,A C,A C,A C,A C,A . C,A C,A C,A Si los interruptores de tipo contacto están\npegajosos, utilice el aerosol WD40 recomendado. 41 Lubricación general – Palanca\nde embrague L L L L L L L L Utilice grasa AP recomendada. 42 Presión de aire de los\nneumáticos C,A C,A C,A C,A C,A C,A C,A C,A Asegúrese de que la presión de los neumáticos\ncoincida con el modelo. 43 Puerto USB para Mobil C,R C,R C,R C,R C,R C,R C,R C,R La carga se puede comprobar en\nCondición de arranque del motor utilizando la\nLuz del LED USB. 44 Posición del espejo y firmeza\narticular C,A C,A C,A C,A C,A C,A C,A C,A 45 Todos los sujetadores están\napretados, pocos son, Eje\ndelantero y trasero, eje de\nbrazo oscilante,Reposapiés\ndel piloto, tirante del pasajero C,T C,T C,T C,T C,T C,T C,T C,T Utilice valores de torque según el modelo.",
+      [
+        [
+          [
+            null,
+            null,
+            "Rev",
+            "1ra",
+            "2da",
+            "3ra",
+            "4ta",
+            "5ta",
+            "6ta",
+            "7ma",
+            "Cada\n5.000\n-\n5.500",
+            null
+          ],
+          [
+            null,
+            null,
+            "Kms",
+            "500\n-\n750",
+            "5.000\n-\n5.500",
+            "10.000\n-\n10.500",
+            "15.000\n-\n15.500",
+            "20.000\n-\n20.500",
+            "25.000\n-\n25.500",
+            "30.000\n-\n30.500",
+            null,
+            null
+          ],
+          [
+            "Item Operación",
+            null,
+            "Tiempo",
+            "15 días\n-\n1 mes",
+            "3 meses",
+            "6 meses",
+            "9 meses",
+            "12 meses",
+            "15 meses",
+            "18 meses",
+            "Cada\n3 meses",
+            "Notas"
+          ],
+          [
+            "36",
+            "Juego excesivo en gomas\nporta sprocket",
+            null,
+            "",
+            "",
+            "C,R",
+            "",
+            "C,R",
+            "",
+            "C,R",
+            "",
+            "Reemplace las gomas porta sprocket si es\nnecesario."
+          ],
+          [
+            "37",
+            "Revisar grietas en tuercas\nantivibrantes de caucho de\ncarenado y farola",
+            null,
+            "",
+            "",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "Reemplazar si es necesario."
+          ],
+          [
+            "38",
+            "Ajuste del juego libre del cable\ndel embrague y del acelerador",
+            null,
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "Reemplace los cables si operan de manera\ndificil."
+          ],
+          [
+            "39",
+            "Ajuste del enfoque del faro",
+            null,
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            ""
+          ],
+          [
+            "40",
+            "Verifique y confirme que todas\nlas bombillas/interruptores\nfuncionan",
+            null,
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            ". C,A",
+            "C,A",
+            "C,A",
+            "Si los interruptores de tipo contacto están\npegajosos, utilice el aerosol WD40 recomendado."
+          ],
+          [
+            "41",
+            "Lubricación general – Palanca\nde embrague",
+            null,
+            "L",
+            "L",
+            "L",
+            "L",
+            "L",
+            "L",
+            "L",
+            "L",
+            "Utilice grasa AP recomendada."
+          ],
+          [
+            "42",
+            "Presión de aire de los\nneumáticos",
+            null,
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "Asegúrese de que la presión de los neumáticos\ncoincida con el modelo."
+          ],
+          [
+            "43",
+            "Puerto USB para Mobil",
+            null,
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "C,R",
+            "La carga se puede comprobar en\nCondición de arranque del motor utilizando la\nLuz del LED USB."
+          ],
+          [
+            "44",
+            "Posición del espejo y firmeza\narticular",
+            null,
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            "C,A",
+            ""
+          ],
+          [
+            "45",
+            "Todos los sujetadores están\napretados, pocos son, Eje\ndelantero y trasero, eje de\nbrazo oscilante,Reposapiés\ndel piloto, tirante del pasajero",
+            null,
+            "C,T",
+            "C,T",
+            "C,T",
+            "C,T",
+            "C,T",
+            "C,T",
+            "C,T",
+            "C,T",
+            "Utilice valores de torque según el modelo."
+          ]
+        ]
+      ]
+    ]
+  ],
+  "paginas_espec": [
+    [
+      3,
+      "Este manual de Usuario y Garantía incluye la información más reciente del producto disponible antes de la impresión. BAJAJ se\nreserva el derecho a realizar cambios en cualquier momento sin previo aviso y sin incurrir en ningún tipo de obligación.\nNinguna parte de este manual de usuario y Garantía puede reproducirse sin el permiso previo por escrito. Puede que las\nimágenes de la motocicleta BAJAJ PULSAR NS200 FI ABS UG2 incluidas en este manual no coincidan con su propio vehículo.\nEste manual de Usuario y Garantía es parte fundamental de la motocicleta,\nrecomendamos mantenerlo siempre con la motocicleta.\nIMPORTANTE:\nAntes de encender el motor verifique\nsi el nivel de aceite 4T es el adecuado.\nVer sección: ACEITE MOTOR\nEspecificaciones del Aceite Recomendado\nViscosidad SAE\nServicio API\nJASO\n10 W 50 ó 20W 50 sintético\nSN\nMA2\n. 3 ."
+    ],
+    [
+      3,
+      "                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                 Este manual de Usuario y Garantía es parte fundamental de la motocicleta,\n                        recomendamos mantenerlo siempre con la motocicleta.         \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                            Especificaciones del Aceite Recomendado \n                        IMPORTANTE:                                                 \n                        Antes de encender el motor verifique                        \n                                              Viscosidad SAE 10 W 50 ó 20W 50 sintético\n                        si el nivel de aceite 4T es el adecuado.                    \n                                              Servicio API  SN                      \n                        Ver sección: ACEITE MOTOR                                   \n                                                JASO        MA2                     \n          Este manual de Usuario y Garantía incluye la información más reciente del producto disponible antes de la impresión. BAJAJ se\n          reserva el derecho a realizar cambios en cualquier momento sin previo aviso y sin incurrir en ningún tipo de obligación.\n          Ninguna parte de este manual de usuario y Garantía puede reproducirse sin el permiso previo por escrito. Puede que las\n          imágenes de la motocicleta BAJAJ PULSAR NS200 FI ABS UG2 incluidas en este manual no coincidan con su propio vehículo.\n                                                                                    \n                                         . 3 .                                      "
+    ],
+    [
+      5,
+      ". 5 .\nMANUAL DE USUARIO\nInformación de seguridad ...........................................................\nEspecificaciones técnicas ..…………………………….........................\nIdentificación de la motocicleta ..………………….…….………...........\nUbicación de las partes\nTablero de instrumentos, Tablero IFE / ODO e interruptor de encendido\nInterruptores derecho e izquierdo\nTanque de combustible\nSillín trasero, delantero e instalación\nCubierta izquierda y derecha\nFrenos\nGenerales\nCadena - aceite de motor\nAceite de motor\nRefrigerante motor\n¿Cómo conducir tu motocicleta? …….........................................\nTips para una conducción segura …….......................................\nMantenimiento periódico …….......................................................\nAlmacenamiento de la motocicleta ............................................\n•\n•\n•\n•\n•\n•\n•\np. 6\np. 10\np. 12\np. 42\nP. 44\np. 48\np. 55\np. 58\np. 59\np. 61\np. 62\np. 63\np. 66\np. 70\np. 72\np. 74\np. 75\np. 76\np. 77\np. 78\np. 78\n¿Qué es la garantía? ......................................................................\nObjetivo de este manual ..............................................................\nPreguntas frecuentes ……………..……………………..........................\nValidez de la garantía y condiciones ……..……….......................\n¿Qué no cubre la garantía BAJAJ? ….…………......................…..\nOtras recomendaciones ...............................................................\nAceite del motor ............................................................................\nResponsabilidad ambiental de BAJAJ .....................................\nGarantía de baterías ………............................................................\nComprobaciones diarias ..............................................................\nRepuestos 100% originales ……...……………………….....................\nEmisión de gases …………………..……………………............................\nCentros de servicio UMA .…..……………........................................\nServicio al cliente PQR’s ……........................................................\n•\n•\n•\n•\n•\n•\n•\n•\n•\n•\n•\n•\n•\n•\nMANUAL DE GARANTÍA"
+    ],
+    [
+      5,
+      "                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n      MANUAL DE USUARIO                    MANUAL DE GARANTÍA                       \n                                                                                    \n       • Información de seguridad ........................................................... p. 6 • ¿Qué es la garantía? ...................................................................... p. 58\n       • Especificaciones técnicas ..……………………………......................... p. 10 • Objetivo de este manual .............................................................. p. 59\n                                                                                    \n       • Identificación de la motocicleta ..………………….…….………...........p. 12 • Preguntas frecuentes ……………..…………………….......................... p. 61\n        Ubicación de las partes                                                     \n                                            • Validez de la garantía y condiciones ……..………....................... p. 62\n        Tablero de instrumentos, Tablero IFE / ODO e interruptor de encendido       \n        Interruptores derecho e izquierdo   • ¿Qué no cubre la garantía BAJAJ? ….…………......................….. p. 63\n        Tanque de combustible               • Aceite del motor ............................................................................ p. 66\n        Sillín trasero, delantero e instalación                                     \n                                            • Otras recomendaciones ............................................................... p. 70\n        Cubierta izquierda y derecha                                                \n        Frenos                              • Responsabilidad ambiental de BAJAJ ..................................... p. 72\n        Generales                                                                   \n                                            • Garantía de baterías ………............................................................ p. 74\n        Cadena - aceite de motor                                                    \n        Aceite de motor                     • Comprobaciones diarias .............................................................. p. 75\n        Refrigerante motor                  • Repuestos 100% originales ……...………………………..................... p. 76\n       • ¿Cómo conducir tu motocicleta? ……......................................... p. 42 • Emisión de gases …………………..……………………............................ p. 77\n       • Tips para una conducción segura ……....................................... P. 44 • Centros de servicio UMA .…..……………........................................ p. 78\n       • Mantenimiento periódico ……....................................................... p. 48 • Servicio al cliente PQR’s ……........................................................ p. 78\n       • Almacenamiento de la motocicleta ............................................p. 55\n                                         . 5 .                                      "
+    ],
+    [
+      11,
+      "4 Tiempos, OHC cilindro único,\nRefrigeración líquida\n199,4 cc\n72 mm x 49 mm\n11 +/- 0,5:1\n24,16 Hp @ 9750 rpm\n18,74 N.m @ 8000 rpm\n1500 ± 100 rpm\nECU\n3 bujías\n6 Velocidades (1 hacia abajo, 5\nhacia arriba)\nLubricación Forzada por\nCárter Húmedo\nEnfriamiento por agua (líquido)\nInyección Electrónica\nMulti-Disco Bañado en Aceite con\nSlipper Cluth\nSin Plomo, tipo Extra\nEléctrico\nMotor\nTipo\nCilindraje\nDiámetro y Carrera\nRelación Compresión\nPotencia\nTorque\nRalentí\nEncendido\nBujía\nTransmisión\nLubricación\nRefrigeración\nAlimentación\nEmbrague\nCombustible\nArranque\nPerimetral\nLCD monochrome\nHidráulica , Suspensión Invertida\nABS, Disco de 300 mm\n100/80-17, Tubeless\nMono Suspensión\n25 PSI\nABS, Disco 230 mm\n130/70-17, Tubeless\nSolo 28.5 PSI, Acompañado 32 PSI\nChasis\nTipo\nTablero\nSuspensión Delantera\nFreno Delantero\nLlanta\nSuspensión Trasera\nPresión Rueda Delantera\nFreno Trasero\nLlanta\nPresión Rueda Trasera\n2017 mm\n804 mm\n1075 mm\n1363 mm\n168 mm\n807 mm\n159 Kg\n308 Kg\n12 L\nDimensiones\nLongitud\nAncho\nAltura\nDistancia entre Ejes\nDistancia mínima del Suelo\nAltura Asiento\nPeso en vacío\nCapacidad de Carga\nCapacidad del Tanque\n. 11 .\n12V, 8Ah, VRLA\nLED DRL\nLED\nLED\nLED\nLED\nLED\nLED\nSistema Eléctrico\nBatería\nFarola\nLuz Posición\nStop\nDireccionales Delanteras\nDireccionales Traseras\nLuz Porta Placa\nIndicadores Tablero\n*Especificaciones técnicas sujetas a cambios sin previo aviso"
+    ],
+    [
+      11,
+      "                                                                                    \n                                                                                    \n                  Motor                               Chasis                        \n                   Tipo 4 Tiempos, OHC cilindro único, Tipo Perimetral              \n                       Refrigeración líquida          Tablero LCD monochrome        \n                Cilindraje 199,4 cc           Suspensión Delantera Hidráulica , Suspensión Invertida\n           Diámetro y Carrera 72 mm x 49 mm      Freno Delantero ABS, Disco de 300 mm\n          Relación Compresión 11 +/- 0,5:1            Llanta 100/80-17, Tubeless    \n                 Potencia 24,16 Hp @ 9750 rpm  Suspensión Trasera Mono Suspensión   \n                  Torque 18,74 N.m @ 8000 rpm Presión Rueda Delantera 25 PSI        \n                  Ralentí 1500 ± 100 rpm          Freno Trasero ABS, Disco 230 mm   \n                Encendido ECU                         Llanta 130/70-17, Tubeless    \n                   Bujía 3 bujías             Presión Rueda Trasera Solo 28.5 PSI, Acompañado 32 PSI\n               Transmisión 6 Velocidades (1 hacia abajo, 5                          \n                       hacia arriba)                                                \n               Lubricación Lubricación Forzada por                                  \n                       Cárter Húmedo            Sistema Eléctrico                   \n              Refrigeración Enfriamiento por agua (líquido) Batería 12V, 8Ah, VRLA  \n              Alimentación Inyección Electrónica      Farola LED DRL                \n                Embrague Multi-Disco Bañado en Aceite con Luz Posición LED          \n                       Slipper Cluth                   Stop LED                     \n               Combustible Sin Plomo, tipo Extra Direccionales Delanteras LED       \n                Arranque Eléctrico            Direccionales Traseras LED            \n                                                 Luz Porta Placa LED                \n                                               Indicadores Tablero LED              \n              Dimensiones                                                           \n                 Longitud 2017 mm                                                   \n                  Ancho 804 mm                                                      \n                  Altura 1075 mm                                                    \n           Distancia entre Ejes 1363 mm                                             \n       Distancia mínima del Suelo 168 mm                                            \n              Altura Asiento 807 mm                                                 \n              Peso en vacío 159 Kg             *Especificaciones técnicas sujetas a cambios sin previo aviso\n           Capacidad de Carga 308 Kg                                                \n          Capacidad del Tanque 12 L                                                 \n                                         . 11 .                                     "
+    ],
+    [
+      37,
+      ". 37 .\nBATERÍA\nLa batería se\nencuentra debajo del\nasiento delantero.\nPRECAUCIÓN: No conduzca la moto con la batería\ndesconectada o averiada. Puede provocar daños\nen los componentes eléctricos / electrónicos.\nBUJÍAS\n• Quite las bujías usando la herramienta adecuada.\n• Limpie las bujías\n• Ajuste la calibración doblando el electrodo\nlateral con cuidado.\nCalibración: 0,7 - 0,8 mm\nBujías: (x2) : RG - 6HCC (Derecha/Izquierda)\n(x1) : BOSCH - VR5NE (central)\nLLANTAS\n• Mantenga la presión adecuada como se menciona\nabajo para aumentar la vida útil de la llanta.\n• Garantizar la seguridad durante la conducción\npara un mejor consumo de combustible.\nRecuerde verificar el indicador de desgaste de las llantas,\neste le informa si la llanta es apta o no para la conducción.\n25 psi Delantera\n32 psi\nTrasera Sólo\nTrasera con Pasajero\n28 psi\nGenerales\nCaracterísticas:\n• No requiere rellenar.\n• Se reduce la descarga, mejora la seguridad.\n• No posee tubo de ventilación hacia el medio ambiente. Por\nlo cual no hay descarga del electrolito a través del tubo de\nventilación\n• Debe respetar el medioambiente al desechar la batería.\n• Se recomienda entregarla al mismo Centro de Servicio\nUMA para su desecho.\n• Cuando se ilumine el indicador de batería baja en el\nvelocímetro, se recomienda contactar a un centro de\nservicio UMA para cargar la batería de inmediato."
+    ],
+    [
+      37,
+      "                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n      Generales                                                                     \n                                                  BUJÍAS                            \n                       BATERÍA                    • Quite las bujías usando la herramienta adecuada.\n                       La batería se              • Limpie las bujías               \n                       encuentra debajo del       • Ajuste la calibración doblando el electrodo\n                       asiento delantero.         lateral con cuidado.              \n                                                  Calibración: 0,7 - 0,8 mm         \n                                                  Bujías: (x2) : RG - 6HCC (Derecha/Izquierda)\n                                                  (x1) : BOSCH - VR5NE (central)    \n       Características:                                                             \n                                                                                    \n       • No requiere rellenar.                                                      \n                                           LLANTAS                                  \n       • Se reduce la descarga, mejora la seguridad.                                \n                                           • Mantenga la presión adecuada como se menciona\n       • No posee tubo de ventilación hacia el medio ambiente. Por                  \n                                            abajo para aumentar la vida útil de la llanta.\n       lo cual no hay descarga del electrolito a través del tubo de                 \n                                           • Garantizar la seguridad durante la conducción\n       ventilación                                                                  \n                                            para un mejor consumo de combustible.   \n       • Debe respetar el medioambiente al desechar la batería.                     \n       • Se recomienda entregarla al mismo Centro de Ser vicio                      \n                                                    Delantera 25 psi                \n       UMA para su desecho.                                                         \n       • Cuando se ilumine el indicador de batería baja en el Trasera Sólo 28 psi   \n       velocímetro, se recomienda contactar a un centro de                          \n                                             Trasera con Pasajero 32 psi            \n       servicio UMA para cargar la batería de inmediato.                            \n      PRECAUCIÓN: No conduzca la moto con la batería Recuerde verificar el indicador de desgaste de las llantas,\n      desconectada o averiada. Puede provocar daños este le informa si la llanta es apta o no para la conducción.\n      en los componentes eléctricos / electrónicos.                                 \n                                         . 37 .                                     "
+    ],
+    [
+      38,
+      ". 38 .\nGenerales\nCADENA:\nEl ajuste de la cadena debe ser realizado siempre que\nse requiera (realice constantemente la inspección de esta).\nLa holgura de la cadena debe estar entre 25 - 35 mm.\nLas marcas de los ajustadores de la cadena deben estar\nen la misma posición a ambos lados.\nCADENA (TIPO O-RING)\n• Los O-ring deben estar lubricados para un mejor funcionamiento.\n• Se puede lubricar los O-ring de la cadena con lubricante de\ncadena BAJAJ que se puede adquirir en los centros de servicio\nUMA. Asegúrese de que el lubricante no dañe la parte de goma\nde los O-rings.\nNOTA: El hecho de no realizar este proceso o mantener\nla holgura de la cadena fuera de estos límites generará\nun desgaste acelerado del kit de arrastre.\nLubrique la cadena por lo menos cada 500 km si usa\nla motocicleta en zonas muy húmedas o polvorientas.\nINSPECCIÓN NIVEL DE ACEITE:\n• Colocar la moto sobre una superficie\nnivelada en el estante central.\n• Comprobar el nivel de aceite en la mirilla\ncomo se muestra en la fotografía con\nel motor apagado.\n• Mantenga siempre el nivel de aceite entre\nla parte superior (C) y la marca inferior (D).\nACEITE DEL MOTOR : Revisar cada semana\n• Mantener el nivel de aceite entre la marca\nsuperior y la marca inferior de la mirilla.\n• Cambiar el aceite como lo indica la tabla\nde mantenimiento perióv dico.\nEs muy importante seguir la frecuencia recomendada de cambio\nde aceite para dar una larga vida a los componentes del motor.\nPara más detalles consulte el cuadro de mantenimiento periódico.\nIMPORTANTE\nAntes de encender el motor verifique si el nivel de aceite\n4T es el adecuado. Ver sección: ACEITE MOTOR\nD\nC"
+    ],
+    [
+      38,
+      "                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n      Generales                                                                     \n                                                                                    \n                                                           IMPORTANTE               \n                                                           Antes de encender el motor verifique si el nivel de aceite\n                                                           4T es el adecuado. Ver sección: ACEITE MOTOR\n                                                        ACEITE DEL MOTOR : Revisar cada semana\n                                                        • Mantener el nivel de aceite entre la marca\n      CADENA:                                                                       \n                                                         superior y la marca inferior de la mirilla.\n      El ajuste de la cadena debe ser realizado siempre que                         \n                                                        • Cambiar el aceite como lo indica la tabla\n      se requiera (realice constantemente la inspección de esta).                   \n                                                         de mantenimiento perióv dico.\n      La holgura de la cadena debe estar entre 25 - 35 mm.                          \n      Las marcas de los ajustadores de la cadena deben estar                        \n      en la misma posición a ambos lados.             INSPECCIÓN NIVEL DE ACEITE:   \n                                                   C  • Colocar la moto sobre una superficie\n      CADENA (TIPO O-RING)                         D   nivelada en el estante central.\n      • Los O-ring deben estar lubricados para un mejor funcionamiento. • Comprobar el nivel de aceite en la mirilla\n      • Se puede lubricar los O-ring de la cadena con lubricante de como se muestra en la fotografía con\n       cadena BAJAJ que se puede adquirir en los centros de servicio el motor apagado.\n       UMA. Asegúrese de que el lubricante no dañe la parte de goma • Mantenga siempre el nivel de aceite entre\n       de los O-rings.                                 la parte superior (C) y la marca inferior (D).\n      NOTA: El hecho de no realizar este proceso o mantener                         \n                                           Es muy importante seguir la frecuencia recomendada de cambio\n      la holgura de la cadena fuera de estos límites generará                       \n                                           de aceite para dar una larga vida a los componentes del motor.\n      un desgaste acelerado del kit de arrastre.                                    \n                                           Para más detalles consulte el cuadro de mantenimiento periódico.\n      Lubrique la cadena por lo menos cada 500 km si usa                            \n      la motocicleta en zonas muy húmedas o polvorientas.                           \n                                         . 38 .                                     "
+    ],
+    [
+      39,
+      ". 39 .\n1ra\n10\n16\n2da\n18\n24\n3ra\n24\n30\n4ta\n32\n38\n5ta\n40\n46\nkm/h\nkm/h\nkm\n0 - 1.000\n1.000 - 2.000\n6ta\n48\n54\nAceite de Motor\n• Se localiza detrás del tornillo de drenaje del aceite.\n• Se debe limpiar periódicamente acudiendo a un Centro\nde Servicio UMA según el cuadro de mantenimiento.\n• Mantenga siempre la velocidad por debajo de los valores\nindicados en la tabla de arriba.\n• No revolucione el motor excesivamente.\n• No ponga en movimiento la moto inmediatamente después de\nhaber encendido el motor. Deje el motor en ralenti por 1 minuto\npara permitir que el motor se lubrique internamente.\nIMPORTANTE\nFiltro de aceite (CEDAZO):\nFiltro de aceite (PAPEL):\nFrecuencia de cambio\nCapacidad de aceite\nSAE 20W50, API SN,\nJASO MA2 o 10W50 sintético\nCada 5.000 Km\nCambio 1.200 cc\nDesensamble: 1.400 cc\n• Se localiza en la cubierta del embrague.\n• Se debe cambiar periódicamente acudiendo a un centro de\nservicio UMA según el cuadro de mantenimiento.\nAsentamiento del motor:\nEs importante para prolongar la vida del motor y mantenerlo\nlibre de problemas de rendimiento.\nDurante los primeros 2000 kms no debe exceder las siguientes\nvelocidades.\nAntes de encender el motor verifique si el nivel de aceite 4T\nes el adecuado. Ver sección: ACEITE MOTOR\nEspecificaciones del aceite\nrecomendado"
+    ],
+    [
+      39,
+      "                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n      Aceite de Motor                                                               \n                                                                                    \n                                                                                    \n                                             Asentamiento del motor:                \n      Especificaciones del aceite                                                   \n      recomendado        SAE 20W50, API SN,                                         \n                         JASO MA2 o 10W50 sintético Es importante para prolongar la vida del motor y mantenerlo\n      Frecuencia de cambio Cada 5.000 Km     libre de problemas de rendimiento.     \n                                             Durante los primeros 2000 kms no debe exceder las siguientes\n      Capacidad de aceite Cambio 1.200 cc    velocidades.                           \n                         Desensamble: 1.400 cc                                      \n                                                   km 1ra 2da 3ra 4ta 5ta 6ta       \n         IMPORTANTE                                                                 \n         Antes de encender el motor verifique si el nivel de aceite 4T 0 - 1.000 10 18 24 32 40 48 km/h\n         es el adecuado. Ver sección: ACEITE MOTOR 1.000 - 2.000 16 24 30 38 46 54 km/h\n     Filtro de aceite (CEDAZO):                                                     \n     • Se localiza detrás del tornillo de drenaje del aceite.                       \n     • Se debe limpiar periódicamente acudiendo a un Centro • Mantenga siempre la velocidad por debajo de los valores\n      de Servicio UMA según el cuadro de mantenimiento. indicados en la tabla de arriba.\n                                             • No revolucione el motor excesivamente.\n     Filtro de aceite (PAPEL):                                                      \n     • Se localiza en la cubierta del embrague. • No ponga en movimiento la moto inmediatamente después de\n     • Se debe cambiar periódicamente acudiendo a un centro de haber encendido el motor. Deje el motor en ralenti por 1 minuto\n     servicio UMA según el cuadro de mantenimiento. para permitir que el motor se lubrique internamente.\n                                         . 39 .                                     "
+    ],
+    [
+      41,
+      "ESPECIFICACIONES DEL LÍQUIDO REFRIGERANTE:\n• Mezcla lista anticongelante.\n• Cantidad total de anticongelante: 1.000 ml (750 – 780 ml\nen el radiador y 220 – 230 ml en el tanque de expansión).\nRELLENADO DEL LÍQUIDO REFRIGERANTE:\n1. Estacione la motocicleta perpendicular al suelo.\n2. Verifique el nivel del líquido refrigerante del motor.\nEl motor debe estar frío.\n3. Asegúrese que el nivel del líquido se encuentre\nentre las marcas mínimas y máximas.\n4. Siempre rellene el refrigerante por medio de la tapa de la reserva.\n5. Reemplace el líquido refrigerante con la\nmarca recomendada o equivalente.\n6. Utilice guantes de nitrilo para drenar y nivelar el líquido refrigerante.\n7. No rellene el líquido a través de la tapa del radiador.\nSi el refrigerante premezclado no está disponible, el líquido\nrefrigerante concentrado y agua destilada deben mezclarse\npor separado en una jarra limpia en proporción 1:1.\nPRECAUCIÓN: El líquido refrigerante es\nvenenoso y es riesgoso para la salud.\nEvite el contacto con la piel, ojos y ropa. Si se salpica\nrefrigerante en los ojos, enjuáguese de inmediato con agua\ny recurra a un oftalmólogo. Lave con agua y jabón las áreas\nafectadas por líquido refrigerante de inmediato. Si ingiere\nrefrigerante, contacte a un médico de inmediato. Cámbiese la\nropa que han estado en contacto con el líquido refrigerante.\nMantenga este líquido fuera del alcance de los niños.\nRefrigerante del motor\n. 41 .\nEvite mezclar diferentes tipo de refrigerante. NOTA"
+    ],
+    [
+      41,
+      "                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n      Refrigerante del motor                                                        \n                                                                                    \n                                         ESPECIFICACIONES DEL LÍQUIDO REFRIGERANTE: \n                                                                                    \n                                         • Mezcla lista anticongelante.             \n                                         • Cantidad total de anticongelante: 1.000 ml (750 – 780 ml\n                                          en el radiador y 220 – 230 ml en el tanque de expansión).\n                                         RELLENADO DEL LÍQUIDO REFRIGERANTE:        \n                                                                                    \n                                         1. Estacione la motocicleta perpendicular al suelo.\n                                         2. Verifique el nivel del líquido refrigerante del motor.\n                                          El motor debe estar frío.                 \n                                         3. Asegúrese que el nivel del líquido se encuentre\n                                          entre las marcas mínimas y máximas.       \n      PRECAUCIÓN: El líquido refrigerante es 4. Siempre rellene el refrigerante por medio de la tapa de la reserva.\n      venenoso y es riesgoso para la salud. 5. Reemplace el líquido refrigerante con la\n                                          marca recomendada o equivalente.          \n      Evite el contacto con la piel, ojos y ropa. Si se salpica 6. Utilice guantes de nitrilo para drenar y nivelar el líquido refrigerante.\n      refrigerante en los ojos, enjuáguese de inmediato con agua 7. No rellene el líquido a través de la tapa del radiador.\n      y recurra a un oftalmólogo. Lave con agua y jabón las áreas Si el refrigerante premezclado no está disponible, el líquido\n      afectadas por líquido refrigerante de inmediato. Si ingiere refrigerante concentrado y agua destilada deben mezclarse\n      refrigerante, contacte a un médico de inmediato. Cámbiese la por separado en una jarra limpia en proporción 1:1.\n      ropa que han estado en contacto con el líquido refrigerante.                  \n                                         NOTA  Evite mezclar diferentes tipo de refrigerante.\n      Mantenga este líquido fuera del alcance de los niños.                         \n                                         . 41 .                                     "
+    ],
+    [
+      49,
+      "* Es fuertemente recomendado usar unicamente el grado de aceite recomendado.\n** De acuerdo al modelo\n*** Una limpieza mas frecuente es recomendada si se transita en entornos con polvo.\nPRECAUCION:\n• Es muy importante utilizar el grado de aceite y frecuencia de cambio recomendado para una larga\nduracion de los componentes criticos del motor.\n• No reutilizar aceite drenado. Disponga del aceite usado de forma amigable con el medio ambiente.\nMantenimiento Periódico\nEl mantenimiento periódico es una labor muy importante que debe realizarse para\nmantener en óptimas condiciones de funcionamiento la motocicleta, además\ngarantiza su seguridad al conducir su motocicleta.\nA: Ajustar\nCL: Limpiar\nL: Lubricar\nT: Apretar\nR: Reemplazar\nC: Revisar\nHolgura del taqué de válvula\nFRECUENCIA RECOMENDADA\nItem Operación Tiempo Notas\nMangueras de nailon para\nfiltro de combustible en\nlínea con conector rápido\nFiltro Gasolina en linea\nLimpieza de bujías y\nverificación de espacio\nentre ellas\nLavado y secado\ncompleto del vehículo\nAceite de motor\nFiltro de aceite de motor\nFiltro Tamiz (CEDAZO)**\nFiltro de aire** y o-ring\nde la cubierta del filtro\n6ta Rev 1ra\n15 días 1 mes - 3 meses 6 meses 9 meses 12 meses15 meses 18 meses Cada 3 meses\nCL\nR R R R R R\nR\nR R\nR R R R R\nR\nR\nR\nR\nR\nCL CL CL\nC,A C,A\nCL CL CL CL\nCL CL\nCL,A CL,A\nCL\nC,R\nCL CL\n2da 3ra 4ta 5ta 7ma Cada\n5.000\n-\n5.500\n5.000\n-\n5.500\n10.000\n-\n10.500\n15.000\n-\n15.500\n25.000\n-\n25.500\n-\n750\n500\n-\n20.500\n20.000\n-\n30.500\n30.000\nAsegurese de prevenir la entrada de agua en el\ntanque de combustible, partes electricas y\nsilenciador. Use detergentes libres de cáusticos.\nUse BGO 10W50, Limpiar visor de aceite cada\n10,000kms mediante spray de gasolina y cepillo de naylon. Reemplazar cada 5,000 km, rellene\ncada 2,500 km.\nReemplazar en la primer revision y luego cada 5000 km.\nLimpiar filtro tamiz (cedazo) en cada cambio de aceite.\nReemplazar cada 20.000 km aprox o antes si\nse requiere.\nReemplazar si se requiere.\nReemplazar cada 15.000 km.\nReemplazar cada 30.000 km.\nKms\n1\n2\n3\n4\n5\n6\n7\n8\n9\n. 49 ."
+    ],
+    [
+      49,
+      "                                                                                    \n                                                                                    \n                              El mantenimiento periódico es una labor muy importante que debe realizarse para\n           Mantenimiento Periódico mantener en óptimas condiciones de funcionamiento la motocicleta, además\n                              garantiza su seguridad al conducir su motocicleta.    \n                                                                                    \n                         FRECUENCIA RECOMENDADA                                     \n                  Rev 1ra 2da 3ra 4ta 5ta 6ta 7ma Cada                              \n                                                 5.000                              \n                      500 5.000 10.000 15.000 20.000 25.000 30.000 -                \n                  Kms  -   -  -   -   -   -   -  5.500                              \n                      750 5.500 10.500 15.500 20.500 25.500 30.500                  \n       Item Operación Tiempo 1 1 5 m d - í e a s s 3 meses 6 meses 9 meses 12 meses15 meses 18 meses 3 C m a e d s a es Notas\n                                                    Asegurese de prevenir la entrada de agua en el\n        1 Lavado y secado CL CL CL CL CL  CL  CL CL tanque de combustible, partes electricas y\n          completo del vehículo                     silenciador. Use detergentes libres de cáusticos.\n                                                    Use BGO 10W50, Limpiar visor de aceite cada\n        2 Aceite de motor R R R   R   R   R   R   R 1 de 0 ,0 n 0 ay 0 l k o m n. s R m e e e d m ia p n la te z a s r p r c a a y d a d e 5 , g 0 a 0 s 0 o k li m na , r y e c ll e e p n i e ll o\n                                                    cada 2,500 km.                  \n        3 Filtro de aceite de motor R R R R R R R R R ca e d e a m 5 p 0 la 0 z 0 a k r m en . la primer revision y luego\n        4 Filtro Tamiz (CEDAZO)** CL CL CL    CL CL L d i e m a p c i e a i r t e fi . ltro tamiz (cedazo) en cada cambio\n        5 Filtro de aire** y o-ring   R             Reemplazar cada 20.000 km aprox o antes si\n          de la cubierta del filtro                 se requiere.                    \n        6 Filtro Gasolina en linea R                Reemplazar cada 15.000 km.      \n          Mangueras de nailon para                                                  \n        7 filtro de combustible en    C,R           Reemplazar si se requiere.      \n          línea con conector rápido                                    A: Ajustar   \n          Limpieza de bujías y                                         CL: Limpiar  \n        8 verificación de espacio CL,A CL,A   R     Reemplazar cada 30.000 km. C: Revisar\n          entre ellas                                                  L: Lubricar  \n                                                                       T: Apretar   \n        9 Holgura del taqué de válvula C,A   C,A                                    \n                                                                       R: Reemplazar\n        * Es fuertemente recomendado usar unicamente el grado de aceite recomendado. PRECAUCION:\n        ** De acuerdo al modelo         • Es muy importante utilizar el grado de aceite y frecuencia de cambio recomendado para una larga\n        *** Una limpieza mas frecuente es recomendada si se transita en entornos con polvo. duracion de los componentes criticos del motor.\n                                        • No reutilizar aceite drenado. Disponga del aceite usado de forma amigable con el medio ambiente.\n                                         . 49 .                                     "
+    ],
+    [
+      52,
+      ". 52 .\nA: Ajustar\nCL: Limpiar\nL: Lubricar\nT: Apretar\nR: Reemplazar\nC: Revisar\nFRECUENCIA RECOMENDADA\nItem Operación Tiempo Notas\nVerifique la fuente de las\nfugas, si las hay, en el sistema\nde frenos. Verifique el estado\nde las mangueras de freno\ndelanteras y traseras.\nVerifique el nivel de líquido de\nfrenos y rellénelo si es\nnecesario\nPastillas de freno para límite de desgaste\nJuego de dirección\nCojinete del vástago de\ndirección y tapa del cojinete\nde dirección (plástico)**\nAceite y sello de la horquilla\ndelantera\nPosapiés traseros izquierdo LH y derecho RH (bola y plato)\nCompruebe si los sujetadores\nde la rueda dentada trasera\nestán flojos\nBrazo oscilante NRB para\nmayor juego\n6ta Rev 1ra\n15 días 1 mes - 3 meses 6 meses 9 meses 12 meses15 meses 18 meses Cada 3 meses\nC\nC,R C,R C,R C,R C,R C,R C,R C,R\nC,R\nC,A,R C,A,R C,A,R C,A,R C,A,R C,A,R C,A,R C,A,R\nC,R C,R C,R C,R C,R C,R R\nC C C C C C\nC C C C\nC\nC,CL,L C,CL,L C,CL,L C,CL,L C,CL,L C,CL,L C,CL,L\nCL,L CL,L CL,L CL,L CL,L CL,L CL,L\n2da 3ra 4ta 5ta 7ma Cada\n5.000\n-\n5.500\n5.000\n-\n5.500\n10.000\n-\n10.500\n15.000\n-\n15.500\n25.000\n-\n25.500\n-\n750\n500\n-\n20.500\n20.000\n-\n30.500\n30.000\nReemplace si es necesario. Utilice grasa\nLimaplex para lubricación.\nDesmontar guardapolvo de barras frontales y\nlimpiar reten y barras con agua. Montar\nnuevamente en su posicion original despues de\nlimpiar. Reemplazar aceite, sello de aceite y\nguardapolvo en conjunto cada 30.000 km.\nRevise y recargue el aceite de freno DOT 4 en\ncada servicio. Reemplace aceite de freno DOT 4 y\nsellos maestros/de pinza cada 30,000kms.\nLubricar cada 40.000 km.\nReemplazar cada 15000 Kms.\nUtilice valores de torque según el modelo.\nReemplazar bola y plato si se requiere.\nKms\n28\n29\n30\n31\n32\n33\n34\n35\n* Es fuertemente recomendado usar unicamente el grado de aceite recomendado.\n** De acuerdo al modelo\n*** Una limpieza mas frecuente es recomendada si se transita en entornos con polvo.\nPRECAUCION:\n• Es muy importante utilizar el grado de aceite y frecuencia de cambio recomendado para una larga\nduracion de los componentes criticos del motor.\n• No reutilizar aceite drenado. Disponga del aceite usado de forma amigable con el medio ambiente."
+    ],
+    [
+      52,
+      "                                                                                    \n                                                                                    \n                                                                                    \n                         FRECUENCIA RECOMENDADA                                     \n                                                                                    \n                  Rev  1ra 2da 3ra 4ta 5ta 6ta 7ma Cada                             \n                                                 5.000                              \n                       500 5.000 10.000 15.000 20.000 25.000 30.000 -               \n                  Kms  -   -   -   -   -  -   -  5.500                              \n                       750 5.500 10.500 15.500 20.500 25.500 30.500                 \n       Item Operación Tiempo 1 1 5 m d - í e a s s 3 meses 6 meses 9 meses 12 meses15 meses 18 meses 3 C m a e d s a es Notas\n        28 Juego de dirección C C C C C   C   C   C                                 \n          Cojinete del vástago de                                                   \n        29 dirección y tapa del cojinete C,CL,L C,CL,L C,CL,L C,CL,L C,CL,L C,CL,L C,CL,L Reemplace si es necesario. Utilice grasa\n                                                     Limaplex para lubricación.     \n          de dirección (plástico)**                                                 \n                                                     Desmontar guardapolvo de barras frontales y\n                                                     limpiar reten y barras con agua. Montar\n        30 Aceite y sello de la horquilla C,R C,R C,R C,R C,R C,R C,R C,R nuevamente en su posicion original despues de\n          delantera                                  limpiar. Reemplazar aceite, sello de aceite y\n                                                     guardapolvo en conjunto cada 30.000 km.\n        31 P LH os y a p d i e é r s e c tr h a o s e R r H o s (b i o z l q a u y ie p rd la o t o) CL,L CL,L CL,L CL,L CL,L CL,L CL,L Reemplazar bola y plato si se requiere.\n        32 Brazo oscilante NRB para                  Lubricar cada 40.000 km.       \n          mayor juego                                                               \n        33 P de a s d t e il s la g s a s d t e e freno para límite C,R C,R C,R R C,R C,R C,R C,R Reemplazar cada 15000 Kms.\n          Verifique la fuente de las                                                \n          fugas, si las hay, en el sistema                                          \n          de frenos. Verifique el estado             Revise y recargue el aceite de freno DOT 4 en\n        34 de las mangueras de freno                 cada servicio. Reemplace aceite de freno DOT 4 y\n          delanteras y traseras. C,A,R C,A,R C,A,R C,A,R C,A,R C,A,R C,A,R C,A,R sellos maestros/de pinza cada 30,000kms. A: Ajustar\n          Verifique el nivel de líquido de                             CL: Limpiar  \n          frenos y rellénelo si es                                                  \n          necesario                                                    C: Revisar   \n          Compruebe si los sujetadores                                 L: Lubricar  \n        35 de la rueda dentada trasera C C C  C      Utilice valores de torque según el modelo. T: Apretar\n          están flojos                                                 R: Reemplazar\n        * Es fuertemente recomendado usar unicamente el grado de aceite recomendado. PRECAUCION:\n        ** De acuerdo al modelo         • Es muy importante utilizar el grado de aceite y frecuencia de cambio recomendado para una larga\n        *** Una limpieza mas frecuente es recomendada si se transita en entornos con polvo. duracion de los componentes criticos del motor.\n                                        • No reutilizar aceite drenado. Disponga del aceite usado de forma amigable con el medio ambiente.\n                                        . 52 .                                      "
+    ],
+    [
+      53,
+      ". 53 .\n.\nFRECUENCIA RECOMENDADA\nItem\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\nOperación Tiempo\nKms\nNotas\nVerifique y confirme que todas las bombillas/interruptores\nfuncionan\nAjuste del enfoque del faro\nLubricación general – Palanca\nde embrague\nPresión de aire de los\nneumáticos\nPosición del espejo y firmeza\narticular\nPuerto USB para Mobil\nJuego excesivo en gomas\nporta sprocket\nRevisar grietas en tuercas\nantivibrantes de caucho de\ncarenado y farola\nTodos los sujetadores están\napretados, pocos son, Eje\ndelantero y trasero, eje de\nbrazo oscilante,Reposapiés\ndel piloto, tirante del pasajero\nAjuste del juego libre del cable\ndel embrague y del acelerador\n6ta Rev 1ra\n15 días 1 mes - 3 meses 6 meses 9 meses 12 meses15 meses 18 meses Cada 3 meses\nC,A C,A C,A C,A C,A C,A C,A C,A\nC,A C,A C,A C,A C,A C,A C,A C,A\nC,A C,A C,A C,A C,A C,A C,A C,A\nC,A C,A C,A\nL L L L L L L L\nC,A C,A C,A C,A C,A\nC,A C,A C,A C,A C,A C,A C,A C,A\nC,R C,R C,R C,R C,R C,R C,R C,R\nC,R C,R C,R C,R C,R\nC,R C,R C,R\nC,R\n2da 3ra 4ta 5ta 7ma Cada\n5.000\n-\n5.500\n5.000\n-\n5.500\n10.000\n-\n10.500\n15.000\n-\n15.500\n25.000\n-\n25.500\n-\n750\n500\n-\n20.500\n20.000\n-\n30.500\n30.000\nReemplace las gomas porta sprocket si es\nnecesario.\nReemplazar si es necesario.\nReemplace los cables si operan de manera\ndificil.\nSi los interruptores de tipo contacto están pegajosos, utilice el aerosol WD40 recomendado.\nAsegúrese de que la presión de los neumáticos\ncoincida con el modelo.\nUtilice grasa AP recomendada.\nLa carga se puede comprobar en\nCondición de arranque del motor utilizando la\nLuz del LED USB.\nUtilice valores de torque según el modelo. C,T C,T C,T C,T C,T C,T C,T C,T\nA: Ajustar\nCL: Limpiar\nL: Lubricar\nT: Apretar\nR: Reemplazar\nC: Revisar\n* Es fuertemente recomendado usar unicamente el grado de aceite recomendado.\n** De acuerdo al modelo\n*** Una limpieza mas frecuente es recomendada si se transita en entornos con polvo.\nPRECAUCION:\n• Es muy importante utilizar el grado de aceite y frecuencia de cambio recomendado para una larga\nduracion de los componentes criticos del motor.\n• No reutilizar aceite drenado. Disponga del aceite usado de forma amigable con el medio ambiente."
+    ],
+    [
+      53,
+      "                                                                                    \n                                                                                    \n                                                                                    \n                             FRECUENCIA RECOMENDADA                                 \n                                                                                    \n                   Rev 1ra 2da 3ra 4ta 5ta 6ta 7ma Cada                             \n                                                 5.000                              \n                       500 5.000 10.000 15.000 20.000 25.000 30.000 -               \n                   Kms -   -   -   -   -   -   - 5.500                              \n                       750 5.500 10.500 15.500 20.500 25.500 30.500                 \n       Item Operación Tiempo 1 1 5 m d - í e a s s 3 meses 6 meses 9 meses 12 meses15 meses 18 meses 3 C m a e d s a es Notas\n       36 Juego excesivo en gomas C,R C,R     C,R    Reemplace las gomas porta sprocket si es\n          porta sprocket                             necesario.                     \n          Revisar grietas en tuercas                                                \n       37 antivibrantes de caucho de C,R C,R C,R C,R C,R C,R Reemplazar si es necesario.\n          carenado y farola                                                         \n       38 Ajuste del juego libre del cable C,A C,A C,A C,A C,A C,A C,A C,A Reemplace los cables si operan de manera\n          del embrague y del acelerador              dificil.                       \n       39 Ajuste del enfoque del faro C,A C,A C,A C,A C,A C,A C,A C,A               \n       40 V la e s r i b fi o q m ue b i y ll a c s o / n i fi n r te m r e ru q p u to e r t e o s d as C,A C,A C,A C,A C,A . C,A C,A C,A S pe i g lo a s jo i s n o te s r , r u u t p il t ic o e re e s l d a e e r t o ip s o o l c W on D t 4 ac 0 t o re e c s o t m án e ndado.\n          funcionan                                                                 \n       41 Lubricación general – Palanca L L L L L L L L Utilice grasa AP recomendada.\n          de embrague                                                               \n       42 Presión de aire de los C,A C,A C,A C,A C,A C,A C,A C,A Asegúrese de que la presión de los neumáticos\n          neumáticos                                 coincida con el modelo.        \n                                                     La carga se puede comprobar en \n       43 Puerto USB para Mobil C,R C,R C,R C,R C,R C,R C,R C,R Condición de arranque del motor utilizando la\n                                                     Luz del LED USB.               \n       44 Posición del espejo y firmeza C,A C,A C,A C,A C,A C,A C,A C,A A: Ajustar  \n          articular                                                    CL: Limpiar  \n          Todos los sujetadores están                                  C: Revisar   \n          apretados, pocos son, Eje                                    L: Lubricar  \n       45 delantero y trasero, eje de C,T C,T C,T C,T C,T C,T C,T C,T Utilice valores de torque según el modelo. T: Apretar\n          brazo oscilante,Reposapiés                                                \n          del piloto, tirante del pasajero                             R: Reemplazar\n        * Es fuertemente recomendado usar unicamente el grado de aceite recomendado. PRECAUCION:\n        ** De acuerdo al modelo         • Es muy importante utilizar el grado de aceite y frecuencia de cambio recomendado para una larga\n        *** Una limpieza mas frecuente es recomendada si se transita en entornos con polvo. duracion de los componentes criticos del motor.\n                                        • No reutilizar aceite drenado. Disponga del aceite usado de forma amigable con el medio ambiente.\n                                       . 53 .                                       "
+    ],
+    [
+      63,
+      ". 63 .\nLA GARANTÍA\nBAJAJ NO\nCUBRE:\nDaños debidos a incumplimiento o negligencia en las revisiones preventivas recomendadas por BAJAJ.\nDaños generados por reparaciones o revisiones efectuadas con métodos no especificados por BAJAJ\no por terceros no autorizados.\nEstas exclusiones de garantía se rigen por lo establecido en la circular única\nde la Superintendencia de Industria y Comercio en el numeral 1.2.2.2.1.\nAVISO\n1.\n2.\nDaños debidos al uso de la motocicleta para carreras u otras actividades de competencia deportiva.\nDaños debidos a métodos de funcionamiento que no sean los indicados en el Manual de Propietario,\no por utilizar la motocicleta más allá de los límites o especificaciones indicados por BAJAJ. (Carga\nmáxima, capacidad de pasajeros, velocidad de motor y otros).\nDaños debidos a la utilización de piezas o accesorios no originales o que no sean aprobados o\ncomercializados por Centro de Servicio UMA. o combustible, lubricante y compuestos líquidos con\nespecificaciones diferentes de las indicadas en el Manual de Propietario.\nDaños debidos a una lubricación inadecuada o al uso de lubricantes no especificados por BAJAJ.\nDaños debidos a modificaciones no aprobadas por BAJAJ (reparaciones del motor, modificaciones para\nel rendimiento de la motocicleta, reducción de luces, aumentos y otros cambios).\nDaños debidos al paso del tiempo (deterioro natural de superficies pintadas o cromadas, corrosión y\notros deterioros) debidos a condiciones ambientales críticas o a agentes externos.\nLa sustitución y los trabajos de sustitución o reparación de piezas no originales BAJAJ o montadas por\npersonal ajeno al Centro de Servicio UMA\nDaños debidos a almacenaje o transporte incorrectos.\nDaños ocasionados en la motocicleta por cualquier accidente.\n3.\n4.\n5.\n6.\n7.\n8.\n9.\n10.\n11."
+    ],
+    [
+      63,
+      "                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n         LA GARANTÍA 1. Daños debidos a incumplimiento o negligencia en las revisiones preventivas recomendadas por BAJAJ.\n            BAJAJ NO 2. Daños generados por reparaciones o revisiones efectuadas con métodos no especificados por BAJAJ\n             CUBRE:   o por terceros no autorizados.                                \n                    3. Daños debidos al uso de la motocicleta para carreras u otras actividades de competencia deportiva.\n                    4. Daños debidos a métodos de funcionamiento que no sean los indicados en el Manual de Propietario,\n                      o por utilizar la motocicleta más allá de los límites o especificaciones indicados por BAJAJ. (Carga\n                      máxima, capacidad de pasajeros, velocidad de motor y otros).  \n                    5. Daños debidos a la utilización de piezas o accesorios no originales o que no sean aprobados o\n                      comercializados por Centro de Servicio UMA. o combustible, lubricante y compuestos líquidos con\n                      especificaciones diferentes de las indicadas en el Manual de Propietario.\n                    6. Daños debidos a una lubricación inadecuada o al uso de lubricantes no especificados por BAJAJ.\n                    7. Daños debidos a modificaciones no aprobadas por BAJAJ (reparaciones del motor, modificaciones para\n                      el rendimiento de la motocicleta, reducción de luces, aumentos y otros cambios).\n                    8. Daños debidos al paso del tiempo (deterioro natural de superficies pintadas o cromadas, corrosión y\n                      otros deterioros) debidos a condiciones ambientales críticas o a agentes externos.\n                    9. La sustitución y los trabajos de sustitución o reparación de piezas no originales BAJAJ o montadas por\n                      personal ajeno al Centro de Servicio UMA                      \n                    10. Daños debidos a almacenaje o transporte incorrectos.        \n                    11. Daños ocasionados en la motocicleta por cualquier accidente.\n                    Estas exclusiones de garantía se rigen por lo establecido en la circular única\n               AVISO                                                                \n                    de la Superintendencia de Industria y Comercio en el numeral 1.2.2.2.1.\n                                                                                    \n                                                                                    \n                                         . 63 .                                     "
+    ],
+    [
+      66,
+      ". 66 .\nACEITE DE MOTOR\nCONSUMO ACEITE DE MOTOR\nTodo motor consume aceite, en el recorrido ascendente del\npistón, una pequeña cantidad de aceite será barrido a la cámara\nde combustión y quemado en el siguiente ciclo de encendido.\ntambién el aceite que lubrica las áreas de los impulsadores de\nválvulas y sus guías será drenado en pequeñas cantidades a la\nadmisión o escape. La suma de estas cantidades de aceite es\npequeña, pero explica por que el motor consume aceite. Si no\nhubiera este consumo de aceite el desgaste de las paredes del\ncilindro, impulsores, guías de válvulas y otras áreas del motor\nsería excesivo.\nAdicionalmente los anillos del pistón de los motores modernos,\ncuya vida útil es más larga, tienen también un periodo de\nasentamiento más prolongado que los anillos de pistón de\nmotores antiguos, razón por la cual un motor nuevo sin asenta+\nmiento, consumirá en promedio más aceite que un motor del\nmismo tipo después de 5.000 ó 6.000 km de uso.\nOtras variables que afectan el consumo de aceite son: la calidad y\nla viscosidad del aceite usado, su volatilidad, la velocidad típica de\nconducción, revoluciones del motor y la dilución de combustible\nen el aceite. Por ejemplo, en operación de ciudad y sin excesos de\npeso un motor puede recorrer muchos kilómetros sin que se note\nuna pérdida de aceite, debido al efecto compensador del combus+\ntible diluido en el mismo, mientras que si el mismo motor\nconducido en una vía rápida y durante un día cálido a alta\nvelocidad, el motor presentará pérdida de aceite, debido a que el\ncombustible que estaba diluido en el mismo, se evaporará por las\naltas temperaturas del motor.\nEn conclusión, todo motor consume aceite para funcionar\ncorrectamente y es normal que consuma hasta un 30% cada\n2.000 ó 3.000 kilómetros, sin indicar que por eso esté fallando la\nunidad. Se recomienda cambiar el aceite cada 5.000 A 5.500\nkilómetros.\nPor eso es necesario medir y complementar el nivel de aceite\ndel motor frecuentemente, usar solamente Aceite Genuino"
+    ],
+    [
+      66,
+      "                                                                                    \n                                                                                    \n                                                                                    \n                                                                                    \n      ACEITE DE MOTOR                                                               \n                                                                                    \n                                                                                    \n      CONSUMO ACEITE DE MOTOR              Otras variables que afectan el consumo de aceite son: la calidad y\n                                           la viscosidad del aceite usado, su volatilidad, la velocidad típica de\n      Todo motor consume aceite, en el recorrido ascendente del                     \n                                           conducción, revoluciones del motor y la dilución de combustible\n      pistón, una pequeña cantidad de aceite será barrido a la cámara               \n                                           en el aceite. Por ejemplo, en operación de ciudad y sin excesos de\n      de combustión y quemado en el siguiente ciclo de encendido.                   \n                                           peso un motor puede recorrer muchos kilómetros sin que se note\n      también el aceite que lubrica las áreas de los impulsadores de                \n                                           una pérdida de aceite, debido al efecto compensador del combus+\n      válvulas y sus guías será drenado en pequeñas cantidades a la                 \n                                           tible diluido en el mismo, mientras que si el mismo motor\n      admisión o escape. La suma de estas cantidades de aceite es                   \n                                           conducido en una vía rápida y durante un día cálido a alta\n      pequeña, pero explica por que el motor consume aceite. Si no                  \n                                           velocidad, el motor presentará pérdida de aceite, debido a que el\n      hubiera este consumo de aceite el desgaste de las paredes del                 \n                                           combustible que estaba diluido en el mismo, se evaporará por las\n      cilindro, impulsores, guías de válvulas y otras áreas del motor               \n                                           altas temperaturas del motor.            \n      sería excesivo.                                                               \n                                           En conclusión, todo motor consume aceite para funcionar\n      Adicionalmente los anillos del pistón de los motores modernos,                \n                                           correctamente y es normal que consuma hasta un 30% cada\n      cuya vida útil es más larga, tienen también un periodo de                     \n                                           2.000 ó 3.000 kilómetros, sin indicar que por eso esté fallando la\n      asentamiento más prolongado que los anillos de pistón de                      \n                                           unidad. Se recomienda cambiar el aceite cada 5.000 A 5.500\n      motores antiguos, razón por la cual un motor nuevo sin asenta+                \n                                           kilómetros.                              \n      miento, consumirá en promedio más aceite que un motor del                     \n      mismo tipo después de 5.000 ó 6.000 km de uso.                                \n                                           Por eso es necesario medir y complementar el nivel de aceite\n                                           del motor frecuentemente, usar solamente Aceite Genuino\n                                         . 66 .                                     "
+    ]
+  ]
+}

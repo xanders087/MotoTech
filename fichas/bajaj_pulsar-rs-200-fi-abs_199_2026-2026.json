@@ -87,5 +87,199 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://grupouma.com/colombia/wp-content/uploads/sites/2/2022/06/MU-Pulsar-RS200-FI-2022.2.pdf",
+      "sha256": "0d499e3d8a908bea6b1cb09a261a4026d190d8d19bd826dc47113a996d019f17",
+      "pagina": 40,
+      "titulo": "Manual oficial Bajaj Pulsar RS 200 FI ABS"
+    },
+    "tareas": [
+      {
+        "componente": "Aceite",
+        "accion": "Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro Aceite",
+        "accion": "Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro Tamiz (CEDAZO)",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Bujía",
+        "accion": "Cambiar",
+        "intervalo_km": 40000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de Aire",
+        "accion": "Cambiar",
+        "intervalo_km": 20000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de Combustible",
+        "accion": "Cambiar",
+        "intervalo_km": 20000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Manguera de Combustible",
+        "accion": "Cambiar",
+        "intervalo_km": 25000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Ajuste Válvulas",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cadena",
+        "accion": "Revisar, Limpiar, Lubricar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Respirador Motor",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Interruptor Freno",
+        "accion": "Revisar y Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Holgura Acelerador / Embrague",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Holgura Pedal Freno",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Pastillas de Frenos",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cunas Dirección",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Llantas",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Bujes Tijera",
+        "accion": "Revisar y Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Aceite Suspensión delantera",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Retenes Telescópicos",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Amortiguador Traseros",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Compresión Motor",
+        "accion": "Revisar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Rodamientos Ruedas",
+        "accion": "Revisar, Lubricar y Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cauchos Porta Sprocket",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Ajuste Tornillos",
+        "accion": "Ajustar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Liquido Frenos",
+        "accion": "Revisar, Ajustar y Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Lubricacion Partes Móviles y limpieza del drenaje del silenciador.",
+        "accion": "Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Aceite de Suspensión delantera",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      }
+    ]
+  },
+  "datos_servicio": {
+    "viscosidad_aceite": {
+      "valor": "SAE 20W-50",
+      "pagina": 3
+    },
+    "presion_llanta_delantera": {
+      "valor": "25 psi",
+      "pagina": 11
+    },
+    "presion_llanta_trasera": {
+      "valor": "28 psi",
+      "pagina": 11
+    },
+    "holgura_cadena": {
+      "valor": "15-25 mm",
+      "pagina": 29
+    },
+    "capacidad_aceite": {
+      "valor": "1.2 L",
+      "pagina": 30
+    }
   }
 }

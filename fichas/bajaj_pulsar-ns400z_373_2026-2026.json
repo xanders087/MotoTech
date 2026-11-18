@@ -87,5 +87,205 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://grupouma.com/docs/manual/manual-pulsar-ns400z-2026.pdf",
+      "sha256": "455f511d3b963094b090c589223bd6823cc4e9fe106fdaacc16c89eabc1da145",
+      "pagina": 53,
+      "titulo": "Manual Pulsar NS 400 Z - Final"
+    },
+    "tareas": [
+      {
+        "componente": "Aceite",
+        "accion": "Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Filtro de Aceite",
+        "accion": "Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Filtro Tamiz (CEDAZO)",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Bujía",
+        "accion": "Cambiar",
+        "intervalo_km": 40000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de Aire",
+        "accion": "Cambiar",
+        "intervalo_km": 20000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de Combustible",
+        "accion": "Cambiar",
+        "intervalo_km": 20000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Manguera de Combustible",
+        "accion": "Cambiar",
+        "intervalo_km": 25000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cadena",
+        "accion": "Revisar, Limpiar, Lubricar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Respirador Motor",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Interruptor Freno",
+        "accion": "Revisar y Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Holgura Acelerador / Embrague",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Holgura Pedal Freno",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Pastillas de Frenos",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cunas Dirección",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Llantas",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Bujes Tijera",
+        "accion": "Revisar y Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Aceite Suspensión delantera",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Sujeci ones de amortiguadores",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Sujeciones de amortiguadores",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Compresión Motor",
+        "accion": "Revisar",
+        "intervalo_km": 15000,
+        "intervalo_meses": 12
+      },
+      {
+        "componente": "Rodamientos Ruedas",
+        "accion": "Revisar, Lubricar y Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Cauchos Porta Sprocket",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Ajuste Tornillos",
+        "accion": "Ajustar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Liquido Frenos",
+        "accion": "Revisar, Ajustar y Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Lubricación Partes Móviles",
+        "accion": "Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Nivel de Refrigerante motor",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Aletas del Radiador",
+        "accion": "Revisar, Ajustar y Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Cableado. Bornes de Batería. Motor de Arranque",
+        "accion": "Revisar, Ajustar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      }
+    ]
+  },
+  "datos_servicio": {
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-50",
+      "pagina": 3
+    },
+    "presion_llanta_delantera": {
+      "valor": "29 psi",
+      "pagina": 10
+    },
+    "presion_llanta_trasera": {
+      "valor": "32 psi",
+      "pagina": 10
+    },
+    "holgura_cadena": {
+      "valor": "15-25 mm",
+      "pagina": 42
+    },
+    "capacidad_aceite": {
+      "valor": "1.7 L",
+      "pagina": 43
+    }
   }
 }

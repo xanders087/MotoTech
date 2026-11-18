@@ -112,5 +112,203 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "datos_servicio": {
+    "capacidad_aceite": {
+      "valor": "0.85 L",
+      "pagina": 61
+    },
+    "liquido_frenos": {
+      "valor": "DOT 4",
+      "pagina": 72
+    },
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-40",
+      "pagina": 94
+    }
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2023/04/MT15-BHC1.pdf",
+      "sha256": "f02a762b1be64966282140e8acc90034748c51d5886ad2900606ced00216ed1b",
+      "pagina": 52,
+      "titulo": "Manual oficial Yamaha MT15"
+    },
+    "tareas": [
+      {
+        "componente": "Bujía",
+        "accion": "Cambiar",
+        "intervalo_km": 12000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Válvulas",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Sistema de inyección de combustible",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Sistema de escape",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Sistema de control de emisiones evaporativas",
+        "accion": "Revisar",
+        "intervalo_km": 6000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Batería",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Embrague",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Freno delantero",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Freno trasero",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Manguera del freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 48
+      },
+      {
+        "componente": "Líquido de frenos",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 24
+      },
+      {
+        "componente": "Rines",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Basculante",
+        "accion": "Lubricar",
+        "intervalo_km": 13000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cadena de transmisión",
+        "accion": "Ajustar y lubricar",
+        "intervalo_km": 500,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Rodamientos de la dirección",
+        "accion": "Lubricar",
+        "intervalo_km": 13000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Eje pivotante de la manigueta del freno",
+        "accion": "Lubricar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Eje pivotante del pedal del freno",
+        "accion": "Lubricar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Eje pivotante de la manigueta del embrague",
+        "accion": "Lubricar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Eje pivotante del pedal de cambios",
+        "accion": "Lubricar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Soporte lateral",
+        "accion": "Lubricar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Horquilla delantera",
+        "accion": "Cambiar aceite",
+        "intervalo_km": 13000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Amortiguadores",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Aceite de motor",
+        "accion": "Cambiar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de aceite de motor",
+        "accion": "Cambiar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Sistema de refrigeración",
+        "accion": "Cambiar refrigerante",
+        "intervalo_km": null,
+        "intervalo_meses": 24
+      },
+      {
+        "componente": "Interruptores de los frenos trasero y delantero",
+        "accion": "Revisar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Partes móviles y terminales de los cables",
+        "accion": "Lubricar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Puño del acelerador",
+        "accion": "Ajustar y lubricar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Luces, indicadores e interruptores",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 3000,
+        "intervalo_meses": null
+      }
+    ]
   }
 }

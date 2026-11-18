@@ -67,5 +67,297 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://grupouma.com/colombia/wp-content/uploads/sites/2/2026/04/MU-PULSAR-NS-125-2026.pdf",
+      "sha256": "361cf29cc477733b46f03bab3eaae77db6a734a2fffc1624f19baeb69265c3bb",
+      "pagina": 37,
+      "titulo": "Manual_Usuario-PulsarNS125 _FINAL"
+    },
+    "tareas": [
+      {
+        "componente": "Lavado y secado completo del veh(cid:237)culo",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Aceite",
+        "accion": "Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Filtro Aceite",
+        "accion": "Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Filtro Tamiz",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Filtro de aire y o-ring de la cubierta del filtro",
+        "accion": "Cambiar",
+        "intervalo_km": 20000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Linea de combustible desde la llave de paso al carburador",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Buj(cid:237)a",
+        "accion": "Cambiar",
+        "intervalo_km": 30000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Holgura de vÆlvulas",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 15000,
+        "intervalo_meses": 12
+      },
+      {
+        "componente": "Limpieza del carburador",
+        "accion": "Limpiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": 12
+      },
+      {
+        "componente": "Conducto de admisi(cid:243)n del carburador",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Manguera del desfogue de motor",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Tubo de escape del silenciador, limpieza",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Conexiones del arnØs de, enrutamiento, bandas de amarre y abrazaderas. inspecci(cid:243)n de fundas",
+        "accion": "Revisar, Ajustar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Batería, conexión y estado de carga. Estado de tapa de terminal positiva",
+        "accion": "Revisar, Lubricar, Ajustar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Limpieza de switch de ignición y contactos de controles del manillar",
+        "accion": "Limpiar y Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Conexiones de bobina de alta tension",
+        "accion": "Revisar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Motor de arranque & relé de arranque",
+        "accion": "Revisar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Revise el desgaste de la cadena de transmisi(cid:243)n",
+        "accion": "Limpiar, Lubricar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Candado de la cadena de transmisi(cid:243)n",
+        "accion": "Cambiar",
+        "intervalo_km": 20000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Funcionamiento de soporte central y lateral",
+        "accion": "Revisar y Lubricar",
+        "intervalo_km": 20000,
+        "intervalo_meses": 16
+      },
+      {
+        "componente": "Juego de direcci(cid:243)n",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Rodamientos de cunas de direcci(cid:243)n",
+        "accion": "Revisar, Limpiar, Lubricar y Cambiar",
+        "intervalo_km": 10000,
+        "intervalo_meses": 8
+      },
+      {
+        "componente": "Retenedores y aceite de suspensi(cid:243)n delantera",
+        "accion": "Cambiar",
+        "intervalo_km": 30000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Zapatas de freno traseras y pastilla de freno delanteras",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Pasador del pedal de freno trasero",
+        "accion": "Limpiar y Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Revisar funcionalidad del conjunto de freno de disco. Controlas fugas o cualquier otro daño.",
+        "accion": "Revisar, Ajustar y Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Nivel de líquido de frenos - recargar/reemplazar",
+        "accion": "Cambiar",
+        "intervalo_km": 30000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Revisar estado de la manguera del freno delantero",
+        "accion": "Cambiar",
+        "intervalo_km": 30000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Revisión y ajuste de los tornillos del sprocket trasero",
+        "accion": "Revisar y Apretar",
+        "intervalo_km": 10000,
+        "intervalo_meses": 8
+      },
+      {
+        "componente": "Juego excesivo en gomas porta sprocket.",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 10000,
+        "intervalo_meses": 8
+      },
+      {
+        "componente": "Tornillos y tuercas del carenaje delantero",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Juego libre de todos los cables y pedal de freno.",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Ajuste de enfoque de luz principal",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Verificar y confirmar todos los LED/bombillas",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Lubricaci(cid:243)n general - palanca de embrague, palanca freno delantero, palanca de encendido.",
+        "accion": "Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Presi(cid:243)n de aire de los neumÆticos",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Posici(cid:243)n de los espejos y firmeza articular",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Todos los sujetadores estan apretados",
+        "accion": "Revisar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Tuerca del eje delantero",
+        "accion": "Revisar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Tuerca del eje trasero",
+        "accion": "Revisar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Tuerca del eje de la tijera",
+        "accion": "Revisar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Posapies del conductor",
+        "accion": "Revisar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Tuercas de soporte de motor parte delantera.",
+        "accion": "Revisar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      },
+      {
+        "componente": "Tuercas de soporte de motor parte trasera",
+        "accion": "Revisar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": 4
+      }
+    ]
+  },
+  "datos_servicio": {
+    "viscosidad_aceite": {
+      "valor": "SAE 20W-50",
+      "pagina": 3
+    },
+    "holgura_cadena": {
+      "valor": "20-30 mm",
+      "pagina": 28
+    },
+    "capacidad_aceite": {
+      "valor": "1 L",
+      "pagina": 29
+    },
+    "liquido_frenos": {
+      "valor": "DOT4",
+      "pagina": 40
+    }
   }
 }

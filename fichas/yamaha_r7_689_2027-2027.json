@@ -107,5 +107,71 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2026/08/18711.pdf",
+      "sha256": "45f985637e8094ce52d2fbeedad86fbcbf7003cc4d7e081c5c4e66ce196c01ea",
+      "pagina": 104,
+      "titulo": "Manual oficial Yamaha R7"
+    },
+    "tareas": [
+      {
+        "componente": "Holgura de la válvula",
+        "accion": "Revisar y ajustar",
+        "intervalo_km": 40000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de aire",
+        "accion": "Cambiar",
+        "intervalo_km": 40000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Tubos de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 48
+      },
+      {
+        "componente": "Líquido de freno",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 24
+      },
+      {
+        "componente": "Cojinetes del eje del basculante",
+        "accion": "Lubricar",
+        "intervalo_km": 50000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cadena de transmisión",
+        "accion": "Ajustar y lubricar",
+        "intervalo_km": 1000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Sistema de refrigeración",
+        "accion": "Cambiar",
+        "intervalo_km": null,
+        "intervalo_meses": 36
+      }
+    ]
+  },
+  "datos_servicio": {
+    "capacidad_aceite": {
+      "valor": "2.3 L",
+      "pagina": 112
+    },
+    "liquido_frenos": {
+      "valor": "DOT 4",
+      "pagina": 124
+    },
+    "viscosidad_aceite": {
+      "valor": "SAE 10W-40",
+      "pagina": 145
+    }
   }
 }

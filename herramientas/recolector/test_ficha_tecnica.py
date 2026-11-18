@@ -236,6 +236,7 @@ class VersionadoAnualTest(unittest.TestCase):
             simular=True,
             escribir_snapshot=True,
             incluir_fichas=True,
+            incluir_planes=False,
             hoy="2026-11-18",
             adaptadores_registry={"yamaha": FakeYamaha},
             robots_guard=robots_guard.RobotsGuard(fetcher=lambda _: (200, "User-agent: *\nAllow: /\n")),

@@ -87,5 +87,205 @@
   "verificacion": {
     "metodo": "extraccion determinista v1",
     "fecha": "2026-11-18"
+  },
+  "plan_mantenimiento": {
+    "fuente": {
+      "url": "https://grupouma.com/colombia/wp-content/uploads/sites/2/2026/04/MU-BOXER-CT-100-ES-CBS-2026.pdf",
+      "sha256": "16b342252c7015dc54d9be30cbd802e13da42439a9c35635d7f15c7768aa0681",
+      "pagina": 31,
+      "titulo": "MU-Boxer-CT-100-ES-CBS"
+    },
+    "tareas": [
+      {
+        "componente": "Carburador / ralenti",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Aceite motor",
+        "accion": "Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro aceite (centrífug o)",
+        "accion": "Limpiar",
+        "intervalo_km": 10000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro tamiz (cedazo)",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Bujía",
+        "accion": "Cambiar",
+        "intervalo_km": 30000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Filtro de aire y O-ring tapa filtro",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Recipiente de sedimentos del grifo de combustible (filtro)",
+        "accion": "Limpiar",
+        "intervalo_km": 20000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Manguera carburador",
+        "accion": "Revisar y cambiar si es necesario",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Ajuste Válvulas",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cadena",
+        "accion": "Revisar, Limpiar, Lubricar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Respirador Motor",
+        "accion": "Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Interruptor Freno",
+        "accion": "Revisar y Limpiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Holgura Acelerador / Embrague",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Holgura pedal freno CBS",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Holgura Freno delantero CBS.",
+        "accion": "Revisar y Ajustar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Bandas de Frenos",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cunas Dirección",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Bujes Soporte Motor",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Llantas",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Bujes Tijera",
+        "accion": "Revisar y Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Aceite Suspensión delantera",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Retenes Telescópicos",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Amortiguadores Traseros",
+        "accion": "Revisar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Compresión Motor",
+        "accion": "Revisar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Rodamientos Ruedas",
+        "accion": "Revisar, Lubricar y Cambiar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Cauchos Porta Sprocket",
+        "accion": "Cambiar",
+        "intervalo_km": 15000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Ajuste Tornillos",
+        "accion": "Ajustar y Apretar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      },
+      {
+        "componente": "Lubricación Partes Móviles",
+        "accion": "Lubricar",
+        "intervalo_km": 5000,
+        "intervalo_meses": null
+      }
+    ]
+  },
+  "datos_servicio": {
+    "viscosidad_aceite": {
+      "valor": "SAE 20W-50",
+      "pagina": 3
+    },
+    "presion_llanta_trasera": {
+      "valor": "28 psi",
+      "pagina": 11
+    },
+    "presion_llanta_delantera": {
+      "valor": "25 psi",
+      "pagina": 21
+    },
+    "holgura_cadena": {
+      "valor": "20-30 mm",
+      "pagina": 22
+    },
+    "capacidad_aceite": {
+      "valor": "1 L",
+      "pagina": 23
+    }
   }
 }

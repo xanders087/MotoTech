@@ -1,0 +1,869 @@
+{
+  "marca": "Yamaha",
+  "modelo": "MT03",
+  "url": "https://www.incolmotos-yamaha.com.co/wp-content/uploads/2018/03/MT03.pdf",
+  "sha256": "ae099a8412ebd1669fc47c6f45b4a369a58f2ca69dbf09537d30be6021b1e59d",
+  "paginas_mant": [
+    [
+      20,
+      "UB5WS0S0.book Page 6 Wednesday, December 25, 2019 2:49 PM Funciones de los instrumentos y mandos El indicador muestra la marcha selecciona- SAU86890 Cuentakilómetros da. La posición de punto muerto se indica El cuentakilómetros muestra la distancia mediante “ ” y mediante la luz indicadora total recorrida por el vehículo. de punto muerto. NOTA SAU87580 El cuentakilómetros se bloquea cuando lle- Visor multifunción ga a 999999 y no se puede poner a cero. SAU88050 Cuentakilómetros parciales 3 Los cuentakilómetros parciales muestran la MPH distancia recorrida desde que se pusieron a cero por última vez. MPG mile Para poner a cero un cuentakilómetros par- cial, cambie la pantalla al cuentakilómetros 1 parcial que desee poner a cero y, a conti- nuación, pulse el botón “RESET” hasta que 1. Visor multifunción se ponga a cero. El visor multifunción está provisto de los NOTA elementos siguientes: Los cuentakilómetros parciales se ponen a (cid:122) un cuentakilómetros (ODO) cero y siguen contando cuando llegan a (cid:122) dos cuentakilómetros parciales (TRIP 9999.9. 1 y TRIP 2) (cid:122) un cuentakilómetros parcial en reser- va de gasolina (TRIP F) SAU87600 Cuentakilómetros parcial de reserva de (cid:122) un cuentakilómetros de cambio de gasolina aceite (OIL TRIP) (cid:122) un indicador de cambio de aceite Si el último segmento del indicador de ga- solina comienza a parpadear, la indicación (cid:122) indicación del consumo instantáneo cambia automáticamente a cuentakilóme- de gasolina (km/L, L/100 km o MPG) (cid:122) indicación del consumo medio de ga- tros en reserva de gasolina “TRIP F” y em- pieza a contar la distancia recorrida desde solina (AVE_ _._ km/L, AVE_ _._ L/100 ese punto. km o AVE_ _._ MPG) Pulse el botón “SELECT” para cambiar la Para poner a cero el cuentakilómetros en reserva de gasolina, pulse el botón “RE- indicación en el orden siguiente: SET” hasta que se ponga a cero. ODO → TRIP 1 → TRIP 2 → TRIP F → NOTA km/L, L/100 km o MPG → AVE_ _._ km/L, Si no pone a cero el cuentakilómetros par- AVE_ _._ L/100 km o AVE_ _._ MPG → OIL cial de reserva de gasolina de forma ma- TRIP → ODO nual, se pondrá a cero automáticamente y NOTA desaparecerá de la pantalla después de re- El cuentakilómetros en reserva de gasolina postar y recorrer 5 km (3 mi). solo se muestra cuando hay poca gasolina. 3-6 ",
+      []
+    ],
+    [
+      47,
+      "UB5WS0S0.book Page 3 Wednesday, December 25, 2019 2:49 PM Mantenimiento y ajustes periódicos SAU48481 NOTA (cid:122) A partir de los 31000 km (19000 mi) o 36 meses, repetir los intervalos de mantenimien- to comenzando por el de los 11000 km (7000 mi) o 12 meses. (cid:122) Los conceptos marcados con un asterisco requieren herramientas especiales, datos y conocimientos técnicos; confíe el servicio a un concesionario Yamaha. SAU69101 Cuadro de mantenimiento periódico del sistema de control de emi- siones OPERACIÓN INICIAL INDICACIONES DEL CUENTAKILÓMETROS X 1000 km 1 6 11 16 21 26 N.º ELEMENTO X 1000 mi 0.6 4 7 10 13 16 mes 1 6 12 18 24 30 •Comprobar si los tubos de ga- Línea de combusti- solina están agrietados o daña- 1 * √ √ √ √ √ 6 ble dos. •Cambiar si es necesario. •Comprobar estado. •Ajustar la distancia entre elec- trodos y limpiar. Ca Ca 2 Bujías •Cambiar a los 11000 km (7000 √ mb √ mb √ mi) o 12 meses y, posterior- iar. iar. mente, cada 10000 km (6000 mi) o 12 meses. •Comprobar y ajustar la holgura Holgura de la válvu- 3 * de válvulas cuando el motor Cada 21000 km (13000 mi) la esté frío. •Comprobar si el tubo respira- Respiradero del 4 * dero está agrietado o dañado. √ √ √ √ √ cárter •Cambiar si es necesario. Inyección de gaso- 5 * •Ajuste de la sincronización. √ √ √ √ √ lina •Compruebe si hay fugas. •Apretar si es necesario. 6 * Sistema de escape √ √ √ √ √ •En caso de que sea necesario, cambie la/s junta/s. •Comprobar si la válvula de cor- Sistema de induc- te de aire, la válvula de láminas 7 * √ √ ción de aire y el tubo están dañados. •Cambiar las piezas dañadas. 6-3 N.º ELEMENTO OPERACIÓN\nX 1000 km\nX 1000 mi\nmes INICIAL INDICACIONES DEL CUENTAKILÓMETROS 1 6 11 16 21 26 0.6 4 7 10 13 16 1 6 12 18 24 30 1 * Línea de combusti-\nble •Comprobar si los tubos de ga-\nsolina están agrietados o daña-\ndos.\n•Cambiar si es necesario. √ √ √ √ √ 2 Bujías •Comprobar estado.\n•Ajustar la distancia entre elec-\ntrodos y limpiar.\n•Cambiar a los 11000 km (7000\nmi) o 12 meses y, posterior-\nmente, cada 10000 km (6000\nmi) o 12 meses. √ Ca\nmb\niar. √ Ca\nmb\niar. √ 3 * Holgura de la válvu-\nla •Comprobar y ajustar la holgura\nde válvulas cuando el motor\nesté frío. Cada 21000 km (13000 mi) 4 * Respiradero del\ncárter •Comprobar si el tubo respira-\ndero está agrietado o dañado.\n•Cambiar si es necesario. √ √ √ √ √ 5 * Inyección de gaso-\nlina •Ajuste de la sincronización. √ √ √ √ √ 6 * Sistema de escape •Compruebe si hay fugas.\n•Apretar si es necesario.\n•En caso de que sea necesario,\ncambie la/s junta/s. √ √ √ √ √ 7 * Sistema de induc-\nción de aire •Comprobar si la válvula de cor-\nte de aire, la válvula de láminas\ny el tubo están dañados.\n•Cambiar las piezas dañadas. √ √",
+      [
+        [
+          [
+            "N.º",
+            null,
+            "ELEMENTO",
+            "OPERACIÓN\nX 1000 km\nX 1000 mi\nmes",
+            "INICIAL",
+            "INDICACIONES DEL CUENTAKILÓMETROS",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "1",
+            "6",
+            "11",
+            "16",
+            "21",
+            "26"
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "0.6",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "1",
+            "6",
+            "12",
+            "18",
+            "24",
+            "30"
+          ],
+          [
+            "1",
+            "*",
+            "Línea de combusti-\nble",
+            "•Comprobar si los tubos de ga-\nsolina están agrietados o daña-\ndos.\n•Cambiar si es necesario.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "2",
+            "",
+            "Bujías",
+            "•Comprobar estado.\n•Ajustar la distancia entre elec-\ntrodos y limpiar.\n•Cambiar a los 11000 km (7000\nmi) o 12 meses y, posterior-\nmente, cada 10000 km (6000\nmi) o 12 meses.",
+            "",
+            "√",
+            "Ca\nmb\niar.",
+            "√",
+            "Ca\nmb\niar.",
+            "√"
+          ],
+          [
+            "3",
+            "*",
+            "Holgura de la válvu-\nla",
+            "•Comprobar y ajustar la holgura\nde válvulas cuando el motor\nesté frío.",
+            "Cada 21000 km (13000 mi)",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "4",
+            "*",
+            "Respiradero del\ncárter",
+            "•Comprobar si el tubo respira-\ndero está agrietado o dañado.\n•Cambiar si es necesario.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "5",
+            "*",
+            "Inyección de gaso-\nlina",
+            "•Ajuste de la sincronización.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "6",
+            "*",
+            "Sistema de escape",
+            "•Compruebe si hay fugas.\n•Apretar si es necesario.\n•En caso de que sea necesario,\ncambie la/s junta/s.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "7",
+            "*",
+            "Sistema de induc-\nción de aire",
+            "•Comprobar si la válvula de cor-\nte de aire, la válvula de láminas\ny el tubo están dañados.\n•Cambiar las piezas dañadas.",
+            "",
+            "",
+            "√",
+            "",
+            "√",
+            ""
+          ]
+        ]
+      ]
+    ],
+    [
+      48,
+      "UB5WS0S0.book Page 4 Wednesday, December 25, 2019 2:49 PM Mantenimiento y ajustes periódicos SAU69152 Cuadro general de mantenimiento y engrase OPERACIÓN INICIA INDICACIONES DEL CUENTAKILÓMETROS X 1000 km 1 6 11 16 21 26 N.º ELEMENTO X 1000 mi 0.6 4 7 10 13 16 mes 1 6 12 18 24 30 •Efectuar una comprobación di- Comprobación del námica con la herramienta de 1 * sistema de diag- diagnóstico Yamaha. √ √ √ √ √ √ nóstico •Comprobar los códigos de error. 2 Filtro de aire •Cambiar. Cada 15000 km (9000 mi) Tubo de drenaje del 3 •Limpiar. √ √ √ √ √ √ filtro de aire •Comprobar funcionamiento. 4 * Embrague √ √ √ √ √ √ •Ajustar o cambiar el cable. •Comprobar funcionamiento, ni- vel de líquido y fugas. 5 * Freno delantero √ √ √ √ √ √ 6 •Cambiar las pastillas de freno si es necesario. •Comprobar funcionamiento, ni- vel de líquido y fugas. 6 * Freno trasero √ √ √ √ √ √ •Cambiar las pastillas de freno si es necesario. •Comprobar si está agrietado o dañado. √ √ √ √ √ •Comprobar si la posición y la fi- 7 * Tubo de freno jación son correctas. •Cambiar. Cada 4 años 8 * Líquido de freno •Cambiar. Cada 2 años •Comprobar si están descentra- 9 * Ruedas das o dañadas. √ √ √ √ √ •Cambiar si es necesario. •Comprobar la profundidad del dibujo y si está dañado. 10 * Neumáticos •Cambiar si es necesario. √ √ √ √ √ •Comprobar la presión. •Corregir si es necesario. •Comprobar suavidad de fun- 11 * Cojinetes de rueda cionamiento de los cojinetes. √ √ √ √ √ •Cambiar si es necesario. •Comprobar que los conjuntos √ de cojinetes no estén flojos. Cojinetes del eje 12 * del basculante •Recubrir moderadamente con √ grasa a base de jabón de litio. 6-4 N.º ELEMENTO OPERACIÓN\nX 1000 km\nX 1000 mi\nmes INICIA INDICACIONES DEL CUENTAKILÓMETROS I NICIA 1 6 11 16 21 26 0.6 4 7 10 13 16 1 6 12 18 24 30 1 * Comprobación del\nsistema de diag-\nnóstico •Efectuar una comprobación di-\nnámica con la herramienta de\ndiagnóstico Yamaha.\n•Comprobar los códigos de\nerror. √ √ √ √ √ √ 2 Filtro de aire •Cambiar. Cada 15000 km (9000 mi) 3 Tubo de drenaje del\nfiltro de aire •Limpiar. √ √ √ √ √ √ 4 * Embrague •Comprobar funcionamiento.\n•Ajustar o cambiar el cable. √ √ √ √ √ √ 5 * Freno delantero •Comprobar funcionamiento, ni-\nvel de líquido y fugas.\n•Cambiar las pastillas de freno si\nes necesario. √ √ √ √ √ √ 6 * Freno trasero •Comprobar funcionamiento, ni-\nvel de líquido y fugas.\n•Cambiar las pastillas de freno si\nes necesario. √ √ √ √ √ √ 7 * Tubo de freno •Comprobar si está agrietado o\ndañado.\n•Comprobar si la posición y la fi-\njación son correctas. √ √ √ √ √ •Cambiar. Cada 4 años 8 * Líquido de freno •Cambiar. Cada 2 años 9 * Ruedas •Comprobar si están descentra-\ndas o dañadas.\n•Cambiar si es necesario. √ √ √ √ √ 10 * Neumáticos •Comprobar la profundidad del\ndibujo y si está dañado.\n•Cambiar si es necesario.\n•Comprobar la presión.\n•Corregir si es necesario. √ √ √ √ √ 11 * Cojinetes de rueda •Comprobar suavidad de fun-\ncionamiento de los cojinetes.\n•Cambiar si es necesario. √ √ √ √ √ 12 * Cojinetes del eje\ndel basculante •Comprobar que los conjuntos\nde cojinetes no estén flojos. √ •Recubrir moderadamente con\ngrasa a base de jabón de litio. √",
+      [
+        [
+          [
+            "N.º",
+            null,
+            "ELEMENTO",
+            "OPERACIÓN\nX 1000 km\nX 1000 mi\nmes",
+            "INICIA",
+            null,
+            null,
+            "INDICACIONES DEL CUENTAKILÓMETROS",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            null,
+            "I",
+            "NICIA",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "1",
+            null,
+            null,
+            "6",
+            "11",
+            "16",
+            "21",
+            "26"
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "0.6",
+            null,
+            null,
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "1",
+            null,
+            null,
+            "6",
+            "12",
+            "18",
+            "24",
+            "30"
+          ],
+          [
+            "1",
+            "*",
+            "Comprobación del\nsistema de diag-\nnóstico",
+            "•Efectuar una comprobación di-\nnámica con la herramienta de\ndiagnóstico Yamaha.\n•Comprobar los códigos de\nerror.",
+            "√",
+            null,
+            null,
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "2",
+            "",
+            "Filtro de aire",
+            "•Cambiar.",
+            "Cada 15000 km (9000 mi)",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "3",
+            "",
+            "Tubo de drenaje del\nfiltro de aire",
+            "•Limpiar.",
+            "√",
+            null,
+            null,
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "4",
+            "*",
+            "Embrague",
+            "•Comprobar funcionamiento.\n•Ajustar o cambiar el cable.",
+            "√",
+            null,
+            null,
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "5",
+            "*",
+            "Freno delantero",
+            "•Comprobar funcionamiento, ni-\nvel de líquido y fugas.\n•Cambiar las pastillas de freno si\nes necesario.",
+            "√",
+            null,
+            null,
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "6",
+            "*",
+            "Freno trasero",
+            "•Comprobar funcionamiento, ni-\nvel de líquido y fugas.\n•Cambiar las pastillas de freno si\nes necesario.",
+            "√",
+            null,
+            null,
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "7",
+            "*",
+            "Tubo de freno",
+            "•Comprobar si está agrietado o\ndañado.\n•Comprobar si la posición y la fi-\njación son correctas.",
+            "",
+            null,
+            null,
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            null,
+            null,
+            null,
+            "•Cambiar.",
+            "Cada 4 años",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "8",
+            "*",
+            "Líquido de freno",
+            "•Cambiar.",
+            "Cada 2 años",
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "9",
+            "*",
+            "Ruedas",
+            "•Comprobar si están descentra-\ndas o dañadas.\n•Cambiar si es necesario.",
+            "",
+            null,
+            null,
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "10",
+            "*",
+            "Neumáticos",
+            "•Comprobar la profundidad del\ndibujo y si está dañado.\n•Cambiar si es necesario.\n•Comprobar la presión.\n•Corregir si es necesario.",
+            "",
+            null,
+            null,
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "11",
+            "*",
+            "Cojinetes de rueda",
+            "•Comprobar suavidad de fun-\ncionamiento de los cojinetes.\n•Cambiar si es necesario.",
+            "",
+            null,
+            null,
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "12",
+            "*",
+            "Cojinetes del eje\ndel basculante",
+            "•Comprobar que los conjuntos\nde cojinetes no estén flojos.",
+            "",
+            null,
+            null,
+            "",
+            "√",
+            "",
+            "",
+            ""
+          ],
+          [
+            null,
+            null,
+            null,
+            "•Recubrir moderadamente con\ngrasa a base de jabón de litio.",
+            "",
+            null,
+            null,
+            "",
+            "",
+            "",
+            "√",
+            ""
+          ]
+        ]
+      ]
+    ],
+    [
+      49,
+      "UB5WS0S0.book Page 5 Wednesday, December 25, 2019 2:49 PM Mantenimiento y ajustes periódicos OPERACIÓN INICIA INDICACIONES DEL CUENTAKILÓMETROS X 1000 km 1 6 11 16 21 26 N.º ELEMENTO X 1000 mi 0.6 4 7 10 13 16 mes 1 6 12 18 24 30 •Compruebe la holgura, la ali- neación y el estado de la cade- Cada 800 km (500 mi) y des- Cadena de transmi- na. pués de lavar la motocicleta, 13 sión •Ajuste y lubrique la cadena con utilizarla con lluvia o en lugares un lubricante especial para ca- húmedos denas con juntas tóricas. •Comprobar que los conjuntos En Cojinetes de direc- de cojinetes no estén flojos. gra 14 * √ √ √ √ √ ción •Recubrir moderadamente con sar grasa a base de jabón de litio. . •Comprobar todos los herrajes y Fijaciones del bas- 15 * fijaciones del chasis. √ √ √ √ √ tidor •Corregir si es necesario. Eje pivote de la ma- •Aplicar ligeramente grasa de si- 16 √ √ √ √ √ neta de freno licona. 6 Eje pivote del pe- •Aplicar una ligera capa de gra- 17 √ √ √ √ √ dal de freno sa de jabón de litio. Eje pivote de la ma- •Aplicar una ligera capa de gra- 18 √ √ √ √ √ neta de embrague sa de jabón de litio. Eje pivote del pe- •Aplicar una ligera capa de gra- 19 √ √ √ √ √ dal de cambio sa de jabón de litio. •Comprobar funcionamiento. Eje del caballete la- 20 •Aplicar una ligera capa de gra- √ √ √ √ √ teral sa de jabón de litio. •Compruebe el funcionamiento Interruptor del ca- 21 * y cámbielo según sea necesa- √ √ √ √ √ √ ballete lateral rio. •Comprobar funcionamiento y si 22 * Horquilla delantera existen fugas de aceite. √ √ √ √ √ •Cambiar si es necesario. •Comprobar funcionamiento y si Conjunto amorti- 23 * existen fugas de aceite. √ √ √ √ √ guador •Cambiar si es necesario. Cuando parpadea el indi- •Cambiar. (Véanse las páginas √ cador de cambio de acei- 3-4 y 6-8). te 24 Aceite de motor •Comprobar nivel de aceite y si √ √ √ √ √ √ existen fugas. Cartucho del filtro 25 •Cambiar. √ √ √ de aceite del motor 6-5 N.º ELEMENTO OPERACIÓN\nX 1000 km\nX 1000 mi\nmes INICIA INDICACIONES DEL CUENTAKILÓMETROS 1 6 11 16 21 26 0.6 4 7 10 13 16 1 6 12 18 24 30 13 Cadena de transmi-\nsión •Compruebe la holgura, la ali-\nneación y el estado de la cade-\nna.\n•Ajuste y lubrique la cadena con\nun lubricante especial para ca-\ndenas con juntas tóricas. Cada 800 km (500 mi) y des-\npués de lavar la motocicleta,\nutilizarla con lluvia o en lugares\nhúmedos 14 * Cojinetes de direc-\nción •Comprobar que los conjuntos\nde cojinetes no estén flojos.\n•Recubrir moderadamente con\ngrasa a base de jabón de litio. √ √ √ √ En\ngra\nsar\n. √ 15 * Fijaciones del bas-\ntidor •Comprobar todos los herrajes y\nfijaciones del chasis.\n•Corregir si es necesario. √ √ √ √ √ 16 Eje pivote de la ma-\nneta de freno •Aplicar ligeramente grasa de si-\nlicona. √ √ √ √ √ 17 Eje pivote del pe-\ndal de freno •Aplicar una ligera capa de gra-\nsa de jabón de litio. √ √ √ √ √ 18 Eje pivote de la ma-\nneta de embrague •Aplicar una ligera capa de gra-\nsa de jabón de litio. √ √ √ √ √ 19 Eje pivote del pe-\ndal de cambio •Aplicar una ligera capa de gra-\nsa de jabón de litio. √ √ √ √ √ 20 Eje del caballete la-\nteral •Comprobar funcionamiento.\n•Aplicar una ligera capa de gra-\nsa de jabón de litio. √ √ √ √ √ 21 * Interruptor del ca-\nballete lateral •Compruebe el funcionamiento\ny cámbielo según sea necesa-\nrio. √ √ √ √ √ √ 22 * Horquilla delantera •Comprobar funcionamiento y si\nexisten fugas de aceite.\n•Cambiar si es necesario. √ √ √ √ √ 23 * Conjunto amorti-\nguador •Comprobar funcionamiento y si\nexisten fugas de aceite.\n•Cambiar si es necesario. √ √ √ √ √ 24 Aceite de motor •Cambiar. (Véanse las páginas\n3-4 y 6-8). √ Cuando parpadea el indi-\ncador de cambio de acei-\nte •Comprobar nivel de aceite y si\nexisten fugas. √ √ √ √ √ √ 25 Cartucho del filtro\nde aceite del motor •Cambiar. √ √ √ I NICIA",
+      [
+        [
+          [
+            "N.º",
+            null,
+            "ELEMENTO",
+            "OPERACIÓN\nX 1000 km\nX 1000 mi\nmes",
+            "INICIA",
+            "INDICACIONES DEL CUENTAKILÓMETROS",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "1",
+            "6",
+            "11",
+            "16",
+            "21",
+            "26"
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "0.6",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "1",
+            "6",
+            "12",
+            "18",
+            "24",
+            "30"
+          ],
+          [
+            "13",
+            "",
+            "Cadena de transmi-\nsión",
+            "•Compruebe la holgura, la ali-\nneación y el estado de la cade-\nna.\n•Ajuste y lubrique la cadena con\nun lubricante especial para ca-\ndenas con juntas tóricas.",
+            "Cada 800 km (500 mi) y des-\npués de lavar la motocicleta,\nutilizarla con lluvia o en lugares\nhúmedos",
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            "14",
+            "*",
+            "Cojinetes de direc-\nción",
+            "•Comprobar que los conjuntos\nde cojinetes no estén flojos.\n•Recubrir moderadamente con\ngrasa a base de jabón de litio.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "En\ngra\nsar\n.",
+            "√"
+          ],
+          [
+            "15",
+            "*",
+            "Fijaciones del bas-\ntidor",
+            "•Comprobar todos los herrajes y\nfijaciones del chasis.\n•Corregir si es necesario.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "16",
+            "",
+            "Eje pivote de la ma-\nneta de freno",
+            "•Aplicar ligeramente grasa de si-\nlicona.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "17",
+            "",
+            "Eje pivote del pe-\ndal de freno",
+            "•Aplicar una ligera capa de gra-\nsa de jabón de litio.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "18",
+            "",
+            "Eje pivote de la ma-\nneta de embrague",
+            "•Aplicar una ligera capa de gra-\nsa de jabón de litio.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "19",
+            "",
+            "Eje pivote del pe-\ndal de cambio",
+            "•Aplicar una ligera capa de gra-\nsa de jabón de litio.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "20",
+            "",
+            "Eje del caballete la-\nteral",
+            "•Comprobar funcionamiento.\n•Aplicar una ligera capa de gra-\nsa de jabón de litio.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "21",
+            "*",
+            "Interruptor del ca-\nballete lateral",
+            "•Compruebe el funcionamiento\ny cámbielo según sea necesa-\nrio.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "22",
+            "*",
+            "Horquilla delantera",
+            "•Comprobar funcionamiento y si\nexisten fugas de aceite.\n•Cambiar si es necesario.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "23",
+            "*",
+            "Conjunto amorti-\nguador",
+            "•Comprobar funcionamiento y si\nexisten fugas de aceite.\n•Cambiar si es necesario.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "24",
+            "",
+            "Aceite de motor",
+            "•Cambiar. (Véanse las páginas\n3-4 y 6-8).",
+            "√",
+            "Cuando parpadea el indi-\ncador de cambio de acei-\nte",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            "•Comprobar nivel de aceite y si\nexisten fugas.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "25",
+            "",
+            "Cartucho del filtro\nde aceite del motor",
+            "•Cambiar.",
+            "√",
+            "",
+            "√",
+            "",
+            "√",
+            ""
+          ]
+        ],
+        [
+          [
+            "I",
+            "NICIA"
+          ]
+        ]
+      ]
+    ],
+    [
+      50,
+      "UB5WS0S0.book Page 6 Wednesday, December 25, 2019 2:49 PM Mantenimiento y ajustes periódicos OPERACIÓN INICIA INDICACIONES DEL CUENTAKILÓMETROS X 1000 km 1 6 11 16 21 26 N.º ELEMENTO X 1000 mi 0.6 4 7 10 13 16 mes 1 6 12 18 24 30 •Comprobar si los tubos están agrietados o dañados. √ √ √ √ √ Sistema de refrige- 26 * •Cambiar si es necesario. ración •Cambiar refrigerante. √ Interruptores de 27 * freno delantero y •Comprobar funcionamiento. √ √ √ √ √ √ trasero •Aplique lubricante para cables de Yamaha o cualquier otro lu- 28 * Cables de mando √ √ √ √ √ √ bricante adecuado de forma exhaustiva. •Comprobar funcionamiento. •Compruebe el juego libre del Puño del acelera- puño del acelerador y ajústelo 29 * √ √ √ √ √ 6 dor si es necesario. •Lubrique la caja del cable y del puño. Luces, señales e in- •Comprobar funcionamiento. 30 * √ √ √ √ √ √ terruptores •Ajustar la luz del faro. SAU17653 NOTA (cid:122) Filtro de aire • Este modelo utiliza un filtro desechable de papel revestido de aceite. El filtro no puede limpiarse con aire comprimido, pues resultaría dañado. • Cambie el filtro de aire con más frecuencia si suele conducir en condiciones de llu- via o polvo. (cid:122) Mantenimiento del freno hidráulico • Compruebe periódicamente los niveles de líquido de frenos. Añada líquido según sea necesario. • Cada dos años cambie los componentes internos de las bombas de freno y de las pinzas y cambie el líquido de freno. • Cambie los tubos de freno cada cuatro años, o antes si están agrietados o daña- dos. 6-6 N.º ELEMENTO OPERACIÓN\nX 1000 km\nX 1000 mi\nmes INICIA INDICACIONES DEL CUENTAKILÓMETROS 1 6 11 16 21 26 0.6 4 7 10 13 16 1 6 12 18 24 30 26 * Sistema de refrige-\nración •Comprobar si los tubos están\nagrietados o dañados.\n•Cambiar si es necesario. √ √ √ √ √ •Cambiar refrigerante. √ 27 * Interruptores de\nfreno delantero y\ntrasero •Comprobar funcionamiento. √ √ √ √ √ √ 28 * Cables de mando •Aplique lubricante para cables\nde Yamaha o cualquier otro lu-\nbricante adecuado de forma\nexhaustiva. √ √ √ √ √ √ 29 * Puño del acelera-\ndor •Comprobar funcionamiento.\n•Compruebe el juego libre del\npuño del acelerador y ajústelo\nsi es necesario.\n•Lubrique la caja del cable y del\npuño. √ √ √ √ √ 30 * Luces, señales e in-\nterruptores •Comprobar funcionamiento.\n•Ajustar la luz del faro. √ √ √ √ √ √ I NICIA",
+      [
+        [
+          [
+            "N.º",
+            null,
+            "ELEMENTO",
+            "OPERACIÓN\nX 1000 km\nX 1000 mi\nmes",
+            "INICIA",
+            "INDICACIONES DEL CUENTAKILÓMETROS",
+            null,
+            null,
+            null,
+            null
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "1",
+            "6",
+            "11",
+            "16",
+            "21",
+            "26"
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "0.6",
+            "4",
+            "7",
+            "10",
+            "13",
+            "16"
+          ],
+          [
+            null,
+            null,
+            null,
+            null,
+            "1",
+            "6",
+            "12",
+            "18",
+            "24",
+            "30"
+          ],
+          [
+            "26",
+            "*",
+            "Sistema de refrige-\nración",
+            "•Comprobar si los tubos están\nagrietados o dañados.\n•Cambiar si es necesario.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            null,
+            null,
+            null,
+            "•Cambiar refrigerante.",
+            "",
+            "",
+            "",
+            "",
+            "√",
+            ""
+          ],
+          [
+            "27",
+            "*",
+            "Interruptores de\nfreno delantero y\ntrasero",
+            "•Comprobar funcionamiento.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "28",
+            "*",
+            "Cables de mando",
+            "•Aplique lubricante para cables\nde Yamaha o cualquier otro lu-\nbricante adecuado de forma\nexhaustiva.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "29",
+            "*",
+            "Puño del acelera-\ndor",
+            "•Comprobar funcionamiento.\n•Compruebe el juego libre del\npuño del acelerador y ajústelo\nsi es necesario.\n•Lubrique la caja del cable y del\npuño.",
+            "",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ],
+          [
+            "30",
+            "*",
+            "Luces, señales e in-\nterruptores",
+            "•Comprobar funcionamiento.\n•Ajustar la luz del faro.",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√",
+            "√"
+          ]
+        ],
+        [
+          [
+            "I",
+            "NICIA"
+          ]
+        ]
+      ]
+    ]
+  ],
+  "paginas_espec": [
+    [
+      4,
+      "Información importante relativa al manual\nSAU63350\nEn este manual, la información particularmente importante se distingue mediante las si-\nguientes anotaciones:\n*El producto y las especificaciones pueden cambiar sin previo aviso.\nSAUN0430\nEste es el símbolo de aviso de seguridad. Se utili-\nza para avisarle de un posible peligro de daños\npersonales. Obedezca todos los mensajes de se-\nguridad que siguen a este símbolo para evitar po-\nsibles daños personales o un accidente mortal.\nADVERTENCIA indica una situación peligrosa\nque, de no evitarse, puede ocasionar un acciden-\nte mortal o daños personales graves.\nATENCIÓN indica precauciones especiales que se\ndeben adoptar para evitar que el vehículo u otros\nbienes resulten dañados.\nNOTA proporciona información clave para facilitar o\nclarificar los procedimientos.\nMTN320-A\nMANUAL DEL PROPIETARIO\n©2021 PT Yamaha Indonesia Motor Manu-\nfacturing\n1ª edición, marzo 2020\nTodos los derechos reservados.\nToda reimpresión o uso no autorizado\nsin el consentimiento escrito de\nPT Yamaha Indonesia Motor Manufacturing\nquedan expresamente prohibidos.\nImpreso en Indonesia.\nADVERTENCIA\nATENCIÓN\nNOTA\nUB5WS0S0.book Page 1 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      5,
+      "Tabla de contenidos\nInformación relativa\na la seguridad....................................1-1\nDescripción.......................................2-1\nVista izquierda.................................2-1\nVista derecha..................................2-2\nMandos e instrumentos..................2-3\nFunciones de los instrumentos y\nmandos..............................................3-1\nInterruptor principal/Bloqueo\nde la dirección.............................3-1\nLuces indicadoras y luces\nde aviso.......................................3-2\nIndicador multifunción.....................3-4\nInterruptores del manillar..............3-10\nManeta de embrague....................3-12\nPedal de cambio...........................3-12\nManeta de freno............................3-13\nPedal de freno...............................3-13\nABS...............................................3-14\nTapón del depósito de gasolina....3-15\nGasolina........................................3-16\nTubo respiradero y tubo de rebose\ndel depósito de gasolina............3-17\nCatalizador....................................3-18\nAsientos........................................3-18\nPortacascos..................................3-20\nCompartimento portaobjetos........3-20\nAjuste del conjunto\namortiguador.............................3-21\nFijaciones de la correa\ndel equipaje...............................3-22\nCaballete lateral............................3-22\nSistema de corte del circuito\nde encendido.............................3-23\nPara su seguridad –\ncomprobaciones previas.................4-1\nUtilización y puntos importantes\npara la conducción...........................5-1\nRodaje del motor.............................5-1\nArranque del motor.........................5-2\nCambio de marchas........................5-3\nEstacionamiento..............................5-4\nMantenimiento y ajustes\nperiódicos.........................................6-1\nJuego de herramientas...................6-2\nCuadro de mantenimiento\nperiódico del sistema\nde control de emisiones..............6-3\nCuadro general de mantenimiento\ny engrase.....................................6-4\nComprobación de las bujías...........6-7\nAceite de motor y cartucho\ndel filtro de aceite........................6-8\nPor qué Yamalube........................6-11\nLíquido refrigerante.......................6-11\nCambio del filtro de aire y limpieza\ndel tubo de drenaje...................6-13\nComprobación del juego libre\ndel puño del acelerador.............6-14\nHolgura de las válvulas.................6-15\nNeumáticos...................................6-15\nLlantas de aleación.......................6-17\nAjuste del juego libre de la maneta\nde embrague.............................6-18\nComprobación del juego libre\nde la maneta del freno...............6-19\nInterruptores de la luz de freno ....6-19\nComprobación de las pastillas de\nfreno delantero y trasero...........6-20\nComprobación del líquido\nde freno.....................................6-21\nCambio del líquido de frenos........6-22\nJuego de la cadena\nde transmisión...........................6-22\nLimpieza y engrase de la cadena de\ntransmisión................................6-24\nComprobación y engrase\nde los cables.............................6-25\nComprobación y engrase del puño\ndel acelerador y el cable...........6-25\nComprobación y engrase de los\npedales de freno y cambio........6-26\nComprobación y engrase de las mane-\ntas de freno y embrague...........6-26\nComprobación y engrase\ndel caballete lateral...................6-27\nEngrase de los pivotes\ndel basculante...........................6-27\nUB5WS0S0.book Page 1 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      6,
+      "Tabla de contenidos\nComprobación de la horquilla\ndelantera...................................6-28\nComprobación de la dirección.....6-28\nComprobación de los cojinetes\nde las ruedas.............................6-29\nBatería..........................................6-29\nCambio de fusibles.......................6-31\nLuces del vehículo........................6-33\nCambio de la bombilla de la luz\nde la matrícula...........................6-33\nApoyo de la motocicleta...............6-34\nIdentificación de averías...............6-35\nCuadro de identificación\nde averías..................................6-36\nCuidados y almacenamiento de la\nmotocicleta.......................................7-1\nPrecaución relativa al color mate...7-1\nCuidados........................................7-1\nAlmacenamiento.............................7-4\nEspecificaciones..............................8-1\nInformación para el consumidor....9-1\nNúmeros de identificación..............9-1\nRegistro de datos del vehículo.......9-2\nÍndice alfabético.............................10-1\nUB5WS0S0.book Page 2 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      11,
+      "Información relativa a la seguridad\n1-5\n1\nNeumáticos y llantas no originales\nLos neumáticos y llantas con los que se en-\ntrega la motocicleta han sido diseñados\nconforme a las prestaciones de la misma y\npara aportar la combinación óptima de ma-\nnejabilidad, frenada y confort. Es posible\nque otros neumáticos, llantas, medidas y\ncombinaciones no resulten adecuados.\nConsulte en la página 6-15 las especifica-\nciones de los neumáticos e información so-\nbre su mantenimiento y sustitución.\nTransporte de la motocicleta\nAsegúrese de seguir las instrucciones si-\nguientes antes de transportar la motocicle-\nta en otro vehículo.\n(cid:122) Retire cualquier elemento suelto de la\nmotocicleta.\n(cid:122) Compruebe que el grifo de gasolina (si\nestá equipado) esté cerrado y no haya\nfugas de gasolina.\n(cid:122) Ponga una marcha (modelos con\ntransmisión manual).\n(cid:122) Asegure la motocicleta con sujecio-\nnes o correas adecuadas fijadas a\npiezas sólidas de la motocicleta,\ncomo el bastidor o la brida triple de la\nhorquilla superior delantera (y no, por\nejemplo, los manillares montados en\ngoma, los intermitentes o cualquier\npieza que pudiera romperse). Elija la\nubicación de las correas con deteni-\nmiento para evitar que generen fric-\nción y rayen las superficies pintadas\ndurante el transporte.\n(cid:122) Si es posible, la suspensión debería\nestar comprimida en parte mediante\nlas sujeciones, para que la motocicle-\nta no rebote excesivamente durante el\ntransporte.\nUB5WS0S0.book Page 5 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      39,
+      "Para su seguridad – comprobaciones previas\n4-1\n4\nSAU63441\nRevise el vehículo cada vez que lo utilice para estar seguro de que se encuentra en condi-\nciones de funcionamiento seguras. Observe siempre los procedimientos y programas de\nrevisión y mantenimiento que se describen en el manual.\nADVERTENCIA\nSWA11152\nSi no revisa o mantiene el vehículo correctamente aumentarán las posibilidades de\naccidente o daños materiales. No utilice el vehículo si observa cualquier anomalía. Si\nuna anomalía no puede resolverse mediante los procedimientos que se facilitan en\neste manual, haga revisar el vehículo en un concesionario Yamaha.\nAntes de utilizar este vehículo, compruebe los puntos siguientes:\nELEMENTO COMPROBACIONES PÁGINA\nGasolina\n•Comprobar nivel en el depósito de gasolina.\n•Poner gasolina si es necesario.\n•Comprobar si existen fugas en la línea de combustible.\n•Verificar que el tubo respiradero y el tubo de rebose del\ndepósito de gasolina no estén obstruidos, agrietados o\ndañados y comprobar las conexiones de los tubos.\n3-16,\n3-17\nAceite de motor\n•Comprobar nivel de aceite en el motor.\n•Si es necesario, añadir aceite del tipo recomendado\nhasta el nivel especificado.\n•Comprobar si existen fugas.\n6-8\nLíquido refrigerante\n•Comprobar nivel en el depósito de líquido refrigerante.\n•Si es necesario, añadir líquido refrigerante del tipo reco-\nmendado hasta el nivel especificado.\n•Comprobar si existen fugas en el sistema de refrigera-\nción.\n6-11\nFreno delantero\n•Comprobar funcionamiento.\n•Si el funcionamiento es blando o esponjoso, solicitar a\nun concesionario Yamaha que purgue el sistema hi-\ndráulico.\n•Compruebe el desgaste de las pastillas de freno.\n•Cambiar si es necesario.\n•Comprobar nivel de líquido en el depósito.\n•Si es necesario, añada el líquido de freno recomendado\nhasta el nivel que se especifica.\n•Comprobar si existen fugas en el sistema hidráulico.\n6-20,\n6-21\nFreno trasero\n•Comprobar funcionamiento.\n•Si el funcionamiento es blando o esponjoso, solicitar a\nun concesionario Yamaha que purgue el sistema hi-\ndráulico.\n•Compruebe el desgaste de las pastillas de freno.\n•Cambiar si es necesario.\n•Comprobar nivel de líquido en el depósito.\n•Si es necesario, añada el líquido de freno recomendado\nhasta el nivel que se especifica.\n•Comprobar si existen fugas en el sistema hidráulico.\n6-20,\n6-21\nUB5WS0S0.book Page 1 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      40,
+      "Para su seguridad – comprobaciones previas\n4-2\n4\nEmbrague\n•Comprobar funcionamiento.\n•Lubricar el cable si es necesario.\n•Comprobar el juego de la maneta.\n•Ajustar si es necesario.\n6-18\nPuño del acelerador\n•Verificar si el funcionamiento es suave.\n•Compruebe el juego libre del puño del acelerador.\n•Si es necesario, solicite a un concesionario Yamaha que\najuste el juego libre del puño del acelerador y lubrique el\ncable y la caja del puño.\n6-14,\n6-25\nCables de mando\n•Verificar si el funcionamiento es suave.\n•Lubricar si es necesario.\n6-25\nCadena de transmisión\n•Comprobar el juego de la cadena.\n•Ajustar si es necesario.\n•Comprobar estado de la cadena.\n•Lubricar si es necesario.\n6-22,\n6-24\nRuedas y neumáticos\n•Comprobar si están dañados.\n•Comprobar estado de los neumáticos y profundidad del\ndibujo.\n•Comprobar la presión.\n•Corregir si es necesario.\n6-15,\n6-17\nPedales de freno y\ncambio\n•Verificar si el funcionamiento es suave.\n•Lubricar los puntos de pivote de los pedales si es nece-\nsario.\n6-26\nManetas de freno y\nembrague\n•Verificar si el funcionamiento es suave.\n•Lubricar los puntos de pivote de las manetas si es ne-\ncesario.\n6-26\nCaballete lateral\n•Verificar si el funcionamiento es suave.\n•Lubricar el pivote si es necesario.\n6-27\nFijaciones del bastidor\n•Comprobar que todas las tuercas, pernos y tornillos es-\ntén correctamente apretados.\n•Apretar si es necesario.\n—\nInstrumentos, luces,\nseñales e interruptores\n•Comprobar funcionamiento.\n•Corregir si es necesario.\n—\nInterruptor del caballe-\nte lateral\n•Comprobar funcionamiento del sistema de corte del cir-\ncuito de encendido.\n•Si el sistema no funciona correctamente, solicitar a un\nconcesionario Yamaha que revise el vehículo.\n3-22\nELEMENTO COMPROBACIONES PÁGINA\nUB5WS0S0.book Page 2 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      47,
+      "Mantenimiento y ajustes periódicos\n6-3\n6\nSAU48481\nNOTA\n(cid:122) A partir de los 31000 km (19000 mi) o 36 meses, repetir los intervalos de mantenimien-\nto comenzando por el de los 11000 km (7000 mi) o 12 meses.\n(cid:122) Los conceptos marcados con un asterisco requieren herramientas especiales, datos\ny conocimientos técnicos; confíe el servicio a un concesionario Yamaha.\nSAU69101\nCuadro de mantenimiento periódico del sistema de control de emi-\nsiones\nN.º ELEMENTO\nOPERACIÓN\n1 6 11 16 21 26\n0.6 4 7 10 13 16\n1 6 12 18 24 30\n1 *\nLínea de combusti-\nble\n•Comprobar si los tubos de ga-\nsolina están agrietados o daña-\ndos.\n•Cambiar si es necesario.\n√ √ √ √ √\n2 Bujías\n•Comprobar estado.\n•Ajustar la distancia entre elec-\ntrodos y limpiar.\n•Cambiar a los 11000 km (7000\nmi) o 12 meses y, posterior-\nmente, cada 10000 km (6000\nmi) o 12 meses.\n√\nCa\nmb\niar.\n√\nCa\nmb\niar.\n√\n3 *\nHolgura de la válvu-\nla\n•Comprobar y ajustar la holgura\nde válvulas cuando el motor\nesté frío.\nCada 21000 km (13000 mi)\n4 *\nRespiradero del\ncárter\n•Comprobar si el tubo respira-\ndero está agrietado o dañado.\n•Cambiar si es necesario.\n√ √ √ √ √\n5 *\nInyección de gaso-\nlina\n•Ajuste de la sincronización. √ √ √ √ √\n6 * Sistema de escape\n•Compruebe si hay fugas.\n•Apretar si es necesario.\n•En caso de que sea necesario,\ncambie la/s junta/s.\n√ √ √ √ √\n7 *\nSistema de induc-\nción de aire\n•Comprobar si la válvula de cor-\nte de aire, la válvula de láminas\ny el tubo están dañados.\n•Cambiar las piezas dañadas.\n√ √\nX 1000 km\nX 1000 mi\nmes\nINICIAL INDICACIONES DEL CUENTAKILÓMETROS\nUB5WS0S0.book Page 3 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      48,
+      "Mantenimiento y ajustes periódicos\n6-4\n6\nSAU69152\nCuadro general de mantenimiento y engrase\nN.º ELEMENTO\nOPERACIÓN\n1 6 11 16 21 26\n0.6 4 7 10 13 16\n1 6 12 18 24 30\n1 *\nComprobación del\nsistema de diag-\nnóstico\n•Efectuar una comprobación di-\nnámica con la herramienta de\ndiagnóstico Yamaha.\n•Comprobar los códigos de\nerror.\n√ √ √ √ √ √\n2 Filtro de aire •Cambiar. Cada 15000 km (9000 mi)\n3\nTubo de drenaje del\nfiltro de aire\n•Limpiar. √ √ √ √ √ √\n4 * Embrague\n•Comprobar funcionamiento.\n•Ajustar o cambiar el cable.\n√ √ √ √ √ √\n5 * Freno delantero\n•Comprobar funcionamiento, ni-\nvel de líquido y fugas.\n•Cambiar las pastillas de freno si\nes necesario.\n√ √ √ √ √ √\n6 * Freno trasero\n•Comprobar funcionamiento, ni-\nvel de líquido y fugas.\n•Cambiar las pastillas de freno si\nes necesario.\n√ √ √ √ √ √\n7 * Tubo de freno\n•Comprobar si está agrietado o\ndañado.\n•Comprobar si la posición y la fi-\njación son correctas.\n√ √ √ √ √\n•Cambiar. Cada 4 años\n8 * Líquido de freno •Cambiar. Cada 2 años\n9 * Ruedas\n•Comprobar si están descentra-\ndas o dañadas.\n•Cambiar si es necesario.\n√ √ √ √ √\n10 * Neumáticos\n•Comprobar la profundidad del\ndibujo y si está dañado.\n•Cambiar si es necesario.\n•Comprobar la presión.\n•Corregir si es necesario.\n√ √ √ √ √\n11 * Cojinetes de rueda\n•Comprobar suavidad de fun-\ncionamiento de los cojinetes.\n•Cambiar si es necesario.\n√ √ √ √ √\n12 *\nCojinetes del eje\ndel basculante\n•Comprobar que los conjuntos\nde cojinetes no estén flojos.\n√\n•Recubrir moderadamente con\ngrasa a base de jabón de litio.\n√\nX 1000 km\nX 1000 mi\nmes\nINICIA INDICACIONES DEL CUENTAKILÓMETROS\nUB5WS0S0.book Page 4 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      49,
+      "Mantenimiento y ajustes periódicos\n6-5\n6\n13\nCadena de transmi-\nsión\n•Compruebe la holgura, la ali-\nneación y el estado de la cade-\nna.\n•Ajuste y lubrique la cadena con\nun lubricante especial para ca-\ndenas con juntas tóricas.\nCada 800 km (500 mi) y des-\npués de lavar la motocicleta,\nutilizarla con lluvia o en lugares\nhúmedos\n14 *\nCojinetes de direc-\nción\n•Comprobar que los conjuntos\nde cojinetes no estén flojos.\n•Recubrir moderadamente con\ngrasa a base de jabón de litio.\n√ √ √ √\nEn\ngra\nsar\n.\n√\n15 *\nFijaciones del bas-\ntidor\n•Comprobar todos los herrajes y\nfijaciones del chasis.\n•Corregir si es necesario.\n√ √ √ √ √\n16\nEje pivote de la ma-\nneta de freno\n•Aplicar ligeramente grasa de si-\nlicona.\n√ √ √ √ √\n17\nEje pivote del pe-\ndal de freno\n•Aplicar una ligera capa de gra-\nsa de jabón de litio.\n√ √ √ √ √\n18\nEje pivote de la ma-\nneta de embrague\n•Aplicar una ligera capa de gra-\nsa de jabón de litio.\n√ √ √ √ √\n19\nEje pivote del pe-\ndal de cambio\n•Aplicar una ligera capa de gra-\nsa de jabón de litio.\n√ √ √ √ √\n20\nEje del caballete la-\nteral\n•Comprobar funcionamiento.\n•Aplicar una ligera capa de gra-\nsa de jabón de litio.\n√ √ √ √ √\n21 *\nInterruptor del ca-\nballete lateral\n•Compruebe el funcionamiento\ny cámbielo según sea necesa-\nrio.\n√ √ √ √ √ √\n22 * Horquilla delantera\n•Comprobar funcionamiento y si\nexisten fugas de aceite.\n•Cambiar si es necesario.\n√ √ √ √ √\n23 *\nConjunto amorti-\nguador\n•Comprobar funcionamiento y si\nexisten fugas de aceite.\n•Cambiar si es necesario.\n√ √ √ √ √\n24 Aceite de motor\n•Cambiar. (Véanse las páginas\n3-4 y 6-8).\n√\nCuando parpadea el indi-\ncador de cambio de acei-\nte\n•Comprobar nivel de aceite y si\nexisten fugas.\n√ √ √ √ √ √\n25\nCartucho del filtro\nde aceite del motor\n•Cambiar. √ √ √\nN.º ELEMENTO\nOPERACIÓN\n1 6 11 16 21 26\n0.6 4 7 10 13 16\n1 6 12 18 24 30\nX 1000 km\nX 1000 mi\nmes\nINICIA INDICACIONES DEL CUENTAKILÓMETROS\nUB5WS0S0.book Page 5 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      50,
+      "Mantenimiento y ajustes periódicos\n6-6\n6\nSAU17653\nNOTA\n(cid:122) Filtro de aire\n• Este modelo utiliza un filtro desechable de papel revestido de aceite. El filtro no\npuede limpiarse con aire comprimido, pues resultaría dañado.\n• Cambie el filtro de aire con más frecuencia si suele conducir en condiciones de llu-\nvia o polvo.\n(cid:122) Mantenimiento del freno hidráulico\n• Compruebe periódicamente los niveles de líquido de frenos. Añada líquido según\nsea necesario.\n• Cada dos años cambie los componentes internos de las bombas de freno y de las\npinzas y cambie el líquido de freno.\n• Cambie los tubos de freno cada cuatro años, o antes si están agrietados o daña-\ndos.\n26 *\nSistema de refrige-\nración\n•Comprobar si los tubos están\nagrietados o dañados.\n•Cambiar si es necesario.\n√ √ √ √ √\n•Cambiar refrigerante. √\n27 *\nInterruptores de\nfreno delantero y\ntrasero\n•Comprobar funcionamiento. √ √ √ √ √ √\n28 * Cables de mando\n•Aplique lubricante para cables\nde Yamaha o cualquier otro lu-\nbricante adecuado de forma\nexhaustiva.\n√ √ √ √ √ √\n29 *\nPuño del acelera-\ndor\n•Comprobar funcionamiento.\n•Compruebe el juego libre del\npuño del acelerador y ajústelo\nsi es necesario.\n•Lubrique la caja del cable y del\npuño.\n√ √ √ √ √\n30 *\nLuces, señales e in-\nterruptores\n•Comprobar funcionamiento.\n•Ajustar la luz del faro.\n√ √ √ √ √ √\nN.º ELEMENTO\nOPERACIÓN\n1 6 11 16 21 26\n0.6 4 7 10 13 16\n1 6 12 18 24 30\nX 1000 km\nX 1000 mi\nmes\nINICIA INDICACIONES DEL CUENTAKILÓMETROS\nUB5WS0S0.book Page 6 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      54,
+      "Mantenimiento y ajustes periódicos\n6-10\n6\n10. Añada la cantidad especificada del\naceite de motor recomendado y se-\nguidamente coloque y apriete el tapón\nde llenado de aceite.\nNOTA\nNo olvide limpiar el aceite que se haya de-\nrramado sobre cualquier pieza una vez se\nhayan enfriado el motor y el sistema de es-\ncape.\nATENCIÓN\nSCA11621\n(cid:122) Para evitar que el embrague patine\n(puesto que el aceite del motor\ntambién lubrica el embrague), no\nmezcle ningún aditivo químico. No\nutilice aceites con la especificación\ndiésel “CD” ni aceites de calidad\nsuperior a la especificada. Además,\nno utilice aceites con la etiqueta\n“ENERGY CONSERVING II” o supe-\nrior.\n(cid:122) Asegúrese de que no penetre nin-\ngún material extraño en el cárter.\n11. Monte el carenado colocando los per-\nnos.\n12. Arranque el motor y déjelo al ralentí\ndurante unos minutos mientras com-\nprueba si existe alguna fuga de aceite.\nSi pierde aceite, pare inmediatamente\nel motor y averigüe la causa.\nNOTA\nCuando el motor ha arrancado, la luz de\naviso de la presión del aceite debe apagar-\nse.\nATENCIÓN\nSCA20860\nSi la luz de aviso de la presión del aceite\nparpadea o permanece encendida aun-\nque el nivel de aceite sea correcto, pare\ninmediatamente el motor y haga revisar\nel vehículo en un concesionario\nYamaha.\n13. Pare el motor, espere unos minutos\npara que el aceite se asiente, com-\npruebe el nivel y corríjalo según sea\nnecesario.\nAceite de motor recomendado:\nVéase la página 8-1.\nCantidad de aceite:\nCambio de aceite:\n1.80 L (1.90 US qt, 1.58Imp.qt)\nCon desmontaje del filtro de aceite:\n2.10 L (2.22 US qt, 1.85Imp.qt)\nUB5WS0S0.book Page 10 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      59,
+      "Mantenimiento y ajustes periódicos\n6-15\n6\nSAU21403\nHolgura de las válvulas\nLas válvulas son un componente importan-\nte del motor. Dado que la holgura de las\nválvulas varía con el uso, se debe compro-\nbar y ajustar a los intervalos que se especi-\nfican en el cuadro de mantenimiento\nperiódico. El desajuste de las válvulas pue-\nde ocasionar una mezcla de aire-gasolina\ninadecuada, ruido del motor y, en última\ninstancia, puede dañar el motor. Para evi-\ntarlo, haga comprobar y ajustar la holgura\nde las válvulas a intervalos regulares en su\nconcesionario Yamaha.\nNOTA\nEste servicio debe realizarse con el motor\nfrío.\nSAU82721\nNeumáticos\nLos neumáticos son el único contacto en-\ntre el vehículo y la carretera. La seguridad\nen todas las condiciones de conducción\ndepende de un área relativamente pequeña\nde contacto con la carretera. Por tanto, es\nfundamental mantener los neumáticos en\nbuen estado en todo momento y cambiar-\nlos por los neumáticos especificados en el\nmomento adecuado.\nPresión de aire de los neumáticos\nDebe comprobar la presión de aire de los\nneumáticos antes de cada utilización y, si\nes necesario, ajustarla.\nADVERTENCIA\nSWA10504\nLa utilización de este vehículo con una\npresión incorrecta de los neumáticos\npuede provocar la pérdida de control,\ncon la consecuencia de daños persona-\nles graves o un accidente mortal.\n(cid:122) La presión de los neumáticos debe\ncomprobarse y ajustarse con los\nneumáticos en frío (es decir, cuan-\ndo la temperatura de los neumáti-\ncos sea igual a la temperatura\nambiente).\n(cid:122) La presión de los neumáticos debe\najustarse en función de la veloci-\ndad, el peso total del conductor, el\npasajero, el equipaje y los acceso-\nrios homologados para este mode-\nlo.\nUB5WS0S0.book Page 15 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      65,
+      "Mantenimiento y ajustes periódicos\n6-21\n6\nSAU40262\nComprobación del líquido de fre-\nno\nAntes de utilizar el vehículo, verifique que el\nlíquido de frenos se encuentre por encima\nde la marca de nivel mínimo. Compruebe el\nnivel del líquido de frenos con respecto a la\nparte superior del nivel del depósito. Añada\nlíquido de frenos si es necesario.\nFreno delantero\nFreno trasero\nADVERTENCIA\nSWA16011\nUn mantenimiento inadecuado puede\nmermar la capacidad de frenada. Obser-\nve las precauciones siguientes:\n(cid:122) Si el líquido de frenos es insuficien-\nte, puede penetrar aire en el siste-\nma y reducirse la capacidad de\nfrenada.\n(cid:122) Limpie el tapón de llenado antes de\nextraerlo. Utilice únicamente líqui-\ndo de frenos DOT 4 procedente de\nun recipiente precintado.\n(cid:122) Utilice únicamente el líquido de fre-\nnos especificado; de lo contrario\npueden deteriorarse las juntas de\ngoma y producirse fugas.\n(cid:122) Añada el mismo tipo de líquido de\nfreno. Si se añade un líquido de fre-\nnos distinto a DOT 4 puede produ-\ncirse una reacción química\nperjudicial.\n(cid:122) Evite que penetre agua o polvo en el\ndepósito cuando añada líquido. El\nagua disminuye significativamente\nel punto de ebullición del líquido y\npuede provocar una obstrucción\npor vapor, mientras que la suciedad\npuede atascar las válvulas de la uni-\ndad hidráulica del sistema ABS.\nATENCIÓN\nSCA17641\nEl líquido de frenos puede dañar las su-\nperficies pintadas o las piezas de plásti-\nco. Elimine siempre inmediatamente el\nlíquido que se haya derramado.\nA medida que las pastillas de freno se des-\ngastan, es normal que el nivel de líquido de\nfreno disminuya de forma gradual. Un nivel\nbajo de líquido de frenos puede ser indica-\ntivo del desgaste de las pastillas o de una\nfuga en el sistema; por tanto, debe com-\nprobar si las pastillas de freno están des-\ngastadas o si hay una fuga en el sistema de\nfrenos. Si el nivel de líquido de frenos dis-\nminuye de forma repentina, solicite a un\nconcesionario Yamaha que averigüe la\ncausa antes de seguir utilizando el vehícu-\nlo.\n1. Marca de nivel mínimo\n1. Marca de nivel mínimo\nLíquido de frenos especificado:\nDOT 4\n1\n1\nUB5WS0S0.book Page 21 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      66,
+      "Mantenimiento y ajustes periódicos\n6-22\n6\nSAU22734\nCambio del líquido de frenos\nHaga cambiar el líquido de frenos cada 2\naños en un concesionario Yamaha. Ade-\nmás, se deben cambiar las juntas de las\nbombas y pinzas de freno, así como los tu-\nbos de freno, según los intervalos indica-\ndos a continuación o antes si están\ndañados o presenten fugas.\n(cid:122) Juntas de freno: cada 2 años\n(cid:122) Tubos de freno: cada 4 años\nSAU22762\nJuego de la cadena de transmi-\nsión\nDebe comprobar el juego de la cadena de\ntransmisión antes de cada utilización y\najustarlo si es preciso.\nSAU74253\nPara comprobar el juego de la cadena\nde transmisión\n1. Coloque la motocicleta sobre el caba-\nllete lateral.\nNOTA\nCuando compruebe y ajuste el juego de la\ncadena de transmisión, no debe haber nin-\ngún peso sobre la motocicleta.\n2. Ponga la transmisión en la posición de\npunto muerto.\n3. Mida el juego de la cadena de trans-\nmisión como se muestra.\n4. Si el juego de la cadena de transmi-\nsión es incorrecto, ajústelo del modo\nsiguiente. ATENCIÓN: Una holgura\nincorrecta de la cadena de transmi-\nsión sobrecargará el motor y otros\ncomponentes vitales de la motoci-\ncleta y puede provocar que la cade-\nna se salga o se rompa. Para\n1. Juego de la cadena de transmisión\nJuego de la cadena de transmisión:\n35.0–45.0 mm (1.38–1.77 in)\n1\nUB5WS0S0.book Page 22 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      67,
+      "Mantenimiento y ajustes periódicos\n6-23\n6\nevitarlo, mantenga la holgura de la\ncadena de transmisión dentro de\nlos límites especificados.\n[SCA10572]\nSAU62983\nPara ajustar el juego de la cadena de\ntransmisión\nConsulte a un concesionario Yamaha antes\nde ajustar el juego de la cadena de transmi-\nsión.\n1. Desmonte la tapa del tensor de la ca-\ndena de transmisión y después afloje\nla tuerca y la contratuerca del eje en\ncada lado del basculante.\n2. Para tensar la cadena de transmisión,\ngire la tuerca de ajuste del juego de la\ncadena de transmisión a cada lado del\nbasculante en la dirección (a). Para\naflojar la cadena de transmisión, gire\nla tuerca de ajuste a cada lado del\nbasculante en la dirección (b) y, a con-\ntinuación, empuje la rueda trasera ha-\ncia delante.\nNOTA\nCon la ayuda de las marcas de alineación a\ncada lado del basculante, verifique que\nambos tensores de cadena de transmisión\nqueden en la misma posición para la co-\nrrecta alineación de la rueda.\n3. Apriete la tuerca del eje y luego las\ncontratuercas con el par especificado.\n4. Asegúrese de que los tensores de la\ncadena de transmisión están en la\nmisma posición, el juego de la cadena\n1. Tuerca del eje\n2. Contratuerca\n3. Tapa del tensor de la cadena de transmisión\n2\n3\n1\n1. Tuerca de ajuste del juego de la cadena de\ntransmisión\n1. Marcas de alineación\n2. Tensor de la cadena de transmisión\nPares de apriete:\nTuerca del eje:\n57 N·m (5.7 kgf·m, 42 lb·ft)\nContratuerca:\n16 N·m (1.6 kgf·m, 12 lb·ft)\n1\n(a)\n(b)\n1\n2\nUB5WS0S0.book Page 23 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      83,
+      "Cuidados y almacenamiento de la motocicleta\n7-2\n7\n(cid:122) toallas, esponjas o cepillos conta-\nminados con productos de limpieza\nabrasivos o productos químicos\nfuertes como disolventes, gasolina,\ndesoxidantes, líquido de frenos o\nanticongelante, etc.\nAntes de lavar el vehículo\n1. Estacione el vehículo en un lugar no\nexpuesto a la luz directa del sol y deje\nque se enfríe. De este modo se evita-\nrán las manchas de agua.\n2. Verifique que todos los tapones, ta-\npas, acopladores y conectores eléctri-\ncos estén bien apretados.\n3. Cubra el extremo del silenciador con\nuna bolsa de plástico y una cincha de\ngoma resistente.\n4. Con una toalla mojada, humedezca\ndurante unos minutos las manchas di-\nfíciles tales como las de insectos o he-\nces de pájaros.\n5. Elimine la suciedad y las manchas de\naceite con un desengrasante de cali-\ndad y un cepillo de cerdas de plástico\no una esponja. ATENCIÓN: No utilice\ndesengrasador en zonas que deben\nestar lubricadas tales como obtura-\ndores, juntas y ejes de las ruedas.\nSiga las instrucciones del producto.\n[SCA26290]\nLavado\n1. Elimine el desengrasador y rocíe el ve-\nhículo con una manguera de jardine-\nría. Utilice únicamente la presión de\nagua suficiente para realizar el trabajo.\nEvite rociar agua directamente en el\nsilenciador, el panel de instrumentos,\nla toma de aire u otras zonas interiores\ncomo los compartimentos portaobje-\ntos debajo del asiento.\n2. Lave el vehículo con un detergente de\nbuena calidad para automóviles mez-\nclado con agua fría y una toalla o es-\nponja suave y limpia. Utilice un cepillo\nde dientes viejo o un cepillo de cerdas\nplástico para las zonas de difícil acce-\nso. ATENCIÓN: Utilice agua fría si el\nvehículo ha estado expuesto a sal.\nEl agua caliente aumenta las pro-\npiedades corrosivas de la sal.\n[SCA26301]\n3. Para vehículos equipados con para-\nbrisas: Limpie el parabrisas con una\ntoalla o esponja blanda humedecida\ncon agua y un detergente de pH neu-\ntro. Si es necesario, utilice un limpia-\ndor de parabrisas de buena calidad o\nun pulimento para motocicletas.\nATENCIÓN: No utilice nunca pro-\nductos químicos fuertes para lim-\npiar el parabrisas. Asimismo,\nalgunos limpiadores para plástico\npueden rayar el parabrisas; por tan-\nto, debe probar todos los produc-\ntos de limpieza antes de aplicarlos.\n[SCA26310]\n4. Enjuague a fondo con agua limpia.\nAsegúrese de eliminar todo resto de\ndetergente, ya que puede dañar las\npiezas de plástico.\nDespués del lavado\n1. Seque el vehículo con una gamuza o\nuna toalla absorbente, preferiblemen-\nte de microfibras.\n2. Para modelos provistos de cadena de\ntransmisión: Seque y a continuación\nlubrique la cadena de transmisión\npara evitar que se oxide.\n3. Utilice un abrillantador de cromo para\ndar brillo a las piezas de cromo, alumi-\nnio y acero inoxidable. Mediante el\npulido suele ser posible eliminar la de-\ncoloración térmica de los sistemas de\nescape de acero inoxidable.\n4. Aplique un espray anticorrosión a to-\ndas las piezas de metal, incluidas las\nsuperficies cromadas o niqueladas.\n¡ADVERTENCIA! No aplique silicona\nUB5WS0S0.book Page 2 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      87,
+      "Especificaciones\n8-1\n8\nDimensiones:\nLongitud total:\n2090 mm (82.3 in)\nAnchura total:\n755 mm (29.7 in)\nAltura total:\n1070 mm (42.1 in)\nAltura del asiento:\n780 mm (30.7 in)\nDistancia entre ejes:\n1380 mm (54.3 in)\nHolgura mínima al suelo:\n160 mm (6.30 in)\nRadio de giro mínimo:\n2.9 m (9.51 ft)\nPeso:\nPeso en orden de marcha:\n168 kg (370 lb)\nMotor:\nCiclo de combustión:\n4 tiempos\nSistema de refrigeración:\nRefrigerado por líquido\nSistema de válvulas:\nDOHC\nDisposición de cilindros:\nEn línea\nNúmero de cilindros:\n2 cilindros\nCilindrada:\n321 cm3\nCalibre × Carrera:\n68.0 × 44.1 mm (2.68 × 1.74 in)\nSistema de arranque:\nArranque eléctrico\nAceite de motor:\nMarca recomendada:\nGrados de viscosidad SAE:\n10W-40\nCalidad de aceite de motor recomendado:\nAPI servicio tipo SG o superior, norma\nJASO MA\nCantidad de aceite de motor:\nCambio de aceite:\n1.80 L (1.90 US qt, 1.58Imp.qt)\nCon desmontaje del filtro de aceite:\n2.10 L (2.22 US qt, 1.85Imp.qt)\nCantidad de líquido refrigerante:\nDepósito de líquido refrigerante (hasta la\nmarca de nivel máximo):\n0.25 L (0.26 US qt, 0.22Imp.qt)\nRadiador (incluidas todas las rutas):\n0.94 L (0.99 US qt, 0.83Imp.qt)\nCombustible:\nGasolina recomendada:\nGasolina sin plomo (E10 aceptable)\nOctanaje (RON):\n90\nCapacidad del depósito de combustible:\n14 L (3.7 US gal, 3.1Imp.gal)\nCantidad de reserva de combustible:\n3.0 L (0.79 US gal, 0.66Imp.gal)\nInyección de gasolina:\nCuerpo del acelerador:\nMarca ID:\n2MS2\nTransmisión:\nRelación de engranajes:\n1a:\n2.500 (35/14)\n2a:\n1.824 (31/17)\n3a:\n1.348 (31/23)\n4a:\n1.087 (25/23)\n5a:\n0.920 (23/25)\n6a:\n0.800 (24/30)\nNeumático delantero:\nTipo:\nSin cámara\nTamaño:\n110/70R17M/C 54H\nFabricante/modelo:\nDUNLOP/GPR-300F\nNeumático trasero:\nTipo:\nSin cámara\nTamaño:\n140/70R17M/C 66H\nFabricante/modelo:\nDUNLOP/GPR-300\nUB5WS0S0.book Page 1 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      88,
+      "Especificaciones\n8-2\n8\nCarga:\nCarga máxima:\n160 kg (353 lb)\n(Peso total del conductor, el pasajero, el\nequipaje y los accesorios)\nFreno delantero:\nTipo:\nFreno hidráulico monodisco\nFreno trasero:\nTipo:\nFreno hidráulico monodisco\nSuspensión delantera:\nTipo:\nHorquilla telescópica\nSuspensión trasera:\nTipo:\nBasculante\nSistema eléctrico:\nSistema de tensión:\n12 V\nBatería:\nModelo:\nGTZ8V\nVoltaje, capacidad:\n12 V, 7.0 Ah (10 HR)\nPotencia de la bombilla:\nFaro:\nLED\nLuz de freno y posterior:\nLED\nLuz de intermitencia delantera:\nLED\nLuz de intermitencia trasera:\nLED\nLuz auxiliar:\nLED\nLuz de la matrícula:\n5.0 W\nUB5WS0S0.book Page 2 Wednesday, December 25, 2019 2:49 PM"
+    ],
+    [
+      91,
+      "10-1\n10\nÍndice alfabético\nA\nABS......................................................3-14\nAceite de motor y cartucho\ndel filtro de aceite................................6-8\nAlmacenamiento....................................7-4\nApoyo de la motocicleta......................6-34\nArranque del motor................................5-2\nAsientos................................................3-18\nB\nBatería..................................................6-29\nBombilla de la luz de la matrícula,\ncambio...............................................6-33\nBujías, comprobación............................6-7\nC\nCaballete lateral...................................3-22\nCaballete lateral, comprobación\ny engrase...........................................6-27\nCables, comprobación y engrase........6-25\nCadena de transmisión, limpieza\ny engrase...........................................6-24\nCambio de marchas...............................5-3\nCatalizador...........................................3-18\nCojinetes de las ruedas,\ncomprobación....................................6-29\nColor mate, precaución..........................7-1\nCompartimento portaobjetos...............3-20\nConjunto amortiguador, ajuste.............3-21\nConmutador de la luz\nde cruce/carretera.............................3-11\nCuadro de identificación de averías.....6-36\nCuidados................................................7-1\nD\nDirección, comprobación.....................6-28\nDispositivo de autodiagnóstico..............3-9\nE\nEl motor se recalienta...........................6-37\nEspecificaciones....................................8-1\nEstacionamiento.....................................5-4\nF\nFijaciones de la correa del equipaje.....3-22\nFiltro de aire y tubo de drenaje,\ncambio y limpieza..............................6-13\nFusibles, cambio..................................6-31\nG\nGasolina...............................................3-16\nH\nHolgura de las válvulas........................6-15\nHorquilla delantera, comprobación......6-28\nI\nIdentificación de averías......................6-35\nIndicador de gasolina.............................3-4\nIndicador de la marcha seleccionada.....3-5\nIndicador de temperatura\ndel líquido refrigerante..........................3-5\nIndicador multifunción............................3-4\nInformación relativa a la seguridad.........1-1\nInterruptor de arranque/paro del\nmotor..................................................3-11\nInterruptor de intermitencia..................3-11\nInterruptor de la bocina........................3-11\nInterruptor de luces de emergencia......3-11\nInterruptor de ráfagas...........................3-10\nInterruptores de la luz de freno.............6-19\nInterruptores del manillar......................3-10\nInterruptor principal/Bloqueo\nde la dirección......................................3-1\nJ\nJuego de herramientas...........................6-2\nJuego de la cadena de transmisión......6-22\nJuego libre de la maneta de embrague,\najuste..................................................6-18\nJuego libre de la maneta del freno,\ncomprobación....................................6-19\nJuego libre del puño del acelerador,\ncomprobación....................................6-14\nL\nLíquido de freno, comprobación..........6-21\nLíquido de frenos, cambio....................6-22\nLíquido refrigerante...............................6-11\nLuces del vehículo................................6-33\nLuces indicadoras de intermitencia........3-2\nLuces indicadoras y luces de aviso........3-2\nLuz de aviso de avería del motor............3-3\nLuz de aviso de la presión del aceite......3-3\nLuz de aviso del sistema ABS................3-3\nLuz indicadora de cambio de marcha....3-3\nLuz indicadora de la luz de carretera......3-2\nLuz indicadora de punto muerto............3-2\nM\nManeta de embrague............................3-12\nManeta de freno....................................3-13\nManetas de freno y embrague,\ncomprobación y engrase....................6-26\nMantenimiento, sistema de control\nde emisiones........................................6-3\nMantenimiento y engrase, periódico......6-4\nModo de control de la luz indicadora\nde cambio de marcha...........................3-8\nN\nNeumáticos...........................................6-15\nUB5WS0S0.book Page 1 Wednesday, December 25, 2019 2:49 PM"
+    ]
+  ]
+}
