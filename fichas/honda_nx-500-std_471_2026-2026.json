@@ -56,6 +56,12 @@
       "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-std",
       "capturado": "2026-11-18"
     },
+    "capacidad_tanque": {
+      "texto_original": "17,5 litros",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-std",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "17.5 L"
+    },
     "freno_delantero": {
       "texto_original": "Doble Disco de 296mm x 4mm, con pinza de 2 pistones - anclaje axial",
       "fuente": "https://motos.honda.com.co/motos-honda/aventura/nx-500-std",

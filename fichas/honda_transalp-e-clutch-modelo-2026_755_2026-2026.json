@@ -46,6 +46,12 @@
       "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
       "capturado": "2026-11-18"
     },
+    "capacidad_tanque": {
+      "texto_original": "16,9 litros",
+      "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "16.9 L"
+    },
     "freno_delantero": {
       "texto_original": "Doble Disco de 310mm x 4,5mm, con pinza de 2 pistones - anclaje axial",
       "fuente": "https://motos.honda.com.co/motos-honda/aventura/transalp-eclutch",
