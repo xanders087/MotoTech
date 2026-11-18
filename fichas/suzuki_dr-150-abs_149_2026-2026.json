@@ -1,0 +1,81 @@
+{
+  "marca": "Suzuki",
+  "modelo": "DR 150 ABS",
+  "cilindraje_cc": 149,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "peso": {
+      "texto_original": "139 kg",
+      "fuente": "https://suzuki.com.co/motocicletas/enduro/dr-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "149 cm3",
+      "fuente": "https://suzuki.com.co/motocicletas/enduro/dr-150-abs",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "149 cc"
+    },
+    "distancia_ejes": {
+      "texto_original": "1360 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/enduro/dr-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.65:1",
+      "fuente": "https://suzuki.com.co/motocicletas/enduro/dr-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco (ABS)",
+      "fuente": "https://suzuki.com.co/motocicletas/enduro/dr-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor",
+      "fuente": "https://suzuki.com.co/motocicletas/enduro/dr-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90-19",
+      "fuente": "https://suzuki.com.co/motocicletas/enduro/dr-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "110/90-17",
+      "fuente": "https://suzuki.com.co/motocicletas/enduro/dr-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "11,8 HP @ 8000 rpm",
+      "fuente": "https://suzuki.com.co/motocicletas/enduro/dr-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "11.6 Nm@ 6000 rpm",
+      "fuente": "https://suzuki.com.co/motocicletas/enduro/dr-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "5 velocidades - manual",
+      "fuente": "https://suzuki.com.co/motocicletas/enduro/dr-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburada",
+      "fuente": "https://suzuki.com.co/motocicletas/enduro/dr-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y patada",
+      "fuente": "https://suzuki.com.co/motocicletas/enduro/dr-150-abs",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

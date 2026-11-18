@@ -180,6 +180,83 @@ class AdaptadoresParsingTest(unittest.TestCase):
         self.assertEqual("Calle", m.categoria)
         self.assertIn("Manual-de-usuario-NKD", m.url_manual or "")
 
+    def test_suzuki_sitemap_y_filtro_no_moto(self):
+        xml = """<?xml version="1.0"?>
+        <urlset>
+          <url><loc>https://suzuki.com.co/motocicletas/lista/sport</loc></url>
+          <url><loc>https://suzuki.com.co/motocicletas/sport/gixxer-sf-250</loc></url>
+          <url><loc>https://suzuki.com.co/motocicletas/atv/kingquad-400</loc></url>
+          <url><loc>https://otro.com/motocicletas/sport/fake</loc></url>
+        </urlset>"""
+        urls = adaptadores.parsear_suzuki_sitemap(xml)
+        self.assertEqual(["https://suzuki.com.co/motocicletas/sport/gixxer-sf-250"], urls)
+
+        html_sin_cc = "<html><body><h1>Burgman Street 125</h1><p>Próximamente</p></body></html>"
+        self.assertIsNone(
+            adaptadores.parsear_suzuki_modelo_html(
+                html_sin_cc, "https://www.suzuki.com.co/motocicletas/automaticas/burgman-street-125"
+            )
+        )
+
+    def test_hero_sitemap_excluye_promos_duplicadas(self):
+        xml = """<?xml version="1.0"?>
+        <urlset>
+          <url><loc><![CDATA[https://heromotos.com.co/trabajo/eco-100/]]></loc></url>
+          <url><loc><![CDATA[https://heromotos.com.co/trabajo/eco-100-nuevo-precio/]]></loc></url>
+          <url><loc><![CDATA[https://heromotos.com.co/plan-de-mantenimiento/]]></loc></url>
+        </urlset>"""
+        urls = adaptadores.parsear_hero_sitemap(xml)
+        self.assertEqual(["https://heromotos.com.co/trabajo/eco-100/"], urls)
+
+    def test_auteco_vtex_excluye_motocarros_electricas_y_utilitarios(self):
+        motocarro = {
+            "brand": "TVS",
+            "productName": "MOTOCARRO TVS KING DELUXE PLUS GS+",
+            "link": "https://www.auteco.com.co/motocarro-tvs-king/p",
+            "categories": ["/Vehículos de carga/Motocarros/", "/Motos/"],
+            "CILINDRAJE": ["199.26 cc"],
+            "allSpecifications": ["CILINDRAJE"],
+        }
+        electrica = {
+            "brand": "TVS",
+            "productName": "MOTO ELECTRICA TVS IQUBE",
+            "link": "https://www.auteco.com.co/moto-electrica-tvs-iqube/p",
+            "categories": ["/Motos Eléctricas/Scooter/", "/Motos/"],
+            "allSpecifications": [],
+        }
+        utilitario = {
+            "brand": "Kawasaki",
+            "productName": "KAWASAKI BRUTE FORCE 450",
+            "link": "https://www.auteco.com.co/kawasaki-brute-force-450/p",
+            "categories": ["/Otros vehículos/Utilitarios Mule/", "/Motos/"],
+            "CILINDRAJE": ["443cc"],
+            "allSpecifications": ["CILINDRAJE"],
+        }
+        self.assertIsNone(adaptadores.parsear_auteco_vtex_producto(motocarro, "TVS"))
+        self.assertIsNone(adaptadores.parsear_auteco_vtex_producto(electrica, "TVS"))
+        self.assertIsNone(adaptadores.parsear_auteco_vtex_producto(utilitario, "Kawasaki"))
+
+    def test_autocolombiana_vtex_extrae_anio_y_rechaza_torque_corrupto(self):
+        prod = {
+            "brand": "Husqvarna",
+            "productName": "HUSQVARNA SVARTPILEN 801 2026",
+            "link": "https://www.autocolombiana.com.co/husqvarna-svartpilen-801-2026/p",
+            "categories": ["/Husqvarna/MODELOS/NAKED/", "/Husqvarna/MODELOS/"],
+            "AÑO MODELO": ["2026"],
+            "CILINDRAJE": ["799 cm³"],
+            "POTENCIA": ["105 HP @9,250 rpm"],
+            "TORQUE": ["Capacidad útil del depósito: 13.7 litros"],
+        }
+        m = adaptadores.parsear_autocolombiana_vtex_producto(prod, "Husqvarna", hoy="2026-11-18")
+        self.assertIsNotNone(m)
+        self.assertEqual("SVARTPILEN 801", m.modelo)
+        self.assertEqual(799, m.cilindraje_cc)
+        self.assertEqual(2026, m.anio_fuente)
+        self.assertEqual("Naked", m.categoria)
+        self.assertIn("cilindraje", m.ficha_tecnica)
+        self.assertIn("potencia_maxima", m.ficha_tecnica)
+        self.assertNotIn("torque_maximo", m.ficha_tecnica)
+
 
 class RecoleccionYRespaldoTest(unittest.TestCase):
     def test_conserva_descontinuados_cruza_fichas_y_protege_contra_cero_modelos(self):

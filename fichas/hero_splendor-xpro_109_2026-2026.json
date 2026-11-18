@@ -1,0 +1,97 @@
+{
+  "marca": "Hero",
+  "modelo": "Splendor Xpro",
+  "cilindraje_cc": 109,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "tipo_motor": {
+      "texto_original": "Monocilindrico, 4 Tiempos, OHC, Refrigeración por aire",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "109,15 cc",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "109 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "9,1 hp @7500rpm",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "9 Nm @5500rpm",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "10:01",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y pedal.",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica de 4 velocidades, embrague húmedo",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Hidráulica telescópica",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Doble amortiguador ajustable en 5 posiciones",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "80/100 18M 47P – Sellomática.",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "90/90 18M 51P – Sellomática.",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "790 mm",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1249 mm",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "9,2 litros.",
+      "fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "9.2 L"
+    }
+  },
+  "url_manual": "https://heromotos.com.co/wp-content/uploads/2023/09/Manual-Splendor-Xpro.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

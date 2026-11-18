@@ -1,0 +1,105 @@
+{
+  "marca": "Hero",
+  "modelo": "Hunk 125R",
+  "cilindraje_cc": 124,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "tipo_motor": {
+      "texto_original": "Monocilíndrico/4 tiempos/ SOHC.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "124,7 cc.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "124 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "10,72 hp @8250 rpm.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "10,4 Nm @6500 rpm",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9,9:1",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y pedal",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "5 velocidades",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Hidráulica telescópica.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguador ajustable en 7 posiciones.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco de 276 mm Diámetro con ABS monocanal.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco de 220 mm Diámetro.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90/17″",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "120/80/17″",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1319 mm.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1319 mm"
+    },
+    "capacidad_tanque": {
+      "texto_original": "10 Litros.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "10 L"
+    },
+    "peso": {
+      "texto_original": "133 Kg.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "133 kg"
+    },
+    "altura_asiento": {
+      "texto_original": "794 mm.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "794 mm"
+    }
+  },
+  "url_manual": "https://heromotos.com.co/wp-content/uploads/2025/03/Manual_Hunk125R_CO.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

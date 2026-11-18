@@ -1,0 +1,106 @@
+{
+  "marca": "Suzuki",
+  "modelo": "V-STROM 800 DE",
+  "cilindraje_cc": 776,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "855 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "230 kg",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "776 cm3",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "776 cc"
+    },
+    "distancia_ejes": {
+      "texto_original": "1570 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos 2 Cilindros en línea",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescopica invertida ajustable",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono Amortiguado con bieletas ajustable",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Doble Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90-21M/C 54H TUBE TYPE",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "150/70R17M/C 69H TUBE TYPE",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "20 L",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "83 HP @ 8500 RPM",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "78 NM a 6800 RPM",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "6 Velocidades",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Liquido Refrigerante",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

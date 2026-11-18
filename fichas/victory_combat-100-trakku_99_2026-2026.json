@@ -1,0 +1,112 @@
+{
+  "marca": "Victory",
+  "modelo": "COMBAT 100 TRAKKU",
+  "cilindraje_cc": 99,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "99,85 cc",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "99 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "8 HP @ 8000 rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "15 L (3.96 gal)",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "15 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, monocilíndrico",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "8 Nm @ 6000 rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica 4 velocidades",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.4 : 1",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica Hidráulica",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Pedal",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Doble amortiguador",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Campana",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Campana",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "2,50 -17",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "3,00 - 17",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1250 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "750 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "90 kg",
+      "fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

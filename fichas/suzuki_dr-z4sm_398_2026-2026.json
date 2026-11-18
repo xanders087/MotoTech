@@ -1,0 +1,112 @@
+{
+  "marca": "Suzuki",
+  "modelo": "DR-Z4SM",
+  "cilindraje_cc": 398,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "890 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "154 kg",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "398 cm3",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "398 cc"
+    },
+    "distancia_ejes": {
+      "texto_original": "1465 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos 1 Cilindro",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "11,1:1",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica barras invertidas",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono-amortiguador",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco (ABS)",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco (ABS)",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70 R17 MC 58H",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "140/70 R17 MC 66H",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "8,7 L",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "8.7 L"
+    },
+    "potencia_maxima": {
+      "texto_original": "38 HP @8000 rpm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "37 Nm @6500 rpm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "5 velocidades - manual",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "líquida",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

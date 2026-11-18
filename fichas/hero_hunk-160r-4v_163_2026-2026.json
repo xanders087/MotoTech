@@ -1,0 +1,105 @@
+{
+  "marca": "Hero",
+  "modelo": "Hunk 160R 4V",
+  "cilindraje_cc": 163,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "tipo_motor": {
+      "texto_original": "Monocilíndrico vértical, 4 válvulas /4 tiempos/ OHC refrigerado por aceite.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "163,24 CC.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "163 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "16,6 hp @8500 rpm.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "14,6 Nm @6500 rpm.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9,8:1",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "5 velocidades.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Hidráulica telescópica.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguador ajustable en 7 posiciones.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco de 276 mm Diámetro con ABS monocanal.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco de 220 mm Diámetro.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "100/80/17″",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70/17″",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1329 mm.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1329 mm"
+    },
+    "capacidad_tanque": {
+      "texto_original": "12 Litros.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "12 L"
+    },
+    "peso": {
+      "texto_original": "146 Kg.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "146 kg"
+    },
+    "altura_asiento": {
+      "texto_original": "795 mm.",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "795 mm"
+    }
+  },
+  "url_manual": "https://heromotos.com.co/wp-content/uploads/2024/06/manualusuariohunk160R4V.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

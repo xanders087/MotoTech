@@ -1,0 +1,111 @@
+{
+  "marca": "Victory",
+  "modelo": "ONE MP TRAKKU",
+  "cilindraje_cc": 97,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "97 cc",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "5.9 HP @ 7500 rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "3.0 L (0,8 gal)",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "3 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, monocilíndrico",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "6.5 Nm @ 5000 rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Semiautomática 4 velocidades",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "8.6:1",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica Hidráulica",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y pedal",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Doble amortiguador hidráulico",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco (220 mm) doble pistón",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor (110 mm)",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "2.50 - 17",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "2.75 - 17",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1210 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "750 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "94 kg",
+      "fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

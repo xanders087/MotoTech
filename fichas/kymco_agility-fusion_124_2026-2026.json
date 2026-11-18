@@ -1,0 +1,107 @@
+{
+  "marca": "Kymco",
+  "modelo": "AGILITY FUSION",
+  "cilindraje_cc": 124,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "124.6 cc",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "124 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "9.3 HP @ 7000 rpm",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "5 l (1,32 gal)",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "5 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, monocilíndrico",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "9.1 Nm @ 6500 rpm",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Automática centrífuga (CVT)",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica hidráulica",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire forzado",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y pedal",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguardor hidráulico",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco 200 mm Doble pistón",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70 - 12",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70 - 12",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1330 mm",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "780 mm",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "116 kg",
+      "fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

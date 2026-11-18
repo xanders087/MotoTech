@@ -1,0 +1,30 @@
+{
+  "marca": "CFMoto",
+  "modelo": "700MT",
+  "cilindraje_cc": 693,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "693 CC",
+      "fuente": "https://www.autocolombiana.com.co/700mt-2027/p",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "68 HP @ 9.500rpm",
+      "fuente": "https://www.autocolombiana.com.co/700mt-2027/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "60 Nm @6.000 rpm",
+      "fuente": "https://www.autocolombiana.com.co/700mt-2027/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

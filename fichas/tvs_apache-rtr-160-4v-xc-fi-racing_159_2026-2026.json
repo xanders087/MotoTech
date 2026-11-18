@@ -1,0 +1,112 @@
+{
+  "marca": "TVS",
+  "modelo": "APACHE RTR 160 4V XC FI RACING",
+  "cilindraje_cc": 159,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "159.7 cc",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "159 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "16.3 HP @ 8000 rpm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "12 l (3.17 gal)",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "12 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, monocilíndrico",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "14.8 Nm @ 6500 rpm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica 5 velocidades",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "10.15:1",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "145 kg",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire/Aceite",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguador, ajustable en precarga",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco (270 mm), pinza plotante de 2 émbolos",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco (200 mm), pinza flotante de 1 émbolo",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90 R17",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70 R17",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1357 mm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "810 mm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://media.autecomobility.com/recursos/marcas/tvs/manuales/usuario/manual-usuario-apache-rtr-160-4v-fi-abs.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

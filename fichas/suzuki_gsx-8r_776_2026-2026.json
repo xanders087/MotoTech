@@ -1,0 +1,102 @@
+{
+  "marca": "Suzuki",
+  "modelo": "GSX-8R",
+  "cilindraje_cc": 776,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "peso": {
+      "texto_original": "205 kg",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "776 cm3",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "776 cc"
+    },
+    "distancia_ejes": {
+      "texto_original": "1465 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos 2 cilindros",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica Invertida",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monosuspensión con bieletas ajustable en 7 posiciones",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Doble Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70ZR17M/C 58W TUBELESS",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "180/55ZR17M/C 73W TUBELESS",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "14L",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "14 L"
+    },
+    "potencia_maxima": {
+      "texto_original": "81,8 HP a 8500 RPM",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "78 NM a 6800 RPM",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "6 Velocidades - MANUAL",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Liquido",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

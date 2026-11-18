@@ -1,0 +1,107 @@
+{
+  "marca": "Suzuki",
+  "modelo": "GSX-R 1000R",
+  "cilindraje_cc": 1000,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "825mm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "825 mm"
+    },
+    "peso": {
+      "texto_original": "202 Kg",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "1000 cm3",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1000 cc"
+    },
+    "distancia_ejes": {
+      "texto_original": "1420 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos 4 Cilindros",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica Invertida ajustable",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monosuspensión con bieletas ajustable",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Doble Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70Z R17 M/C 58W",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "190/55ZR17M/C 75W",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "16 L",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "197.11 HP a 13000 RPM",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "117.6 NM a 10800 RPM",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "6 Velocidades",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Liquido",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

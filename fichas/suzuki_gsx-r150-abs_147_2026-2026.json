@@ -1,0 +1,106 @@
+{
+  "marca": "Suzuki",
+  "modelo": "GSX-R150 ABS",
+  "cilindraje_cc": 147,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "790 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "136 kg",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "147 cm3",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "147 cc"
+    },
+    "distancia_ejes": {
+      "texto_original": "1300 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos 1 Cilindro",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono Amortiguado con bieletas sin graduación",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/80 -17 M/C 46P TUBELESS",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70 -17 M/C 62P TUBELESS",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "11 L",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "18.9 HP A 10500 RPM",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "14.0 NM @ 9000 RPM",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "6 Velocidades",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Liquido",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

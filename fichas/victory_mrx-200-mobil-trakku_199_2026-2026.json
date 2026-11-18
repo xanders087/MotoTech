@@ -1,0 +1,112 @@
+{
+  "marca": "Victory",
+  "modelo": "MRX 200 MOBIL TRAKKU",
+  "cilindraje_cc": 199,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "199,6 cc",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "199 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "17,4 HP @ 8000 rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "10 L (2,64 gal)",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "10 L"
+    },
+    "tipo_motor": {
+      "texto_original": "Monocilíndrico 4 tiempos SOHC de 2 válvulas (PR 200)",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "17 Nm @ 6000 rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica 6 velocidades",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9,0 : 1",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "137 Kg",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Barras invertidas de 37 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono amortiguador ajustable en precarga",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco de 270 mm ABS",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco de 210 mm ABS",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90-19",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "110/90-17",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1360 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "880 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

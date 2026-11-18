@@ -1,0 +1,112 @@
+{
+  "marca": "Kawasaki",
+  "modelo": "NINJA ZX-6R",
+  "cilindraje_cc": 636,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "636 cc",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "128 HP @ 13000 rpm",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "17 l (4.5 gal)",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "17 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4T, Tetracilíndrico en línea DOHC",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "69 Nm @ 11000 rpm",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica 6 velocidades",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "12.9:1",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "191kg",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "191 kg"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla invertida de 41 mm marca SHOWA (SFF-BP) con ajuste en extensión, compresión y precarga del resorte.",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Líquido",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Suspensión trasera bottom-link Uni Trak, con depósito de gas integrado, amortiguador ajustable en compresión, extensión y precarga",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Doble disco semiflotante de 310 mm con caliper monobloque de 4 pistones de anclaje radial marca NISSIN.",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco de 220 mm con caliper de 1 pistón.",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70ZR17M/C (58W)",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "180/55ZR17M/C (73W)",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1400 mm",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "830 mm",
+      "fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

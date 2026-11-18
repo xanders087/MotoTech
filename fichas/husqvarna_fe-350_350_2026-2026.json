@@ -1,0 +1,26 @@
+{
+  "marca": "Husqvarna",
+  "modelo": "FE 350",
+  "cilindraje_cc": 350,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "350 cm³",
+      "fuente": "https://www.autocolombiana.com.co/husqvarna-fe-350-2026/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "350 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "51 HP",
+      "fuente": "https://www.autocolombiana.com.co/husqvarna-fe-350-2026/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

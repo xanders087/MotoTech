@@ -1,0 +1,117 @@
+{
+  "marca": "TVS",
+  "modelo": "NEO NX 125 FI",
+  "cilindraje_cc": 124,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "124,5 cc",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "124 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "9,25 HP @ 8000 rpm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "4,6 Lt",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "4.6 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos monocilíndrico",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "9,3 Nm @ 6000 rpm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Semiautomática 4 velocidades",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9,7:1",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "106 kg",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica hidráulica",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y pedal",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Telescópica hidráulica",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco 220 mm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Campana 130 mm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "70/90-17",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "80/90-17",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "abs": {
+      "texto_original": "No",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1260 mm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "767 mm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://media.autecomobility.com/recursos/marcas/tvs/manuales/usuario/Manual-de-usuario-TVS-NEO-125-FI.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

@@ -39,5 +39,108 @@
       "https://motos.honda.com.co/motos-honda"
     ],
     "adaptador": "honda"
+  },
+  "Suzuki": {
+    "dominios": ["suzuki.com.co"],
+    "catalogo": [
+      "https://www.suzuki.com.co/sitemap.xml",
+      "https://www.suzuki.com.co/motocicletas/lista"
+    ],
+    "adaptador": "suzuki"
+  },
+  "Hero": {
+    "dominios": ["heromotos.com.co"],
+    "catalogo": [
+      "https://heromotos.com.co/page-sitemap.xml"
+    ],
+    "manuales": [
+      "https://heromotos.com.co/plan-de-mantenimiento/"
+    ],
+    "adaptador": "hero"
+  },
+  "TVS": {
+    "dominios": ["auteco.com.co", "media.autecomobility.com"],
+    "catalogo": [
+      "https://www.auteco.com.co/tvs"
+    ],
+    "api_catalogo": [
+      "https://www.auteco.com.co/api/catalog_system/pub/products/search/motos/TVS?map=c,b"
+    ],
+    "vtex_brand": "TVS",
+    "adaptador": "auteco_vtex"
+  },
+  "Victory": {
+    "dominios": ["auteco.com.co", "media.autecomobility.com"],
+    "catalogo": [
+      "https://www.auteco.com.co/victory"
+    ],
+    "api_catalogo": [
+      "https://www.auteco.com.co/api/catalog_system/pub/products/search/motos/Victory?map=c,b"
+    ],
+    "vtex_brand": "Victory",
+    "adaptador": "auteco_vtex"
+  },
+  "Kawasaki": {
+    "dominios": ["auteco.com.co", "media.autecomobility.com"],
+    "catalogo": [
+      "https://www.auteco.com.co/kawasaki"
+    ],
+    "api_catalogo": [
+      "https://www.auteco.com.co/api/catalog_system/pub/products/search/motos/Kawasaki?map=c,b"
+    ],
+    "vtex_brand": "Kawasaki",
+    "adaptador": "auteco_vtex"
+  },
+  "Benelli": {
+    "dominios": ["auteco.com.co", "media.autecomobility.com"],
+    "catalogo": [
+      "https://www.auteco.com.co/benelli"
+    ],
+    "api_catalogo": [
+      "https://www.auteco.com.co/api/catalog_system/pub/products/search/motos/Benelli?map=c,b"
+    ],
+    "vtex_brand": "Benelli",
+    "adaptador": "auteco_vtex"
+  },
+  "Kymco": {
+    "dominios": ["auteco.com.co", "media.autecomobility.com"],
+    "catalogo": [
+      "https://www.auteco.com.co/kymco"
+    ],
+    "api_catalogo": [
+      "https://www.auteco.com.co/api/catalog_system/pub/products/search/motos/Kymco?map=c,b"
+    ],
+    "vtex_brand": "Kymco",
+    "adaptador": "auteco_vtex"
+  },
+  "KTM": {
+    "dominios": ["autocolombiana.com.co", "autocolombiana.vteximg.com.br"],
+    "catalogo": [
+      "https://www.autocolombiana.com.co/ktm/modelos"
+    ],
+    "api_catalogo": [
+      "https://www.autocolombiana.com.co/api/catalog_system/pub/products/search/?fq=C:/1/5/"
+    ],
+    "adaptador": "autocolombiana_vtex"
+  },
+  "Husqvarna": {
+    "dominios": ["autocolombiana.com.co", "autocolombiana.vteximg.com.br"],
+    "catalogo": [
+      "https://www.autocolombiana.com.co/husqvarna/modelos"
+    ],
+    "api_catalogo": [
+      "https://www.autocolombiana.com.co/api/catalog_system/pub/products/search/?fq=C:/2/124/"
+    ],
+    "adaptador": "autocolombiana_vtex"
+  },
+  "CFMoto": {
+    "dominios": ["autocolombiana.com.co", "autocolombiana.vteximg.com.br"],
+    "catalogo": [
+      "https://www.autocolombiana.com.co/cfmoto/modelos/motos"
+    ],
+    "api_catalogo": [
+      "https://www.autocolombiana.com.co/api/catalog_system/pub/products/search/?fq=C:/386/387/490/"
+    ],
+    "adaptador": "autocolombiana_vtex"
   }
 }

@@ -1,0 +1,81 @@
+{
+  "marca": "Suzuki",
+  "modelo": "GSX-8T",
+  "cilindraje_cc": 776,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "peso": {
+      "texto_original": "201 kg",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8t",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "776 cm³",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8t",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "776 cc"
+    },
+    "distancia_ejes": {
+      "texto_original": "1465 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8t",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8t",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "12.8:1",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8t",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70ZR17M/C (58W)",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8t",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "180/55ZR17M/C (73W)",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8t",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "16.5 L",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8t",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "82 HP @8500rpm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8t",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "78 Nm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8t",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Manual 6 velocidades",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8t",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "FI",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8t",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Liquida Liquida",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8t",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

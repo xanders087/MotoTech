@@ -1,0 +1,117 @@
+{
+  "marca": "TVS",
+  "modelo": "NEO NX 110 EDICION ESPECIAL",
+  "cilindraje_cc": 109,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "109.7 cc",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "109 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "8.44 HP @ 7500 rpm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "4l (1.06 gal)",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "4 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, monocilíndrico",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "8.5 Nm @ 4500 rpm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Semiautomática",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.35:1",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "103 KG",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y pedal",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Doble amortiguador",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco (220 mm), pinza flotante de 1 émbolo",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor (110 mm)",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "2.5 x R17 o 70/90 R17",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "2.75 x R17 o 80/90 R17",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "abs": {
+      "texto_original": "No",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1260 mm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "760 mm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://media.autecomobility.com/recursos/marcas/tvs/manuales/manual-usuario-neo-nx-110.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

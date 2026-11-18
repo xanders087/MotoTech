@@ -1,0 +1,106 @@
+{
+  "marca": "Suzuki",
+  "modelo": "V-STROM 250 SX",
+  "cilindraje_cc": 249,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "835 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "165 kg",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "249 cm³",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "249 cc"
+    },
+    "distancia_ejes": {
+      "texto_original": "1440 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos 1 Cilindro",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono Amortiguado ajustable 7 posiciones",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "100/90 R19 M/C 57S TUBELESS",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "140/70 R17 M/C 60S TUBELESS",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "12 L",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "26.1 HP @ 9300 RPM",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "22,2 NM @ 7300 RPM",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "6 Velocidades",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aceite",
+      "fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

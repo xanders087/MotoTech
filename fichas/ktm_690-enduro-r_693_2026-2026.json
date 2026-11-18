@@ -1,0 +1,31 @@
+{
+  "marca": "KTM",
+  "modelo": "690 ENDURO R",
+  "cilindraje_cc": 693,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "693 cm³",
+      "fuente": "https://www.autocolombiana.com.co/ktm-dual-purpose-690-enduro-r-2026/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "693 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "79 HP",
+      "fuente": "https://www.autocolombiana.com.co/ktm-dual-purpose-690-enduro-r-2026/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "73 Nm",
+      "fuente": "https://www.autocolombiana.com.co/ktm-dual-purpose-690-enduro-r-2026/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

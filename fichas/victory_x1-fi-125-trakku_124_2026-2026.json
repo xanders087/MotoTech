@@ -1,0 +1,113 @@
+{
+  "marca": "Victory",
+  "modelo": "X1 FI 125 TRAKKU",
+  "cilindraje_cc": 124,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "124,9 cc",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "124 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "10.1 HP @ 8000 rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "4L (1 gal)",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "4 L"
+    },
+    "tipo_motor": {
+      "texto_original": "Monocilindrico 4 tiempos, 2 válvulas SOHC",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "10.5 Nm @ 5500 rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Semiautomática 4 velocidades",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.1:1",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "98kg",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "98 kg"
+    },
+    "suspension_delantera": {
+      "texto_original": "telescópica hidráulica con 93 mm de recorrido",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Doble amortiguador",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco 220 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Campana de 110 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "70/90 - 17",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "80/90 - 17",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1260 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "770 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

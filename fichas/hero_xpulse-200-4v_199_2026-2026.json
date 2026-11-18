@@ -1,0 +1,102 @@
+{
+  "marca": "Hero",
+  "modelo": "Xpulse 200 4V",
+  "cilindraje_cc": 199,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "tipo_motor": {
+      "texto_original": "Refrigerado por aceite, 4 tiempos, 4 válvulas, un cilindro, OHC.",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "199,6 cc",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "199 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "18,9 Hp @ 8000 rpm",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "17,35 Nm @ 6500 rpm",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "10:01 (combustible corriente)",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y pedal.",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Engranaje constante de 5 velocidades",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Hidráulica telescópica de 37mm, 190mm de recorrido de la rueda",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoshock de 10 posiciones ajustable por el conductor, 170mm de recorrido de la rueda",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco, ABS",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90-21″ TT doble proposito",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "120/80-18″ TT doble proposito",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1410 mm",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "3,4 Galones (13 Lt)",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "13 L"
+    },
+    "peso": {
+      "texto_original": "159 kg",
+      "fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://heromotos.com.co/wp-content/uploads/2024/04/Manual-de-Usuario-Xpulse-200-4V.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

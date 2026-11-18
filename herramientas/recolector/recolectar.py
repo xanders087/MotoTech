@@ -227,7 +227,11 @@ def ejecutar_recoleccion(
         dominios = list(cfg.get("dominios", []))
         modelos_nuevos: list[ModeloOficial] = []
         try:
-            with OficialHttpClient(dominios_permitidos=dominios, robots_guard=guard) as client:
+            with OficialHttpClient(
+                dominios_permitidos=dominios,
+                robots_guard=guard,
+                rate_limiter=rate_limiter,
+            ) as client:
                 adaptador = _instanciar_adaptador(cls_adaptador, marca, cfg, client, hoy_str, incluir_fichas)
                 modelos_nuevos = adaptador.recolectar()
         except Exception as e:

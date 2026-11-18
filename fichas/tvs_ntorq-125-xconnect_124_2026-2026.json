@@ -1,0 +1,107 @@
+{
+  "marca": "TVS",
+  "modelo": "NTORQ 125 XCONNECT",
+  "cilindraje_cc": 124,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "124.79 CC",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "124 cc"
+    },
+    "capacidad_tanque": {
+      "texto_original": "5 L (1.32 GAL)",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "5 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, monocilíndrico",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "10.5 Nm @ 5500 rpm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Automática",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.8:1",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "HORQUILLA TELESCÓPICA",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire forzado",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y pedal",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "MONOAMORTIGUADOR",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco (220 mm) pinza fija de 1 émbolo",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "TAMBOR (130 MM)",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "100/80 R12",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "110/80 R12",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1285 mm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "790 mm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "111 kg",
+      "fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://media.autecomobility.com/recursos/marcas/tvs/manuales/usuario/manual-usuario-ntorq125.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

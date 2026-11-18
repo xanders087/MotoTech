@@ -40,14 +40,19 @@ SINONIMOS_ETIQUETA: dict[str, str] = {
     "potencia maxima": "potencia_maxima",
     "potencia": "potencia_maxima",
     "potencia max": "potencia_maxima",
+    "max. potencia": "potencia_maxima",
+    "max potencia": "potencia_maxima",
     "potencia neta": "potencia_maxima",
     "torque maximo": "torque_maximo",
     "torque maxima": "torque_maximo",
     "torque": "torque_maximo",
+    "max. torque": "torque_maximo",
+    "max torque": "torque_maximo",
     "par motor": "torque_maximo",
     "par maximo": "torque_maximo",
     "torque max": "torque_maximo",
     "sistema de alimentacion": "alimentacion",
+    "sistema de alimentacion de combustible": "alimentacion",
     "alimentacion": "alimentacion",
     "sistema de combustible": "alimentacion",
     "refrigeracion": "refrigeracion",
@@ -84,29 +89,35 @@ SINONIMOS_ETIQUETA: dict[str, str] = {
     "llanta delantera": "llanta_delantera",
     "rueda delantera": "llanta_delantera",
     "neumatico delantero": "llanta_delantera",
+    "tamano de llanta delantera": "llanta_delantera",
     "llanta trasera": "llanta_trasera",
     "rueda trasera": "llanta_trasera",
     "neumatico trasero": "llanta_trasera",
+    "tamano de llanta trasera": "llanta_trasera",
     # Dimensiones
     "capacidad de combustible": "capacidad_tanque",
     "capacidad del tanque": "capacidad_tanque",
+    "capacidad tanque": "capacidad_tanque",
     "capacidad tanque combustible": "capacidad_tanque",
     "capacidad de tanque": "capacidad_tanque",
     "capacidad del tanque de combustible": "capacidad_tanque",
+    "capacidad del tanque de gasolina": "capacidad_tanque",
     "tanque de combustible": "capacidad_tanque",
     "peso": "peso",
     "peso en seco": "peso",
     "peso en orden de marcha": "peso",
     "peso neto": "peso",
     "peso total": "peso",
+    "peso sin carga": "peso",
     "altura al asiento": "altura_asiento",
     "altura del asiento": "altura_asiento",
+    "altura al sillin": "altura_asiento",
     "distancia entre ejes": "distancia_ejes",
 }
 
 _RE_NUMERO = re.compile(r"(\d+(?:[.,]\d+)?)")
 _RE_LLANTA = re.compile(r"(\d{2,3}\s*/\s*\d{2,3}|\d\.\d{2}\s*[-xX]\s*\d{2}|\d{2,3}\s*[-xX]\s*\d{2})")
-_RE_COMPRESION = re.compile(r"(\d{1,2}(?:[.,]\d{1,2})?)\s*:\s*1\b")
+_RE_COMPRESION = re.compile(r"(\d{1,2}(?:[.,]\d{1,2})?)\s*:\s*0?1\b")
 
 
 def _sin_tildes(texto: str) -> str:

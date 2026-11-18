@@ -1,0 +1,112 @@
+{
+  "marca": "Victory",
+  "modelo": "BET ADV TRAKKU",
+  "cilindraje_cc": 174,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "174 cc",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "18.2 HP @ 8500 rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "11,3 L (3 gal)",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "11.3 L"
+    },
+    "tipo_motor": {
+      "texto_original": "Monocilíndrico 4 tiempos, 4 válvulas",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "17.2 Nm @ 6500",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Automático (CVT)",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "11.5 : 1",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "151,6 kg",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "151.6 kg"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica invertida",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Líquido",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Doble amortiguador con camara de gas",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco de 240 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco de 220 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "110/80-14",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70-13",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1335 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "797 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

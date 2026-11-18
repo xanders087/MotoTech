@@ -1,0 +1,102 @@
+{
+  "marca": "Hero",
+  "modelo": "Hunk 150 XT",
+  "cilindraje_cc": 149,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "tipo_motor": {
+      "texto_original": "Monocilíndrico, 4 tiempos, refrigerado por aire",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "149,2 cc",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "149 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "14,2 hp @8.500 rpm",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "12.6 Nm @ 6.500rpm",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9,1:1",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y Pedal",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "5 velocidades",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla delantera convencional",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono amortiguador ajustable en 7 posiciones",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco diámetro 276 mm",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco diámetro 220 mm",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "100/80/17″",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70/17″",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1339 mm",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "12,4 Litros",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "12.4 L"
+    },
+    "peso": {
+      "texto_original": "146 Kg",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "790 mm",
+      "fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://heromotos.com.co/wp-content/uploads/2024/11/manualHunk150Xtec.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

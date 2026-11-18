@@ -153,18 +153,28 @@ class OficialHttpClient:
         if not self.robots.puede_consultar(url):
             raise PermissionError(f"robots.txt prohíbe consultar: {url}")
 
-    def get_text(self, url: str, headers: dict[str, str] | None = None) -> str:
+    def get_text(self, url: str, headers: dict[str, str] | None = None, reintentos_429: int = 2) -> str:
         self._validar_acceso(url)
-        self.limiter.esperar(url)
         req_headers = {"User-Agent": USER_AGENT, "Accept-Language": "es-CO,es;q=0.9"}
         if headers:
             req_headers.update(headers)
-        req = urllib.request.Request(url, headers=req_headers)
-        with urllib.request.urlopen(req, timeout=self.timeout_seg) as resp:
-            final_url = resp.geturl()
-            if not es_url_oficial(final_url, self.dominios_permitidos):
-                raise ValueError(f"Redirección fuera de lista blanca: {final_url}")
-            return resp.read().decode("utf-8", "replace")
+        for intento in range(reintentos_429 + 1):
+            self.limiter.esperar(url)
+            req = urllib.request.Request(url, headers=req_headers)
+            try:
+                with urllib.request.urlopen(req, timeout=self.timeout_seg) as resp:
+                    final_url = resp.geturl()
+                    if not es_url_oficial(final_url, self.dominios_permitidos):
+                        raise ValueError(f"Redirección fuera de lista blanca: {final_url}")
+                    return resp.read().decode("utf-8", "replace")
+            except urllib.error.HTTPError as e:
+                if e.code in (429, 503) and intento < reintentos_429:
+                    espera = 4 * (intento + 1)
+                    logger.info("HTTP %d en %s; esperando %ds antes de reintentar", e.code, url, espera)
+                    time.sleep(espera)
+                    continue
+                raise
+        raise RuntimeError(f"HTTP 429 persistente al cargar {url}")
 
     def get_rendered_html(self, url: str, wait_ms: int = 2500, reintentos_429: int = 2) -> str:
         self._validar_acceso(url)

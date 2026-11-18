@@ -1,0 +1,117 @@
+{
+  "marca": "TVS",
+  "modelo": "APACHE 200 FI EDICIÓN ESPECIAL",
+  "cilindraje_cc": 197,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "197.75 cc",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "197 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "20.54 HP @ 9000 rpm",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "12 L (3.17 GAL)",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "12 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 TIEMPOS, MONOCILÍNDRICO",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "17.25 Nm @ 7250 rpm",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Transmisión Mecánica de 5 velocidades - Sistema de arrastre de Cadena ORING y piñones con guardas",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "10:1",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica graduable en dureza",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire/Aceite",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguador hidráulico con ajustes de precarga",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco lobulado (270 mm), pinza flotante de 2 émbolos",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco lobulado (240 mm), pinza flotante de 1 émbolo",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90 R17",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70 R17",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "abs": {
+      "texto_original": "Si",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1353 mm",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "800 mm",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "140 kg",
+      "fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://media.autecomobility.com/recursos/marcas/tvs/manuales/usuario/manual-usuario-apache-rtr-200-4v-fi-abs.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

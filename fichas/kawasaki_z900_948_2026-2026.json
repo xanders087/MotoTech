@@ -1,0 +1,116 @@
+{
+  "marca": "Kawasaki",
+  "modelo": "Z900",
+  "cilindraje_cc": 948,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "948 cc",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "123,6 HP @ 9500 rpm",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "17 L (4.5 gal)",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "17 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, Tetracilíndrico DOHC",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "98.6 Nm @ 7700 rpm",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica 6 velocidades",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "11.8:1",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "212 kg",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla invertida de 41 mm y 120 mm de recorrido con ajuste en extensión y ajuste de precarga de muelle",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Líquido",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Sistema Back-link. Ajuste en extensión. Precarga de muelle ajustable",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Discos lobulados dobles semiflotantes de 300 mm. Pinza: doble de 4 pistones opuestos",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco lobulado de 250mm. Pistón único",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70 ZR17M/C",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "180/55 ZR17M/C",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "abs": {
+      "texto_original": "Si",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1455 mm",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "795 mm",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

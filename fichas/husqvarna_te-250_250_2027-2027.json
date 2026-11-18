@@ -1,0 +1,31 @@
+{
+  "marca": "Husqvarna",
+  "modelo": "TE 250",
+  "cilindraje_cc": 250,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "250 cm³",
+      "fuente": "https://www.autocolombiana.com.co/husqvarna-te-250-2027/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "250 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "43 HP",
+      "fuente": "https://www.autocolombiana.com.co/husqvarna-te-250-2027/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "36Nm",
+      "fuente": "https://www.autocolombiana.com.co/husqvarna-te-250-2027/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

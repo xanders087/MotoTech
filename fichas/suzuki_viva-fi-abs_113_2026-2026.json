@@ -1,0 +1,97 @@
+{
+  "marca": "Suzuki",
+  "modelo": "VIVA FI ABS",
+  "cilindraje_cc": 113,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "peso": {
+      "texto_original": "96 kg",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "113 cm3",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "113 cc"
+    },
+    "distancia_ejes": {
+      "texto_original": "1220 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos 1 cilindro",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.3:1",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco (ABS)",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "70/90-17M/C 38P",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "80/90-17M/C 50P",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "Volumen total: 3,9 Litro",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "3.9 L"
+    },
+    "potencia_maxima": {
+      "texto_original": "9,12 HP @ 7500 rpm",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "9.0 Nm @ 6500 rpm",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "4 velocidades - manual",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire",
+      "fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

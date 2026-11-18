@@ -1,0 +1,111 @@
+{
+  "marca": "Benelli",
+  "modelo": "LEONCINO 800",
+  "cilindraje_cc": 754,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "754 cc",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "76,2 HP @8500 rpm",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "15 L (3,96 gal)",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "15 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4T, Bicilíndrico, 8 válvulas DOHC",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "67 Nm @6500 rpm",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica 6 velocidades",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "11.5:1",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica hidráulica invertida /Recorrido 140 mm",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Líquido",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoshock de 48 mm de recorrido",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Doble disco flotante de 320 mm",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco de 260 mm",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70 -17",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "180/55 -17",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1460 mm",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "800 mm",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "212 kg",
+      "fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

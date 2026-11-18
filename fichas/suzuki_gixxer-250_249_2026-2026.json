@@ -1,0 +1,108 @@
+{
+  "marca": "Suzuki",
+  "modelo": "GIXXER 250",
+  "cilindraje_cc": 249,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "800mm",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "800 mm"
+    },
+    "peso": {
+      "texto_original": "156 kg",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "249 cm3",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "249 cc"
+    },
+    "distancia_ejes": {
+      "texto_original": "1340 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, 1 cilindro, refrigerado por aceite",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono Amortiguado Ajustable en 7 posiciones",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "110/70 R17M/C 54 S TUBELESS",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "150/60 R17 M/C 66 S TUBELESS",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "12 L / 3.17 Gal",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "12 L"
+    },
+    "potencia_maxima": {
+      "texto_original": "26.1 HP @ 9000 RPM",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "22 NM @ 7300 RPM",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "6 Velocidades",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aceite",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

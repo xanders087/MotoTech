@@ -1,0 +1,116 @@
+{
+  "marca": "Kawasaki",
+  "modelo": "KLX140 RL",
+  "cilindraje_cc": 144,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "144 cc",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "11 HP @ 8000 rpm",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "5.8 l (1.5 gal)",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "5.8 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, monocilíndrica, SOHC",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "12 Nm @ 6000 rpm",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica 5 velocidades",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9.5:1",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador Keihin PB20",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "95 kg",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica Hidráulica con 180 mm de recorrido",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguador (uni -trak) con 180 mm de recorrido",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco (240 mm)",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco (190 mm)",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "70/100-19 42M",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "90/100-16 52M",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "abs": {
+      "texto_original": "No",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1285 mm",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "800 mm",
+      "fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

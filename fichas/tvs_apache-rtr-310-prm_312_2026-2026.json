@@ -1,0 +1,107 @@
+{
+  "marca": "TVS",
+  "modelo": "APACHE RTR 310 PRM",
+  "cilindraje_cc": 312,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "312.12 CC",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "312 cc"
+    },
+    "capacidad_tanque": {
+      "texto_original": "11 l (2.9 Gal)",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "11 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 TIEMPOS, MONOCILÍNDRICO 4 VÁLVULAS",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica 6 velocidades + Quick shifter",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "12.17:1",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "170 kg",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica Invertida",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Refrigerante",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguador, ajustable en precarga y dureza",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco (300 mm)",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco (300 mm)",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "110/70 R17",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "150/60 R17",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "abs": {
+      "texto_original": "Si",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1358 mm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "800 mm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://media.autecomobility.com/recursos/marcas/tvs/manuales/usuario/manual-usuario-apache-rtr-310-pro.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

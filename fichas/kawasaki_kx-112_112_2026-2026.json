@@ -1,0 +1,112 @@
+{
+  "marca": "Kawasaki",
+  "modelo": "KX 112",
+  "cilindraje_cc": 112,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "112 cc",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "39.5 cv a 11500 rpm",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "5 L",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "2 tiempos, monocilíndrico con válvula de potencia de escape (KIPS), refrigerado por líquido",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "6 Nm @ 10000 rpm",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica 6 velocidades",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9,9:1 (baja velocidad) / 8,6:1 (alta velocidad)",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador Keihin de 28 mm",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "77kg",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "77 kg"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla telescópica de cartucho invertida de 36 mm con ajuste de la amortiguación de rebote en 20 direcciones/10,8 pulgadas",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Líquido",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "CDI con digital advance",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoamortiguador Uni-Trak® con compresión de 24 direcciones y amortiguación de rebote en 21 direcciones, además de precarga de resorte ajustable/10,8 in",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco simple lobulado de 220 mm con pinza de doble pistón",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco simple lobulado de 184 mm con pinza de un pistón",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "70/100-19",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "90/100-16",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1.150 mm",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "1150 mm"
+    },
+    "altura_asiento": {
+      "texto_original": "870 mm",
+      "fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

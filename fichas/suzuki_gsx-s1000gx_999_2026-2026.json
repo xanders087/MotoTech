@@ -1,0 +1,91 @@
+{
+  "marca": "Suzuki",
+  "modelo": "GSX-S1000GX",
+  "cilindraje_cc": 999,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "peso": {
+      "texto_original": "232 kg",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "999 cm3",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "999 cc"
+    },
+    "distancia_ejes": {
+      "texto_original": "1470 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos 4 Cilindros en Línea",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Doble Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70Z R17 M/C 58W",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "190/50Z R17 M/C 73W",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "19 L",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "150,19 HP @11000 rpm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "106 Nm @ 9250 rpm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "6 Velocidades - MANUAL",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Liquido Refrigerante",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "12,2:1",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

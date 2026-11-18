@@ -1,0 +1,111 @@
+{
+  "marca": "Victory",
+  "modelo": "VENOM 250S TRAKKU",
+  "cilindraje_cc": 250,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "250 cc",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "20.1 HP @ 8500 rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "15L (3,96 gal)",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "15 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, monocilíndrico, SOHC",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "20 Nm @ 6000 rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica 6 velocidades",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9,3 : 1",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoshock regulable en precarga",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco lobulado de 300 mm, con mordaza de 2 pistones",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco lobulado de 240 mm, morzada doble pisto de doble acción",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "100/80 - R17",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "140/60 - R17",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1370 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "800 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "140 kg",
+      "fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

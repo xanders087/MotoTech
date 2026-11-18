@@ -1,0 +1,111 @@
+{
+  "marca": "Kawasaki",
+  "modelo": "Z900 RS SE",
+  "cilindraje_cc": 948,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "948 cc",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "110 HP @ 8500 rpm",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "17 l (4.5 gal)",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "17 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, Tetracilíndrico en paralelo",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "98.5 Nm @ 6500 rpm",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica 6 velocidades",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "10.8:1",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "215 Kg",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Horquilla invertida de 41 mm ajustable en compresión, extensión y precarga",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Líquido",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Amortiguador horizontal tipo Back-link de gas y ajustable en precarga y extensión.",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Doble disco semi-flotante de 300 mm. Pinza: 4 pistones",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco de 250 mm. Pinza: 1 pistón",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70 ZR17M/C",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "180/55 ZR17M/C",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1470 mm",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "835 mm",
+      "fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

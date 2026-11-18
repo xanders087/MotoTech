@@ -1100,114 +1100,418 @@
   ],
   "Suzuki": [
     {
-      "modelo": "AX4 115",
+      "modelo": "ADDRESS NM",
       "cilindraje": "113cc",
-      "categoria": "Trabajo"
+      "categoria": "Automaticas",
+      "url_fuente": "https://suzuki.com.co/motocicletas/automaticas/address-nm",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "GN 125",
-      "cilindraje": "124cc",
-      "categoria": "Urbana / Custom"
-    },
-    {
-      "modelo": "GSX 125R",
-      "cilindraje": "124cc",
-      "categoria": "Urbana / Street"
-    },
-    {
-      "modelo": "Address 115 FI",
+      "modelo": "AX4 ABS",
       "cilindraje": "113cc",
-      "categoria": "Scooter"
+      "categoria": "Sport",
+      "url_fuente": "https://suzuki.com.co/motocicletas/sport/ax4-abs",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Avenis 125",
+      "modelo": "VIVA FI ABS",
+      "cilindraje": "113cc",
+      "categoria": "Semiautomaticas",
+      "url_fuente": "https://suzuki.com.co/motocicletas/semiautomaticas/viva-fi-abs",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "AVENIS",
       "cilindraje": "124cc",
-      "categoria": "Scooter"
+      "categoria": "Automaticas",
+      "url_fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Burgman Street 125",
-      "cilindraje": "124cc",
-      "categoria": "Scooter"
+      "modelo": "GN 125 ABS",
+      "cilindraje": "125cc",
+      "categoria": "Sport",
+      "url_fuente": "https://suzuki.com.co/motocicletas/sport/gn-125-abs",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Gixxer 150 FI ABS",
-      "cilindraje": "155cc",
-      "categoria": "Naked / Street"
-    },
-    {
-      "modelo": "Gixxer SF 150 FI",
-      "cilindraje": "155cc",
-      "categoria": "Deportiva"
-    },
-    {
-      "modelo": "GSX-R150",
+      "modelo": "GSX-R150 ABS",
       "cilindraje": "147cc",
-      "categoria": "Supersport"
+      "categoria": "Sport",
+      "url_fuente": "https://suzuki.com.co/motocicletas/sport/gsx-r150-abs",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "GSX-S150",
+      "modelo": "GSX-S150 ABS",
       "cilindraje": "147cc",
-      "categoria": "Naked"
+      "categoria": "Sport",
+      "url_fuente": "https://suzuki.com.co/motocicletas/sport/gsx-s150-abs",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Gixxer 250",
-      "cilindraje": "249cc",
-      "categoria": "Naked"
-    },
-    {
-      "modelo": "Gixxer SF 250",
-      "cilindraje": "249cc",
-      "categoria": "Deportiva"
-    },
-    {
-      "modelo": "DR 150 FI ABS",
+      "modelo": "BURGMAN 15",
       "cilindraje": "149cc",
-      "categoria": "Doble Propósito"
+      "categoria": "Automaticas",
+      "url_fuente": "https://suzuki.com.co/motocicletas/automaticas/burgman-15",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "DR-Z400S",
-      "cilindraje": "398cc",
-      "categoria": "Doble Propósito"
+      "modelo": "DR 150 ABS",
+      "cilindraje": "149cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://suzuki.com.co/motocicletas/enduro/dr-150-abs",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "DR 650 SE",
-      "cilindraje": "644cc",
-      "categoria": "Doble Propósito"
+      "modelo": "GIXXER FI 150 ABS",
+      "cilindraje": "155cc",
+      "categoria": "Sport",
+      "url_fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "V-Strom 160",
-      "cilindraje": "160cc",
-      "categoria": "Adventure"
+      "modelo": "GIXXER SF FI 150 ABS",
+      "cilindraje": "155cc",
+      "categoria": "Sport",
+      "url_fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-sf-fi-150-abs",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "V-Strom 250 SX",
+      "modelo": "DR 160X",
+      "cilindraje": "162cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://suzuki.com.co/motocicletas/enduro/dr-160x",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "GN 160",
+      "cilindraje": "162cc",
+      "categoria": "Sport",
+      "url_fuente": "https://suzuki.com.co/motocicletas/sport/gn-160",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "V-STROM 160",
+      "cilindraje": "162cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-160",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "GIXXER 250",
       "cilindraje": "249cc",
-      "categoria": "Adventure"
+      "categoria": "Sport",
+      "url_fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-250",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "V-Strom 650 XT",
-      "cilindraje": "645cc",
-      "categoria": "Adventure"
+      "modelo": "GIXXER SF 250",
+      "cilindraje": "249cc",
+      "categoria": "Sport",
+      "url_fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-sf-250",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "V-Strom 800DE",
+      "modelo": "V-STROM 250 SX",
+      "cilindraje": "249cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-250-sx",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "DR-Z4S",
+      "cilindraje": "398cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://suzuki.com.co/motocicletas/enduro/dr-z4s",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "DR-Z4SM",
+      "cilindraje": "398cc",
+      "categoria": "Alto Cilindraje",
+      "url_fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/dr-z4sm",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "GSX-8R",
       "cilindraje": "776cc",
-      "categoria": "Adventure"
-    },
-    {
-      "modelo": "V-Strom 1050DE",
-      "cilindraje": "1037cc",
-      "categoria": "Adventure"
+      "categoria": "Alto Cilindraje",
+      "url_fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8r",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "GSX-8S",
       "cilindraje": "776cc",
-      "categoria": "Naked"
+      "categoria": "Alto Cilindraje",
+      "url_fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8s",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "GSX-8T",
+      "cilindraje": "776cc",
+      "categoria": "Alto Cilindraje",
+      "url_fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8t",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "GSX-8TT",
+      "cilindraje": "776cc",
+      "categoria": "Alto Cilindraje",
+      "url_fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-8tt",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "V-STROM 800 DE",
+      "cilindraje": "776cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-800-de",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "V-STROM 800 DE TRAVEL",
+      "cilindraje": "776cc",
+      "categoria": "V Strom",
+      "url_fuente": "https://suzuki.com.co/motocicletas/v-strom/v-strom-800-de-travel",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "GSX-S1000",
+      "cilindraje": "999cc",
+      "categoria": "Alto Cilindraje",
+      "url_fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "GSX-S1000GX",
+      "cilindraje": "999cc",
+      "categoria": "Alto Cilindraje",
+      "url_fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-s1000gx",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "GSX-R 1000R",
+      "cilindraje": "1000cc",
+      "categoria": "Alto Cilindraje",
+      "url_fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/gsx-r-1000r",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "V-STROM 1050 DE",
+      "cilindraje": "1037cc",
+      "categoria": "Aventura",
+      "url_fuente": "https://suzuki.com.co/motocicletas/aventura/v-strom-1050-de",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "HAYABUSA",
+      "cilindraje": "1340cc",
+      "categoria": "Alto Cilindraje",
+      "url_fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/hayabusa",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Address 115 FI",
+      "cilindraje": "113cc",
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "AX4 115",
+      "cilindraje": "113cc",
+      "categoria": "Trabajo",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Avenis 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Burgman Street 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "GN 125",
+      "cilindraje": "124cc",
+      "categoria": "Urbana / Custom",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "GSX 125R",
+      "cilindraje": "124cc",
+      "categoria": "Urbana / Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "GSX-R150",
+      "cilindraje": "147cc",
+      "categoria": "Supersport",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "GSX-S150",
+      "cilindraje": "147cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "DR 150 FI ABS",
+      "cilindraje": "149cc",
+      "categoria": "Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Gixxer 150 FI ABS",
+      "cilindraje": "155cc",
+      "categoria": "Naked / Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Gixxer SF 150 FI",
+      "cilindraje": "155cc",
+      "categoria": "Deportiva",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "V-Strom 160",
+      "cilindraje": "160cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "DR-Z400S",
+      "cilindraje": "398cc",
+      "categoria": "Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "DR 650 SE",
+      "cilindraje": "644cc",
+      "categoria": "Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "V-Strom 650 XT",
+      "cilindraje": "645cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "V-Strom 800DE",
+      "cilindraje": "776cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "V-Strom 1050DE",
+      "cilindraje": "1037cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Hayabusa GSX1300R",
       "cilindraje": "1340cc",
-      "categoria": "Hyperbike"
+      "categoria": "Hyperbike",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     }
   ],
   "Honda": [
@@ -1802,402 +2106,1501 @@
   ],
   "KTM": [
     {
+      "modelo": "50 SX",
+      "cilindraje": "49cc",
+      "categoria": "Mini",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-50-sx-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "50 SX FACTORY EDITION",
+      "cilindraje": "49cc",
+      "categoria": "Mini",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-50-sx-factory-edition-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "85 SX 17/14",
+      "cilindraje": "85cc",
+      "categoria": "Mini",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-85-sx-17-14-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "85 SX 19/16",
+      "cilindraje": "85cc",
+      "categoria": "Mini",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-85-sx-19-16-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "125 XC-W",
+      "cilindraje": "124cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-125-xc-w-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "200 DUKE",
+      "cilindraje": "200cc",
+      "categoria": "Naked",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-200-duke-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "250 DUKE",
+      "cilindraje": "249cc",
+      "categoria": "Naked",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-250-duke-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "250 EXC-F",
+      "cilindraje": "249cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-250-exc-f-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "250 EXC-F SIX DAYS",
+      "cilindraje": "249cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-250-exc-f-six-days-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "250 XC-W",
+      "cilindraje": "249cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-250-xc-w-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "250 SX-F",
+      "cilindraje": "250cc",
+      "categoria": "Mx",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-250-sx-f-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "300 EXC",
+      "cilindraje": "293cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-300-exc-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "300 EXC HARDENDURO",
+      "cilindraje": "293cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-300-exc-hardenduro-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "300 EXC SIX DAYS",
+      "cilindraje": "293cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-300-exc-six-days-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "350 EXC-F",
+      "cilindraje": "350cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-350-exc-f-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "390 ADVENTURE R",
+      "cilindraje": "399cc",
+      "categoria": "Travel",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-390-adventure-r-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "390 ADVENTURE X",
+      "cilindraje": "399cc",
+      "categoria": "Travel",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-390-adventure-x-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "390 ENDURO R",
+      "cilindraje": "399cc",
+      "categoria": "Dual Purpose",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-390-enduro-r-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "390 SMC R",
+      "cilindraje": "399cc",
+      "categoria": "Supermoto",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-390-smc-r-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "450 SMR",
+      "cilindraje": "449cc",
+      "categoria": "Supermoto",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-450-smr-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "ADVENTURE MID 690 RALLY",
+      "cilindraje": "692cc",
+      "categoria": "Dual Purpose",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-adventure-mid-690-rally-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "690 ENDURO R",
+      "cilindraje": "693cc",
+      "categoria": "Dual Purpose",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-dual-purpose-690-enduro-r-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "690 SMC R",
+      "cilindraje": "693cc",
+      "categoria": "Supermoto",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-super690-smc-r-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "890 ADVENTURE R",
+      "cilindraje": "889cc",
+      "categoria": "Travel",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-adventure-mid-890-adventure-r-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "890 SMT",
+      "cilindraje": "889cc",
+      "categoria": "Supermoto Touring",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-890-smt-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "990 DUKE",
+      "cilindraje": "950cc",
+      "categoria": "Naked",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-naked-mid-990-duke-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "990 DUKE R",
+      "cilindraje": "950cc",
+      "categoria": "Naked",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-naked-mid-990-duke-r-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "990 RC R",
+      "cilindraje": "950cc",
+      "categoria": "Sportbike",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-sportbike-990-rc-r-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "1390 SUPER ADVENTURE R",
+      "cilindraje": "1350cc",
+      "categoria": "Travel",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-adventure-big-1390-super-adventure-r-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "1390 SUPER ADVENTURE S",
+      "cilindraje": "1350cc",
+      "categoria": "Travel",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-adventure-big-1390-super-adventure-s-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "1390 SUPER ADVENTURE S EVO",
+      "cilindraje": "1350cc",
+      "categoria": "Travel",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-adventure-big-1390-super-adventure-s-evo-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "1390 SUPER DUKE R",
+      "cilindraje": "1350cc",
+      "categoria": "Naked",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-naked-big-1390-super-duke-r-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "1390 SUPER DUKE R EVO",
+      "cilindraje": "1350cc",
+      "categoria": "Naked",
+      "url_fuente": "https://www.autocolombiana.com.co/ktm-naked-big-1390-super-duke-r-evo-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
       "modelo": "Duke 200",
       "cilindraje": "199cc",
-      "categoria": "Naked"
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Duke 200 NG ABS",
       "cilindraje": "199cc",
-      "categoria": "Naked"
-    },
-    {
-      "modelo": "Duke 250",
-      "cilindraje": "249cc",
-      "categoria": "Naked"
-    },
-    {
-      "modelo": "Duke 390",
-      "cilindraje": "373cc",
-      "categoria": "Naked"
-    },
-    {
-      "modelo": "Duke 390 Gen 3",
-      "cilindraje": "399cc",
-      "categoria": "Naked"
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "RC 200",
       "cilindraje": "199cc",
-      "categoria": "Supersport"
-    },
-    {
-      "modelo": "RC 390",
-      "cilindraje": "373cc",
-      "categoria": "Supersport"
+      "categoria": "Supersport",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "250 Adventure",
       "cilindraje": "248cc",
-      "categoria": "Adventure"
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Duke 250",
+      "cilindraje": "249cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "390 Adventure",
       "cilindraje": "373cc",
-      "categoria": "Adventure"
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "690 Enduro R",
-      "cilindraje": "693cc",
-      "categoria": "Enduro"
+      "modelo": "Duke 390",
+      "cilindraje": "373cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "790 Duke",
-      "cilindraje": "799cc",
-      "categoria": "Naked"
+      "modelo": "RC 390",
+      "cilindraje": "373cc",
+      "categoria": "Supersport",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Duke 390 Gen 3",
+      "cilindraje": "399cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "790 Adventure",
       "cilindraje": "799cc",
-      "categoria": "Adventure"
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "790 Duke",
+      "cilindraje": "799cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "890 Duke R",
       "cilindraje": "889cc",
-      "categoria": "Naked"
-    },
-    {
-      "modelo": "890 Adventure R",
-      "cilindraje": "889cc",
-      "categoria": "Adventure"
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "1290 Super Adventure S",
       "cilindraje": "1301cc",
-      "categoria": "Adventure"
-    },
-    {
-      "modelo": "1390 Super Duke R",
-      "cilindraje": "1350cc",
-      "categoria": "Hyper Naked"
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     }
   ],
   "TVS": [
     {
-      "modelo": "Sport 100 ELS",
+      "modelo": "SPORT 100 ELS",
       "cilindraje": "99cc",
-      "categoria": "Trabajo"
+      "categoria": "Motos de Trabajo y Transporte",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-sport-100-els/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Stryker 125",
-      "cilindraje": "124cc",
-      "categoria": "Urbana"
+      "modelo": "SPORT 100 KLS",
+      "cilindraje": "99cc",
+      "categoria": "Motos de Trabajo y Transporte",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-sport-100-kls/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Raider 125",
-      "cilindraje": "124cc",
-      "categoria": "Street"
+      "modelo": "DAZZ 110",
+      "cilindraje": "109cc",
+      "categoria": "Motos Semiautomáticas",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-dazz-110/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Raider 125 FI",
+      "modelo": "NEO NX 110",
+      "cilindraje": "109cc",
+      "categoria": "Motos Semiautomáticas",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "NEO NX 110 EDICION ESPECIAL",
+      "cilindraje": "109cc",
+      "categoria": "Motos Semiautomáticas",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-110-edicion-especial/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "SPORT 110 FI",
+      "cilindraje": "109cc",
+      "categoria": "Motos de Trabajo y Transporte",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "NEO NX 125 FI",
       "cilindraje": "124cc",
-      "categoria": "Street"
+      "categoria": "Motos Semiautomáticas",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-neo-nx-125-fi/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "NTORQ 125 XCONNECT",
+      "cilindraje": "124cc",
+      "categoria": "Motos Automáticas o Scooter",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-ntorq-xconnect-125/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "NTORQ 125 XCONNECT FI",
+      "cilindraje": "124cc",
+      "categoria": "Motos Automáticas o Scooter",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-ntorq-125-xconnect-fi/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "RAIDER 125",
+      "cilindraje": "124cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-raider-125/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "RAIDER 125 FI",
+      "cilindraje": "124cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-raider-125-fi/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "RAIDER 125 RACING",
+      "cilindraje": "124cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-raider-125-racing/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "APACHE 160 CARBURADA ABS",
+      "cilindraje": "159cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/apache-rtr-160-4v-xconnect-abs/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "APACHE 160 FI ABS EDICIÓN ESPECIAL",
+      "cilindraje": "159cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/apache-160-fi-abs-edicion-especial-1/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "APACHE 160 FI NG",
+      "cilindraje": "159cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/apache-160-fi-ng/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "APACHE RTR 160 4V XC FI",
+      "cilindraje": "159cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-160-4v-fi/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "APACHE RTR 160 4V XC FI RACING",
+      "cilindraje": "159cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-apache-160-4v-xc-fi-racing/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "APACHE 200 CARBURADA ABS",
+      "cilindraje": "197cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/apache-rtr-200-4v-xconnect-abs-1/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "APACHE 200 FI EDICIÓN ESPECIAL",
+      "cilindraje": "197cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/apache-200-fi-abs-edicion-especial-1/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "APACHE 200 FI NG",
+      "cilindraje": "197cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-apache-200-fi-ng/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "APACHE RTR 200 4V XC FI ABS",
+      "cilindraje": "197cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-apache-200-4v-xc-fi-abs/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "RONIN 225 TD",
+      "cilindraje": "225cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-ronin-225-td/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "APACHE RTR 310",
+      "cilindraje": "312cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "APACHE RTR 310 PRM",
+      "cilindraje": "312cc",
+      "categoria": "Motos de Calle",
+      "url_fuente": "https://www.auteco.com.co/moto-tvs-apache-rtr-310-prm/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Ntorq 125 Race Edition",
       "cilindraje": "124cc",
-      "categoria": "Scooter"
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Stryker 125",
+      "cilindraje": "124cc",
+      "categoria": "Urbana",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Apache RTR 160 2V",
       "cilindraje": "159cc",
-      "categoria": "Street"
+      "categoria": "Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Apache RTR 160 4V FI ABS",
       "cilindraje": "159cc",
-      "categoria": "Naked / Street"
+      "categoria": "Naked / Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Apache RTR 200 4V FI ABS",
       "cilindraje": "197cc",
-      "categoria": "Naked / Street"
-    },
-    {
-      "modelo": "Apache RR 310",
-      "cilindraje": "312cc",
-      "categoria": "Supersport"
-    },
-    {
-      "modelo": "Apache RTR 310",
-      "cilindraje": "312cc",
-      "categoria": "Hyper Naked"
+      "categoria": "Naked / Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Ronin 225",
       "cilindraje": "225cc",
-      "categoria": "Neo-Retro"
+      "categoria": "Neo-Retro",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Apache RR 310",
+      "cilindraje": "312cc",
+      "categoria": "Supersport",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     }
   ],
   "Hero": [
     {
       "modelo": "Eco 100",
       "cilindraje": "97cc",
-      "categoria": "Trabajo"
+      "categoria": "Trabajo",
+      "url_fuente": "https://heromotos.com.co/trabajo/eco-100/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Eco Deluxe",
       "cilindraje": "97cc",
-      "categoria": "Trabajo"
+      "categoria": "Trabajo",
+      "url_fuente": "https://heromotos.com.co/trabajo/eco-deluxe/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Eco 150 Cargo",
-      "cilindraje": "149cc",
-      "categoria": "Trabajo"
+      "modelo": "Eco Deluxe Clásica",
+      "cilindraje": "97cc",
+      "categoria": "Trabajo",
+      "url_fuente": "https://heromotos.com.co/trabajo/eco-deluxe-clasica/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Splendor XPro",
+      "modelo": "Eco T",
+      "cilindraje": "97cc",
+      "categoria": "Trabajo",
+      "url_fuente": "https://heromotos.com.co/trabajo/eco-t/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Splendor Xpro",
       "cilindraje": "109cc",
-      "categoria": "Urbana"
+      "categoria": "Trabajo",
+      "url_fuente": "https://heromotos.com.co/trabajo/splendor-xpro/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Ignitor 125",
+      "modelo": "Xoom 110",
+      "cilindraje": "110cc",
+      "categoria": "Scooter",
+      "url_fuente": "https://heromotos.com.co/scooter/xoom-110/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Hunk 125R",
       "cilindraje": "124cc",
-      "categoria": "Urbana"
+      "categoria": "Urbanas",
+      "url_fuente": "https://heromotos.com.co/urbanas/hunk-125r/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Dash 125 FI",
+      "modelo": "Ignitor 5s",
       "cilindraje": "124cc",
-      "categoria": "Scooter"
+      "categoria": "Trabajo",
+      "url_fuente": "https://heromotos.com.co/trabajo/ignitor-5s/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Thriller Pro 150",
-      "cilindraje": "149cc",
-      "categoria": "Street"
+      "modelo": "Ignitor Xtech",
+      "cilindraje": "124cc",
+      "categoria": "Trabajo",
+      "url_fuente": "https://heromotos.com.co/trabajo/ignitor-xtech/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Hunk 150",
+      "modelo": "Xoom 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter",
+      "url_fuente": "https://heromotos.com.co/scooter/xoom-125/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Hunk 150 XT",
       "cilindraje": "149cc",
-      "categoria": "Street"
+      "categoria": "Urbanas",
+      "url_fuente": "https://heromotos.com.co/urbanas/hunk-150-xt/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Hunk 160R",
       "cilindraje": "163cc",
-      "categoria": "Naked / Street"
+      "categoria": "Urbanas",
+      "url_fuente": "https://heromotos.com.co/urbanas/hunk-160r/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Hunk 160R 4V",
       "cilindraje": "163cc",
-      "categoria": "Naked / Street"
-    },
-    {
-      "modelo": "Xpulse 200",
-      "cilindraje": "199cc",
-      "categoria": "Doble Propósito"
+      "categoria": "Urbanas",
+      "url_fuente": "https://heromotos.com.co/urbanas/hunk-160r-4v/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Xpulse 200 4V",
       "cilindraje": "199cc",
-      "categoria": "Doble Propósito"
+      "categoria": "Doble Propósito",
+      "url_fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-4v/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Xpulse 200 Pro 2.0",
+      "cilindraje": "199cc",
+      "categoria": "Doble Propósito",
+      "url_fuente": "https://heromotos.com.co/doble-proposito/xpulse-200-pro-2-0/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Xpulse Rally",
+      "cilindraje": "199cc",
+      "categoria": "Doble Propósito",
+      "url_fuente": "https://heromotos.com.co/doble-proposito/xpulse-rally/",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Dash 125 FI",
+      "cilindraje": "124cc",
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Ignitor 125",
+      "cilindraje": "124cc",
+      "categoria": "Urbana",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Eco 150 Cargo",
+      "cilindraje": "149cc",
+      "categoria": "Trabajo",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Hunk 150",
+      "cilindraje": "149cc",
+      "categoria": "Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Thriller Pro 150",
+      "cilindraje": "149cc",
+      "categoria": "Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Xpulse 200",
+      "cilindraje": "199cc",
+      "categoria": "Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Xpulse 200T",
       "cilindraje": "199cc",
-      "categoria": "Touring"
+      "categoria": "Touring",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     }
   ],
   "Victory": [
     {
+      "modelo": "ONE MP TRAKKU",
+      "cilindraje": "97cc",
+      "categoria": "Motos Semiautomáticas",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-one-mp-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "COMBAT 100 TRAKKU",
+      "cilindraje": "99cc",
+      "categoria": "Motos de Trabajo y Transporte",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-combat-100-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "ADVANCE R 125 TRAKKU",
+      "cilindraje": "124cc",
+      "categoria": "Motos Semiautomáticas",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "MRX 125 MOBIL TRAKKU",
+      "cilindraje": "124cc",
+      "categoria": "Motos Todo Terreno",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-mrx-125-mobil-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "MRX 125 S MOBIL TRAKKU",
+      "cilindraje": "124cc",
+      "categoria": "Motos Todo Terreno",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-mrx-125-s-mobil-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "MRX 125 S TRAKKU",
+      "cilindraje": "124cc",
+      "categoria": "Motos Todo Terreno",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-mrx-125-s-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "MRX 125 TRAKKU",
+      "cilindraje": "124cc",
+      "categoria": "Motos Todo Terreno",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-mrx-125-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "NEW LIFE TRAKKU",
+      "cilindraje": "124cc",
+      "categoria": "Motos Automáticas o Scooter",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "NITRO 125 TRAKKU",
+      "cilindraje": "124cc",
+      "categoria": "Motos de Trabajo y Transporte",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-nitro-125-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "SWITCH 125 TRAKKU",
+      "cilindraje": "124cc",
+      "categoria": "Motos de Trabajo y Transporte",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-switch-125-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "X1 FI 125 TRAKKU",
+      "cilindraje": "124cc",
+      "categoria": "Motos Semiautomáticas",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-x1-fi-125-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "BET ABS TRAKKU",
+      "cilindraje": "149cc",
+      "categoria": "Motos Automáticas o Scooter",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-bet-abs-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "MRX 150 MOBIL TRAKKU",
+      "cilindraje": "149cc",
+      "categoria": "Motos Todo Terreno",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-mrx-150-mobil-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "MRX 150 TRAKKU",
+      "cilindraje": "149cc",
+      "categoria": "Motos Todo Terreno",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-mrx-150-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "VENOM 14 TRAKKU",
+      "cilindraje": "149cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-venom-14-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "BET ADV TRAKKU",
+      "cilindraje": "174cc",
+      "categoria": "Motos Automáticas o Scooter",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-bet-adv-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "MRX 200 MOBIL TRAKKU",
+      "cilindraje": "199cc",
+      "categoria": "Motos Todo Terreno",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-mrx-200-mobil-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "MRX 200 TRAKKU",
+      "cilindraje": "199cc",
+      "categoria": "Motos Todo Terreno",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-mrx-200-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "MRX ARIZONA MOBIL TRAKKU",
+      "cilindraje": "199cc",
+      "categoria": "Motos Todo Terreno",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-mrx-arizona-mobil-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "MRX ARIZONA TRAKKU",
+      "cilindraje": "199cc",
+      "categoria": "Motos Todo Terreno",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-mrx-arizona-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "MRX ARIZONA XPLORE TRAKKU",
+      "cilindraje": "199cc",
+      "categoria": "Motos Todo Terreno",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-mrx-arizona-xplore-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "VENOM 18 TRAKKU",
+      "cilindraje": "199cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-venom-18-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "VENOM 250S TRAKKU",
+      "cilindraje": "250cc",
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/moto-victory-venom-250s-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
       "modelo": "One ST 100",
       "cilindraje": "97cc",
-      "categoria": "Semiautomática"
+      "categoria": "Semiautomática",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Shock 115",
       "cilindraje": "113cc",
-      "categoria": "Semiautomática"
-    },
-    {
-      "modelo": "Life 125",
-      "cilindraje": "124cc",
-      "categoria": "Scooter"
-    },
-    {
-      "modelo": "ZS 125",
-      "cilindraje": "124cc",
-      "categoria": "Scooter"
-    },
-    {
-      "modelo": "Black",
-      "cilindraje": "171cc",
-      "categoria": "Maxi Scooter"
-    },
-    {
-      "modelo": "Bet ABS 150",
-      "cilindraje": "149cc",
-      "categoria": "Maxi Scooter"
-    },
-    {
-      "modelo": "Nitro 125",
-      "cilindraje": "124cc",
-      "categoria": "Urbana"
-    },
-    {
-      "modelo": "Switch 150",
-      "cilindraje": "149cc",
-      "categoria": "Street"
+      "categoria": "Semiautomática",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Bomber 125",
       "cilindraje": "124cc",
-      "categoria": "Café Racer / Clásica"
+      "categoria": "Café Racer / Clásica",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Bomber 150",
-      "cilindraje": "149cc",
-      "categoria": "Café Racer / Clásica"
-    },
-    {
-      "modelo": "Bomber 250",
-      "cilindraje": "249cc",
-      "categoria": "Café Racer / Clásica"
-    },
-    {
-      "modelo": "Venom 14",
-      "cilindraje": "149cc",
-      "categoria": "Naked"
-    },
-    {
-      "modelo": "Venom 18",
-      "cilindraje": "177cc",
-      "categoria": "Naked"
-    },
-    {
-      "modelo": "Venom 250",
-      "cilindraje": "249cc",
-      "categoria": "Naked"
-    },
-    {
-      "modelo": "Venom 400",
-      "cilindraje": "378cc",
-      "categoria": "Naked"
+      "modelo": "Life 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "MRX 125",
       "cilindraje": "124cc",
-      "categoria": "Enduro / Doble Propósito"
+      "categoria": "Enduro / Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Nitro 125",
+      "cilindraje": "124cc",
+      "categoria": "Urbana",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "ZS 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Bet ABS 150",
+      "cilindraje": "149cc",
+      "categoria": "Maxi Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Bomber 150",
+      "cilindraje": "149cc",
+      "categoria": "Café Racer / Clásica",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "MRX 150",
       "cilindraje": "149cc",
-      "categoria": "Enduro / Doble Propósito"
+      "categoria": "Enduro / Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Switch 150",
+      "cilindraje": "149cc",
+      "categoria": "Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Venom 14",
+      "cilindraje": "149cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Black",
+      "cilindraje": "171cc",
+      "categoria": "Maxi Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Venom 18",
+      "cilindraje": "177cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "MRX 200",
       "cilindraje": "199cc",
-      "categoria": "Enduro / Doble Propósito"
+      "categoria": "Enduro / Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "MRX Arizona 200",
       "cilindraje": "199cc",
-      "categoria": "Adventure"
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Bomber 250",
+      "cilindraje": "249cc",
+      "categoria": "Café Racer / Clásica",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Venom 250",
+      "cilindraje": "249cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Venom 400",
+      "cilindraje": "378cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     }
   ],
   "Kawasaki": [
     {
-      "modelo": "KLX 150",
+      "modelo": "KX 85",
+      "cilindraje": "84cc",
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-kx-85/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "KX 112",
+      "cilindraje": "112cc",
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-kx-112/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "KLX140 RL",
       "cilindraje": "144cc",
-      "categoria": "Enduro / Doble Propósito"
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-klx140-rl/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "KLX 230",
-      "cilindraje": "233cc",
-      "categoria": "Enduro / Doble Propósito"
-    },
-    {
-      "modelo": "KLX 300",
+      "modelo": "KLX 300 R",
       "cilindraje": "292cc",
-      "categoria": "Enduro / Doble Propósito"
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-klx-300-r/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Z400",
+      "modelo": "VERSYS 300 ABS",
+      "cilindraje": "296cc",
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/moto-kawasaki-versys-300-abs/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "NINJA ZX-4RR",
       "cilindraje": "399cc",
-      "categoria": "Supernaked"
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-4rr/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "KLE 500",
+      "cilindraje": "451cc",
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-kle-500/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "KLE 500 SE",
+      "cilindraje": "451cc",
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-kle500-se/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "NINJA 500",
+      "cilindraje": "451cc",
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-ninja-500/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Z500",
       "cilindraje": "451cc",
-      "categoria": "Supernaked"
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-z500/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Z650",
+      "modelo": "NINJA ZX-6R",
+      "cilindraje": "636cc",
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-ninja-zx-6r/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "VERSYS 650",
       "cilindraje": "649cc",
-      "categoria": "Supernaked"
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/moto-kawasaki-versys-650/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Z900",
       "cilindraje": "948cc",
-      "categoria": "Supernaked"
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-z900/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Z H2",
-      "cilindraje": "998cc",
-      "categoria": "Hypernaked"
+      "modelo": "Z900 RS",
+      "cilindraje": "948cc",
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-z900-rs/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Ninja 400",
-      "cilindraje": "399cc",
-      "categoria": "Supersport"
+      "modelo": "Z900 RS SE",
+      "cilindraje": "948cc",
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-z900-rs-se/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Ninja 500",
-      "cilindraje": "451cc",
-      "categoria": "Supersport"
+      "modelo": "Z1100",
+      "cilindraje": "1099cc",
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-z1100/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Ninja 650",
-      "cilindraje": "649cc",
-      "categoria": "Sport"
+      "modelo": "Z1100 SE",
+      "cilindraje": "1099cc",
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/kawasaki-z1100-se/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Ninja ZX-4RR",
-      "cilindraje": "399cc",
-      "categoria": "Supersport"
+      "modelo": "KLX 150",
+      "cilindraje": "144cc",
+      "categoria": "Enduro / Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Ninja ZX-6R",
-      "cilindraje": "636cc",
-      "categoria": "Supersport"
+      "modelo": "KLX 230",
+      "cilindraje": "233cc",
+      "categoria": "Enduro / Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Ninja ZX-10R",
-      "cilindraje": "998cc",
-      "categoria": "Superbike"
+      "modelo": "KLX 300",
+      "cilindraje": "292cc",
+      "categoria": "Enduro / Doble Propósito",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Versys-X 300",
       "cilindraje": "296cc",
-      "categoria": "Adventure"
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "Versys 650",
+      "modelo": "Ninja 400",
+      "cilindraje": "399cc",
+      "categoria": "Supersport",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Z400",
+      "cilindraje": "399cc",
+      "categoria": "Supernaked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Ninja 650",
       "cilindraje": "649cc",
-      "categoria": "Adventure Touring"
-    },
-    {
-      "modelo": "Versys 1000 SE",
-      "cilindraje": "1043cc",
-      "categoria": "Adventure Touring"
-    },
-    {
-      "modelo": "KLR 650",
-      "cilindraje": "652cc",
-      "categoria": "Adventure"
+      "categoria": "Sport",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Vulcan S 650",
       "cilindraje": "649cc",
-      "categoria": "Cruiser"
+      "categoria": "Cruiser",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Z650",
+      "cilindraje": "649cc",
+      "categoria": "Supernaked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "KLR 650",
+      "cilindraje": "652cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Ninja ZX-10R",
+      "cilindraje": "998cc",
+      "categoria": "Superbike",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Z H2",
+      "cilindraje": "998cc",
+      "categoria": "Hypernaked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Versys 1000 SE",
+      "cilindraje": "1043cc",
+      "categoria": "Adventure Touring",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     }
   ],
   "Royal Enfield": [
@@ -2351,183 +3754,628 @@
   ],
   "Benelli": [
     {
-      "modelo": "TNT 135",
-      "cilindraje": "135cc",
-      "categoria": "Mini Naked"
-    },
-    {
-      "modelo": "TNT 150i",
-      "cilindraje": "149cc",
-      "categoria": "Street"
-    },
-    {
-      "modelo": "180S",
-      "cilindraje": "175cc",
-      "categoria": "Naked"
-    },
-    {
       "modelo": "TNT 25N",
       "cilindraje": "249cc",
-      "categoria": "Naked"
-    },
-    {
-      "modelo": "BN 302S",
-      "cilindraje": "300cc",
-      "categoria": "Naked"
-    },
-    {
-      "modelo": "Leoncino 250",
-      "cilindraje": "249cc",
-      "categoria": "Scrambler"
-    },
-    {
-      "modelo": "Leoncino 500",
-      "cilindraje": "500cc",
-      "categoria": "Scrambler"
-    },
-    {
-      "modelo": "Leoncino 800",
-      "cilindraje": "754cc",
-      "categoria": "Scrambler"
+      "categoria": "Motos Deportivas",
+      "url_fuente": "https://www.auteco.com.co/moto-benelli-tnt-25n/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "TRK 251",
       "cilindraje": "249cc",
-      "categoria": "Adventure"
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/moto-benelli-trk-251/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "LEONCINO 500 TRAIL",
+      "cilindraje": "500cc",
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/moto-benelli-leoncino-500-trail/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "TRK 502",
       "cilindraje": "500cc",
-      "categoria": "Adventure"
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/moto-benelli-trk-502/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "TRK 502X",
+      "modelo": "TRK 502 X",
       "cilindraje": "500cc",
-      "categoria": "Adventure"
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "TRK 702X",
-      "cilindraje": "698cc",
-      "categoria": "Adventure"
+      "modelo": "LEONCINO 800",
+      "cilindraje": "754cc",
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "LEONCINO 800 TRAIL",
+      "cilindraje": "754cc",
+      "categoria": "Motos Alta Gama",
+      "url_fuente": "https://www.auteco.com.co/moto-benelli-leoncino-800-trail/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "TNT 135",
+      "cilindraje": "135cc",
+      "categoria": "Mini Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "TNT 150i",
+      "cilindraje": "149cc",
+      "categoria": "Street",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "180S",
+      "cilindraje": "175cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Leoncino 250",
+      "cilindraje": "249cc",
+      "categoria": "Scrambler",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "BN 302S",
+      "cilindraje": "300cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "502C",
       "cilindraje": "500cc",
-      "categoria": "Cruiser"
+      "categoria": "Cruiser",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Leoncino 500",
+      "cilindraje": "500cc",
+      "categoria": "Scrambler",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "TRK 502X",
+      "cilindraje": "500cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "TRK 702X",
+      "cilindraje": "698cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "752S",
       "cilindraje": "754cc",
-      "categoria": "Naked"
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     }
   ],
   "Husqvarna": [
     {
+      "modelo": "TC 50",
+      "cilindraje": "50cc",
+      "categoria": "Mini",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-tc-50-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "TC 65",
+      "cilindraje": "65cc",
+      "categoria": "Mini",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-tc-65-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "TC 85 17/14",
+      "cilindraje": "85cc",
+      "categoria": "Mini",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-tc-85-17-14-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "TC 85 19/16",
+      "cilindraje": "85cc",
+      "categoria": "Mini",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-tc-85-19-16-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "TE 125",
+      "cilindraje": "125cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-te-125-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "FE 250",
+      "cilindraje": "249cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-fe-250-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "SVARTPILEN 250",
+      "cilindraje": "249cc",
+      "categoria": "Naked",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-svartpilen-250-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "FC 250",
+      "cilindraje": "250cc",
+      "categoria": "Motocross",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-fc-250-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "TE 250",
+      "cilindraje": "250cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-te-250-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "TE 300",
+      "cilindraje": "293cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-te-300-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "TE 300 PRO",
+      "cilindraje": "293cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-te-300-pro-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "FE 350",
+      "cilindraje": "349cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-fe-350-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "FE 350 PRO",
+      "cilindraje": "349cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-fe-350-pro-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "FE 350",
+      "cilindraje": "350cc",
+      "categoria": "Enduro",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-fe-350-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "FS 450",
+      "cilindraje": "450cc",
+      "categoria": "Supermoto",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-fs-450-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "701 ENDURO",
+      "cilindraje": "693cc",
+      "categoria": "Dual Purpose",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-701-enduro-2026-/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "701 SUPERMOTO",
+      "cilindraje": "693cc",
+      "categoria": "Supermoto",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-701-supermoto-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "SVARTPILEN 801",
+      "cilindraje": "799cc",
+      "categoria": "Naked",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-svartpilen-801-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "VITPILEN 801",
+      "cilindraje": "799cc",
+      "categoria": "Naked",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-vitpilen-801-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "NORDEN 901",
+      "cilindraje": "889cc",
+      "categoria": "Travel",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-norden-901-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "NORDEN 901 EXPEDITION",
+      "cilindraje": "889cc",
+      "categoria": "Travel",
+      "url_fuente": "https://www.autocolombiana.com.co/husqvarna-norden-901-expedition-2026/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
       "modelo": "Svartpilen 200",
       "cilindraje": "199cc",
-      "categoria": "Urban Explorer"
+      "categoria": "Urban Explorer",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Svartpilen 250",
       "cilindraje": "248cc",
-      "categoria": "Urban Explorer"
+      "categoria": "Urban Explorer",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Svartpilen 401",
       "cilindraje": "373cc",
-      "categoria": "Urban Explorer"
-    },
-    {
-      "modelo": "Svartpilen 401 Gen 2",
-      "cilindraje": "399cc",
-      "categoria": "Urban Explorer"
+      "categoria": "Urban Explorer",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Vitpilen 401",
       "cilindraje": "373cc",
-      "categoria": "Café Racer"
+      "categoria": "Café Racer",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "701 Enduro",
-      "cilindraje": "693cc",
-      "categoria": "Enduro"
-    },
-    {
-      "modelo": "701 Supermoto",
-      "cilindraje": "693cc",
-      "categoria": "Supermoto"
-    },
-    {
-      "modelo": "Norden 901",
-      "cilindraje": "889cc",
-      "categoria": "Adventure"
+      "modelo": "Svartpilen 401 Gen 2",
+      "cilindraje": "399cc",
+      "categoria": "Urban Explorer",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     }
   ],
   "CFMoto": [
     {
+      "modelo": "CFLITE 250DUAL",
+      "cilindraje": "249cc",
+      "url_fuente": "https://www.autocolombiana.com.co/cflite-250dual-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "CFLITE 250NK",
+      "cilindraje": "249cc",
+      "url_fuente": "https://www.autocolombiana.com.co/cflite-250nk-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "CFLITE 250SR",
+      "cilindraje": "249cc",
+      "url_fuente": "https://www.autocolombiana.com.co/cflite-250sr-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "300NK",
+      "cilindraje": "292cc",
+      "url_fuente": "https://www.autocolombiana.com.co/300nk-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "300SR",
+      "cilindraje": "298cc",
+      "url_fuente": "https://www.autocolombiana.com.co/300sr-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "450CLC BOBBER",
+      "cilindraje": "449cc",
+      "url_fuente": "https://www.autocolombiana.com.co/450clc-bobber-2026-1/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "450MT RALLY",
+      "cilindraje": "449cc",
+      "url_fuente": "https://www.autocolombiana.com.co/450mt-rally-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "450MT SPORT",
+      "cilindraje": "449cc",
+      "url_fuente": "https://www.autocolombiana.com.co/450mt-sport-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "450NK",
+      "cilindraje": "449cc",
+      "url_fuente": "https://www.autocolombiana.com.co/450nk-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "450SR",
+      "cilindraje": "449cc",
+      "url_fuente": "https://www.autocolombiana.com.co/450sr-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "675NK",
+      "cilindraje": "675cc",
+      "url_fuente": "https://www.autocolombiana.com.co/675nk-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "675SR-R",
+      "cilindraje": "675cc",
+      "url_fuente": "https://www.autocolombiana.com.co/675sr-r-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "700MT",
+      "cilindraje": "693cc",
+      "url_fuente": "https://www.autocolombiana.com.co/700mt-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "800 MT ES",
+      "cilindraje": "799cc",
+      "url_fuente": "https://www.autocolombiana.com.co/800-mt-es-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "800 MT-X",
+      "cilindraje": "799cc",
+      "url_fuente": "https://www.autocolombiana.com.co/800mt-x-2026-1/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "800MT-X",
+      "cilindraje": "799cc",
+      "url_fuente": "https://www.autocolombiana.com.co/800mt-x-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "800NK HIGH",
+      "cilindraje": "799cc",
+      "url_fuente": "https://www.autocolombiana.com.co/800nk-high-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "1000MT-X",
+      "cilindraje": "946cc",
+      "url_fuente": "https://www.autocolombiana.com.co/1000mt-x-2027/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
       "modelo": "250 NK",
       "cilindraje": "249cc",
-      "categoria": "Naked"
-    },
-    {
-      "modelo": "300 NK",
-      "cilindraje": "292cc",
-      "categoria": "Naked"
-    },
-    {
-      "modelo": "450 NK",
-      "cilindraje": "449cc",
-      "categoria": "Naked"
-    },
-    {
-      "modelo": "650 NK",
-      "cilindraje": "649cc",
-      "categoria": "Naked"
-    },
-    {
-      "modelo": "800 NK",
-      "cilindraje": "799cc",
-      "categoria": "Naked"
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "250 SR",
       "cilindraje": "249cc",
-      "categoria": "Supersport"
+      "categoria": "Supersport",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "300 NK",
+      "cilindraje": "292cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "300 SR",
       "cilindraje": "292cc",
-      "categoria": "Supersport"
-    },
-    {
-      "modelo": "450 SR",
-      "cilindraje": "449cc",
-      "categoria": "Supersport"
+      "categoria": "Supersport",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "450 MT",
       "cilindraje": "449cc",
-      "categoria": "Adventure"
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "450 NK",
+      "cilindraje": "449cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "450 SR",
+      "cilindraje": "449cc",
+      "categoria": "Supersport",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "650 MT",
       "cilindraje": "649cc",
-      "categoria": "Adventure Touring"
+      "categoria": "Adventure Touring",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
-      "modelo": "700 MT",
-      "cilindraje": "693cc",
-      "categoria": "Adventure Touring"
-    },
-    {
-      "modelo": "800 MT Explore",
-      "cilindraje": "799cc",
-      "categoria": "Adventure"
+      "modelo": "650 NK",
+      "cilindraje": "649cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "700 CL-X Heritage",
       "cilindraje": "693cc",
-      "categoria": "Neo-Retro"
+      "categoria": "Neo-Retro",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "700 MT",
+      "cilindraje": "693cc",
+      "categoria": "Adventure Touring",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "800 MT Explore",
+      "cilindraje": "799cc",
+      "categoria": "Adventure",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "800 NK",
+      "cilindraje": "799cc",
+      "categoria": "Naked",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     }
   ],
   "Ducati": [
@@ -2671,49 +4519,94 @@
   ],
   "Kymco": [
     {
+      "modelo": "AGILITY FUSION",
+      "cilindraje": "124cc",
+      "categoria": "Motos Automáticas o Scooter",
+      "url_fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "AGILITY FUSION TRAKKU",
+      "cilindraje": "124cc",
+      "categoria": "Motos Automáticas o Scooter",
+      "url_fuente": "https://www.auteco.com.co/moto-kymco-agility-fusion-trakku/p",
+      "tiene_ficha": true,
+      "vigente": true,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
       "modelo": "Agility 125 Digital 3.0",
       "cilindraje": "124cc",
-      "categoria": "Scooter"
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Agility Go 125",
       "cilindraje": "124cc",
-      "categoria": "Scooter"
-    },
-    {
-      "modelo": "Twist 125",
-      "cilindraje": "124cc",
-      "categoria": "Scooter"
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Fly 125",
       "cilindraje": "124cc",
-      "categoria": "Scooter"
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Like 125",
       "cilindraje": "124cc",
-      "categoria": "Scooter Clásico"
+      "categoria": "Scooter Clásico",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
+    },
+    {
+      "modelo": "Twist 125",
+      "cilindraje": "124cc",
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Super 8 150",
       "cilindraje": "149cc",
-      "categoria": "Scooter"
+      "categoria": "Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Downtown 350i",
       "cilindraje": "321cc",
-      "categoria": "Maxi Scooter"
+      "categoria": "Maxi Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "Xciting S 400",
       "cilindraje": "400cc",
-      "categoria": "Maxi Scooter"
+      "categoria": "Maxi Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "AK 550",
       "cilindraje": "550cc",
-      "categoria": "Maxi Scooter"
+      "categoria": "Maxi Scooter",
+      "tiene_ficha": false,
+      "vigente": false,
+      "visto_por_ultima_vez": "2026-11-18"
     }
   ],
   "SYM": [

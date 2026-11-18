@@ -1,0 +1,112 @@
+{
+  "marca": "Benelli",
+  "modelo": "TRK 502 X",
+  "cilindraje_cc": 500,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "500 cc",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "47,6 HP @ 8500 rpm",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "20L (5,28 gal)",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "20 L"
+    },
+    "tipo_motor": {
+      "texto_original": "Bicilíndrico, 4 tiempos, 8 válvulas DOHC",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "46 Nm @ 6000 rpm",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Mecánica 6 velocidades",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "11,5 : 1",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Barras invertidas de 50 mm y 140 mm de recorrido",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Líquido",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Monoshock de 135 mm de recorrido",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Doble disco flotante de 320 mm con mordaza de 2 pistones",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco de 260 mm con mordaza de un pistón",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "110/80 R19",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "150/70 R17",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1505 mm",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "840mm",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "840 mm"
+    },
+    "peso": {
+      "texto_original": "199 kg",
+      "fuente": "https://www.auteco.com.co/moto-benelli-trk-502-x/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "marca": "Suzuki",
+  "modelo": "AVENIS",
+  "cilindraje_cc": 124,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "altura_asiento": {
+      "texto_original": "780 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "106 kg",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "124,3 CM³",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "124 cc"
+    },
+    "distancia_ejes": {
+      "texto_original": "1265 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono Amortiguado sin graduación",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Tambor Combinado",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "90/90 - 12 54J TUBELESS",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "90/100 - 10 53J TUBELESS",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "5,2 L",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "5.2 L"
+    },
+    "potencia_maxima": {
+      "texto_original": "8,5 HP a 6750 RPM",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "10 NM a 5500 RPM",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "CVT (Correa de transmisión)",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y pedal",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/avenis",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "marca": "Victory",
+  "modelo": "NEW LIFE TRAKKU",
+  "cilindraje_cc": 124,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "124,6 cc",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "124 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "8.4 HP @ 7500 rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "5,35 L (1,41 gal)",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "5.3 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, monocilíndrico",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "8,7 Nm @ 6500rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Automática centrífuga (CVT)",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9,5:1",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telecópica hidráulica",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire forzado",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y pedal",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono amortiguador",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco, pinza doble pistón",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco central",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "120/70 - R12",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "120/70 - R12",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "abs": {
+      "texto_original": "No",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1285 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "810 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "107kg",
+      "fuente": "https://www.auteco.com.co/moto-victory-new-life-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "107 kg"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

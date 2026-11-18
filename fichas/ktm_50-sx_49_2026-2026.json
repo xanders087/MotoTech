@@ -1,0 +1,26 @@
+{
+  "marca": "KTM",
+  "modelo": "50 SX",
+  "cilindraje_cc": 49,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "49.9 cm³",
+      "fuente": "https://www.autocolombiana.com.co/ktm-50-sx-2026/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "49 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "5.5 HP",
+      "fuente": "https://www.autocolombiana.com.co/ktm-50-sx-2026/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

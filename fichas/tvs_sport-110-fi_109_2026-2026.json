@@ -1,0 +1,107 @@
+{
+  "marca": "TVS",
+  "modelo": "SPORT 110 FI",
+  "cilindraje_cc": 109,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "109,7 CC",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "109 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "8,1 hp @7350 rpm",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "10 LT (2,64 GAL)",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "10 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4T MONOCILÍNDRICO",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "8,4 NM @ 4500 RPM",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "10:1",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección electrónica",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "114 KG",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "TELESCOPICA HIDRÁULICA",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "DOBLE AMORTIGUADOR TRASERO REGULABLE EN 5 POSICIONES DE PRECARGA",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "DISCO 240 MM",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "CAMPANA 110 MM",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "2.75 - 17 41P 4PR",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "3.00 - 17 50P 6PR",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "abs": {
+      "texto_original": "No",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1236 MM",
+      "fuente": "https://www.auteco.com.co/moto-tvs-sport-110-fi/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": "https://media.autecomobility.com/recursos/marcas/tvs/manuales/usuario/Manual-de-garantia-TVS-Sport-110-FI.pdf",
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

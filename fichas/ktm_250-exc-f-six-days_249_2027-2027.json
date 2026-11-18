@@ -1,0 +1,31 @@
+{
+  "marca": "KTM",
+  "modelo": "250 EXC-F SIX DAYS",
+  "cilindraje_cc": 249,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "249.92 cm³",
+      "fuente": "https://www.autocolombiana.com.co/ktm-250-exc-f-six-days-2027/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "249 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "47 HP @ 11,000 rpm",
+      "fuente": "https://www.autocolombiana.com.co/ktm-250-exc-f-six-days-2027/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "28 Nm @ 8,500 rpm",
+      "fuente": "https://www.autocolombiana.com.co/ktm-250-exc-f-six-days-2027/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

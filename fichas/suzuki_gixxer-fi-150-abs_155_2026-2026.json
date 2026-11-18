@@ -1,0 +1,92 @@
+{
+  "marca": "Suzuki",
+  "modelo": "GIXXER FI 150 ABS",
+  "cilindraje_cc": 155,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "tipo_transmision": {
+      "texto_original": "5 velocidades",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "155 cm3",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "155 cc"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, 1 cilindro, refrigerado por aire",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescopica",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Mono Amortiguado Ajustable en 7 posiciones",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Electrico",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1335 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "795 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "138 Kg",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "100/80 R 17 M/C",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "140/60 R 17 M/C",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "12 L / 3.17 Gal",
+      "fuente": "https://suzuki.com.co/motocicletas/sport/gixxer-fi-150-abs",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "12 L"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

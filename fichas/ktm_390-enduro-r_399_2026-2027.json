@@ -1,0 +1,31 @@
+{
+  "marca": "KTM",
+  "modelo": "390 ENDURO R",
+  "cilindraje_cc": 399,
+  "anio_desde": 2026,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "399 cm³",
+      "fuente": "https://www.autocolombiana.com.co/ktm-390-enduro-r-2026/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "399 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "44 HP @ 9,000 rpm",
+      "fuente": "https://www.autocolombiana.com.co/ktm-390-enduro-r-2026/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "39 Nm @ 7,000 rpm",
+      "fuente": "https://www.autocolombiana.com.co/ktm-390-enduro-r-2026/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

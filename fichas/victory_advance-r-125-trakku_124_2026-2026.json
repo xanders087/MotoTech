@@ -1,0 +1,107 @@
+{
+  "marca": "Victory",
+  "modelo": "ADVANCE R 125 TRAKKU",
+  "cilindraje_cc": 124,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "124,7 cc",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "124 cc"
+    },
+    "potencia_maxima": {
+      "texto_original": "8,7HP @ 8000 rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "capacidad_tanque": {
+      "texto_original": "3,7 L (0,97 gal)",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "3.7 L"
+    },
+    "tipo_motor": {
+      "texto_original": "4 tiempos, monocilíndrico",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "8,7 Nm @ 6000 rpm",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Semiautomática 4 velocidades",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "relacion_compresion": {
+      "texto_original": "9,8:1",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "alimentacion": {
+      "texto_original": "Carburador",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_delantera": {
+      "texto_original": "Telescópica hidráulica",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "refrigeracion": {
+      "texto_original": "Aire",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico y pedal",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "suspension_trasera": {
+      "texto_original": "Doble amortiguador",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco 220mm. Pinza doble pistón",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Bandas expandibles de 110 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "abs": {
+      "texto_original": "No",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "distancia_ejes": {
+      "texto_original": "1245 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "altura_asiento": {
+      "texto_original": "770 mm",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    },
+    "peso": {
+      "texto_original": "97 kg",
+      "fuente": "https://www.auteco.com.co/moto-victory-advance-r-125-trakku/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

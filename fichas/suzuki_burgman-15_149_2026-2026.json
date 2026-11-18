@@ -1,0 +1,76 @@
+{
+  "marca": "Suzuki",
+  "modelo": "BURGMAN 15",
+  "cilindraje_cc": 149,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "peso": {
+      "texto_original": "145 kg",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/burgman-15",
+      "capturado": "2026-11-18"
+    },
+    "cilindraje": {
+      "texto_original": "149 cm3",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/burgman-15",
+      "capturado": "2026-11-18",
+      "valor_normalizado": "149 cc"
+    },
+    "distancia_ejes": {
+      "texto_original": "1315 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/burgman-15",
+      "capturado": "2026-11-18"
+    },
+    "tipo_motor": {
+      "texto_original": "1 Cilindro 4 tiempos",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/burgman-15",
+      "capturado": "2026-11-18"
+    },
+    "freno_delantero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/burgman-15",
+      "capturado": "2026-11-18"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/burgman-15",
+      "capturado": "2026-11-18"
+    },
+    "llanta_delantera": {
+      "texto_original": "110/80 R14",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/burgman-15",
+      "capturado": "2026-11-18"
+    },
+    "llanta_trasera": {
+      "texto_original": "130/70 R14",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/burgman-15",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "14,2 hp @8500 rpm",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/burgman-15",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "14,2 Nm @ 6500 rpm",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/burgman-15",
+      "capturado": "2026-11-18"
+    },
+    "tipo_transmision": {
+      "texto_original": "Automática",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/burgman-15",
+      "capturado": "2026-11-18"
+    },
+    "arranque": {
+      "texto_original": "Eléctrico",
+      "fuente": "https://suzuki.com.co/motocicletas/automaticas/burgman-15",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

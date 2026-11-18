@@ -1,0 +1,30 @@
+{
+  "marca": "CFMoto",
+  "modelo": "300NK",
+  "cilindraje_cc": 292,
+  "anio_desde": 2027,
+  "anio_hasta": 2027,
+  "anio_origen": "fuente",
+  "ficha_tecnica": {
+    "cilindraje": {
+      "texto_original": "292 CC",
+      "fuente": "https://www.autocolombiana.com.co/300nk-2027/p",
+      "capturado": "2026-11-18"
+    },
+    "potencia_maxima": {
+      "texto_original": "27,8 HP @8.750rpm",
+      "fuente": "https://www.autocolombiana.com.co/300nk-2027/p",
+      "capturado": "2026-11-18"
+    },
+    "torque_maximo": {
+      "texto_original": "25 Nm@ 7.000 rpm",
+      "fuente": "https://www.autocolombiana.com.co/300nk-2027/p",
+      "capturado": "2026-11-18"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-18"
+  }
+}

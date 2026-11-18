@@ -28,6 +28,10 @@ class NormalizacionYValidacionTest(unittest.TestCase):
         self.assertEqual(("peso", None), ficha_tecnica.mapear_etiqueta("PESO**"))
         self.assertEqual(("torque_maximo", None), ficha_tecnica.mapear_etiqueta("Torque máxima"))
         self.assertEqual(("potencia_maxima", "hp"), ficha_tecnica.mapear_etiqueta("Potencia máxima (Hp/rpm)"))
+        self.assertEqual(("potencia_maxima", None), ficha_tecnica.mapear_etiqueta("Max. Potencia"))
+        self.assertEqual(("torque_maximo", None), ficha_tecnica.mapear_etiqueta("Max. Torque"))
+        self.assertEqual(("alimentacion", None), ficha_tecnica.mapear_etiqueta("Sistema de alimentación de combustible"))
+        self.assertEqual(("altura_asiento", None), ficha_tecnica.mapear_etiqueta("ALTURA AL SILLÍN"))
         self.assertEqual((None, None), ficha_tecnica.mapear_etiqueta("Precio de lista"))
         self.assertEqual((None, None), ficha_tecnica.mapear_etiqueta("Relación de transmisión en 1ra"))
 
@@ -54,6 +58,7 @@ class NormalizacionYValidacionTest(unittest.TestCase):
         # Unidad proveniente de etiqueta en potencia / torque
         self.assertEqual(("10.34/8.000", "10.34 HP"), ficha_tecnica.validar_y_normalizar_dato("potencia_maxima", "10.34/8.000", "hp"))
         self.assertEqual(("9.3/7.000", "9.3 Nm"), ficha_tecnica.validar_y_normalizar_dato("torque_maximo", "9.3/7.000", "nm"))
+        self.assertEqual(("10:01 (combustible corriente)", None), ficha_tecnica.validar_y_normalizar_dato("relacion_compresion", "10:01 (combustible corriente)"))
 
         # Fuera de rango o sin unidad requerida
         self.assertIsNone(ficha_tecnica.validar_y_normalizar_dato("cilindraje", "15 cc"))
@@ -131,6 +136,58 @@ class FixturesRealesTest(unittest.TestCase):
         self.assertEqual("9.3 Nm", m.ficha_tecnica["torque_maximo"]["valor_normalizado"])
         self.assertEqual("1270 mm", m.ficha_tecnica["distancia_ejes"]["valor_normalizado"])
         self._validar_como_ficha(m, "AKT")
+
+    def test_fixture_suzuki_gixxer_sf250_pdp(self):
+        html = (FIXTURES / "suzuki_gixxer_sf250_pdp.html").read_text(encoding="utf-8")
+        url = "https://www.suzuki.com.co/motocicletas/sport/gixxer-sf-250"
+        m = adaptadores.parsear_suzuki_modelo_html(html, url, hoy="2026-11-18")
+        self.assertIsNotNone(m)
+        self.assertEqual("GIXXER SF 250", m.modelo)
+        self.assertEqual(249, m.cilindraje_cc)
+        self.assertGreaterEqual(len(m.ficha_tecnica), 16)
+        self.assertEqual("12 L", m.ficha_tecnica["capacidad_tanque"]["valor_normalizado"])
+        self.assertEqual("160 kg", m.ficha_tecnica["peso"]["texto_original"])
+        self._validar_como_ficha(m, "Suzuki")
+
+    def test_fixture_hero_xpulse200_4v_pdp(self):
+        html = (FIXTURES / "hero_xpulse200_4v_pdp.html").read_text(encoding="utf-8")
+        url = "https://heromotos.com.co/doble-proposito/xpulse-200-4v/"
+        m = adaptadores.parsear_hero_modelo_html(html, url, hoy="2026-11-18")
+        self.assertIsNotNone(m)
+        self.assertEqual("Xpulse 200 4V", m.modelo)
+        self.assertEqual(199, m.cilindraje_cc)
+        self.assertGreaterEqual(len(m.ficha_tecnica), 15)
+        self.assertIn("Disco, ABS", m.ficha_tecnica["freno_delantero"]["texto_original"])
+        self.assertIn("Monoshock", m.ficha_tecnica["suspension_trasera"]["texto_original"])
+        self.assertIn("Manual-de-Usuario-Xpulse-200-4V.pdf", m.url_manual or "")
+        self._validar_como_ficha(m, "Hero")
+
+    def test_fixture_auteco_tvs_y_victory_api(self):
+        tvs_raw = json.loads((FIXTURES / "auteco_tvs_neo_nx125_api.json").read_text(encoding="utf-8"))
+        m_tvs = adaptadores.parsear_auteco_vtex_producto(tvs_raw, "TVS", hoy="2026-11-18")
+        self.assertIsNotNone(m_tvs)
+        self.assertEqual(124, m_tvs.cilindraje_cc)
+        self.assertGreaterEqual(len(m_tvs.ficha_tecnica), 18)
+        self.assertEqual("767 mm", m_tvs.ficha_tecnica["altura_asiento"]["texto_original"])
+        self.assertIn("Manual-de-usuario-TVS-NEO-125-FI.pdf", m_tvs.url_manual or "")
+        self._validar_como_ficha(m_tvs, "TVS")
+
+        vic_raw = json.loads((FIXTURES / "auteco_victory_mrx125_api.json").read_text(encoding="utf-8"))
+        m_vic = adaptadores.parsear_auteco_vtex_producto(vic_raw, "Victory", hoy="2026-11-18")
+        self.assertIsNotNone(m_vic)
+        self.assertEqual(124, m_vic.cilindraje_cc)
+        self.assertGreaterEqual(len(m_vic.ficha_tecnica), 17)
+        self._validar_como_ficha(m_vic, "Victory")
+
+    def test_fixture_autocolombiana_ktm_390_api(self):
+        ktm_raw = json.loads((FIXTURES / "autocolombiana_ktm_390_api.json").read_text(encoding="utf-8"))
+        m_ktm = adaptadores.parsear_autocolombiana_vtex_producto(ktm_raw, "KTM", hoy="2026-11-18")
+        self.assertIsNotNone(m_ktm)
+        self.assertEqual(399, m_ktm.cilindraje_cc)
+        self.assertIsNotNone(m_ktm.anio_fuente)
+        self.assertIn("cilindraje", m_ktm.ficha_tecnica)
+        self.assertIn("potencia_maxima", m_ktm.ficha_tecnica)
+        self._validar_como_ficha(m_ktm, "KTM")
 
 
 class VersionadoAnualTest(unittest.TestCase):

@@ -1071,6 +1071,12 @@ def extraer_desde_pdf(
     rate_limiter: RateLimiter | None = None,
 ) -> tuple[dict[str, Any] | None, dict[str, Any] | None, str | None]:
     """Descarga y extrae (plan_mantenimiento, datos_servicio, motivo_si_omite) para una moto."""
+    if not es_url_oficial(url_pdf, dominios_permitidos):
+        return None, None, f"URL fuera de lista blanca o sin HTTPS: {url_pdf}"
+    marca_low = marca.strip().lower()
+    if marca_low not in ("yamaha", "bajaj"):
+        return None, None, f"Sin plantilla de mantenimiento configurada para {marca}"
+
     ruta_pdf, sha256, err = obtener_pdf_oficial(
         url_pdf,
         dominios_permitidos,
@@ -1080,16 +1086,6 @@ def extraer_desde_pdf(
     )
     if err or ruta_pdf is None or sha256 is None:
         return None, None, err or "No se pudo obtener el PDF"
-
-    marca_low = marca.strip().lower()
-    if marca_low not in ("yamaha", "bajaj"):
-        try:
-            with pdfplumber.open(ruta_pdf) as pdf:
-                if not pdf_tiene_texto_extraible(pdf):
-                    return None, None, "PDF sin texto extraíble (escaneado o en curvas)"
-        except Exception as e:
-            return None, None, f"Error leyendo PDF: {e}"
-        return None, None, f"Sin plantilla de mantenimiento configurada para {marca}"
 
     try:
         with pdfplumber.open(ruta_pdf) as pdf:
