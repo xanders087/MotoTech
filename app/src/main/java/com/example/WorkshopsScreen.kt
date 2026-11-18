@@ -90,28 +90,27 @@ fun WorkshopsScreen(viewModel: MainViewModel) {
                         userLon = loc.longitude
                         locationStatusMessage = "GPS Conectado: ${"%.4f".format(loc.latitude)}, ${"%.4f".format(loc.longitude)}"
                     } else {
-                        // Fallback default coordinates (Bogotá D.C. Centro) if emulator has null lastLocation
-                        userLat = 4.6097
-                        userLon = -74.0817
-                        locationStatusMessage = "GPS Activo: Bogotá D.C. (Ubicación de Referencia)"
+                        userLat = null
+                        userLon = null
+                        locationStatusMessage = "Sin ubicación GPS reciente. Abre Google Maps para buscar talleres cercanos."
                     }
                 }.addOnFailureListener {
                     isLocating = false
-                    userLat = 4.6097
-                    userLon = -74.0817
-                    locationStatusMessage = "Modo Estimado: Bogotá D.C."
+                    userLat = null
+                    userLon = null
+                    locationStatusMessage = "No se pudo obtener la ubicación GPS."
                 }
             } else {
                 isLocating = false
-                userLat = 4.6097
-                userLon = -74.0817
-                locationStatusMessage = "Permiso GPS no concedido (Ubicación aproximada)"
+                userLat = null
+                userLon = null
+                locationStatusMessage = "Permiso GPS no concedido"
             }
         } catch (e: Exception) {
             isLocating = false
-            userLat = 4.6097
-            userLon = -74.0817
-            locationStatusMessage = "Sensor GPS: Bogotá D.C."
+            userLat = null
+            userLon = null
+            locationStatusMessage = "Ubicación GPS no disponible"
         }
     }
 
@@ -124,9 +123,9 @@ fun WorkshopsScreen(viewModel: MainViewModel) {
         if (hasLocationPermission) {
             fetchCurrentLocation()
         } else {
-            userLat = 4.6097
-            userLon = -74.0817
-            locationStatusMessage = "Permiso denegado: Mostrando talleres Bogotá"
+            userLat = null
+            userLon = null
+            locationStatusMessage = "Permiso GPS denegado"
         }
     }
 
@@ -146,78 +145,23 @@ fun WorkshopsScreen(viewModel: MainViewModel) {
 
     val categories = listOf("Todos", "Ajuste Válvulas", "Sincronización", "Frenos & Suspensión", "Flotas B2B", "Urgencias 24h")
 
-    val baseWorkshops = remember {
-        listOf(
-            WorkshopItem(
-                id = "W-01",
-                nombre = "Taller MotoTech Express (Centro)",
-                direccion = "Av. Circunvalar # 45-21",
-                distancia = "2.1 km • 6 min en moto",
-                calificacion = 4.9,
-                totalResenas = 184,
-                especialidades = listOf("Ajuste Válvulas", "Sincronización", "Scanner OBD-II"),
-                descuentoConvenio = "15% OFF en mano de obra",
-                telefono = "+57 312 450 8921",
-                horario = "Abierto Hoy: 8:00 AM - 6:30 PM",
-                latitud = 4.6025,
-                longitud = -74.0720
-            ),
-            WorkshopItem(
-                id = "W-02",
-                nombre = "Riders Garage Certificado",
-                direccion = "Calle 72 # 14-30",
-                distancia = "3.8 km • 11 min en moto",
-                calificacion = 4.8,
-                totalResenas = 96,
-                especialidades = listOf("Frenos & Suspensión", "Inyección Electrónica", "Flotas B2B"),
-                descuentoConvenio = "10% OFF en repuestos de alta gama",
-                telefono = "+57 320 891 3344",
-                horario = "Abierto Hoy: 7:30 AM - 6:00 PM",
-                latitud = 4.6580,
-                longitud = -74.0590
-            ),
-            WorkshopItem(
-                id = "W-03",
-                nombre = "Centro Especializado Flotas & Motos B2B",
-                direccion = "Zona Industrial Norte Calle 129",
-                distancia = "5.4 km • 15 min en moto",
-                calificacion = 4.9,
-                totalResenas = 230,
-                especialidades = listOf("Flotas B2B", "Ajuste Válvulas", "Mantenimiento Preventivo"),
-                descuentoConvenio = "Tarifa preferencial SaaS Empresas",
-                telefono = "+57 310 777 9000",
-                horario = "Abierto Hoy: 7:00 AM - 7:00 PM",
-                latitud = 4.7080,
-                longitud = -74.0450
-            ),
-            WorkshopItem(
-                id = "W-04",
-                nombre = "SOS Moto Auxilio & Mecánica 24 Horas",
-                direccion = "Carrera 30 con Calle 53 (Estación Movilidad)",
-                distancia = "1.5 km • 4 min en moto",
-                calificacion = 4.7,
-                totalResenas = 312,
-                especialidades = listOf("Urgencias 24h", "Frenos & Suspensión", "Scanner OBD-II"),
-                descuentoConvenio = "Asistencia express MotoTech 24/7",
-                telefono = "+57 301 999 1234",
-                horario = "Abierto 24 Horas • Servicio Inmediato",
-                latitud = 4.6420,
-                longitud = -74.0830
-            )
-        )
-    }
+    val baseWorkshops = remember { emptyList<WorkshopItem>() }
 
     // Dynamic distance calculation relative to current user Lat/Lon
     val workshopsWithLiveDistance = remember(userLat, userLon, baseWorkshops) {
-        val currentLat = userLat ?: 4.6097
-        val currentLon = userLon ?: -74.0817
-        baseWorkshops.map { ws ->
-            val distKm = calculateDistanceKm(currentLat, currentLon, ws.latitud, ws.longitud)
-            val distFormatted = String.format(java.util.Locale.US, "%.1f", distKm)
-            val etaMinutes = (distKm * 2.6).roundToInt().coerceAtLeast(2)
-            ws.copy(distancia = "$distFormatted km • ~$etaMinutes min en moto")
-        }.sortedBy { ws ->
-            calculateDistanceKm(currentLat, currentLon, ws.latitud, ws.longitud)
+        val currentLat = userLat
+        val currentLon = userLon
+        if (currentLat == null || currentLon == null) {
+            baseWorkshops
+        } else {
+            baseWorkshops.map { ws ->
+                val distKm = calculateDistanceKm(currentLat, currentLon, ws.latitud, ws.longitud)
+                val distFormatted = String.format(java.util.Locale.US, "%.1f", distKm)
+                val etaMinutes = (distKm * 2.6).roundToInt().coerceAtLeast(2)
+                ws.copy(distancia = "$distFormatted km • ~$etaMinutes min en moto")
+            }.sortedBy { ws ->
+                calculateDistanceKm(currentLat, currentLon, ws.latitud, ws.longitud)
+            }
         }
     }
 
@@ -344,9 +288,7 @@ fun WorkshopsScreen(viewModel: MainViewModel) {
                         // Master Google Maps Search Button: "Buscar talleres mecánicos en Google Maps"
                         Button(
                             onClick = {
-                                val lat = userLat ?: 4.6097
-                                val lon = userLon ?: -74.0817
-                                openGoogleMapsSearch(context, lat, lon)
+                                openGoogleMapsSearch(context, userLat, userLon)
                             },
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -380,50 +322,88 @@ fun WorkshopsScreen(viewModel: MainViewModel) {
                 }
             }
 
-            // Categories Filter Bar
-            item {
-                Column {
-                    Text(
-                        "Red Certificada MotoTech (Convenio & Garantía)",
-                        fontSize = 14.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = MotoTextPrimary
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
-                    LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        items(categories) { category ->
-                            val isSelected = category == selectedCategory
-                            FilterChip(
-                                selected = isSelected,
-                                onClick = { selectedCategory = category },
-                                label = { Text(category, fontSize = 12.sp) },
-                                colors = FilterChipDefaults.filterChipColors(
-                                    selectedContainerColor = MotoPrimary,
-                                    selectedLabelColor = Color.White,
-                                    containerColor = MotoSurfaceVariant,
-                                    labelColor = MotoTextSecondary
-                                ),
-                                border = FilterChipDefaults.filterChipBorder(
-                                    enabled = true,
-                                    selected = isSelected,
-                                    borderColor = if (isSelected) MotoPrimary else MotoBorder
-                                ),
-                                shape = RoundedCornerShape(20.dp)
+            if (filteredWorkshops.isEmpty()) {
+                item {
+                    Card(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .border(1.dp, MotoBorder, RoundedCornerShape(16.dp)),
+                        colors = CardDefaults.cardColors(containerColor = MotoSurface)
+                    ) {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(20.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Icon(
+                                Icons.Default.Storefront,
+                                contentDescription = null,
+                                tint = MotoAccentCyan,
+                                modifier = Modifier.size(34.dp)
+                            )
+                            Text(
+                                "Sin talleres aliados cargados",
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = MotoTextPrimary
+                            )
+                            Text(
+                                "Aún no hay talleres con convenio registrados. Usa el botón de Google Maps arriba para encontrar talleres mecánicos reales cerca de tu ubicación.",
+                                fontSize = 12.sp,
+                                color = MotoTextSecondary,
+                                textAlign = androidx.compose.ui.text.style.TextAlign.Center
                             )
                         }
                     }
                 }
-            }
+            } else {
+                // Categories Filter Bar
+                item {
+                    Column {
+                        Text(
+                            "Red Certificada MotoTech (Convenio & Garantía)",
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = MotoTextPrimary
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            items(categories) { category ->
+                                val isSelected = category == selectedCategory
+                                FilterChip(
+                                    selected = isSelected,
+                                    onClick = { selectedCategory = category },
+                                    label = { Text(category, fontSize = 12.sp) },
+                                    colors = FilterChipDefaults.filterChipColors(
+                                        selectedContainerColor = MotoPrimary,
+                                        selectedLabelColor = Color.White,
+                                        containerColor = MotoSurfaceVariant,
+                                        labelColor = MotoTextSecondary
+                                    ),
+                                    border = FilterChipDefaults.filterChipBorder(
+                                        enabled = true,
+                                        selected = isSelected,
+                                        borderColor = if (isSelected) MotoPrimary else MotoBorder
+                                    ),
+                                    shape = RoundedCornerShape(20.dp)
+                                )
+                            }
+                        }
+                    }
+                }
 
-            // Workshop Cards
-            items(filteredWorkshops, key = { it.id }) { workshop ->
-                WorkshopCard(
-                    workshop = workshop,
-                    onNavigateMaps = {
-                        openGoogleMapsNavigation(context, workshop.latitud, workshop.longitud, workshop.nombre)
-                    },
-                    onBook = { bookingWorkshop = workshop }
-                )
+                // Workshop Cards
+                items(filteredWorkshops, key = { it.id }) { workshop ->
+                    WorkshopCard(
+                        workshop = workshop,
+                        onNavigateMaps = {
+                            openGoogleMapsNavigation(context, workshop.latitud, workshop.longitud, workshop.nombre)
+                        },
+                        onBook = { bookingWorkshop = workshop }
+                    )
+                }
             }
         }
     }
@@ -717,18 +697,24 @@ fun calculateDistanceKm(lat1: Double, lon1: Double, lat2: Double, lon2: Double):
 /**
  * Launches Google Maps to search for motorcycle repair shops near user's position
  */
-fun openGoogleMapsSearch(context: Context, lat: Double, lon: Double) {
+fun openGoogleMapsSearch(context: Context, lat: Double?, lon: Double?) {
     try {
-        // Query for motorcycle workshops near the specified coordinates
-        val gmmIntentUri = Uri.parse("geo:$lat,$lon?q=taller+mecanico+motos")
+        val gmmIntentUri = if (lat != null && lon != null) {
+            Uri.parse("geo:$lat,$lon?q=taller+mecanico+motos")
+        } else {
+            Uri.parse("geo:0,0?q=taller+mecanico+motos")
+        }
         val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri).apply {
             setPackage("com.google.android.apps.maps")
         }
         if (mapIntent.resolveActivity(context.packageManager) != null) {
             context.startActivity(mapIntent)
         } else {
-            // Web fallback if Google Maps app is not installed
-            val webSearchUri = Uri.parse("https://www.google.com/maps/search/taller+mecanico+motos/@$lat,$lon,14z")
+            val webSearchUri = if (lat != null && lon != null) {
+                Uri.parse("https://www.google.com/maps/search/taller+mecanico+motos/@$lat,$lon,14z")
+            } else {
+                Uri.parse("https://www.google.com/maps/search/taller+mecanico+motos")
+            }
             val webIntent = Intent(Intent.ACTION_VIEW, webSearchUri)
             context.startActivity(webIntent)
         }

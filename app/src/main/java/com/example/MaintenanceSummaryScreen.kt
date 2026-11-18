@@ -82,15 +82,15 @@ fun MaintenanceSummaryScreen(
 
     val successState = uiState as? DiagnosticState.Success
 
-    // Asegura una clave de vehículo activa para leer/guardar servicios en Room
+    // Sincroniza la clave de vehículo activa solo si hay una moto seleccionada
     LaunchedEffect(viewModel.formMarca, viewModel.formModelo, viewModel.formCilindraje, viewModel.formAnio) {
-        viewModel.ensureActiveVehicleKey()
+        viewModel.syncActiveVehicleKey()
     }
 
     val initialKm = remember(successState?.kmActual, viewModel.formKilometraje) {
         successState?.kmActual
             ?: viewModel.formKilometraje.trim().toIntOrNull()
-            ?: 14500
+            ?: 0
     }
 
     var kmInputText by remember(initialKm) { mutableStateOf(initialKm.toString()) }

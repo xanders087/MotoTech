@@ -147,99 +147,12 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
         }
     }
 
-    // Digital Logbook (Hoja de Vida) Records
-    private val _maintenanceLogs = MutableStateFlow<List<MaintenanceLogItem>>(
-        listOf(
-            MaintenanceLogItem(
-                id = "LOG-001",
-                fecha = "15 Sep 2026",
-                kilometraje = 24000,
-                titulo = "Mantenimiento Mayor de 24,000 km",
-                taller = "Taller MotoTech Express (Certificado)",
-                costo = "$220.000 COP",
-                facturaNumero = "FAC-8842",
-                categoria = "Mantenimiento Preventivo",
-                tieneComprobante = true
-            ),
-            MaintenanceLogItem(
-                id = "LOG-002",
-                fecha = "10 Jun 2026",
-                kilometraje = 19500,
-                titulo = "Cambio de Kit de Arrastre D.I.D Japón",
-                taller = "Riders Garage Oficial",
-                costo = "$310.000 COP",
-                facturaNumero = "FAC-7619",
-                categoria = "Transmisión",
-                tieneComprobante = true
-            ),
-            MaintenanceLogItem(
-                id = "LOG-003",
-                fecha = "02 Mar 2026",
-                kilometraje = 15000,
-                titulo = "Cambio Aceite Motul 7100 10W-40 + Filtro OEM",
-                taller = "Lubricentro Motos del Norte",
-                costo = "$145.000 COP",
-                facturaNumero = "FAC-6201",
-                categoria = "Lubricación",
-                tieneComprobante = true
-            )
-        )
-    )
+    // Digital Logbook (Hoja de Vida) Records (solo datos reales registrados por el usuario)
+    private val _maintenanceLogs = MutableStateFlow<List<MaintenanceLogItem>>(emptyList())
     val maintenanceLogs: StateFlow<List<MaintenanceLogItem>> = _maintenanceLogs.asStateFlow()
 
-    // Fleet Vehicles for B2B Mode
-    private val _fleetBikes = MutableStateFlow<List<FleetBike>>(
-        listOf(
-            FleetBike(
-                id = "F-01",
-                codigo = "MOTO-01",
-                placa = "LKM-44E",
-                conductor = "Carlos Méndez (Zona Norte)",
-                modelo = "Bajaj Pulsar NS200 FI",
-                anio = 2024,
-                kilometraje = 32400,
-                estado = FleetHealthStatus.ATENCION_URGENTE,
-                alertaPrincipal = "Cambio urgente de pastillas de freno y aceite",
-                diasUltimoService = 45
-            ),
-            FleetBike(
-                id = "F-02",
-                codigo = "MOTO-02",
-                placa = "WTR-18D",
-                conductor = "Andrés Gómez (Ruta Express)",
-                modelo = "Yamaha FZ-25",
-                anio = 2023,
-                kilometraje = 28150,
-                estado = FleetHealthStatus.REVISION_PROXIMA,
-                alertaPrincipal = "Ajuste de holgura de cadena en 350 km",
-                diasUltimoService = 22
-            ),
-            FleetBike(
-                id = "F-03",
-                codigo = "MOTO-03",
-                placa = "JKM-92F",
-                conductor = "David Silva (Mensajería Sur)",
-                modelo = "Honda CB190R",
-                anio = 2024,
-                kilometraje = 14200,
-                estado = FleetHealthStatus.OPTIMO,
-                alertaPrincipal = "Todos los sistemas verificados",
-                diasUltimoService = 12
-            ),
-            FleetBike(
-                id = "F-04",
-                codigo = "MOTO-04",
-                placa = "TYU-55G",
-                conductor = "Mateo Ruiz (Domicilios Nocturnos)",
-                modelo = "KTM Duke 200 NG",
-                anio = 2023,
-                kilometraje = 41200,
-                estado = FleetHealthStatus.ATENCION_URGENTE,
-                alertaPrincipal = "Vencimiento de SOAT en 5 días y revisión de frenos",
-                diasUltimoService = 60
-            )
-        )
-    )
+    // Fleet Vehicles for B2B Mode (sin vehículos de ejemplo)
+    private val _fleetBikes = MutableStateFlow<List<FleetBike>>(emptyList())
     val fleetBikes: StateFlow<List<FleetBike>> = _fleetBikes.asStateFlow()
 
     // Last booked appointment confirmation
@@ -270,18 +183,6 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
     fun selectModelo(spec: MotoModelSpec) {
         formModelo = spec.modelo
         formCilindraje = MotorcycleCatalog.normalizeCilindraje(spec.cilindraje)
-    }
-
-    /**
-     * Selecciona una moto de los botones de ejemplo rápido, cargando los modelos de su marca
-     * y asignando su cilindrada.
-     */
-    fun selectExampleBike(marca: String, modelo: String, cilindraje: String, anio: String) {
-        formMarca = marca
-        formModelo = modelo
-        formCilindraje = MotorcycleCatalog.normalizeCilindraje(cilindraje)
-        formAnio = anio
-        loadModelsForBrand(marca)
     }
 
     private fun refrescarCatalogoRemoto() {
@@ -334,27 +235,10 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
         kilometraje: Int,
         taller: String,
         costo: String,
-        categoria: String,
         fechaMillis: Long = System.currentTimeMillis(),
         notas: String = ""
     ) {
-        val formattedDate = java.text.SimpleDateFormat("dd MMM yyyy", java.util.Locale("es", "CO"))
-            .format(java.util.Date(fechaMillis))
-        val newRecord = MaintenanceLogItem(
-            id = "LOG-${System.currentTimeMillis() % 10000}",
-            fecha = formattedDate,
-            kilometraje = kilometraje,
-            titulo = titulo,
-            taller = taller,
-            costo = costo,
-            facturaNumero = "FAC-${(1000..9999).random()}",
-            categoria = categoria,
-            tieneComprobante = true,
-            notas = notas.trim()
-        )
-        _maintenanceLogs.value = listOf(newRecord) + _maintenanceLogs.value
-
-        // También persiste el servicio realizado en la base de datos Room (service_records)
+        // Persiste el servicio realizado en la base de datos Room (service_records)
         val key = ensureActiveVehicleKey()
         registerService(
             vehicleKey = key,
@@ -464,17 +348,23 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
         }
     }
 
+    /** Actualiza la clave de vehículo activo solo si hay una motocicleta seleccionada. */
+    fun syncActiveVehicleKey() {
+        if (formMarca.isNotBlank() && formModelo.isNotBlank()) {
+            _vehicleKey.value = VehicleKey.of(formMarca, formModelo, formCilindraje, formAnio)
+        }
+    }
+
     /** Devuelve la clave del vehículo activo para asociar registros de servicio. */
     fun ensureActiveVehicleKey(): String {
         val currentKey = _vehicleKey.value
         if (!currentKey.isNullOrBlank()) return currentKey
-        val marca = formMarca.ifBlank { "Yamaha" }
-        val modelo = formModelo.ifBlank { "FZ25 ABS" }
-        val cc = formCilindraje.ifBlank { "249cc" }
-        val anio = formAnio.ifBlank { "2027" }
-        val computed = VehicleKey.of(marca, modelo, cc, anio)
-        _vehicleKey.value = computed
-        return computed
+        if (formMarca.isNotBlank() || formModelo.isNotBlank()) {
+            val computed = VehicleKey.of(formMarca, formModelo, formCilindraje, formAnio)
+            _vehicleKey.value = computed
+            return computed
+        }
+        return "general"
     }
 
     /** Servicios registrados por el usuario para la moto que se está viendo. */

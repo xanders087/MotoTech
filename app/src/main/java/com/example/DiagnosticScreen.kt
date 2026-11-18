@@ -5,7 +5,6 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -90,17 +89,6 @@ fun MotoTechCockpit(
         if (viewModel.formMarca.isNotBlank() && modelosDeMarca.isEmpty()) {
             viewModel.selectMarca(viewModel.formMarca)
         }
-    }
-
-    val exampleBikes = remember {
-        listOf(
-            "Yamaha FZ25 ABS" to Quadruple("Yamaha", "FZ25 ABS", "249cc", "2027"),
-            "Bajaj Pulsar NS200" to Quadruple("Bajaj", "Pulsar NS200 FI ABS DC", "199cc", "2026"),
-            "AKT NKD 125" to Quadruple("AKT", "NKD 125", "124cc", "2026"),
-            "Honda CB 190R 2.0" to Quadruple("Honda", "CB 190R 2.0 2027", "184cc", "2026"),
-            "Yamaha NMAX" to Quadruple("Yamaha", "NMAX", "155cc", "2027"),
-            "Bajaj Dominar 400" to Quadruple("Bajaj", "Dominar 400 Touring", "373cc", "2026")
-        )
     }
 
     fun submit() {
@@ -233,54 +221,6 @@ fun MotoTechCockpit(
                     items = maintenanceItems,
                     onOpenSummary = onNavigateToSummary
                 )
-            }
-
-            // =========================================
-            // EJEMPLOS
-            // =========================================
-            item {
-                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text(
-                        "EJEMPLOS RÁPIDOS (SELECCIONAN MARCA, MODELO Y CILINDRADA)",
-                        fontSize = 11.sp,
-                        fontWeight = FontWeight.Bold,
-                        letterSpacing = 1.sp,
-                        color = MotoTextSecondary
-                    )
-                    LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        items(exampleBikes) { (label, data) ->
-                            val isCurrent = viewModel.formMarca.equals(data.first, ignoreCase = true) &&
-                                viewModel.formModelo.equals(data.second, ignoreCase = true)
-                            ElevatedFilterChip(
-                                selected = isCurrent,
-                                onClick = {
-                                    viewModel.selectExampleBike(
-                                        marca = data.first,
-                                        modelo = data.second,
-                                        cilindraje = data.third,
-                                        anio = data.fourth
-                                    )
-                                    marcaError = false
-                                    modeloError = false
-                                    anioError = false
-                                },
-                                label = { Text(label, fontSize = 12.sp) },
-                                colors = FilterChipDefaults.filterChipColors(
-                                    selectedContainerColor = MotoPrimary,
-                                    selectedLabelColor = Color.White,
-                                    containerColor = MotoSurfaceVariant,
-                                    labelColor = MotoTextSecondary
-                                ),
-                                border = FilterChipDefaults.filterChipBorder(
-                                    enabled = true,
-                                    selected = isCurrent,
-                                    borderColor = if (isCurrent) MotoPrimary else MotoBorder
-                                ),
-                                shape = RoundedCornerShape(12.dp)
-                            )
-                        }
-                    }
-                }
             }
 
             // =========================================

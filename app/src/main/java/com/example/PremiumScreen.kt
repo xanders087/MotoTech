@@ -103,6 +103,10 @@ fun PremiumScreen(viewModel: MainViewModel) {
                 ) {
                     // Fleet Control Header Card
                     item {
+                        val urgentes = fleetBikes.count { it.estado == FleetHealthStatus.ATENCION_URGENTE }
+                        val optimas = fleetBikes.count { it.estado == FleetHealthStatus.OPTIMO }
+                        val porcentajeOperativo = if (fleetBikes.isEmpty()) null else ((optimas * 100) / fleetBikes.size)
+
                         Card(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -116,29 +120,34 @@ fun PremiumScreen(viewModel: MainViewModel) {
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
                                     Column {
-                                        Text("RAPIMOTOS LOGISTICS S.A.S", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = MotoAccentCyan, letterSpacing = 1.sp)
-                                        Text("Consola Global de Telemetría", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = MotoTextPrimary)
+                                        Text("GESTIÓN DE FLOTAS", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = MotoAccentCyan, letterSpacing = 1.sp)
+                                        Text("Consola de Operación", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = MotoTextPrimary)
                                     }
                                     Box(
                                         modifier = Modifier
-                                            .background(RoutineBg, RoundedCornerShape(8.dp))
-                                            .border(1.dp, RoutineBorder, RoundedCornerShape(8.dp))
+                                            .background(MotoSurfaceVariant, RoundedCornerShape(8.dp))
+                                            .border(1.dp, MotoBorder, RoundedCornerShape(8.dp))
                                             .padding(horizontal = 8.dp, vertical = 4.dp)
                                     ) {
-                                        Text("89% OPERATIVO", fontSize = 11.sp, fontWeight = FontWeight.Bold, color = RoutineText)
+                                        Text(
+                                            if (porcentajeOperativo != null) "$porcentajeOperativo% ÓPTIMO" else "SIN FLOTA",
+                                            fontSize = 11.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            color = if (porcentajeOperativo != null) RoutineText else MotoTextSecondary
+                                        )
                                     }
                                 }
 
                                 Spacer(modifier = Modifier.height(14.dp))
                                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                                     FleetKpiCard(title = "Total Flota", value = "${fleetBikes.size} Motos", icon = Icons.Default.TwoWheeler, color = MotoTextPrimary, modifier = Modifier.weight(1f))
-                                    FleetKpiCard(title = "Urgencias", value = "2 Requeridas", icon = Icons.Default.Warning, color = UrgentText, modifier = Modifier.weight(1f))
-                                    FleetKpiCard(title = "En Ruta", value = "100%", icon = Icons.Default.CheckCircle, color = RoutineText, modifier = Modifier.weight(1f))
+                                    FleetKpiCard(title = "Urgencias", value = "$urgentes", icon = Icons.Default.Warning, color = if (urgentes > 0) UrgentText else MotoTextSecondary, modifier = Modifier.weight(1f))
+                                    FleetKpiCard(title = "Óptimas", value = "$optimas", icon = Icons.Default.CheckCircle, color = if (optimas > 0) RoutineText else MotoTextSecondary, modifier = Modifier.weight(1f))
                                 }
 
                                 Spacer(modifier = Modifier.height(12.dp))
                                 Text(
-                                    "Monitoreo preventivo continuo para evitar detenciones imprevistas y optimizar el consumo de combustible.",
+                                    "Monitoreo preventivo continuo para controlar el estado de mantenimiento de múltiples motocicletas.",
                                     fontSize = 11.sp,
                                     color = MotoTextSecondary
                                 )
@@ -156,12 +165,50 @@ fun PremiumScreen(viewModel: MainViewModel) {
                         )
                     }
 
-                    // Fleet Bike Cards
-                    items(fleetBikes, key = { it.id }) { bike ->
-                        FleetBikeCard(
-                            bike = bike,
-                            onDispatch = { showDispatchDialog = bike }
-                        )
+                    if (fleetBikes.isEmpty()) {
+                        item {
+                            Card(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .border(1.dp, MotoBorder, RoundedCornerShape(16.dp)),
+                                colors = CardDefaults.cardColors(containerColor = MotoSurface)
+                            ) {
+                                Column(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(20.dp),
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                                ) {
+                                    Icon(
+                                        Icons.Default.LocalShipping,
+                                        contentDescription = null,
+                                        tint = MotoAccentCyan,
+                                        modifier = Modifier.size(34.dp)
+                                    )
+                                    Text(
+                                        "Sin motocicletas en tu flota",
+                                        fontSize = 15.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MotoTextPrimary
+                                    )
+                                    Text(
+                                        "Aún no hay vehículos de flota registrados.",
+                                        fontSize = 12.sp,
+                                        color = MotoTextSecondary,
+                                        textAlign = TextAlign.Center
+                                    )
+                                }
+                            }
+                        }
+                    } else {
+                        // Fleet Bike Cards
+                        items(fleetBikes, key = { it.id }) { bike ->
+                            FleetBikeCard(
+                                bike = bike,
+                                onDispatch = { showDispatchDialog = bike }
+                            )
+                        }
                     }
                 }
             } else {
@@ -301,7 +348,7 @@ fun PremiumScreen(viewModel: MainViewModel) {
                     Spacer(modifier = Modifier.height(16.dp))
                     Button(
                         onClick = {
-                            viewModel.bookAppointment("Taller MotoTech Express", "Revisión Flota: " + bike.alertaPrincipal, "Inmediato", "Turno Prioritario")
+                            viewModel.bookAppointment("Taller seleccionado", "Revisión Flota: " + bike.alertaPrincipal, "Inmediato", "Turno Prioritario")
                             showDispatchDialog = null
                         },
                         modifier = Modifier.fillMaxWidth(),
