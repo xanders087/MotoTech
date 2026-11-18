@@ -4,7 +4,8 @@ import java.text.Normalizer
 
 /**
  * Convierte los documentos de la biblioteca de fichas (colección "fichas") en lo que muestra la app.
- * El formato de esos documentos está descrito en fichas/LEEME.md.
+ * Soporta tanto las fichas v3 generadas por el recolector oficial (especificaciones web +
+ * datos_servicio + plan_mantenimiento con fuente PDF/SHA-256) como las fichas manuales previas.
  */
 object FichaMapper {
     const val ESTADO_PUBLICADA = "publicada"
@@ -110,19 +111,120 @@ object FichaMapper {
     ): DiagnosticResponse {
         val manual = mapa(doc["manual"])
         val revision = mapa(doc["revision"])
+        val verificacion = mapa(doc["verificacion"])
         val tecnica = mapa(doc["ficha_tecnica"])
+        val datosServicioMap = mapa(doc["datos_servicio"])
         val cc = entero(doc["cilindraje_cc"])
         val marca = texto(doc["marca"])
         val modelo = texto(doc["modelo"])
         val anioDesde = entero(doc["anio_desde"])
         val anioHasta = entero(doc["anio_hasta"])
+        val anioOrigen = texto(doc["anio_origen"])
+        val urlManual = texto(doc["url_manual"])
         val fichaId = texto(doc["_docId"]) ?: if (marca != null && modelo != null && cc != null) {
             idFichaFallback(marca, modelo, "${cc}cc", anioDesde, anioHasta)
         } else null
 
-        fun dato(campo: String): DatoTecnico? = mapa(tecnica?.get(campo))?.let {
-            DatoTecnico(valor = texto(it["valor"]), pagina = entero(it["pagina"]))
+        val servicioSource = datosServicioMap ?: tecnica
+        fun datoServicio(campo: String): DatoTecnico? = mapa(servicioSource?.get(campo))?.let {
+            val valor = texto(it["valor"])
+            val pagina = entero(it["pagina"])
+            if (valor != null || pagina != null) DatoTecnico(valor = valor, pagina = pagina) else null
         }
+
+        fun datoWeb(campo: String): DatoWeb? = mapa(tecnica?.get(campo))?.let {
+            val original = texto(it["texto_original"])
+            val normalizado = texto(it["valor_normalizado"])
+            val fuente = texto(it["fuente"])
+            val capturado = texto(it["capturado"])
+            if (original != null || normalizado != null || fuente != null) {
+                DatoWeb(
+                    texto_original = original,
+                    valor_normalizado = normalizado,
+                    fuente = fuente,
+                    capturado = capturado
+                )
+            } else null
+        }
+
+        val especificaciones = EspecificacionesTecnicas(
+            cilindraje = datoWeb("cilindraje"),
+            tipo_motor = datoWeb("tipo_motor"),
+            potencia_maxima = datoWeb("potencia_maxima"),
+            torque_maximo = datoWeb("torque_maximo"),
+            alimentacion = datoWeb("alimentacion"),
+            refrigeracion = datoWeb("refrigeracion"),
+            arranque = datoWeb("arranque"),
+            relacion_compresion = datoWeb("relacion_compresion"),
+            tipo_transmision = datoWeb("tipo_transmision"),
+            numero_velocidades = datoWeb("numero_velocidades"),
+            transmision_final = datoWeb("transmision_final"),
+            freno_delantero = datoWeb("freno_delantero"),
+            freno_trasero = datoWeb("freno_trasero"),
+            abs = datoWeb("abs"),
+            suspension_delantera = datoWeb("suspension_delantera"),
+            suspension_trasera = datoWeb("suspension_trasera"),
+            llanta_delantera = datoWeb("llanta_delantera"),
+            llanta_trasera = datoWeb("llanta_trasera"),
+            capacidad_tanque = datoWeb("capacidad_tanque"),
+            peso = datoWeb("peso"),
+            altura_asiento = datoWeb("altura_asiento"),
+            distancia_ejes = datoWeb("distancia_ejes")
+        ).takeIf { it.tieneAlgunDato() }
+
+        val servicio = FichaTecnica(
+            capacidad_aceite = datoServicio("capacidad_aceite"),
+            viscosidad_aceite = datoServicio("viscosidad_aceite"),
+            presion_llanta_delantera = datoServicio("presion_llanta_delantera"),
+            presion_llanta_trasera = datoServicio("presion_llanta_trasera"),
+            holgura_cadena = datoServicio("holgura_cadena"),
+            liquido_frenos = datoServicio("liquido_frenos")
+        ).takeIf { it.tieneAlgunDato() }
+
+        var fuentePlanPdf: FuentePlanPdf? = null
+        val planRaw = doc["plan_mantenimiento"]
+        val tareasPlan: List<PlanMantenimiento> = when (planRaw) {
+            is List<*> -> planRaw.mapNotNull { mapa(it) }.map {
+                PlanMantenimiento(
+                    componente = texto(it["componente"]),
+                    intervalo_km = entero(it["intervalo_km"]),
+                    intervalo_meses = entero(it["intervalo_meses"]),
+                    accion = texto(it["accion"]),
+                    pagina = entero(it["pagina"])
+                )
+            }
+            is Map<*, *> -> {
+                val planObj = mapa(planRaw)
+                val fuenteMap = mapa(planObj?.get("fuente"))
+                if (fuenteMap != null) {
+                    fuentePlanPdf = FuentePlanPdf(
+                        url = texto(fuenteMap["url"]),
+                        sha256 = texto(fuenteMap["sha256"]),
+                        pagina = entero(fuenteMap["pagina"]),
+                        titulo = texto(fuenteMap["titulo"])
+                    )
+                }
+                val paginaComun = fuentePlanPdf?.pagina
+                (planObj?.get("tareas") as? List<*>).orEmpty()
+                    .mapNotNull { mapa(it) }
+                    .map {
+                        PlanMantenimiento(
+                            componente = texto(it["componente"]),
+                            intervalo_km = entero(it["intervalo_km"]),
+                            intervalo_meses = entero(it["intervalo_meses"]),
+                            accion = texto(it["accion"]),
+                            pagina = entero(it["pagina"]) ?: paginaComun
+                        )
+                    }
+            }
+            else -> emptyList()
+        }
+
+        val verificacionMetodo = texto(verificacion?.get("metodo"))
+        val verificacionFecha = texto(verificacion?.get("fecha"))
+        val tituloManual = texto(manual?.get("titulo"))
+            ?: fuentePlanPdf?.titulo?.takeIf { !it.equals("untitled", ignoreCase = true) }
+        val urlOficialManual = texto(manual?.get("url")) ?: urlManual ?: fuentePlanPdf?.url
 
         return DiagnosticResponse(
             status = "success",
@@ -132,39 +234,44 @@ object FichaMapper {
                 cilindraje = cc?.let { "${it}cc" },
                 anio = anioConsultado
             ),
-            ficha_tecnica = FichaTecnica(
-                capacidad_aceite = dato("capacidad_aceite"),
-                viscosidad_aceite = dato("viscosidad_aceite"),
-                presion_llanta_delantera = dato("presion_llanta_delantera"),
-                presion_llanta_trasera = dato("presion_llanta_trasera"),
-                holgura_cadena = dato("holgura_cadena"),
-                liquido_frenos = dato("liquido_frenos")
-            ),
-            plan_mantenimiento_periodico = (doc["plan_mantenimiento"] as? List<*>).orEmpty()
-                .mapNotNull { mapa(it) }
-                .map {
-                    PlanMantenimiento(
-                        componente = texto(it["componente"]),
-                        intervalo_km = entero(it["intervalo_km"]),
-                        intervalo_meses = entero(it["intervalo_meses"]),
-                        accion = texto(it["accion"]),
-                        pagina = entero(it["pagina"])
-                    )
-                },
+            ficha_tecnica = servicio,
+            plan_mantenimiento_periodico = tareasPlan,
             manual = ManualInfo(
-                titulo = texto(manual?.get("titulo")),
+                titulo = tituloManual,
                 edicion = texto(manual?.get("edicion")),
-                url = texto(manual?.get("url")),
+                url = urlOficialManual,
                 revisado_por = texto(revision?.get("revisado_por")),
-                fecha_revision = texto(revision?.get("fecha")),
+                fecha_revision = texto(revision?.get("fecha")) ?: verificacionFecha,
                 anio_desde = anioDesde,
                 anio_hasta = anioHasta,
                 aproximada = aproximada,
                 anio_consultado = anioConsultado,
-                ficha_id = fichaId
-            )
+                ficha_id = fichaId,
+                anio_origen = anioOrigen,
+                verificacion_metodo = verificacionMetodo,
+                verificacion_fecha = verificacionFecha,
+                fuente_plan = fuentePlanPdf
+            ),
+            especificaciones = especificaciones
         )
     }
+
+    private fun FichaTecnica.tieneAlgunDato(): Boolean = listOf(
+        capacidad_aceite,
+        viscosidad_aceite,
+        presion_llanta_delantera,
+        presion_llanta_trasera,
+        holgura_cadena,
+        liquido_frenos
+    ).any { it != null }
+
+    private fun EspecificacionesTecnicas.tieneAlgunDato(): Boolean = listOf(
+        cilindraje, tipo_motor, potencia_maxima, torque_maximo, alimentacion,
+        refrigeracion, arranque, relacion_compresion, tipo_transmision,
+        numero_velocidades, transmision_final, freno_delantero, freno_trasero,
+        abs, suspension_delantera, suspension_trasera, llanta_delantera,
+        llanta_trasera, capacidad_tanque, peso, altura_asiento, distancia_ejes
+    ).any { it != null }
 
     // Firestore entrega los números como Long y los objetos como Map.
     private fun entero(valor: Any?): Int? = (valor as? Number)?.toInt()

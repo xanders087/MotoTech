@@ -43,68 +43,13 @@ data class ProximoMantenimientoPreventivo(
 )
 
 /**
- * Calcula qué mantenimiento toca a partir del intervalo citado y del último
- * servicio que el usuario registró. No supone desgaste: sin historial no hay veredicto.
+ * Calcula qué mantenimiento toca a partir del intervalo oficial del fabricante y del último
+ * servicio que el usuario registró. No inventa intervalos ni usa planes genéricos.
  */
 object MaintenanceCalculator {
     private const val MILLIS_DIA = 24L * 60 * 60 * 1000
     private const val DIAS_MES = 30.44
     private const val MARGEN_PROXIMO = 0.10
-
-    /**
-     * Plan preventivo estándar de referencia para visualizar próximos mantenimientos por kilometraje
-     * cuando aún no se ha cargado una ficha específica de la biblioteca.
-     */
-    val PLAN_PREVENTIVO_REFERENCIA: List<PlanMantenimiento> = listOf(
-        PlanMantenimiento(
-            componente = "Lubricación y ajuste de holgura de cadena",
-            intervalo_km = 1000,
-            intervalo_meses = 1,
-            accion = "Limpiar, lubricar y verificar tensión de la cadena de transmisión"
-        ),
-        PlanMantenimiento(
-            componente = "Aceite de motor y filtro de aceite",
-            intervalo_km = 3000,
-            intervalo_meses = 6,
-            accion = "Reemplazar aceite sintético/semisintético y filtro según viscosidad del motor"
-        ),
-        PlanMantenimiento(
-            componente = "Filtro de aire",
-            intervalo_km = 6000,
-            intervalo_meses = 12,
-            accion = "Inspeccionar, limpiar o reemplazar elemento filtrante de admisión"
-        ),
-        PlanMantenimiento(
-            componente = "Bujía de encendido",
-            intervalo_km = 8000,
-            intervalo_meses = 12,
-            accion = "Verificar calibración de electrodo o reemplazar bujía"
-        ),
-        PlanMantenimiento(
-            componente = "Pastillas y sistema de frenos",
-            intervalo_km = 5000,
-            intervalo_meses = 6,
-            accion = "Medir espesor de pastillas, discos y nivel del líquido hidráulico"
-        ),
-        PlanMantenimiento(
-            componente = "Holgura de válvulas (admisión y escape)",
-            intervalo_km = 10000,
-            intervalo_meses = 12,
-            accion = "Comprobar y calibrar luz de válvulas en frío con galgas"
-        ),
-        PlanMantenimiento(
-            componente = "Líquido de frenos DOT",
-            intervalo_km = 15000,
-            intervalo_meses = 24,
-            accion = "Purgar circuito hidráulico y reemplazar líquido de frenos"
-        ),
-        PlanMantenimiento(
-            componente = "Kit de arrastre (piñón, corona y cadena)",
-            intervalo_km = 20000,
-            intervalo_meses = 24,
-            accion = "Inspeccionar desgaste de dientes y elongación total de la cadena"
-        )
-    )
 
     fun claveComponente(componente: String): String =
         componente.trim().lowercase().replace(Regex("\\s+"), " ")

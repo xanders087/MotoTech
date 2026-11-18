@@ -24,6 +24,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -71,11 +72,13 @@ fun MaintenanceSummaryScreen(
     onNavigateToWorkshops: () -> Unit
 ) {
     val context = LocalContext.current
+    val uriHandler = LocalUriHandler.current
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val serviceRecords by viewModel.serviceRecords.collectAsStateWithLifecycle()
     val notificacionesActivas by viewModel.notificacionesActivas.collectAsStateWithLifecycle()
     val umbralAlertaKm by viewModel.umbralAlertaKm.collectAsStateWithLifecycle()
     val ultimaNotificacionResumen by viewModel.ultimaNotificacionResumen.collectAsStateWithLifecycle()
+    val solicitud by viewModel.solicitud.collectAsStateWithLifecycle()
 
     val successState = uiState as? DiagnosticState.Success
 
@@ -97,26 +100,30 @@ fun MaintenanceSummaryScreen(
     var itemParaRegistrar by remember { mutableStateOf<ProximoMantenimientoPreventivo?>(null) }
 
     val planActivo = remember(successState) {
-        val planManual = successState?.response?.plan_mantenimiento_periodico.orEmpty()
-        if (planManual.isNotEmpty()) planManual else MaintenanceCalculator.PLAN_PREVENTIVO_REFERENCIA
+        successState?.response?.plan_mantenimiento_periodico.orEmpty()
     }
-    val usaPlanManualOficial = remember(successState) {
-        successState?.response?.plan_mantenimiento_periodico?.isNotEmpty() == true
+    val usaPlanManualOficial = planActivo.isNotEmpty()
+    val paginaPlanOficial = remember(successState) {
+        successState?.response?.manual?.fuente_plan?.pagina
+            ?: successState?.response?.plan_mantenimiento_periodico?.firstOrNull { (it.pagina ?: 0) > 0 }?.pagina
     }
 
     val itemsPreventivos = remember(planActivo, kmActual, serviceRecords) {
-        val ultimos = serviceRecords
-            .groupBy { it.componente }
-            .mapValues { (_, list) ->
-                val last = list.maxWith(compareBy({ it.kilometraje }, { it.fecha }))
-                UltimoServicio(last.kilometraje, last.fecha, last.notas)
-            }
-        MaintenanceCalculator.calcularResumenPorKilometraje(
-            plan = planActivo,
-            kmActual = kmActual,
-            ultimosServicios = ultimos,
-            ahoraMillis = System.currentTimeMillis()
-        )
+        if (planActivo.isEmpty()) emptyList()
+        else {
+            val ultimos = serviceRecords
+                .groupBy { it.componente }
+                .mapValues { (_, list) ->
+                    val last = list.maxWith(compareBy({ it.kilometraje }, { it.fecha }))
+                    UltimoServicio(last.kilometraje, last.fecha, last.notas)
+                }
+            MaintenanceCalculator.calcularResumenPorKilometraje(
+                plan = planActivo,
+                kmActual = kmActual,
+                ultimosServicios = ultimos,
+                ahoraMillis = System.currentTimeMillis()
+            )
+        }
     }
 
     val nombreMoto = remember(viewModel.formMarca, viewModel.formModelo, successState) {
@@ -140,9 +147,10 @@ fun MaintenanceSummaryScreen(
         ).joinToString(" • ").ifBlank { "Cálculo dinámico por odómetro" }
     }
 
-    // Evalúa si hay mantenimientos cercanos o vencidos según el kilometraje actual y el umbral
-    val alertaNotificacion = remember(nombreMoto, kmActual, itemsPreventivos, umbralAlertaKm) {
-        MaintenanceNotificationHelper.evaluarAlertasPorKilometraje(
+    // Evalúa alertas locales solo cuando existe un plan oficial del fabricante (sin intervalos inventados)
+    val alertaNotificacion = remember(nombreMoto, kmActual, itemsPreventivos, umbralAlertaKm, usaPlanManualOficial) {
+        if (!usaPlanManualOficial) null
+        else MaintenanceNotificationHelper.evaluarAlertasPorKilometraje(
             nombreMoto = nombreMoto,
             kmActual = kmActual,
             items = itemsPreventivos,
@@ -160,7 +168,7 @@ fun MaintenanceSummaryScreen(
     ) { isGranted ->
         permisoNotificacionConcedido = isGranted
         permisoDenegadoAviso = !isGranted
-        if (isGranted && alertaNotificacion != null) {
+        if (usaPlanManualOficial && isGranted && alertaNotificacion != null) {
             val enviada = MaintenanceNotificationHelper.mostrarNotificacionMantenimiento(context, alertaNotificacion)
             if (enviada) {
                 val hora = formatSummaryHora(System.currentTimeMillis())
@@ -173,6 +181,7 @@ fun MaintenanceSummaryScreen(
     }
 
     fun dispararNotificacionAhora(manual: Boolean) {
+        if (!usaPlanManualOficial) return
         val alerta = alertaNotificacion ?: return
         if (!MaintenanceNotificationHelper.hasNotificationPermission(context)) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && manual) {
@@ -193,9 +202,9 @@ fun MaintenanceSummaryScreen(
         }
     }
 
-    // Disparo automático cuando las notificaciones están activas y el kilometraje entra en rango de alerta
-    LaunchedEffect(alertaNotificacion, notificacionesActivas, permisoNotificacionConcedido) {
-        if (notificacionesActivas && alertaNotificacion != null && permisoNotificacionConcedido) {
+    // Disparo automático solo con plan oficial y cuando las notificaciones están activas
+    LaunchedEffect(alertaNotificacion, notificacionesActivas, permisoNotificacionConcedido, usaPlanManualOficial) {
+        if (usaPlanManualOficial && notificacionesActivas && alertaNotificacion != null && permisoNotificacionConcedido) {
             dispararNotificacionAhora(manual = false)
         }
     }
@@ -284,206 +293,345 @@ fun MaintenanceSummaryScreen(
             contentPadding = PaddingValues(top = 8.dp, bottom = 48.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            // 1. Panel de Odómetro Actual + Moto Activa
-            item {
-                OdometerControlCard(
-                    nombreMoto = nombreMoto,
-                    subtituloMoto = subtituloMoto,
-                    usaPlanManualOficial = usaPlanManualOficial,
-                    manualTitulo = successState?.response?.manual?.titulo,
-                    kmInputText = kmInputText,
-                    kmActual = kmActual,
-                    onKmTextChange = { nuevoTexto ->
-                        val limpio = nuevoTexto.filter { it.isDigit() }.take(7)
-                        kmInputText = limpio
-                        limpio.toIntOrNull()?.let { viewModel.updateCurrentKilometraje(it) }
-                    },
-                    onAdjustKm = { delta ->
-                        val nuevo = (kmActual + delta).coerceAtLeast(0)
-                        kmInputText = nuevo.toString()
-                        viewModel.updateCurrentKilometraje(nuevo)
-                    }
-                )
-            }
-
-            // 2. Indicadores KPI de Estado Preventivo
-            item {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(10.dp)
-                ) {
-                    PreventiveKpiCard(
-                        titulo = "Toca Ahora",
-                        valor = totalVencidos.toString(),
-                        subtitulo = if (totalVencidos == 1) "1 pendiente" else "$totalVencidos pendientes",
-                        icono = Icons.Default.Warning,
-                        bgColor = if (totalVencidos > 0) UrgentBg else MotoSurface,
-                        borderColor = if (totalVencidos > 0) UrgentBorder else MotoBorder,
-                        textColor = if (totalVencidos > 0) UrgentText else MotoTextSecondary,
-                        modifier = Modifier.weight(1f)
-                    )
-                    PreventiveKpiCard(
-                        titulo = "Próximos",
-                        valor = totalProximos.toString(),
-                        subtitulo = "En margen ≤10%",
-                        icono = Icons.Default.Schedule,
-                        bgColor = if (totalProximos > 0) WarningBg else MotoSurface,
-                        borderColor = if (totalProximos > 0) WarningBorder else MotoBorder,
-                        textColor = if (totalProximos > 0) WarningText else MotoTextSecondary,
-                        modifier = Modifier.weight(1f)
-                    )
-                    PreventiveKpiCard(
-                        titulo = "En Ciclo",
-                        valor = totalAlDia.toString(),
-                        subtitulo = "Al día por km",
-                        icono = Icons.Default.CheckCircle,
-                        bgColor = RoutineBg.copy(alpha = 0.65f),
-                        borderColor = RoutineBorder,
-                        textColor = RoutineText,
-                        modifier = Modifier.weight(1f)
-                    )
-                }
-            }
-
-            // 3. Sistema de Notificaciones Locales de Proximidad de Mantenimiento
-            item {
-                PreventiveNotificationControlCard(
-                    notificacionesActivas = notificacionesActivas,
-                    umbralAlertaKm = umbralAlertaKm,
-                    alertaNotificacion = alertaNotificacion,
-                    ultimaNotificacionResumen = ultimaNotificacionResumen,
-                    permisoConcedido = permisoNotificacionConcedido,
-                    permisoDenegadoAviso = permisoDenegadoAviso,
-                    onToggleNotificaciones = { activas ->
-                        viewModel.setNotificacionesActivas(activas)
-                        if (activas && !permisoNotificacionConcedido && Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                            notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
-                        }
-                    },
-                    onSelectUmbralKm = { nuevoUmbral ->
-                        viewModel.setUmbralAlertaKm(nuevoUmbral)
-                    },
-                    onSendNotificationNow = {
-                        dispararNotificacionAhora(manual = true)
-                    }
-                )
-            }
-
-            // 4. Tarjeta destacada: Próxima Parada Preventiva más cercana
-            if (proximoPrioritario != null) {
-                item {
-                    NextPreventiveHighlightCard(
-                        item = proximoPrioritario,
-                        kmActual = kmActual,
-                        onRegister = { itemParaRegistrar = proximoPrioritario },
-                        onScheduleWorkshop = onNavigateToWorkshops
-                    )
-                }
-            }
-
-            // 5. Filtros por estado preventivo
-            item {
-                Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(
-                            "CRONOGRAMA PREVENTIVO A ${formatSummaryKm(kmActual)} KM",
-                            fontSize = 12.sp,
-                            fontWeight = FontWeight.Bold,
-                            letterSpacing = 1.sp,
-                            color = MotoTextSecondary
-                        )
-                        Text(
-                            "${itemsFiltrados.size} de ${itemsPreventivos.size} tareas",
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            color = MotoAccentBlue
-                        )
-                    }
-
-                    LazyRow(
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                        modifier = Modifier.testTag("filtro_mantenimiento_chips")
-                    ) {
-                        items(FiltroResumenPreventivo.values().toList()) { filtro ->
-                            val selected = filtroSeleccionado == filtro
-                            ElevatedFilterChip(
-                                selected = selected,
-                                onClick = { filtroSeleccionado = filtro },
-                                label = {
-                                    Text(
-                                        filtro.etiqueta,
-                                        fontSize = 12.sp,
-                                        fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal
-                                    )
-                                },
-                                colors = FilterChipDefaults.filterChipColors(
-                                    selectedContainerColor = MotoPrimary,
-                                    selectedLabelColor = Color.White,
-                                    containerColor = MotoSurfaceVariant,
-                                    labelColor = MotoTextSecondary
-                                ),
-                                border = FilterChipDefaults.filterChipBorder(
-                                    enabled = true,
-                                    selected = selected,
-                                    borderColor = if (selected) MotoPrimary else MotoBorder
-                                ),
-                                shape = RoundedCornerShape(12.dp)
-                            )
-                        }
-                    }
-                }
-            }
-
-            // 6. Listado de tarjetas de próximos mantenimientos preventivos
-            if (itemsFiltrados.isEmpty()) {
+            if (successState == null) {
                 item {
                     Card(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .border(1.dp, MotoBorder, RoundedCornerShape(16.dp)),
+                            .border(1.dp, MotoBorder, RoundedCornerShape(18.dp))
+                            .testTag("sin_moto_resumen_card"),
                         colors = CardDefaults.cardColors(containerColor = MotoSurface)
                     ) {
                         Column(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(24.dp),
+                                .padding(22.dp),
                             horizontalAlignment = Alignment.CenterHorizontally,
-                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                            verticalArrangement = Arrangement.spacedBy(12.dp)
                         ) {
                             Icon(
-                                Icons.Default.Verified,
+                                Icons.Default.TwoWheeler,
                                 contentDescription = null,
-                                tint = RoutineText,
-                                modifier = Modifier.size(36.dp)
+                                tint = MotoAccentBlue,
+                                modifier = Modifier.size(38.dp)
                             )
                             Text(
-                                "No hay mantenimientos en esta categoría",
-                                fontSize = 15.sp,
+                                "Consulta tu motocicleta primero",
+                                fontSize = 16.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = MotoTextPrimary,
                                 textAlign = TextAlign.Center
                             )
                             Text(
-                                "Prueba seleccionando el filtro \"Todos\" o ajusta el kilometraje actual arriba para simular próximos hitos.",
-                                fontSize = 12.sp,
+                                "Para calcular tu próximo mantenimiento y activar alertas locales sin inventar intervalos, primero busca tu moto en el Cockpit y carga el plan oficial de su fabricante.",
+                                fontSize = 13.sp,
                                 color = MotoTextSecondary,
-                                textAlign = TextAlign.Center
+                                textAlign = TextAlign.Center,
+                                lineHeight = 19.sp
                             )
+                            Button(
+                                onClick = onNavigateToCockpit,
+                                shape = RoundedCornerShape(12.dp),
+                                colors = ButtonDefaults.buttonColors(containerColor = MotoPrimary)
+                            ) {
+                                Icon(Icons.Default.Search, contentDescription = null, modifier = Modifier.size(16.dp))
+                                Spacer(modifier = Modifier.width(6.dp))
+                                Text("Ir al Cockpit", fontWeight = FontWeight.Bold, color = Color.White)
+                            }
                         }
                     }
                 }
             } else {
-                items(itemsFiltrados, key = { it.componente }) { item ->
-                    PreventiveMaintenanceItemCard(
-                        item = item,
+                // 1. Panel de Odómetro Actual + Moto Activa
+                item {
+                    OdometerControlCard(
+                        nombreMoto = nombreMoto,
+                        subtituloMoto = subtituloMoto,
+                        usaPlanManualOficial = usaPlanManualOficial,
+                        manualTitulo = successState.response.manual?.titulo,
+                        paginaPlan = paginaPlanOficial,
+                        kmInputText = kmInputText,
                         kmActual = kmActual,
-                        onRegisterService = { itemParaRegistrar = item },
-                        onFindWorkshop = onNavigateToWorkshops
+                        onKmTextChange = { nuevoTexto ->
+                            val limpio = nuevoTexto.filter { it.isDigit() }.take(7)
+                            kmInputText = limpio
+                            limpio.toIntOrNull()?.let { viewModel.updateCurrentKilometraje(it) }
+                        },
+                        onAdjustKm = { delta ->
+                            val nuevo = (kmActual + delta).coerceAtLeast(0)
+                            kmInputText = nuevo.toString()
+                            viewModel.updateCurrentKilometraje(nuevo)
+                        }
                     )
+                }
+
+                if (!usaPlanManualOficial) {
+                    item {
+                        val marcaVisible = successState.marca.ifBlank {
+                            successState.response.moto_info?.marca.orEmpty().ifBlank { "El fabricante" }
+                        }
+                        val manualUrl = successState.response.manual?.url
+                        val modeloNombre = successState.response.moto_info?.modelo.orEmpty()
+                        val cilindrajeTxt = successState.response.moto_info?.cilindraje.orEmpty()
+                        val anioNum = successState.response.moto_info?.anio ?: 0
+                        Card(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .border(1.dp, InfoBorder, RoundedCornerShape(18.dp))
+                                .testTag("resumen_sin_plan_oficial_card"),
+                            colors = CardDefaults.cardColors(containerColor = MotoSurface)
+                        ) {
+                            Column(
+                                modifier = Modifier.padding(18.dp),
+                                verticalArrangement = Arrangement.spacedBy(12.dp)
+                            ) {
+                                Row(
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.spacedBy(10.dp)
+                                ) {
+                                    Icon(
+                                        Icons.Default.Info,
+                                        contentDescription = null,
+                                        tint = InfoText,
+                                        modifier = Modifier.size(24.dp)
+                                    )
+                                    Text(
+                                        "Plan del fabricante aún no disponible",
+                                        fontSize = 15.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MotoTextPrimary
+                                    )
+                                }
+                                Text(
+                                    "$marcaVisible aún no publica el plan de mantenimiento de este modelo en su sitio. Las alertas automáticas de kilometraje solo se activan cuando existe un plan oficial del fabricante.",
+                                    fontSize = 13.sp,
+                                    color = MotoTextSecondary,
+                                    lineHeight = 19.sp
+                                )
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.spacedBy(10.dp)
+                                ) {
+                                    if (!manualUrl.isNullOrBlank()) {
+                                        OutlinedButton(
+                                            onClick = { runCatching { uriHandler.openUri(manualUrl) } },
+                                            shape = RoundedCornerShape(12.dp),
+                                            modifier = Modifier
+                                                .weight(1f)
+                                                .testTag("resumen_ver_manual_button")
+                                        ) {
+                                            Text("Ver manual oficial", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                                        }
+                                    }
+                                    Button(
+                                        onClick = {
+                                            if (anioNum > 0) {
+                                                viewModel.solicitarAnio(marcaVisible, modeloNombre, cilindrajeTxt, anioNum)
+                                            }
+                                        },
+                                        enabled = anioNum > 0 &&
+                                            solicitud != SolicitudEstado.ENVIANDO &&
+                                            solicitud != SolicitudEstado.ENVIADA &&
+                                            solicitud != SolicitudEstado.EN_COLA,
+                                        colors = ButtonDefaults.buttonColors(containerColor = MotoPrimary),
+                                        shape = RoundedCornerShape(12.dp),
+                                        modifier = Modifier
+                                            .weight(1f)
+                                            .testTag("resumen_solicitar_plan_button")
+                                    ) {
+                                        val label = when (solicitud) {
+                                            SolicitudEstado.ENVIANDO -> "Enviando…"
+                                            SolicitudEstado.ENVIADA -> "Solicitado"
+                                            SolicitudEstado.EN_COLA -> "En cola"
+                                            else -> "Solicitar"
+                                        }
+                                        Text(label, fontSize = 12.sp, fontWeight = FontWeight.Bold, color = Color.White)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    // 2. Indicadores KPI de Estado Preventivo
+                    item {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(10.dp)
+                        ) {
+                            PreventiveKpiCard(
+                                titulo = "Toca Ahora",
+                                valor = totalVencidos.toString(),
+                                subtitulo = if (totalVencidos == 1) "1 pendiente" else "$totalVencidos pendientes",
+                                icono = Icons.Default.Warning,
+                                bgColor = if (totalVencidos > 0) UrgentBg else MotoSurface,
+                                borderColor = if (totalVencidos > 0) UrgentBorder else MotoBorder,
+                                textColor = if (totalVencidos > 0) UrgentText else MotoTextSecondary,
+                                modifier = Modifier.weight(1f)
+                            )
+                            PreventiveKpiCard(
+                                titulo = "Próximos",
+                                valor = totalProximos.toString(),
+                                subtitulo = "En margen ≤10%",
+                                icono = Icons.Default.Schedule,
+                                bgColor = if (totalProximos > 0) WarningBg else MotoSurface,
+                                borderColor = if (totalProximos > 0) WarningBorder else MotoBorder,
+                                textColor = if (totalProximos > 0) WarningText else MotoTextSecondary,
+                                modifier = Modifier.weight(1f)
+                            )
+                            PreventiveKpiCard(
+                                titulo = "En Ciclo",
+                                valor = totalAlDia.toString(),
+                                subtitulo = "Al día por km",
+                                icono = Icons.Default.CheckCircle,
+                                bgColor = RoutineBg.copy(alpha = 0.65f),
+                                borderColor = RoutineBorder,
+                                textColor = RoutineText,
+                                modifier = Modifier.weight(1f)
+                            )
+                        }
+                    }
+
+                    // 3. Sistema de Notificaciones Locales de Proximidad de Mantenimiento
+                    item {
+                        PreventiveNotificationControlCard(
+                            notificacionesActivas = notificacionesActivas,
+                            umbralAlertaKm = umbralAlertaKm,
+                            alertaNotificacion = alertaNotificacion,
+                            ultimaNotificacionResumen = ultimaNotificacionResumen,
+                            permisoConcedido = permisoNotificacionConcedido,
+                            permisoDenegadoAviso = permisoDenegadoAviso,
+                            onToggleNotificaciones = { activas ->
+                                viewModel.setNotificacionesActivas(activas)
+                                if (activas && !permisoNotificacionConcedido && Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                                    notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                                }
+                            },
+                            onSelectUmbralKm = { nuevoUmbral ->
+                                viewModel.setUmbralAlertaKm(nuevoUmbral)
+                            },
+                            onSendNotificationNow = {
+                                dispararNotificacionAhora(manual = true)
+                            }
+                        )
+                    }
+
+                    // 4. Tarjeta destacada: Próxima Parada Preventiva más cercana
+                    if (proximoPrioritario != null) {
+                        item {
+                            NextPreventiveHighlightCard(
+                                item = proximoPrioritario,
+                                kmActual = kmActual,
+                                onRegister = { itemParaRegistrar = proximoPrioritario },
+                                onScheduleWorkshop = onNavigateToWorkshops
+                            )
+                        }
+                    }
+
+                    // 5. Filtros por estado preventivo
+                    item {
+                        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(
+                                    "CRONOGRAMA PREVENTIVO A ${formatSummaryKm(kmActual)} KM",
+                                    fontSize = 12.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    letterSpacing = 1.sp,
+                                    color = MotoTextSecondary
+                                )
+                                Text(
+                                    "${itemsFiltrados.size} de ${itemsPreventivos.size} tareas",
+                                    fontSize = 11.sp,
+                                    fontWeight = FontWeight.SemiBold,
+                                    color = MotoAccentBlue
+                                )
+                            }
+
+                            LazyRow(
+                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                modifier = Modifier.testTag("filtro_mantenimiento_chips")
+                            ) {
+                                items(FiltroResumenPreventivo.values().toList()) { filtro ->
+                                    val selected = filtroSeleccionado == filtro
+                                    ElevatedFilterChip(
+                                        selected = selected,
+                                        onClick = { filtroSeleccionado = filtro },
+                                        label = {
+                                            Text(
+                                                filtro.etiqueta,
+                                                fontSize = 12.sp,
+                                                fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal
+                                            )
+                                        },
+                                        colors = FilterChipDefaults.filterChipColors(
+                                            selectedContainerColor = MotoPrimary,
+                                            selectedLabelColor = Color.White,
+                                            containerColor = MotoSurfaceVariant,
+                                            labelColor = MotoTextSecondary
+                                        ),
+                                        border = FilterChipDefaults.filterChipBorder(
+                                            enabled = true,
+                                            selected = selected,
+                                            borderColor = if (selected) MotoPrimary else MotoBorder
+                                        ),
+                                        shape = RoundedCornerShape(12.dp)
+                                    )
+                                }
+                            }
+                        }
+                    }
+
+                    // 6. Listado de tarjetas de próximos mantenimientos preventivos
+                    if (itemsFiltrados.isEmpty()) {
+                        item {
+                            Card(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .border(1.dp, MotoBorder, RoundedCornerShape(16.dp)),
+                                colors = CardDefaults.cardColors(containerColor = MotoSurface)
+                            ) {
+                                Column(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(24.dp),
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                                ) {
+                                    Icon(
+                                        Icons.Default.Verified,
+                                        contentDescription = null,
+                                        tint = RoutineText,
+                                        modifier = Modifier.size(36.dp)
+                                    )
+                                    Text(
+                                        "No hay mantenimientos en esta categoría",
+                                        fontSize = 15.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = MotoTextPrimary,
+                                        textAlign = TextAlign.Center
+                                    )
+                                    Text(
+                                        "Prueba seleccionando el filtro \"Todos\" o ajusta el kilometraje actual arriba para simular próximos hitos.",
+                                        fontSize = 12.sp,
+                                        color = MotoTextSecondary,
+                                        textAlign = TextAlign.Center
+                                    )
+                                }
+                            }
+                        }
+                    } else {
+                        items(itemsFiltrados, key = { it.componente }) { item ->
+                            PreventiveMaintenanceItemCard(
+                                item = item,
+                                kmActual = kmActual,
+                                onRegisterService = { itemParaRegistrar = item },
+                                onFindWorkshop = onNavigateToWorkshops
+                            )
+                        }
+                    }
                 }
             }
 
@@ -759,6 +907,7 @@ private fun OdometerControlCard(
     subtituloMoto: String,
     usaPlanManualOficial: Boolean,
     manualTitulo: String?,
+    paginaPlan: Int?,
     kmInputText: String,
     kmActual: Int,
     onKmTextChange: (String) -> Unit,
@@ -818,34 +967,41 @@ private fun OdometerControlCard(
                 Box(
                     modifier = Modifier
                         .background(
-                            if (usaPlanManualOficial) RoutineBg else InfoBg,
+                            if (usaPlanManualOficial) RoutineBg else WarningBg,
                             RoundedCornerShape(6.dp)
                         )
                         .border(
                             0.5.dp,
-                            if (usaPlanManualOficial) RoutineBorder else InfoBorder,
+                            if (usaPlanManualOficial) RoutineBorder else WarningBorder,
                             RoundedCornerShape(6.dp)
                         )
                         .padding(horizontal = 8.dp, vertical = 4.dp)
                 ) {
                     Text(
-                        text = if (usaPlanManualOficial) "MANUAL OFICIAL" else "PLAN PREVENTIVO",
+                        text = if (usaPlanManualOficial) "PLAN OFICIAL" else "SIN PLAN OFICIAL",
                         fontSize = 9.sp,
                         fontWeight = FontWeight.Bold,
-                        color = if (usaPlanManualOficial) RoutineText else InfoText
+                        color = if (usaPlanManualOficial) RoutineText else WarningText
                     )
                 }
             }
 
-            if (usaPlanManualOficial && !manualTitulo.isNullOrBlank()) {
+            if (usaPlanManualOficial) {
+                val tituloLimpio = manualTitulo?.takeIf { it.isNotBlank() && !it.equals("untitled", ignoreCase = true) }
+                val textoFuente = when {
+                    tituloLimpio != null && paginaPlan != null -> "Según $tituloLimpio · pág. $paginaPlan"
+                    paginaPlan != null -> "Según el manual oficial, pág. $paginaPlan"
+                    tituloLimpio != null -> "Fuente activa: $tituloLimpio"
+                    else -> "Plan oficial del fabricante activo"
+                }
                 Text(
-                    text = "Fuente activa: $manualTitulo",
+                    text = textoFuente,
                     fontSize = 11.sp,
                     color = RoutineText.copy(alpha = 0.9f)
                 )
             } else {
                 Text(
-                    text = "Calculando próximos servicios por ciclos de odómetro. Consulta la ficha de tu moto en Cockpit si deseas cargar su manual específico.",
+                    text = "Sin plan de mantenimiento oficial publicado para este modelo.",
                     fontSize = 11.sp,
                     color = MotoTextSecondary
                 )

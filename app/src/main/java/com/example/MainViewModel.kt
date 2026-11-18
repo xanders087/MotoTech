@@ -469,9 +469,9 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
         val currentKey = _vehicleKey.value
         if (!currentKey.isNullOrBlank()) return currentKey
         val marca = formMarca.ifBlank { "Yamaha" }
-        val modelo = formModelo.ifBlank { "MT-07" }
-        val cc = formCilindraje.ifBlank { "689cc" }
-        val anio = formAnio.ifBlank { "2023" }
+        val modelo = formModelo.ifBlank { "FZ25 ABS" }
+        val cc = formCilindraje.ifBlank { "249cc" }
+        val anio = formAnio.ifBlank { "2027" }
         val computed = VehicleKey.of(marca, modelo, cc, anio)
         _vehicleKey.value = computed
         return computed
@@ -547,11 +547,15 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
                 val cachedResponse = cached?.let { runCatching { jsonAdapter.fromJson(it.jsonResponse) }.getOrNull() }
 
                 suspend fun syncSolicitudEstadoSiAproximada(resp: DiagnosticResponse, registrarSiFalta: Boolean) {
-                    if (resp.manual?.aproximada != true || anioNum <= 0) return
+                    if (anioNum <= 0) {
+                        _solicitud.value = SolicitudEstado.DISPONIBLE
+                        return
+                    }
                     val requestId = FichaMapper.idSolicitud(cleanMarca, cleanModelo, cleanCc, anioNum)
-                    if (repository.wasFichaRequested(requestId)) {
+                    val yaSolicitada = repository.wasFichaRequested(requestId)
+                    if (yaSolicitada) {
                         _solicitud.value = SolicitudEstado.ENVIADA
-                    } else if (registrarSiFalta) {
+                    } else if (resp.manual?.aproximada == true && registrarSiFalta) {
                         _solicitud.value = SolicitudEstado.ENVIANDO
                         runCatching {
                             val confirmada = FichaLibraryClient.solicitar(cleanMarca, cleanModelo, cleanCc, anioNum)
@@ -636,7 +640,7 @@ class MainViewModel(private val repository: DiagnosticRepository) : ViewModel() 
                     consultadoEl = now,
                     isFromCache = false
                 )
-                // Al mostrar una ficha aproximada, se registra automáticamente la solicitud de ese año.
+                // Sincroniza estado de solicitud (y si es aproximada, registra automáticamente el año pedido).
                 syncSolicitudEstadoSiAproximada(fetched, registrarSiFalta = true)
             } catch (e: CancellationException) {
                 throw e

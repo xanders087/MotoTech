@@ -33,6 +33,70 @@ class FichaMapperTest {
     if (docId != null) put("_docId", docId)
   }
 
+  private fun docV3(
+      tituloPdf: String? = "Manual Oficial Prueba",
+      incluirPlan: Boolean = true,
+      incluirServicio: Boolean = true
+  ): Map<String, Any?> = buildMap {
+    put("_docId", "marca-prueba_modelo-v3_249_2026-2027")
+    put("marca", "Marca Prueba")
+    put("modelo", "Modelo V3")
+    put("cilindraje_cc", 249L)
+    put("anio_desde", 2026L)
+    put("anio_hasta", 2027L)
+    put("anio_origen", "deteccion")
+    put("estado", "publicada")
+    put("clave", "marca prueba|modelo v3|249")
+    put("url_manual", "https://ejemplo.com/manual_v3.pdf")
+    put("verificacion", mapOf(
+        "metodo" to "extraccion determinista v1",
+        "fecha" to "2026-11-16"
+    ))
+    put("ficha_tecnica", mapOf(
+        "cilindraje" to mapOf(
+            "texto_original" to "249 cc",
+            "valor_normalizado" to "249 cc",
+            "fuente" to "https://ejemplo.com/modelo-v3",
+            "capturado" to "2026-11-16"
+        ),
+        "potencia_maxima" to mapOf(
+            "texto_original" to "20,6 HP @ 8.000 rpm",
+            "valor_normalizado" to "20.6 HP @ 8000 rpm",
+            "fuente" to "https://ejemplo.com/modelo-v3",
+            "capturado" to "2026-11-16"
+        ),
+        "capacidad_tanque" to mapOf(
+            "texto_original" to "14.0",
+            "valor_normalizado" to "14 L",
+            "fuente" to "https://ejemplo.com/modelo-v3",
+            "capturado" to "2026-11-16"
+        )
+    ))
+    if (incluirServicio) {
+      put("datos_servicio", mapOf(
+          "capacidad_aceite" to mapOf("valor" to "1,15 L", "pagina" to 78L)
+      ))
+    }
+    if (incluirPlan) {
+      put("plan_mantenimiento", mapOf(
+          "fuente" to mapOf(
+              "url" to "https://ejemplo.com/manual_v3.pdf",
+              "sha256" to "abc123sha256",
+              "pagina" to 42L,
+              "titulo" to tituloPdf
+          ),
+          "tareas" to listOf(
+              mapOf(
+                  "componente" to "Aceite de motor",
+                  "accion" to "Cambiar",
+                  "intervalo_km" to 5000L,
+                  "intervalo_meses" to 6L
+              )
+          )
+      ))
+    }
+  }
+
   @Test
   fun `la clave coincide con la del validador de fichas`() {
     // Mismo caso que test_clave_coincide_con_la_de_la_app en herramientas/fichas/test_validar.py
@@ -116,9 +180,52 @@ class FichaMapperTest {
   }
 
   @Test
-  fun `la ficha de manual se puede guardar y volver a leer`() {
+  fun `convierte ficha v3 con especificaciones web, datos de servicio y plan con fuente PDF`() {
+    val r = FichaMapper.toResponse(docV3(), aproximada = false, anioConsultado = 2026)
+    assertEquals("249 cc", r.especificaciones?.cilindraje?.texto_original)
+    assertEquals("https://ejemplo.com/modelo-v3", r.especificaciones?.cilindraje?.fuente)
+    assertEquals("14 L", r.especificaciones?.capacidad_tanque?.valor_normalizado)
+    assertEquals("1,15 L", r.ficha_tecnica?.capacidad_aceite?.valor)
+    assertEquals(78, r.ficha_tecnica?.capacidad_aceite?.pagina)
+
+    val tarea = r.plan_mantenimiento_periodico!!.single()
+    assertEquals("Aceite de motor", tarea.componente)
+    assertEquals(5000, tarea.intervalo_km)
+    assertEquals(6, tarea.intervalo_meses)
+    // Hereda la página desde plan_mantenimiento.fuente.pagina
+    assertEquals(42, tarea.pagina)
+
+    assertEquals("Manual Oficial Prueba", r.manual?.titulo)
+    assertEquals("https://ejemplo.com/manual_v3.pdf", r.manual?.url)
+    assertEquals("abc123sha256", r.manual?.fuente_plan?.sha256)
+    assertEquals(42, r.manual?.fuente_plan?.pagina)
+    assertEquals("deteccion", r.manual?.anio_origen)
+    assertEquals("extraccion determinista v1", r.manual?.verificacion_metodo)
+    assertEquals("2026-11-16", r.manual?.verificacion_fecha)
+  }
+
+  @Test
+  fun `ignora titulo untitled en plan v3 y funciona sin plan oficial`() {
+    val conUntitled = FichaMapper.toResponse(docV3(tituloPdf = "untitled"), anioConsultado = 2026)
+    assertNull(conUntitled.manual?.titulo)
+
+    val sinPlan = FichaMapper.toResponse(
+        docV3(incluirPlan = false, incluirServicio = false),
+        anioConsultado = 2027
+    )
+    assertTrue(sinPlan.plan_mantenimiento_periodico.isNullOrEmpty())
+    assertNull(sinPlan.ficha_tecnica)
+    assertEquals("https://ejemplo.com/manual_v3.pdf", sinPlan.manual?.url)
+    assertEquals("20,6 HP @ 8.000 rpm", sinPlan.especificaciones?.potencia_maxima?.texto_original)
+  }
+
+  @Test
+  fun `la ficha de manual y v3 se puede guardar y volver a leer`() {
     val adapter = com.squareup.moshi.Moshi.Builder().build().adapter(DiagnosticResponse::class.java)
-    val original = FichaMapper.toResponse(doc(), aproximada = true, anioConsultado = 2024)
-    assertEquals(original, adapter.fromJson(adapter.toJson(original)))
+    val legacy = FichaMapper.toResponse(doc(), aproximada = true, anioConsultado = 2024)
+    assertEquals(legacy, adapter.fromJson(adapter.toJson(legacy)))
+
+    val v3 = FichaMapper.toResponse(docV3(), aproximada = false, anioConsultado = 2026)
+    assertEquals(v3, adapter.fromJson(adapter.toJson(v3)))
   }
 }

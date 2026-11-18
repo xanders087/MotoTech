@@ -39,9 +39,12 @@ class SourceValidatorTest {
   }
 
   @Test
-  fun `manual sin titulo usa un nombre generico`() {
+  fun `manual sin titulo o untitled usa un nombre generico`() {
     val r = SourceValidator.verificarConManual("valor de prueba", 7, ManualInfo())
     assertEquals("Manual del fabricante, pág. 7", r.fuenteTitulo)
+
+    val rUntitled = SourceValidator.verificarConManual("valor de prueba", 8, ManualInfo(titulo = "untitled"))
+    assertEquals("Manual del fabricante, pág. 8", rUntitled.fuenteTitulo)
   }
 
   @Test
@@ -63,5 +66,67 @@ class SourceValidatorTest {
     val r2 = SourceValidator.verificarConManual("valor de prueba", 5, mismoAnioRango)
     assertEquals(NivelFuente.MANUAL_OTRO_ANIO, r2.nivel)
     assertEquals("Manual de prueba (2021), pág. 5", r2.fuenteTitulo)
+  }
+
+  @Test
+  fun `dato web oficial formatea fecha y conserva unidades literales`() {
+    val dato = DatoWeb(
+        texto_original = "199.4 cc",
+        valor_normalizado = "199 cc",
+        fuente = "https://ejemplo.com/moto",
+        capturado = "2026-11-16"
+    )
+    val r = SourceValidator.verificarConSitioOficial(dato, marca = "Bajaj")
+    assertEquals(NivelFuente.SITIO_OFICIAL, r.nivel)
+    assertEquals("199.4 cc", r.valor)
+    assertNull(r.detalleOriginal)
+    assertEquals("Sitio oficial de Bajaj · consultado el 16/11/2026", r.fuenteTitulo)
+    assertEquals("https://ejemplo.com/moto", r.fuenteUrl)
+  }
+
+  @Test
+  fun `dato web sin unidades muestra valor normalizado y nota del original`() {
+    val dato = DatoWeb(
+        texto_original = "12.0",
+        valor_normalizado = "12 L",
+        fuente = "https://ejemplo.com/moto",
+        capturado = "2026-11-16"
+    )
+    val r = SourceValidator.verificarConSitioOficial(dato, marca = "Yamaha")
+    assertEquals(NivelFuente.SITIO_OFICIAL, r.nivel)
+    assertEquals("12 L", r.valor)
+    assertEquals("En sitio oficial: 12.0", r.detalleOriginal)
+  }
+
+  @Test
+  fun `dato web aproximado devuelve nivel SITIO_OFICIAL_OTRO_ANIO`() {
+    val dato = DatoWeb(
+        texto_original = "4 tiempos, SOHC",
+        fuente = "https://ejemplo.com/moto",
+        capturado = "2026-11-16"
+    )
+    val manualAprox = ManualInfo(
+        anio_desde = 2024,
+        anio_hasta = 2025,
+        aproximada = true,
+        anio_consultado = 2027
+    )
+    val r = SourceValidator.verificarConSitioOficial(dato, manual = manualAprox, marca = "Honda")
+    assertEquals(NivelFuente.SITIO_OFICIAL_OTRO_ANIO, r.nivel)
+    assertEquals("Sitio oficial de Honda (2024-2025) · consultado el 16/11/2026", r.fuenteTitulo)
+  }
+
+  @Test
+  fun `dato web sin url https devuelve SIN_FUENTE y dato vacio devuelve SIN_DATO`() {
+    val sinUrl = DatoWeb(texto_original = "150 cc", fuente = "http://inseguro.example")
+    assertEquals(NivelFuente.SIN_FUENTE, SourceValidator.verificarConSitioOficial(sinUrl).nivel)
+    assertEquals(NivelFuente.SIN_DATO, SourceValidator.verificarConSitioOficial(null).nivel)
+    assertEquals(NivelFuente.SIN_DATO, SourceValidator.verificarConSitioOficial(DatoWeb(texto_original = " ")).nivel)
+  }
+
+  @Test
+  fun `formatearFechaIso convierte YYYY-MM-DD a DD_MM_YYYY`() {
+    assertEquals("16/11/2026", SourceValidator.formatearFechaIso("2026-11-16"))
+    assertNull(SourceValidator.formatearFechaIso("  "))
   }
 }

@@ -94,13 +94,12 @@ fun MotoTechCockpit(
 
     val exampleBikes = remember {
         listOf(
-            "Yamaha MT-07" to Quadruple("Yamaha", "MT-07", "689cc", "2023"),
-            "Bajaj Pulsar NS200" to Quadruple("Bajaj", "Pulsar NS200", "199cc", "2023"),
-            "AKT NKD 125" to Quadruple("AKT", "NKD 125", "124cc", "2024"),
-            "Suzuki Gixxer 150" to Quadruple("Suzuki", "Gixxer 150 FI ABS", "155cc", "2024"),
-            "KTM Duke 390" to Quadruple("KTM", "Duke 390", "373cc", "2024"),
-            "Honda CB190R" to Quadruple("Honda", "CB190R", "184cc", "2024"),
-            "BMW G 310 GS" to Quadruple("BMW", "G 310 GS", "313cc", "2022")
+            "Yamaha FZ25 ABS" to Quadruple("Yamaha", "FZ25 ABS", "249cc", "2027"),
+            "Bajaj Pulsar NS200" to Quadruple("Bajaj", "Pulsar NS200 FI ABS DC", "199cc", "2026"),
+            "AKT NKD 125" to Quadruple("AKT", "NKD 125", "124cc", "2026"),
+            "Honda CB 190R 2.0" to Quadruple("Honda", "CB 190R 2.0 2027", "184cc", "2026"),
+            "Yamaha NMAX" to Quadruple("Yamaha", "NMAX", "155cc", "2027"),
+            "Bajaj Dominar 400" to Quadruple("Bajaj", "Dominar 400 Touring", "373cc", "2026")
         )
     }
 
@@ -122,8 +121,9 @@ fun MotoTechCockpit(
         }
     }
 
-    // Lo que toca se calcula con el plan citado y el historial que registró el usuario.
+    // Lo que toca se calcula con el plan oficial citado y el historial que registró el usuario.
     val success = uiState as? DiagnosticState.Success
+    var selectedResultTab by remember(success?.vehicleKey) { mutableStateOf(0) }
     val maintenanceItems = remember(success, serviceRecords) {
         if (success == null) emptyList() else {
             val ultimos = serviceRecords
@@ -133,6 +133,22 @@ fun MotoTechCockpit(
                     UltimoServicio(last.kilometraje, last.fecha, last.notas)
                 }
             MaintenanceCalculator.calcular(
+                plan = success.response.plan_mantenimiento_periodico.orEmpty(),
+                kmActual = success.kmActual,
+                ultimosServicios = ultimos,
+                ahoraMillis = System.currentTimeMillis()
+            )
+        }
+    }
+    val proximosResumen = remember(success, serviceRecords) {
+        if (success == null) emptyList() else {
+            val ultimos = serviceRecords
+                .groupBy { it.componente }
+                .mapValues { (_, list) ->
+                    val last = list.maxWith(compareBy({ it.kilometraje }, { it.fecha }))
+                    UltimoServicio(last.kilometraje, last.fecha, last.notas)
+                }
+            MaintenanceCalculator.calcularResumenPorKilometraje(
                 plan = success.response.plan_mantenimiento_periodico.orEmpty(),
                 kmActual = success.kmActual,
                 ultimosServicios = ultimos,
@@ -161,7 +177,7 @@ fun MotoTechCockpit(
                         }
                         Column {
                             Text("MotoTech", fontSize = 17.sp, fontWeight = FontWeight.Bold, color = MotoTextPrimary)
-                            Text("Datos del manual oficial de tu moto", fontSize = 11.sp, color = MotoTextSecondary)
+                            Text("Ficha técnica y mantenimiento oficial", fontSize = 11.sp, color = MotoTextSecondary)
                         }
                     }
                 },
@@ -439,82 +455,105 @@ fun MotoTechCockpit(
                 is DiagnosticState.Success -> {
                     val resp = state.response
                     val manual = resp.manual
+                    val marcaActual = resp.moto_info?.marca ?: state.marca
+                    val modeloActual = resp.moto_info?.modelo ?: viewModel.formModelo
+                    val cilindrajeActual = resp.moto_info?.cilindraje ?: viewModel.formCilindraje
                     val fichaId = manual?.ficha_id ?: FichaMapper.idFichaFallback(
-                        marca = resp.moto_info?.marca ?: state.marca,
-                        modelo = resp.moto_info?.modelo ?: viewModel.formModelo,
-                        cilindraje = resp.moto_info?.cilindraje ?: viewModel.formCilindraje,
+                        marca = marcaActual,
+                        modelo = modeloActual,
+                        cilindraje = cilindrajeActual,
                         anioDesde = manual?.anio_desde,
                         anioHasta = manual?.anio_hasta
                     )
+                    val solicitarAnioAction = {
+                        val anioSolicitado = manual?.anio_consultado ?: resp.moto_info?.anio
+                        if (anioSolicitado != null && anioSolicitado > 0) {
+                            viewModel.solicitarAnio(
+                                marca = marcaActual,
+                                modelo = modeloActual,
+                                cilindraje = cilindrajeActual,
+                                anio = anioSolicitado
+                            )
+                        }
+                    }
 
                     item {
                         ManualBanner(
+                            marca = marcaActual,
                             manual = manual,
+                            especificaciones = resp.especificaciones,
                             aviso = state.aviso,
                             solicitud = solicitud,
-                            onSolicitarAnio = {
-                                val anioSolicitado = manual?.anio_consultado ?: resp.moto_info?.anio
-                                if (anioSolicitado != null && anioSolicitado > 0) {
-                                    viewModel.solicitarAnio(
-                                        marca = resp.moto_info?.marca ?: state.marca,
-                                        modelo = resp.moto_info?.modelo ?: viewModel.formModelo,
-                                        cilindraje = resp.moto_info?.cilindraje ?: viewModel.formCilindraje,
-                                        anio = anioSolicitado
+                            onSolicitarAnio = solicitarAnioAction
+                        )
+                    }
+
+                    item {
+                        MotoResultTabBar(
+                            selectedTab = selectedResultTab,
+                            maintenanceCount = maintenanceItems.size,
+                            onSelectTab = { selectedResultTab = it }
+                        )
+                    }
+
+                    if (selectedResultTab == 0) {
+                        item {
+                            TechnicalSpecsCard(
+                                marca = marcaActual,
+                                especificaciones = resp.especificaciones,
+                                ficha = resp.ficha_tecnica,
+                                manual = manual,
+                                fichaId = fichaId,
+                                reportedIds = reportedIds,
+                                reportandoCampo = reportandoCampo,
+                                onReportar = { campo, etiqueta, valor ->
+                                    reportTarget = ReportTarget(
+                                        fichaId = fichaId,
+                                        marca = marcaActual,
+                                        modelo = modeloActual,
+                                        cilindraje = cilindrajeActual,
+                                        campo = campo,
+                                        etiqueta = etiqueta,
+                                        valorReportado = valor
                                     )
                                 }
-                            }
-                        )
-                    }
-
-                    item {
-                        TechnicalSpecsCard(
-                            ficha = resp.ficha_tecnica,
-                            manual = manual,
-                            fichaId = fichaId,
-                            reportedIds = reportedIds,
-                            reportandoCampo = reportandoCampo,
-                            onReportar = { campo, etiqueta, valor ->
-                                reportTarget = ReportTarget(
-                                    fichaId = fichaId,
-                                    marca = resp.moto_info?.marca ?: state.marca,
-                                    modelo = resp.moto_info?.modelo ?: viewModel.formModelo,
-                                    cilindraje = resp.moto_info?.cilindraje ?: viewModel.formCilindraje,
-                                    campo = campo,
-                                    etiqueta = etiqueta,
-                                    valorReportado = valor
-                                )
-                            }
-                        )
-                    }
-
-                    item {
-                        MaintenanceSection(
-                            items = maintenanceItems,
-                            manual = manual,
-                            kmActual = state.kmActual,
-                            fichaId = fichaId,
-                            reportedIds = reportedIds,
-                            reportandoCampo = reportandoCampo,
-                            onRegister = { itemToRegister = it },
-                            onFindWorkshop = onNavigateToWorkshops,
-                            onReportar = { campo, etiqueta, valor ->
-                                reportTarget = ReportTarget(
-                                    fichaId = fichaId,
-                                    marca = resp.moto_info?.marca ?: state.marca,
-                                    modelo = resp.moto_info?.modelo ?: viewModel.formModelo,
-                                    cilindraje = resp.moto_info?.cilindraje ?: viewModel.formCilindraje,
-                                    campo = campo,
-                                    etiqueta = etiqueta,
-                                    valorReportado = valor
-                                )
-                            }
-                        )
+                            )
+                        }
+                    } else {
+                        item {
+                            MaintenanceSection(
+                                marca = marcaActual,
+                                items = maintenanceItems,
+                                proximosResumen = proximosResumen,
+                                manual = manual,
+                                kmActual = state.kmActual,
+                                fichaId = fichaId,
+                                reportedIds = reportedIds,
+                                reportandoCampo = reportandoCampo,
+                                solicitud = solicitud,
+                                onSolicitarPlan = solicitarAnioAction,
+                                onOpenSummary = onNavigateToSummary,
+                                onRegister = { itemToRegister = it },
+                                onFindWorkshop = onNavigateToWorkshops,
+                                onReportar = { campo, etiqueta, valor ->
+                                    reportTarget = ReportTarget(
+                                        fichaId = fichaId,
+                                        marca = marcaActual,
+                                        modelo = modeloActual,
+                                        cilindraje = cilindrajeActual,
+                                        campo = campo,
+                                        etiqueta = etiqueta,
+                                        valorReportado = valor
+                                    )
+                                }
+                            )
+                        }
                     }
 
                     item {
                         Text(
-                            "Los datos se transcribieron del manual indicado y se muestran tal como aparecen en él. " +
-                                "Ante cualquier duda, prevalece el manual de tu moto.",
+                            "Cada dato proviene exclusivamente del sitio oficial del fabricante o de su manual en PDF. " +
+                                "MotoTech no estima ni rellena valores faltantes.",
                             fontSize = 11.sp,
                             color = MotoTextMuted,
                             textAlign = TextAlign.Center,
@@ -1213,18 +1252,25 @@ private fun VehicleSummaryCard(
             }
 
             if (success != null) {
+                val tienePlanOficial = success.response.plan_mantenimiento_periodico.orEmpty().isNotEmpty()
                 val vencidos = items.count { it.estado == EstadoMantenimiento.VENCIDO }
                 val conHistorial = items.filter { it.kmRestantes != null && it.estado != EstadoMantenimiento.VENCIDO }
                 val (proximoTexto, proximoColor) = when {
+                    !tienePlanOficial -> "Sin plan oficial" to MotoTextSecondary
                     vencidos > 0 -> "$vencidos vencido${if (vencidos > 1) "s" else ""}" to UrgentText
                     conHistorial.isNotEmpty() -> "En ${formatKm(conHistorial.minOf { it.kmRestantes!! })} km" to WarningText
                     else -> "Sin historial" to MotoTextSecondary
+                }
+                val fuenteLabel = when {
+                    success.response.especificaciones != null && success.response.manual?.fuente_plan != null -> "Web + PDF"
+                    success.response.especificaciones != null -> "Sitio oficial"
+                    else -> "Manual"
                 }
                 Spacer(modifier = Modifier.height(14.dp))
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     CockpitHudItem("Odómetro", "${formatKm(success.kmActual)} km", Icons.Default.Speed, MotoTextPrimary, Modifier.weight(1f))
                     CockpitHudItem("Próximo servicio", proximoTexto, Icons.Default.Build, proximoColor, Modifier.weight(1f))
-                    CockpitHudItem("Fuente", "Manual", Icons.Default.MenuBook, MotoAccentBlue, Modifier.weight(1f))
+                    CockpitHudItem("Fuente", fuenteLabel, Icons.Default.MenuBook, MotoAccentBlue, Modifier.weight(1f))
                 }
             }
 
@@ -1409,10 +1455,12 @@ private data class ReportTarget(
     val valorReportado: String
 )
 
-// Banner: de qué manual salen los datos y aviso si corresponde a otro año
+// Banner: de qué fuentes oficiales salen los datos y aviso si corresponde a otro año
 @Composable
 private fun ManualBanner(
+    marca: String,
     manual: ManualInfo?,
+    especificaciones: EspecificacionesTecnicas?,
     aviso: String?,
     solicitud: SolicitudEstado = SolicitudEstado.DISPONIBLE,
     onSolicitarAnio: () -> Unit = {}
@@ -1422,6 +1470,7 @@ private fun ManualBanner(
         if (manual.anio_desde == manual.anio_hasta) "${manual.anio_desde}"
         else "${manual.anio_desde}–${manual.anio_hasta}"
     } else null
+    val hasWebSpecs = especificaciones != null
 
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
         if (manual?.aproximada == true) {
@@ -1436,7 +1485,7 @@ private fun ManualBanner(
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         Icon(Icons.Default.Warning, contentDescription = null, tint = WarningText, modifier = Modifier.size(20.dp))
                         Text(
-                            "Manual de otro año como referencia",
+                            "Ficha de otro año como referencia",
                             fontSize = 13.sp,
                             fontWeight = FontWeight.Bold,
                             color = WarningText
@@ -1445,7 +1494,7 @@ private fun ManualBanner(
                     val modeloManual = rangoTexto ?: "otro año"
                     val anioConsultado = manual.anio_consultado?.toString() ?: "tu modelo"
                     Text(
-                        "Estos datos son del manual de los modelos $modeloManual. Aún no tenemos el manual de tu moto ($anioConsultado); algunos valores pueden variar.",
+                        "Estos datos corresponden a los modelos $modeloManual. Aún no tenemos la ficha exacta de tu modelo ($anioConsultado); algunos valores pueden variar.",
                         fontSize = 12.sp,
                         color = WarningText.copy(alpha = 0.92f),
                         lineHeight = 17.sp
@@ -1492,17 +1541,28 @@ private fun ManualBanner(
                 verticalAlignment = Alignment.Top,
                 horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                Icon(Icons.Default.MenuBook, contentDescription = null, tint = InfoText, modifier = Modifier.size(22.dp))
+                Icon(
+                    if (hasWebSpecs) Icons.Default.Verified else Icons.Default.MenuBook,
+                    contentDescription = null,
+                    tint = InfoText,
+                    modifier = Modifier.size(22.dp)
+                )
                 Column(modifier = Modifier.weight(1f)) {
+                    val tituloBanner = manual?.titulo?.takeIf { it.isNotBlank() && !it.equals("untitled", ignoreCase = true) }
+                        ?: if (hasWebSpecs) "Ficha oficial · $marca" else "Manual del fabricante"
                     Text(
-                        manual?.titulo ?: "Manual del fabricante",
-                        fontSize = 13.sp, fontWeight = FontWeight.Bold, color = InfoText
+                        tituloBanner,
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = InfoText
                     )
+                    val fechaMostrada = SourceValidator.formatearFechaIso(manual?.verificacion_fecha ?: manual?.fecha_revision)
                     val detalle = listOfNotNull(
                         manual?.edicion?.let { "Edición $it" },
                         rangoTexto?.let { "Modelos $it" },
-                        manual?.fecha_revision?.let { fecha ->
-                            "Revisado el $fecha" + (manual.revisado_por?.let { " por $it" } ?: "")
+                        fechaMostrada?.let { fecha ->
+                            if (manual?.verificacion_metodo != null) "Verificado el $fecha"
+                            else "Revisado el $fecha" + (manual?.revisado_por?.let { " por $it" } ?: "")
                         }
                     ).joinToString(" · ")
                     if (detalle.isNotEmpty()) {
@@ -1510,7 +1570,7 @@ private fun ManualBanner(
                     }
                     manual?.url?.let { url ->
                         Text(
-                            "Abrir el manual oficial",
+                            "Ver manual oficial (PDF)",
                             fontSize = 12.sp,
                             color = MotoAccentBlue,
                             textDecoration = TextDecoration.Underline,
@@ -1530,11 +1590,66 @@ private fun ManualBanner(
 }
 
 @Composable
+internal fun MotoResultTabBar(
+    selectedTab: Int,
+    maintenanceCount: Int,
+    onSelectTab: (Int) -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MotoSurfaceVariant, RoundedCornerShape(14.dp))
+            .border(1.dp, MotoBorder, RoundedCornerShape(14.dp))
+            .padding(4.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp)
+    ) {
+        val mantenimientoLabel = if (maintenanceCount > 0) "Mantenimiento ($maintenanceCount)" else "Mantenimiento"
+        val tabs = listOf(
+            Triple(0, "Ficha técnica", "result_tab_ficha" to Icons.Default.Description),
+            Triple(1, mantenimientoLabel, "result_tab_mantenimiento" to Icons.Default.Build)
+        )
+        tabs.forEach { (index, label, tagAndIcon) ->
+            val selected = selectedTab == index
+            Surface(
+                shape = RoundedCornerShape(10.dp),
+                color = if (selected) MotoPrimary else Color.Transparent,
+                modifier = Modifier
+                    .weight(1f)
+                    .clickable { onSelectTab(index) }
+                    .testTag(tagAndIcon.first)
+            ) {
+                Row(
+                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 10.dp),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        imageVector = tagAndIcon.second,
+                        contentDescription = null,
+                        tint = if (selected) Color.White else MotoTextSecondary,
+                        modifier = Modifier.size(16.dp)
+                    )
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Text(
+                        text = label,
+                        fontSize = 12.sp,
+                        fontWeight = if (selected) FontWeight.Bold else FontWeight.SemiBold,
+                        color = if (selected) Color.White else MotoTextSecondary
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
 private fun FuenteBadge(nivel: NivelFuente) {
     val (texto, bg, fg) = when (nivel) {
         NivelFuente.MANUAL -> Triple("Manual oficial", RoutineIconBg, Color.White)
         NivelFuente.MANUAL_OTRO_ANIO -> Triple("Manual otro año", WarningIconBg, Color.White)
-        NivelFuente.SIN_FUENTE -> Triple("Sin página del manual", WarningIconBg, Color.White)
+        NivelFuente.SITIO_OFICIAL -> Triple("Sitio oficial", RoutineIconBg, Color.White)
+        NivelFuente.SITIO_OFICIAL_OTRO_ANIO -> Triple("Sitio oficial (otro año)", WarningIconBg, Color.White)
+        NivelFuente.SIN_FUENTE -> Triple("Sin fuente oficial", WarningIconBg, Color.White)
         NivelFuente.SIN_DATO -> Triple("Sin dato", MotoSurfaceVariant, MotoTextSecondary)
     }
     Box(
@@ -1568,6 +1683,8 @@ private fun FuenteLink(dato: DatoVerificado) {
 
 @Composable
 fun TechnicalSpecsCard(
+    marca: String = "",
+    especificaciones: EspecificacionesTecnicas? = null,
     ficha: FichaTecnica?,
     manual: ManualInfo?,
     fichaId: String = "",
@@ -1575,38 +1692,167 @@ fun TechnicalSpecsCard(
     reportandoCampo: String? = null,
     onReportar: ((campo: String, etiqueta: String, valor: String) -> Unit)? = null
 ) {
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .border(1.dp, MotoBorder, RoundedCornerShape(18.dp)),
-        colors = CardDefaults.cardColors(containerColor = MotoSurface)
-    ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Text("FICHA TÉCNICA", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = MotoTextPrimary, letterSpacing = 1.sp)
-            Spacer(modifier = Modifier.height(10.dp))
-            val filas = listOf(
-                Triple("ficha_tecnica.capacidad_aceite", "Capacidad de aceite", ficha?.capacidad_aceite),
-                Triple("ficha_tecnica.viscosidad_aceite", "Viscosidad de aceite", ficha?.viscosidad_aceite),
-                Triple("ficha_tecnica.presion_llanta_delantera", "Presión llanta delantera", ficha?.presion_llanta_delantera),
-                Triple("ficha_tecnica.presion_llanta_trasera", "Presión llanta trasera", ficha?.presion_llanta_trasera),
-                Triple("ficha_tecnica.holgura_cadena", "Holgura de cadena", ficha?.holgura_cadena),
-                Triple("ficha_tecnica.liquido_frenos", "Líquido de frenos", ficha?.liquido_frenos)
-            )
-            filas.forEachIndexed { index, (campo, label, dato) ->
-                val verificado = SourceValidator.verificarConManual(dato?.valor, dato?.pagina, manual)
-                val reportId = if (fichaId.isNotBlank()) FichaMapper.idReporte(fichaId, campo) else ""
-                val yaReportado = reportId.isNotEmpty() && reportId in reportedIds
-                SpecItem(
-                    label = label,
-                    dato = verificado,
-                    yaReportado = yaReportado,
-                    reportando = reportandoCampo == campo,
-                    onReportar = if (onReportar != null && verificado.valor != null && fichaId.isNotBlank()) {
-                        { onReportar(campo, label, verificado.valor) }
-                    } else null
-                )
-                if (index < filas.size - 1) {
-                    HorizontalDivider(color = MotoBorder, thickness = 0.5.dp, modifier = Modifier.padding(vertical = 8.dp))
+    val uriHandler = LocalUriHandler.current
+    val gruposWeb = remember(especificaciones) {
+        if (especificaciones == null) emptyList()
+        else listOf(
+            "MOTOR" to listOf(
+                Triple("ficha_tecnica.cilindraje", "Cilindraje", especificaciones.cilindraje),
+                Triple("ficha_tecnica.tipo_motor", "Tipo de motor", especificaciones.tipo_motor),
+                Triple("ficha_tecnica.potencia_maxima", "Potencia máxima", especificaciones.potencia_maxima),
+                Triple("ficha_tecnica.torque_maximo", "Torque máximo", especificaciones.torque_maximo),
+                Triple("ficha_tecnica.alimentacion", "Alimentación", especificaciones.alimentacion),
+                Triple("ficha_tecnica.refrigeracion", "Refrigeración", especificaciones.refrigeracion),
+                Triple("ficha_tecnica.arranque", "Arranque", especificaciones.arranque),
+                Triple("ficha_tecnica.relacion_compresion", "Relación de compresión", especificaciones.relacion_compresion)
+            ).filter { it.third != null },
+            "TRANSMISIÓN" to listOf(
+                Triple("ficha_tecnica.tipo_transmision", "Tipo de transmisión", especificaciones.tipo_transmision),
+                Triple("ficha_tecnica.numero_velocidades", "Número de velocidades", especificaciones.numero_velocidades),
+                Triple("ficha_tecnica.transmision_final", "Transmisión final", especificaciones.transmision_final)
+            ).filter { it.third != null },
+            "CHASIS Y FRENOS" to listOf(
+                Triple("ficha_tecnica.freno_delantero", "Freno delantero", especificaciones.freno_delantero),
+                Triple("ficha_tecnica.freno_trasero", "Freno trasero", especificaciones.freno_trasero),
+                Triple("ficha_tecnica.abs", "ABS", especificaciones.abs),
+                Triple("ficha_tecnica.suspension_delantera", "Suspensión delantera", especificaciones.suspension_delantera),
+                Triple("ficha_tecnica.suspension_trasera", "Suspensión trasera", especificaciones.suspension_trasera),
+                Triple("ficha_tecnica.llanta_delantera", "Llanta delantera", especificaciones.llanta_delantera),
+                Triple("ficha_tecnica.llanta_trasera", "Llanta trasera", especificaciones.llanta_trasera)
+            ).filter { it.third != null },
+            "DIMENSIONES Y CAPACIDADES" to listOf(
+                Triple("ficha_tecnica.capacidad_tanque", "Capacidad del tanque", especificaciones.capacidad_tanque),
+                Triple("ficha_tecnica.peso", "Peso", especificaciones.peso),
+                Triple("ficha_tecnica.altura_asiento", "Altura del asiento", especificaciones.altura_asiento),
+                Triple("ficha_tecnica.distancia_ejes", "Distancia entre ejes", especificaciones.distancia_ejes)
+            ).filter { it.third != null }
+        ).filter { it.second.isNotEmpty() }
+    }
+
+    val prefijoServicio = if (especificaciones != null) "datos_servicio" else "ficha_tecnica"
+    val filasServicio = listOf(
+        Triple("$prefijoServicio.capacidad_aceite", "Capacidad de aceite", ficha?.capacidad_aceite),
+        Triple("$prefijoServicio.viscosidad_aceite", "Viscosidad de aceite", ficha?.viscosidad_aceite),
+        Triple("$prefijoServicio.presion_llanta_delantera", "Presión llanta delantera", ficha?.presion_llanta_delantera),
+        Triple("$prefijoServicio.presion_llanta_trasera", "Presión llanta trasera", ficha?.presion_llanta_trasera),
+        Triple("$prefijoServicio.holgura_cadena", "Holgura de cadena", ficha?.holgura_cadena),
+        Triple("$prefijoServicio.liquido_frenos", "Líquido de frenos", ficha?.liquido_frenos)
+    )
+    val mostrarServicio = especificaciones == null || filasServicio.any { it.third != null }
+
+    // Fuente principal web para el pie de la pestaña Ficha técnica.
+    val primerDatoWeb = remember(gruposWeb) {
+        gruposWeb.firstOrNull()?.second?.firstOrNull()?.third
+    }
+
+    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        gruposWeb.forEach { (tituloGrupo, itemsGrupo) ->
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .border(1.dp, MotoBorder, RoundedCornerShape(18.dp)),
+                colors = CardDefaults.cardColors(containerColor = MotoSurface)
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text(
+                        tituloGrupo,
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = MotoAccentBlue,
+                        letterSpacing = 1.sp
+                    )
+                    Spacer(modifier = Modifier.height(10.dp))
+                    itemsGrupo.forEachIndexed { index, (campo, label, dato) ->
+                        val verificado = SourceValidator.verificarConSitioOficial(dato, manual, marca)
+                        val reportId = if (fichaId.isNotBlank()) FichaMapper.idReporte(fichaId, campo) else ""
+                        val yaReportado = reportId.isNotEmpty() && reportId in reportedIds
+                        SpecItem(
+                            label = label,
+                            dato = verificado,
+                            yaReportado = yaReportado,
+                            reportando = reportandoCampo == campo,
+                            onReportar = if (onReportar != null && verificado.valor != null && fichaId.isNotBlank()) {
+                                { onReportar(campo, label, verificado.valor) }
+                            } else null
+                        )
+                        if (index < itemsGrupo.size - 1) {
+                            HorizontalDivider(color = MotoBorder, thickness = 0.5.dp, modifier = Modifier.padding(vertical = 8.dp))
+                        }
+                    }
+                }
+            }
+        }
+
+        if (mostrarServicio) {
+            val filasVisibles = if (especificaciones != null) filasServicio.filter { it.third != null } else filasServicio
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .border(1.dp, MotoBorder, RoundedCornerShape(18.dp)),
+                colors = CardDefaults.cardColors(containerColor = MotoSurface)
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text(
+                        if (especificaciones != null) "DATOS DE SERVICIO (MANUAL OFICIAL)" else "FICHA TÉCNICA",
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = MotoTextPrimary,
+                        letterSpacing = 1.sp
+                    )
+                    Spacer(modifier = Modifier.height(10.dp))
+                    filasVisibles.forEachIndexed { index, (campo, label, dato) ->
+                        val verificado = SourceValidator.verificarConManual(dato?.valor, dato?.pagina, manual)
+                        val reportId = if (fichaId.isNotBlank()) FichaMapper.idReporte(fichaId, campo) else ""
+                        val yaReportado = reportId.isNotEmpty() && reportId in reportedIds
+                        SpecItem(
+                            label = label,
+                            dato = verificado,
+                            yaReportado = yaReportado,
+                            reportando = reportandoCampo == campo,
+                            onReportar = if (onReportar != null && verificado.valor != null && fichaId.isNotBlank()) {
+                                { onReportar(campo, label, verificado.valor) }
+                            } else null
+                        )
+                        if (index < filasVisibles.size - 1) {
+                            HorizontalDivider(color = MotoBorder, thickness = 0.5.dp, modifier = Modifier.padding(vertical = 8.dp))
+                        }
+                    }
+                }
+            }
+        }
+
+        // Pie obligatorio de fuente en la pestaña Ficha técnica.
+        if (primerDatoWeb != null) {
+            val urlSitio = primerDatoWeb.fuente
+            val fechaConsulta = SourceValidator.formatearFechaIso(primerDatoWeb.capturado ?: manual?.verificacion_fecha)
+            val textoFuente = buildString {
+                append("Fuente: sitio oficial")
+                if (marca.isNotBlank()) append(" de $marca")
+                if (fechaConsulta != null) append(" · consultado el $fechaConsulta")
+            }
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .border(1.dp, MotoBorder, RoundedCornerShape(14.dp))
+                    .testTag("ficha_tecnica_footer"),
+                colors = CardDefaults.cardColors(containerColor = MotoSurfaceVariant)
+            ) {
+                Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Text(
+                        text = textoFuente,
+                        fontSize = 12.sp,
+                        color = MotoTextPrimary,
+                        fontWeight = FontWeight.Medium
+                    )
+                    if (!urlSitio.isNullOrBlank()) {
+                        Text(
+                            text = urlSitio,
+                            fontSize = 11.sp,
+                            color = MotoAccentBlue,
+                            textDecoration = TextDecoration.Underline,
+                            modifier = Modifier.clickable { runCatching { uriHandler.openUri(urlSitio) } }
+                        )
+                    }
                 }
             }
         }
@@ -1634,15 +1880,18 @@ fun SpecItem(
         Spacer(modifier = Modifier.height(2.dp))
         if (dato.valor == null) {
             Text(
-                "El manual no trae este dato.",
+                "La fuente oficial no trae este dato.",
                 fontSize = 13.sp,
                 color = MotoTextMuted
             )
         } else {
             Text(dato.valor, fontSize = 15.sp, fontWeight = FontWeight.SemiBold, color = MotoTextPrimary)
+            dato.detalleOriginal?.let { original ->
+                Text(original, fontSize = 11.sp, color = MotoTextSecondary)
+            }
             if (dato.nivel == NivelFuente.SIN_FUENTE) {
                 Text(
-                    "La ficha no indica en qué página del manual está este valor. Confírmalo antes de usarlo.",
+                    "La ficha no indica la fuente oficial de este valor. Confírmalo antes de usarlo.",
                     fontSize = 11.sp,
                     color = WarningText
                 )
@@ -1734,36 +1983,175 @@ private fun estadoTexto(item: ItemMantenimiento): String {
     }
 }
 
-// Qué le toca a la moto: intervalo citado + historial registrado por el usuario
+// Qué le toca a la moto: intervalo oficial citado + próximo servicio + historial registrado por el usuario
 @Composable
-private fun MaintenanceSection(
+internal fun MaintenanceSection(
+    marca: String,
     items: List<ItemMantenimiento>,
+    proximosResumen: List<ProximoMantenimientoPreventivo>,
     manual: ManualInfo?,
     kmActual: Int,
     fichaId: String,
     reportedIds: Set<String>,
     reportandoCampo: String?,
+    solicitud: SolicitudEstado,
+    onSolicitarPlan: () -> Unit,
+    onOpenSummary: () -> Unit,
     onRegister: (ItemMantenimiento) -> Unit,
     onFindWorkshop: () -> Unit,
     onReportar: (campo: String, etiqueta: String, valor: String) -> Unit
 ) {
+    val uriHandler = LocalUriHandler.current
+
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text("MANTENIMIENTO A ${formatKm(kmActual)} KM", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = MotoTextPrimary, letterSpacing = 1.sp)
 
         if (items.isEmpty()) {
+            val marcaVisible = marca.trim().ifBlank { "El fabricante" }
+            val urlManual = manual?.url?.takeIf { it.isNotBlank() }
             Card(
-                modifier = Modifier.fillMaxWidth().border(1.dp, MotoBorder, RoundedCornerShape(18.dp)),
-                colors = CardDefaults.cardColors(containerColor = MotoSurface)
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .border(1.dp, WarningBorder, RoundedCornerShape(18.dp))
+                    .testTag("sin_plan_oficial_card"),
+                colors = CardDefaults.cardColors(containerColor = WarningBg)
             ) {
-                Text(
-                    "La ficha de esta moto no incluye un plan de mantenimiento con intervalos. " +
-                        "Consulta la tabla de mantenimiento de tu manual.",
-                    fontSize = 13.sp,
-                    color = MotoTextSecondary,
-                    modifier = Modifier.padding(16.dp)
-                )
+                Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                        Icon(Icons.Default.Info, contentDescription = null, tint = WarningText)
+                        Text(
+                            "Plan del fabricante aún no disponible",
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = WarningText
+                        )
+                    }
+                    Text(
+                        "$marcaVisible aún no publica el plan de mantenimiento de este modelo en su sitio.",
+                        fontSize = 13.sp,
+                        color = WarningText.copy(alpha = 0.95f),
+                        lineHeight = 18.sp
+                    )
+                    Text(
+                        "MotoTech solo muestra intervalos oficiales verificados del fabricante y no utiliza planes genéricos.",
+                        fontSize = 12.sp,
+                        color = WarningText.copy(alpha = 0.8f)
+                    )
+
+                    if (urlManual != null) {
+                        OutlinedButton(
+                            onClick = { runCatching { uriHandler.openUri(urlManual) } },
+                            shape = RoundedCornerShape(10.dp),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .testTag("ver_manual_oficial_button")
+                        ) {
+                            Icon(Icons.Default.MenuBook, contentDescription = null, tint = WarningText, modifier = Modifier.size(16.dp))
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text("Ver manual oficial", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = WarningText)
+                        }
+                    }
+
+                    when (solicitud) {
+                        SolicitudEstado.ENVIADA, SolicitudEstado.EN_COLA -> {
+                            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                                Icon(Icons.Default.CheckCircle, contentDescription = null, tint = RoutineText, modifier = Modifier.size(18.dp))
+                                Text(
+                                    if (solicitud == SolicitudEstado.ENVIADA) "Solicitud registrada. Nos ayuda a priorizar este modelo."
+                                    else "Solicitud guardada. Se enviará cuando recuperes la conexión.",
+                                    color = WarningText,
+                                    fontSize = 12.sp
+                                )
+                            }
+                        }
+                        else -> {
+                            Button(
+                                onClick = onSolicitarPlan,
+                                enabled = solicitud != SolicitudEstado.ENVIANDO,
+                                colors = ButtonDefaults.buttonColors(containerColor = MotoPrimary),
+                                shape = RoundedCornerShape(10.dp),
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .height(44.dp)
+                                    .testTag("solicitar_plan_button")
+                            ) {
+                                if (solicitud == SolicitudEstado.ENVIANDO) {
+                                    CircularProgressIndicator(color = Color.White, modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
+                                    Spacer(modifier = Modifier.width(10.dp))
+                                    Text("Enviando…", fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                                } else {
+                                    Text("Solicitar", fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                                }
+                            }
+                            if (solicitud == SolicitudEstado.ERROR) {
+                                Text("No se pudo enviar la solicitud. Intenta de nuevo.", color = UrgentText, fontSize = 12.sp)
+                            }
+                        }
+                    }
+                }
             }
             return@Column
+        }
+
+        // Tarjeta "Próximo servicio" calculado con el odómetro y el historial del usuario.
+        val proximoItem = proximosResumen.firstOrNull()
+        if (proximoItem != null) {
+            val esUrgente = proximoItem.estado == EstadoMantenimiento.VENCIDO
+            val bgNext = if (esUrgente) UrgentBg else InfoBg
+            val borderNext = if (esUrgente) UrgentBorder else InfoBorder
+            val fgNext = if (esUrgente) UrgentText else InfoText
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .border(1.dp, borderNext, RoundedCornerShape(16.dp))
+                    .testTag("proximo_servicio_tab_card"),
+                colors = CardDefaults.cardColors(containerColor = bgNext)
+            ) {
+                Column(modifier = Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            if (esUrgente) "PRÓXIMO SERVICIO (VENCIDO / TOCA AHORA)" else "PRÓXIMO SERVICIO",
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = fgNext,
+                            letterSpacing = 0.8.sp
+                        )
+                        proximoItem.proximoKilometraje?.let { hito ->
+                            Text(
+                                "Meta: ${formatKm(hito)} km",
+                                fontSize = 11.sp,
+                                fontWeight = FontWeight.Bold,
+                                fontFamily = FontFamily.Monospace,
+                                color = fgNext
+                            )
+                        }
+                    }
+                    Text(proximoItem.componente, fontSize = 15.sp, fontWeight = FontWeight.Bold, color = fgNext)
+                    val detalleProx = proximoItem.kmRestantes?.let { rest ->
+                        when {
+                            rest < 0 -> "Vencido por ${formatKm(-rest)} km"
+                            rest == 0 -> "Corresponde exactamente a los ${formatKm(kmActual)} km"
+                            else -> "Faltan ${formatKm(rest)} km (${if (proximoItem.basadoEnRegistro) "según tu último servicio" else "ciclo por odómetro"})"
+                        }
+                    } ?: "Según intervalo calendario del fabricante"
+                    Text(detalleProx, fontSize = 12.sp, color = fgNext.copy(alpha = 0.9f))
+                    TextButton(
+                        onClick = onOpenSummary,
+                        contentPadding = PaddingValues(0.dp)
+                    ) {
+                        Text(
+                            "Ver cronograma completo y alertas en Resumen KM →",
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = MotoAccentBlue
+                        )
+                    }
+                }
+            }
         }
 
         EstadoMantenimiento.values().forEach { estado ->
@@ -1865,6 +2253,49 @@ private fun MaintenanceSection(
                             Text("Buscar taller", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = Color.White)
                         }
                     }
+                }
+            }
+        }
+
+        // Pie obligatorio de fuente en la pestaña Mantenimiento.
+        val paginaPlan = manual?.fuente_plan?.pagina ?: items.firstNotNullOfOrNull { it.plan.pagina }
+        val urlPlan = manual?.fuente_plan?.url ?: manual?.url
+        val shaPlan = manual?.fuente_plan?.sha256
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .border(1.dp, MotoBorder, RoundedCornerShape(14.dp))
+                .testTag("mantenimiento_footer"),
+            colors = CardDefaults.cardColors(containerColor = MotoSurfaceVariant)
+        ) {
+            Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                val textoPie = if (paginaPlan != null && paginaPlan > 0) {
+                    "Según el manual oficial, pág. $paginaPlan"
+                } else {
+                    "Según el manual oficial del fabricante"
+                }
+                Text(
+                    text = textoPie,
+                    fontSize = 12.sp,
+                    color = MotoTextPrimary,
+                    fontWeight = FontWeight.Medium
+                )
+                if (!shaPlan.isNullOrBlank()) {
+                    Text(
+                        text = "PDF verificado (SHA-256: ${shaPlan.take(12)}…)",
+                        fontSize = 10.sp,
+                        fontFamily = FontFamily.Monospace,
+                        color = MotoTextSecondary
+                    )
+                }
+                if (!urlPlan.isNullOrBlank()) {
+                    Text(
+                        text = "Ver manual oficial (PDF)",
+                        fontSize = 11.sp,
+                        color = MotoAccentBlue,
+                        textDecoration = TextDecoration.Underline,
+                        modifier = Modifier.clickable { runCatching { uriHandler.openUri(urlPlan) } }
+                    )
                 }
             }
         }
