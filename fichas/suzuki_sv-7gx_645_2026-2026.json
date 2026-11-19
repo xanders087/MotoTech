@@ -1,0 +1,92 @@
+{
+  "marca": "Suzuki",
+  "modelo": "SV-7GX",
+  "cilindraje_cc": 645,
+  "anio_desde": 2026,
+  "anio_hasta": 2026,
+  "anio_origen": "deteccion",
+  "ficha_tecnica": {
+    "peso": {
+      "texto_original": "211 kg",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19"
+    },
+    "cilindraje": {
+      "texto_original": "645 cm3",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19",
+      "valor_normalizado": "645 cc"
+    },
+    "distancia_ejes": {
+      "texto_original": "1445 mm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19"
+    },
+    "tipo_motor": {
+      "texto_original": "4 Tiempos 2 Cilindros en V",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19"
+    },
+    "freno_delantero": {
+      "texto_original": "Doble Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19"
+    },
+    "freno_trasero": {
+      "texto_original": "Disco ABS",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19"
+    },
+    "llanta_delantera": {
+      "texto_original": "20/70Z R17 M/C 58W",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19"
+    },
+    "llanta_trasera": {
+      "texto_original": "160/60Z R17 M/C 69W",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19"
+    },
+    "capacidad_tanque": {
+      "texto_original": "17,4 L",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19",
+      "valor_normalizado": "17.4 L"
+    },
+    "potencia_maxima": {
+      "texto_original": "72,4 HP @8500 rpm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19"
+    },
+    "torque_maximo": {
+      "texto_original": "64 Nm @ 6800 rpm",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19"
+    },
+    "tipo_transmision": {
+      "texto_original": "6 Velocidades - MANUAL",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19"
+    },
+    "alimentacion": {
+      "texto_original": "Inyección Electrónica",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19"
+    },
+    "refrigeracion": {
+      "texto_original": "Liquido Refrigerante",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19"
+    },
+    "relacion_compresion": {
+      "texto_original": "11,2:1",
+      "fuente": "https://suzuki.com.co/motocicletas/alto-cilindraje/sv-7gx",
+      "capturado": "2026-11-19"
+    }
+  },
+  "url_manual": null,
+  "verificacion": {
+    "metodo": "extraccion determinista v1",
+    "fecha": "2026-11-19"
+  }
+}
