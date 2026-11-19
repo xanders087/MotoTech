@@ -848,7 +848,7 @@
       "visto_por_ultima_vez": "2026-11-19"
     },
     {
-      "modelo": "Nueva NKD 125: precio y ficha técnica",
+      "modelo": "NUEVA NKD 125",
       "cilindraje": "124cc",
       "categoria": "Calle",
       "url_fuente": "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/",
@@ -1048,15 +1048,6 @@
       "tiene_ficha": false,
       "vigente": false,
       "visto_por_ultima_vez": "2026-11-17"
-    },
-    {
-      "modelo": "NUEVA NKD 125",
-      "cilindraje": "124cc",
-      "categoria": "Calle",
-      "url_fuente": "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/",
-      "tiene_ficha": true,
-      "vigente": false,
-      "visto_por_ultima_vez": "2026-11-18"
     },
     {
       "modelo": "CR4 162",

@@ -180,6 +180,16 @@ class AdaptadoresParsingTest(unittest.TestCase):
         self.assertEqual("Calle", m.categoria)
         self.assertIn("Manual-de-usuario-NKD", m.url_manual or "")
 
+        detalle_seo = """<html><body>
+          <h1>Nueva NKD 125: precio y ficha técnica</h1>
+          <div>Motor 124 cc Cilindraje</div>
+        </body></html>"""
+        m_seo = adaptadores.parsear_akt_modelo_html(
+            detalle_seo, "https://aktmotos.com/motos-akt/calle/nueva-nkd-125/"
+        )
+        self.assertIsNotNone(m_seo)
+        self.assertEqual("Nueva NKD 125", m_seo.modelo)
+
     def test_suzuki_sitemap_y_filtro_no_moto(self):
         xml = """<?xml version="1.0"?>
         <urlset>

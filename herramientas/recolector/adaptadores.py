@@ -640,8 +640,15 @@ def parsear_akt_modelo_html(
     if h1:
         nombre = _limpiar_espacios(h1.get_text(" ", strip=True))
     if not nombre and soup.title:
-        titulo = _limpiar_espacios(soup.title.get_text(" ", strip=True))
-        nombre = re.sub(r"\s*[-|]\s*AKT\s*Motos.*$", "", titulo, flags=re.IGNORECASE).strip()
+        nombre = _limpiar_espacios(soup.title.get_text(" ", strip=True))
+    if nombre:
+        nombre = re.sub(r"\s*[-|]\s*AKT\s*Motos.*$", "", nombre, flags=re.IGNORECASE).strip()
+        nombre = re.sub(
+            r"\s*:\s*(?:precio|ficha\s*t[eé]cnica|caracter[ií]sticas|especificaciones|cotiza).*$",
+            "",
+            nombre,
+            flags=re.IGNORECASE,
+        ).strip()
     if not nombre or _es_no_motocicleta(nombre, url_fuente):
         return None
 

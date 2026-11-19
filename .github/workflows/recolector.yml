@@ -86,7 +86,7 @@ jobs:
               --head "$BRANCH"
           fi
       - name: Verificar alertas del recolector
-        if: steps.recolector.outputs.exit_code != '0'
+        if: always() && steps.recolector.outputs.exit_code != '0'
         run: |
           echo "::error::Una o más marcas devolvieron errores o 0 modelos; se conservó su catálogo previo."
           exit 1
