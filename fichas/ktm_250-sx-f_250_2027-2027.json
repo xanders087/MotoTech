@@ -9,23 +9,23 @@
     "cilindraje": {
       "texto_original": "250 cm³",
       "fuente": "https://www.autocolombiana.com.co/ktm-250-sx-f-2027/p",
-      "capturado": "2026-11-19",
+      "capturado": "2026-11-23",
       "valor_normalizado": "250 cc"
     },
     "potencia_maxima": {
       "texto_original": "42 HP @13,000 rpm",
       "fuente": "https://www.autocolombiana.com.co/ktm-250-sx-f-2027/p",
-      "capturado": "2026-11-19"
+      "capturado": "2026-11-23"
     },
     "torque_maximo": {
       "texto_original": "26.7 Nm @9,300 rpm",
       "fuente": "https://www.autocolombiana.com.co/ktm-250-sx-f-2027/p",
-      "capturado": "2026-11-19"
+      "capturado": "2026-11-23"
     }
   },
   "url_manual": null,
   "verificacion": {
     "metodo": "extraccion determinista v1",
-    "fecha": "2026-11-19"
+    "fecha": "2026-11-23"
   }
 }
