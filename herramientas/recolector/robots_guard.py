@@ -53,8 +53,15 @@ class RobotsGuard:
         self,
         fetcher: Callable[[str], tuple[int, str]] | None = None,
         user_agent: str = USER_AGENT,
+        fallback_fetcher: Callable[[str], tuple[int, str]] | None = None,
     ) -> None:
         self._fetcher = fetcher or self._default_fetch
+        if fallback_fetcher is not None:
+            self._fallback_fetcher: Callable[[str], tuple[int, str]] | None = fallback_fetcher
+        elif fetcher is None:
+            self._fallback_fetcher = self._playwright_fetch
+        else:
+            self._fallback_fetcher = None
         self._user_agent = user_agent
         self._cache: dict[str, urllib.robotparser.RobotFileParser | None] = {}
 
@@ -74,6 +81,53 @@ class RobotsGuard:
             logger.warning("No se pudo leer %s: %s", robots_url, e)
             return 0, ""
 
+    @staticmethod
+    def _playwright_fetch(robots_url: str) -> tuple[int, str]:
+        try:
+            from playwright.sync_api import sync_playwright
+        except ImportError:
+            return 403, ""
+
+        try:
+            with sync_playwright() as p:
+                browser = p.chromium.launch(
+                    headless=True,
+                    args=["--disable-blink-features=AutomationControlled"],
+                )
+                try:
+                    ctx = browser.new_context(user_agent=BROWSER_USER_AGENT, locale="es-CO")
+                    try:
+                        try:
+                            import playwright_stealth
+
+                            playwright_stealth.Stealth().apply_stealth_sync(ctx)
+                        except ImportError:
+                            pass
+                        page = ctx.new_page()
+                        resp = page.goto(robots_url, wait_until="domcontentloaded", timeout=15000)
+                        if resp is None:
+                            return 403, ""
+                        status = resp.status
+                        if status != 200:
+                            return status, ""
+                        ctype = (resp.headers.get("content-type") or "").lower()
+                        if "text/html" in ctype:
+                            return 403, ""
+                        try:
+                            body = resp.text()
+                        except Exception:
+                            body = page.inner_text("body")
+                        if body.lstrip().lower().startswith(("<!doctype html", "<html")):
+                            return 403, ""
+                        return status, body
+                    finally:
+                        ctx.close()
+                finally:
+                    browser.close()
+        except Exception as e:
+            logger.warning("Fallback Playwright falló al leer %s: %s", robots_url, e)
+            return 403, ""
+
     def _parser_para_host(self, scheme: str, netloc: str) -> urllib.robotparser.RobotFileParser | None:
         key = f"{scheme}://{netloc}".lower()
         if key in self._cache:
@@ -81,6 +135,9 @@ class RobotsGuard:
 
         robots_url = f"{scheme}://{netloc}/robots.txt"
         status, body = self._fetcher(robots_url)
+        if status in (401, 403) and self._fallback_fetcher is not None:
+            logger.info("HTTP %d al leer %s; reintentando con fallback de navegador", status, robots_url)
+            status, body = self._fallback_fetcher(robots_url)
         rp = urllib.robotparser.RobotFileParser()
         rp.set_url(robots_url)
         if status == 200:

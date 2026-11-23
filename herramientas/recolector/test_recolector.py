@@ -45,6 +45,26 @@ class WhitelistYRobotsTest(unittest.TestCase):
         self.assertFalse(guard.puede_consultar("https://bloqueado.com/motos"))
         self.assertFalse(guard.puede_consultar("https://caido.com/motos"))
 
+    def test_robots_guard_fallback_cuando_waf_bloquea_urllib_con_403(self):
+        llamadas_fallback: list[str] = []
+
+        def primary_fetch(url: str):
+            return 403, ""
+
+        def fallback_fetch(url: str):
+            llamadas_fallback.append(url)
+            if "aktmotos.com" in url:
+                return 200, "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\n"
+            return 403, ""
+
+        guard = robots_guard.RobotsGuard(fetcher=primary_fetch, fallback_fetcher=fallback_fetch)
+        self.assertTrue(guard.puede_consultar("https://aktmotos.com/motos-akt/"))
+        self.assertFalse(guard.puede_consultar("https://aktmotos.com/wp-admin/"))
+        # Cacheado tras la primera consulta
+        self.assertEqual(["https://aktmotos.com/robots.txt"], llamadas_fallback)
+        # Si el fallback también devuelve 403, mantiene bloqueo total
+        self.assertFalse(guard.puede_consultar("https://prohibido.com/motos/"))
+
 
 class ParseoCcTest(unittest.TestCase):
     def test_parsea_formatos_oficiales(self):
